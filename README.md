@@ -2,6 +2,24 @@
 
 OpenLex ist ein Open-Source RAG-System (Retrieval-Augmented Generation), das rechtlich fundierte, halluzinationsfreie Antworten zum europäischen Datenschutzrecht liefert.
 
+## Quickstart
+
+```bash
+git clone https://github.com/Open-Lex/openlex-mvp.git
+cd openlex-mvp
+python -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+
+# ChromaDB herunterladen (~364 MB)
+curl -O http://91.98.146.160/downloads/chromadb-latest.tar.gz
+tar xzf chromadb-latest.tar.gz
+rm chromadb-latest.tar.gz
+
+python app.py
+```
+
+Die App startet auf `http://localhost:7860`.
+
 ## Datenbestand
 
 - **DSGVO**: Alle 99 Artikel mit Querverweisen zu 173 Erwägungsgründen und BDSG-Normen
@@ -63,7 +81,7 @@ Diese Datenbank enthält eingebettete Identifikationsmerkmale. Unautorisierte En
 ## Kontakt
 
 - **Website**: https://open-lex.cloud
-- **GitHub**: https://github.com/Legalexpert/openlex-mvp
+- **GitHub**: https://github.com/Open-Lex/openlex-mvp
 - **Autor**: Hendrik Seidel
 - **E-Mail**: contact@open-lex.cloud
 
