@@ -64,12 +64,9 @@ Diese Datenbank enthält eingebettete Identifikationsmerkmale. Unautorisierte En
 
 - **Website**: https://open-lex.cloud
 - **GitHub**: https://github.com/Legalexpert/openlex-mvp
-- **Autor**: Hendrik Seidel, Rechtsanwalt und Principal Legal Counsel
-- **E-Mail**: [DEINE E-MAIL]
+- **Autor**: Hendrik Seidel
+- **E-Mail**: contact@open-lex.cloud
 
 ## Förderung
 
-OpenLex ist ein unabhängiges Open-Source-Projekt. Förderanträge:
-- EuroHPC AI Factory for Science (GPU-Zugang, eingereicht)
-- NLnet Foundation NGI0 Commons Fund (in Vorbereitung, Deadline 01.06.2026)
-- Prototype Fund (geplant, Deadline 30.11.2026)
+OpenLex ist ein unabhängiges Open-Source-Projekt.
