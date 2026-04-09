@@ -1,0 +1,36 @@
+# Large data & binary
+chromadb/
+data/
+!data/urteilsnamen.json
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.gradio/
+
+# Generated/temp
+eval_results/
+bench_results/
+*.log
+*.tar.gz
+nohup.out
+*.output
+dsgvo_reload_progress.json
+gesetze_cleanup_progress.json
+mw_update_progress.json
+rechunk_progress.json
+
+# Temp debug scripts
+check_*.py
+test_*.py
+fix_*.py
+find_*.py
+
+# Downloaded resources
+edpb_english_docs*/
+edpb_english_export/
+edpb_german_pdfs/
+edpb_english_docs.zip
+huggingface/
+server_package/
+mw-chunks-update-plan.md
