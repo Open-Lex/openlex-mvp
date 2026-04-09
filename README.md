@@ -2,6 +2,10 @@
 
 OpenLex ist ein Open-Source RAG-System (Retrieval-Augmented Generation), das rechtlich fundierte, halluzinationsfreie Antworten zum europäischen Datenschutzrecht liefert.
 
+## Live-Demo
+
+OpenLex kann kostenlos auf [open-lex.cloud](https://open-lex.cloud) getestet werden.
+
 ## Quickstart
 
 ```bash
