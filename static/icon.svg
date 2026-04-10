@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#1a1a2e"/>
+  <!-- Scale pillar -->
+  <rect x="246" y="140" width="20" height="220" rx="4" fill="#c9a84c"/>
+  <!-- Scale base -->
+  <rect x="196" y="350" width="120" height="16" rx="8" fill="#c9a84c"/>
+  <!-- Scale beam -->
+  <rect x="136" y="132" width="240" height="12" rx="6" fill="#c9a84c"/>
+  <!-- Left pan -->
+  <path d="M136 144 L106 260 Q106 280 136 280 Q166 280 166 260 Z" fill="#c9a84c" opacity="0.85"/>
+  <!-- Right pan -->
+  <path d="M376 144 L346 260 Q346 280 376 280 Q406 280 406 260 Z" fill="#c9a84c" opacity="0.85"/>
+  <!-- Left chains -->
+  <line x1="136" y1="138" x2="106" y2="250" stroke="#c9a84c" stroke-width="4"/>
+  <line x1="136" y1="138" x2="166" y2="250" stroke="#c9a84c" stroke-width="4"/>
+  <!-- Right chains -->
+  <line x1="376" y1="138" x2="346" y2="250" stroke="#c9a84c" stroke-width="4"/>
+  <line x1="376" y1="138" x2="406" y2="250" stroke="#c9a84c" stroke-width="4"/>
+  <!-- OL text -->
+  <text x="256" y="440" font-family="Arial,sans-serif" font-size="60" font-weight="bold" fill="#c9a84c" text-anchor="middle" letter-spacing="8">OpenLex</text>
+</svg>

@@ -1940,8 +1940,18 @@ def build_app() -> gr.Blocks:
     db_stats_md = format_db_stats()
     provider_status = get_provider_status()
 
+    pwa_head = (
+        '<link rel="manifest" href="/static/manifest.json">'
+        '<link rel="apple-touch-icon" href="/static/apple-touch-icon.png">'
+        '<meta name="apple-mobile-web-app-capable" content="yes">'
+        '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">'
+        '<meta name="apple-mobile-web-app-title" content="OpenLex">'
+        '<meta name="theme-color" content="#1a1a2e">'
+    )
+
     with gr.Blocks(
         title="OpenLex – Datenschutzrecht MVP",
+        head=pwa_head,
     ) as app:
         gr.Markdown(
             "# ⚖️ OpenLex – Datenschutzrecht MVP\n"
@@ -2092,12 +2102,15 @@ if __name__ == "__main__":
     print("=" * 60)
 
     app = build_app()
+    static_dir = os.path.join(os.path.dirname(__file__), "static")
     app.queue().launch(
         server_name="0.0.0.0",
         server_port=7860,
         share=False,
         show_error=True,
         root_path=os.environ.get("GRADIO_ROOT_PATH", ""),
+        favicon_path=os.path.join(static_dir, "apple-touch-icon.png"),
+        allowed_paths=[static_dir],
         theme=gr.themes.Soft(),
         css="""
         * { font-family: 'DM Sans', Arial, Helvetica, sans-serif !important; }
