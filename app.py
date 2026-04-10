@@ -2095,7 +2095,7 @@ if __name__ == "__main__":
     app.queue().launch(
         server_name="0.0.0.0",
         server_port=7860,
-        share=True,
+        share=False,
         show_error=True,
         root_path=os.environ.get("GRADIO_ROOT_PATH", ""),
         theme=gr.themes.Soft(),
