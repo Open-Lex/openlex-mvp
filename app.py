@@ -353,7 +353,7 @@ THEMEN_PFLICHT_SEARCHES: dict[str, list[tuple[str, str | None]]] = {
     ],
     "definition": [
         ("Begriffsbestimmungen (Übersicht)", "methodenwissen"),
-        ("C-582/14", "urteil"),
+        ("id:seg_eugh_c_582_14_tenor", None),
     ],
     "informationspflicht": [
         ("Art. 13", "gesetz_granular"),
@@ -461,6 +461,17 @@ THEMEN_PFLICHT_SEARCHES: dict[str, list[tuple[str, str | None]]] = {
         ("Art. 24", "gesetz_granular"),
         ("Rechenschaftspflicht", "methodenwissen"),
     ],
+    "oeffnungsklausel": [
+        ("id:mw_vollharmonisierung_oeffnungsklauseln", None),
+        ("Art. 88", "gesetz_granular"),
+    ],
+    "unmittelbar": [
+        ("id:mw_unmittelbare_geltung_dsgvo", None),
+    ],
+    "erlaubnisvorbehalt": [
+        ("id:mw_verbot_mit_erlaubnisvorbehalt", None),
+        ("Verarbeitung ist nur rechtmäßig", "gesetz_granular"),
+    ],
 }
 
 # Keyword → Themen-Schlüssel
@@ -474,8 +485,8 @@ THEMEN_KEYWORDS_MAP: list[tuple[list[str], str]] = [
       "mitarbeiter", "e-mail lesen", "e-mails lesen"], "beschaeftigt"),
     (["schadensersatz", "schaden", "art. 82"], "schaden"),
     (["dsfa", "folgenabschätzung", "folgenabschaetzung", "datenschutz-folgenabschätzung"], "dsfa"),
-    (["personenbezogene daten", "definition", "definiert", "was ist", "was sind",
-      "was bedeutet", "begriff", "begriffsbestimmung"], "definition"),
+    (["personenbezogene daten", "definition", "definiert",
+      "begriff", "begriffsbestimmung"], "definition"),
     (["datenschutzerklärung", "datenschutzerklaerung", "informationspflicht", "information"], "informationspflicht"),
     (["recht auf vergessenwerden", "löschung", "loeschung", "löschen", "loeschen"], "loeschung"),
     (["vergessenwerden", "vergessen", "recht auf löschung", "recht auf loeschung",
@@ -504,6 +515,12 @@ THEMEN_KEYWORDS_MAP: list[tuple[list[str], str]] = [
     (["datenpanne", "breach", "sicherheitsvorfall", "meldepflicht"], "datenpanne"),
     (["vertrag", "vertragserfüllung", "vertragserfuellung", "art. 6 abs. 1 lit. b"], "vertrag"),
     (["rechenschaftspflicht", "accountability", "nachweispflicht", "dokumentationspflicht"], "rechenschaft"),
+    (["öffnungsklausel", "oeffnungsklausel", "vollharmonisierung",
+      "spielraum", "strenger als die dsgvo", "nationales recht"], "oeffnungsklausel"),
+    (["unmittelbar", "anwendungsvorrang", "vorrang", "direkt geltend",
+      "umsetzung", "gilt unmittelbar", "direkt anwendbar"], "unmittelbar"),
+    (["erlaubnisvorbehalt", "grundsätzlich verboten", "grundsaetzlich verboten",
+      "verarbeitungsverbot"], "erlaubnisvorbehalt"),
 ]
 
 
@@ -595,6 +612,7 @@ def _find_pflicht_chunks(question: str, col) -> list[dict]:
                     continue
                 seen_ids.add(cid)
                 pflicht.append({
+                    "id": cid,
                     "text": doc,
                     "meta": meta,
                     "distance": 0.05,
@@ -1262,59 +1280,8 @@ def _build_llm_messages(question: str, context: str, history: list[dict]) -> lis
 
 
 # ---------------------------------------------------------------------------
-# Provider 1: HuggingFace Inference API
 # ---------------------------------------------------------------------------
-
-_hf_client = None
-_hf_model_name = None
-
-
-def _hf_available() -> bool:
-    return bool(HF_TOKEN)
-
-
-def _hf_init():
-    """Lazy-Init des HF InferenceClient."""
-    global _hf_client, _hf_model_name
-    if _hf_client is not None:
-        return _hf_client, _hf_model_name
-    try:
-        from huggingface_hub import InferenceClient
-    except ImportError:
-        return None, None
-    for model_id in ["Qwen/Qwen3-235B-A22B", "mistralai/Mixtral-8x7B-Instruct-v0.1"]:
-        try:
-            client = InferenceClient(model=model_id, token=HF_TOKEN)
-            client.chat_completion(
-                messages=[{"role": "user", "content": "test"}], max_tokens=5,
-            )
-            _hf_client = client
-            _hf_model_name = model_id
-            return client, model_id
-        except Exception:
-            continue
-    return None, None
-
-
-def _stream_hf(messages: list[dict]):
-    """Streamt von HuggingFace. Yields Strings. Raises bei Fehler."""
-    client, _ = _hf_init()
-    if client is None:
-        raise ConnectionError("HF InferenceClient nicht verfügbar")
-    stream = client.chat_completion(
-        messages=messages, max_tokens=2048, temperature=0.3, stream=True,
-    )
-    for chunk in stream:
-        if not chunk.choices:
-            continue
-        delta = chunk.choices[0].delta
-        token = delta.content if delta else None
-        if token:
-            yield token
-
-
-# ---------------------------------------------------------------------------
-# Provider 2: OpenRouter (OpenAI-kompatibel)
+# Provider 1: OpenRouter (OpenAI-kompatibel)
 # ---------------------------------------------------------------------------
 
 _OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
@@ -1401,7 +1368,7 @@ def _stream_openrouter(messages: list[dict]):
 
 
 # ---------------------------------------------------------------------------
-# Provider 3: Mistral API (OpenAI-kompatibel)
+# Provider 2: Mistral API (OpenAI-kompatibel)
 # ---------------------------------------------------------------------------
 
 _MISTRAL_URL = "https://api.mistral.ai/v1/chat/completions"
@@ -1420,7 +1387,7 @@ def _stream_mistral(messages: list[dict]):
 
 
 # ---------------------------------------------------------------------------
-# Provider 4: Lokales Ollama (Fallback)
+# Provider 3: Lokales Ollama (Fallback)
 # ---------------------------------------------------------------------------
 
 def _ollama_available() -> bool:
@@ -1478,12 +1445,6 @@ def _stream_ollama(messages: list[dict]):
 # ---------------------------------------------------------------------------
 
 PROVIDERS = [
-    {
-        "name": "HuggingFace",
-        "display": "Qwen3-235B via HuggingFace",
-        "is_available": _hf_available,
-        "stream": _stream_hf,
-    },
     {
         "name": "OpenRouter",
         "display": "Qwen3-235B via OpenRouter",
@@ -1551,7 +1512,6 @@ def stream_with_fallback(messages: list[dict]):
     # Kein Provider hat funktioniert
     yield ("⚠️ **Kein LLM-Provider erreichbar.**\n\n"
            "Verfügbare Optionen:\n"
-           "- HF_TOKEN setzen für HuggingFace\n"
            "- OPENROUTER_KEY setzen für OpenRouter\n"
            "- MISTRAL_KEY setzen für Mistral\n"
            "- `ollama serve` starten für lokalen Betrieb\n"), "Kein Provider"
@@ -1886,7 +1846,7 @@ def chat_stream(message: str, history: list[list[str]]):
             ollama_warning_shown = True
             full_response = ("⚠️ **Hinweis:** Diese Antwort wurde mit einem lokalen Modell "
                              f"({provider_display}) generiert. Die Qualität ist eingeschränkt. "
-                             "Für bessere Ergebnisse setzen Sie `HF_TOKEN`, `OPENROUTER_KEY` "
+                             "Für bessere Ergebnisse setzen Sie `OPENROUTER_KEY` "
                              "oder `MISTRAL_KEY`.\n\n---\n\n")
         full_response += token
         yield full_response, sources_placeholder, chunks
