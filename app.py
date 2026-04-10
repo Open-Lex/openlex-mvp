@@ -122,13 +122,13 @@ Formuliere auf Deutsch, präzise und fachlich. Verwende den Gutachtenstil wo ang
 
 # Granulare Normreferenzen
 NORM_RE = re.compile(
-    r"Art\.?\s*\d+\s*"
-    r"(?:Abs\.?\s*\d+\s*)?"
-    r"(?:(?:lit\.?\s*[a-z]|Buchst\.?\s*[a-z]|Nr\.?\s*\d+)\s*)?"
+    r"(?:Art(?:ikel)?\.?\s*)\d+\s*"
+    r"(?:(?:Abs(?:atz)?\.?\s*)\d+\s*)?"
+    r"(?:(?:lit\.?\s*[a-z]|Buchst(?:abe)?\.?\s*[a-z]|Nr\.?\s*\d+)\s*)?"
     r"(?:(?:UAbs\.?\s*\d+|S(?:atz)?\.?\s*\d+)\s*)?"
     r"(?:DSGVO|DS-GVO|GDPR|GRCh|AEUV|BDSG|TDDDG|TTDSG|TKG|SGB|AO|BetrVG|KUG|GG)"
-    r"|§§?\s*\d+[a-z]?\s*"
-    r"(?:Abs\.?\s*\d+\s*)?"
+    r"|(?:§§?|Paragraph)\s*\d+[a-z]?\s*"
+    r"(?:(?:Abs(?:atz)?\.?\s*)\d+\s*)?"
     r"(?:(?:S(?:atz)?\.?\s*\d+|Nr\.?\s*\d+)\s*)?"
     r"(?:DSGVO|BDSG|TDDDG|TTDSG|TKG|SGB|AO|BetrVG|KUG|GG|StGB|ZPO|BGB)",
     re.UNICODE,
@@ -136,7 +136,7 @@ NORM_RE = re.compile(
 
 # Aktenzeichen
 AZ_RE = re.compile(
-    r"(?:Rechtssache\s+)?"
+    r"(?:(?:Rechtssache|Rs\.?|Az\.?)\s+)?"
     r"(?:C|T)[-‑]\d+/\d+"
     r"|\d+\s+(?:AZR|BvR|BvL|ZR|ZB|StR|AR)\s+\d+/\d+"
     r"|(?:IX|VIII|VII|VI|V|IV|III|II|I)\s+(?:ZR|ZB|ZA|AR|StR)\s+\d+/\d+",
@@ -1534,22 +1534,36 @@ def validate_response(response: str, chunks: list[dict]) -> list[dict]:
     model = get_model()
     validations = []
 
-    def _normalize_norm(text: str) -> str:
-        """Normalisiert Normreferenzen für Vergleich: Leerzeichen, DS-GVO etc."""
+    def _normalize_ref(text: str) -> str:
+        """Normalisiert Norm- und AZ-Referenzen für Vergleich."""
         t = text.lower()
         t = t.replace("ds-gvo", "dsgvo").replace("ds gvo", "dsgvo")
+        # Norm-Synonyme: "Artikel" → "art.", "Paragraph" → "§", "Absatz" → "abs.", "Buchstabe" → "lit."
+        t = re.sub(r"\bartikel\s+", "art. ", t)
+        t = re.sub(r"\bparagraph\s+", "§ ", t)
+        t = re.sub(r"\babsatz\s+", "abs. ", t)
+        t = re.sub(r"\bbuchstabe\s+", "lit. ", t)
         # "Abs " ohne Punkt → "Abs. "
         t = re.sub(r"\babs\s+", "abs. ", t)
         # Leerzeichen nach Art./§ normalisieren: "Art.17" → "Art. 17", "Art.  17" → "Art. 17"
         t = re.sub(r"(art\.?)\s*(\d)", r"art. \2", t)
         t = re.sub(r"(§§?)\s*(\d)", r"§ \2", t)
+        # AZ-Präfixe entfernen (Gerichts- und Verfahrensbezeichnungen)
+        _az_prefixes = (
+            r"rechtssache", r"rs\.?", r"az\.?", r"urteil\s+vom\s+[\d.]+\s*[-–—]?\s*",
+            r"beschluss\s+vom\s+[\d.]+\s*[-–—]?\s*",
+            r"eugh", r"bgh", r"bverfg", r"bag", r"bverwg", r"bsg",
+            r"olg", r"lg", r"ag", r"vg", r"vgh", r"lag",
+        )
+        for prefix in _az_prefixes:
+            t = re.sub(rf"\b{prefix}\s*[,:]?\s*", "", t)
         # Mehrfach-Leerzeichen
         t = re.sub(r"\s+", " ", t)
-        return t
+        return t.strip()
 
     # Kontext-Texte für Stufe-1-Prüfung (war es in den übergebenen Quellen?)
     # a) Label/Metadaten-Suche (schnell, exakt)
-    ctx_meta = _normalize_norm(" ".join(
+    ctx_meta = _normalize_ref(" ".join(
         str(c["meta"].get("volladresse", "")) + " " +
         str(c["meta"].get("aktenzeichen", "")) + " " +
         str(c["meta"].get("thema", "")) + " " +
@@ -1557,10 +1571,10 @@ def validate_response(response: str, chunks: list[dict]) -> list[dict]:
         for c in chunks
     ))
     # b) Volltext-Suche (fängt granulare Referenzen in übergeordneten Artikeln ab)
-    ctx_fulltext = _normalize_norm(" ".join(c["text"] for c in chunks))
+    ctx_fulltext = _normalize_ref(" ".join(c["text"] for c in chunks))
 
     def _check(ref: str, ref_type: str, db_threshold: float) -> dict:
-        ref_normalized = _normalize_norm(ref)
+        ref_normalized = _normalize_ref(ref)
         # Stufe 1a: Label/Metadaten-Match
         in_context = ref_normalized in ctx_meta
         # Stufe 1b: Volltext-Match (z.B. "Art. 7 Abs. 3" im Text von Quelle "Art. 7 DSGVO")
