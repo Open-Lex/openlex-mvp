@@ -31,7 +31,7 @@ CHROMADB_DIR = os.environ.get("CHROMADB_DIR", os.path.join(os.path.dirname(os.pa
 COLLECTION_NAME = "openlex_datenschutz"
 MODEL_NAME = "mixedbread-ai/deepset-mxbai-embed-de-large-v1"
 OLLAMA_URL = "http://localhost:11434"
-OLLAMA_MODELS = ["gemma4:12b", "qwen2.5:14b-instruct"]
+OLLAMA_MODELS = ["gemma4:e4b"]
 TOP_K_RETRIEVAL = 20
 TOP_K_CONTEXT = 10  # Legacy, jetzt dynamischer Cutoff
 MIN_DOCS = 3
@@ -1281,7 +1281,7 @@ def _build_llm_messages(question: str, context: str, history: list[dict]) -> lis
 
 # ---------------------------------------------------------------------------
 # ---------------------------------------------------------------------------
-# Provider 1: OpenRouter (OpenAI-kompatibel)
+# Provider 2: OpenRouter (OpenAI-kompatibel, Fallback)
 # ---------------------------------------------------------------------------
 
 _OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
@@ -1368,11 +1368,11 @@ def _stream_openrouter(messages: list[dict]):
 
 
 # ---------------------------------------------------------------------------
-# Provider 2: Mistral API (OpenAI-kompatibel)
+# Provider 1: Mistral API (OpenAI-kompatibel, primär)
 # ---------------------------------------------------------------------------
 
 _MISTRAL_URL = "https://api.mistral.ai/v1/chat/completions"
-_MISTRAL_MODEL = "mistral-large-latest"
+_MISTRAL_MODEL = "mistral-small-latest"
 
 
 def _mistral_available() -> bool:
@@ -1446,16 +1446,16 @@ def _stream_ollama(messages: list[dict]):
 
 PROVIDERS = [
     {
+        "name": "Mistral",
+        "display": "Mistral Small via Mistral",
+        "is_available": _mistral_available,
+        "stream": _stream_mistral,
+    },
+    {
         "name": "OpenRouter",
         "display": "Qwen3-235B via OpenRouter",
         "is_available": _openrouter_available,
         "stream": _stream_openrouter,
-    },
-    {
-        "name": "Mistral",
-        "display": "Mistral Large via Mistral",
-        "is_available": _mistral_available,
-        "stream": _stream_mistral,
     },
     {
         "name": "Ollama",
@@ -1512,8 +1512,8 @@ def stream_with_fallback(messages: list[dict]):
     # Kein Provider hat funktioniert
     yield ("⚠️ **Kein LLM-Provider erreichbar.**\n\n"
            "Verfügbare Optionen:\n"
-           "- OPENROUTER_KEY setzen für OpenRouter\n"
            "- MISTRAL_KEY setzen für Mistral\n"
+           "- OPENROUTER_KEY setzen für OpenRouter\n"
            "- `ollama serve` starten für lokalen Betrieb\n"), "Kein Provider"
 
 
@@ -1846,8 +1846,8 @@ def chat_stream(message: str, history: list[list[str]]):
             ollama_warning_shown = True
             full_response = ("⚠️ **Hinweis:** Diese Antwort wurde mit einem lokalen Modell "
                              f"({provider_display}) generiert. Die Qualität ist eingeschränkt. "
-                             "Für bessere Ergebnisse setzen Sie `OPENROUTER_KEY` "
-                             "oder `MISTRAL_KEY`.\n\n---\n\n")
+                             "Für bessere Ergebnisse setzen Sie `MISTRAL_KEY` "
+                             "oder `OPENROUTER_KEY`.\n\n---\n\n")
         full_response += token
         yield full_response, sources_placeholder, chunks
 
