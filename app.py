@@ -15,6 +15,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import subprocess
 import time
 from typing import Any
 
@@ -1926,6 +1927,16 @@ def build_app() -> gr.Blocks:
     db_stats_md = format_db_stats()
     provider_status = get_provider_status()
 
+    # Git-Commit beim Start lesen
+    try:
+        _git_hash = subprocess.check_output(
+            ["git", "rev-parse", "--short", "HEAD"],
+            cwd=os.path.dirname(os.path.abspath(__file__)),
+            stderr=subprocess.DEVNULL,
+        ).decode().strip()
+    except Exception:
+        _git_hash = "unknown"
+
     with gr.Blocks(
         title="OpenLex – Datenschutzrecht MVP",
     ) as app:
@@ -1986,7 +1997,7 @@ def build_app() -> gr.Blocks:
         )
 
         # ── Unten: Provider-Status + DB-Statistiken ──
-        gr.Markdown(f"*{provider_status}*")
+        gr.Markdown(f"*{provider_status} | Commit: `{_git_hash}`*")
         with gr.Accordion("📊 Datenbankstatistiken", open=False):
             gr.Markdown(db_stats_md)
 
