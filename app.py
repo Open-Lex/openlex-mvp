@@ -1934,6 +1934,18 @@ def _sources_fallback(prefix: str, chunks: list[dict]) -> str:
     return response
 
 
+PWA_HEAD = (
+    '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">'
+    '<link rel="manifest" href="/static/manifest.json">'
+    '<link rel="apple-touch-icon" href="/static/apple-touch-icon.png">'
+    '<meta name="apple-mobile-web-app-capable" content="yes">'
+    '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">'
+    '<meta name="apple-mobile-web-app-title" content="OpenLex">'
+    '<meta name="theme-color" content="#1a1a2e">'
+    '<script>if(window.self !== window.top){document.documentElement.classList.add("in-iframe")}</script>'
+)
+
+
 def build_app() -> gr.Blocks:
     """Erstellt die Gradio-App."""
 
@@ -1954,7 +1966,7 @@ def build_app() -> gr.Blocks:
             with gr.Column(scale=7):
                 chatbot = gr.Chatbot(
                     label="Chat",
-                    height=550,
+                    height=300,
                 )
                 msg_input = gr.Textbox(
                     placeholder="Ihre datenschutzrechtliche Frage...",
@@ -2092,24 +2104,29 @@ if __name__ == "__main__":
     print("=" * 60)
 
     app = build_app()
+    static_dir = os.path.join(os.path.dirname(__file__), "static")
     app.queue().launch(
         server_name="0.0.0.0",
         server_port=7860,
-        share=True,
+        share=False,
         show_error=True,
         root_path=os.environ.get("GRADIO_ROOT_PATH", ""),
+        favicon_path=os.path.join(static_dir, "apple-touch-icon.png"),
+        allowed_paths=[static_dir],
+        head=PWA_HEAD,
         theme=gr.themes.Soft(),
         css="""
         * { font-family: 'DM Sans', Arial, Helvetica, sans-serif !important; }
         .source-panel { max-height: 80vh; overflow-y: auto; }
         footer { display: none !important; }
-        /* Full-width in iframe: remove all Gradio container constraints */
+        /* Full-width: remove all Gradio container constraints */
         .gradio-container { max-width: 100% !important; width: 100% !important; padding: 0 !important; margin: 0 !important; }
         .gradio-container > .main { padding: 0 !important; margin: 0 !important; }
         .gradio-container > .main > .wrap { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
         .contain { max-width: 100% !important; padding: 0 !important; }
-        /* Hide header — shown via landing page context already */
-        #openlex-header { display: none !important; }
+        /* Header: hide in iframe, show in standalone/browser */
+        .in-iframe #openlex-header { display: none !important; }
+        #openlex-header { text-align: center; padding: 8px 0 0 0; }
         .message, .message p, .message span, .message li, .message code,
         .message h1, .message h2, .message h3, .message h4,
         .bot, .user, [class*="message"] {
@@ -2126,5 +2143,23 @@ if __name__ == "__main__":
         #last-answer { max-height: 60vh; overflow-y: auto; padding: 12px;
             border: 1px solid #e0e0e0; border-radius: 8px; }
         #last-answer * { font-size: 14px !important; }
+        /* Safe area for iPhone notch/home indicator */
+        body { padding: env(safe-area-inset-top) env(safe-area-inset-right)
+               env(safe-area-inset-bottom) env(safe-area-inset-left); }
+        /* ── Mobile ── */
+        @media (max-width: 768px) {
+            #openlex-header h1 { font-size: 22px !important; }
+            #openlex-header p { font-size: 13px !important; }
+            /* Stack columns vertically */
+            .row.svelte-1bk3i6o, .row { flex-direction: column !important; }
+            .column { width: 100% !important; min-width: 100% !important; max-width: 100% !important; flex: 1 1 100% !important; }
+            /* Compact chat on mobile */
+            .chatbot { height: 200px !important; min-height: 150px !important; }
+            /* Touch-friendly buttons */
+            button { min-height: 44px !important; font-size: 15px !important; }
+            /* Input field */
+            textarea { font-size: 16px !important; }  /* prevents iOS zoom on focus */
+            .gradio-container { padding: 4px !important; }
+        }
         """,
     )
