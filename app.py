@@ -1934,26 +1934,26 @@ def _sources_fallback(prefix: str, chunks: list[dict]) -> str:
     return response
 
 
+PWA_HEAD = (
+    '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">'
+    '<link rel="manifest" href="/static/manifest.json">'
+    '<link rel="apple-touch-icon" href="/static/apple-touch-icon.png">'
+    '<meta name="apple-mobile-web-app-capable" content="yes">'
+    '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">'
+    '<meta name="apple-mobile-web-app-title" content="OpenLex">'
+    '<meta name="theme-color" content="#1a1a2e">'
+    '<script>if(window.self !== window.top){document.documentElement.classList.add("in-iframe")}</script>'
+)
+
+
 def build_app() -> gr.Blocks:
     """Erstellt die Gradio-App."""
 
     db_stats_md = format_db_stats()
     provider_status = get_provider_status()
 
-    pwa_head = (
-        '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">'
-        '<link rel="manifest" href="/static/manifest.json">'
-        '<link rel="apple-touch-icon" href="/static/apple-touch-icon.png">'
-        '<meta name="apple-mobile-web-app-capable" content="yes">'
-        '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">'
-        '<meta name="apple-mobile-web-app-title" content="OpenLex">'
-        '<meta name="theme-color" content="#1a1a2e">'
-        '<script>if(window.self !== window.top){document.documentElement.classList.add("in-iframe")}</script>'
-    )
-
     with gr.Blocks(
         title="OpenLex – Datenschutzrecht MVP",
-        head=pwa_head,
     ) as app:
         gr.Markdown(
             "# ⚖️ OpenLex – Datenschutzrecht MVP\n"
@@ -2113,6 +2113,7 @@ if __name__ == "__main__":
         root_path=os.environ.get("GRADIO_ROOT_PATH", ""),
         favicon_path=os.path.join(static_dir, "apple-touch-icon.png"),
         allowed_paths=[static_dir],
+        head=PWA_HEAD,
         theme=gr.themes.Soft(),
         css="""
         * { font-family: 'DM Sans', Arial, Helvetica, sans-serif !important; }
