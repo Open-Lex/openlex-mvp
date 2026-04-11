@@ -2048,8 +2048,8 @@ def build_app() -> gr.Blocks:
             f'<div id="ol-statusbar">{total_chunks:,} Quellen | {urteile:,} Urteile | Commit: {_git_hash}</div>'
         )
 
-        # ── Welcome (wird per JS ausgeblendet nach erster Frage) ──
-        welcome = gr.HTML(value=WELCOME_HTML, elem_id="welcome-container")
+        # ── Welcome (verschwindet nach erster Frage) ──
+        welcome = gr.HTML(value=WELCOME_HTML, visible=True, elem_id="welcome-container")
 
         # ── Hauptbereich: Chat + Quellen ──
         with gr.Row(elem_id="main-row"):
@@ -2095,7 +2095,7 @@ def build_app() -> gr.Blocks:
         # ── Event-Handler (Streaming) ──
         def respond(message, chat_history):
             if not message.strip():
-                yield chat_history, "", "", "", gr.update(visible=True)
+                yield chat_history, "", "", "", WELCOME_HTML
                 return
 
             history_tuples = []
@@ -2113,11 +2113,11 @@ def build_app() -> gr.Blocks:
             chat_history = list(chat_history or [])
             chat_history.append({"role": "user", "content": message})
             chat_history.append({"role": "assistant", "content": "⏳ *OpenLex recherchiert...*"})
-            yield chat_history, "", "", "", gr.update(visible=False)
+            yield chat_history, "", "", "", ""
 
             for partial_response, sources_md, chunks in chat_stream(message, history_tuples):
                 chat_history[-1]["content"] = partial_response
-                yield chat_history, sources_md, partial_response, "", gr.update(visible=False)
+                yield chat_history, sources_md, partial_response, "", ""
 
         submit_btn.click(
             respond,
@@ -2132,7 +2132,7 @@ def build_app() -> gr.Blocks:
         )
 
         clear_btn.click(
-            lambda: ([], SOURCES_EMPTY, "", "", gr.update(visible=True)),
+            lambda: ([], SOURCES_EMPTY, "", "", WELCOME_HTML),
             outputs=[chatbot, sources_display, last_answer, msg_input, welcome],
         )
 
@@ -2303,6 +2303,14 @@ if __name__ == "__main__":
         input, textarea, select { background: var(--surface) !important; color: var(--text) !important;
             border-color: var(--border) !important; }
         .accordion { background: var(--surface) !important; border-color: var(--border) !important; }
+
+        /* ── Welcome/Chat toggle: hide chat area when welcome is visible ── */
+        #welcome-container:has(#welcome-screen) ~ #main-row #ol-chatbot,
+        #welcome-container:has(#welcome-screen) ~ #main-row #sources-col,
+        #welcome-container:has(#welcome-screen) ~ #main-row #action-row,
+        #welcome-container:has(#welcome-screen) ~ #main-row #copy-accordion {
+            display: none !important;
+        }
 
         /* ── Safe area for iPhone ── */
         body { padding: env(safe-area-inset-top) env(safe-area-inset-right)
