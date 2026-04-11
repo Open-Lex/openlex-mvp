@@ -2006,7 +2006,9 @@ def build_app() -> gr.Blocks:
     provider_status = get_provider_status()
     raw_stats = get_db_stats()
     total_chunks = raw_stats.get("GESAMT", 0)
+    gesetze = raw_stats.get("gesetz", 0) + raw_stats.get("gesetz_granular", 0)
     urteile = raw_stats.get("urteil", 0) + raw_stats.get("urteil_segmentiert", 0)
+    leitlinien = raw_stats.get("leitlinie", 0)
     db_stats_md = format_db_stats()
 
     # Git-Commit beim Start lesen
@@ -2045,7 +2047,7 @@ def build_app() -> gr.Blocks:
             f'<div class="ol-brand"><span class="ol-open">Open</span><span class="ol-lex">Lex</span></div>'
             f'<div class="ol-badge">OPEN SOURCE</div>'
             f'</div>'
-            f'<div id="ol-statusbar">{total_chunks:,} Quellen | {urteile:,} Urteile | Commit: {_git_hash}</div>'
+            f'<div id="ol-statusbar">{gesetze:,} Gesetze | {urteile:,} Urteile | {leitlinien:,} Leitlinien | {total_chunks:,} Chunks gesamt</div>'
         )
 
         # ── Welcome (verschwindet nach erster Frage) ──
@@ -2246,8 +2248,10 @@ if __name__ == "__main__":
 
         /* ── Input Row ── */
         #input-row { gap: 8px !important; margin-top: 8px !important; }
-        #msg-input { background: transparent !important; border: none !important; box-shadow: none !important; }
-        #msg-input .wrap, #msg-input > div { background: transparent !important; border: none !important; box-shadow: none !important; }
+        #msg-input, #msg-input *, #input-row > div {
+            background: transparent !important; border: none !important;
+            box-shadow: none !important; outline: none !important; }
+        #msg-input textarea { background: var(--surface) !important; border: 1px solid var(--gold) !important; }
         #msg-input textarea { background: var(--surface) !important; border: 1px solid var(--gold) !important;
             border-radius: 12px !important; color: var(--text) !important; padding: 12px 16px !important;
             font-size: 0.95rem !important; }
