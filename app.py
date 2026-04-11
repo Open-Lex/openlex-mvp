@@ -1373,7 +1373,7 @@ def _stream_openrouter(messages: list[dict]):
 # ---------------------------------------------------------------------------
 
 _MISTRAL_URL = "https://api.mistral.ai/v1/chat/completions"
-_MISTRAL_MODEL = "mistral-large-latest"
+_MISTRAL_MODEL = "mistral-medium-latest"
 
 
 def _mistral_available() -> bool:
@@ -1448,7 +1448,7 @@ def _stream_ollama(messages: list[dict]):
 PROVIDERS = [
     {
         "name": "Mistral",
-        "display": "Mistral Large via Mistral",
+        "display": "Mistral Medium via Mistral",
         "is_available": _mistral_available,
         "stream": _stream_mistral,
     },
