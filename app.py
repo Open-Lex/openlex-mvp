@@ -2081,7 +2081,8 @@ def build_app() -> gr.Blocks:
             '<div style="text-align:center;color:#888;font-size:12px;padding:12px 0;border-top:1px solid #e0e0e0;margin-top:12px">'
             'OpenLex – Open Source Legal AI für Datenschutzrecht | '
             '<a href="mailto:contact@open-lex.cloud" style="color:#888">contact@open-lex.cloud</a> | '
-            '<a href="https://open-lex.cloud" style="color:#888" target="_blank">open-lex.cloud</a></div>'
+            '<a href="https://open-lex.cloud" style="color:#888" target="_blank">open-lex.cloud</a> | '
+            '<a href="/rechtliches" style="color:#888" target="_blank">Impressum / Rechtliches</a></div>'
         )
 
         # ── Event-Handler (Streaming) ──
