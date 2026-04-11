@@ -473,13 +473,22 @@ THEMEN_PFLICHT_SEARCHES: dict[str, list[tuple[str, str | None]]] = {
         ("id:mw_verbot_mit_erlaubnisvorbehalt", None),
         ("Verarbeitung ist nur rechtmäßig", "gesetz_granular"),
     ],
+    "anonymisierung": [
+        ("Art. 4 Nr. 5", "gesetz_granular"),              # Definition Pseudonymisierung
+        ("Erwägungsgrund 26", "eg_granular"),               # Anonymisierung / Personenbezug
+        ("Erwägungsgrund 28", "eg_granular"),               # Pseudonymisierung
+        ("Erwägungsgrund 29", "eg_granular"),               # Pseudonymisierung Zusatzinfo
+        ("Art. 25", "gesetz_granular"),                     # Privacy by Design (Pseudonymisierung)
+        ("Art. 32 Abs. 1 lit. a", "gesetz_granular"),      # Pseudonymisierung als TOM
+        ("Art. 89", "gesetz_granular"),                     # Forschung + Pseudonymisierung
+    ],
 }
 
 # Keyword → Themen-Schlüssel
 THEMEN_KEYWORDS_MAP: list[tuple[list[str], str]] = [
     (["usa", "amerika", "drittland", "transfer", "cloud", "dpf", "schrems", "privacy shield", "safe harbor", "angemessenheitsbeschluss"], "drittland"),
-    (["videoüberwachung", "videoueberwachung", "kamera", "überwachungskamera", "cctv"], "video"),
-    (["videoüberwachung", "videoueberwachung", "kamera", "überwachungskamera", "cctv"], "video_edpb"),
+    (["videoüberwachung", "videoueberwachung", "kamera", "überwachungskamera", "cctv", "bodycam", "dashcam"], "video"),
+    (["videoüberwachung", "videoueberwachung", "kamera", "überwachungskamera", "cctv", "bodycam", "dashcam"], "video_edpb"),
     (["cookie", "banner", "tracking"], "cookie"),
     (["einwilligung", "consent", "opt-in", "opt in", "newsletter", "e-mail-werbung", "double opt"], "einwilligung"),
     (["arbeitgeber", "beschäftigte", "beschaeftigte", "arbeitsplatz", "betriebsvereinbarung",
@@ -500,7 +509,8 @@ THEMEN_KEYWORDS_MAP: list[tuple[list[str], str]] = [
     (["berechtigtes interesse", "interessenabwägung", "interessenabwaegung"], "berechtigt"),
     (["gesundheitsdaten", "gesundheit", "krankheit", "patient", "arzt", "medizinisch", "ärztlich"], "gesundheit"),
     (["kundenkonto", "registrierung", "gastbestellung", "onlineshop", "webshop",
-      "kontopflicht", "kontenzwang", "registrierungspflicht", "gastzugang"], "kundenkonto"),
+      "kontopflicht", "kontenzwang", "registrierungspflicht", "gastzugang",
+      "account löschen", "konto löschen", "account loeschen"], "kundenkonto"),
     (["auftragsverarbeiter", "auftragsverarbeitung", "dienstleister", "av-vertrag"], "auftragsverarbeitung"),
     (["gemeinsame verantwortlichkeit", "gemeinsam verantwortlich", "fanpage", "joint controller"], "gemeinsam"),
     (["künstliche intelligenz", "kuenstliche intelligenz", "ki-tool",
@@ -522,6 +532,9 @@ THEMEN_KEYWORDS_MAP: list[tuple[list[str], str]] = [
       "umsetzung", "gilt unmittelbar", "direkt anwendbar"], "unmittelbar"),
     (["erlaubnisvorbehalt", "grundsätzlich verboten", "grundsaetzlich verboten",
       "verarbeitungsverbot"], "erlaubnisvorbehalt"),
+    (["anonymisierung", "anonymisieren", "anonymisiert", "pseudonymisierung",
+      "pseudonymisieren", "pseudonym", "de-identifikation", "k-anonymität",
+      "differential privacy", "personenbezug aufheben"], "anonymisierung"),
 ]
 
 
