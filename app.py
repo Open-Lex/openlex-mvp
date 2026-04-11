@@ -211,14 +211,27 @@ def get_db_stats() -> dict[str, int]:
         # Sample to estimate type distribution
         sample = col.get(include=["metadatas"], limit=total)
         counts: dict[str, int] = {}
+        urteile_az: set[str] = set()
+        leitlinien_titel: set[str] = set()
         for meta in sample["metadatas"]:
             st = meta.get("source_type", "unbekannt")
             counts[st] = counts.get(st, 0) + 1
+            # Count unique documents
+            if st in ("urteil", "urteil_segmentiert"):
+                az = meta.get("aktenzeichen", "")
+                if az:
+                    urteile_az.add(az)
+            elif st == "leitlinie":
+                titel = meta.get("titel", "")
+                if titel:
+                    leitlinien_titel.add(titel)
         # Scale up if sampled
         if len(sample["metadatas"]) < total:
             scale = total / len(sample["metadatas"])
             counts = {k: int(v * scale) for k, v in counts.items()}
         counts["GESAMT"] = total
+        counts["urteile_docs"] = len(urteile_az)
+        counts["leitlinien_docs"] = len(leitlinien_titel)
         _db_stats = counts
     return _db_stats
 
@@ -2006,9 +2019,9 @@ def build_app() -> gr.Blocks:
     provider_status = get_provider_status()
     raw_stats = get_db_stats()
     total_chunks = raw_stats.get("GESAMT", 0)
-    gesetze = raw_stats.get("gesetz", 0) + raw_stats.get("gesetz_granular", 0)
-    urteile = raw_stats.get("urteil", 0) + raw_stats.get("urteil_segmentiert", 0)
-    leitlinien = raw_stats.get("leitlinie", 0)
+    urteile_docs = raw_stats.get("urteile_docs", 0)
+    leitlinien_docs = raw_stats.get("leitlinien_docs", 0)
+    mw_chunks = raw_stats.get("methodenwissen", 0)
     db_stats_md = format_db_stats()
 
     # Git-Commit beim Start lesen
@@ -2047,7 +2060,7 @@ def build_app() -> gr.Blocks:
             f'<div class="ol-brand"><span class="ol-open">Open</span><span class="ol-lex">Lex</span></div>'
             f'<div class="ol-badge">OPEN SOURCE</div>'
             f'</div>'
-            f'<div id="ol-statusbar">{gesetze:,} Gesetze | {urteile:,} Urteile | {leitlinien:,} Leitlinien | {total_chunks:,} Chunks gesamt</div>'
+            f'<div id="ol-statusbar">{urteile_docs} Urteile | {leitlinien_docs} Leitlinien | {mw_chunks} Methodenwissen | {total_chunks:,} Chunks gesamt</div>'
         )
 
         # ── Welcome (verschwindet nach erster Frage) ──
@@ -2247,7 +2260,7 @@ if __name__ == "__main__":
         .message a { color: var(--gold) !important; }
 
         /* ── Input Row ── */
-        #input-row { gap: 8px !important; margin-top: 8px !important; }
+        #input-row { gap: 8px !important; margin-top: 8px !important; align-items: stretch !important; }
         #msg-input, #msg-input *, #input-row > div {
             background: transparent !important; border: none !important;
             box-shadow: none !important; outline: none !important; }
@@ -2260,7 +2273,7 @@ if __name__ == "__main__":
         #msg-input textarea::placeholder { color: var(--dim) !important; }
         #submit-btn { background: var(--gold) !important; color: #111 !important; border: none !important;
             border-radius: 12px !important; font-weight: 600 !important; font-size: 0.95rem !important;
-            min-width: 90px !important; padding: 10px 20px !important; }
+            min-width: 90px !important; padding: 0 20px !important; height: auto !important; }
         #submit-btn:hover { background: #e0b84e !important; }
 
         /* ── Action Row ── */
