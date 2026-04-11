@@ -1973,6 +1973,12 @@ PWA_HEAD = (
     '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">'
     '<meta name="apple-mobile-web-app-title" content="OpenLex">'
     '<meta name="theme-color" content="#1a1a2e">'
+    '<meta property="og:title" content="OpenLex – Datenschutzrecht">'
+    '<meta property="og:description" content="Open-Source Rechts-KI für europäisches Datenschutzrecht">'
+    '<meta property="og:type" content="website">'
+    '<meta property="og:url" content="https://app.open-lex.cloud">'
+    '<meta name="description" content="Open-Source Rechts-KI für europäisches Datenschutzrecht">'
+    '<meta name="application-name" content="OpenLex">'
     '<script>if(window.self !== window.top){document.documentElement.classList.add("in-iframe")}</script>'
 )
 
@@ -2151,6 +2157,7 @@ if __name__ == "__main__":
         server_port=7860,
         share=False,
         show_error=True,
+        show_api=False,
         root_path=os.environ.get("GRADIO_ROOT_PATH", ""),
         favicon_path=os.path.join(static_dir, "apple-touch-icon.png"),
         allowed_paths=[static_dir],
@@ -2160,6 +2167,9 @@ if __name__ == "__main__":
         * { font-family: 'DM Sans', Arial, Helvetica, sans-serif !important; }
         .source-panel { max-height: 80vh; overflow-y: auto; }
         footer { display: none !important; }
+        .built-with { display: none !important; }
+        a[href*="gradio.app"] { display: none !important; }
+        .footer-links { display: none !important; }
         /* Full-width: remove all Gradio container constraints */
         .gradio-container { max-width: 100% !important; width: 100% !important; padding: 0 !important; margin: 0 !important; }
         .gradio-container > .main { padding: 0 !important; margin: 0 !important; }
