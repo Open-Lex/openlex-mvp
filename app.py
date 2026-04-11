@@ -2014,7 +2014,7 @@ PWA_HEAD = (
 
 
 def build_app() -> gr.Blocks:
-    """Erstellt die Gradio-App im Modern Minimal Design."""
+    """Erstellt die Gradio-App im Clean Chat Layout."""
 
     provider_status = get_provider_status()
     raw_stats = get_db_stats()
@@ -2022,9 +2022,7 @@ def build_app() -> gr.Blocks:
     urteile_docs = raw_stats.get("urteile_docs", 0)
     leitlinien_docs = raw_stats.get("leitlinien_docs", 0)
     mw_chunks = raw_stats.get("methodenwissen", 0)
-    db_stats_md = format_db_stats()
 
-    # Git-Commit beim Start lesen
     try:
         _git_hash = subprocess.check_output(
             ["git", "rev-parse", "--short", "HEAD"],
@@ -2034,83 +2032,125 @@ def build_app() -> gr.Blocks:
     except Exception:
         _git_hash = "unknown"
 
-    # ── Welcome-Screen HTML ──
+    # ── Beispielfragen ──
+    EXAMPLES = [
+        "Darf mein Arbeitgeber meine E-Mails lesen?",
+        "Was sind die Voraussetzungen für eine wirksame Einwilligung?",
+        "Wie hat der EuGH den Schadensersatz nach Art. 82 DSGVO ausgelegt?",
+        "Darf ich als Unternehmen Daten in die USA übermitteln?",
+        "Ist Videoüberwachung im Laden zur Diebstahlprävention zulässig?",
+    ]
+
+    FILL_JS = (
+        "document.querySelector('#msg-input textarea').value=this.textContent;"
+        "document.querySelector('#msg-input textarea').dispatchEvent(new Event('input',{bubbles:true}));"
+    )
+    CLOSE_MENU = (
+        "document.getElementById('menu-panel').classList.add('menu-closed');"
+        "document.getElementById('menu-backdrop').classList.add('menu-closed');"
+    )
+    TOGGLE_MENU = (
+        "document.getElementById('menu-panel').classList.toggle('menu-closed');"
+        "document.getElementById('menu-backdrop').classList.toggle('menu-closed');"
+    )
+
+    eq_welcome = "\n".join(
+        f'<button class="eq" onclick="{FILL_JS}">{q}</button>'
+        for q in EXAMPLES
+    )
+    eq_menu = "\n".join(
+        f'<button class="menu-eq" onclick="{FILL_JS}{CLOSE_MENU}">{q}</button>'
+        for q in EXAMPLES
+    )
+
     WELCOME_HTML = f"""<div id="welcome-screen">
 <h1 class="welcome-title">Datenschutzrecht<br><span class="gold">recherchieren.</span></h1>
 <p class="welcome-sub">Quellenbasierte Antworten zum europäischen Datenschutzrecht.</p>
-<div class="example-questions">
-<button class="eq" onclick="document.querySelector('#msg-input textarea').value=this.textContent.substring(2);document.querySelector('#msg-input textarea').dispatchEvent(new Event('input',{{bubbles:true}}))">1. Darf mein Arbeitgeber meine E-Mails lesen?</button>
-<button class="eq" onclick="document.querySelector('#msg-input textarea').value=this.textContent.substring(2);document.querySelector('#msg-input textarea').dispatchEvent(new Event('input',{{bubbles:true}}))">2. Was sind die Voraussetzungen für eine wirksame Einwilligung?</button>
-<button class="eq" onclick="document.querySelector('#msg-input textarea').value=this.textContent.substring(2);document.querySelector('#msg-input textarea').dispatchEvent(new Event('input',{{bubbles:true}}))">3. Wie hat der EuGH den Schadensersatz nach Art. 82 DSGVO ausgelegt?</button>
-<button class="eq" onclick="document.querySelector('#msg-input textarea').value=this.textContent.substring(2);document.querySelector('#msg-input textarea').dispatchEvent(new Event('input',{{bubbles:true}}))">4. Darf ich als Unternehmen Daten in die USA übermitteln?</button>
-<button class="eq" onclick="document.querySelector('#msg-input textarea').value=this.textContent.substring(2);document.querySelector('#msg-input textarea').dispatchEvent(new Event('input',{{bubbles:true}}))">5. Ist Videoüberwachung im Laden zur Diebstahlprävention zulässig?</button>
-</div>
+<div class="example-questions">{eq_welcome}</div>
 </div>"""
 
-    SOURCES_EMPTY = '<div class="src-empty"><div class="src-heading">QUELLEN</div><p style="color:#666;font-size:13px">Stellen Sie eine Frage, um Quellen zu sehen.</p></div>'
+    COPY_JS = (
+        "var el=document.querySelector('#copy-store textarea');"
+        "if(el&&el.value){navigator.clipboard.writeText(el.value)"
+        ".then(function(){alert('Kopiert!')})}"
+        "else{alert('Noch keine Antwort vorhanden')};"
+    )
+
+    HEADER_MENU_HTML = (
+        '<div id="ol-header">'
+        '<div class="ol-brand"><span class="ol-open">Open</span><span class="ol-lex">Lex</span></div>'
+        f'<div class="ol-hamburger" onclick="{TOGGLE_MENU}">\u2630</div>'
+        '</div>'
+        '<div id="menu-panel" class="menu-closed">'
+        '<div class="menu-top">'
+        '<span class="menu-title">Menu</span>'
+        f'<span class="menu-close" onclick="{CLOSE_MENU}">\u2715</span>'
+        '</div>'
+        '<div class="menu-body">'
+        '<div class="menu-section">'
+        '<div class="menu-label">BEISPIELFRAGEN</div>'
+        f'{eq_menu}'
+        '</div>'
+        '<div class="menu-section">'
+        f'<button class="menu-action" onclick="document.querySelector(\'#clear-trigger\').click();{CLOSE_MENU}">\U0001f504 Neues Gespräch</button>'
+        f'<button class="menu-action" onclick="{COPY_JS}{CLOSE_MENU}">\U0001f4cb Letzte Antwort kopieren</button>'
+        '</div>'
+        '<div class="menu-section">'
+        '<a class="menu-link" href="/rechtliches" target="_blank">\U0001f4c4 Impressum / Rechtliches</a>'
+        '</div>'
+        f'<div class="menu-stats">{urteile_docs} Urteile \u00b7 {leitlinien_docs} Leitlinien \u00b7 {mw_chunks} MW \u00b7 {total_chunks:,} Chunks</div>'
+        '</div>'
+        '</div>'
+        f'<div id="menu-backdrop" class="menu-closed" onclick="{CLOSE_MENU}"></div>'
+    )
+
+    _SRC_STYLE_RE = re.compile(r'<style>.*?</style>', re.DOTALL)
 
     with gr.Blocks(
-        title="OpenLex – Datenschutzrecht",
+        title="OpenLex \u2013 Datenschutzrecht",
         elem_id="openlex-app",
     ) as app:
 
-        # ── Header ──
-        gr.HTML(
-            f'<div id="ol-header">'
-            f'<div class="ol-brand"><span class="ol-open">Open</span><span class="ol-lex">Lex</span></div>'
-            f'<div class="ol-badge">OPEN SOURCE</div>'
-            f'</div>'
-            f'<div id="ol-statusbar">{urteile_docs} Urteile | {leitlinien_docs} Leitlinien | {mw_chunks} Methodenwissen | {total_chunks:,} Chunks gesamt</div>'
+        # ── Header + Menu ──
+        gr.HTML(HEADER_MENU_HTML)
+
+        # ── Welcome ──
+        welcome = gr.HTML(value=WELCOME_HTML, elem_id="welcome-container")
+
+        # ── Chat ──
+        chatbot = gr.Chatbot(
+            height=600,
+            elem_id="ol-chatbot",
+            show_label=False,
         )
-
-        # ── Welcome (verschwindet nach erster Frage) ──
-        welcome = gr.HTML(value=WELCOME_HTML, visible=True, elem_id="welcome-container")
-
-        # ── Hauptbereich: Chat + Quellen ──
-        with gr.Row(elem_id="main-row"):
-            with gr.Column(scale=7, elem_id="chat-col"):
-                chatbot = gr.Chatbot(
-                    label="Chat",
-                    height=420,
-                    elem_id="ol-chatbot",
-                    show_label=False,
-                )
-                with gr.Row(elem_id="input-row"):
-                    msg_input = gr.Textbox(
-                        placeholder="Frage eingeben...",
-                        label="Frage",
-                        lines=1,
-                        show_label=False,
-                        elem_id="msg-input",
-                        scale=8,
-                    )
-                    submit_btn = gr.Button("Fragen", variant="primary", elem_id="submit-btn", scale=1)
-
-                with gr.Row(elem_id="action-row"):
-                    clear_btn = gr.Button("Neues Gespräch", elem_id="clear-btn", size="sm")
-
-                with gr.Accordion("Letzte Antwort (kopierbar)", open=False, elem_id="copy-accordion"):
-                    last_answer = gr.Markdown(
-                        value="",
-                        elem_id="last-answer",
-                    )
-
-            # ── Quellen-Sidebar ──
-            with gr.Column(scale=3, elem_id="sources-col"):
-                sources_display = gr.HTML(value=SOURCES_EMPTY, elem_id="sources-panel")
 
         # ── Footer ──
         gr.HTML(
             '<div id="ol-footer">'
-            'Testphase · KI kann Fehler machen · Keine Rechtsberatung · '
-            '<a href="/rechtliches" target="_blank">Impressum / Rechtliches</a>'
+            'Testphase \u00b7 KI kann Fehler machen \u00b7 Keine Rechtsberatung'
             '</div>'
         )
+
+        # ── Input (fixed at bottom via CSS) ──
+        with gr.Row(elem_id="input-row"):
+            msg_input = gr.Textbox(
+                placeholder="Frage eingeben...",
+                label="",
+                lines=1,
+                show_label=False,
+                elem_id="msg-input",
+                scale=8,
+            )
+            submit_btn = gr.Button("\u279c", variant="primary", elem_id="submit-btn", scale=1)
+
+        # ── Hidden ──
+        clear_trigger = gr.Button("", visible=False, elem_id="clear-trigger")
+        copy_store = gr.Textbox(value="", visible=False, elem_id="copy-store")
 
         # ── Event-Handler (Streaming) ──
         def respond(message, chat_history):
             if not message.strip():
-                yield chat_history, "", "", "", WELCOME_HTML
+                yield chat_history, "", "", WELCOME_HTML
                 return
 
             history_tuples = []
@@ -2127,31 +2167,34 @@ def build_app() -> gr.Blocks:
 
             chat_history = list(chat_history or [])
             chat_history.append({"role": "user", "content": message})
-            chat_history.append({"role": "assistant", "content": "⏳ *OpenLex recherchiert...*"})
-            yield chat_history, "", "", "", ""
+            chat_history.append({"role": "assistant", "content": "\u23f3 *OpenLex recherchiert...*"})
+            yield chat_history, "", "", ""
 
             for partial_response, sources_md, chunks in chat_stream(message, history_tuples):
-                chat_history[-1]["content"] = partial_response
-                yield chat_history, sources_md, partial_response, "", ""
+                full_msg = partial_response
+                if sources_md:
+                    clean_src = _SRC_STYLE_RE.sub('', sources_md)
+                    full_msg += '\n\n<details class="src-collapse"><summary>\U0001f4da Quellen anzeigen</summary>\n\n' + clean_src + '\n\n</details>'
+                chat_history[-1]["content"] = full_msg
+                yield chat_history, partial_response, "", ""
 
         submit_btn.click(
             respond,
             inputs=[msg_input, chatbot],
-            outputs=[chatbot, sources_display, last_answer, msg_input, welcome],
+            outputs=[chatbot, copy_store, msg_input, welcome],
         )
-
         msg_input.submit(
             respond,
             inputs=[msg_input, chatbot],
-            outputs=[chatbot, sources_display, last_answer, msg_input, welcome],
+            outputs=[chatbot, copy_store, msg_input, welcome],
         )
-
-        clear_btn.click(
-            lambda: ([], SOURCES_EMPTY, "", "", WELCOME_HTML),
-            outputs=[chatbot, sources_display, last_answer, msg_input, welcome],
+        clear_trigger.click(
+            lambda: ([], "", "", WELCOME_HTML),
+            outputs=[chatbot, copy_store, msg_input, welcome],
         )
 
     return app
+
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -2193,12 +2236,10 @@ if __name__ == "__main__":
         allowed_paths=[static_dir],
         head=PWA_HEAD,
         css="""
-        /* ═══ OpenLex Modern Minimal ═══ */
+        /* ═══ OpenLex Clean Chat ═══ */
         :root {
             --bg: #111114; --surface: #16161a; --border: #2a2a30;
             --gold: #d4a843; --text: #e0e0e0; --dim: #6b6b70;
-            --green: #58d68d; --green-bg: #1e2a1e; --green-border: #2a3a28;
-            --user-bg: #1a2418; --user-border: #2a3a28;
         }
 
         /* ── Base ── */
@@ -2206,147 +2247,190 @@ if __name__ == "__main__":
         * { font-family: 'Outfit', system-ui, sans-serif !important; }
         h1, h2, h3, h4, .welcome-title { font-family: 'Source Serif 4', Georgia, serif !important; }
 
-        /* ── Gradio overrides ── */
+        /* ── Kill Gradio defaults ── */
         footer, .built-with, a[href*="gradio.app"], .footer-links { display: none !important; }
-        .gradio-container { max-width: 1200px !important; margin: 0 auto !important; padding: 0 16px !important; }
+        .gradio-container { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
         .contain { max-width: 100% !important; }
         .block { background: transparent !important; border: none !important; box-shadow: none !important; }
         .panel { background: transparent !important; border: none !important; }
 
         /* ── Header ── */
-        #ol-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 0 12px; }
-        .ol-brand { font-family: 'Source Serif 4', Georgia, serif !important; font-size: 1.6rem; font-weight: 700; letter-spacing: -0.5px; }
+        #ol-header {
+            position: fixed; top: 0; left: 0; right: 0;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 10px 24px; background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            z-index: 50;
+        }
+        .ol-brand { font-family: 'Source Serif 4', Georgia, serif !important;
+                     font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px; }
         .ol-open { color: #fff; }
         .ol-lex { color: var(--gold); }
-        .ol-badge { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border);
-                    font-size: 0.7rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.05em; }
+        .ol-hamburger { color: var(--gold); font-size: 1.4rem; cursor: pointer;
+                        padding: 4px 8px; user-select: none; }
+        .ol-hamburger:hover { color: #e0b84e; }
 
-        /* ── Status Bar ── */
-        #ol-statusbar { font-size: 0.78rem; color: var(--dim); padding: 0 0 14px;
-                        border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+        /* ── Hamburger Menu ── */
+        #menu-panel {
+            position: fixed; top: 0; right: 0; width: 320px; height: 100vh;
+            background: var(--surface); border-left: 1px solid var(--border);
+            z-index: 1000; transform: translateX(0);
+            transition: transform 0.3s ease; overflow-y: auto;
+        }
+        #menu-panel.menu-closed { transform: translateX(100%); }
+        #menu-backdrop {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5); z-index: 999;
+        }
+        #menu-backdrop.menu-closed { display: none; }
+        .menu-top { display: flex; justify-content: space-between; align-items: center;
+                     padding: 14px 20px; border-bottom: 1px solid var(--border); }
+        .menu-title { color: var(--text); font-weight: 600; }
+        .menu-close { color: var(--dim); font-size: 1.3rem; cursor: pointer; }
+        .menu-close:hover { color: var(--text); }
+        .menu-body { padding: 16px 20px; }
+        .menu-section { margin-bottom: 20px; }
+        .menu-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em;
+                      color: var(--dim); text-transform: uppercase; margin-bottom: 10px; }
+        .menu-eq { display: block; width: 100%; text-align: left;
+                   background: rgba(255,255,255,0.03) !important; border: 1px solid var(--border) !important;
+                   color: var(--text) !important; padding: 10px 12px !important; border-radius: 8px !important;
+                   font-size: 0.82rem !important; cursor: pointer !important; margin-bottom: 6px; }
+        .menu-eq:hover { border-color: var(--gold) !important; }
+        .menu-action { display: block; width: 100%; text-align: left;
+                       background: transparent !important; border: none !important;
+                       border-bottom: 1px solid var(--border) !important;
+                       color: var(--text) !important; padding: 12px 0 !important;
+                       font-size: 0.88rem !important; cursor: pointer !important; }
+        .menu-action:hover { color: var(--gold) !important; }
+        .menu-link { display: block; color: var(--dim) !important; text-decoration: none;
+                     padding: 10px 0; font-size: 0.85rem; }
+        .menu-link:hover { color: var(--gold) !important; }
+        .menu-stats { color: var(--dim); font-size: 0.72rem; padding-top: 16px;
+                      border-top: 1px solid var(--border); }
 
         /* ── Welcome ── */
-        #welcome-container { text-align: center; padding: 48px 0 32px; }
-        .welcome-title { font-size: 2.8rem !important; font-weight: 700 !important; line-height: 1.2 !important;
+        #welcome-container { text-align: center; padding-top: 22vh; }
+        #welcome-container:has(#welcome-screen) ~ #ol-chatbot { display: none !important; }
+        .welcome-title { font-size: 2.6rem !important; font-weight: 700 !important; line-height: 1.2 !important;
                          color: #fff !important; margin: 0 0 16px !important; }
         .welcome-title .gold { color: var(--gold); }
         .welcome-sub { color: var(--dim); font-size: 1.05rem; margin-bottom: 32px; }
         .example-questions { display: flex; flex-direction: column; gap: 8px; max-width: 520px; margin: 0 auto; }
-        .eq { background: var(--surface) !important; border: 1px solid var(--border) !important; color: var(--text) !important;
-              padding: 12px 16px !important; border-radius: 10px !important; text-align: left !important;
-              font-size: 0.9rem !important; cursor: pointer !important; transition: border-color 0.2s !important; }
+        .eq { background: var(--surface) !important; border: 1px solid var(--border) !important;
+              color: var(--text) !important; padding: 12px 16px !important; border-radius: 10px !important;
+              text-align: left !important; font-size: 0.9rem !important; cursor: pointer !important; }
         .eq:hover { border-color: var(--gold) !important; color: #fff !important; }
 
-        /* ── Chat ── */
-        #ol-chatbot { background: var(--bg) !important; border: none !important; }
-        #ol-chatbot .message-row { margin: 6px 0 !important; }
-        /* User messages */
+        /* ── Chatbot ── */
+        #ol-chatbot {
+            background: var(--bg) !important; border: none !important;
+            height: calc(100vh - 110px) !important; max-height: calc(100vh - 110px) !important;
+            margin-top: 46px !important; padding-bottom: 10px !important;
+        }
+        #ol-chatbot .message-row { max-width: 800px !important; margin: 0 auto !important; padding: 6px 20px !important; }
+        /* User */
         #ol-chatbot .user.message, #ol-chatbot [data-testid="user"] {
-            background: var(--user-bg) !important; border: 1px solid var(--user-border) !important;
-            border-radius: 16px 16px 4px 16px !important; color: var(--text) !important; }
-        /* Bot messages */
+            background: transparent !important; border: none !important;
+            color: #fff !important; font-weight: 500 !important; }
+        /* Bot */
         #ol-chatbot .bot.message, #ol-chatbot [data-testid="bot"] {
-            background: var(--surface) !important; border: 1px solid var(--border) !important;
-            border-radius: 16px 16px 16px 4px !important; color: var(--text) !important; }
+            background: transparent !important; border: none !important;
+            color: var(--text) !important; }
         .message, .message p, .message span, .message li, .message code,
         .message h1, .message h2, .message h3, .message h4 {
-            user-select: text !important; -webkit-user-select: text !important; cursor: text !important;
-            font-size: 14px !important; color: var(--text) !important; }
+            user-select: text !important; -webkit-user-select: text !important;
+            font-size: 15px !important; color: var(--text) !important; line-height: 1.7 !important; }
         .message h1, .message h2, .message h3, .message h4 {
             font-family: 'Source Serif 4', Georgia, serif !important;
-            font-weight: 700 !important; margin: 10px 0 4px !important; }
-        .message code { background: rgba(212,168,67,0.12) !important; color: var(--gold) !important;
+            font-weight: 700 !important; margin: 12px 0 4px !important; }
+        .message code { background: rgba(212,168,67,0.1) !important; color: var(--gold) !important;
                         padding: 1px 5px !important; border-radius: 3px !important; }
         .message a { color: var(--gold) !important; }
 
-        /* ── Input Row ── */
-        #input-row { gap: 8px !important; margin-top: 8px !important; align-items: stretch !important; }
+        /* ── Inline Sources (collapsed in chat message) ── */
+        .src-collapse { margin-top: 16px !important; border-top: 1px solid var(--border); padding-top: 8px; }
+        .src-collapse > summary { cursor: pointer; color: var(--dim) !important; font-size: 0.85rem !important;
+                                   user-select: none; padding: 4px 0; list-style: none; }
+        .src-collapse > summary::-webkit-details-marker { display: none; }
+        .src-collapse > summary:hover { color: var(--gold) !important; }
+        .src-collapse[open] > summary { color: var(--gold) !important; }
+        .src-panel h3 { font-size: 0.72rem !important; font-weight: 600 !important; letter-spacing: 0.12em !important;
+                        color: var(--dim) !important; text-transform: uppercase !important; margin-bottom: 12px !important; }
+        .src-panel details { margin: 4px 0 !important; padding: 8px 10px !important; border-radius: 8px !important;
+                             background: rgba(255,255,255,0.03) !important; border: 1px solid var(--border) !important; }
+        .src-panel summary { cursor: pointer; font-weight: 500 !important; font-size: 13px !important;
+                             color: var(--text) !important; padding: 2px 0; }
+        .src-panel .chunk-text { font-size: 12px !important; line-height: 1.5 !important; color: var(--dim) !important; }
+        .src-panel .meta-line { color: var(--dim) !important; font-size: 11px !important;
+                                border-top: 1px solid var(--border) !important; padding-top: 4px; margin-top: 4px; }
+        .src-panel mark { background: rgba(212,168,67,0.25) !important; color: var(--gold) !important;
+                          padding: 0 2px; border-radius: 2px; }
+        .src-panel .val-box { padding: 8px 12px !important; border-radius: 8px !important;
+                              background: rgba(255,255,255,0.03) !important; border: 1px solid var(--border) !important; }
+        .src-panel h4 { color: var(--dim) !important; font-size: 0.8rem !important; }
+        .src-panel .sub-chunk { border-left: 2px solid var(--border); }
+
+        /* ── Footer ── */
+        #ol-footer {
+            position: fixed; bottom: 56px; left: 0; right: 0;
+            text-align: center; font-size: 10px; color: var(--dim);
+            padding: 3px 0; background: var(--bg); z-index: 49;
+        }
+
+        /* ── Input Row (fixed bottom) ── */
+        #input-row {
+            position: fixed !important; bottom: 0 !important; left: 50% !important;
+            transform: translateX(-50%) !important;
+            width: 100% !important; max-width: 840px !important;
+            background: var(--bg) !important; padding: 8px 20px 14px !important;
+            gap: 10px !important; z-index: 50; align-items: center !important;
+        }
         #msg-input, #msg-input *, #input-row > div {
             background: transparent !important; border: none !important;
             box-shadow: none !important; outline: none !important; }
-        #msg-input textarea { background: var(--surface) !important; border: 1px solid var(--gold) !important; }
-        #msg-input textarea { background: var(--surface) !important; border: 1px solid var(--gold) !important;
-            border-radius: 12px !important; color: var(--text) !important; padding: 12px 16px !important;
-            font-size: 0.95rem !important; }
-        #msg-input textarea:focus { border-color: var(--gold) !important; outline: none !important;
-            box-shadow: 0 0 0 2px rgba(212,168,67,0.15) !important; }
+        #msg-input textarea {
+            background: var(--surface) !important; border: 1px solid var(--border) !important;
+            border-radius: 24px !important; color: var(--text) !important;
+            padding: 12px 20px !important; font-size: 0.95rem !important; resize: none !important; }
+        #msg-input textarea:focus {
+            border-color: rgba(212,168,67,0.4) !important;
+            box-shadow: 0 0 0 2px rgba(212,168,67,0.1) !important; }
         #msg-input textarea::placeholder { color: var(--dim) !important; }
-        #submit-btn { background: var(--gold) !important; color: #111 !important; border: none !important;
-            border-radius: 12px !important; font-weight: 600 !important; font-size: 0.95rem !important;
-            min-width: 90px !important; padding: 0 20px !important; height: auto !important; }
+        #submit-btn {
+            background: var(--gold) !important; color: #111 !important; border: none !important;
+            border-radius: 50% !important; width: 44px !important; height: 44px !important;
+            min-width: 44px !important; max-width: 44px !important;
+            font-size: 1.2rem !important; padding: 0 !important;
+            display: flex !important; align-items: center !important; justify-content: center !important; }
         #submit-btn:hover { background: #e0b84e !important; }
 
-        /* ── Action Row ── */
-        #action-row { margin-top: 4px !important; }
-        #clear-btn { background: transparent !important; border: 1px solid var(--border) !important;
-            color: var(--dim) !important; border-radius: 8px !important; font-size: 0.8rem !important; }
-        #clear-btn:hover { border-color: var(--dim) !important; color: var(--text) !important; }
-
-        /* ── Copy Accordion ── */
-        #copy-accordion { border: 1px solid var(--border) !important; border-radius: 8px !important;
-            background: var(--surface) !important; margin-top: 8px !important; }
-        #copy-accordion .label-wrap { color: var(--dim) !important; font-size: 0.82rem !important; }
-        #last-answer { max-height: 50vh; overflow-y: auto; padding: 12px; }
-        #last-answer * { font-size: 13px !important; color: var(--text) !important; }
-
-        /* ── Sources Sidebar ── */
-        #sources-col { background: var(--surface) !important; border: 1px solid var(--border) !important;
-            border-radius: 12px !important; padding: 16px !important; min-height: 300px; }
-        #sources-panel { max-height: 80vh; overflow-y: auto; }
-        .src-heading, .src-empty .src-heading { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em;
-            color: var(--dim); text-transform: uppercase; margin-bottom: 12px; }
-        .src-panel h3 { font-size: 0.72rem !important; font-weight: 600 !important; letter-spacing: 0.12em !important;
-            color: var(--dim) !important; text-transform: uppercase !important; margin-bottom: 12px !important; }
-        .src-panel details { margin: 4px 0 !important; padding: 8px 10px !important; border-radius: 8px !important;
-            background: rgba(255,255,255,0.03) !important; border: 1px solid var(--border) !important; }
-        .src-panel summary { cursor: pointer; font-weight: 500 !important; font-size: 13px !important;
-            color: var(--text) !important; padding: 2px 0; }
-        .src-panel .chunk-text { font-size: 12px !important; line-height: 1.5 !important; color: var(--dim) !important; }
-        .src-panel .meta-line { color: var(--dim) !important; font-size: 11px !important;
-            border-top: 1px solid var(--border) !important; }
-        .src-panel mark { background: rgba(212,168,67,0.25) !important; color: var(--gold) !important;
-            padding: 0 2px; border-radius: 2px; }
-        .src-panel .val-box { padding: 8px 12px !important; border-radius: 8px !important;
-            background: rgba(255,255,255,0.03) !important; border: 1px solid var(--border) !important; }
-        .src-panel h4 { color: var(--dim) !important; font-size: 0.8rem !important; }
-
-        /* ── Footer ── */
-        #ol-footer { text-align: center; font-size: 11px; color: var(--dim); padding: 16px 0;
-            border-top: 1px solid var(--border); margin-top: 20px; }
-        #ol-footer a { color: var(--dim); text-decoration: none; }
-        #ol-footer a:hover { color: var(--gold); }
+        /* ── Hidden ── */
+        #copy-store { display: none !important; }
 
         /* ── Gradio dark fixes ── */
         .label-wrap, label, .tab-nav button { color: var(--dim) !important; }
         .border-none { border: none !important; }
         input, textarea, select { background: var(--surface) !important; color: var(--text) !important;
             border-color: var(--border) !important; }
-        .accordion { background: var(--surface) !important; border-color: var(--border) !important; }
 
-        /* ── Welcome/Chat toggle: hide chat area when welcome is visible ── */
-        #welcome-container:has(#welcome-screen) ~ #main-row #ol-chatbot,
-        #welcome-container:has(#welcome-screen) ~ #main-row #sources-col,
-        #welcome-container:has(#welcome-screen) ~ #main-row #action-row,
-        #welcome-container:has(#welcome-screen) ~ #main-row #copy-accordion {
-            display: none !important;
-        }
-
-        /* ── Safe area for iPhone ── */
+        /* ── Safe area ── */
         body { padding: env(safe-area-inset-top) env(safe-area-inset-right)
                env(safe-area-inset-bottom) env(safe-area-inset-left); }
 
         /* ── Mobile ── */
         @media (max-width: 768px) {
-            .gradio-container { padding: 0 8px !important; }
-            #main-row { flex-direction: column !important; }
-            #main-row > .column, #chat-col, #sources-col {
-                width: 100% !important; min-width: 100% !important; max-width: 100% !important; flex: 1 1 100% !important; }
-            #sources-col { margin-top: 12px !important; }
+            .gradio-container { padding: 0 !important; }
+            #welcome-container { padding-top: 15vh; }
             .welcome-title { font-size: 1.8rem !important; }
-            #ol-chatbot { height: 250px !important; min-height: 200px !important; }
+            #ol-chatbot { margin-top: 42px !important; }
+            #ol-chatbot .message-row { padding: 4px 12px !important; }
+            #input-row { padding: 8px 12px 12px !important; }
+            #menu-panel { width: 85vw; }
+            .eq { font-size: 0.82rem !important; padding: 10px 14px !important; }
             button { min-height: 44px !important; }
             textarea { font-size: 16px !important; }
-            .eq { font-size: 0.82rem !important; padding: 10px 14px !important; }
         }
+
         """,
     )
