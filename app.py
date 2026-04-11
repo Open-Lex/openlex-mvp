@@ -2246,10 +2246,12 @@ if __name__ == "__main__":
 
         /* ── Input Row ── */
         #input-row { gap: 8px !important; margin-top: 8px !important; }
-        #msg-input textarea { background: var(--surface) !important; border: 1px solid var(--border) !important;
+        #msg-input { background: transparent !important; border: none !important; box-shadow: none !important; }
+        #msg-input .wrap, #msg-input > div { background: transparent !important; border: none !important; box-shadow: none !important; }
+        #msg-input textarea { background: var(--surface) !important; border: 1px solid var(--gold) !important;
             border-radius: 12px !important; color: var(--text) !important; padding: 12px 16px !important;
             font-size: 0.95rem !important; }
-        #msg-input textarea:focus { border-color: rgba(212,168,67,0.5) !important; outline: none !important;
+        #msg-input textarea:focus { border-color: var(--gold) !important; outline: none !important;
             box-shadow: 0 0 0 2px rgba(212,168,67,0.15) !important; }
         #msg-input textarea::placeholder { color: var(--dim) !important; }
         #submit-btn { background: var(--gold) !important; color: #111 !important; border: none !important;
