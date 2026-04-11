@@ -2157,7 +2157,6 @@ if __name__ == "__main__":
         server_port=7860,
         share=False,
         show_error=True,
-        show_api=False,
         root_path=os.environ.get("GRADIO_ROOT_PATH", ""),
         favicon_path=os.path.join(static_dir, "apple-touch-icon.png"),
         allowed_paths=[static_dir],
