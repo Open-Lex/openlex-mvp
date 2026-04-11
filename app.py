@@ -2253,12 +2253,18 @@ if __name__ == "__main__":
         .contain { max-width: 100% !important; }
         .block { background: transparent !important; border: none !important; box-shadow: none !important; }
         .panel { background: transparent !important; border: none !important; }
+        .wrap, .wrapper, .bubble-wrap, .chatbot, #ol-chatbot > *,
+        #ol-chatbot > * > *, #ol-chatbot > * > * > * {
+            background: transparent !important; border: none !important;
+            box-shadow: none !important; border-radius: 0 !important; }
+        #ol-chatbot .bubble-wrap { padding: 0 !important; }
 
         /* ── Header ── */
         #ol-header {
             position: fixed; top: 0; left: 0; right: 0;
             display: flex; align-items: center; justify-content: space-between;
-            padding: 10px 24px; background: var(--bg);
+            padding: calc(env(safe-area-inset-top, 0px) + 8px) 24px 8px;
+            background: var(--bg);
             border-bottom: 1px solid var(--border);
             z-index: 50;
         }
@@ -2325,10 +2331,12 @@ if __name__ == "__main__":
         /* ── Chatbot ── */
         #ol-chatbot {
             background: var(--bg) !important; border: none !important;
-            height: calc(100vh - 110px) !important; max-height: calc(100vh - 110px) !important;
-            margin-top: 46px !important; padding-bottom: 10px !important;
+            height: calc(100vh - 110px - env(safe-area-inset-top, 0px)) !important;
+            max-height: calc(100vh - 110px - env(safe-area-inset-top, 0px)) !important;
+            margin-top: calc(46px + env(safe-area-inset-top, 0px)) !important;
+            padding-bottom: 10px !important;
         }
-        #ol-chatbot .message-row { max-width: 800px !important; margin: 0 auto !important; padding: 6px 20px !important; }
+        #ol-chatbot .message-row { max-width: 100% !important; padding: 6px 24px !important; }
         /* User */
         #ol-chatbot .user.message, #ol-chatbot [data-testid="user"] {
             background: transparent !important; border: none !important;
