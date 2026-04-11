@@ -1755,18 +1755,19 @@ def format_sources(chunks: list[dict], validations: list[dict],
                    question: str = "") -> str:
     """Formatiert die Quellenleiste als HTML mit aufklappbaren Dokumenten."""
     css = """<style>
-.src-panel details{margin:4px 0;padding:4px 8px;border-radius:4px;background:rgba(128,128,128,0.08)}
-.src-panel summary{cursor:pointer;font-weight:normal;font-size:14px;padding:2px 0}
-.src-panel summary::-webkit-details-marker{color:#888}
-.src-panel mark{background:#ffd700;color:#000;padding:0 2px;border-radius:2px}
-.src-panel .highlight-query{background:#87ceeb;color:#000;padding:0 2px;border-radius:2px}
-.src-panel .meta-line{color:#888;font-size:14px;margin-top:4px;border-top:1px solid rgba(128,128,128,0.2);padding-top:4px}
-.src-panel .chunk-text{font-size:14px;line-height:1.4;padding:6px 0;white-space:pre-wrap;word-break:break-word}
-.src-panel .val-box{padding:6px 10px;border-radius:6px;background:rgba(128,128,128,0.06);margin:6px 0}
-.src-panel .sub-chunk{margin:4px 0 4px 12px;padding:4px 6px;border-left:2px solid rgba(128,128,128,0.2)}
+.src-panel details{margin:4px 0;padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid #2a2a30}
+.src-panel summary{cursor:pointer;font-weight:500;font-size:13px;padding:2px 0;color:#e0e0e0}
+.src-panel summary::-webkit-details-marker{color:#6b6b70}
+.src-panel mark{background:rgba(212,168,67,0.25);color:#d4a843;padding:0 2px;border-radius:2px}
+.src-panel .highlight-query{background:rgba(88,214,141,0.15);color:#58d68d;padding:0 2px;border-radius:2px}
+.src-panel .meta-line{color:#6b6b70;font-size:11px;margin-top:4px;border-top:1px solid #2a2a30;padding-top:4px}
+.src-panel .chunk-text{font-size:12px;line-height:1.5;padding:6px 0;white-space:pre-wrap;word-break:break-word;color:#8a8a8f}
+.src-panel .val-box{padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.03);margin:6px 0;border:1px solid #2a2a30;color:#e0e0e0;font-size:13px}
+.src-panel .val-box small{color:#6b6b70}
+.src-panel .sub-chunk{margin:4px 0 4px 12px;padding:4px 6px;border-left:2px solid #2a2a30}
 </style>"""
 
-    html = f'{css}<div class="src-panel"><h3>📚 Quellen</h3>'
+    html = f'{css}<div class="src-panel"><h3>QUELLEN</h3>'
 
     docs = group_chunks_to_docs(chunks)
     primary_docs = [d for d in docs if d["source_type"] != "methodenwissen"]
@@ -1985,22 +1986,28 @@ PWA_HEAD = (
     '<meta name="apple-mobile-web-app-capable" content="yes">'
     '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">'
     '<meta name="apple-mobile-web-app-title" content="OpenLex">'
-    '<meta name="theme-color" content="#1a1a2e">'
+    '<meta name="theme-color" content="#111114">'
     '<meta property="og:title" content="OpenLex – Datenschutzrecht">'
     '<meta property="og:description" content="Open-Source Rechts-KI für europäisches Datenschutzrecht">'
     '<meta property="og:type" content="website">'
     '<meta property="og:url" content="https://app.open-lex.cloud">'
     '<meta name="description" content="Open-Source Rechts-KI für europäisches Datenschutzrecht">'
     '<meta name="application-name" content="OpenLex">'
+    '<link rel="preconnect" href="https://fonts.googleapis.com">'
+    '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+    '<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">'
     '<script>if(window.self !== window.top){document.documentElement.classList.add("in-iframe")}</script>'
 )
 
 
 def build_app() -> gr.Blocks:
-    """Erstellt die Gradio-App."""
+    """Erstellt die Gradio-App im Modern Minimal Design."""
 
-    db_stats_md = format_db_stats()
     provider_status = get_provider_status()
+    raw_stats = get_db_stats()
+    total_chunks = raw_stats.get("GESAMT", 0)
+    urteile = raw_stats.get("urteil", 0) + raw_stats.get("urteil_segmentiert", 0)
+    db_stats_md = format_db_stats()
 
     # Git-Commit beim Start lesen
     try:
@@ -2012,86 +2019,85 @@ def build_app() -> gr.Blocks:
     except Exception:
         _git_hash = "unknown"
 
+    # ── Welcome-Screen HTML ──
+    WELCOME_HTML = f"""<div id="welcome-screen">
+<h1 class="welcome-title">Datenschutzrecht<br><span class="gold">recherchieren.</span></h1>
+<p class="welcome-sub">Quellenbasierte Antworten zum europäischen Datenschutzrecht.</p>
+<div class="example-questions">
+<button class="eq" onclick="document.querySelector('#msg-input textarea').value=this.textContent.substring(2);document.querySelector('#msg-input textarea').dispatchEvent(new Event('input',{{bubbles:true}}))">1. Darf mein Arbeitgeber meine E-Mails lesen?</button>
+<button class="eq" onclick="document.querySelector('#msg-input textarea').value=this.textContent.substring(2);document.querySelector('#msg-input textarea').dispatchEvent(new Event('input',{{bubbles:true}}))">2. Was sind die Voraussetzungen für eine wirksame Einwilligung?</button>
+<button class="eq" onclick="document.querySelector('#msg-input textarea').value=this.textContent.substring(2);document.querySelector('#msg-input textarea').dispatchEvent(new Event('input',{{bubbles:true}}))">3. Wie hat der EuGH den Schadensersatz nach Art. 82 DSGVO ausgelegt?</button>
+<button class="eq" onclick="document.querySelector('#msg-input textarea').value=this.textContent.substring(2);document.querySelector('#msg-input textarea').dispatchEvent(new Event('input',{{bubbles:true}}))">4. Darf ich als Unternehmen Daten in die USA übermitteln?</button>
+<button class="eq" onclick="document.querySelector('#msg-input textarea').value=this.textContent.substring(2);document.querySelector('#msg-input textarea').dispatchEvent(new Event('input',{{bubbles:true}}))">5. Ist Videoüberwachung im Laden zur Diebstahlprävention zulässig?</button>
+</div>
+</div>"""
+
+    SOURCES_EMPTY = '<div class="src-empty"><div class="src-heading">QUELLEN</div><p style="color:#666;font-size:13px">Stellen Sie eine Frage, um Quellen zu sehen.</p></div>'
+
     with gr.Blocks(
-        title="OpenLex – Datenschutzrecht MVP",
+        title="OpenLex – Datenschutzrecht",
+        elem_id="openlex-app",
     ) as app:
-        gr.Markdown(
-            "# ⚖️ OpenLex – Datenschutzrecht MVP\n"
-            "*Open-Source Rechts-KI für deutsches und europäisches Datenschutzrecht*",
-            elem_id="openlex-header",
+
+        # ── Header ──
+        gr.HTML(
+            f'<div id="ol-header">'
+            f'<div class="ol-brand"><span class="ol-open">Open</span><span class="ol-lex">Lex</span></div>'
+            f'<div class="ol-badge">OPEN SOURCE</div>'
+            f'</div>'
+            f'<div id="ol-statusbar">{total_chunks:,} Quellen | {urteile:,} Urteile | Commit: {_git_hash}</div>'
         )
 
-        with gr.Row():
-            # ── Links: Chat (70%) ──
-            with gr.Column(scale=7):
+        # ── Welcome (wird per JS ausgeblendet nach erster Frage) ──
+        welcome = gr.HTML(value=WELCOME_HTML, elem_id="welcome-container")
+
+        # ── Hauptbereich: Chat + Quellen ──
+        with gr.Row(elem_id="main-row"):
+            with gr.Column(scale=7, elem_id="chat-col"):
                 chatbot = gr.Chatbot(
                     label="Chat",
-                    height=300,
-                )
-                msg_input = gr.Textbox(
-                    placeholder="Ihre datenschutzrechtliche Frage...",
-                    label="Frage",
-                    lines=2,
+                    height=420,
+                    elem_id="ol-chatbot",
                     show_label=False,
                 )
-                with gr.Row():
-                    submit_btn = gr.Button("📤 Fragen", variant="primary")
-                    clear_btn = gr.Button("🔄 Neues Gespräch")
+                with gr.Row(elem_id="input-row"):
+                    msg_input = gr.Textbox(
+                        placeholder="Frage eingeben...",
+                        label="Frage",
+                        lines=1,
+                        show_label=False,
+                        elem_id="msg-input",
+                        scale=8,
+                    )
+                    submit_btn = gr.Button("Fragen", variant="primary", elem_id="submit-btn", scale=1)
 
-                # Kopierbare letzte Antwort
-                with gr.Accordion("📋 Letzte Antwort (kopierbar)", open=False):
+                with gr.Row(elem_id="action-row"):
+                    clear_btn = gr.Button("Neues Gespräch", elem_id="clear-btn", size="sm")
+
+                with gr.Accordion("Letzte Antwort (kopierbar)", open=False, elem_id="copy-accordion"):
                     last_answer = gr.Markdown(
-                        value="*Hier erscheint die letzte Antwort als kopierbarer Text.*",
+                        value="",
                         elem_id="last-answer",
                     )
 
-                gr.Examples(
-                    examples=[
-                        "Darf mein Arbeitgeber meine E-Mails lesen?",
-                        "Ist Videoüberwachung im Laden nach Art. 6 Abs. 1 lit. f DSGVO zulässig?",
-                        "Was sind die Voraussetzungen für eine wirksame Einwilligung?",
-                        "Wie hat der EuGH den Schadensersatz nach Art. 82 DSGVO ausgelegt?",
-                        "Darf ich als Unternehmen Daten in die USA übermitteln?",
-                        "Was sagt die DSK zu Microsoft 365?",
-                    ],
-                    inputs=msg_input,
-                    label="Beispiel-Fragen",
-                )
-
-            # ── Rechts: Quellen (30%) ──
-            with gr.Column(scale=3):
-                sources_display = gr.HTML(
-                    value='<div style="padding:8px"><h3>📚 Quellen</h3><p><em>Stellen Sie eine Frage um Quellen zu sehen.</em></p></div>',
-                )
-
-        # ── Disclaimer ──
-        gr.Markdown(
-            '<div style="background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:8px 12px;margin:8px 0;font-size:13px;color:#856404">'
-            'OpenLex ist ein Recherche-Werkzeug, keine Rechtsberatung und derzeit noch in einem frühen Teststadium. '
-            'Fehler werden kommen. Meldet sie uns gerne.</div>'
-        )
-
-        # ── Unten: Provider-Status + DB-Statistiken ──
-        gr.Markdown(f"*{provider_status} | Commit: `{_git_hash}`*")
-        with gr.Accordion("📊 Datenbankstatistiken", open=False):
-            gr.Markdown(db_stats_md)
+            # ── Quellen-Sidebar ──
+            with gr.Column(scale=3, elem_id="sources-col"):
+                sources_display = gr.HTML(value=SOURCES_EMPTY, elem_id="sources-panel")
 
         # ── Footer ──
-        gr.Markdown(
-            '<div style="text-align:center;color:#888;font-size:12px;padding:12px 0;border-top:1px solid #e0e0e0;margin-top:12px">'
-            'OpenLex – Open Source Legal AI für Datenschutzrecht | '
-            '<a href="mailto:contact@open-lex.cloud" style="color:#888">contact@open-lex.cloud</a> | '
-            '<a href="https://open-lex.cloud" style="color:#888" target="_blank">open-lex.cloud</a> | '
-            '<a href="/rechtliches" style="color:#888" target="_blank">Impressum / Rechtliches</a></div>'
+        gr.HTML(
+            '<div id="ol-footer">'
+            'Testphase · KI kann Fehler machen · Keine Rechtsberatung · '
+            '<a href="/rechtliches" target="_blank">Impressum / Rechtliches</a>'
+            '</div>'
         )
 
         # ── Event-Handler (Streaming) ──
         def respond(message, chat_history):
             if not message.strip():
-                yield chat_history, "", "", ""
+                yield chat_history, "", "", "", gr.update(visible=True)
                 return
 
-            # Gradio 6: chat_history is list[dict] with role/content
             history_tuples = []
             if chat_history:
                 user_msg = None
@@ -2104,34 +2110,30 @@ def build_app() -> gr.Blocks:
                         history_tuples.append((user_msg, content))
                         user_msg = None
 
-            # Ladeindikator als temporäre Bot-Antwort
             chat_history = list(chat_history or [])
             chat_history.append({"role": "user", "content": message})
             chat_history.append({"role": "assistant", "content": "⏳ *OpenLex recherchiert...*"})
-            yield chat_history, "", "", ""
+            yield chat_history, "", "", "", gr.update(visible=False)
 
-            # Stream tokens
             for partial_response, sources_md, chunks in chat_stream(message, history_tuples):
                 chat_history[-1]["content"] = partial_response
-                yield chat_history, sources_md, partial_response, ""
+                yield chat_history, sources_md, partial_response, "", gr.update(visible=False)
 
         submit_btn.click(
             respond,
             inputs=[msg_input, chatbot],
-            outputs=[chatbot, sources_display, last_answer, msg_input],
+            outputs=[chatbot, sources_display, last_answer, msg_input, welcome],
         )
 
         msg_input.submit(
             respond,
             inputs=[msg_input, chatbot],
-            outputs=[chatbot, sources_display, last_answer, msg_input],
+            outputs=[chatbot, sources_display, last_answer, msg_input, welcome],
         )
 
-        _SOURCES_EMPTY = '<div style="padding:8px"><h3>📚 Quellen</h3><p><em>Stellen Sie eine Frage um Quellen zu sehen.</em></p></div>'
         clear_btn.click(
-            lambda: ([], _SOURCES_EMPTY,
-                     "*Hier erscheint die letzte Antwort als kopierbarer Text.*", ""),
-            outputs=[chatbot, sources_display, last_answer, msg_input],
+            lambda: ([], SOURCES_EMPTY, "", "", gr.update(visible=True)),
+            outputs=[chatbot, sources_display, last_answer, msg_input, welcome],
         )
 
     return app
@@ -2175,55 +2177,149 @@ if __name__ == "__main__":
         favicon_path=os.path.join(static_dir, "apple-touch-icon.png"),
         allowed_paths=[static_dir],
         head=PWA_HEAD,
-        theme=gr.themes.Soft(),
         css="""
-        * { font-family: 'DM Sans', Arial, Helvetica, sans-serif !important; }
-        .source-panel { max-height: 80vh; overflow-y: auto; }
-        footer { display: none !important; }
-        .built-with { display: none !important; }
-        a[href*="gradio.app"] { display: none !important; }
-        .footer-links { display: none !important; }
-        /* Full-width: remove all Gradio container constraints */
-        .gradio-container { max-width: 100% !important; width: 100% !important; padding: 0 !important; margin: 0 !important; }
-        .gradio-container > .main { padding: 0 !important; margin: 0 !important; }
-        .gradio-container > .main > .wrap { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
-        .contain { max-width: 100% !important; padding: 0 !important; }
-        /* Header: hide in iframe, show in standalone/browser */
-        .in-iframe #openlex-header { display: none !important; }
-        #openlex-header { text-align: center; padding: 8px 0 0 0; }
+        /* ═══ OpenLex Modern Minimal ═══ */
+        :root {
+            --bg: #111114; --surface: #16161a; --border: #2a2a30;
+            --gold: #d4a843; --text: #e0e0e0; --dim: #6b6b70;
+            --green: #58d68d; --green-bg: #1e2a1e; --green-border: #2a3a28;
+            --user-bg: #1a2418; --user-border: #2a3a28;
+        }
+
+        /* ── Base ── */
+        body, .gradio-container { background: var(--bg) !important; color: var(--text) !important; }
+        * { font-family: 'Outfit', system-ui, sans-serif !important; }
+        h1, h2, h3, h4, .welcome-title { font-family: 'Source Serif 4', Georgia, serif !important; }
+
+        /* ── Gradio overrides ── */
+        footer, .built-with, a[href*="gradio.app"], .footer-links { display: none !important; }
+        .gradio-container { max-width: 1200px !important; margin: 0 auto !important; padding: 0 16px !important; }
+        .contain { max-width: 100% !important; }
+        .block { background: transparent !important; border: none !important; box-shadow: none !important; }
+        .panel { background: transparent !important; border: none !important; }
+
+        /* ── Header ── */
+        #ol-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 0 12px; }
+        .ol-brand { font-family: 'Source Serif 4', Georgia, serif !important; font-size: 1.6rem; font-weight: 700; letter-spacing: -0.5px; }
+        .ol-open { color: #fff; }
+        .ol-lex { color: var(--gold); }
+        .ol-badge { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border);
+                    font-size: 0.7rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.05em; }
+
+        /* ── Status Bar ── */
+        #ol-statusbar { font-size: 0.78rem; color: var(--dim); padding: 0 0 14px;
+                        border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+
+        /* ── Welcome ── */
+        #welcome-container { text-align: center; padding: 48px 0 32px; }
+        .welcome-title { font-size: 2.8rem !important; font-weight: 700 !important; line-height: 1.2 !important;
+                         color: #fff !important; margin: 0 0 16px !important; }
+        .welcome-title .gold { color: var(--gold); }
+        .welcome-sub { color: var(--dim); font-size: 1.05rem; margin-bottom: 32px; }
+        .example-questions { display: flex; flex-direction: column; gap: 8px; max-width: 520px; margin: 0 auto; }
+        .eq { background: var(--surface) !important; border: 1px solid var(--border) !important; color: var(--text) !important;
+              padding: 12px 16px !important; border-radius: 10px !important; text-align: left !important;
+              font-size: 0.9rem !important; cursor: pointer !important; transition: border-color 0.2s !important; }
+        .eq:hover { border-color: var(--gold) !important; color: #fff !important; }
+
+        /* ── Chat ── */
+        #ol-chatbot { background: var(--bg) !important; border: none !important; }
+        #ol-chatbot .message-row { margin: 6px 0 !important; }
+        /* User messages */
+        #ol-chatbot .user.message, #ol-chatbot [data-testid="user"] {
+            background: var(--user-bg) !important; border: 1px solid var(--user-border) !important;
+            border-radius: 16px 16px 4px 16px !important; color: var(--text) !important; }
+        /* Bot messages */
+        #ol-chatbot .bot.message, #ol-chatbot [data-testid="bot"] {
+            background: var(--surface) !important; border: 1px solid var(--border) !important;
+            border-radius: 16px 16px 16px 4px !important; color: var(--text) !important; }
         .message, .message p, .message span, .message li, .message code,
-        .message h1, .message h2, .message h3, .message h4,
-        .bot, .user, [class*="message"] {
-            user-select: text !important;
-            -webkit-user-select: text !important;
-            -moz-user-select: text !important;
-            cursor: text !important;
-            font-size: 14px !important;
-        }
         .message h1, .message h2, .message h3, .message h4 {
-            font-weight: bold !important;
-            margin: 8px 0 4px 0 !important;
-        }
-        #last-answer { max-height: 60vh; overflow-y: auto; padding: 12px;
-            border: 1px solid #e0e0e0; border-radius: 8px; }
-        #last-answer * { font-size: 14px !important; }
-        /* Safe area for iPhone notch/home indicator */
+            user-select: text !important; -webkit-user-select: text !important; cursor: text !important;
+            font-size: 14px !important; color: var(--text) !important; }
+        .message h1, .message h2, .message h3, .message h4 {
+            font-family: 'Source Serif 4', Georgia, serif !important;
+            font-weight: 700 !important; margin: 10px 0 4px !important; }
+        .message code { background: rgba(212,168,67,0.12) !important; color: var(--gold) !important;
+                        padding: 1px 5px !important; border-radius: 3px !important; }
+        .message a { color: var(--gold) !important; }
+
+        /* ── Input Row ── */
+        #input-row { gap: 8px !important; margin-top: 8px !important; }
+        #msg-input textarea { background: var(--surface) !important; border: 1px solid var(--border) !important;
+            border-radius: 12px !important; color: var(--text) !important; padding: 12px 16px !important;
+            font-size: 0.95rem !important; }
+        #msg-input textarea:focus { border-color: rgba(212,168,67,0.5) !important; outline: none !important;
+            box-shadow: 0 0 0 2px rgba(212,168,67,0.15) !important; }
+        #msg-input textarea::placeholder { color: var(--dim) !important; }
+        #submit-btn { background: var(--gold) !important; color: #111 !important; border: none !important;
+            border-radius: 12px !important; font-weight: 600 !important; font-size: 0.95rem !important;
+            min-width: 90px !important; padding: 10px 20px !important; }
+        #submit-btn:hover { background: #e0b84e !important; }
+
+        /* ── Action Row ── */
+        #action-row { margin-top: 4px !important; }
+        #clear-btn { background: transparent !important; border: 1px solid var(--border) !important;
+            color: var(--dim) !important; border-radius: 8px !important; font-size: 0.8rem !important; }
+        #clear-btn:hover { border-color: var(--dim) !important; color: var(--text) !important; }
+
+        /* ── Copy Accordion ── */
+        #copy-accordion { border: 1px solid var(--border) !important; border-radius: 8px !important;
+            background: var(--surface) !important; margin-top: 8px !important; }
+        #copy-accordion .label-wrap { color: var(--dim) !important; font-size: 0.82rem !important; }
+        #last-answer { max-height: 50vh; overflow-y: auto; padding: 12px; }
+        #last-answer * { font-size: 13px !important; color: var(--text) !important; }
+
+        /* ── Sources Sidebar ── */
+        #sources-col { background: var(--surface) !important; border: 1px solid var(--border) !important;
+            border-radius: 12px !important; padding: 16px !important; min-height: 300px; }
+        #sources-panel { max-height: 80vh; overflow-y: auto; }
+        .src-heading, .src-empty .src-heading { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em;
+            color: var(--dim); text-transform: uppercase; margin-bottom: 12px; }
+        .src-panel h3 { font-size: 0.72rem !important; font-weight: 600 !important; letter-spacing: 0.12em !important;
+            color: var(--dim) !important; text-transform: uppercase !important; margin-bottom: 12px !important; }
+        .src-panel details { margin: 4px 0 !important; padding: 8px 10px !important; border-radius: 8px !important;
+            background: rgba(255,255,255,0.03) !important; border: 1px solid var(--border) !important; }
+        .src-panel summary { cursor: pointer; font-weight: 500 !important; font-size: 13px !important;
+            color: var(--text) !important; padding: 2px 0; }
+        .src-panel .chunk-text { font-size: 12px !important; line-height: 1.5 !important; color: var(--dim) !important; }
+        .src-panel .meta-line { color: var(--dim) !important; font-size: 11px !important;
+            border-top: 1px solid var(--border) !important; }
+        .src-panel mark { background: rgba(212,168,67,0.25) !important; color: var(--gold) !important;
+            padding: 0 2px; border-radius: 2px; }
+        .src-panel .val-box { padding: 8px 12px !important; border-radius: 8px !important;
+            background: rgba(255,255,255,0.03) !important; border: 1px solid var(--border) !important; }
+        .src-panel h4 { color: var(--dim) !important; font-size: 0.8rem !important; }
+
+        /* ── Footer ── */
+        #ol-footer { text-align: center; font-size: 11px; color: var(--dim); padding: 16px 0;
+            border-top: 1px solid var(--border); margin-top: 20px; }
+        #ol-footer a { color: var(--dim); text-decoration: none; }
+        #ol-footer a:hover { color: var(--gold); }
+
+        /* ── Gradio dark fixes ── */
+        .label-wrap, label, .tab-nav button { color: var(--dim) !important; }
+        .border-none { border: none !important; }
+        input, textarea, select { background: var(--surface) !important; color: var(--text) !important;
+            border-color: var(--border) !important; }
+        .accordion { background: var(--surface) !important; border-color: var(--border) !important; }
+
+        /* ── Safe area for iPhone ── */
         body { padding: env(safe-area-inset-top) env(safe-area-inset-right)
                env(safe-area-inset-bottom) env(safe-area-inset-left); }
+
         /* ── Mobile ── */
         @media (max-width: 768px) {
-            #openlex-header h1 { font-size: 22px !important; }
-            #openlex-header p { font-size: 13px !important; }
-            /* Stack columns vertically */
-            .row.svelte-1bk3i6o, .row { flex-direction: column !important; }
-            .column { width: 100% !important; min-width: 100% !important; max-width: 100% !important; flex: 1 1 100% !important; }
-            /* Compact chat on mobile */
-            .chatbot { height: 200px !important; min-height: 150px !important; }
-            /* Touch-friendly buttons */
-            button { min-height: 44px !important; font-size: 15px !important; }
-            /* Input field */
-            textarea { font-size: 16px !important; }  /* prevents iOS zoom on focus */
-            .gradio-container { padding: 4px !important; }
+            .gradio-container { padding: 0 8px !important; }
+            #main-row { flex-direction: column !important; }
+            #main-row > .column, #chat-col, #sources-col {
+                width: 100% !important; min-width: 100% !important; max-width: 100% !important; flex: 1 1 100% !important; }
+            #sources-col { margin-top: 12px !important; }
+            .welcome-title { font-size: 1.8rem !important; }
+            #ol-chatbot { height: 250px !important; min-height: 200px !important; }
+            button { min-height: 44px !important; }
+            textarea { font-size: 16px !important; }
+            .eq { font-size: 0.82rem !important; padding: 10px 14px !important; }
         }
         """,
     )
