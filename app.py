@@ -1373,7 +1373,7 @@ def _stream_openrouter(messages: list[dict]):
 # ---------------------------------------------------------------------------
 
 _MISTRAL_URL = "https://api.mistral.ai/v1/chat/completions"
-_MISTRAL_MODEL = "mistral-medium-latest"
+_MISTRAL_MODEL = "mistral-large-latest"
 
 
 def _mistral_available() -> bool:
@@ -1448,7 +1448,7 @@ def _stream_ollama(messages: list[dict]):
 PROVIDERS = [
     {
         "name": "Mistral",
-        "display": "Mistral Medium via Mistral",
+        "display": "Mistral Large via Mistral",
         "is_available": _mistral_available,
         "stream": _stream_mistral,
     },
@@ -1574,6 +1574,36 @@ def validate_response(response: str, chunks: list[dict]) -> list[dict]:
     # b) Volltext-Suche (fängt granulare Referenzen in übergeordneten Artikeln ab)
     ctx_fulltext = _normalize_ref(" ".join(c["text"] for c in chunks))
 
+    # FIX 2: Gesetze die NICHT in der Datenschutz-DB sind → "external" statt "missing"
+    _EXTERN_GESETZE = {"BGB", "HGB", "StGB", "ZPO", "GG", "AktG", "GmbHG",
+                       "InsO", "UWG", "MarkenG", "UrhG", "PatG", "VwGO",
+                       "VwVfG", "SGG", "ArbGG", "BetrVG", "KSchG", "AGG"}
+
+    def _is_extern_gesetz(ref: str) -> bool:
+        """Prüft ob eine Norm aus einem Gesetz stammt das nicht in der DS-DB ist."""
+        ref_upper = ref.upper()
+        for g in _EXTERN_GESETZE:
+            if ref_upper.endswith(g) or f" {g} " in ref_upper or f" {g})" in ref_upper:
+                return True
+        return False
+
+    def _hierarchy_variants(ref: str) -> list[str]:
+        """Erzeugt hierarchische Fallback-Varianten einer Normreferenz.
+
+        'Art. 13 Abs. 2 lit. e DSGVO' → ['Art. 13 Abs. 2 DSGVO', 'Art. 13 DSGVO']
+        """
+        variants = []
+        r = ref
+        # Schritt 1: lit./Buchst. entfernen
+        stripped = re.sub(r"\s*(?:lit\.?|Buchst(?:abe)?\.?)\s*[a-z]\s*", " ", r)
+        if stripped != r:
+            variants.append(re.sub(r"\s+", " ", stripped).strip())
+        # Schritt 2: Abs. entfernen
+        stripped2 = re.sub(r"\s*Abs(?:atz)?\.?\s*\d+\s*", " ", stripped if stripped != r else r)
+        if stripped2 != r and stripped2 not in variants:
+            variants.append(re.sub(r"\s+", " ", stripped2).strip())
+        return variants
+
     def _check(ref: str, ref_type: str, db_threshold: float) -> dict:
         ref_normalized = _normalize_ref(ref)
         # Stufe 1a: Label/Metadaten-Match
@@ -1581,6 +1611,13 @@ def validate_response(response: str, chunks: list[dict]) -> list[dict]:
         # Stufe 1b: Volltext-Match (z.B. "Art. 7 Abs. 3" im Text von Quelle "Art. 7 DSGVO")
         if not in_context:
             in_context = ref_normalized in ctx_fulltext
+        # FIX 1: Hierarchischer Fallback (lit. → Abs. → Art.)
+        if not in_context and ref_type == "norm":
+            for variant in _hierarchy_variants(ref):
+                v_norm = _normalize_ref(variant)
+                if v_norm in ctx_meta or v_norm in ctx_fulltext:
+                    in_context = True
+                    break
 
         in_db = False
         if not in_context:
@@ -1607,6 +1644,16 @@ def validate_response(response: str, chunks: list[dict]) -> list[dict]:
                         in_db = True
                 except Exception:
                     pass
+            # 3) Hierarchische Keyword-Suche
+            if not in_db and ref_type == "norm":
+                for variant in _hierarchy_variants(ref):
+                    try:
+                        kw = col.get(where_document={"$contains": variant}, limit=1, include=[])
+                        if kw["ids"]:
+                            in_db = True
+                            break
+                    except Exception:
+                        pass
         else:
             in_db = True  # Wenn in Kontext, dann sicher auch in DB
 
@@ -1614,6 +1661,8 @@ def validate_response(response: str, chunks: list[dict]) -> list[dict]:
             level = "verified"
         elif in_db:
             level = "in_db_only"
+        elif ref_type == "norm" and _is_extern_gesetz(ref):
+            level = "external"
         else:
             level = "missing"
 
@@ -1798,6 +1847,13 @@ def format_sources(chunks: list[dict], validations: list[dict],
         if db_only:
             html += '<details><summary>⚠️ Zitiert, aber nicht in Quellen</summary><ul>'
             for v in db_only[:6]:
+                html += f'<li>{v["reference"]}</li>'
+            html += '</ul></details>'
+
+        external = [v for v in validations if v["level"] == "external"]
+        if external:
+            html += '<details><summary>📘 Ergänzende Normen (nicht in Datenschutz-DB)</summary><ul>'
+            for v in external[:6]:
                 html += f'<li>{v["reference"]}</li>'
             html += '</ul></details>'
 
