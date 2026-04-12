@@ -1833,7 +1833,7 @@ def format_sources(chunks: list[dict], validations: list[dict],
         meta_line = " | ".join(meta_parts)
 
         return (
-            f'<details id="quelle-{doc_nr}">'
+            f'<details id="quelle-{doc_nr}" data-quelle="{doc_nr}">'
             f'<summary>{summary}</summary>'
             f'{inner}'
             f'<div class="meta-line">{meta_line}</div>'
@@ -2039,7 +2039,7 @@ PWA_HEAD = (
     '    if(!cb)return;'
     '    var det=cb.querySelector("details.src-collapse");'
     '    if(det)det.open=true;'
-    '    var el=cb.querySelector("#quelle-"+n);'
+    '    var el=cb.querySelector("#quelle-"+n)||cb.querySelector("[data-quelle=\\""+n+"\\"]");'
     '    if(el){el.open=true;setTimeout(function(){el.scrollIntoView({behavior:"smooth",block:"center"});},100);}'
     '  });'
     '  setInterval(linkAll,800);'
@@ -2170,6 +2170,7 @@ def build_app() -> gr.Blocks:
             height=600,
             elem_id="ol-chatbot",
             show_label=False,
+            autoscroll=False,
         )
 
         # ── Footer ──
@@ -2306,6 +2307,7 @@ if __name__ == "__main__":
         #ol-chatbot > * > *, #ol-chatbot > * > * > * {
             background: transparent !important; border: none !important;
             box-shadow: none !important; border-radius: 0 !important; }
+        #ol-chatbot > .wrap { overflow: visible !important; height: 100% !important; }
         #ol-chatbot .bubble-wrap { padding: 0 !important; }
 
         /* ── Header ── */
@@ -2394,7 +2396,7 @@ if __name__ == "__main__":
             z-index: 10;
         }
         #ol-chatbot .bubble-wrap {
-            padding: 0 0 20px 0 !important; gap: 0 !important;
+            padding: 8px 0 20px 0 !important; gap: 0 !important;
             min-height: auto !important;
             height: 100% !important;
             overflow-y: auto !important;
