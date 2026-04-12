@@ -2117,59 +2117,57 @@ def build_app() -> gr.Blocks:
         '</div>'
         '<script>'
         '(function(){'
-        '  var lastMsgCount=0;'
-        '  function linkifyQuellen(root){'
-        '    if(!root)return;'
-        '    if(root.querySelector(".quelle-link"))return;'
-        '    var walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null);'
-        '    var textNodes=[];'
+        '  var prevMsgCount=0,clickBound=false;'
+        '  function linkifyAll(){'
+        '    var cb=document.getElementById("ol-chatbot");'
+        '    if(!cb)return;'
+        '    var walker=document.createTreeWalker(cb,NodeFilter.SHOW_TEXT,null);'
+        '    var nodes=[];'
         '    while(walker.nextNode()){'
-        '      if(/\\[Quelle\\s+[\\d,\\s]+\\]/.test(walker.currentNode.nodeValue))textNodes.push(walker.currentNode);'
+        '      if(/\\[Quelle\\s+[\\d,\\s]+\\]/.test(walker.currentNode.nodeValue))nodes.push(walker.currentNode);'
         '    }'
-        '    textNodes.forEach(function(tn){'
-        '      var html=tn.nodeValue.replace(/\\[Quelle\\s+([\\d,\\s]+)\\]/g,function(full,nums){'
+        '    nodes.forEach(function(tn){'
+        '      var html=tn.nodeValue.replace(/\\[Quelle\\s+([\\d,\\s]+)\\]/g,function(_,nums){'
         '        return nums.split(",").map(function(s){var n=s.trim();'
         '          return n?"<a class=\\"quelle-link\\" data-qn=\\""+n+"\\">[Quelle "+n+"]</a>":"";'
         '        }).filter(Boolean).join(", ");'
         '      });'
-        '      var span=document.createElement("span");'
-        '      span.innerHTML=html;'
+        '      var span=document.createElement("span");span.innerHTML=html;'
         '      tn.parentNode.replaceChild(span,tn);'
         '    });'
         '  }'
-        '  function handleQuelleClick(e){'
-        '    var a=e.target.closest(".quelle-link");'
+        '  function scrollTop(){'
+        '    var cb=document.getElementById("ol-chatbot");'
+        '    if(!cb)return;'
+        '    var rows=cb.querySelectorAll(".message-row");'
+        '    if(rows.length>0&&rows.length!==prevMsgCount){'
+        '      prevMsgCount=rows.length;'
+        '      var bw=cb.querySelector(".bubble-wrap");'
+        '      if(bw)bw.scrollTop=0;'
+        '    }'
+        '  }'
+        '  function handleClick(e){'
+        '    var a=e.target.closest&&e.target.closest(".quelle-link");'
         '    if(!a)return;'
         '    e.preventDefault();'
         '    var n=a.getAttribute("data-qn");'
         '    var cb=document.getElementById("ol-chatbot");'
         '    if(!cb)return;'
         '    var el=cb.querySelector("#quelle-"+n);'
-        '    if(el){el.open=true;el.scrollIntoView({behavior:"smooth",block:"center"});}'
+        '    if(!el)return;'
+        '    var det=el.closest("details.src-collapse");'
+        '    if(det)det.open=true;'
+        '    el.open=true;'
+        '    setTimeout(function(){el.scrollIntoView({behavior:"smooth",block:"center"});},100);'
         '  }'
-        '  var obs=new MutationObserver(function(){'
-        '    var cb=document.getElementById("ol-chatbot");'
-        '    if(!cb)return;'
-        '    var rows=cb.querySelectorAll(".message-row");'
-        '    if(rows.length>lastMsgCount){'
-        '      lastMsgCount=rows.length;'
-        '      var wrap=cb.querySelector(".bubble-wrap")||cb.querySelector(".wrapper")||cb;'
-        '      if(wrap)wrap.scrollTop=0;'
-        '      cb.scrollTop=0;'
+        '  setInterval(function(){'
+        '    scrollTop();'
+        '    linkifyAll();'
+        '    if(!clickBound){'
+        '      var cb=document.getElementById("ol-chatbot");'
+        '      if(cb){cb.addEventListener("click",handleClick);clickBound=true;}'
         '    }'
-        '    clearTimeout(window._qlTimer);'
-        '    window._qlTimer=setTimeout(function(){'
-        '      var msgs=cb.querySelectorAll(".message");'
-        '      msgs.forEach(function(m){linkifyQuellen(m);});'
-        '    },600);'
-        '  });'
-        '  function attach(){'
-        '    var cb=document.getElementById("ol-chatbot");'
-        '    if(!cb){setTimeout(attach,500);return;}'
-        '    obs.observe(cb,{childList:true,subtree:true});'
-        '    cb.addEventListener("click",handleQuelleClick);'
-        '  }'
-        '  attach();'
+        '  },800);'
         '})();'
         '</script>'
     )
@@ -2403,19 +2401,16 @@ if __name__ == "__main__":
         /* ── Chatbot ── */
         #ol-chatbot {
             background: var(--bg) !important; border: none !important;
-            height: calc(100vh - 150px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)) !important;
-            max-height: calc(100vh - 150px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)) !important;
+            height: calc(100dvh - 130px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)) !important;
+            max-height: calc(100dvh - 130px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)) !important;
             margin-top: calc(46px + env(safe-area-inset-top, 0px)) !important;
             margin-bottom: 0 !important;
-            padding: 0 0 12px 0 !important;
+            padding: 0 !important;
             overflow-x: hidden !important;
-            overflow-y: auto !important;
+            overflow-y: hidden !important;
         }
         #ol-chatbot .bubble-wrap, #ol-chatbot .wrapper {
-            padding: 0 !important; gap: 0 !important;
-            justify-content: flex-start !important;
-            align-content: flex-start !important;
-            align-items: flex-start !important;
+            padding: 0 0 80px 0 !important; gap: 0 !important;
             min-height: auto !important;
         }
         #ol-chatbot .message-row { max-width: 100% !important; padding: 6px 12px !important; margin: 0 !important; }
@@ -2526,7 +2521,8 @@ if __name__ == "__main__":
             .gradio-container { padding: 0 !important; }
             #welcome-container { padding-top: 15vh; }
             .welcome-title { font-size: 1.8rem !important; }
-            #ol-chatbot { margin-top: 42px !important; padding-bottom: 8px !important; }
+            #ol-chatbot { margin-top: 42px !important; }
+            #ol-chatbot .bubble-wrap { padding-bottom: 90px !important; }
             #ol-chatbot .message-row { padding: 4px 8px !important; }
             #input-row { padding: 8px 12px 12px !important; }
             #menu-panel { width: 85vw; }
