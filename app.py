@@ -2079,6 +2079,53 @@ PWA_HEAD = (
     '  fixScroll();'
     '})();'
     '</script>'
+    '<script>'
+    '(function(){'
+    '  /* Add copy button to each bot answer – copies Q+A together */'
+    '  function addCopyBtns(){'
+    '    var cb=document.getElementById("ol-chatbot");'
+    '    if(!cb)return;'
+    '    var rows=cb.querySelectorAll(".message-row.bot, [data-testid=bot]");'
+    '    rows.forEach(function(botRow){'
+    '      if(botRow.querySelector(".copy-qa-btn"))return;'
+    '      var btn=document.createElement("button");'
+    '      btn.className="copy-qa-btn";btn.textContent="📋";btn.title="Frage + Antwort kopieren";'
+    '      /* Find the message content container */'
+    '      var msgEl=botRow.querySelector(".message")||botRow;'
+    '      msgEl.style.position="relative";'
+    '      msgEl.appendChild(btn);'
+    '    });'
+    '  }'
+    '  document.addEventListener("click",function(e){'
+    '    var btn=e.target.closest&&e.target.closest(".copy-qa-btn");'
+    '    if(!btn)return;'
+    '    e.preventDefault();e.stopPropagation();'
+    '    /* Find bot message-row */'
+    '    var botRow=btn.closest(".message-row")||btn.closest("[data-testid=bot]");'
+    '    if(!botRow)return;'
+    '    /* Find preceding user message-row */'
+    '    var prev=botRow.previousElementSibling;'
+    '    while(prev&&!prev.classList.contains("user")&&!prev.matches("[data-testid=user]")){'
+    '      prev=prev.previousElementSibling;'
+    '    }'
+    '    var question=prev?prev.innerText.trim():"";'
+    '    /* Get bot answer text (exclude source panel details for cleaner copy) */'
+    '    var botMsg=botRow.querySelector(".message")||botRow;'
+    '    var clone=botMsg.cloneNode(true);'
+    '    var srcC=clone.querySelector(".src-collapse");if(srcC)srcC.remove();'
+    '    var cpBtn=clone.querySelector(".copy-qa-btn");if(cpBtn)cpBtn.remove();'
+    '    var answer=clone.innerText.trim();'
+    '    var text="";'
+    '    if(question)text+="Frage: "+question+"\\n\\n";'
+    '    text+="Antwort: "+answer;'
+    '    navigator.clipboard.writeText(text).then(function(){'
+    '      btn.textContent="✓";btn.classList.add("copied");'
+    '      setTimeout(function(){btn.textContent="📋";btn.classList.remove("copied");},2000);'
+    '    });'
+    '  });'
+    '  setInterval(addCopyBtns,1000);'
+    '})();'
+    '</script>'
 )
 
 
@@ -2486,6 +2533,15 @@ if __name__ == "__main__":
         .message a.quelle-link { color: var(--gold) !important; text-decoration: none !important;
                                   border-bottom: 1px dotted var(--gold); cursor: pointer; }
         .message a.quelle-link:hover { text-decoration: underline !important; }
+        /* Copy Q+A button */
+        .copy-qa-btn { position: absolute; top: 4px; right: 8px; background: var(--surface) !important;
+            border: 1px solid var(--border) !important; border-radius: 6px; padding: 4px 8px;
+            color: var(--dim) !important; font-size: 13px; cursor: pointer; opacity: 0.5;
+            transition: opacity 0.2s; z-index: 5; line-height: 1; }
+        .copy-qa-btn:hover, .copy-qa-btn:active { opacity: 1; }
+        .copy-qa-btn.copied { color: var(--gold) !important; border-color: var(--gold) !important; opacity: 1; }
+        #ol-chatbot .bot.message-row, #ol-chatbot [data-testid="bot"].message-row,
+        #ol-chatbot .message-wrap:has(.bot) { position: relative; }
         /* Tables: horizontal scroll instead of squeezing */
         .message table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch;
                          border-collapse: collapse; white-space: nowrap; margin: 12px 0; }
