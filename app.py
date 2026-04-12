@@ -1847,7 +1847,7 @@ def format_sources(chunks: list[dict], validations: list[dict],
     # Hintergrundwissen
     if mw_docs:
         html += '<hr style="border:none;border-top:1px solid rgba(128,128,128,0.3);margin:10px 0">'
-        html += '<h4 style="margin:6px 0">🟣 Hintergrundwissen</h4>'
+        html += '<h4 style="margin:6px 0">🟣 Methodenwissen</h4>'
         for doc in mw_docs:
             html += _render_doc(doc, nr, question)
             nr += 1
@@ -2096,7 +2096,7 @@ def build_app() -> gr.Blocks:
         f'<button class="menu-action" onclick="{COPY_JS}{CLOSE_MENU}">\U0001f4cb Letzte Antwort kopieren</button>'
         '</div>'
         '<div class="menu-section">'
-        '<a class="menu-link" href="/rechtliches" target="_blank">\U0001f4c4 Impressum / Rechtliches</a>'
+        '<a class="menu-link" href="/rechtliches">\U0001f4c4 Impressum / Rechtliches</a>'
         '</div>'
         f'<div class="menu-stats">{urteile_docs} Urteile \u00b7 {leitlinien_docs} Leitlinien \u00b7 {mw_chunks}x Methodenwissen \u00b7 {total_chunks:,} Chunks<br>Commit: {_git_hash}</div>'
         '</div>'
