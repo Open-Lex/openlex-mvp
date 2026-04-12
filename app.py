@@ -2010,6 +2010,50 @@ PWA_HEAD = (
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     '<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">'
     '<script>if(window.self !== window.top){document.documentElement.classList.add("in-iframe")}</script>'
+    '<script>'
+    '(function(){'
+    '  var prevMC=0,clk=false;'
+    '  function linkAll(){'
+    '    var cb=document.getElementById("ol-chatbot");'
+    '    if(!cb)return;'
+    '    var w=document.createTreeWalker(cb,NodeFilter.SHOW_TEXT,null);'
+    '    var ns=[];'
+    '    while(w.nextNode()){if(/\\[Quelle\\s+[\\d,\\s]+\\]/.test(w.currentNode.nodeValue))ns.push(w.currentNode);}'
+    '    ns.forEach(function(tn){'
+    '      var h=tn.nodeValue.replace(/\\[Quelle\\s+([\\d,\\s]+)\\]/g,function(_,nums){'
+    '        return nums.split(",").map(function(s){var n=s.trim();'
+    '          return n?"<a class=\\"quelle-link\\" data-qn=\\""+n+"\\">[Quelle "+n+"]</a>":"";'
+    '        }).filter(Boolean).join(", ");'
+    '      });'
+    '      var sp=document.createElement("span");sp.innerHTML=h;'
+    '      tn.parentNode.replaceChild(sp,tn);'
+    '    });'
+    '  }'
+    '  function scrl(){'
+    '    var cb=document.getElementById("ol-chatbot");'
+    '    if(!cb)return;'
+    '    var rows=cb.querySelectorAll(".message-row");'
+    '    if(rows.length>0&&rows.length!==prevMC){'
+    '      prevMC=rows.length;'
+    '      var bw=cb.querySelector(".bubble-wrap");'
+    '      if(bw)bw.scrollTop=0;'
+    '    }'
+    '  }'
+    '  document.addEventListener("click",function(e){'
+    '    var a=e.target.closest&&e.target.closest(".quelle-link");'
+    '    if(!a)return;'
+    '    e.preventDefault();'
+    '    var n=a.getAttribute("data-qn");'
+    '    var cb=document.getElementById("ol-chatbot");'
+    '    if(!cb)return;'
+    '    var det=cb.querySelector("details.src-collapse");'
+    '    if(det)det.open=true;'
+    '    var el=cb.querySelector("#quelle-"+n);'
+    '    if(el){el.open=true;setTimeout(function(){el.scrollIntoView({behavior:"smooth",block:"center"});},100);}'
+    '  });'
+    '  setInterval(function(){scrl();linkAll();},800);'
+    '})();'
+    '</script>'
 )
 
 
@@ -2119,69 +2163,9 @@ def build_app() -> gr.Blocks:
 
     _SRC_STYLE_RE = re.compile(r'<style>.*?</style>', re.DOTALL)
 
-    OL_JS = """
-    function() {
-        var prevMsgCount = 0, clickBound = false;
-        function linkifyAll() {
-            var cb = document.getElementById("ol-chatbot");
-            if (!cb) return;
-            var walker = document.createTreeWalker(cb, NodeFilter.SHOW_TEXT, null);
-            var nodes = [];
-            while (walker.nextNode()) {
-                if (/\\[Quelle\\s+[\\d,\\s]+\\]/.test(walker.currentNode.nodeValue))
-                    nodes.push(walker.currentNode);
-            }
-            nodes.forEach(function(tn) {
-                var html = tn.nodeValue.replace(/\\[Quelle\\s+([\\d,\\s]+)\\]/g, function(_, nums) {
-                    return nums.split(",").map(function(s) {
-                        var n = s.trim();
-                        return n ? '<a class=\"quelle-link\" data-qn=\"' + n + '\">[Quelle ' + n + ']</a>' : '';
-                    }).filter(Boolean).join(", ");
-                });
-                var span = document.createElement("span");
-                span.innerHTML = html;
-                tn.parentNode.replaceChild(span, tn);
-            });
-        }
-        function scrollTop() {
-            var cb = document.getElementById("ol-chatbot");
-            if (!cb) return;
-            var rows = cb.querySelectorAll(".message-row");
-            if (rows.length > 0 && rows.length !== prevMsgCount) {
-                prevMsgCount = rows.length;
-                var bw = cb.querySelector(".bubble-wrap");
-                if (bw) bw.scrollTop = 0;
-            }
-        }
-        function handleClick(e) {
-            var a = e.target.closest && e.target.closest(".quelle-link");
-            if (!a) return;
-            e.preventDefault();
-            var n = a.getAttribute("data-qn");
-            var cb = document.getElementById("ol-chatbot");
-            if (!cb) return;
-            var el = cb.querySelector("#quelle-" + n);
-            if (!el) return;
-            var det = el.closest("details.src-collapse");
-            if (det) det.open = true;
-            el.open = true;
-            setTimeout(function() { el.scrollIntoView({behavior: "smooth", block: "center"}); }, 100);
-        }
-        setInterval(function() {
-            scrollTop();
-            linkifyAll();
-            if (!clickBound) {
-                var cb = document.getElementById("ol-chatbot");
-                if (cb) { cb.addEventListener("click", handleClick); clickBound = true; }
-            }
-        }, 800);
-    }
-    """
-
     with gr.Blocks(
         title="OpenLex \u2013 Datenschutzrecht",
         elem_id="openlex-app",
-        js=OL_JS,
     ) as app:
 
         # ── Header + Menu ──
