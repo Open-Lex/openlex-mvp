@@ -2115,68 +2115,73 @@ def build_app() -> gr.Blocks:
         '</div>'
         '<iframe src="/rechtliches?embed=1" style="flex:1;border:none;width:100%;height:100%;background:#111114"></iframe>'
         '</div>'
-        '<script>'
-        '(function(){'
-        '  var prevMsgCount=0,clickBound=false;'
-        '  function linkifyAll(){'
-        '    var cb=document.getElementById("ol-chatbot");'
-        '    if(!cb)return;'
-        '    var walker=document.createTreeWalker(cb,NodeFilter.SHOW_TEXT,null);'
-        '    var nodes=[];'
-        '    while(walker.nextNode()){'
-        '      if(/\\[Quelle\\s+[\\d,\\s]+\\]/.test(walker.currentNode.nodeValue))nodes.push(walker.currentNode);'
-        '    }'
-        '    nodes.forEach(function(tn){'
-        '      var html=tn.nodeValue.replace(/\\[Quelle\\s+([\\d,\\s]+)\\]/g,function(_,nums){'
-        '        return nums.split(",").map(function(s){var n=s.trim();'
-        '          return n?"<a class=\\"quelle-link\\" data-qn=\\""+n+"\\">[Quelle "+n+"]</a>":"";'
-        '        }).filter(Boolean).join(", ");'
-        '      });'
-        '      var span=document.createElement("span");span.innerHTML=html;'
-        '      tn.parentNode.replaceChild(span,tn);'
-        '    });'
-        '  }'
-        '  function scrollTop(){'
-        '    var cb=document.getElementById("ol-chatbot");'
-        '    if(!cb)return;'
-        '    var rows=cb.querySelectorAll(".message-row");'
-        '    if(rows.length>0&&rows.length!==prevMsgCount){'
-        '      prevMsgCount=rows.length;'
-        '      var bw=cb.querySelector(".bubble-wrap");'
-        '      if(bw)bw.scrollTop=0;'
-        '    }'
-        '  }'
-        '  function handleClick(e){'
-        '    var a=e.target.closest&&e.target.closest(".quelle-link");'
-        '    if(!a)return;'
-        '    e.preventDefault();'
-        '    var n=a.getAttribute("data-qn");'
-        '    var cb=document.getElementById("ol-chatbot");'
-        '    if(!cb)return;'
-        '    var el=cb.querySelector("#quelle-"+n);'
-        '    if(!el)return;'
-        '    var det=el.closest("details.src-collapse");'
-        '    if(det)det.open=true;'
-        '    el.open=true;'
-        '    setTimeout(function(){el.scrollIntoView({behavior:"smooth",block:"center"});},100);'
-        '  }'
-        '  setInterval(function(){'
-        '    scrollTop();'
-        '    linkifyAll();'
-        '    if(!clickBound){'
-        '      var cb=document.getElementById("ol-chatbot");'
-        '      if(cb){cb.addEventListener("click",handleClick);clickBound=true;}'
-        '    }'
-        '  },800);'
-        '})();'
-        '</script>'
     )
 
     _SRC_STYLE_RE = re.compile(r'<style>.*?</style>', re.DOTALL)
 
+    OL_JS = """
+    function() {
+        var prevMsgCount = 0, clickBound = false;
+        function linkifyAll() {
+            var cb = document.getElementById("ol-chatbot");
+            if (!cb) return;
+            var walker = document.createTreeWalker(cb, NodeFilter.SHOW_TEXT, null);
+            var nodes = [];
+            while (walker.nextNode()) {
+                if (/\\[Quelle\\s+[\\d,\\s]+\\]/.test(walker.currentNode.nodeValue))
+                    nodes.push(walker.currentNode);
+            }
+            nodes.forEach(function(tn) {
+                var html = tn.nodeValue.replace(/\\[Quelle\\s+([\\d,\\s]+)\\]/g, function(_, nums) {
+                    return nums.split(",").map(function(s) {
+                        var n = s.trim();
+                        return n ? '<a class=\"quelle-link\" data-qn=\"' + n + '\">[Quelle ' + n + ']</a>' : '';
+                    }).filter(Boolean).join(", ");
+                });
+                var span = document.createElement("span");
+                span.innerHTML = html;
+                tn.parentNode.replaceChild(span, tn);
+            });
+        }
+        function scrollTop() {
+            var cb = document.getElementById("ol-chatbot");
+            if (!cb) return;
+            var rows = cb.querySelectorAll(".message-row");
+            if (rows.length > 0 && rows.length !== prevMsgCount) {
+                prevMsgCount = rows.length;
+                var bw = cb.querySelector(".bubble-wrap");
+                if (bw) bw.scrollTop = 0;
+            }
+        }
+        function handleClick(e) {
+            var a = e.target.closest && e.target.closest(".quelle-link");
+            if (!a) return;
+            e.preventDefault();
+            var n = a.getAttribute("data-qn");
+            var cb = document.getElementById("ol-chatbot");
+            if (!cb) return;
+            var el = cb.querySelector("#quelle-" + n);
+            if (!el) return;
+            var det = el.closest("details.src-collapse");
+            if (det) det.open = true;
+            el.open = true;
+            setTimeout(function() { el.scrollIntoView({behavior: "smooth", block: "center"}); }, 100);
+        }
+        setInterval(function() {
+            scrollTop();
+            linkifyAll();
+            if (!clickBound) {
+                var cb = document.getElementById("ol-chatbot");
+                if (cb) { cb.addEventListener("click", handleClick); clickBound = true; }
+            }
+        }, 800);
+    }
+    """
+
     with gr.Blocks(
         title="OpenLex \u2013 Datenschutzrecht",
         elem_id="openlex-app",
+        js=OL_JS,
     ) as app:
 
         # ── Header + Menu ──
@@ -2398,19 +2403,29 @@ if __name__ == "__main__":
               text-align: left !important; font-size: 0.9rem !important; cursor: pointer !important; }
         .eq:hover { border-color: var(--gold) !important; color: #fff !important; }
 
+        /* ── Welcome: hide when empty ── */
+        #welcome-container:not(:has(#welcome-screen)) { display: none !important; overflow: hidden !important; height: 0 !important; padding: 0 !important; margin: 0 !important; }
+
         /* ── Chatbot ── */
         #ol-chatbot {
+            position: fixed !important;
+            top: calc(46px + env(safe-area-inset-top, 0px)) !important;
+            bottom: calc(70px + env(safe-area-inset-bottom, 0px)) !important;
+            left: 0 !important; right: 0 !important;
+            height: auto !important; max-height: none !important;
             background: var(--bg) !important; border: none !important;
-            height: calc(100dvh - 130px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)) !important;
-            max-height: calc(100dvh - 130px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)) !important;
-            margin-top: calc(46px + env(safe-area-inset-top, 0px)) !important;
-            margin-bottom: 0 !important;
-            padding: 0 !important;
-            overflow-x: hidden !important;
-            overflow-y: hidden !important;
+            margin: 0 !important; padding: 0 !important;
+            overflow: hidden !important;
+            z-index: 10;
         }
-        #ol-chatbot .bubble-wrap, #ol-chatbot .wrapper {
-            padding: 0 0 80px 0 !important; gap: 0 !important;
+        #ol-chatbot .bubble-wrap {
+            padding: 0 0 20px 0 !important; gap: 0 !important;
+            min-height: auto !important;
+            height: 100% !important;
+            overflow-y: auto !important;
+        }
+        #ol-chatbot .wrapper {
+            padding: 0 !important; gap: 0 !important;
             min-height: auto !important;
         }
         #ol-chatbot .message-row { max-width: 100% !important; padding: 6px 12px !important; margin: 0 !important; }
@@ -2521,8 +2536,7 @@ if __name__ == "__main__":
             .gradio-container { padding: 0 !important; }
             #welcome-container { padding-top: 15vh; }
             .welcome-title { font-size: 1.8rem !important; }
-            #ol-chatbot { margin-top: 42px !important; }
-            #ol-chatbot .bubble-wrap { padding-bottom: 90px !important; }
+            #ol-chatbot { top: calc(42px + env(safe-area-inset-top, 0px)) !important; }
             #ol-chatbot .message-row { padding: 4px 8px !important; }
             #input-row { padding: 8px 12px 12px !important; }
             #menu-panel { width: 85vw; }
