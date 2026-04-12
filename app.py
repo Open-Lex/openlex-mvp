@@ -2267,14 +2267,14 @@ if __name__ == "__main__":
             padding: calc(env(safe-area-inset-top, 0px) + 8px) 24px 8px;
             background: var(--bg);
             border-bottom: 1px solid var(--border);
-            z-index: 50;
+            z-index: 50; pointer-events: auto !important;
         }
         .ol-brand { font-family: 'Source Serif 4', Georgia, serif !important;
                      font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px; }
         .ol-open { color: #fff; }
         .ol-lex { color: var(--gold); }
         .ol-hamburger { color: var(--gold); font-size: 1.4rem; cursor: pointer;
-                        padding: 4px 8px; user-select: none; }
+                        padding: 4px 8px; user-select: none; pointer-events: auto !important; position: relative; z-index: 100; }
         .ol-hamburger:hover { color: #e0b84e; }
 
         /* ── Hamburger Menu ── */
@@ -2283,6 +2283,7 @@ if __name__ == "__main__":
             background: var(--surface); border-left: 1px solid var(--border);
             z-index: 1000; transform: translateX(0);
             transition: transform 0.3s ease; overflow-y: auto;
+            pointer-events: auto !important;
         }
         #menu-panel.menu-closed { transform: translateX(100%); }
         #menu-backdrop {
