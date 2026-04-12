@@ -2300,7 +2300,8 @@ if __name__ == "__main__":
         }
 
         /* ── Base ── */
-        body, .gradio-container { background: var(--bg) !important; color: var(--text) !important; }
+        html, body, .gradio-container { background: var(--bg) !important; color: var(--text) !important;
+            overflow-x: hidden !important; max-width: 100vw !important; overscroll-behavior-x: none !important; }
         * { font-family: 'Outfit', system-ui, sans-serif !important; }
         h1, h2, h3, h4, .welcome-title { font-family: 'Source Serif 4', Georgia, serif !important; }
 
@@ -2400,7 +2401,9 @@ if __name__ == "__main__":
             height: auto !important; max-height: none !important;
             background: var(--bg) !important; border: none !important;
             margin: 0 !important; padding: 0 !important;
-            overflow: hidden !important;
+            overflow-x: hidden !important;
+            overflow-y: visible !important;
+            overscroll-behavior: none !important;
             z-index: 10;
         }
         #ol-chatbot .bubble-wrap {
@@ -2408,12 +2411,16 @@ if __name__ == "__main__":
             min-height: auto !important;
             height: 100% !important;
             overflow-y: auto !important;
+            overflow-x: hidden !important;
+            overscroll-behavior-x: none !important;
+            -webkit-overflow-scrolling: touch !important;
         }
         #ol-chatbot .wrapper {
             padding: 0 !important; gap: 0 !important;
             min-height: auto !important;
         }
-        #ol-chatbot .message-row { max-width: 100% !important; padding: 6px 12px !important; margin: 0 !important; }
+        #ol-chatbot .message-row { max-width: 100% !important; padding: 6px 12px !important; margin: 0 !important; overflow-x: hidden !important; }
+        #ol-chatbot .message-wrap { overflow-x: hidden !important; }
         #ol-chatbot .message { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
         /* Hide Gradio default action buttons (share, delete, copy) */
         #ol-chatbot .message-buttons-right, #ol-chatbot .message-buttons-left,
