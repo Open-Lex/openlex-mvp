@@ -2098,7 +2098,7 @@ def build_app() -> gr.Blocks:
         '<div class="menu-section">'
         '<a class="menu-link" href="/rechtliches" target="_blank">\U0001f4c4 Impressum / Rechtliches</a>'
         '</div>'
-        f'<div class="menu-stats">{urteile_docs} Urteile \u00b7 {leitlinien_docs} Leitlinien \u00b7 {mw_chunks} MW \u00b7 {total_chunks:,} Chunks</div>'
+        f'<div class="menu-stats">{urteile_docs} Urteile \u00b7 {leitlinien_docs} Leitlinien \u00b7 {mw_chunks}x Methodenwissen \u00b7 {total_chunks:,} Chunks<br>Commit: {_git_hash}</div>'
         '</div>'
         '</div>'
         f'<div id="menu-backdrop" class="menu-closed" onclick="{CLOSE_MENU}"></div>'
