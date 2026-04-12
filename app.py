@@ -2017,9 +2017,12 @@ PWA_HEAD = (
     '  function linkAll(){'
     '    var cb=document.getElementById("ol-chatbot");'
     '    if(!cb)return;'
-    '    var w=document.createTreeWalker(cb,NodeFilter.SHOW_TEXT,null);'
+    '    var w=document.createTreeWalker(cb,NodeFilter.SHOW_TEXT,{acceptNode:function(n){'
+    '      if(n.parentNode.closest&&n.parentNode.closest(".quelle-link"))return NodeFilter.FILTER_REJECT;'
+    '      return /\\[Quelle\\s+[\\d,\\s]+\\]/.test(n.nodeValue)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;'
+    '    }});'
     '    var ns=[];'
-    '    while(w.nextNode()){if(/\\[Quelle\\s+[\\d,\\s]+\\]/.test(w.currentNode.nodeValue))ns.push(w.currentNode);}'
+    '    while(w.nextNode())ns.push(w.currentNode);'
     '    ns.forEach(function(tn){'
     '      var h=tn.nodeValue.replace(/\\[Quelle\\s+([\\d,\\s]+)\\]/g,function(_,nums){'
     '        return nums.split(",").map(function(s){var n=s.trim();'
@@ -2386,7 +2389,7 @@ if __name__ == "__main__":
         /* ── Chatbot ── */
         #ol-chatbot {
             position: fixed !important;
-            top: calc(46px + env(safe-area-inset-top, 0px)) !important;
+            top: calc(57px + env(safe-area-inset-top, 0px)) !important;
             bottom: calc(70px + env(safe-area-inset-bottom, 0px)) !important;
             left: 0 !important; right: 0 !important;
             height: auto !important; max-height: none !important;
@@ -2520,7 +2523,7 @@ if __name__ == "__main__":
             .gradio-container { padding: 0 !important; }
             #welcome-container { padding-top: 15vh; }
             .welcome-title { font-size: 1.8rem !important; }
-            #ol-chatbot { top: calc(42px + env(safe-area-inset-top, 0px)) !important; }
+            #ol-chatbot { top: calc(56px + env(safe-area-inset-top, 0px)) !important; }
             #ol-chatbot .message-row { padding: 4px 8px !important; }
             #input-row { padding: 8px 12px 12px !important; }
             #menu-panel { width: 85vw; }
