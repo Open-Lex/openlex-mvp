@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "question": "Wie muss eine Einwilligung für einen Newsletter gestaltet sein?",
+    "expected_norms": ["Art. 7 DSGVO", "Art. 6 Abs. 1 lit. a DSGVO", "§ 7 UWG", "§ 25 TDDDG"],
+    "expected_cases": ["I ZR 164/09"],
+    "forbidden_norms": ["§ 4a BDSG", "§ 28 BDSG", "§ 13 TMG"],
+    "expected_keywords": ["Einwilligung", "Double Opt-in", "Widerruf"],
+    "min_sources": 3,
+    "category": "einwilligung"
+  },
+  {
+    "id": 2,
+    "question": "Darf ich Kundendaten an einen Cloud-Dienstleister in den USA übermitteln?",
+    "expected_norms": ["Art. 44 DSGVO", "Art. 45 DSGVO", "Art. 46 DSGVO"],
+    "expected_cases": ["C-311/18"],
+    "forbidden_norms": ["§ 4b BDSG"],
+    "expected_keywords": ["Drittland", "Angemessenheitsbeschluss", "Standardvertragsklauseln"],
+    "min_sources": 3,
+    "category": "drittland"
+  },
+  {
+    "id": 3,
+    "question": "Was sagt die DSK zu Microsoft 365?",
+    "expected_norms": [],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["Telemetrie", "Transparenz", "Drittlandtransfer"],
+    "min_sources": 2,
+    "category": "drittland"
+  },
+  {
+    "id": 4,
+    "question": "Ist Videoüberwachung am Arbeitsplatz zulässig?",
+    "expected_norms": ["Art. 6 Abs. 1 lit. f DSGVO", "§ 4 BDSG", "Art. 88 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": ["§ 6b BDSG"],
+    "expected_keywords": ["Verhältnismäßigkeit", "Interessenabwägung"],
+    "min_sources": 3,
+    "category": "videoueberwachung"
+  },
+  {
+    "id": 5,
+    "question": "Wie hat der EuGH den Schadensersatz nach Art. 82 DSGVO ausgelegt?",
+    "expected_norms": ["Art. 82 DSGVO"],
+    "expected_cases": ["C-687/21", "C-300/21"],
+    "forbidden_norms": [],
+    "expected_keywords": ["Ausgleichsfunktion", "immateriell"],
+    "min_sources": 3,
+    "category": "schadensersatz"
+  },
+  {
+    "id": 6,
+    "question": "Was ist das Recht auf Vergessenwerden?",
+    "expected_norms": ["Art. 17 DSGVO", "Art. 17 Abs. 3 DSGVO"],
+    "expected_cases": ["C-131/12"],
+    "forbidden_norms": [],
+    "expected_keywords": ["Löschung", "Schranken"],
+    "min_sources": 3,
+    "category": "betroffenenrechte"
+  },
+  {
+    "id": 7,
+    "question": "Darf mein Arbeitgeber meine E-Mails lesen?",
+    "expected_norms": ["§ 26 BDSG", "Art. 88 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": ["§ 28 BDSG"],
+    "expected_keywords": ["Beschäftigte", "Fernmeldegeheimnis", "Privatnutzung"],
+    "min_sources": 3,
+    "category": "beschaeftigte"
+  },
+  {
+    "id": 8,
+    "question": "Was sind die Voraussetzungen für eine DSFA?",
+    "expected_norms": ["Art. 35 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["Risiko", "Blacklist", "Schwellwertanalyse"],
+    "min_sources": 3,
+    "category": "dsfa"
+  },
+  {
+    "id": 9,
+    "question": "Wann liegt ein berechtigtes Interesse nach Art. 6 Abs. 1 lit. f DSGVO vor?",
+    "expected_norms": ["Art. 6 Abs. 1 lit. f DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": ["§ 28 BDSG"],
+    "expected_keywords": ["Interessenabwägung", "Erforderlichkeit"],
+    "min_sources": 3,
+    "category": "rechtsgrundlage"
+  },
+  {
+    "id": 10,
+    "question": "Darf ein Online-Shop Scoring zur Bonitätsprüfung einsetzen?",
+    "expected_norms": ["Art. 22 DSGVO"],
+    "expected_cases": ["C-634/21"],
+    "forbidden_norms": [],
+    "expected_keywords": ["automatisierte Entscheidung", "Profiling"],
+    "min_sources": 3,
+    "category": "scoring"
+  },
+  {
+    "id": 11,
+    "question": "Was muss in einer Datenschutzerklärung stehen?",
+    "expected_norms": ["Art. 13 DSGVO", "Art. 14 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": ["§ 13 TMG"],
+    "expected_keywords": ["Informationspflicht", "Verantwortlicher"],
+    "min_sources": 3,
+    "category": "transparenz"
+  },
+  {
+    "id": 12,
+    "question": "Wie funktioniert das Auskunftsrecht nach Art. 15 DSGVO?",
+    "expected_norms": ["Art. 15 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["Kopie", "Auskunft", "Frist"],
+    "min_sources": 3,
+    "category": "betroffenenrechte"
+  },
+  {
+    "id": 13,
+    "question": "Wann brauche ich einen Datenschutzbeauftragten?",
+    "expected_norms": ["Art. 37 DSGVO", "§ 38 BDSG"],
+    "expected_cases": [],
+    "forbidden_norms": ["§ 4f BDSG"],
+    "expected_keywords": ["Benennung", "20 Personen"],
+    "min_sources": 3,
+    "category": "organisation"
+  },
+  {
+    "id": 14,
+    "question": "Was ist eine Auftragsverarbeitung und was muss im Vertrag stehen?",
+    "expected_norms": ["Art. 28 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": ["§ 11 BDSG"],
+    "expected_keywords": ["Auftragsverarbeiter", "Weisung", "Vertrag"],
+    "min_sources": 3,
+    "category": "auftragsverarbeitung"
+  },
+  {
+    "id": 15,
+    "question": "Darf ich Fotos von Mitarbeitern auf der Firmenwebsite veröffentlichen?",
+    "expected_norms": ["Art. 6 Abs. 1 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["Einwilligung", "Foto"],
+    "min_sources": 2,
+    "category": "beschaeftigte"
+  },
+  {
+    "id": 16,
+    "question": "Was passiert bei einer Datenpanne?",
+    "expected_norms": ["Art. 33 DSGVO", "Art. 34 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["72 Stunden", "Meldepflicht", "Aufsichtsbehörde"],
+    "min_sources": 3,
+    "category": "datenpanne"
+  },
+  {
+    "id": 17,
+    "question": "Darf ich einen Personalausweis kopieren?",
+    "expected_norms": [],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["Datenminimierung", "Personalausweis"],
+    "min_sources": 2,
+    "category": "datenminimierung"
+  },
+  {
+    "id": 18,
+    "question": "Welche Bußgelder drohen bei DSGVO-Verstößen?",
+    "expected_norms": ["Art. 83 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["Bußgeld", "Millionen", "Umsatz"],
+    "min_sources": 3,
+    "category": "sanktionen"
+  },
+  {
+    "id": 19,
+    "question": "Wie definiert die DSGVO personenbezogene Daten?",
+    "expected_norms": ["Art. 4 DSGVO"],
+    "expected_cases": ["C-582/14"],
+    "forbidden_norms": [],
+    "expected_keywords": ["identifizierbar", "natürliche Person"],
+    "min_sources": 3,
+    "category": "grundlagen"
+  },
+  {
+    "id": 20,
+    "question": "Darf ein Vermieter eine SCHUFA-Auskunft vom Mieter verlangen?",
+    "expected_norms": ["Art. 6 Abs. 1 lit. f DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": ["§ 28 BDSG"],
+    "expected_keywords": ["Datenminimierung", "Interessenabwägung"],
+    "min_sources": 2,
+    "category": "rechtsgrundlage"
+  }
+]

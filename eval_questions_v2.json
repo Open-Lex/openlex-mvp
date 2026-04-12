@@ -1,0 +1,202 @@
+[
+  {
+    "id": 21,
+    "question": "Darf ein Unternehmen KI-Tools wie ChatGPT für die Verarbeitung personenbezogener Daten nutzen?",
+    "expected_norms": ["Art. 6 DSGVO", "Art. 28 DSGVO", "Art. 35 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": ["§ 4a BDSG", "§ 28 BDSG"],
+    "expected_keywords": ["Auftragsverarbeitung", "Drittland", "DSFA"],
+    "min_sources": 3,
+    "category": "ki"
+  },
+  {
+    "id": 22,
+    "question": "Welche Rechte hat eine betroffene Person bei automatisierten Einzelentscheidungen einschließlich Profiling?",
+    "expected_norms": ["Art. 22 DSGVO"],
+    "expected_cases": ["C-634/21"],
+    "forbidden_norms": [],
+    "expected_keywords": ["Profiling", "automatisierte Entscheidung", "Widerspruch"],
+    "min_sources": 3,
+    "category": "betroffenenrechte"
+  },
+  {
+    "id": 23,
+    "question": "Wann ist eine Datenschutz-Folgenabschätzung bei Videoüberwachung erforderlich und was muss sie enthalten?",
+    "expected_norms": ["Art. 35 DSGVO", "§ 4 BDSG"],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["Risiko", "systematisch", "öffentlich zugänglich"],
+    "min_sources": 3,
+    "category": "dsfa"
+  },
+  {
+    "id": 24,
+    "question": "Dürfen Onlineshops Kunden zur Erstellung eines Kundenkontos verpflichten oder muss eine Gastbestellung möglich sein?",
+    "expected_norms": ["Art. 5 Abs. 1 lit. c DSGVO", "Art. 6 Abs. 1 lit. b DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["Datenminimierung", "Vertrag", "Erforderlichkeit"],
+    "min_sources": 2,
+    "category": "datenminimierung"
+  },
+  {
+    "id": 25,
+    "question": "Wie ist die Haftung bei gemeinsamer Verantwortlichkeit nach Art. 26 DSGVO geregelt, z.B. bei Fanpages auf Facebook?",
+    "expected_norms": ["Art. 26 DSGVO", "Art. 4 Nr. 7 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["gemeinsam", "Vereinbarung", "Verantwortlicher"],
+    "min_sources": 3,
+    "category": "verantwortlichkeit"
+  },
+  {
+    "id": 26,
+    "question": "Was bedeutet Pseudonymisierung und wie unterscheidet sie sich von Anonymisierung?",
+    "expected_norms": ["Art. 4 Nr. 5 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["Pseudonymisierung", "Anonymisierung", "Personenbezug"],
+    "min_sources": 2,
+    "category": "grundlagen"
+  },
+  {
+    "id": 27,
+    "question": "Unter welchen Voraussetzungen dürfen Gesundheitsdaten verarbeitet werden?",
+    "expected_norms": ["Art. 9 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["besondere Kategorie", "Einwilligung", "Verbot"],
+    "min_sources": 3,
+    "category": "besondere_kategorien"
+  },
+  {
+    "id": 28,
+    "question": "Welche Pflichten hat ein Auftragsverarbeiter und wann wird er selbst zum Verantwortlichen?",
+    "expected_norms": ["Art. 28 DSGVO", "Art. 29 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["Weisung", "Vertrag", "Unterauftragsverarbeiter"],
+    "min_sources": 3,
+    "category": "auftragsverarbeitung"
+  },
+  {
+    "id": 29,
+    "question": "Darf ein Arbeitgeber die Internetnutzung seiner Mitarbeiter überwachen?",
+    "expected_norms": ["Art. 6 Abs. 1 lit. f DSGVO"],
+    "expected_cases": ["C-34/21"],
+    "forbidden_norms": ["§ 4a BDSG"],
+    "expected_keywords": ["Verhältnismäßigkeit", "Privatnutzung", "Kontrolle"],
+    "min_sources": 3,
+    "category": "beschaeftigte"
+  },
+  {
+    "id": 30,
+    "question": "Was ist der Unterschied zwischen Einwilligung und berechtigtem Interesse als Rechtsgrundlage?",
+    "expected_norms": ["Art. 6 Abs. 1 lit. a DSGVO", "Art. 6 Abs. 1 lit. f DSGVO"],
+    "expected_cases": ["C-621/22"],
+    "forbidden_norms": [],
+    "expected_keywords": ["Einwilligung", "Widerruf", "Abwägung"],
+    "min_sources": 3,
+    "category": "rechtsgrundlage"
+  },
+  {
+    "id": 31,
+    "question": "Wie müssen Datenschutzhinweise bei Bodycams erteilt werden?",
+    "expected_norms": ["Art. 13 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["Information", "Transparenz", "Hinweis"],
+    "min_sources": 2,
+    "category": "transparenz"
+  },
+  {
+    "id": 32,
+    "question": "Darf ein Unternehmen Daten für das Training von KI-Modellen nutzen und welche Rechtsgrundlage kommt in Betracht?",
+    "expected_norms": ["Art. 6 DSGVO", "Art. 5 Abs. 1 lit. b DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["Zweckbindung", "Vereinbarkeit", "Forschung"],
+    "min_sources": 2,
+    "category": "ki"
+  },
+  {
+    "id": 33,
+    "question": "Wann können Bußgelder gegen ein Unternehmen als juristische Person verhängt werden?",
+    "expected_norms": ["Art. 83 DSGVO"],
+    "expected_cases": ["C-807/21"],
+    "forbidden_norms": [],
+    "expected_keywords": ["Bußgeld", "Verschulden", "Umsatz"],
+    "min_sources": 3,
+    "category": "sanktionen"
+  },
+  {
+    "id": 34,
+    "question": "Was muss ein Unternehmen bei einer Datenpanne gegenüber den Betroffenen tun und wann muss es die Betroffenen informieren?",
+    "expected_norms": ["Art. 33 DSGVO", "Art. 34 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["hohes Risiko", "unverzüglich", "Benachrichtigung"],
+    "min_sources": 3,
+    "category": "datenpanne"
+  },
+  {
+    "id": 35,
+    "question": "Kann ein Betroffener auf sein Auskunftsrecht nach Art. 15 DSGVO verzichten?",
+    "expected_norms": ["Art. 15 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["Auskunft", "unverzichtbar", "Recht"],
+    "min_sources": 2,
+    "category": "betroffenenrechte"
+  },
+  {
+    "id": 36,
+    "question": "Welche datenschutzrechtlichen Anforderungen gelten für den Einsatz von Tracking-Pixeln in E-Mails?",
+    "expected_norms": ["§ 25 TDDDG", "Art. 6 Abs. 1 lit. a DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": ["§ 25 TTDSG"],
+    "expected_keywords": ["Einwilligung", "Endgerät", "Tracking"],
+    "min_sources": 2,
+    "category": "einwilligung"
+  },
+  {
+    "id": 37,
+    "question": "Darf die sexuelle Orientierung einer Person verarbeitet werden, wenn sie diese selbst öffentlich gemacht hat?",
+    "expected_norms": ["Art. 9 DSGVO"],
+    "expected_cases": ["C-252/21"],
+    "forbidden_norms": [],
+    "expected_keywords": ["besondere Kategorie", "offensichtlich öffentlich", "Einwilligung"],
+    "min_sources": 2,
+    "category": "besondere_kategorien"
+  },
+  {
+    "id": 38,
+    "question": "Wie ist das Verhältnis zwischen DSGVO und der neuen KI-Verordnung (AI Act)?",
+    "expected_norms": ["Art. 6 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["KI-Verordnung", "Hochrisiko", "Transparenz"],
+    "min_sources": 2,
+    "category": "ki"
+  },
+  {
+    "id": 39,
+    "question": "Ist der Kontrollverlust über personenbezogene Daten nach einem Datenleck ein ersatzfähiger Schaden nach Art. 82 DSGVO?",
+    "expected_norms": ["Art. 82 DSGVO"],
+    "expected_cases": ["C-200/23", "C-687/21"],
+    "forbidden_norms": [],
+    "expected_keywords": ["Kontrollverlust", "immateriell", "Schaden"],
+    "min_sources": 3,
+    "category": "schadensersatz"
+  },
+  {
+    "id": 40,
+    "question": "Welche Rolle spielt die Rechenschaftspflicht nach Art. 5 Abs. 2 DSGVO und wie setzt man sie in der Praxis um?",
+    "expected_norms": ["Art. 5 Abs. 2 DSGVO", "Art. 24 DSGVO"],
+    "expected_cases": [],
+    "forbidden_norms": [],
+    "expected_keywords": ["Nachweis", "Dokumentation", "Rechenschaftspflicht"],
+    "min_sources": 2,
+    "category": "grundlagen"
+  }
+]

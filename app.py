@@ -2096,11 +2096,12 @@ def build_app() -> gr.Blocks:
         f'<button class="menu-action" onclick="{COPY_JS}{CLOSE_MENU}">\U0001f4cb Letzte Antwort kopieren</button>'
         '</div>'
         '<div class="menu-section">'
-        '<button class="menu-action" style="border-bottom:none !important" onclick="'
+        '<button class="menu-action" onclick="'
         "document.getElementById('legal-overlay').style.display='flex';"
         "document.getElementById('menu-panel').classList.add('menu-closed');"
         "document.getElementById('menu-backdrop').classList.add('menu-closed');"
         '">\U0001f4c4 Impressum / Rechtliches</button>'
+        '<a class="menu-link" href="https://open-lex.cloud" target="_blank">\U0001f310 open-lex.cloud</a>'
         '</div>'
         f'<div class="menu-stats">{urteile_docs} Urteile \u00b7 {leitlinien_docs} Leitlinien \u00b7 {mw_chunks}x Methodenwissen \u00b7 {total_chunks:,} Chunks<br>Commit: {_git_hash}</div>'
         '</div>'
@@ -2112,7 +2113,7 @@ def build_app() -> gr.Blocks:
         '<button style="color:#d4a843;font-size:1.5rem;cursor:pointer;padding:8px 12px;background:none;border:none;-webkit-tap-highlight-color:transparent" '
         'onclick="document.getElementById(\'legal-overlay\').style.display=\'none\'">\u2715</button>'
         '</div>'
-        '<iframe src="/rechtliches" style="flex:1;border:none;width:100%;height:100%;background:#111114"></iframe>'
+        '<iframe src="/rechtliches?embed=1" style="flex:1;border:none;width:100%;height:100%;background:#111114"></iframe>'
         '</div>'
     )
 
