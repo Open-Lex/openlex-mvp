@@ -2096,12 +2096,23 @@ def build_app() -> gr.Blocks:
         f'<button class="menu-action" onclick="{COPY_JS}{CLOSE_MENU}">\U0001f4cb Letzte Antwort kopieren</button>'
         '</div>'
         '<div class="menu-section">'
-        '<a class="menu-link" href="/rechtliches">\U0001f4c4 Impressum / Rechtliches</a>'
+        '<a class="menu-link" href="javascript:void(0)" onclick="'
+        "document.getElementById('legal-overlay').style.display='flex';"
+        "document.getElementById('menu-panel').classList.add('menu-closed');"
+        "document.getElementById('menu-backdrop').classList.add('menu-closed');"
+        '">\U0001f4c4 Impressum / Rechtliches</a>'
         '</div>'
         f'<div class="menu-stats">{urteile_docs} Urteile \u00b7 {leitlinien_docs} Leitlinien \u00b7 {mw_chunks}x Methodenwissen \u00b7 {total_chunks:,} Chunks<br>Commit: {_git_hash}</div>'
         '</div>'
         '</div>'
         f'<div id="menu-backdrop" class="menu-closed" onclick="{CLOSE_MENU}"></div>'
+        '<div id="legal-overlay" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:2000;background:var(--bg);flex-direction:column">'
+        '<div style="display:flex;align-items:center;justify-content:space-between;padding:calc(env(safe-area-inset-top,0px) + 8px) 16px 8px;border-bottom:1px solid #2a2a30">'
+        '<span style="color:#e0e0e0;font-size:0.95rem;font-weight:600">Impressum / Rechtliches</span>'
+        '<span style="color:#d4a843;font-size:1.5rem;cursor:pointer;padding:4px 8px" onclick="document.getElementById(\'legal-overlay\').style.display=\'none\'">\u2715</span>'
+        '</div>'
+        '<iframe src="/rechtliches" style="flex:1;border:none;width:100%;background:#111114"></iframe>'
+        '</div>'
     )
 
     _SRC_STYLE_RE = re.compile(r'<style>.*?</style>', re.DOTALL)
