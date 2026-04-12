@@ -2349,7 +2349,7 @@ if __name__ == "__main__":
         .message, .message p, .message span, .message li, .message code,
         .message h1, .message h2, .message h3, .message h4 {
             user-select: text !important; -webkit-user-select: text !important;
-            font-size: 15px !important; color: var(--text) !important; line-height: 1.7 !important; }
+            font-size: 16px !important; color: var(--text) !important; line-height: 1.7 !important; }
         .message h1, .message h2, .message h3, .message h4 {
             font-family: 'Source Serif 4', Georgia, serif !important;
             font-weight: 700 !important; margin: 12px 0 4px !important; }
