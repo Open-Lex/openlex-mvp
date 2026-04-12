@@ -2357,6 +2357,13 @@ if __name__ == "__main__":
         .message code { background: rgba(212,168,67,0.1) !important; color: var(--gold) !important;
                         padding: 1px 5px !important; border-radius: 3px !important; }
         .message a { color: var(--gold) !important; }
+        /* Tables: horizontal scroll instead of squeezing */
+        .message table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch;
+                         border-collapse: collapse; white-space: nowrap; margin: 12px 0; }
+        .message th, .message td { padding: 8px 14px !important; border: 1px solid var(--border) !important;
+                                    font-size: 15px !important; white-space: normal; min-width: 140px; }
+        .message th { background: var(--surface) !important; font-weight: 600 !important; }
+        .message td { background: transparent !important; }
 
         /* ── Inline Sources (collapsed in chat message) ── */
         .src-collapse { margin-top: 16px !important; border-top: 1px solid var(--border); padding-top: 8px; }
