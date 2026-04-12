@@ -2253,6 +2253,7 @@ if __name__ == "__main__":
         .contain { max-width: 100% !important; }
         .block { background: transparent !important; border: none !important; box-shadow: none !important; }
         .panel { background: transparent !important; border: none !important; }
+        .main, .main.fillable { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
         .wrap, .wrapper, .bubble-wrap, .chatbot, #ol-chatbot > *,
         #ol-chatbot > * > *, #ol-chatbot > * > * > * {
             background: transparent !important; border: none !important;
