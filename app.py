@@ -1831,7 +1831,7 @@ def format_sources(chunks: list[dict], validations: list[dict],
         meta_line = " | ".join(meta_parts)
 
         return (
-            f'<details>'
+            f'<details id="quelle-{doc_nr}">'
             f'<summary>{summary}</summary>'
             f'{inner}'
             f'<div class="meta-line">{meta_line}</div>'
@@ -2115,6 +2115,64 @@ def build_app() -> gr.Blocks:
         '</div>'
         '<iframe src="/rechtliches?embed=1" style="flex:1;border:none;width:100%;height:100%;background:#111114"></iframe>'
         '</div>'
+        '<script>'
+        '(function(){'
+        '  var lastCount=0;'
+        '  function linkifyQuellen(container){'
+        '    var walker=document.createTreeWalker(container,NodeFilter.SHOW_TEXT,null,false);'
+        '    var nodes=[];'
+        '    while(walker.nextNode()){if(/\\[Quelle\\s+[\\d,\\s]+\\]/.test(walker.currentNode.textContent))nodes.push(walker.currentNode);}'
+        '    nodes.forEach(function(tn){'
+        '      var frag=document.createDocumentFragment();'
+        '      var parts=tn.textContent.split(/(\\[Quelle\\s+[\\d,\\s]+\\])/);'
+        '      parts.forEach(function(part){'
+        '        var m=part.match(/\\[Quelle\\s+([\\d,\\s]+)\\]/);'
+        '        if(m){'
+        '          var nums=m[1].split(",");'
+        '          nums.forEach(function(ns,i){'
+        '            var n=ns.trim();if(!n)return;'
+        '            var a=document.createElement("a");'
+        '            a.className="quelle-link";a.href="#quelle-"+n;'
+        '            a.textContent="[Quelle "+n+"]";'
+        '            a.addEventListener("click",function(e){'
+        '              e.preventDefault();'
+        '              var msg=a.closest(".message")||a.closest(".message-row");'
+        '              if(!msg)msg=container;'
+        '              var el=msg.querySelector("#quelle-"+n);'
+        '              if(el){el.open=true;el.scrollIntoView({behavior:"smooth",block:"center"});}'
+        '            });'
+        '            if(i>0)frag.appendChild(document.createTextNode(", "));'
+        '            frag.appendChild(a);'
+        '          });'
+        '        }else{frag.appendChild(document.createTextNode(part));}'
+        '      });'
+        '      if(tn.parentNode)tn.parentNode.replaceChild(frag,tn);'
+        '    });'
+        '  }'
+        '  var obs=new MutationObserver(function(){'
+        '    var cb=document.getElementById("ol-chatbot");'
+        '    if(!cb)return;'
+        '    var msgs=cb.querySelectorAll(".message-row");'
+        '    if(msgs.length>lastCount){'
+        '      lastCount=msgs.length;'
+        '      cb.scrollTop=0;'
+        '    }'
+        '    clearTimeout(window._qlinkTimer);'
+        '    window._qlinkTimer=setTimeout(function(){'
+        '      var botMsgs=cb.querySelectorAll(".bot.message,[data-testid=bot]");'
+        '      botMsgs.forEach(function(m){'
+        '        if(!m.dataset.linkified){m.dataset.linkified="1";linkifyQuellen(m);}'
+        '      });'
+        '    },300);'
+        '  });'
+        '  function attach(){'
+        '    var cb=document.getElementById("ol-chatbot");'
+        '    if(cb){obs.observe(cb,{childList:true,subtree:true});}'
+        '    else{setTimeout(attach,500);}'
+        '  }'
+        '  attach();'
+        '})();'
+        '</script>'
     )
 
     _SRC_STYLE_RE = re.compile(r'<style>.*?</style>', re.DOTALL)
@@ -2352,7 +2410,8 @@ if __name__ == "__main__":
             padding: 0 !important; overflow-x: hidden !important;
         }
         #ol-chatbot .bubble-wrap, #ol-chatbot .wrapper { padding: 0 !important; gap: 0 !important; }
-        #ol-chatbot .message-row { max-width: 100% !important; padding: 6px 12px !important; }
+        #ol-chatbot .message-row { max-width: 100% !important; padding: 6px 12px !important; margin: 0 !important; }
+        #ol-chatbot .message { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
         /* Hide Gradio default action buttons (share, delete, copy) */
         #ol-chatbot .message-buttons-right, #ol-chatbot .message-buttons-left,
         #ol-chatbot button.share, #ol-chatbot button.copy, #ol-chatbot button.delete,
@@ -2377,6 +2436,9 @@ if __name__ == "__main__":
         .message code { background: rgba(212,168,67,0.1) !important; color: var(--gold) !important;
                         padding: 1px 5px !important; border-radius: 3px !important; }
         .message a { color: var(--gold) !important; }
+        .message a.quelle-link { color: var(--gold) !important; text-decoration: none !important;
+                                  border-bottom: 1px dotted var(--gold); cursor: pointer; }
+        .message a.quelle-link:hover { text-decoration: underline !important; }
         /* Tables: horizontal scroll instead of squeezing */
         .message table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch;
                          border-collapse: collapse; white-space: nowrap; margin: 12px 0; }
@@ -2461,7 +2523,7 @@ if __name__ == "__main__":
             #welcome-container { padding-top: 15vh; }
             .welcome-title { font-size: 1.8rem !important; }
             #ol-chatbot { margin-top: 42px !important; }
-            #ol-chatbot .message-row { padding: 4px 12px !important; }
+            #ol-chatbot .message-row { padding: 4px 8px !important; }
             #input-row { padding: 8px 12px 12px !important; }
             #menu-panel { width: 85vw; }
             .eq { font-size: 0.82rem !important; padding: 10px 14px !important; }
