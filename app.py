@@ -2337,7 +2337,7 @@ if __name__ == "__main__":
             margin-top: calc(46px + env(safe-area-inset-top, 0px)) !important;
             padding-bottom: 10px !important;
         }
-        #ol-chatbot .message-row { max-width: 100% !important; padding: 6px 24px !important; }
+        #ol-chatbot .message-row { max-width: 100% !important; padding: 6px 12px !important; }
         /* User */
         #ol-chatbot .user.message, #ol-chatbot [data-testid="user"] {
             background: transparent !important; border: none !important;
@@ -2349,7 +2349,7 @@ if __name__ == "__main__":
         .message, .message p, .message span, .message li, .message code,
         .message h1, .message h2, .message h3, .message h4 {
             user-select: text !important; -webkit-user-select: text !important;
-            font-size: 16px !important; color: var(--text) !important; line-height: 1.7 !important; }
+            font-size: 17px !important; color: var(--text) !important; line-height: 1.7 !important; }
         .message h1, .message h2, .message h3, .message h4 {
             font-family: 'Source Serif 4', Georgia, serif !important;
             font-weight: 700 !important; margin: 12px 0 4px !important; }
