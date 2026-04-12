@@ -2053,6 +2053,32 @@ PWA_HEAD = (
     '  setInterval(linkAll,800);'
     '})();'
     '</script>'
+    '<script>'
+    '(function(){'
+    '  /* Prevent body/page scroll – only .bubble-wrap may scroll */'
+    '  document.addEventListener("touchmove",function(e){'
+    '    var t=e.target;'
+    '    /* Walk up to see if touch is inside a scrollable .bubble-wrap */'
+    '    while(t&&t!==document.body){'
+    '      if(t.classList&&t.classList.contains("bubble-wrap"))return;'
+    '      if(t.tagName==="TEXTAREA"||t.tagName==="INPUT")return;'
+    '      if(t.classList&&t.classList.contains("src-panel"))return;'
+    '      t=t.parentNode;'
+    '    }'
+    '    /* Touch is NOT inside scrollable area – block it */'
+    '    e.preventDefault();'
+    '  },{passive:false});'
+    '  /* Also prevent Gradio from scrolling the wrapper/body during streaming */'
+    '  var fixScroll=function(){'
+    '    var gc=document.querySelector(".gradio-container");'
+    '    if(gc){gc.style.overflow="hidden";gc.style.position="fixed";gc.style.width="100%";gc.style.height="100%";}'
+    '    var wraps=document.querySelectorAll("#ol-chatbot > .wrap");'
+    '    wraps.forEach(function(w){w.style.overflow="visible";w.style.height="100%";});'
+    '  };'
+    '  setInterval(fixScroll,1000);'
+    '  fixScroll();'
+    '})();'
+    '</script>'
 )
 
 
@@ -2301,7 +2327,10 @@ if __name__ == "__main__":
 
         /* ── Base ── */
         html, body, .gradio-container { background: var(--bg) !important; color: var(--text) !important;
-            overflow-x: hidden !important; max-width: 100vw !important; overscroll-behavior-x: none !important; }
+            overflow: hidden !important; max-width: 100vw !important; max-height: 100vh !important;
+            overscroll-behavior: none !important; }
+        html, body { position: fixed !important; width: 100% !important; height: 100% !important;
+            touch-action: none !important; }
         * { font-family: 'Outfit', system-ui, sans-serif !important; }
         h1, h2, h3, h4, .welcome-title { font-family: 'Source Serif 4', Georgia, serif !important; }
 
@@ -2412,8 +2441,9 @@ if __name__ == "__main__":
             height: 100% !important;
             overflow-y: auto !important;
             overflow-x: hidden !important;
-            overscroll-behavior-x: none !important;
+            overscroll-behavior: contain !important;
             -webkit-overflow-scrolling: touch !important;
+            touch-action: pan-y !important;
         }
         #ol-chatbot .wrapper {
             padding: 0 !important; gap: 0 !important;
@@ -2497,6 +2527,7 @@ if __name__ == "__main__":
             width: 100% !important; max-width: 840px !important;
             background: var(--bg) !important; padding: 8px 20px 14px !important;
             gap: 10px !important; z-index: 50; align-items: center !important;
+            touch-action: manipulation !important;
         }
         #msg-input, #msg-input *, #input-row > div {
             background: transparent !important; border: none !important;
