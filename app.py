@@ -115,6 +115,8 @@ VERALTETE NORMEN: § 29 BDSG-alt (geschäftsmäßige Datenspeicherung zum Zweck 
 
 GESETZESUMBENENNUNG: Das TTDSG wurde 2024 in TDDDG umbenannt (Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz). Zitiere IMMER § 25 TDDDG, NIEMALS § 25 TTDSG. Falls in Quellen noch TTDSG steht, ersetze es in deiner Antwort durch TDDDG.
 
+FORMATIERUNG: Verwende KEINE horizontalen Trennlinien (---). Verwende bei verschachtelten Aufzählungen diese Hierarchie: I., II., III. (oberste Ebene) → 1., 2., 3. → a), b), c) → (1), (2), (3). Verwende Fließtext statt überflüssiger Zwischenüberschriften.
+
 Formuliere auf Deutsch, präzise und fachlich. Verwende den Gutachtenstil wo angemessen."""
 
 # ---------------------------------------------------------------------------
@@ -2012,7 +2014,6 @@ PWA_HEAD = (
     '<script>if(window.self !== window.top){document.documentElement.classList.add("in-iframe")}</script>'
     '<script>'
     '(function(){'
-    '  var prevMC=0,scrollLock=false,userScrolled=false;'
     '  function linkAll(){'
     '    var cb=document.getElementById("ol-chatbot");'
     '    if(!cb)return;'
@@ -2029,25 +2030,6 @@ PWA_HEAD = (
     '      tn.parentNode.replaceChild(sp,tn);'
     '    });'
     '  }'
-    '  function scrl(){'
-    '    var cb=document.getElementById("ol-chatbot");'
-    '    if(!cb)return;'
-    '    var rows=cb.querySelectorAll(".message-row");'
-    '    if(rows.length>0&&rows.length!==prevMC){'
-    '      prevMC=rows.length;'
-    '      scrollLock=true;userScrolled=false;'
-    '      var bw=cb.querySelector(".bubble-wrap");'
-    '      if(bw&&!bw._olBound){'
-    '        bw._olBound=true;'
-    '        bw.addEventListener("wheel",function(){userScrolled=true;scrollLock=false;},{passive:true});'
-    '        bw.addEventListener("touchmove",function(){userScrolled=true;scrollLock=false;},{passive:true});'
-    '      }'
-    '    }'
-    '    if(scrollLock&&!userScrolled){'
-    '      var bw=cb.querySelector(".bubble-wrap");'
-    '      if(bw)bw.scrollTop=0;'
-    '    }'
-    '  }'
     '  document.addEventListener("click",function(e){'
     '    var a=e.target.closest&&e.target.closest(".quelle-link");'
     '    if(!a)return;'
@@ -2060,14 +2042,7 @@ PWA_HEAD = (
     '    var el=cb.querySelector("#quelle-"+n);'
     '    if(el){el.open=true;setTimeout(function(){el.scrollIntoView({behavior:"smooth",block:"center"});},100);}'
     '  });'
-    '  var lastLen=0,stableCount=0;'
-    '  setInterval(function(){'
-    '    scrl();linkAll();'
-    '    var cb=document.getElementById("ol-chatbot");'
-    '    if(cb){var t=cb.innerText.length;if(t===lastLen){stableCount++;}else{stableCount=0;}lastLen=t;'
-    '      if(stableCount>3&&scrollLock){scrollLock=false;}'
-    '    }'
-    '  },800);'
+    '  setInterval(linkAll,800);'
     '})();'
     '</script>'
 )
@@ -2453,6 +2428,13 @@ if __name__ == "__main__":
             font-weight: 700 !important; margin: 12px 0 4px !important; }
         .message code { background: rgba(212,168,67,0.1) !important; color: var(--gold) !important;
                         padding: 1px 5px !important; border-radius: 3px !important; }
+        .message hr { display: none !important; }
+        /* Ordered list hierarchy: I → 1 → a) → (1) */
+        .message ol { list-style-type: upper-roman !important; padding-left: 24px !important; }
+        .message ol ol { list-style-type: decimal !important; }
+        .message ol ol ol { list-style-type: lower-alpha !important; }
+        .message ol ol ol ol { list-style-type: decimal !important; }
+        .message ol ol ol ol li::marker { content: "(" counter(list-item) ") "; }
         .message a { color: var(--gold) !important; }
         .message a.quelle-link { color: var(--gold) !important; text-decoration: none !important;
                                   border-bottom: 1px dotted var(--gold); cursor: pointer; }
