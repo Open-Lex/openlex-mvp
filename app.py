@@ -2117,58 +2117,57 @@ def build_app() -> gr.Blocks:
         '</div>'
         '<script>'
         '(function(){'
-        '  var lastCount=0;'
-        '  function linkifyQuellen(container){'
-        '    var walker=document.createTreeWalker(container,NodeFilter.SHOW_TEXT,null,false);'
-        '    var nodes=[];'
-        '    while(walker.nextNode()){if(/\\[Quelle\\s+[\\d,\\s]+\\]/.test(walker.currentNode.textContent))nodes.push(walker.currentNode);}'
-        '    nodes.forEach(function(tn){'
-        '      var frag=document.createDocumentFragment();'
-        '      var parts=tn.textContent.split(/(\\[Quelle\\s+[\\d,\\s]+\\])/);'
-        '      parts.forEach(function(part){'
-        '        var m=part.match(/\\[Quelle\\s+([\\d,\\s]+)\\]/);'
-        '        if(m){'
-        '          var nums=m[1].split(",");'
-        '          nums.forEach(function(ns,i){'
-        '            var n=ns.trim();if(!n)return;'
-        '            var a=document.createElement("a");'
-        '            a.className="quelle-link";a.href="#quelle-"+n;'
-        '            a.textContent="[Quelle "+n+"]";'
-        '            a.addEventListener("click",function(e){'
-        '              e.preventDefault();'
-        '              var msg=a.closest(".message")||a.closest(".message-row");'
-        '              if(!msg)msg=container;'
-        '              var el=msg.querySelector("#quelle-"+n);'
-        '              if(el){el.open=true;el.scrollIntoView({behavior:"smooth",block:"center"});}'
-        '            });'
-        '            if(i>0)frag.appendChild(document.createTextNode(", "));'
-        '            frag.appendChild(a);'
-        '          });'
-        '        }else{frag.appendChild(document.createTextNode(part));}'
+        '  var lastMsgCount=0;'
+        '  function linkifyQuellen(root){'
+        '    if(!root)return;'
+        '    if(root.querySelector(".quelle-link"))return;'
+        '    var walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null);'
+        '    var textNodes=[];'
+        '    while(walker.nextNode()){'
+        '      if(/\\[Quelle\\s+[\\d,\\s]+\\]/.test(walker.currentNode.nodeValue))textNodes.push(walker.currentNode);'
+        '    }'
+        '    textNodes.forEach(function(tn){'
+        '      var html=tn.nodeValue.replace(/\\[Quelle\\s+([\\d,\\s]+)\\]/g,function(full,nums){'
+        '        return nums.split(",").map(function(s){var n=s.trim();'
+        '          return n?"<a class=\\"quelle-link\\" data-qn=\\""+n+"\\">[Quelle "+n+"]</a>":"";'
+        '        }).filter(Boolean).join(", ");'
         '      });'
-        '      if(tn.parentNode)tn.parentNode.replaceChild(frag,tn);'
+        '      var span=document.createElement("span");'
+        '      span.innerHTML=html;'
+        '      tn.parentNode.replaceChild(span,tn);'
         '    });'
+        '  }'
+        '  function handleQuelleClick(e){'
+        '    var a=e.target.closest(".quelle-link");'
+        '    if(!a)return;'
+        '    e.preventDefault();'
+        '    var n=a.getAttribute("data-qn");'
+        '    var cb=document.getElementById("ol-chatbot");'
+        '    if(!cb)return;'
+        '    var el=cb.querySelector("#quelle-"+n);'
+        '    if(el){el.open=true;el.scrollIntoView({behavior:"smooth",block:"center"});}'
         '  }'
         '  var obs=new MutationObserver(function(){'
         '    var cb=document.getElementById("ol-chatbot");'
         '    if(!cb)return;'
-        '    var msgs=cb.querySelectorAll(".message-row");'
-        '    if(msgs.length>lastCount){'
-        '      lastCount=msgs.length;'
+        '    var rows=cb.querySelectorAll(".message-row");'
+        '    if(rows.length>lastMsgCount){'
+        '      lastMsgCount=rows.length;'
+        '      var wrap=cb.querySelector(".bubble-wrap")||cb.querySelector(".wrapper")||cb;'
+        '      if(wrap)wrap.scrollTop=0;'
         '      cb.scrollTop=0;'
         '    }'
-        '    clearTimeout(window._qlinkTimer);'
-        '    window._qlinkTimer=setTimeout(function(){'
-        '      var botMsgs=cb.querySelectorAll(".bot.message,[data-testid=bot]");'
-        '      botMsgs.forEach(function(m){'
-        '        if(!m.dataset.linkified){m.dataset.linkified="1";linkifyQuellen(m);}'
-        '      });'
-        '    },300);'
+        '    clearTimeout(window._qlTimer);'
+        '    window._qlTimer=setTimeout(function(){'
+        '      var msgs=cb.querySelectorAll(".message");'
+        '      msgs.forEach(function(m){linkifyQuellen(m);});'
+        '    },600);'
         '  });'
         '  function attach(){'
         '    var cb=document.getElementById("ol-chatbot");'
-        '    if(cb){obs.observe(cb,{childList:true,subtree:true});}'
-        '    else{setTimeout(attach,500);}'
+        '    if(!cb){setTimeout(attach,500);return;}'
+        '    obs.observe(cb,{childList:true,subtree:true});'
+        '    cb.addEventListener("click",handleQuelleClick);'
         '  }'
         '  attach();'
         '})();'
@@ -2404,12 +2403,21 @@ if __name__ == "__main__":
         /* ── Chatbot ── */
         #ol-chatbot {
             background: var(--bg) !important; border: none !important;
-            height: calc(100vh - 110px - env(safe-area-inset-top, 0px)) !important;
-            max-height: calc(100vh - 110px - env(safe-area-inset-top, 0px)) !important;
+            height: calc(100vh - 150px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)) !important;
+            max-height: calc(100vh - 150px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)) !important;
             margin-top: calc(46px + env(safe-area-inset-top, 0px)) !important;
-            padding: 0 !important; overflow-x: hidden !important;
+            margin-bottom: 0 !important;
+            padding: 0 0 12px 0 !important;
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
         }
-        #ol-chatbot .bubble-wrap, #ol-chatbot .wrapper { padding: 0 !important; gap: 0 !important; }
+        #ol-chatbot .bubble-wrap, #ol-chatbot .wrapper {
+            padding: 0 !important; gap: 0 !important;
+            justify-content: flex-start !important;
+            align-content: flex-start !important;
+            align-items: flex-start !important;
+            min-height: auto !important;
+        }
         #ol-chatbot .message-row { max-width: 100% !important; padding: 6px 12px !important; margin: 0 !important; }
         #ol-chatbot .message { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
         /* Hide Gradio default action buttons (share, delete, copy) */
@@ -2470,12 +2478,8 @@ if __name__ == "__main__":
         .src-panel h4 { color: var(--dim) !important; font-size: 0.8rem !important; }
         .src-panel .sub-chunk { border-left: 2px solid var(--border); }
 
-        /* ── Footer ── */
-        #ol-footer {
-            position: fixed; bottom: 56px; left: 0; right: 0;
-            text-align: center; font-size: 10px; color: var(--dim);
-            padding: 3px 0; background: var(--bg); z-index: 49;
-        }
+        /* ── Footer (hidden, text moved into input area) ── */
+        #ol-footer { display: none !important; }
 
         /* ── Input Row (fixed bottom) ── */
         #input-row {
@@ -2522,7 +2526,7 @@ if __name__ == "__main__":
             .gradio-container { padding: 0 !important; }
             #welcome-container { padding-top: 15vh; }
             .welcome-title { font-size: 1.8rem !important; }
-            #ol-chatbot { margin-top: 42px !important; }
+            #ol-chatbot { margin-top: 42px !important; padding-bottom: 8px !important; }
             #ol-chatbot .message-row { padding: 4px 8px !important; }
             #input-row { padding: 8px 12px 12px !important; }
             #menu-panel { width: 85vw; }
