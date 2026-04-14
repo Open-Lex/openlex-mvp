@@ -2055,26 +2055,9 @@ PWA_HEAD = (
     '</script>'
     '<script>'
     '(function(){'
-    '  /* Prevent body/page scroll – only .bubble-wrap may scroll */'
-    '  /* Wait until Gradio is ready before blocking touches */'
-    '  var ready=false;'
-    '  function checkReady(){if(document.getElementById("ol-chatbot"))ready=true;}'
-    '  document.addEventListener("touchmove",function(e){'
-    '    if(!ready)return;/* Allow all touches before Gradio loads */'
-    '    var t=e.target;'
-    '    while(t&&t!==document.body){'
-    '      if(t.classList&&t.classList.contains("bubble-wrap"))return;'
-    '      if(t.tagName==="TEXTAREA"||t.tagName==="INPUT")return;'
-    '      if(t.classList&&t.classList.contains("src-panel"))return;'
-    '      if(t.classList&&t.classList.contains("menu-body"))return;'
-    '      if(t.id==="menu-panel")return;'
-    '      t=t.parentNode;'
-    '    }'
-    '    e.preventDefault();'
-    '  },{passive:false});'
-    '  /* Also prevent Gradio from scrolling the wrapper/body during streaming */'
+    '  /* Lock layout: CSS does the heavy lifting (body position:fixed, overflow:hidden). */'
+    '  /* JS just enforces overflow on Gradio containers that get reset during streaming. */'
     '  var fixScroll=function(){'
-    '    checkReady();'
     '    var gc=document.querySelector(".gradio-container");'
     '    if(gc){gc.style.overflow="hidden";gc.style.maxHeight="100vh";}'
     '    var wraps=document.querySelectorAll("#ol-chatbot > .wrap");'
@@ -2082,6 +2065,13 @@ PWA_HEAD = (
     '  };'
     '  setInterval(fixScroll,1000);'
     '  fixScroll();'
+    '  /* Backdrop click closes menu */'
+    '  document.addEventListener("click",function(e){'
+    '    if(e.target.id==="menu-backdrop"){'
+    '      document.getElementById("menu-panel").classList.add("menu-closed");'
+    '      e.target.classList.add("menu-closed");'
+    '    }'
+    '  });'
     '})();'
     '</script>'
     '<script>'
@@ -2205,12 +2195,12 @@ def build_app() -> gr.Blocks:
     HEADER_MENU_HTML = (
         '<div id="ol-header">'
         '<div class="ol-brand"><span class="ol-open">Open</span><span class="ol-lex">Lex</span></div>'
-        f'<div class="ol-hamburger" onclick="{TOGGLE_MENU}">\u2630</div>'
+        f'<div class="ol-hamburger" onclick="{TOGGLE_MENU}" ontouchend="this.click();event.preventDefault();">\u2630</div>'
         '</div>'
         '<div id="menu-panel" class="menu-closed">'
         '<div class="menu-top">'
         '<span class="menu-title">Menu</span>'
-        f'<span class="menu-close" onclick="{CLOSE_MENU}">\u2715</span>'
+        f'<span class="menu-close" onclick="{CLOSE_MENU}" ontouchend="this.click();event.preventDefault();">\u2715</span>'
         '</div>'
         '<div class="menu-body">'
         '<div class="menu-section">'
@@ -2386,8 +2376,8 @@ if __name__ == "__main__":
         html, body, .gradio-container { background: var(--bg) !important; color: var(--text) !important;
             overflow: hidden !important; max-width: 100vw !important; max-height: 100vh !important;
             overscroll-behavior: none !important; }
-        html, body { position: fixed !important; width: 100% !important; height: 100% !important;
-            touch-action: manipulation !important; }
+        html, body { width: 100% !important; height: 100% !important;
+            overflow: hidden !important; overscroll-behavior: none !important; }
         * { font-family: 'Outfit', system-ui, sans-serif !important; }
         h1, h2, h3, h4, .welcome-title { font-family: 'Source Serif 4', Georgia, serif !important; }
 
