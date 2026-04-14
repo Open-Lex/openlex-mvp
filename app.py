@@ -1378,7 +1378,7 @@ def _stream_openai_compat(url: str, key: str, model: str, messages: list[dict],
                     yield token
                 # finish_reason "length" = Antwort wurde abgeschnitten
                 if choices[0].get("finish_reason") == "length":
-                    yield "\n\n---\n*Die Antwort wurde aus Platzgründen gekürzt. Für eine vollständige Analyse stellen Sie bitte eine spezifischere Frage.*"
+                    yield "\n\n\n*Die Antwort wurde aus Platzgründen gekürzt. Für eine vollständige Analyse stellen Sie bitte eine spezifischere Frage.*"
         except json.JSONDecodeError:
             continue
 
@@ -1950,7 +1950,7 @@ def chat_stream(message: str, history: list[list[str]]):
             full_response = ("⚠️ **Hinweis:** Diese Antwort wurde mit einem lokalen Modell "
                              f"({provider_display}) generiert. Die Qualität ist eingeschränkt. "
                              "Für bessere Ergebnisse setzen Sie `MISTRAL_KEY` "
-                             "oder `OPENROUTER_KEY`.\n\n---\n\n")
+                             "oder `OPENROUTER_KEY`.\n\n\n")
         full_response += token
         yield full_response, sources_placeholder, chunks
 
@@ -1966,7 +1966,7 @@ def chat_stream(message: str, history: list[list[str]]):
     stripped = full_response.rstrip()
     if (stripped and stripped[-1] not in ".!?:)\u201d\u201c*_`"
             and _TRUNCATION_NOTICE not in full_response):
-        full_response += f"\n\n---\n*{_TRUNCATION_NOTICE}*"
+        full_response += f"\n\n\n*{_TRUNCATION_NOTICE}*"
         yield full_response, sources_placeholder, chunks
 
     # Validierung nach komplettem Streaming
@@ -1983,13 +1983,13 @@ def chat_stream(message: str, history: list[list[str]]):
 
     sources_md = format_sources(chunks, validations, question=message)
     n_docs = len(group_chunks_to_docs(chunks))
-    full_response += f"\n\n---\n*Modell: {model_label} | {n_docs} Dokumente ({len(chunks)} Chunks) | {len(validations)} Referenzen validiert*"
+    full_response += f"\n\n\n*Modell: {model_label} | {n_docs} Dokumente ({len(chunks)} Chunks) | {len(validations)} Referenzen validiert*"
     yield full_response, sources_md, chunks
 
 
 def _sources_fallback(prefix: str, chunks: list[dict]) -> str:
     """Erzeugt eine Antwort mit Quellen wenn kein LLM verfügbar ist."""
-    response = prefix + "---\n\n**Gefundene Quellen zum Thema:**\n\n"
+    response = prefix + "\n**Gefundene Quellen zum Thema:**\n\n"
     for i, chunk in enumerate(chunks[:5], 1):
         meta = chunk["meta"]
         label = meta.get("volladresse") or meta.get("thema") or meta.get("paragraph") or ""
@@ -2056,20 +2056,25 @@ PWA_HEAD = (
     '<script>'
     '(function(){'
     '  /* Prevent body/page scroll – only .bubble-wrap may scroll */'
+    '  /* Wait until Gradio is ready before blocking touches */'
+    '  var ready=false;'
+    '  function checkReady(){if(document.getElementById("ol-chatbot"))ready=true;}'
     '  document.addEventListener("touchmove",function(e){'
+    '    if(!ready)return;/* Allow all touches before Gradio loads */'
     '    var t=e.target;'
-    '    /* Walk up to see if touch is inside a scrollable .bubble-wrap */'
     '    while(t&&t!==document.body){'
     '      if(t.classList&&t.classList.contains("bubble-wrap"))return;'
     '      if(t.tagName==="TEXTAREA"||t.tagName==="INPUT")return;'
     '      if(t.classList&&t.classList.contains("src-panel"))return;'
+    '      if(t.classList&&t.classList.contains("menu-body"))return;'
+    '      if(t.id==="menu-panel")return;'
     '      t=t.parentNode;'
     '    }'
-    '    /* Touch is NOT inside scrollable area – block it */'
     '    e.preventDefault();'
     '  },{passive:false});'
     '  /* Also prevent Gradio from scrolling the wrapper/body during streaming */'
     '  var fixScroll=function(){'
+    '    checkReady();'
     '    var gc=document.querySelector(".gradio-container");'
     '    if(gc){gc.style.overflow="hidden";gc.style.position="fixed";gc.style.width="100%";gc.style.height="100%";}'
     '    var wraps=document.querySelectorAll("#ol-chatbot > .wrap");'
@@ -2382,7 +2387,7 @@ if __name__ == "__main__":
             overflow: hidden !important; max-width: 100vw !important; max-height: 100vh !important;
             overscroll-behavior: none !important; }
         html, body { position: fixed !important; width: 100% !important; height: 100% !important;
-            touch-action: none !important; }
+            touch-action: pan-y !important; }
         * { font-family: 'Outfit', system-ui, sans-serif !important; }
         h1, h2, h3, h4, .welcome-title { font-family: 'Source Serif 4', Georgia, serif !important; }
 
@@ -2577,6 +2582,13 @@ if __name__ == "__main__":
                               background: rgba(255,255,255,0.03) !important; border: 1px solid var(--border) !important; }
         .src-panel h4 { color: var(--dim) !important; font-size: 0.8rem !important; }
         .src-panel .sub-chunk { border-left: 2px solid var(--border); }
+
+        /* ── Ensure all interactive elements are tappable on iOS ── */
+        button, a, summary, textarea, input, .eq, .menu-eq, .menu-action, .menu-link,
+        .ol-hamburger, .menu-close, .copy-qa-btn, .quelle-link, #submit-btn {
+            touch-action: manipulation !important;
+            -webkit-tap-highlight-color: transparent;
+        }
 
         /* ── Footer (hidden, text moved into input area) ── */
         #ol-footer { display: none !important; }
