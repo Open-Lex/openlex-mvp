@@ -2585,10 +2585,10 @@ if __name__ == "__main__":
 
         /* ── Input Row (fixed bottom) ── */
         #input-row {
-            position: fixed !important; bottom: 0 !important; left: 50% !important;
-            transform: translateX(-50%) !important;
-            width: 100% !important; max-width: 840px !important;
-            background: var(--bg) !important; padding: 8px 20px 14px !important;
+            position: fixed !important; bottom: 0 !important; left: 0 !important; right: 0 !important;
+            width: 100% !important; max-width: 840px !important; margin: 0 auto !important;
+            background: var(--bg) !important;
+            padding: 8px 20px calc(14px + env(safe-area-inset-bottom, 0px)) !important;
             gap: 10px !important; z-index: 50; align-items: center !important;
             touch-action: manipulation !important;
         }
