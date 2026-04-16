@@ -2054,6 +2054,32 @@ PWA_HEAD = (
     '})();'
     '</script>'
     '<script>'
+    '/* ─── iOS hit-test kicker ─── */'
+    '/* Forces Safari to rebuild compositor layers + hit-test map after initial mount,'
+    '   so taps on submit-btn & burger register without the "rotate to activate" dance. */'
+    '(function(){'
+    '  var isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);'
+    '  if(!isIOS) return;'
+    '  function kick(){'
+    '    try {'
+    '      var b=document.body;'
+    '      var prev=b.style.minHeight;'
+    '      b.style.minHeight="100.01%";'
+    '      void b.offsetHeight;'
+    '      b.style.minHeight=prev||"";'
+    '      window.scrollTo(0,1);'
+    '      window.scrollTo(0,0);'
+    '      window.dispatchEvent(new Event("resize"));'
+    '    } catch(e){}'
+    '  }'
+    '  function boot(){ setTimeout(kick,150); setTimeout(kick,600); setTimeout(kick,1500); }'
+    '  if(document.readyState==="complete") boot();'
+    '  else window.addEventListener("load",boot,{once:true});'
+    '  /* Also kick when visual viewport changes (URL bar collapse, keyboard) */'
+    '  if(window.visualViewport){ window.visualViewport.addEventListener("resize",kick); }'
+    '})();'
+    '</script>'
+    '<script>'
     '(function(){'
     '  /* Layout lock: enforce overflow on Gradio containers (once + on DOM mutations, not every second). */'
     '  var fixScroll=function(){'
@@ -2766,8 +2792,12 @@ if __name__ == "__main__":
             border-color: var(--border) !important; }
 
         /* ── Safe area ── */
-        body { padding: env(safe-area-inset-top) env(safe-area-inset-right)
-               env(safe-area-inset-bottom) env(safe-area-inset-left); }
+        /* NOTE: body had padding with env(safe-area-inset-*) which DOUBLED the
+           offset (header/input-row handle safe-area themselves), putting tap
+           targets inside the notch/home-indicator zones where iOS drops touches.
+           Rotating forced Safari to rebuild hit-test; removing the duplicate
+           fixes it at the source. */
+        body { padding: 0 !important; }
 
         /* ── Mobile ── */
         @media (max-width: 768px) {
@@ -2776,7 +2806,8 @@ if __name__ == "__main__":
             .welcome-title { font-size: 1.8rem !important; }
             #ol-chatbot { top: calc(56px + env(safe-area-inset-top, 0px)) !important; }
             #ol-chatbot .message-row { padding: 4px 8px !important; }
-            #input-row { padding: 8px 12px 12px !important; }
+            /* keep submit button OUT of the home-indicator gesture zone */
+            #input-row { padding: 8px 12px calc(12px + env(safe-area-inset-bottom, 0px)) !important; }
             #menu-panel { width: 85vw; }
             .eq { font-size: 0.82rem !important; padding: 10px 14px !important; }
             button { min-height: 44px !important; }
