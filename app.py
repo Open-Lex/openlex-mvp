@@ -2054,6 +2054,128 @@ PWA_HEAD = (
     '})();'
     '</script>'
     '<script>'
+    '/* ─── Feedback form submit ─── */'
+    '(function(){'
+    '  function bind(){'
+    '    var f=document.getElementById("fb-form");'
+    '    if(!f || f._bound) return; f._bound=true;'
+    '    f.addEventListener("submit", function(e){'
+    '      e.preventDefault();'
+    '      var msg=document.getElementById("fb-msg").value.trim();'
+    '      var email=document.getElementById("fb-email").value.trim();'
+    '      if(!msg) return;'
+    '      var btn=f.querySelector(\'button[type="submit"]\');'
+    '      btn.disabled=true; btn.textContent="Wird gesendet...";'
+    '      fetch("/api/contact",{'
+    '        method:"POST", headers:{"Content-Type":"application/json"},'
+    '        body: JSON.stringify({ message: msg, email: email || null, source: "app" })'
+    '      }).then(function(r){'
+    '        if(r.ok){'
+    '          document.getElementById("fb-success").style.display="block";'
+    '          document.getElementById("fb-msg").value="";'
+    '          document.getElementById("fb-email").value="";'
+    '          btn.textContent="Gesendet \\u2713";'
+    '          setTimeout(function(){'
+    '            btn.disabled=false; btn.textContent="Absenden";'
+    '            document.getElementById("fb-success").style.display="none";'
+    '          }, 2500);'
+    '        } else {'
+    '          btn.textContent="Fehler \\u2013 bitte per Mail";'
+    '          setTimeout(function(){btn.disabled=false;btn.textContent="Absenden";}, 3000);'
+    '        }'
+    '      }).catch(function(){'
+    '        btn.textContent="Netzwerkfehler";'
+    '        setTimeout(function(){btn.disabled=false;btn.textContent="Absenden";}, 3000);'
+    '      });'
+    '    });'
+    '  }'
+    '  var t=setInterval(function(){ bind(); var f=document.getElementById("fb-form"); if(f && f._bound){clearInterval(t);}},400);'
+    '  setTimeout(function(){clearInterval(t);}, 15000);'
+    '})();'
+    '</script>'
+    '<script>'
+    '/* ─── Robust menu close (click + touchend, ESC, expose global) ─── */'
+    '(function(){'
+    '  function closeMenu(){'
+    '    var p=document.getElementById("menu-panel"); var b=document.getElementById("menu-backdrop");'
+    '    if(p) p.classList.add("menu-closed");'
+    '    if(b) b.classList.add("menu-closed");'
+    '  }'
+    '  function openMenu(){'
+    '    var p=document.getElementById("menu-panel"); var b=document.getElementById("menu-backdrop");'
+    '    if(p) p.classList.remove("menu-closed");'
+    '    if(b) b.classList.remove("menu-closed");'
+    '  }'
+    '  function bindOnce(el, fn){'
+    '    if(!el || el._olBound) return;'
+    '    el._olBound = true;'
+    '    el.addEventListener("click", function(e){e.preventDefault(); fn();}, true);'
+    '    el.addEventListener("touchend", function(e){e.preventDefault(); fn();}, {passive:false});'
+    '  }'
+    '  var t=setInterval(function(){'
+    '    var x=document.querySelector(".menu-close");'
+    '    var h=document.querySelector(".ol-hamburger");'
+    '    var bd=document.getElementById("menu-backdrop");'
+    '    bindOnce(x, closeMenu);'
+    '    bindOnce(h, function(){'
+    '      var p=document.getElementById("menu-panel");'
+    '      if(p && p.classList.contains("menu-closed")) openMenu(); else closeMenu();'
+    '    });'
+    '    bindOnce(bd, closeMenu);'
+    '    if(x && h && bd) clearInterval(t);'
+    '  }, 300);'
+    '  setTimeout(function(){clearInterval(t);}, 15000);'
+    '  document.addEventListener("keydown", function(e){ if(e.key==="Escape") closeMenu(); });'
+    '  window.__olCloseMenu = closeMenu;'
+    '})();'
+    '</script>'
+    '<script>'
+    '/* ─── Swipe-right to close menu panel ─── */'
+    '(function(){'
+    '  var startX=null, startY=null, tracking=false;'
+    '  function onStart(e){'
+    '    var p=document.getElementById("menu-panel");'
+    '    if(!p || p.classList.contains("menu-closed")) return;'
+    '    var t=e.touches[0];'
+    '    startX=t.clientX; startY=t.clientY; tracking=true;'
+    '    p.style.transition="none";'
+    '  }'
+    '  function onMove(e){'
+    '    if(!tracking) return;'
+    '    var t=e.touches[0]; var dx=t.clientX-startX; var dy=t.clientY-startY;'
+    '    if(Math.abs(dy)>Math.abs(dx)){ tracking=false; var p=document.getElementById("menu-panel"); if(p){p.style.transition=""; p.style.transform="";} return; }'
+    '    if(dx<0){ return; }'
+    '    var p=document.getElementById("menu-panel");'
+    '    if(p) p.style.transform="translateX("+dx+"px)";'
+    '  }'
+    '  function onEnd(e){'
+    '    if(!tracking) return;'
+    '    tracking=false;'
+    '    var p=document.getElementById("menu-panel"); if(!p){return;}'
+    '    p.style.transition="";'
+    '    var t=(e.changedTouches&&e.changedTouches[0])||null;'
+    '    var dx=t?(t.clientX-startX):0;'
+    '    if(dx>80){'
+    '      p.style.transform=""; p.classList.add("menu-closed");'
+    '      var b=document.getElementById("menu-backdrop"); if(b) b.classList.add("menu-closed");'
+    '    } else {'
+    '      p.style.transform="";'
+    '    }'
+    '  }'
+    '  var t=setInterval(function(){'
+    '    var p=document.getElementById("menu-panel");'
+    '    if(!p || p._swipeBound) return;'
+    '    p._swipeBound=true;'
+    '    p.addEventListener("touchstart", onStart, {passive:true});'
+    '    p.addEventListener("touchmove", onMove, {passive:true});'
+    '    p.addEventListener("touchend", onEnd, {passive:true});'
+    '    p.addEventListener("touchcancel", onEnd, {passive:true});'
+    '    clearInterval(t);'
+    '  }, 300);'
+    '  setTimeout(function(){clearInterval(t);}, 15000);'
+    '})();'
+    '</script>'
+    '<script>'
     '/* ─── iOS hit-test kicker ─── */'
     '/* Forces Safari to rebuild compositor layers + hit-test map after initial mount,'
     '   so taps on submit-btn & burger register without the "rotate to activate" dance. */'
@@ -2331,11 +2453,6 @@ def build_app() -> gr.Blocks:
         f'<button class="eq" onclick="{FILL_JS}">{q}</button>'
         for q in EXAMPLES
     )
-    eq_menu = "\n".join(
-        f'<button class="menu-eq" onclick="{FILL_JS}{CLOSE_MENU}">{q}</button>'
-        for q in EXAMPLES
-    )
-
     WELCOME_HTML = f"""<div id="welcome-screen">
 <h1 class="welcome-title">Datenschutzrecht<br><span class="gold">recherchieren.</span></h1>
 <p class="welcome-sub">Quellenbasierte Antworten zum europäischen Datenschutzrecht.</p>
@@ -2360,9 +2477,16 @@ def build_app() -> gr.Blocks:
         f'<span class="menu-close" onclick="{CLOSE_MENU}" ontouchend="this.click();event.preventDefault();">\u2715</span>'
         '</div>'
         '<div class="menu-body">'
-        '<div class="menu-section">'
-        '<div class="menu-label">BEISPIELFRAGEN</div>'
-        f'{eq_menu}'
+        '<div class="menu-section fb-section">'
+        '<div class="menu-label">FEEDBACK ZUM MVP</div>'
+        '<p class="fb-lead">Was funktioniert? Was fehlt? Welcher Bug ist dir untergekommen? '
+        'Jede R\u00fcckmeldung hilft beim n\u00e4chsten Schritt.</p>'
+        '<form id="fb-form">'
+        '<textarea id="fb-msg" class="fb-input fb-textarea" placeholder="Deine Nachricht \u2026" required></textarea>'
+        '<input type="email" id="fb-email" class="fb-input" placeholder="E-Mail (optional)"/>'
+        '<button type="submit" class="fb-btn">Absenden</button>'
+        '<div id="fb-success" class="fb-success">Danke \u2013 dein Feedback ist da!</div>'
+        '</form>'
         '</div>'
         '<div class="menu-section">'
         f'<button class="menu-action" onclick="document.querySelector(\'#clear-trigger\').click();{CLOSE_MENU}">\U0001f504 Neues Gespräch</button>'
@@ -2610,8 +2734,32 @@ if __name__ == "__main__":
         .menu-top { display: flex; justify-content: space-between; align-items: center;
                      padding: 14px 20px; border-bottom: 1px solid var(--border); }
         .menu-title { color: var(--text); font-weight: 600; }
-        .menu-close { color: var(--dim); font-size: 1.3rem; cursor: pointer; }
+        .menu-close { color: var(--dim); font-size: 1.3rem; cursor: pointer;
+                      position: relative; z-index: 1001;
+                      min-width: 44px; min-height: 44px;
+                      display: flex; align-items: center; justify-content: center; }
         .menu-close:hover { color: var(--text); }
+        /* ── Feedback form in menu ── */
+        .fb-section { padding-bottom: 8px; }
+        .fb-lead { font-size: 0.82rem; color: var(--dim); line-height: 1.45;
+                   margin: 6px 0 10px; }
+        .fb-input { width: 100%; background: var(--bg); color: var(--text);
+                    border: 1px solid var(--border); border-radius: 10px;
+                    padding: 10px 12px; font-size: 16px;
+                    font-family: inherit !important; box-sizing: border-box;
+                    margin-bottom: 8px; }
+        .fb-input:focus { outline: none; border-color: rgba(212,168,67,0.5);
+                          box-shadow: 0 0 0 2px rgba(212,168,67,0.1); }
+        .fb-textarea { min-height: 96px; resize: vertical; }
+        .fb-btn { width: 100%; background: var(--gold); color: #111; border: none;
+                  border-radius: 10px; padding: 10px 14px; font-weight: 600;
+                  font-size: 0.9rem; cursor: pointer;
+                  touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+        .fb-btn:hover { background: #e0b84e; }
+        .fb-btn:disabled { opacity: 0.6; cursor: default; }
+        .fb-success { display: none; margin-top: 10px; padding: 8px 12px;
+                      background: rgba(58,158,110,0.12); color: #3a9e6e;
+                      border-radius: 8px; font-size: 0.85rem; text-align: center; }
         .menu-body { padding: 16px 20px; }
         .menu-section { margin-bottom: 20px; }
         .menu-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em;
