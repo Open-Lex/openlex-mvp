@@ -2060,6 +2060,9 @@ PWA_HEAD = (
     '(function(){'
     '  var isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);'
     '  if(!isIOS) return;'
+    '  /* Skip entirely inside an iframe — parent drives layout, extra kicks here'
+    '     cause Gradio to re-mount and flash "Fehler" toasts on first paint. */'
+    '  try { if(window.self!==window.top) return; } catch(e){ return; }'
     '  function kick(){'
     '    try {'
     '      var b=document.body;'
@@ -2075,23 +2078,32 @@ PWA_HEAD = (
     '  function boot(){ setTimeout(kick,150); setTimeout(kick,600); setTimeout(kick,1500); }'
     '  if(document.readyState==="complete") boot();'
     '  else window.addEventListener("load",boot,{once:true});'
-    '  /* Also kick when visual viewport changes (URL bar collapse, keyboard) */'
-    '  if(window.visualViewport){ window.visualViewport.addEventListener("resize",kick); }'
+    '  /* Do NOT bind to visualViewport resize — in an iframe that fires constantly'
+    '     (parent scroll, URL bar) and causes re-entrant reflow that glitches streaming. */'
     '})();'
     '</script>'
     '<script>'
     '(function(){'
-    '  /* Layout lock: enforce overflow on Gradio containers (once + on DOM mutations, not every second). */'
+    '  /* Layout lock: enforce overflow on Gradio containers — set ONCE, then stop.'
+    '     Previously this re-applied inline styles on every DOM mutation, which'
+    '     during streaming caused visible repaint glitches (text disappearing when'
+    '     scrolling up) because maxHeight:100vh got re-evaluated on every token. */'
+    '  var lockedGc=false, lockedWraps=false;'
     '  var fixScroll=function(){'
-    '    var gc=document.querySelector(".gradio-container");'
-    '    if(gc){gc.style.overflow="hidden";gc.style.maxHeight="100vh";}'
-    '    var wraps=document.querySelectorAll("#ol-chatbot > .wrap");'
-    '    wraps.forEach(function(w){w.style.overflow="visible";w.style.height="100%";});'
+    '    if(!lockedGc){'
+    '      var gc=document.querySelector(".gradio-container");'
+    '      if(gc){gc.style.overflow="hidden";gc.style.maxHeight="100vh";lockedGc=true;}'
+    '    }'
+    '    if(!lockedWraps){'
+    '      var wraps=document.querySelectorAll("#ol-chatbot > .wrap");'
+    '      if(wraps.length){wraps.forEach(function(w){w.style.overflow="visible";w.style.height="100%";});lockedWraps=true;}'
+    '    }'
     '  };'
     '  fixScroll();'
-    '  /* Run on new gradio DOM-nodes only, not on a timer. */'
+    '  /* Run at most until both locks set, then disconnect to stop thrashing during streaming. */'
     '  var bodyObs=new MutationObserver(function(muts){'
-    '    for(var i=0;i<muts.length;i++){if(muts[i].addedNodes && muts[i].addedNodes.length){fixScroll();return;}}'
+    '    if(lockedGc && lockedWraps){ bodyObs.disconnect(); return; }'
+    '    for(var i=0;i<muts.length;i++){if(muts[i].addedNodes && muts[i].addedNodes.length){fixScroll();if(lockedGc && lockedWraps){bodyObs.disconnect();}return;}}'
     '  });'
     '  bodyObs.observe(document.body,{childList:true,subtree:true});'
     '  /* Backdrop click closes menu */'
@@ -2576,11 +2588,10 @@ if __name__ == "__main__":
         }
         #ol-scroll-down.show { opacity: 0.95; pointer-events: auto; transform: translateY(0); }
         #ol-scroll-down:hover { background: #e0b84e; }
-        /* ── Streaming performance hints ── */
-        #ol-chatbot .message, #ol-chatbot .bubble-wrap {
-            contain: layout style;
-        }
-        #ol-chatbot .bubble-wrap { will-change: scroll-position; }
+        /* Note: previously had `contain: layout style` and `will-change: scroll-position`
+           here as streaming perf hints. iOS Safari got confused: when scrolling up
+           during streaming, off-screen messages were sometimes painted empty for a
+           few seconds before snapping back. Removed — correctness > micro-opt. */
 
         /* ── Hamburger Menu ── */
         #menu-panel {
