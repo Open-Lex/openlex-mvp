@@ -2055,16 +2055,19 @@ PWA_HEAD = (
     '</script>'
     '<script>'
     '(function(){'
-    '  /* Lock layout: CSS does the heavy lifting (body position:fixed, overflow:hidden). */'
-    '  /* JS just enforces overflow on Gradio containers that get reset during streaming. */'
+    '  /* Layout lock: enforce overflow on Gradio containers (once + on DOM mutations, not every second). */'
     '  var fixScroll=function(){'
     '    var gc=document.querySelector(".gradio-container");'
     '    if(gc){gc.style.overflow="hidden";gc.style.maxHeight="100vh";}'
     '    var wraps=document.querySelectorAll("#ol-chatbot > .wrap");'
     '    wraps.forEach(function(w){w.style.overflow="visible";w.style.height="100%";});'
     '  };'
-    '  setInterval(fixScroll,1000);'
     '  fixScroll();'
+    '  /* Run on new gradio DOM-nodes only, not on a timer. */'
+    '  var bodyObs=new MutationObserver(function(muts){'
+    '    for(var i=0;i<muts.length;i++){if(muts[i].addedNodes && muts[i].addedNodes.length){fixScroll();return;}}'
+    '  });'
+    '  bodyObs.observe(document.body,{childList:true,subtree:true});'
     '  /* Backdrop click closes menu */'
     '  document.addEventListener("click",function(e){'
     '    if(e.target.id==="menu-backdrop"){'
@@ -2072,6 +2075,122 @@ PWA_HEAD = (
     '      e.target.classList.add("menu-closed");'
     '    }'
     '  });'
+    '  /* ─── Sticky-Scroll mit "Nach unten"-Button ─── */'
+    '  var nearBottom=true;'
+    '  var scrollEl=null;'
+    '  var btnEl=null;'
+    '  function getScrollEl(){'
+    '    if(scrollEl && document.contains(scrollEl)) return scrollEl;'
+    '    var cb=document.getElementById("ol-chatbot");'
+    '    if(!cb) return null;'
+    '    scrollEl = cb.querySelector(".bubble-wrap") || cb.querySelector("[class*=\\"bubble\\"]") || cb;'
+    '    return scrollEl;'
+    '  }'
+    '  function checkNear(){'
+    '    var el=getScrollEl();'
+    '    if(!el) return;'
+    '    nearBottom=(el.scrollHeight - el.scrollTop - el.clientHeight) < 80;'
+    '    updateBtn();'
+    '  }'
+    '  function scrollToBottom(){'
+    '    var el=getScrollEl();'
+    '    if(!el) return;'
+    '    el.scrollTop = el.scrollHeight;'
+    '    nearBottom = true;'
+    '    updateBtn();'
+    '  }'
+    '  function updateBtn(){'
+    '    if(!btnEl) return;'
+    '    if(nearBottom){btnEl.classList.remove("show");} else {btnEl.classList.add("show");}'
+    '  }'
+    '  function ensureBtn(){'
+    '    if(btnEl && document.contains(btnEl)) return;'
+    '    btnEl=document.createElement("button");'
+    '    btnEl.id="ol-scroll-down";'
+    '    btnEl.setAttribute("aria-label","Nach unten scrollen");'
+    '    btnEl.innerHTML="\\u2193";'
+    '    btnEl.addEventListener("click",function(e){e.preventDefault();scrollToBottom();});'
+    '    btnEl.addEventListener("touchend",function(e){e.preventDefault();scrollToBottom();});'
+    '    document.body.appendChild(btnEl);'
+    '  }'
+    '  /* Attach scroll-listener to the actual scrollable bubble-wrap (which changes between Gradio renders) */'
+    '  var attached=new WeakSet();'
+    '  function attachScrollListener(){'
+    '    var el=getScrollEl();'
+    '    if(!el) return;'
+    '    if(!attached.has(el)){'
+    '      attached.add(el);'
+    '      el.addEventListener("scroll",function(){checkNear();},{passive:true});'
+    '      el.addEventListener("touchmove",function(){checkNear();},{passive:true});'
+    '    }'
+    '  }'
+    '  /* Observe chatbot mutations to enforce sticky-scroll during streaming */'
+    '  var chatObs=null;'
+    '  function observeChatbot(){'
+    '    var cb=document.getElementById("ol-chatbot");'
+    '    if(!cb || cb._ol_observed) return;'
+    '    cb._ol_observed=true;'
+    '    chatObs=new MutationObserver(function(){'
+    '      attachScrollListener();'
+    '      if(nearBottom){'
+    '        var el=getScrollEl();'
+    '        if(el) el.scrollTop = el.scrollHeight;'
+    '      } else {'
+    '        updateBtn();'
+    '      }'
+    '    });'
+    '    chatObs.observe(cb,{childList:true,subtree:true,characterData:true});'
+    '  }'
+    '  function bootSticky(){'
+    '    ensureBtn();'
+    '    attachScrollListener();'
+    '    observeChatbot();'
+    '  }'
+    '  /* Gradio renders chatbot async — retry boot until it is in DOM */'
+    '  var bootTries=0;'
+    '  var bootTimer=setInterval(function(){'
+    '    bootTries++;'
+    '    if(document.getElementById("ol-chatbot")){'
+    '      bootSticky();'
+    '      clearInterval(bootTimer);'
+    '    } else if(bootTries>40){clearInterval(bootTimer);}'
+    '  },250);'
+    '  /* When user submits a new question, lock back to bottom */'
+    '  function onSubmitIntent(){nearBottom=true;setTimeout(function(){var el=getScrollEl();if(el)el.scrollTop=el.scrollHeight;},80);updateBtn();}'
+    '  document.addEventListener("click",function(e){'
+    '    var t=e.target;'
+    '    if(!t) return;'
+    '    if(t.id==="submit-btn" || (t.closest && t.closest("#submit-btn"))) onSubmitIntent();'
+    '  },true);'
+    '  document.addEventListener("keydown",function(e){'
+    '    if(e.key==="Enter" && !e.shiftKey){'
+    '      var ta=document.querySelector("#ol-input textarea, #ol-input input");'
+    '      if(ta && document.activeElement===ta) onSubmitIntent();'
+    '    }'
+    '  },true);'
+    '  /* ─── Submit-Button Force-Enable Safety Net ─── */'
+    '  /* Gradio normally re-enables the button after the generator finishes. */'
+    '  /* If it gets stuck disabled, force-enable it 700ms after last chatbot mutation. */'
+    '  var lastChatMut=Date.now();'
+    '  var liveMut=new MutationObserver(function(){lastChatMut=Date.now();});'
+    '  function attachLiveMut(){'
+    '    var cb=document.getElementById("ol-chatbot");'
+    '    if(!cb || cb._ol_live) return;'
+    '    cb._ol_live=true;'
+    '    liveMut.observe(cb,{childList:true,subtree:true,characterData:true});'
+    '  }'
+    '  setInterval(function(){'
+    '    attachLiveMut();'
+    '    var btn=document.getElementById("submit-btn");'
+    '    if(!btn) return;'
+    '    var isDis = btn.disabled || btn.getAttribute("aria-disabled")==="true" || btn.classList.contains("disabled");'
+    '    if(isDis && (Date.now()-lastChatMut)>700){'
+    '      btn.disabled=false;'
+    '      btn.removeAttribute("disabled");'
+    '      btn.removeAttribute("aria-disabled");'
+    '      btn.classList.remove("disabled");'
+    '    }'
+    '  },400);'
     '})();'
     '</script>'
     '<script>'
@@ -2312,11 +2431,13 @@ def build_app() -> gr.Blocks:
             respond,
             inputs=[msg_input, chatbot],
             outputs=[chatbot, copy_store, msg_input, welcome],
+            show_progress="hidden",
         )
         msg_input.submit(
             respond,
             inputs=[msg_input, chatbot],
             outputs=[chatbot, copy_store, msg_input, welcome],
+            show_progress="hidden",
         )
         clear_trigger.click(
             lambda: ([], "", "", WELCOME_HTML),
@@ -2409,8 +2530,31 @@ if __name__ == "__main__":
         .ol-open { color: #fff; }
         .ol-lex { color: var(--gold); }
         .ol-hamburger { color: var(--gold); font-size: 1.4rem; cursor: pointer;
-                        padding: 4px 8px; user-select: none; pointer-events: auto !important; position: relative; z-index: 100; }
+                        padding: 4px 8px; user-select: none; pointer-events: auto !important;
+                        position: relative; z-index: 200;
+                        touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
         .ol-hamburger:hover { color: #e0b84e; }
+        .menu-close { pointer-events: auto !important; touch-action: manipulation;
+                      -webkit-tap-highlight-color: transparent; padding: 4px 8px; }
+        /* ── Scroll-down floating button ── */
+        #ol-scroll-down {
+            position: fixed; right: 16px; bottom: calc(86px + env(safe-area-inset-bottom, 0px));
+            width: 40px; height: 40px; border-radius: 50%;
+            background: var(--gold); color: #111; border: none;
+            font-size: 1.2rem; font-weight: 700; line-height: 1;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+            cursor: pointer; z-index: 45;
+            opacity: 0; pointer-events: none; transform: translateY(8px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            touch-action: manipulation; -webkit-tap-highlight-color: transparent;
+        }
+        #ol-scroll-down.show { opacity: 0.95; pointer-events: auto; transform: translateY(0); }
+        #ol-scroll-down:hover { background: #e0b84e; }
+        /* ── Streaming performance hints ── */
+        #ol-chatbot .message, #ol-chatbot .bubble-wrap {
+            contain: layout style;
+        }
+        #ol-chatbot .bubble-wrap { will-change: scroll-position; }
 
         /* ── Hamburger Menu ── */
         #menu-panel {
