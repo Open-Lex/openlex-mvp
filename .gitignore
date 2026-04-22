@@ -34,3 +34,34 @@ edpb_english_docs.zip
 huggingface/
 server_package/
 mw-chunks-update-plan.md
+
+# Secrets & Nutzerdaten (ergänzt)
+.smtp_credentials
+.env
+.env.*
+!.env.example
+contact_messages.jsonl
+
+# Python
+*.py[cod]
+*$py.class
+*.so
+.venv/
+env/
+*.egg-info/
+.pytest_cache/
+
+# OS
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temp/Debug
+*.tmp
+*.bak
+_private/
+backups/
