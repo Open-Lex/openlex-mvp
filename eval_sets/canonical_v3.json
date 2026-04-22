@@ -1,0 +1,4384 @@
+[
+  {
+    "id": "canonical_001",
+    "level": "canonical",
+    "question": "Wie ist die Rangfolge der Rechtsnormen im europäischen Datenschutzrecht strukturiert und welche konkreten Rechtsquellen sind auf den jeweiligen Ebenen zu beachten?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_normenhierarchie_im_eu_datenschutzrecht"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "Normenhierarchie im EU-Datenschutzrecht"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 8 GRCh",
+        "Art. 16 AEUV",
+        "DSGVO",
+        "BDSG"
+      ],
+      "expected_keywords": [
+        "Normenhierarchie",
+        "EU-Primärrecht",
+        "EU-Sekundärrecht",
+        "Anwendungsvorrang",
+        "Öffnungsklauseln"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 8 GRCh",
+      "Art. 16 AEUV",
+      "DSGVO",
+      "BDSG"
+    ],
+    "expected_keywords": [
+      "Normenhierarchie",
+      "EU-Primärrecht",
+      "EU-Sekundärrecht",
+      "Anwendungsvorrang",
+      "Öffnungsklauseln"
+    ],
+    "min_sources": 2,
+    "category": "methodenwissen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_normenhierarchie_im_eu_datenschutzrecht",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_002",
+    "level": "canonical",
+    "question": "Unter welchen Voraussetzungen müssen nationale Gerichte Vorschriften des Bundesdatenschutzgesetzes unangewendet lassen, wenn diese mit der Datenschutz-Grundverordnung in Konflikt stehen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_88"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_anwendungsvorrang_des_eu_rechts__costa_enel__simmenthal_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 88 DSGVO"
+    ],
+    "should_ids": [
+      "Anwendungsvorrang des EU-Rechts (Costa/ENEL, Simmenthal)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 88 Abs. 2 DSGVO",
+        "§ 1 Abs. 5 BDSG"
+      ],
+      "expected_keywords": [
+        "Anwendungsvorrang",
+        "Öffnungsklauseln",
+        "Unanwendbarkeit",
+        "EU-Recht",
+        "nationales Recht"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 88 Abs. 2 DSGVO",
+      "§ 1 Abs. 5 BDSG"
+    ],
+    "expected_keywords": [
+      "Anwendungsvorrang",
+      "Öffnungsklauseln",
+      "Unanwendbarkeit",
+      "EU-Recht",
+      "nationales Recht"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_anwendungsvorrang_des_eu_rechts__costa_enel__simmenthal_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_003",
+    "level": "canonical",
+    "question": "Welche spezifischen Öffnungsklauseln der DSGVO ermöglichen es den Mitgliedstaaten, nationale Regelungen für die Verarbeitung besonderer Kategorien personenbezogener Daten im Arbeitsrecht zu erlassen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw__ffnungsklauseln_der_dsgvo____bersicht"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 9 DSGVO (Teil 1)",
+      "Art. 9 DSGVO (Teil 2)",
+      "Art. 88 DSGVO",
+      "BDSG_§_26_Abs.1"
+    ],
+    "should_ids": [
+      "Öffnungsklauseln der DSGVO – Übersicht"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 9 Abs. 2 lit. b DSGVO",
+        "Art. 88 DSGVO",
+        "§ 26 BDSG"
+      ],
+      "expected_keywords": [
+        "Öffnungsklauseln",
+        "Beschäftigtendatenschutz",
+        "nationale Regelungen",
+        "Verarbeitung besonderer Kategorien personenbezogener Daten",
+        "Arbeitsrecht"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 9 Abs. 2 lit. b DSGVO",
+      "Art. 88 DSGVO",
+      "§ 26 BDSG"
+    ],
+    "expected_keywords": [
+      "Öffnungsklauseln",
+      "Beschäftigtendatenschutz",
+      "nationale Regelungen",
+      "Verarbeitung besonderer Kategorien personenbezogener Daten",
+      "Arbeitsrecht"
+    ],
+    "min_sources": 2,
+    "category": "methodenwissen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw__ffnungsklauseln_der_dsgvo____bersicht",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_004",
+    "level": "canonical",
+    "question": "Welche konkreten Vorschriften des BDSG setzen die Öffnungsklauseln der DSGVO um und welche besonderen Anforderungen oder Einschränkungen ergeben sich dabei insbesondere im Beschäftigtendatenschutz?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1",
+        "dsgvo_art_89",
+        "dsgvo_art_23"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_deutsche_umsetzung_der_dsgvo__ffnungsklauseln_im_bdsg"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 88 DSGVO",
+      "BDSG_§_26_Abs.1",
+      "Art. 89 DSGVO",
+      "Art. 23 DSGVO"
+    ],
+    "should_ids": [
+      "Deutsche Umsetzung der DSGVO-Öffnungsklauseln im BDSG"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 88 DSGVO",
+        "§ 26 BDSG",
+        "Art. 89 DSGVO",
+        "Art. 23 DSGVO"
+      ],
+      "expected_keywords": [
+        "Öffnungsklauseln",
+        "Beschäftigtendatenschutz",
+        "EuGH C-34/21",
+        "Datenverarbeitung",
+        "Betroffenenrechte"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 88 DSGVO",
+      "§ 26 BDSG",
+      "Art. 89 DSGVO",
+      "Art. 23 DSGVO"
+    ],
+    "expected_keywords": [
+      "Öffnungsklauseln",
+      "Beschäftigtendatenschutz",
+      "EuGH C-34/21",
+      "Datenverarbeitung",
+      "Betroffenenrechte"
+    ],
+    "min_sources": 2,
+    "category": "methodenwissen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_deutsche_umsetzung_der_dsgvo__ffnungsklauseln_im_bdsg",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_005",
+    "level": "canonical",
+    "question": "Welche spezifischen Regelungen des TTDSG sind bei der Verwendung von Cookies auf einer Website zu beachten und wie verhält sich diese Regelung zur DSGVO?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_95",
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_verh_ltnis_dsgvo_zu_eprivacy_ttdsg__lex_specialis_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 95 DSGVO",
+      "gran_TDDDG_§_25",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Verhältnis DSGVO zu ePrivacy/TTDSG (lex specialis)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 95 DSGVO",
+        "§ 25 TTDSG",
+        "Art. 6 DSGVO"
+      ],
+      "expected_keywords": [
+        "lex specialis",
+        "Einwilligungserfordernis",
+        "Opt-in-Einwilligung",
+        "elektronische Kommunikation",
+        "Zweistufige Prüfung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 95 DSGVO",
+      "§ 25 TTDSG",
+      "Art. 6 DSGVO"
+    ],
+    "expected_keywords": [
+      "lex specialis",
+      "Einwilligungserfordernis",
+      "Opt-in-Einwilligung",
+      "elektronische Kommunikation",
+      "Zweistufige Prüfung"
+    ],
+    "min_sources": 2,
+    "category": "cookies_tracking",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_verh_ltnis_dsgvo_zu_eprivacy_ttdsg__lex_specialis_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_006",
+    "level": "canonical",
+    "question": "Welche spezifischen Regelungen des sektorspezifischen Datenschutzrechts sind bei der Verarbeitung von Sozialdaten und Steuerdaten zu beachten und wie verhalten sich diese zu den allgemeinen Bestimmungen der DSGVO?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_85"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_verh_ltnis_dsgvo_zu_sektorspezifischem_recht__sgb_x__ao__tkg"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 85 DSGVO"
+    ],
+    "should_ids": [
+      "Verhältnis DSGVO zu sektorspezifischem Recht (SGB X, AO, TKG, BetrVG, KUG)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 lit. e DSGVO",
+        "Art. 85 Abs. 2 DSGVO",
+        "§ 29b AO"
+      ],
+      "expected_keywords": [
+        "Sozialdatenschutz",
+        "Steuergeheimnis",
+        "Öffnungsklauseln",
+        "Vorrang",
+        "Spezialgesetz"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 lit. e DSGVO",
+      "Art. 85 Abs. 2 DSGVO",
+      "§ 29b AO"
+    ],
+    "expected_keywords": [
+      "Sozialdatenschutz",
+      "Steuergeheimnis",
+      "Öffnungsklauseln",
+      "Vorrang",
+      "Spezialgesetz"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_verh_ltnis_dsgvo_zu_sektorspezifischem_recht__sgb_x__ao__tkg",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_007",
+    "level": "canonical",
+    "question": "Welche Hierarchie der Rechtsquellen und Autoritäten ist bei der juristischen Analyse im Datenschutzrecht zu beachten und welche praktische Relevanz haben die Leitlinien des Europäischen Datenschutzausschusses?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_quellengewichtung_im_datenschutzrecht___10_rang_system"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "Quellengewichtung im Datenschutzrecht – 10-Rang-System"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [],
+      "expected_keywords": [
+        "Rechtsquellenhierarchie",
+        "EuGH-Urteile",
+        "EDSA/EDPB-Leitlinien",
+        "persuasive Autorität",
+        "Bindungswirkung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [],
+    "expected_keywords": [
+      "Rechtsquellenhierarchie",
+      "EuGH-Urteile",
+      "EDSA/EDPB-Leitlinien",
+      "persuasive Autorität",
+      "Bindungswirkung"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_quellengewichtung_im_datenschutzrecht___10_rang_system",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_008",
+    "level": "canonical",
+    "question": "Wie ist bei ungeklärten Rechtsfragen im Datenschutzrecht vorzugehen, wenn die EuGH-Rechtsprechung noch keine klare Linie aufweist?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_umgang_mit_meinungsstreit_im_datenschutzrecht"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "Umgang mit Meinungsstreit im Datenschutzrecht"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 267 AEUV"
+      ],
+      "expected_keywords": [
+        "EuGH-Rechtsprechung",
+        "Vorlageverfahren",
+        "EDSA-Leitlinien",
+        "Aufsichtsbehörden",
+        "Meinungsstreit"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 267 AEUV"
+    ],
+    "expected_keywords": [
+      "EuGH-Rechtsprechung",
+      "Vorlageverfahren",
+      "EDSA-Leitlinien",
+      "Aufsichtsbehörden",
+      "Meinungsstreit"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_umgang_mit_meinungsstreit_im_datenschutzrecht",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_009",
+    "level": "canonical",
+    "question": "Wie ist bei der Auslegung der DSGVO mit unterschiedlichen Formulierungen in den verschiedenen Sprachfassungen umzugehen und welche Rolle spielt dabei der EuGH?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_grammatische_auslegung_der_dsgvo__wortlaut__mehrsprachigkeit"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "Grammatische Auslegung der DSGVO (Wortlaut, Mehrsprachigkeit)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 55 EUV",
+        "Art. 4 Nr. 1 DSGVO"
+      ],
+      "expected_keywords": [
+        "grammatische Auslegung",
+        "autonome Auslegung",
+        "EuGH",
+        "Sprachfassungen",
+        "personenbezogene Daten"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 55 EUV",
+      "Art. 4 Nr. 1 DSGVO"
+    ],
+    "expected_keywords": [
+      "grammatische Auslegung",
+      "autonome Auslegung",
+      "EuGH",
+      "Sprachfassungen",
+      "personenbezogene Daten"
+    ],
+    "min_sources": 2,
+    "category": "methodenwissen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_grammatische_auslegung_der_dsgvo__wortlaut__mehrsprachigkeit",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_010",
+    "level": "canonical",
+    "question": "Wie sind die Erwägungsgründe der DSGVO bei der Auslegung von Art. 6 Abs. 1 lit. f DSGVO zu berücksichtigen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_systematische_auslegung_der_dsgvo__erw_gungsgr_nde_als_konte"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 5 DSGVO"
+    ],
+    "should_ids": [
+      "Systematische Auslegung der DSGVO (Erwägungsgründe als Kontext)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 lit. f DSGVO",
+        "Art. 5 DSGVO"
+      ],
+      "expected_keywords": [
+        "Erwägungsgründe",
+        "systematische Auslegung",
+        "Normzusammenhang",
+        "Grundsätze"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 lit. f DSGVO",
+      "Art. 5 DSGVO"
+    ],
+    "expected_keywords": [
+      "Erwägungsgründe",
+      "systematische Auslegung",
+      "Normzusammenhang",
+      "Grundsätze"
+    ],
+    "min_sources": 2,
+    "category": "methodenwissen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_systematische_auslegung_der_dsgvo__erw_gungsgr_nde_als_konte",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_011",
+    "level": "canonical",
+    "question": "Wie lässt sich das Spannungsverhältnis zwischen dem Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und dem freien Datenverkehr innerhalb der Europäischen Union nach der Datenschutz-Grundverordnung in der Praxis auflösen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_teleologische_auslegung_der_dsgvo__doppelzweck_art__1_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 1 DSGVO"
+    ],
+    "should_ids": [
+      "Teleologische Auslegung der DSGVO (Doppelzweck Art. 1)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 1 DSGVO"
+      ],
+      "expected_keywords": [
+        "teleologische Auslegung",
+        "Doppelzweck",
+        "Spannungsverhältnis",
+        "Abwägung",
+        "praktischer Ausgleich"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 1 DSGVO"
+    ],
+    "expected_keywords": [
+      "teleologische Auslegung",
+      "Doppelzweck",
+      "Spannungsverhältnis",
+      "Abwägung",
+      "praktischer Ausgleich"
+    ],
+    "min_sources": 2,
+    "category": "methodenwissen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_teleologische_auslegung_der_dsgvo__doppelzweck_art__1_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_012",
+    "level": "canonical",
+    "question": "Welche historischen Rechtsquellen und Dokumente sind bei der Auslegung von Begriffen der Datenschutz-Grundverordnung (DSGVO) heranzuziehen, wenn der Europäische Gerichtshof (EuGH) hierzu noch keine Rechtsprechung entwickelt hat?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_historische_auslegung__rl_95_46_eg_als_vorg_nger_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "Historische Auslegung (RL 95/46/EG als Vorgänger)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Richtlinie 95/46/EG",
+        "Konvention 108 des Europarats"
+      ],
+      "expected_keywords": [
+        "historische Auslegung",
+        "EuGH-Rechtsprechung",
+        "Datenschutzrichtlinie",
+        "personenbezogene Daten",
+        "Verantwortlicher"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Richtlinie 95/46/EG",
+      "Konvention 108 des Europarats"
+    ],
+    "expected_keywords": [
+      "historische Auslegung",
+      "EuGH-Rechtsprechung",
+      "Datenschutzrichtlinie",
+      "personenbezogene Daten",
+      "Verantwortlicher"
+    ],
+    "min_sources": 2,
+    "category": "methodenwissen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_historische_auslegung__rl_95_46_eg_als_vorg_nger_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_013",
+    "level": "canonical",
+    "question": "Welche spezifischen Auslegungsmethoden wendet der EuGH bei der Interpretation der DSGVO an und wie beeinflussen diese die praktische Anwendung des Datenschutzrechts?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_eu_spezifische_auslegungsmethoden__autonome_auslegung__effet"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "EU-spezifische Auslegungsmethoden (autonome Auslegung, effet utile, Grundrechte)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 7 GRCh",
+        "Art. 8 GRCh",
+        "Art. 52 Abs. 1 GRCh"
+      ],
+      "expected_keywords": [
+        "autonome Auslegung",
+        "effet utile",
+        "grundrechtskonforme Auslegung",
+        "Verhältnismäßigkeitsprinzip"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 7 GRCh",
+      "Art. 8 GRCh",
+      "Art. 52 Abs. 1 GRCh"
+    ],
+    "expected_keywords": [
+      "autonome Auslegung",
+      "effet utile",
+      "grundrechtskonforme Auslegung",
+      "Verhältnismäßigkeitsprinzip"
+    ],
+    "min_sources": 2,
+    "category": "methodenwissen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_eu_spezifische_auslegungsmethoden__autonome_auslegung__effet",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_014",
+    "level": "canonical",
+    "question": "Welche Voraussetzungen müssen erfüllt sein, damit die Verarbeitung personenbezogener Daten, insbesondere besonderer Kategorien, nach der Datenschutz-Grundverordnung rechtmäßig ist?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_verbot_mit_erlaubnisvorbehalt_im_datenschutzrecht"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 9 DSGVO (Teil 1)",
+      "Art. 9 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Verbot mit Erlaubnisvorbehalt im Datenschutzrecht"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 DSGVO",
+        "Art. 9 DSGVO"
+      ],
+      "expected_keywords": [
+        "Verbot mit Erlaubnisvorbehalt",
+        "Rechtsgrundlage",
+        "besondere Kategorien personenbezogener Daten",
+        "Erlaubnistatbestände",
+        "informationelle Selbstbestimmung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 DSGVO",
+      "Art. 9 DSGVO"
+    ],
+    "expected_keywords": [
+      "Verbot mit Erlaubnisvorbehalt",
+      "Rechtsgrundlage",
+      "besondere Kategorien personenbezogener Daten",
+      "Erlaubnistatbestände",
+      "informationelle Selbstbestimmung"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_verbot_mit_erlaubnisvorbehalt_im_datenschutzrecht",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_015",
+    "level": "canonical",
+    "question": "Welche verfassungsrechtlichen Grundlagen sind für das deutsche Datenschutzrecht maßgeblich und welche Kernaussagen treffen die entsprechenden Urteile des Bundesverfassungsgerichts?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_informationelle_selbstbestimmung__bverfg_volksz_hlung_1983__"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "Informationelle Selbstbestimmung (BVerfG Volkszählung 1983) und IT-Grundrecht"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG",
+        "Art. 7 GRCh",
+        "Art. 8 GRCh"
+      ],
+      "expected_keywords": [
+        "informationelle Selbstbestimmung",
+        "IT-Grundrecht",
+        "Vertraulichkeit",
+        "Integrität",
+        "Recht auf Vergessen"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG",
+      "Art. 7 GRCh",
+      "Art. 8 GRCh"
+    ],
+    "expected_keywords": [
+      "informationelle Selbstbestimmung",
+      "IT-Grundrecht",
+      "Vertraulichkeit",
+      "Integrität",
+      "Recht auf Vergessen"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_informationelle_selbstbestimmung__bverfg_volksz_hlung_1983__",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_016",
+    "level": "canonical",
+    "question": "Welche konkreten Anforderungen stellt der Grundsatz der Rechtmäßigkeit, Verarbeitung nach Treu und Glauben sowie Transparenz gemäß Art. 5 Abs. 1 lit. a DSGVO an die Datenverarbeitung und welche Rechtsfolgen drohen bei einem Verstoß?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_art__5_abs__1_lit__a_dsgvo___rechtm__igkeit__verarbeitung_na"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 83 DSGVO (Teil 1)",
+      "Art. 83 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Art. 5 Abs. 1 lit. a DSGVO – Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 1 lit. a DSGVO",
+        "Art. 6 Abs. 1 DSGVO",
+        "Art. 83 Abs. 5 lit. a DSGVO"
+      ],
+      "expected_keywords": [
+        "Rechtmäßigkeit",
+        "Treu und Glauben",
+        "Transparenz",
+        "Bußgeld",
+        "Informationspflichten"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 1 lit. a DSGVO",
+      "Art. 6 Abs. 1 DSGVO",
+      "Art. 83 Abs. 5 lit. a DSGVO"
+    ],
+    "expected_keywords": [
+      "Rechtmäßigkeit",
+      "Treu und Glauben",
+      "Transparenz",
+      "Bußgeld",
+      "Informationspflichten"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_art__5_abs__1_lit__a_dsgvo___rechtm__igkeit__verarbeitung_na",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_017",
+    "level": "canonical",
+    "question": "Unter welchen Voraussetzungen ist eine Weiterverarbeitung personenbezogener Daten zu einem anderen Zweck als dem ursprünglichen Erhebungszweck nach der Datenschutz-Grundverordnung zulässig?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_art__5_abs__1_lit__b_dsgvo___zweckbindung"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Art. 5 Abs. 1 lit. b DSGVO – Zweckbindung"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 1 lit. b DSGVO",
+        "Art. 6 Abs. 4 DSGVO"
+      ],
+      "expected_keywords": [
+        "Zweckbindung",
+        "Kompatibilitätstest",
+        "Weiterverarbeitung",
+        "personenbezogene Daten"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 1 lit. b DSGVO",
+      "Art. 6 Abs. 4 DSGVO"
+    ],
+    "expected_keywords": [
+      "Zweckbindung",
+      "Kompatibilitätstest",
+      "Weiterverarbeitung",
+      "personenbezogene Daten"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_art__5_abs__1_lit__b_dsgvo___zweckbindung",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_018",
+    "level": "canonical",
+    "question": "Welche konkreten Anforderungen stellt der Grundsatz der Datenminimierung nach Art. 5 Abs. 1 lit. c DSGVO an die Verarbeitung personenbezogener Daten für Werbezwecke und welche technischen Maßnahmen sind zur Umsetzung dieses Prinzips erforderlich?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_25"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_art__5_abs__1_lit__c_dsgvo___datenminimierung"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO",
+      "Art. 25 DSGVO"
+    ],
+    "should_ids": [
+      "Art. 5 Abs. 1 lit. c DSGVO – Datenminimierung"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 1 lit. c DSGVO",
+        "Art. 25 Abs. 1 DSGVO",
+        "Art. 25 Abs. 2 DSGVO"
+      ],
+      "expected_keywords": [
+        "Datenminimierung",
+        "Data Protection by Design",
+        "Data Protection by Default",
+        "Zweckbindung",
+        "Angemessenheit"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 1 lit. c DSGVO",
+      "Art. 25 Abs. 1 DSGVO",
+      "Art. 25 Abs. 2 DSGVO"
+    ],
+    "expected_keywords": [
+      "Datenminimierung",
+      "Data Protection by Design",
+      "Data Protection by Default",
+      "Zweckbindung",
+      "Angemessenheit"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_art__5_abs__1_lit__c_dsgvo___datenminimierung",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_019",
+    "level": "canonical",
+    "question": "Welche konkreten Maßnahmen muss ein Verantwortlicher ergreifen, um den Grundsatz der Richtigkeit personenbezogener Daten gemäß den Vorgaben der DSGVO zu gewährleisten?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_16",
+        "dsgvo_art_17"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_art__5_abs__1_lit__d_dsgvo___richtigkeit"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO",
+      "Art. 16 DSGVO",
+      "Art. 17 DSGVO"
+    ],
+    "should_ids": [
+      "Art. 5 Abs. 1 lit. d DSGVO – Richtigkeit"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 1 lit. d DSGVO",
+        "Art. 16 DSGVO",
+        "Art. 17 DSGVO"
+      ],
+      "expected_keywords": [
+        "Richtigkeit",
+        "Berichtigung",
+        "Löschung",
+        "Verantwortlicher",
+        "Maßnahmen"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 1 lit. d DSGVO",
+      "Art. 16 DSGVO",
+      "Art. 17 DSGVO"
+    ],
+    "expected_keywords": [
+      "Richtigkeit",
+      "Berichtigung",
+      "Löschung",
+      "Verantwortlicher",
+      "Maßnahmen"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_art__5_abs__1_lit__d_dsgvo___richtigkeit",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_020",
+    "level": "canonical",
+    "question": "Welche Anforderungen stellt der Grundsatz der Speicherbegrenzung nach der DSGVO an die Aufbewahrung von personenbezogenen Daten in Sicherungskopien und welche Ausnahmen gelten dabei?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_89"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_art__5_abs__1_lit__e_dsgvo___speicherbegrenzung"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO",
+      "Art. 89 DSGVO"
+    ],
+    "should_ids": [
+      "Art. 5 Abs. 1 lit. e DSGVO – Speicherbegrenzung"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 1 lit. e DSGVO",
+        "Art. 89 Abs. 1 DSGVO"
+      ],
+      "expected_keywords": [
+        "Speicherbegrenzung",
+        "Löschkonzept",
+        "Sicherungskopien",
+        "Löschpflicht",
+        "Archivzwecke"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 1 lit. e DSGVO",
+      "Art. 89 Abs. 1 DSGVO"
+    ],
+    "expected_keywords": [
+      "Speicherbegrenzung",
+      "Löschkonzept",
+      "Sicherungskopien",
+      "Löschpflicht",
+      "Archivzwecke"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_art__5_abs__1_lit__e_dsgvo___speicherbegrenzung",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_021",
+    "level": "canonical",
+    "question": "Welche konkreten Maßnahmen müssen gemäß DSGVO ergriffen werden, um die Integrität und Vertraulichkeit personenbezogener Daten zu gewährleisten, und welche Meldepflichten bestehen bei einer Verletzung dieser Prinzipien?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_32",
+        "dsgvo_art_33"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_art__5_abs__1_lit__f_dsgvo___integrit_t_und_vertraulichkeit"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO",
+      "Art. 32 DSGVO",
+      "Art. 33 DSGVO"
+    ],
+    "should_ids": [
+      "Art. 5 Abs. 1 lit. f DSGVO – Integrität und Vertraulichkeit"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 1 lit. f DSGVO",
+        "Art. 32 DSGVO",
+        "Art. 33 DSGVO"
+      ],
+      "expected_keywords": [
+        "technische und organisatorische Maßnahmen",
+        "Meldepflicht",
+        "Verletzung des Schutzes personenbezogener Daten",
+        "Sicherheit der Verarbeitung",
+        "Pseudonymisierung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 1 lit. f DSGVO",
+      "Art. 32 DSGVO",
+      "Art. 33 DSGVO"
+    ],
+    "expected_keywords": [
+      "technische und organisatorische Maßnahmen",
+      "Meldepflicht",
+      "Verletzung des Schutzes personenbezogener Daten",
+      "Sicherheit der Verarbeitung",
+      "Pseudonymisierung"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_art__5_abs__1_lit__f_dsgvo___integrit_t_und_vertraulichkeit",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_022",
+    "level": "canonical",
+    "question": "Welche konkreten Maßnahmen muss ein Unternehmen ergreifen, um die Rechenschaftspflicht nach Art. 5 Abs. 2 DSGVO zu erfüllen und die Einhaltung der Datenschutzgrundsätze nachweisen zu können?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_30",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_art__5_abs__2_dsgvo___rechenschaftspflicht__accountability_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO",
+      "Art. 30 DSGVO",
+      "Art. 35 DSGVO (Teil 1)",
+      "Art. 35 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Art. 5 Abs. 2 DSGVO – Rechenschaftspflicht (Accountability)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 2 DSGVO",
+        "Art. 30 DSGVO",
+        "Art. 35 DSGVO"
+      ],
+      "expected_keywords": [
+        "Rechenschaftspflicht",
+        "Verarbeitungsverzeichnis",
+        "Datenschutz-Folgenabschätzung",
+        "Beweislastumkehr",
+        "Compliance-Nachweis"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 2 DSGVO",
+      "Art. 30 DSGVO",
+      "Art. 35 DSGVO"
+    ],
+    "expected_keywords": [
+      "Rechenschaftspflicht",
+      "Verarbeitungsverzeichnis",
+      "Datenschutz-Folgenabschätzung",
+      "Beweislastumkehr",
+      "Compliance-Nachweis"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_art__5_abs__2_dsgvo___rechenschaftspflicht__accountability_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_023",
+    "level": "canonical",
+    "question": "Welche rechtlichen Schritte sind bei der Prüfung der Zulässigkeit einer Datenverarbeitung nach der Datenschutz-Grundverordnung zu beachten und welche Normen sind dabei insbesondere zu berücksichtigen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_pr_fungsschema_datenschutzrecht___9_schritte_standardpr_fung"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 5 DSGVO"
+    ],
+    "should_ids": [
+      "Prüfungsschema Datenschutzrecht – 9-Schritte-Standardprüfung"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 DSGVO",
+        "Art. 5 DSGVO",
+        "Art. 4 Nr. 1 DSGVO"
+      ],
+      "expected_keywords": [
+        "personenbezogene Daten",
+        "Rechtsgrundlage",
+        "Verantwortlicher",
+        "Betroffenenrechte",
+        "Datenminimierung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 DSGVO",
+      "Art. 5 DSGVO",
+      "Art. 4 Nr. 1 DSGVO"
+    ],
+    "expected_keywords": [
+      "personenbezogene Daten",
+      "Rechtsgrundlage",
+      "Verantwortlicher",
+      "Betroffenenrechte",
+      "Datenminimierung"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_pr_fungsschema_datenschutzrecht___9_schritte_standardpr_fung",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_024",
+    "level": "canonical",
+    "question": "Welche rechtlichen Anforderungen müssen erfüllt sein, damit eine Einwilligung nach den Vorgaben der Datenschutz-Grundverordnung als wirksam angesehen werden kann?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_7",
+        "dsgvo_art_8"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_pr_fungsschema_einwilligung__art__7_dsgvo_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 7 DSGVO",
+      "Art. 8 DSGVO"
+    ],
+    "should_ids": [
+      "Prüfungsschema Einwilligung (Art. 7 DSGVO)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 7 DSGVO",
+        "Art. 7 Abs. 4 DSGVO",
+        "Art. 7 Abs. 3 DSGVO",
+        "Art. 8 DSGVO"
+      ],
+      "expected_keywords": [
+        "Freiwilligkeit",
+        "Informiertheit",
+        "Widerrufbarkeit",
+        "Nachweisbarkeit",
+        "Koppelungsverbot"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 7 DSGVO",
+      "Art. 7 Abs. 4 DSGVO",
+      "Art. 7 Abs. 3 DSGVO",
+      "Art. 8 DSGVO"
+    ],
+    "expected_keywords": [
+      "Freiwilligkeit",
+      "Informiertheit",
+      "Widerrufbarkeit",
+      "Nachweisbarkeit",
+      "Koppelungsverbot"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_pr_fungsschema_einwilligung__art__7_dsgvo_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_025",
+    "level": "canonical",
+    "question": "Welche Kriterien müssen bei der Prüfung eines berechtigten Interesses gemäß Art. 6 Abs. 1 lit. f DSGVO im Rahmen des dreistufigen Tests berücksichtigt werden?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_pr_fungsschema_berechtigtes_interesse__art__6_abs__1_lit__f_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Prüfungsschema Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) – Dreistufiger Test"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 lit. f DSGVO",
+        "EG 47 DSGVO"
+      ],
+      "expected_keywords": [
+        "Dreistufiger Test",
+        "Interessenabwägung",
+        "Erforderlichkeit",
+        "Berechtigtes Interesse",
+        "Datenminimierung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 lit. f DSGVO",
+      "EG 47 DSGVO"
+    ],
+    "expected_keywords": [
+      "Dreistufiger Test",
+      "Interessenabwägung",
+      "Erforderlichkeit",
+      "Berechtigtes Interesse",
+      "Datenminimierung"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_pr_fungsschema_berechtigtes_interesse__art__6_abs__1_lit__f_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_026",
+    "level": "canonical",
+    "question": "Unter welchen Voraussetzungen ist eine Datenschutz-Folgenabschätzung nach der Datenschutz-Grundverordnung durchzuführen und welche inhaltlichen Anforderungen sind dabei zu beachten?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_36",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_pr_fungsschema_datenschutz_folgenabsch_tzung__dsfa__art__35_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 35 DSGVO (Teil 1)",
+      "Art. 35 DSGVO (Teil 2)",
+      "Art. 36 DSGVO",
+      "Art. 9 DSGVO (Teil 1)",
+      "Art. 9 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Prüfungsschema Datenschutz-Folgenabschätzung (DSFA, Art. 35 DSGVO)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 35 DSGVO",
+        "Art. 36 DSGVO",
+        "Art. 9 DSGVO"
+      ],
+      "expected_keywords": [
+        "hohes Risiko",
+        "Verhältnismäßigkeit",
+        "Konsultation",
+        "Profiling",
+        "Abhilfemaßnahmen"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 35 DSGVO",
+      "Art. 36 DSGVO",
+      "Art. 9 DSGVO"
+    ],
+    "expected_keywords": [
+      "hohes Risiko",
+      "Verhältnismäßigkeit",
+      "Konsultation",
+      "Profiling",
+      "Abhilfemaßnahmen"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_pr_fungsschema_datenschutz_folgenabsch_tzung__dsfa__art__35_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_027",
+    "level": "canonical",
+    "question": "Unter welchen Voraussetzungen kann ein Betroffener nach Art. 82 DSGVO Schadensersatz für einen immateriellen Schaden geltend machen, und welche Kriterien hat der EuGH hierfür aufgestellt?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_82",
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_pr_fungsschema_schadensersatz__art__82_dsgvo_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 82 DSGVO",
+      "Art. 28 DSGVO (Teil 1)",
+      "Art. 28 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Prüfungsschema Schadensersatz (Art. 82 DSGVO)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 82 DSGVO",
+        "Art. 28 DSGVO"
+      ],
+      "expected_keywords": [
+        "immaterieller Schaden",
+        "Kausalität",
+        "Exkulpation",
+        "Ausgleichsfunktion",
+        "EuGH-Rechtsprechung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 82 DSGVO",
+      "Art. 28 DSGVO"
+    ],
+    "expected_keywords": [
+      "immaterieller Schaden",
+      "Kausalität",
+      "Exkulpation",
+      "Ausgleichsfunktion",
+      "EuGH-Rechtsprechung"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_pr_fungsschema_schadensersatz__art__82_dsgvo_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_028",
+    "level": "canonical",
+    "question": "Welche zentralen Verfahrensinstrumente auf EU-Ebene stehen den nationalen Gerichten und Aufsichtsbehörden zur Verfügung, um eine einheitliche Anwendung und Auslegung der DSGVO in grenzüberschreitenden Fällen sicherzustellen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_56",
+        "dsgvo_art_65"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_vorlageverfahren_art__267_aeuv_und_one_stop_shop_mechanismus"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 56 DSGVO",
+      "Art. 65 DSGVO"
+    ],
+    "should_ids": [
+      "Vorlageverfahren Art. 267 AEUV und One-Stop-Shop-Mechanismus"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 56 DSGVO",
+        "Art. 65 DSGVO",
+        "Art. 267 AEUV"
+      ],
+      "expected_keywords": [
+        "Vorlageverfahren",
+        "One-Stop-Shop-Mechanismus",
+        "Kohärenzverfahren",
+        "EDSA",
+        "federführende Aufsichtsbehörde"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 56 DSGVO",
+      "Art. 65 DSGVO",
+      "Art. 267 AEUV"
+    ],
+    "expected_keywords": [
+      "Vorlageverfahren",
+      "One-Stop-Shop-Mechanismus",
+      "Kohärenzverfahren",
+      "EDSA",
+      "federführende Aufsichtsbehörde"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_vorlageverfahren_art__267_aeuv_und_one_stop_shop_mechanismus",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_029",
+    "level": "canonical",
+    "question": "Welche Funktion hat der Schadensersatzanspruch nach Art. 82 DSGVO und welche Kriterien sind für die Bemessung des Schadensersatzes maßgeblich?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_82"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_687_21_mediamarktsaturn___ausgleichsfunktion_des_scha"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 82 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-687/21 MediaMarktSaturn – Ausgleichsfunktion des Schadensersatzes"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 82 DSGVO"
+      ],
+      "expected_keywords": [
+        "Schadensersatz",
+        "Ausgleichsfunktion",
+        "tatsächlicher Schaden",
+        "Punitive Damages"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 82 DSGVO"
+    ],
+    "expected_keywords": [
+      "Schadensersatz",
+      "Ausgleichsfunktion",
+      "tatsächlicher Schaden",
+      "Punitive Damages"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_eugh_c_687_21_mediamarktsaturn___ausgleichsfunktion_des_scha",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_030",
+    "level": "canonical",
+    "question": "Unter welchen Voraussetzungen kann die bloße Befürchtung eines Datenmissbrauchs als immaterieller Schaden im Sinne der DSGVO anerkannt werden?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_82"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_590_22___bef_rchtung_von_datenmissbrauch_als_immateri"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 82 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-590/22 – Befürchtung von Datenmissbrauch als immaterieller Schaden"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 82 DSGVO"
+      ],
+      "expected_keywords": [
+        "immaterieller Schaden",
+        "Datenmissbrauch",
+        "begründete Befürchtung",
+        "nachvollziehbar",
+        "personenbezogene Daten"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 82 DSGVO"
+    ],
+    "expected_keywords": [
+      "immaterieller Schaden",
+      "Datenmissbrauch",
+      "begründete Befürchtung",
+      "nachvollziehbar",
+      "personenbezogene Daten"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_eugh_c_590_22___bef_rchtung_von_datenmissbrauch_als_immateri",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_031",
+    "level": "canonical",
+    "question": "Unter welchen Voraussetzungen kann ein Identitätsdiebstahl nach einem Datenleck als ersatzfähiger immaterieller Schaden im Sinne der DSGVO geltend gemacht werden?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_82"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_182_22_scalable_capital___identit_tsdiebstahl_als_sch"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 82 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-182/22 Scalable Capital – Identitätsdiebstahl als Schaden"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 82 DSGVO"
+      ],
+      "expected_keywords": [
+        "immaterieller Schaden",
+        "Datenleck",
+        "Identitätsdiebstahl",
+        "ersatzfähiger Schaden",
+        "tatsächlicher Schaden"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 82 DSGVO"
+    ],
+    "expected_keywords": [
+      "immaterieller Schaden",
+      "Datenleck",
+      "Identitätsdiebstahl",
+      "ersatzfähiger Schaden",
+      "tatsächlicher Schaden"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_eugh_c_182_22_scalable_capital___identit_tsdiebstahl_als_sch",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_032",
+    "level": "canonical",
+    "question": "Unter welchen Voraussetzungen kann der bloße Kontrollverlust über personenbezogene Daten als immaterieller Schaden im Sinne der Datenschutz-Grundverordnung angesehen werden?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_82"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_200_23___kontrollverlust_als_schaden"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 82 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-200/23 – Kontrollverlust als Schaden"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 82 DSGVO"
+      ],
+      "expected_keywords": [
+        "immaterieller Schaden",
+        "Kontrollverlust",
+        "personenbezogene Daten",
+        "unbefugte Offenlegung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 82 DSGVO"
+    ],
+    "expected_keywords": [
+      "immaterieller Schaden",
+      "Kontrollverlust",
+      "personenbezogene Daten",
+      "unbefugte Offenlegung"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_eugh_c_200_23___kontrollverlust_als_schaden",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_033",
+    "level": "canonical",
+    "question": "Unter welchen Voraussetzungen kann eine Entschuldigung des Verantwortlichen als ausreichender Ausgleich für immaterielle Schäden im Sinne der DSGVO angesehen werden?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_82"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_507_23___entschuldigung_als_schadensausgleich__t_354_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 82 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-507/23 – Entschuldigung als Schadensausgleich; T-354/22 Bindl – 400 EUR für Drittlandtransfer"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 82 DSGVO",
+        "Art. 4 Nr. 12 DSGVO"
+      ],
+      "expected_keywords": [
+        "immaterieller Schaden",
+        "Schadensersatz",
+        "Entschuldigung",
+        "Drittlandtransfer",
+        "Ausgleich"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 82 DSGVO",
+      "Art. 4 Nr. 12 DSGVO"
+    ],
+    "expected_keywords": [
+      "immaterieller Schaden",
+      "Schadensersatz",
+      "Entschuldigung",
+      "Drittlandtransfer",
+      "Ausgleich"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_eugh_c_507_23___entschuldigung_als_schadensausgleich__t_354_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_034",
+    "level": "canonical",
+    "question": "Unter welchen Voraussetzungen können kommerzielle Interessen als berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO gewertet werden?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_621_22_knltb___kommerzielle_interessen_als_berechtigt"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "EuGH C-621/22 KNLTB – Kommerzielle Interessen als berechtigtes Interesse"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 lit. f DSGVO"
+      ],
+      "expected_keywords": [
+        "berechtigtes Interesse",
+        "Interessenabwägung",
+        "kommerzielle Interessen",
+        "EuGH",
+        "Datenverarbeitung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 lit. f DSGVO"
+    ],
+    "expected_keywords": [
+      "berechtigtes Interesse",
+      "Interessenabwägung",
+      "kommerzielle Interessen",
+      "EuGH",
+      "Datenverarbeitung"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_eugh_c_621_22_knltb___kommerzielle_interessen_als_berechtigt",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_035",
+    "level": "canonical",
+    "question": "Welche Einschränkungen ergeben sich aus dem Grundsatz der Datenminimierung für die Zusammenführung personenbezogener Daten zu Werbezwecken, insbesondere im Hinblick auf die Entscheidung des EuGH in der Rechtssache C-446/21?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_446_21_schrems_meta___datenminimierung_begrenzt_werbe"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-446/21 Schrems/Meta – Datenminimierung begrenzt Werbenutzung"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 1 lit. c DSGVO"
+      ],
+      "expected_keywords": [
+        "Datenminimierung",
+        "personenbezogene Daten",
+        "Werbezwecke",
+        "EuGH",
+        "Einwilligung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 1 lit. c DSGVO"
+    ],
+    "expected_keywords": [
+      "Datenminimierung",
+      "personenbezogene Daten",
+      "Werbezwecke",
+      "EuGH",
+      "Einwilligung"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_eugh_c_446_21_schrems_meta___datenminimierung_begrenzt_werbe",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_036",
+    "level": "canonical",
+    "question": "Unter welchen Voraussetzungen können Bußgelder nach der DSGVO gegen ein Unternehmen verhängt werden, und welche Rolle spielt dabei das Verschuldensprinzip?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_807_21_deutsche_wohnen___bu_gelder_und_verschuldenspr"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 83 DSGVO (Teil 1)",
+      "Art. 83 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "EuGH C-807/21 Deutsche Wohnen – Bußgelder und Verschuldensprinzip"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 83 DSGVO"
+      ],
+      "expected_keywords": [
+        "Verschuldensprinzip",
+        "Fahrlässigkeit",
+        "Bußgeldbemessung",
+        "Unternehmenshaftung",
+        "Konzernumsatz"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 83 DSGVO"
+    ],
+    "expected_keywords": [
+      "Verschuldensprinzip",
+      "Fahrlässigkeit",
+      "Bußgeldbemessung",
+      "Unternehmenshaftung",
+      "Konzernumsatz"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_eugh_c_807_21_deutsche_wohnen___bu_gelder_und_verschuldenspr",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_037",
+    "level": "canonical",
+    "question": "Wie ist die Bußgeldobergrenze bei einem Datenschutzverstoß innerhalb eines Konzerns zu berechnen und welche Kriterien sind dabei maßgeblich?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_383_23_ilva___konzernumsatz_bei_bu_geldbemessung"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 83 DSGVO (Teil 1)",
+      "Art. 83 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "EuGH C-383/23 ILVA – Konzernumsatz bei Bußgeldbemessung"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 83 Abs. 4 DSGVO",
+        "Art. 83 Abs. 5 DSGVO"
+      ],
+      "expected_keywords": [
+        "Konzernumsatz",
+        "wirtschaftliche Einheit",
+        "Bußgeldobergrenze",
+        "wettbewerbsrechtlicher Unternehmensbegriff"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 83 Abs. 4 DSGVO",
+      "Art. 83 Abs. 5 DSGVO"
+    ],
+    "expected_keywords": [
+      "Konzernumsatz",
+      "wirtschaftliche Einheit",
+      "Bußgeldobergrenze",
+      "wettbewerbsrechtlicher Unternehmensbegriff"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_eugh_c_383_23_ilva___konzernumsatz_bei_bu_geldbemessung",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_038",
+    "level": "canonical",
+    "question": "Welche konkreten Anforderungen stellt der EuGH in seinem Urteil C-34/21 an nationale Vorschriften zum Beschäftigtendatenschutz und welche Konsequenzen ergeben sich daraus für die Anwendung des § 26 BDSG?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_88",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_34_21_____26_bdsg_unanwendbar"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 88 DSGVO",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "BDSG_§_26_Abs.1"
+    ],
+    "should_ids": [
+      "EuGH C-34/21 – § 26 BDSG unanwendbar"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 88 Abs. 2 DSGVO",
+        "Art. 6 Abs. 1 DSGVO",
+        "§ 26 BDSG"
+      ],
+      "expected_keywords": [
+        "Beschäftigtendatenschutz",
+        "spezifischere Vorschriften",
+        "geeignete und besondere Maßnahmen",
+        "Unanwendbarkeit",
+        "Rechtsgrundlage"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 88 Abs. 2 DSGVO",
+      "Art. 6 Abs. 1 DSGVO",
+      "§ 26 BDSG"
+    ],
+    "expected_keywords": [
+      "Beschäftigtendatenschutz",
+      "spezifischere Vorschriften",
+      "geeignete und besondere Maßnahmen",
+      "Unanwendbarkeit",
+      "Rechtsgrundlage"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_eugh_c_34_21_____26_bdsg_unanwendbar",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_039",
+    "level": "canonical",
+    "question": "Welche Anforderungen müssen Betriebsvereinbarungen nach der Rechtsprechung des EuGH in der Sache C-65/23 erfüllen, um als Rechtsgrundlage für die Datenverarbeitung nach der DSGVO zu gelten?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_88"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_65_23___betriebsvereinbarungen_m_ssen_dsgvo_konform_s"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 88 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-65/23 – Betriebsvereinbarungen müssen DSGVO-konform sein"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 88 Abs. 2 DSGVO",
+        "Art. 88 Abs. 1 DSGVO",
+        "§ 26 Abs. 4 BDSG"
+      ],
+      "expected_keywords": [
+        "Betriebsvereinbarung",
+        "Rechtsgrundlage",
+        "Datenschutzniveau",
+        "Datenverarbeitung",
+        "Schutzmaßnahmen"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 88 Abs. 2 DSGVO",
+      "Art. 88 Abs. 1 DSGVO",
+      "§ 26 Abs. 4 BDSG"
+    ],
+    "expected_keywords": [
+      "Betriebsvereinbarung",
+      "Rechtsgrundlage",
+      "Datenschutzniveau",
+      "Datenverarbeitung",
+      "Schutzmaßnahmen"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_eugh_c_65_23___betriebsvereinbarungen_m_ssen_dsgvo_konform_s",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_040",
+    "level": "canonical",
+    "question": "Welche spezifischen Anforderungen ergeben sich aus dem Zusammenspiel von DSGVO und AI Act bei der Verarbeitung besonderer Kategorien personenbezogener Daten für die Entwicklung von Hochrisiko-KI-Systemen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_dsgvo_und_ai_act__ki_verordnung_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 35 DSGVO (Teil 1)",
+      "Art. 35 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "DSGVO und AI Act (KI-Verordnung)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 35 DSGVO",
+        "Art. 10 Abs. 5 AI Act",
+        "Art. 27 AI Act"
+      ],
+      "expected_keywords": [
+        "Folgenabschätzung",
+        "Hochrisiko-KI-Systeme",
+        "personenbezogene Daten",
+        "Bias-Erkennung",
+        "FRIA"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 35 DSGVO",
+      "Art. 10 Abs. 5 AI Act",
+      "Art. 27 AI Act"
+    ],
+    "expected_keywords": [
+      "Folgenabschätzung",
+      "Hochrisiko-KI-Systeme",
+      "personenbezogene Daten",
+      "Bias-Erkennung",
+      "FRIA"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_dsgvo_und_ai_act__ki_verordnung_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_041",
+    "level": "canonical",
+    "question": "Welche rechtlichen Anforderungen sind bei der Verarbeitung personenbezogener Daten im Rahmen des Digital Services Act zusätzlich zu beachten, und welche Rolle spielt dabei Art. 6 Abs. 1 DSGVO?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_dsgvo_und_dsa__digital_services_act_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "DSGVO und DSA (Digital Services Act)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 DSGVO",
+        "Art. 2 Abs. 4 lit. g DSA",
+        "Verordnung (EU) 2022/2065"
+      ],
+      "expected_keywords": [
+        "Rechtsgrundlage",
+        "Datenverarbeitung",
+        "Kooperation",
+        "Aufsichtsbehörden",
+        "personenbezogene Daten"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 DSGVO",
+      "Art. 2 Abs. 4 lit. g DSA",
+      "Verordnung (EU) 2022/2065"
+    ],
+    "expected_keywords": [
+      "Rechtsgrundlage",
+      "Datenverarbeitung",
+      "Kooperation",
+      "Aufsichtsbehörden",
+      "personenbezogene Daten"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_dsgvo_und_dsa__digital_services_act_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_042",
+    "level": "canonical",
+    "question": "Welche rechtlichen Konsequenzen ergeben sich für die Verantwortlichkeit nach der Datenschutz-Grundverordnung, wenn personenbezogene Daten gemäß den Bestimmungen des Data Act weitergegeben werden?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_dsgvo_und_data_act___data_governance_act__dga_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "DSGVO und Data Act / Data Governance Act (DGA)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 4 Nr. 7 DSGVO",
+        "Art. 1 Abs. 5 Data Act",
+        "Art. 1 Abs. 3 DGA"
+      ],
+      "expected_keywords": [
+        "Verantwortlicher",
+        "Datenweitergabe",
+        "Vorrang der DSGVO",
+        "Rechtsgrundlage",
+        "personenbezogene Daten"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 4 Nr. 7 DSGVO",
+      "Art. 1 Abs. 5 Data Act",
+      "Art. 1 Abs. 3 DGA"
+    ],
+    "expected_keywords": [
+      "Verantwortlicher",
+      "Datenweitergabe",
+      "Vorrang der DSGVO",
+      "Rechtsgrundlage",
+      "personenbezogene Daten"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_dsgvo_und_data_act___data_governance_act__dga_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_043",
+    "level": "canonical",
+    "question": "Welche Verarbeitungstätigkeiten sind gemäß den Vorgaben der Datenschutzkonferenz zwingend einer Datenschutz-Folgenabschätzung zu unterziehen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "dsgvo_art_10",
+        "dsgvo_art_22"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_dsk_blacklist___17_dsfa_pflichtige_verarbeitungen"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 35 DSGVO (Teil 1)",
+      "Art. 35 DSGVO (Teil 2)",
+      "Art. 9 DSGVO (Teil 1)",
+      "Art. 9 DSGVO (Teil 2)",
+      "Art. 10 DSGVO",
+      "Art. 22 DSGVO"
+    ],
+    "should_ids": [
+      "DSK-Blacklist – 17 DSFA-pflichtige Verarbeitungen"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 35 Abs. 4 DSGVO",
+        "Art. 9 DSGVO",
+        "Art. 10 DSGVO",
+        "Art. 22 DSGVO"
+      ],
+      "expected_keywords": [
+        "Datenschutz-Folgenabschätzung",
+        "DSFA",
+        "Verarbeitungstätigkeiten",
+        "DSK-Blacklist",
+        "Videoüberwachung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 35 Abs. 4 DSGVO",
+      "Art. 9 DSGVO",
+      "Art. 10 DSGVO",
+      "Art. 22 DSGVO"
+    ],
+    "expected_keywords": [
+      "Datenschutz-Folgenabschätzung",
+      "DSFA",
+      "Verarbeitungstätigkeiten",
+      "DSK-Blacklist",
+      "Videoüberwachung"
+    ],
+    "min_sources": 2,
+    "category": "behoerden",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_dsk_blacklist___17_dsfa_pflichtige_verarbeitungen",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_044",
+    "level": "canonical",
+    "question": "Unter welchen Voraussetzungen ist gemäß den Leitlinien des Europäischen Datenschutzausschusses eine Datenschutz-Folgenabschätzung durchzuführen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_36"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_wp_248___2_aus_9_regel_f_r_dsfa_pflicht"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 35 DSGVO (Teil 1)",
+      "Art. 35 DSGVO (Teil 2)",
+      "Art. 36 DSGVO"
+    ],
+    "should_ids": [
+      "WP 248 – 2-aus-9-Regel für DSFA-Pflicht"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 35 DSGVO",
+        "Art. 36 DSGVO"
+      ],
+      "expected_keywords": [
+        "Datenschutz-Folgenabschätzung",
+        "Risikobewertung",
+        "Profiling",
+        "sensible Daten",
+        "automatisierte Entscheidungsfindung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 35 DSGVO",
+      "Art. 36 DSGVO"
+    ],
+    "expected_keywords": [
+      "Datenschutz-Folgenabschätzung",
+      "Risikobewertung",
+      "Profiling",
+      "sensible Daten",
+      "automatisierte Entscheidungsfindung"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_wp_248___2_aus_9_regel_f_r_dsfa_pflicht",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_045",
+    "level": "canonical",
+    "question": "Unter welchen Voraussetzungen stellt die Bonitätsbewertung durch die SCHUFA eine automatisierte Entscheidung im Sinne der DSGVO dar und welche Rechte haben Betroffene in diesem Zusammenhang?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_22",
+        "dsgvo_art_15"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_634_21_schufa___scoring_als_automatisierte_entscheidu"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 22 DSGVO",
+      "Art. 15 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-634/21 SCHUFA – Scoring als automatisierte Entscheidung"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 22 Abs. 1 DSGVO",
+        "Art. 15 Abs. 1 lit. h DSGVO"
+      ],
+      "expected_keywords": [
+        "automatisierte Entscheidung",
+        "Scoring",
+        "Recht auf Erläuterung",
+        "Vorverlagerung",
+        "Ausnahme"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 22 Abs. 1 DSGVO",
+      "Art. 15 Abs. 1 lit. h DSGVO"
+    ],
+    "expected_keywords": [
+      "automatisierte Entscheidung",
+      "Scoring",
+      "Recht auf Erläuterung",
+      "Vorverlagerung",
+      "Ausnahme"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_eugh_c_634_21_schufa___scoring_als_automatisierte_entscheidu",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_046",
+    "level": "canonical",
+    "question": "Welche konkreten Informationen über die Logik eines automatisierten Entscheidungsprozesses muss ein Verantwortlicher gemäß der Rechtsprechung des EuGH im Fall C-203/22 (Dun & Bradstreet Austria) den betroffenen Personen bereitstellen, ohne dabei den genauen Algorithmus offenlegen zu müssen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_15"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_203_22_dun___bradstreet___kein_recht_auf_algorithmus_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 15 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-203/22 Dun & Bradstreet – Kein Recht auf Algorithmus, aber aussagekräftige Logik-Info"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 15 Abs. 1 lit. h DSGVO"
+      ],
+      "expected_keywords": [
+        "aussagekräftige Informationen",
+        "Funktionsweise",
+        "Gewichtung der Faktoren",
+        "Nachvollziehbarkeit",
+        "Geschäftsgeheimnis"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 15 Abs. 1 lit. h DSGVO"
+    ],
+    "expected_keywords": [
+      "aussagekräftige Informationen",
+      "Funktionsweise",
+      "Gewichtung der Faktoren",
+      "Nachvollziehbarkeit",
+      "Geschäftsgeheimnis"
+    ],
+    "min_sources": 2,
+    "category": "betroffenenrechte",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_eugh_c_203_22_dun___bradstreet___kein_recht_auf_algorithmus_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_047",
+    "level": "canonical",
+    "question": "Unter welchen Voraussetzungen ist das Verbot der Doppelbestrafung (ne bis in idem) im Datenschutzrecht anwendbar, insbesondere bei parallelen Sanktionen nach der DSGVO und nationalen Vorschriften?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_ne_bis_in_idem_und_nulla_poena_sine_lege_im_datenschutzrecht"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 83 DSGVO (Teil 1)",
+      "Art. 83 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Ne bis in idem und nulla poena sine lege im Datenschutzrecht"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 50 GRCh",
+        "Art. 83 DSGVO",
+        "Art. 49 GRCh"
+      ],
+      "expected_keywords": [
+        "Doppelbestrafung",
+        "Verwaltungssanktionen",
+        "Bußgelder",
+        "Tatbestandsbestimmtheit"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 50 GRCh",
+      "Art. 83 DSGVO",
+      "Art. 49 GRCh"
+    ],
+    "expected_keywords": [
+      "Doppelbestrafung",
+      "Verwaltungssanktionen",
+      "Bußgelder",
+      "Tatbestandsbestimmtheit"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_ne_bis_in_idem_und_nulla_poena_sine_lege_im_datenschutzrecht",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_048",
+    "level": "canonical",
+    "question": "Welche Kriterien müssen bei der Prüfung der Verhältnismäßigkeit einer datenschutzrechtlichen Maßnahme nach Art. 52 Abs. 1 GRCh berücksichtigt werden?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_verh_ltnism__igkeitsprinzip_im_datenschutzrecht__art__52_abs"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 5 DSGVO"
+    ],
+    "should_ids": [
+      "Verhältnismäßigkeitsprinzip im Datenschutzrecht (Art. 52 Abs. 1 GRCh)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 52 Abs. 1 GRCh",
+        "Art. 6 Abs. 1 DSGVO",
+        "Art. 5 Abs. 1 lit. c DSGVO"
+      ],
+      "expected_keywords": [
+        "Verhältnismäßigkeitsprinzip",
+        "Geeignetheit",
+        "Erforderlichkeit",
+        "Angemessenheit",
+        "Grundrechte"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 52 Abs. 1 GRCh",
+      "Art. 6 Abs. 1 DSGVO",
+      "Art. 5 Abs. 1 lit. c DSGVO"
+    ],
+    "expected_keywords": [
+      "Verhältnismäßigkeitsprinzip",
+      "Geeignetheit",
+      "Erforderlichkeit",
+      "Angemessenheit",
+      "Grundrechte"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_verh_ltnism__igkeitsprinzip_im_datenschutzrecht__art__52_abs",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_049",
+    "level": "canonical",
+    "question": "Welche rechtlichen Voraussetzungen müssen erfüllt sein, um E-Mail-Werbung an Bestandskunden ohne deren ausdrückliche Einwilligung versenden zu dürfen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_21"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_verhaeltnis_dsgvo_ttdsg_uwg_werbung"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 21 DSGVO"
+    ],
+    "should_ids": [
+      "Verhältnis DSGVO – TTDSG – § 7 UWG bei Werbung und Direktmarketing"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "§ 7 Abs. 3 UWG",
+        "Art. 6 Abs. 1 lit. f DSGVO",
+        "Art. 21 Abs. 2 DSGVO"
+      ],
+      "expected_keywords": [
+        "Bestandskundenausnahme",
+        "Widerspruchsrecht",
+        "berechtigtes Interesse",
+        "Direktwerbung",
+        "Opt-in"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "§ 7 Abs. 3 UWG",
+      "Art. 6 Abs. 1 lit. f DSGVO",
+      "Art. 21 Abs. 2 DSGVO"
+    ],
+    "expected_keywords": [
+      "Bestandskundenausnahme",
+      "Widerspruchsrecht",
+      "berechtigtes Interesse",
+      "Direktwerbung",
+      "Opt-in"
+    ],
+    "min_sources": 2,
+    "category": "cookies_tracking",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_verhaeltnis_dsgvo_ttdsg_uwg_werbung",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_050",
+    "level": "canonical",
+    "question": "Welche Länder haben derzeit einen gültigen Angemessenheitsbeschluss der EU-Kommission gemäß Art. 45 DSGVO, der einen Datentransfer ohne zusätzliche Garantien ermöglicht?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_5",
+        "dsgvo_art_46"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_angemessenheitsbeschluesse_art45"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 45 DSGVO (Teil 1)",
+      "Art. 45 DSGVO (Teil 2)",
+      "Art. 5 DSGVO",
+      "Art. 46 DSGVO"
+    ],
+    "should_ids": [
+      "Angemessenheitsbeschlüsse der EU-Kommission nach Art. 45 DSGVO – Vollständige Liste"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 45 DSGVO",
+        "Art. 5 Abs. 2 DSGVO",
+        "Art. 46 DSGVO"
+      ],
+      "expected_keywords": [
+        "Angemessenheitsbeschluss",
+        "Datentransfer",
+        "Drittland",
+        "Rechenschaftspflicht",
+        "Transfer Impact Assessment"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 45 DSGVO",
+      "Art. 5 Abs. 2 DSGVO",
+      "Art. 46 DSGVO"
+    ],
+    "expected_keywords": [
+      "Angemessenheitsbeschluss",
+      "Datentransfer",
+      "Drittland",
+      "Rechenschaftspflicht",
+      "Transfer Impact Assessment"
+    ],
+    "min_sources": 2,
+    "category": "drittlandtransfer",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_angemessenheitsbeschluesse_art45",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_051",
+    "level": "canonical",
+    "question": "Welche rechtlichen Anforderungen müssen bei der Versendung von Newslettern kumulativ erfüllt werden, insbesondere im Hinblick auf die Einwilligung und die Verwendung von Tracking-Technologien?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_newsletter_einwilligung_dreistufig"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "gran_TDDDG_§_25",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_newsletter_einwilligung_dreistufig"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "§ 7 Abs. 2 Nr. 3 UWG",
+        "§ 25 Abs. 1 TDDDG",
+        "Art. 6 Abs. 1 lit. a DSGVO"
+      ],
+      "expected_keywords": [
+        "Einwilligung",
+        "Double Opt-in",
+        "Tracking-Pixel",
+        "Widerspruchsrecht",
+        "Bestandskundenausnahme"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "§ 7 Abs. 2 Nr. 3 UWG",
+      "§ 25 Abs. 1 TDDDG",
+      "Art. 6 Abs. 1 lit. a DSGVO"
+    ],
+    "expected_keywords": [
+      "Einwilligung",
+      "Double Opt-in",
+      "Tracking-Pixel",
+      "Widerspruchsrecht",
+      "Bestandskundenausnahme"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_newsletter_einwilligung_dreistufig",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_052",
+    "level": "canonical",
+    "question": "Welche rechtlichen Grundlagen und Grenzen sind bei der Kontrolle von E-Mails durch den Arbeitgeber zu beachten, wenn die Privatnutzung der betrieblichen IT-Infrastruktur verboten ist?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_beschaeftigtendatenschutz_email_it"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "BDSG_§_26_Abs.1"
+    ],
+    "should_ids": [
+      "mw_beschaeftigtendatenschutz_email_it"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 lit. f DSGVO",
+        "Art. 6 Abs. 1 lit. b DSGVO",
+        "§ 26 BDSG",
+        "§ 87 Abs. 1 Nr. 6 BetrVG"
+      ],
+      "expected_keywords": [
+        "Verhältnismäßigkeit",
+        "berechtigtes Interesse",
+        "Betriebsvereinbarung",
+        "Überwachung",
+        "Datenschutz"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 lit. f DSGVO",
+      "Art. 6 Abs. 1 lit. b DSGVO",
+      "§ 26 BDSG",
+      "§ 87 Abs. 1 Nr. 6 BetrVG"
+    ],
+    "expected_keywords": [
+      "Verhältnismäßigkeit",
+      "berechtigtes Interesse",
+      "Betriebsvereinbarung",
+      "Überwachung",
+      "Datenschutz"
+    ],
+    "min_sources": 2,
+    "category": "beschaeftigtendatenschutz",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_beschaeftigtendatenschutz_email_it",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_053",
+    "level": "canonical",
+    "question": "Welche spezifischen Angaben müssen in einer Datenschutzerklärung enthalten sein, wenn personenbezogene Daten direkt beim Betroffenen erhoben werden, und welche zusätzlichen Informationen sind erforderlich, wenn die Daten aus anderen Quellen stammen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_13",
+        "dsgvo_art_14_part0",
+        "dsgvo_art_14_part1",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_informationspflichten_art13_art14"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 13 DSGVO",
+      "Art. 14 DSGVO (Teil 1)",
+      "Art. 14 DSGVO (Teil 2)",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_informationspflichten_art13_art14"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 13 DSGVO",
+        "Art. 14 DSGVO",
+        "Art. 6 Abs. 1 lit. f DSGVO"
+      ],
+      "expected_keywords": [
+        "Informationspflicht",
+        "Direkterhebung",
+        "Dritterhebung",
+        "Betroffenenrechte",
+        "Rechtsgrundlage"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 13 DSGVO",
+      "Art. 14 DSGVO",
+      "Art. 6 Abs. 1 lit. f DSGVO"
+    ],
+    "expected_keywords": [
+      "Informationspflicht",
+      "Direkterhebung",
+      "Dritterhebung",
+      "Betroffenenrechte",
+      "Rechtsgrundlage"
+    ],
+    "min_sources": 2,
+    "category": "betroffenenrechte",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_informationspflichten_art13_art14",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_054",
+    "level": "canonical",
+    "question": "Welche datenschutzrechtlichen Voraussetzungen müssen bei der Verwendung personenbezogener Daten für das Training von KI-Modellen erfüllt sein, insbesondere im Hinblick auf die Zweckbindung und die Rechtsgrundlagen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_89"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_ki_training_zweckbindung"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 89 DSGVO"
+    ],
+    "should_ids": [
+      "mw_ki_training_zweckbindung"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 1 lit. b DSGVO",
+        "Art. 6 Abs. 4 DSGVO",
+        "Art. 6 Abs. 1 lit. f DSGVO",
+        "Art. 89 DSGVO"
+      ],
+      "expected_keywords": [
+        "Zweckbindung",
+        "Interessenabwägung",
+        "Forschungsprivileg",
+        "Datenminimierung",
+        "Rechtsgrundlage"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 1 lit. b DSGVO",
+      "Art. 6 Abs. 4 DSGVO",
+      "Art. 6 Abs. 1 lit. f DSGVO",
+      "Art. 89 DSGVO"
+    ],
+    "expected_keywords": [
+      "Zweckbindung",
+      "Interessenabwägung",
+      "Forschungsprivileg",
+      "Datenminimierung",
+      "Rechtsgrundlage"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_ki_training_zweckbindung",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_055",
+    "level": "canonical",
+    "question": "Welche Kriterien müssen erfüllt sein, damit eine gemeinsame Verantwortlichkeit nach der Datenschutz-Grundverordnung vorliegt, und welche rechtlichen Konsequenzen ergeben sich daraus?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_26",
+        "dsgvo_art_82"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_gemeinsame_verantwortlichkeit_art26"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 26 DSGVO",
+      "Art. 82 DSGVO"
+    ],
+    "should_ids": [
+      "mw_gemeinsame_verantwortlichkeit_art26"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 4 Nr. 7 DSGVO",
+        "Art. 26 DSGVO",
+        "Art. 82 Abs. 4 DSGVO"
+      ],
+      "expected_keywords": [
+        "gemeinsame Verantwortlichkeit",
+        "Zwecke und Mittel",
+        "Joint-Controller-Vereinbarung",
+        "gesamtschuldnerische Haftung",
+        "Auftragsverarbeitung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 4 Nr. 7 DSGVO",
+      "Art. 26 DSGVO",
+      "Art. 82 Abs. 4 DSGVO"
+    ],
+    "expected_keywords": [
+      "gemeinsame Verantwortlichkeit",
+      "Zwecke und Mittel",
+      "Joint-Controller-Vereinbarung",
+      "gesamtschuldnerische Haftung",
+      "Auftragsverarbeitung"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_gemeinsame_verantwortlichkeit_art26",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_056",
+    "level": "canonical",
+    "question": "Welche datenschutzrechtlichen Anforderungen sind bei der Nutzung von KI-Tools wie ChatGPT zu beachten, insbesondere hinsichtlich der Rechtsgrundlage, der Auftragsverarbeitung und der Datenübermittlung in Drittländer?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_44",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_ki_datenschutz_pruefungsschema"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 28 DSGVO (Teil 1)",
+      "Art. 28 DSGVO (Teil 2)",
+      "Art. 44 DSGVO",
+      "Art. 35 DSGVO (Teil 1)",
+      "Art. 35 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_ki_datenschutz_pruefungsschema"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 DSGVO",
+        "Art. 28 DSGVO",
+        "Art. 44 DSGVO",
+        "Art. 35 DSGVO"
+      ],
+      "expected_keywords": [
+        "Auftragsverarbeitung",
+        "Drittlandtransfer",
+        "Datenschutz-Folgenabschätzung",
+        "Rechtsgrundlage",
+        "Zweckbindung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 DSGVO",
+      "Art. 28 DSGVO",
+      "Art. 44 DSGVO",
+      "Art. 35 DSGVO"
+    ],
+    "expected_keywords": [
+      "Auftragsverarbeitung",
+      "Drittlandtransfer",
+      "Datenschutz-Folgenabschätzung",
+      "Rechtsgrundlage",
+      "Zweckbindung"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_ki_datenschutz_pruefungsschema",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_057",
+    "level": "canonical",
+    "question": "Welche Rechtsgrundlagen sind bei der Videoüberwachung von öffentlich zugänglichen Räumen durch nicht-öffentliche Stellen zu beachten und welche spezifischen Anforderungen ergeben sich daraus?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_4_Abs.1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_videoueberwachung_pruefungsschema"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "BDSG_§_4_Abs.1"
+    ],
+    "should_ids": [
+      "mw_videoueberwachung_pruefungsschema"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 lit. f DSGVO",
+        "§ 4 BDSG"
+      ],
+      "expected_keywords": [
+        "Interessenabwägung",
+        "Verhältnismäßigkeit",
+        "Hinweispflicht",
+        "Speicherdauer"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 lit. f DSGVO",
+      "§ 4 BDSG"
+    ],
+    "expected_keywords": [
+      "Interessenabwägung",
+      "Verhältnismäßigkeit",
+      "Hinweispflicht",
+      "Speicherdauer"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_videoueberwachung_pruefungsschema",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_058",
+    "level": "canonical",
+    "question": "Welche rechtlichen Schritte und Abwägungen sind erforderlich, um einen Anspruch auf Löschung von Suchergebnissen gemäß dem Recht auf Vergessenwerden durchzusetzen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_17",
+        "dsgvo_art_21",
+        "dsgvo_art_19"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_recht_auf_vergessenwerden_pruefungsschema"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 17 DSGVO",
+      "Art. 21 DSGVO",
+      "Art. 19 DSGVO"
+    ],
+    "should_ids": [
+      "mw_recht_auf_vergessenwerden_pruefungsschema"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 17 DSGVO",
+        "Art. 21 DSGVO",
+        "Art. 19 DSGVO"
+      ],
+      "expected_keywords": [
+        "Löschung",
+        "Abwägung",
+        "Suchmaschinenbetreiber",
+        "öffentliches Interesse",
+        "EuGH-Urteil"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 17 DSGVO",
+      "Art. 21 DSGVO",
+      "Art. 19 DSGVO"
+    ],
+    "expected_keywords": [
+      "Löschung",
+      "Abwägung",
+      "Suchmaschinenbetreiber",
+      "öffentliches Interesse",
+      "EuGH-Urteil"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_recht_auf_vergessenwerden_pruefungsschema",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_059",
+    "level": "canonical",
+    "question": "Welche rechtlichen Schritte sind erforderlich, um personenbezogene Daten in die USA zu übermitteln, wenn der Empfänger nicht unter dem Data Privacy Framework zertifiziert ist?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_46",
+        "dsgvo_art_44"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_data_privacy_framework__dpf__und_pr_fungsschema_drittlandtra"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 45 DSGVO (Teil 1)",
+      "Art. 45 DSGVO (Teil 2)",
+      "Art. 46 DSGVO",
+      "Art. 44 DSGVO"
+    ],
+    "should_ids": [
+      "Data Privacy Framework (DPF) und Prüfungsschema Drittlandtransfer"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 45 DSGVO",
+        "Art. 46 DSGVO",
+        "Art. 44 DSGVO"
+      ],
+      "expected_keywords": [
+        "Standardvertragsklauseln",
+        "Transfer Impact Assessment",
+        "Drittlandtransfer",
+        "Angemessenheitsbeschluss",
+        "Dokumentation"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 45 DSGVO",
+      "Art. 46 DSGVO",
+      "Art. 44 DSGVO"
+    ],
+    "expected_keywords": [
+      "Standardvertragsklauseln",
+      "Transfer Impact Assessment",
+      "Drittlandtransfer",
+      "Angemessenheitsbeschluss",
+      "Dokumentation"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_data_privacy_framework__dpf__und_pr_fungsschema_drittlandtra",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_060",
+    "level": "canonical",
+    "question": "Welche rechtlichen Anforderungen müssen erfüllt sein, um Cookies und Tracking-Tools auf einer Website datenschutzkonform einzusetzen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_7"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_pruefungsschema_cookies_tracking"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "gran_TDDDG_§_25",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 7 DSGVO"
+    ],
+    "should_ids": [
+      "mw_pruefungsschema_cookies_tracking"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "§ 25 TDDDG",
+        "Art. 4 Nr. 11 DSGVO",
+        "Art. 6 Abs. 1 DSGVO",
+        "Art. 7 Abs. 4 DSGVO"
+      ],
+      "expected_keywords": [
+        "Einwilligung",
+        "Opt-In",
+        "personenbezogene Daten",
+        "Third-Party-Cookies",
+        "Koppelungsverbot"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "§ 25 TDDDG",
+      "Art. 4 Nr. 11 DSGVO",
+      "Art. 6 Abs. 1 DSGVO",
+      "Art. 7 Abs. 4 DSGVO"
+    ],
+    "expected_keywords": [
+      "Einwilligung",
+      "Opt-In",
+      "personenbezogene Daten",
+      "Third-Party-Cookies",
+      "Koppelungsverbot"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_pruefungsschema_cookies_tracking",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_061",
+    "level": "canonical",
+    "question": "Welche zentralen datenschutzrechtlichen Anforderungen stellen die Aufsichtsbehörden an den Einsatz von KI-Systemen, die personenbezogene Daten verarbeiten?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_dsk_ki_positionen"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 35 DSGVO (Teil 1)",
+      "Art. 35 DSGVO (Teil 2)",
+      "Art. 5 DSGVO",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_dsk_ki_positionen"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 35 DSGVO",
+        "Art. 5 DSGVO",
+        "Art. 6 DSGVO"
+      ],
+      "expected_keywords": [
+        "Datenschutz-Folgenabschätzung",
+        "Transparenz",
+        "Zweckbindung",
+        "Rechtsgrundlage",
+        "personenbezogene Daten"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 35 DSGVO",
+      "Art. 5 DSGVO",
+      "Art. 6 DSGVO"
+    ],
+    "expected_keywords": [
+      "Datenschutz-Folgenabschätzung",
+      "Transparenz",
+      "Zweckbindung",
+      "Rechtsgrundlage",
+      "personenbezogene Daten"
+    ],
+    "min_sources": 2,
+    "category": "behoerden",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_dsk_ki_positionen",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_062",
+    "level": "canonical",
+    "question": "Welche Orientierungshilfen hat die Datenschutzkonferenz für die Videoüberwachung durch nicht-öffentliche Stellen veröffentlicht und wann wurden diese zuletzt aktualisiert?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_dsk_videoueberwachung_stub"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "mw_dsk_videoueberwachung_stub"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [],
+      "expected_keywords": [
+        "Videoüberwachung",
+        "Datenschutzkonferenz",
+        "nicht-öffentliche Stellen",
+        "Orientierungshilfen"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [],
+    "expected_keywords": [
+      "Videoüberwachung",
+      "Datenschutzkonferenz",
+      "nicht-öffentliche Stellen",
+      "Orientierungshilfen"
+    ],
+    "min_sources": 2,
+    "category": "behoerden",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_dsk_videoueberwachung_stub",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_063",
+    "level": "canonical",
+    "question": "Welche Kriterien sind entscheidend, um zu bestimmen, ob ein Cloud-Dienstleister als Auftragsverarbeiter nach Art. 28 DSGVO oder als eigenständiger Verantwortlicher einzustufen ist?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_32"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_auftragsverarbeitung_cloud"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 28 DSGVO (Teil 1)",
+      "Art. 28 DSGVO (Teil 2)",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 32 DSGVO"
+    ],
+    "should_ids": [
+      "mw_auftragsverarbeitung_cloud"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 28 DSGVO",
+        "Art. 6 DSGVO",
+        "Art. 32 DSGVO"
+      ],
+      "expected_keywords": [
+        "Weisungsgebundenheit",
+        "Funktionsübertragung",
+        "Verantwortlicher",
+        "TOM",
+        "Drittlandtransfer"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 28 DSGVO",
+      "Art. 6 DSGVO",
+      "Art. 32 DSGVO"
+    ],
+    "expected_keywords": [
+      "Weisungsgebundenheit",
+      "Funktionsübertragung",
+      "Verantwortlicher",
+      "TOM",
+      "Drittlandtransfer"
+    ],
+    "min_sources": 2,
+    "category": "auftragsverarbeitung",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_auftragsverarbeitung_cloud",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_064",
+    "level": "canonical",
+    "question": "Unter welchen Voraussetzungen sind dynamische IP-Adressen als personenbezogene Daten im Sinne der DSGVO zu qualifizieren?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_personenbezug_ip_adressen_bestimmbarkeit"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_personenbezug_ip_adressen_bestimmbarkeit"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 4 Nr. 1 DSGVO",
+        "Art. 6 DSGVO",
+        "EG 26 DSGVO"
+      ],
+      "expected_keywords": [
+        "Personenbezug",
+        "Identifizierbarkeit",
+        "rechtliche Mittel",
+        "verantwortliche Stelle",
+        "EuGH C-582/14"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 4 Nr. 1 DSGVO",
+      "Art. 6 DSGVO",
+      "EG 26 DSGVO"
+    ],
+    "expected_keywords": [
+      "Personenbezug",
+      "Identifizierbarkeit",
+      "rechtliche Mittel",
+      "verantwortliche Stelle",
+      "EuGH C-582/14"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_personenbezug_ip_adressen_bestimmbarkeit",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_065",
+    "level": "canonical",
+    "question": "Welche Voraussetzungen müssen erfüllt sein, damit eine automatisierte Entscheidungsfindung nach Art. 22 DSGVO zulässig ist, und welche Schutzmaßnahmen sind in diesem Fall zu ergreifen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_22",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "gran_BDSG_§_31_Abs.1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_pruefungsschema_profiling_scoring_art22"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 22 DSGVO",
+      "Art. 9 DSGVO (Teil 1)",
+      "Art. 9 DSGVO (Teil 2)",
+      "BDSG_§_31_Abs.1"
+    ],
+    "should_ids": [
+      "mw_pruefungsschema_profiling_scoring_art22"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 22 DSGVO",
+        "Art. 9 Abs. 1 DSGVO",
+        "§ 31 BDSG"
+      ],
+      "expected_keywords": [
+        "automatisierte Einzelentscheidung",
+        "Schutzmaßnahmen",
+        "Ausnahmen",
+        "rechtliche Wirkung",
+        "erhebliche Beeinträchtigung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 22 DSGVO",
+      "Art. 9 Abs. 1 DSGVO",
+      "§ 31 BDSG"
+    ],
+    "expected_keywords": [
+      "automatisierte Einzelentscheidung",
+      "Schutzmaßnahmen",
+      "Ausnahmen",
+      "rechtliche Wirkung",
+      "erhebliche Beeinträchtigung"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_pruefungsschema_profiling_scoring_art22",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_066",
+    "level": "canonical",
+    "question": "Unter welchen Voraussetzungen können Nutzer ihre in einem sozialen Netzwerk generierten Daten in einem maschinenlesbaren Format anfordern und welche technischen Anforderungen sind dabei zu beachten?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_20",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_datenportabilitaet_art20"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 20 DSGVO",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_datenportabilitaet_art20"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 20 DSGVO",
+        "Art. 6 Abs. 1 lit. a DSGVO",
+        "Art. 6 Abs. 1 lit. b DSGVO"
+      ],
+      "expected_keywords": [
+        "Datenübertragbarkeit",
+        "maschinenlesbares Format",
+        "automatisierte Verfahren",
+        "Einwilligung",
+        "Vertrag"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 20 DSGVO",
+      "Art. 6 Abs. 1 lit. a DSGVO",
+      "Art. 6 Abs. 1 lit. b DSGVO"
+    ],
+    "expected_keywords": [
+      "Datenübertragbarkeit",
+      "maschinenlesbares Format",
+      "automatisierte Verfahren",
+      "Einwilligung",
+      "Vertrag"
+    ],
+    "min_sources": 2,
+    "category": "betroffenenrechte",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_datenportabilitaet_art20",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_067",
+    "level": "canonical",
+    "question": "Welche Anforderungen stellt die DSGVO an die Einwilligungsfähigkeit von Minderjährigen bei der Nutzung von Diensten der Informationsgesellschaft und welche Pflichten ergeben sich daraus für die Anbieter solcher Dienste?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_8",
+        "dsgvo_art_12_part0",
+        "dsgvo_art_12_part1",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_minderjaerigenschutz_art8"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 8 DSGVO",
+      "Art. 12 DSGVO (Teil 1)",
+      "Art. 12 DSGVO (Teil 2)",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_minderjaerigenschutz_art8"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 8 DSGVO",
+        "Art. 12 Abs. 1 DSGVO",
+        "Art. 6 Abs. 1 lit. f DSGVO"
+      ],
+      "expected_keywords": [
+        "Einwilligung",
+        "elterliche Verantwortung",
+        "Altersverifikation",
+        "kindgerechte Sprache",
+        "Interessenabwägung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 8 DSGVO",
+      "Art. 12 Abs. 1 DSGVO",
+      "Art. 6 Abs. 1 lit. f DSGVO"
+    ],
+    "expected_keywords": [
+      "Einwilligung",
+      "elterliche Verantwortung",
+      "Altersverifikation",
+      "kindgerechte Sprache",
+      "Interessenabwägung"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_minderjaerigenschutz_art8",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_068",
+    "level": "canonical",
+    "question": "Welche Anspruchsgrundlagen kommen bei einem Datenschutzverstoß im deutschen Recht in Betracht und wie verhalten sich diese zu den Regelungen der DSGVO?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_82"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_haftungssystem_dsgvo_national"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 82 DSGVO"
+    ],
+    "should_ids": [
+      "mw_haftungssystem_dsgvo_national"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 82 DSGVO",
+        "§ 823 Abs. 1 BGB",
+        "§ 823 Abs. 2 BGB"
+      ],
+      "expected_keywords": [
+        "Schadensersatz",
+        "informationelle Selbstbestimmung",
+        "Schutzgesetz",
+        "Beweislastumkehr",
+        "gesamtschuldnerische Haftung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 82 DSGVO",
+      "§ 823 Abs. 1 BGB",
+      "§ 823 Abs. 2 BGB"
+    ],
+    "expected_keywords": [
+      "Schadensersatz",
+      "informationelle Selbstbestimmung",
+      "Schutzgesetz",
+      "Beweislastumkehr",
+      "gesamtschuldnerische Haftung"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_haftungssystem_dsgvo_national",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_069",
+    "level": "canonical",
+    "question": "Welche konkreten Kritikpunkte wurden von der Datenschutzkonferenz (DSK) im November 2022 an der Auftragsverarbeitung von Microsoft 365 im Hinblick auf die Einhaltung der Anforderungen des Art. 28 DSGVO festgestellt?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_dsk_microsoft365_stub"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 28 DSGVO (Teil 1)",
+      "Art. 28 DSGVO (Teil 2)",
+      "Art. 35 DSGVO (Teil 1)",
+      "Art. 35 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_dsk_microsoft365_stub"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 28 DSGVO",
+        "Art. 35 DSGVO"
+      ],
+      "expected_keywords": [
+        "Auftragsverarbeitung",
+        "Drittlandtransfer",
+        "Datenschutz-Folgenabschätzung",
+        "TOM",
+        "DPA"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 28 DSGVO",
+      "Art. 35 DSGVO"
+    ],
+    "expected_keywords": [
+      "Auftragsverarbeitung",
+      "Drittlandtransfer",
+      "Datenschutz-Folgenabschätzung",
+      "TOM",
+      "DPA"
+    ],
+    "min_sources": 2,
+    "category": "behoerden",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_dsk_microsoft365_stub",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_070",
+    "level": "canonical",
+    "question": "Welche Definitionen von zentralen Begriffen wie 'personenbezogene Daten', 'Verantwortlicher' und 'Auftragsverarbeiter' sind in der Datenschutz-Grundverordnung verbindlich festgelegt?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_art4_index"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "Art. 4 DSGVO – Begriffsbestimmungen (Übersicht)\n\nArt. 4 DSGV"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 4 DSGVO"
+      ],
+      "expected_keywords": [
+        "Legaldefinition",
+        "personenbezogene Daten",
+        "Verantwortlicher",
+        "Auftragsverarbeiter",
+        "Pseudonymisierung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 4 DSGVO"
+    ],
+    "expected_keywords": [
+      "Legaldefinition",
+      "personenbezogene Daten",
+      "Verantwortlicher",
+      "Auftragsverarbeiter",
+      "Pseudonymisierung"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_art4_index",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_071",
+    "level": "canonical",
+    "question": "Welche Voraussetzungen müssen erfüllt sein, damit die Verarbeitung personenbezogener Daten nach der DSGVO rechtmäßig ist?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_verbot_mit_erlaubnisvorbehalt"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 5 DSGVO"
+    ],
+    "should_ids": [
+      "mw_verbot_mit_erlaubnisvorbehalt"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 DSGVO",
+        "Art. 5 Abs. 2 DSGVO"
+      ],
+      "expected_keywords": [
+        "Verarbeitung",
+        "Rechtsgrundlage",
+        "Einwilligung",
+        "Rechenschaftspflicht",
+        "Dokumentation"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 DSGVO",
+      "Art. 5 Abs. 2 DSGVO"
+    ],
+    "expected_keywords": [
+      "Verarbeitung",
+      "Rechtsgrundlage",
+      "Einwilligung",
+      "Rechenschaftspflicht",
+      "Dokumentation"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_verbot_mit_erlaubnisvorbehalt",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_072",
+    "level": "canonical",
+    "question": "Welche Schritte sind erforderlich, um die Zulässigkeit einer Datenübermittlung an ein US-Unternehmen im Rahmen des EU-US Data Privacy Framework zu prüfen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_dpf_data_privacy_framework"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 45 DSGVO (Teil 1)",
+      "Art. 45 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_dpf_data_privacy_framework"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 45 DSGVO"
+      ],
+      "expected_keywords": [
+        "Angemessenheitsbeschluss",
+        "DPF-zertifiziert",
+        "Datenübermittlung",
+        "Standardvertragsklauseln"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 45 DSGVO"
+    ],
+    "expected_keywords": [
+      "Angemessenheitsbeschluss",
+      "DPF-zertifiziert",
+      "Datenübermittlung",
+      "Standardvertragsklauseln"
+    ],
+    "min_sources": 2,
+    "category": "drittlandtransfer",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_dpf_data_privacy_framework",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_073",
+    "level": "canonical",
+    "question": "Welche zusätzlichen Maßnahmen müssen neben den Standardvertragsklauseln ergriffen werden, um einen datenschutzkonformen Drittlandtransfer gemäß den Vorgaben des EuGH-Urteils Schrems II zu gewährleisten?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_46"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_standardvertragsklauseln_scc"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 46 DSGVO"
+    ],
+    "should_ids": [
+      "mw_standardvertragsklauseln_scc"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 46 Abs. 2 lit. c DSGVO",
+        "Durchführungsbeschluss 2021/914"
+      ],
+      "expected_keywords": [
+        "Transfer Impact Assessment",
+        "angemessenes Schutzniveau",
+        "Zusätzliche Maßnahmen",
+        "EDPB Empfehlungen",
+        "Schrems II"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 46 Abs. 2 lit. c DSGVO",
+      "Durchführungsbeschluss 2021/914"
+    ],
+    "expected_keywords": [
+      "Transfer Impact Assessment",
+      "angemessenes Schutzniveau",
+      "Zusätzliche Maßnahmen",
+      "EDPB Empfehlungen",
+      "Schrems II"
+    ],
+    "min_sources": 2,
+    "category": "drittlandtransfer",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_standardvertragsklauseln_scc",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_074",
+    "level": "canonical",
+    "question": "Welche inhaltlichen Anforderungen müssen verbindliche interne Datenschutzvorschriften nach der Datenschutz-Grundverordnung erfüllen und welches Verfahren ist für deren Genehmigung vorgesehen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_47_part0",
+        "dsgvo_art_47_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_bcr_verbindliche_interne_vorschriften"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 47 DSGVO (Teil 1)",
+      "Art. 47 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_bcr_verbindliche_interne_vorschriften"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 47 DSGVO",
+        "Art. 4 Nr. 20 DSGVO"
+      ],
+      "expected_keywords": [
+        "Kohärenzverfahren",
+        "Datentransfer",
+        "Aufsichtsbehörde",
+        "Datenschutzgrundsätze",
+        "Genehmigungsverfahren"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 47 DSGVO",
+      "Art. 4 Nr. 20 DSGVO"
+    ],
+    "expected_keywords": [
+      "Kohärenzverfahren",
+      "Datentransfer",
+      "Aufsichtsbehörde",
+      "Datenschutzgrundsätze",
+      "Genehmigungsverfahren"
+    ],
+    "min_sources": 2,
+    "category": "drittlandtransfer",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_bcr_verbindliche_interne_vorschriften",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_075",
+    "level": "canonical",
+    "question": "In welchen Fällen darf das Bundesdatenschutzgesetz (BDSG) strengere Regelungen als die Datenschutz-Grundverordnung (DSGVO) vorsehen und welche rechtlichen Grundlagen sind dabei zu beachten?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_unmittelbare_geltung_dsgvo"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_unmittelbare_geltung_dsgvo"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 288 Abs. 2 AEUV",
+        "Art. 6 DSGVO"
+      ],
+      "expected_keywords": [
+        "Öffnungsklauseln",
+        "Anwendungsvorrang",
+        "unmittelbare Geltung",
+        "nationales Recht"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 288 Abs. 2 AEUV",
+      "Art. 6 DSGVO"
+    ],
+    "expected_keywords": [
+      "Öffnungsklauseln",
+      "Anwendungsvorrang",
+      "unmittelbare Geltung",
+      "nationales Recht"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_unmittelbare_geltung_dsgvo",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_076",
+    "level": "canonical",
+    "question": "In welchen Bereichen der Datenschutz-Grundverordnung haben die Mitgliedstaaten die Möglichkeit, durch nationale Regelungen vom grundsätzlichen Prinzip der Vollharmonisierung abzuweichen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_vollharmonisierung_oeffnungsklauseln"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 88 DSGVO",
+      "BDSG_§_26_Abs.1"
+    ],
+    "should_ids": [
+      "mw_vollharmonisierung_oeffnungsklauseln"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 2-3 DSGVO",
+        "Art. 88 DSGVO",
+        "§ 26 BDSG"
+      ],
+      "expected_keywords": [
+        "Vollharmonisierung",
+        "Öffnungsklauseln",
+        "Schutzniveau",
+        "Beschäftigtendatenschutz"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 2-3 DSGVO",
+      "Art. 88 DSGVO",
+      "§ 26 BDSG"
+    ],
+    "expected_keywords": [
+      "Vollharmonisierung",
+      "Öffnungsklauseln",
+      "Schutzniveau",
+      "Beschäftigtendatenschutz"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_vollharmonisierung_oeffnungsklauseln",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_077",
+    "level": "canonical",
+    "question": "Welche Rechtsgrundlagen sind für die Anonymisierung personenbezogener Daten erforderlich und unter welchen Bedingungen fallen die Daten nach der Anonymisierung nicht mehr unter den Anwendungsbereich der DSGVO?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_anonymisierung_vs_verarbeitung"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Anonymisierung und Verarbeitung: Die Anonymisierung personen"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 4 Nr. 2 DSGVO",
+        "Art. 6 Abs. 1 DSGVO",
+        "EG 26 DSGVO"
+      ],
+      "expected_keywords": [
+        "Verarbeitung",
+        "Rechtsgrundlage",
+        "Anonymisierung",
+        "personenbezogene Daten",
+        "Re-Identifizierung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 4 Nr. 2 DSGVO",
+      "Art. 6 Abs. 1 DSGVO",
+      "EG 26 DSGVO"
+    ],
+    "expected_keywords": [
+      "Verarbeitung",
+      "Rechtsgrundlage",
+      "Anonymisierung",
+      "personenbezogene Daten",
+      "Re-Identifizierung"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_anonymisierung_vs_verarbeitung",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "canonical_078",
+    "level": "canonical",
+    "question": "Unter welchen Voraussetzungen stellt eine dynamische IP-Adresse ein personenbezogenes Datum im Sinne der DSGVO dar?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_personenbezug_ip_adressen"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "IP-Adressen und Personenbezug: Nach EuGH C-582/14 (Breyer) k"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 4 Nr. 1 DSGVO",
+        "Erwägungsgrund 26 DSGVO"
+      ],
+      "expected_keywords": [
+        "personenbezogenes Datum",
+        "Identifizierung",
+        "relativer Personenbezug",
+        "Verantwortlicher",
+        "verhältnismäßiger Aufwand"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 4 Nr. 1 DSGVO",
+      "Erwägungsgrund 26 DSGVO"
+    ],
+    "expected_keywords": [
+      "personenbezogenes Datum",
+      "Identifizierung",
+      "relativer Personenbezug",
+      "Verantwortlicher",
+      "verhältnismäßiger Aufwand"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "canonical",
+    "source_mw_chunk": "mw_personenbezug_ip_adressen",
+    "generated_by": "mistral-medium-latest"
+  }
+]
