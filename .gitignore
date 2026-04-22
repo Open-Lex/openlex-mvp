@@ -65,3 +65,4 @@ Thumbs.db
 *.bak
 _private/
 backups/
+*.bak-*
