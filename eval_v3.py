@@ -215,10 +215,14 @@ def _retrieve_ids_direct(question: str, max_k: int = 20):
 
 def retrieve_ids(question: str, max_k: int = 20):
     """Retrieval via app.py-Pipeline (hybrid search, reranker, boosts).
-    Gibt (normalized_ids, raw_chroma_ids) zurück."""
+    Gibt (normalized_ids, raw_chroma_ids, total_ms, reranker_ms) zurück.
+    reranker_ms ist None wenn nicht messbar (Fallback-Pfad)."""
     try:
         retrieve_fn = _get_app_retrieve()
+
+        t_total_start = time.time()
         chunks = retrieve_fn(question)  # list[dict] mit keys: text, meta, distance, ...
+        total_ms = (time.time() - t_total_start) * 1000
 
         ids = []
         raw_ids = []
@@ -237,11 +241,26 @@ def retrieve_ids(question: str, max_k: int = 20):
                 raw_ids.append(raw_id)
                 ids.append(norm_id)
 
-        return ids, raw_ids
+        # Reranker-Zeit: Isoliert messen – ein separater predict()-Aufruf
+        # mit denselben Inputs wie in app.py (question, text[:500], Top-40)
+        reranker_ms = None
+        try:
+            import app as _app_mod
+            reranker = _app_mod.get_reranker()
+            pairs_sample = [(question, c.get("text", "")[:500]) for c in chunks[:40]]
+            if pairs_sample:
+                t_re = time.time()
+                reranker.predict(pairs_sample)
+                reranker_ms = (time.time() - t_re) * 1000
+        except Exception:
+            pass  # Reranker-Zeit bleibt None
+
+        return ids, raw_ids, total_ms, reranker_ms
 
     except Exception as e:
         print(f"\n  [WARN] app.retrieve() fehlgeschlagen ({e}), Fallback auf collection.query()")
-        return _retrieve_ids_direct(question, max_k)
+        ids, raw_ids = _retrieve_ids_direct(question, max_k)
+        return ids, raw_ids, None, None
 
 
 # ─────────────────────────────────────────────
@@ -324,21 +343,76 @@ def run_llm_answer(question: str) -> str:
 # Eval-Runner
 # ─────────────────────────────────────────────
 
+def _write_config_snapshot(out_dir: Path, eval_set_path: Path, suffix: str) -> Path:
+    """Schreibt Config-Snapshot als JSON vor dem Eval-Run."""
+    import subprocess
+    try:
+        git_commit = subprocess.check_output(
+            ["git", "rev-parse", "--short", "HEAD"], cwd=BASE_DIR, text=True
+        ).strip()
+        git_branch = subprocess.check_output(
+            ["git", "rev-parse", "--abbrev-ref", "HEAD"], cwd=BASE_DIR, text=True
+        ).strip()
+    except Exception:
+        git_commit = "unknown"
+        git_branch = "unknown"
+
+    # Werte aus app.py lesen (sofern importierbar)
+    reranker_model = os.environ.get("RERANKER_MODEL", "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1")
+    ce_cutoff = 3.0
+    try:
+        import app as _app_mod
+        reranker_model = getattr(_app_mod, "RERANKER_MODEL", reranker_model)
+        ce_cutoff = getattr(_app_mod, "CE_CUTOFF", ce_cutoff)
+    except Exception:
+        pass
+
+    config = {
+        "timestamp": datetime.now().isoformat(),
+        "eval_set": eval_set_path.name,
+        "output_suffix": suffix,
+        "reranker_model": reranker_model,
+        "ce_cutoff": ce_cutoff,
+        "top_k_retrieval": 40,
+        "reranker_input_truncation": 500,
+        "git_commit": git_commit,
+        "git_branch": git_branch,
+    }
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    config_path = out_dir / f"config_{ts}_{suffix}.json"
+    with open(config_path, "w") as f:
+        json.dump(config, f, ensure_ascii=False, indent=2)
+    print(f"  Config-Snapshot: {config_path.name}")
+    print(f"  Reranker:        {reranker_model}")
+    return config_path
+
+
+LATENCY_WARMUP = 3  # Erste N Queries nicht in Latenz-Statistik
+
+
 def run_eval(
     questions: list[dict],
     k_values: list[int],
     retrieval_only: bool,
     out_dir: Path,
+    output_suffix: str = "",
 ) -> dict:
     max_k = max(k_values)
     results = []
     t_start = time.time()
+
+    # Latenz-Akkumulatoren (Warmup-Queries exkludiert)
+    total_ms_list: list[float] = []
+    reranker_ms_list: list[float] = []
 
     print(f"\nOpenLex Eval v3 – {len(questions)} Fragen, K={k_values}")
     if retrieval_only:
         print("  Modus: --retrieval-only (kein LLM)\n")
     else:
         print("  Modus: full (Retrieval + LLM)\n")
+    print(f"  Latenz-Warmup: erste {LATENCY_WARMUP} Queries aus Latenz-Statistik ausgeschlossen\n")
 
     for i, q in enumerate(questions, 1):
         qid = q.get("id", f"q{i}")
@@ -346,8 +420,8 @@ def run_eval(
         print(f"  [{i:2d}/{len(questions)}] {qid}: {question_text[:55]}...", end="", flush=True)
         t0 = time.time()
 
-        # Retrieval – gibt (normalized_ids, raw_chroma_ids) zurück
-        retrieved_ids, retrieved_raw_ids = retrieve_ids(question_text, max_k=max_k)
+        # Retrieval – gibt (normalized_ids, raw_chroma_ids, total_ms, reranker_ms) zurück
+        retrieved_ids, retrieved_raw_ids, total_ms, reranker_ms = retrieve_ids(question_text, max_k=max_k)
 
         # Bevorzugt retrieval_gold-Schema (v4), Fallback auf Top-Level (v3-kompatibel)
         rg = q.get("retrieval_gold", {})
@@ -379,9 +453,22 @@ def run_eval(
             "category": q.get("category", ""),
             "gold_ids": gold_ids,
             "retrieved_ids_top10": retrieved_ids[:10],
+            "retrieved_raw_ids_top10": retrieved_raw_ids[:10],
             "retrieval_metrics": retrieval_metrics,
             "duration_s": round(time.time() - t0, 2),
+            "latency": {
+                "total_ms": round(total_ms, 1) if total_ms is not None else None,
+                "reranker_ms": round(reranker_ms, 1) if reranker_ms is not None else None,
+                "warmup": i <= LATENCY_WARMUP,
+            },
         }
+
+        # Latenz akkumulieren (nach Warmup)
+        if i > LATENCY_WARMUP:
+            if total_ms is not None:
+                total_ms_list.append(total_ms)
+            if reranker_ms is not None:
+                reranker_ms_list.append(reranker_ms)
 
         # Answer-Level
         if not retrieval_only:
@@ -395,15 +482,38 @@ def run_eval(
 
         results.append(result)
         hit3 = retrieval_metrics.get("hit@3", 0.0)
-        print(f"  Hit@3={hit3:.2f}  MRR={retrieval_metrics['mrr']:.2f}  ({result['duration_s']:.1f}s)")
+        re_ms_str = f"  reranker={reranker_ms:.0f}ms" if reranker_ms is not None else ""
+        warmup_str = " [warmup]" if i <= LATENCY_WARMUP else ""
+        print(f"  Hit@3={hit3:.2f}  MRR={retrieval_metrics['mrr']:.2f}  ({result['duration_s']:.1f}s{re_ms_str}{warmup_str})")
 
     duration = time.time() - t_start
+
+    # Latenz-Statistik aggregieren
+    def _pct(lst, p):
+        if not lst: return None
+        s = sorted(lst)
+        idx = int(len(s) * p / 100)
+        return round(s[min(idx, len(s)-1)], 1)
+
+    latency_summary = {
+        "warmup_queries_excluded": LATENCY_WARMUP,
+        "n_measured": len(total_ms_list),
+    }
+    if total_ms_list:
+        latency_summary["total_ms_mean"]   = round(sum(total_ms_list) / len(total_ms_list), 1)
+        latency_summary["total_ms_median"] = _pct(total_ms_list, 50)
+        latency_summary["total_ms_p95"]    = _pct(total_ms_list, 95)
+    if reranker_ms_list:
+        latency_summary["reranker_ms_mean"]   = round(sum(reranker_ms_list) / len(reranker_ms_list), 1)
+        latency_summary["reranker_ms_median"] = _pct(reranker_ms_list, 50)
+        latency_summary["reranker_ms_p95"]    = _pct(reranker_ms_list, 95)
 
     # Aggregierte Metriken
     summary = _compute_summary(results, k_values, retrieval_only)
     summary["duration_s"] = round(duration, 1)
     summary["n_questions"] = len(questions)
     summary["timestamp"] = datetime.now().strftime("%Y-%m-%d %H:%M")
+    summary["latency"] = latency_summary
 
     output = {
         "summary": summary,
@@ -414,11 +524,12 @@ def run_eval(
     out_dir.mkdir(parents=True, exist_ok=True)
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     mode = "retrieval" if retrieval_only else "full"
-    json_path = out_dir / f"eval_{mode}_{ts}.json"
+    suffix_part = f"_{output_suffix}" if output_suffix else ""
+    json_path = out_dir / f"eval_{mode}_{ts}{suffix_part}.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    md_path = out_dir / f"eval_{mode}_{ts}.md"
+    md_path = out_dir / f"eval_{mode}_{ts}{suffix_part}.md"
     _write_markdown_report(output, md_path, k_values, retrieval_only)
 
     _print_summary(summary, k_values, retrieval_only)
@@ -493,6 +604,20 @@ def _print_summary(summary: dict, k_values: list[int], retrieval_only: bool):
     if not retrieval_only and "avg_answer_score" in summary:
         print(f"\n  Answer-Score (Ø): {summary['avg_answer_score']:.1f} / 100")
 
+    lat = summary.get("latency", {})
+    if lat.get("total_ms_mean") is not None or lat.get("reranker_ms_mean") is not None:
+        n_ex = lat.get("warmup_queries_excluded", 0)
+        n_m  = lat.get("n_measured", 0)
+        print(f"\n  Latenz (Warmup={n_ex} exkl., n={n_m}):")
+        if lat.get("reranker_ms_mean") is not None:
+            print(f"    Reranker mean={lat['reranker_ms_mean']:.0f}ms  "
+                  f"median={lat['reranker_ms_median']:.0f}ms  "
+                  f"p95={lat['reranker_ms_p95']:.0f}ms")
+        if lat.get("total_ms_mean") is not None:
+            print(f"    Total    mean={lat['total_ms_mean']:.0f}ms  "
+                  f"median={lat['total_ms_median']:.0f}ms  "
+                  f"p95={lat['total_ms_p95']:.0f}ms")
+
     print("=" * 60)
 
 
@@ -527,6 +652,18 @@ def _write_markdown_report(output: dict, path: Path, k_values: list[int], retrie
 
     if not retrieval_only and "avg_answer_score" in summary:
         lines += ["", f"## Answer-Score (Ø): {summary['avg_answer_score']:.1f} / 100"]
+
+    lat = summary.get("latency", {})
+    if lat.get("total_ms_mean") is not None or lat.get("reranker_ms_mean") is not None:
+        lines += ["", "## Latenz", "",
+                  f"_(Warmup={lat.get('warmup_queries_excluded',0)} Queries exkl., n={lat.get('n_measured',0)})_",
+                  "", "| Messung | mean | median | p95 |", "|---------|------|--------|-----|"]
+        if lat.get("reranker_ms_mean") is not None:
+            lines.append(f"| Reranker | {lat['reranker_ms_mean']:.0f} ms | "
+                         f"{lat['reranker_ms_median']:.0f} ms | {lat['reranker_ms_p95']:.0f} ms |")
+        if lat.get("total_ms_mean") is not None:
+            lines.append(f"| Total Retrieve | {lat['total_ms_mean']:.0f} ms | "
+                         f"{lat['total_ms_median']:.0f} ms | {lat['total_ms_p95']:.0f} ms |")
 
     lines += ["", "## Einzelergebnisse", ""]
     for r in results:
@@ -579,6 +716,10 @@ def main():
         "--category", type=str,
         help="Nur Fragen dieser Kategorie evaluieren",
     )
+    parser.add_argument(
+        "--output-suffix", type=str, default="",
+        help="Suffix für Output-Dateinamen (z.B. 'baseline_old_reranker', 'bge_v2_m3')",
+    )
     args = parser.parse_args()
 
     os.chdir(BASE_DIR)
@@ -605,11 +746,15 @@ def main():
     if not out_dir.is_absolute():
         out_dir = BASE_DIR / out_dir
 
+    # Config-Snapshot vor dem Run schreiben
+    _write_config_snapshot(out_dir, eval_path, args.output_suffix or "run")
+
     run_eval(
         questions=questions,
         k_values=sorted(set(args.k)),
         retrieval_only=args.retrieval_only,
         out_dir=out_dir,
+        output_suffix=args.output_suffix,
     )
 
 

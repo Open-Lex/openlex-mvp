@@ -198,7 +198,9 @@ def get_collection():
 
 
 _reranker: CrossEncoder | None = None
-RERANKER_MODEL = "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
+RERANKER_MODEL = os.environ.get(
+    "RERANKER_MODEL", "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
+)
 
 
 def get_reranker() -> CrossEncoder:
@@ -708,8 +710,28 @@ def _find_urteil_by_name(question: str, col) -> list[dict]:
     return found_chunks
 
 
-def retrieve(question: str, history: list[tuple[str, str]] | None = None) -> list[dict]:
-    """Führt semantische + Norm-basierte + Keyword-Suche + Reranking durch."""
+def retrieve_candidates_only(question: str, top_k: int = 150) -> list[dict]:
+    """Gibt den Candidate-Pool VOR Cross-Encoder und Cutoff zurück.
+
+    Nützlich für Diagnose (Recall@K-Messung).
+    Liefert alle Chunks nach Aggregation (Semantic + Norm + Keyword + Pflicht + Urteilsnamen),
+    sortiert nach adjusted_distance, ohne Reranking, ohne CE_CUTOFF-Filter.
+
+    Args:
+        question: Suchanfrage
+        top_k: Wie viele der sortierten Kandidaten zurückgeben (default 150)
+    """
+    return retrieve(question, _candidates_only=True, _candidates_top_k=top_k)
+
+
+def retrieve(question: str, history: list[tuple[str, str]] | None = None,
+             _candidates_only: bool = False, _candidates_top_k: int = 150) -> list[dict]:
+    """Führt semantische + Norm-basierte + Keyword-Suche + Reranking durch.
+
+    Interne Parameter (nicht für externe Aufrufer):
+        _candidates_only: Wenn True, gibt den Candidate-Pool vor Cross-Encoder zurück.
+        _candidates_top_k: Wie viele Kandidaten bei _candidates_only zurückgeben.
+    """
     model = get_model()
     col = get_collection()
 
@@ -730,9 +752,10 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None) -> lis
 
     chunks = []
     seen_ids = set()
-    for doc, meta, dist in zip(
+    chroma_ids_semantic = results.get("ids", [[]])[0]
+    for i, (doc, meta, dist) in enumerate(zip(
         results["documents"][0], results["metadatas"][0], results["distances"][0]
-    ):
+    )):
         chunk_id = _normalize_az(meta.get("chunk_id", "") or meta.get("volladresse", "") or doc[:50])
         if chunk_id in seen_ids:
             continue
@@ -748,6 +771,7 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None) -> lis
         chunks.append({
             "text": doc,
             "meta": meta,
+            "id": chroma_ids_semantic[i] if i < len(chroma_ids_semantic) else None,
             "distance": dist,
             "adjusted_distance": adjusted_dist,
             "source": "semantic",
@@ -763,17 +787,19 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None) -> lis
                 include=["documents", "metadatas", "distances"],
                 where={"source_type": {"$in": ["gesetz_granular", "gesetz"]}},
             )
-            for doc, meta, dist in zip(
+            chroma_ids_norm = norm_results.get("ids", [[]])[0]
+            for j, (doc, meta, dist) in enumerate(zip(
                 norm_results["documents"][0],
                 norm_results["metadatas"][0],
                 norm_results["distances"][0],
-            ):
+            )):
                 cid = _normalize_az(meta.get("volladresse", "") or doc[:50])
                 if cid not in seen_ids:
                     seen_ids.add(cid)
                     chunks.append({
                         "text": doc,
                         "meta": meta,
+                        "id": chroma_ids_norm[j] if j < len(chroma_ids_norm) else None,
                         "distance": dist,
                         "adjusted_distance": dist * 0.85,
                         "source": "norm_lookup",
@@ -812,19 +838,21 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None) -> lis
                 include=["documents", "metadatas", "distances"],
                 where_document={"$contains": word},
             )
-            for doc, meta, dist in zip(
+            chroma_ids_kw = kw_results.get("ids", [[]])[0]
+            for k, (doc, meta, dist) in enumerate(zip(
                 kw_results["documents"][0],
                 kw_results["metadatas"][0],
                 kw_results["distances"][0],
-            ):
+            )):
                 cid = _normalize_az(meta.get("chunk_id", "") or meta.get("volladresse", "") or doc[:50])
+                chroma_id_kw = chroma_ids_kw[k] if k < len(chroma_ids_kw) else None
                 if cid in keyword_hits:
                     # Bereits gefunden → niedrigste Distanz behalten
                     if dist < keyword_hits[cid]["distance"]:
                         keyword_hits[cid]["distance"] = dist
                 else:
                     keyword_hits[cid] = {
-                        "text": doc, "meta": meta,
+                        "text": doc, "meta": meta, "id": chroma_id_kw,
                         "distance": dist, "source": "keyword",
                     }
         except Exception:
@@ -851,6 +879,7 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None) -> lis
             chunks.append({
                 "text": kw_chunk["text"],
                 "meta": kw_chunk["meta"],
+                "id": kw_chunk.get("id"),
                 "distance": kw_chunk["distance"],
                 "adjusted_distance": 0.15 * boost,
                 "source": "keyword",
@@ -859,6 +888,11 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None) -> lis
     # ── Cross-Encoder Reranking ──
     # Pre-filter: Sortiere nach adjusted_distance, nimm Top-40 Kandidaten
     chunks.sort(key=lambda x: x["adjusted_distance"])
+
+    # Diagnose-Hook: retrieve_candidates_only() gibt hier zurück, vor CE + Cutoff
+    if _candidates_only:
+        return chunks[:_candidates_top_k]
+
     candidates = chunks[:40]
 
     if not candidates:
