@@ -1,0 +1,4462 @@
+[
+  {
+    "id": "messy_001",
+    "source_canonical_id": "canonical_001",
+    "level": "messy",
+    "question": "Ein Kunde aus der Logistik fragt: Wenn wir Daten von EU-Bürgern verarbeiten, aber auch noch lokale Gesetze in Spanien und Deutschland beachten müssen – was gilt dann eigentlich zuerst, und wo steht das überhaupt alles nachlesbar?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_normenhierarchie_im_eu_datenschutzrecht"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "Normenhierarchie im EU-Datenschutzrecht"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 8 GRCh",
+        "Art. 16 AEUV",
+        "DSGVO",
+        "BDSG"
+      ],
+      "expected_keywords": [
+        "Normenhierarchie",
+        "EU-Primärrecht",
+        "EU-Sekundärrecht",
+        "Anwendungsvorrang",
+        "Öffnungsklauseln"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 8 GRCh",
+      "Art. 16 AEUV",
+      "DSGVO",
+      "BDSG"
+    ],
+    "expected_keywords": [
+      "Normenhierarchie",
+      "EU-Primärrecht",
+      "EU-Sekundärrecht",
+      "Anwendungsvorrang",
+      "Öffnungsklauseln"
+    ],
+    "min_sources": 2,
+    "category": "methodenwissen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_normenhierarchie_im_eu_datenschutzrecht",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_002",
+    "source_canonical_id": "canonical_002",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für Fahrradzubehör will Kundendaten wie bisher lokal speichern, aber ein Anwalt meint, die EU-Datenschutzregeln wären strenger als das deutsche Gesetz – was gilt jetzt wirklich, wenn die beiden sich widersprechen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_88"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_anwendungsvorrang_des_eu_rechts__costa_enel__simmenthal_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 88 DSGVO"
+    ],
+    "should_ids": [
+      "Anwendungsvorrang des EU-Rechts (Costa/ENEL, Simmenthal)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 88 Abs. 2 DSGVO",
+        "§ 1 Abs. 5 BDSG"
+      ],
+      "expected_keywords": [
+        "Anwendungsvorrang",
+        "Öffnungsklauseln",
+        "Unanwendbarkeit",
+        "EU-Recht",
+        "nationales Recht"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 88 Abs. 2 DSGVO",
+      "§ 1 Abs. 5 BDSG"
+    ],
+    "expected_keywords": [
+      "Anwendungsvorrang",
+      "Öffnungsklauseln",
+      "Unanwendbarkeit",
+      "EU-Recht",
+      "nationales Recht"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_anwendungsvorrang_des_eu_rechts__costa_enel__simmenthal_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_003",
+    "source_canonical_id": "canonical_003",
+    "level": "messy",
+    "question": "In unserer kleinen Physiotherapie-Praxis wollen wir die Gesundheitsdaten unserer Angestellten digital verwalten – aber jeder sagt, da gäbe es strenge Regeln. Können wir uns da einfach an deutsche Gesetze halten, oder muss alles nach EU-Vorgaben laufen, auch wenn’s um Krankentage oder Impfstatus geht?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw__ffnungsklauseln_der_dsgvo____bersicht"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 9 DSGVO (Teil 1)",
+      "Art. 9 DSGVO (Teil 2)",
+      "Art. 88 DSGVO",
+      "BDSG_§_26_Abs.1"
+    ],
+    "should_ids": [
+      "Öffnungsklauseln der DSGVO – Übersicht"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 9 Abs. 2 lit. b DSGVO",
+        "Art. 88 DSGVO",
+        "§ 26 BDSG"
+      ],
+      "expected_keywords": [
+        "Öffnungsklauseln",
+        "Beschäftigtendatenschutz",
+        "nationale Regelungen",
+        "Verarbeitung besonderer Kategorien personenbezogener Daten",
+        "Arbeitsrecht"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 9 Abs. 2 lit. b DSGVO",
+      "Art. 88 DSGVO",
+      "§ 26 BDSG"
+    ],
+    "expected_keywords": [
+      "Öffnungsklauseln",
+      "Beschäftigtendatenschutz",
+      "nationale Regelungen",
+      "Verarbeitung besonderer Kategorien personenbezogener Daten",
+      "Arbeitsrecht"
+    ],
+    "min_sources": 2,
+    "category": "methodenwissen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw__ffnungsklauseln_der_dsgvo____bersicht",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_004",
+    "source_canonical_id": "canonical_004",
+    "level": "messy",
+    "question": "Als Chef einer kleinen Spedition will ich die Personaldaten meiner Fahrer digital verwalten – aber was muss ich in Deutschland *zusätzlich* zu den EU-Datenschutzregeln beachten, wenn’s um Mitarbeiterdaten geht? Gibt’s da Fallstricke, die andere Länder nicht haben?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1",
+        "dsgvo_art_89",
+        "dsgvo_art_23"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_deutsche_umsetzung_der_dsgvo__ffnungsklauseln_im_bdsg"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 88 DSGVO",
+      "BDSG_§_26_Abs.1",
+      "Art. 89 DSGVO",
+      "Art. 23 DSGVO"
+    ],
+    "should_ids": [
+      "Deutsche Umsetzung der DSGVO-Öffnungsklauseln im BDSG"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 88 DSGVO",
+        "§ 26 BDSG",
+        "Art. 89 DSGVO",
+        "Art. 23 DSGVO"
+      ],
+      "expected_keywords": [
+        "Öffnungsklauseln",
+        "Beschäftigtendatenschutz",
+        "EuGH C-34/21",
+        "Datenverarbeitung",
+        "Betroffenenrechte"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 88 DSGVO",
+      "§ 26 BDSG",
+      "Art. 89 DSGVO",
+      "Art. 23 DSGVO"
+    ],
+    "expected_keywords": [
+      "Öffnungsklauseln",
+      "Beschäftigtendatenschutz",
+      "EuGH C-34/21",
+      "Datenverarbeitung",
+      "Betroffenenrechte"
+    ],
+    "min_sources": 2,
+    "category": "methodenwissen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_deutsche_umsetzung_der_dsgvo__ffnungsklauseln_im_bdsg",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_005",
+    "source_canonical_id": "canonical_005",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für Fahrradzubehör will jetzt endlich diese nervige Cookie-Abfrage einbauen – aber was muss da eigentlich rein, wenn man nicht gleich abgemahnt werden will, und reicht es nicht einfach, das in die Datenschutzerklärung zu schreiben?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_95",
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_verh_ltnis_dsgvo_zu_eprivacy_ttdsg__lex_specialis_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 95 DSGVO",
+      "gran_TDDDG_§_25",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Verhältnis DSGVO zu ePrivacy/TTDSG (lex specialis)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 95 DSGVO",
+        "§ 25 TTDSG",
+        "Art. 6 DSGVO"
+      ],
+      "expected_keywords": [
+        "lex specialis",
+        "Einwilligungserfordernis",
+        "Opt-in-Einwilligung",
+        "elektronische Kommunikation",
+        "Zweistufige Prüfung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 95 DSGVO",
+      "§ 25 TTDSG",
+      "Art. 6 DSGVO"
+    ],
+    "expected_keywords": [
+      "lex specialis",
+      "Einwilligungserfordernis",
+      "Opt-in-Einwilligung",
+      "elektronische Kommunikation",
+      "Zweistufige Prüfung"
+    ],
+    "min_sources": 2,
+    "category": "cookies_tracking",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_verh_ltnis_dsgvo_zu_eprivacy_ttdsg__lex_specialis_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_006",
+    "source_canonical_id": "canonical_006",
+    "level": "messy",
+    "question": "Als Steuerberatung wollen wir für Mandanten Sozialhilfeanträge vorbereiten und dabei deren Steuerunterlagen mit den Ämtern teilen – was müssen wir beachten, damit wir da nicht in die Bredouille kommen, wenn es um den Umgang mit diesen sensiblen Daten geht?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_85"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_verh_ltnis_dsgvo_zu_sektorspezifischem_recht__sgb_x__ao__tkg"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 85 DSGVO"
+    ],
+    "should_ids": [
+      "Verhältnis DSGVO zu sektorspezifischem Recht (SGB X, AO, TKG, BetrVG, KUG)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 lit. e DSGVO",
+        "Art. 85 Abs. 2 DSGVO",
+        "§ 29b AO"
+      ],
+      "expected_keywords": [
+        "Sozialdatenschutz",
+        "Steuergeheimnis",
+        "Öffnungsklauseln",
+        "Vorrang",
+        "Spezialgesetz"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 lit. e DSGVO",
+      "Art. 85 Abs. 2 DSGVO",
+      "§ 29b AO"
+    ],
+    "expected_keywords": [
+      "Sozialdatenschutz",
+      "Steuergeheimnis",
+      "Öffnungsklauseln",
+      "Vorrang",
+      "Spezialgesetz"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_verh_ltnis_dsgvo_zu_sektorspezifischem_recht__sgb_x__ao__tkg",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_007",
+    "source_canonical_id": "canonical_007",
+    "level": "messy",
+    "question": "Als Inhaber einer kleinen Online-Apotheke will ich wissen: Wenn ich Kunden-Daten verarbeite, was wiegt mehr – deutsche Gesetze, EU-Vorgaben oder die Tipps von dieser europäischen Datenschutz-Behörde, die immer wieder neue Empfehlungen rausgibt? Und kann ich mich einfach an die halten, ohne Ärger zu kriegen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_quellengewichtung_im_datenschutzrecht___10_rang_system"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "Quellengewichtung im Datenschutzrecht – 10-Rang-System"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [],
+      "expected_keywords": [
+        "Rechtsquellenhierarchie",
+        "EuGH-Urteile",
+        "EDSA/EDPB-Leitlinien",
+        "persuasive Autorität",
+        "Bindungswirkung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [],
+    "expected_keywords": [
+      "Rechtsquellenhierarchie",
+      "EuGH-Urteile",
+      "EDSA/EDPB-Leitlinien",
+      "persuasive Autorität",
+      "Bindungswirkung"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_quellengewichtung_im_datenschutzrecht___10_rang_system",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_008",
+    "source_canonical_id": "canonical_008",
+    "level": "messy",
+    "question": "In unserer kleinen Physiotherapie-Praxis streiten sich die Kollegen, ob wir für die Online-Terminbuchung wirklich diese komplizierte Einwilligungserklärung brauchen – manche sagen ja, andere nein, und keiner weiß, was am Ende wirklich gilt. Wie entscheiden wir das jetzt, ohne uns Ärger einzuhandeln?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_umgang_mit_meinungsstreit_im_datenschutzrecht"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "Umgang mit Meinungsstreit im Datenschutzrecht"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 267 AEUV"
+      ],
+      "expected_keywords": [
+        "EuGH-Rechtsprechung",
+        "Vorlageverfahren",
+        "EDSA-Leitlinien",
+        "Aufsichtsbehörden",
+        "Meinungsstreit"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 267 AEUV"
+    ],
+    "expected_keywords": [
+      "EuGH-Rechtsprechung",
+      "Vorlageverfahren",
+      "EDSA-Leitlinien",
+      "Aufsichtsbehörden",
+      "Meinungsstreit"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_umgang_mit_meinungsstreit_im_datenschutzrecht",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_009",
+    "source_canonical_id": "canonical_009",
+    "level": "messy",
+    "question": "Ein deutscher Online-Shop will seine Datenschutzerklärung anpassen, findet aber in der englischen DSGVO-Fassung eine andere Formulierung als im deutschen Text – auf welche Version soll er sich jetzt verlassen, und wer entscheidet das am Ende?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_grammatische_auslegung_der_dsgvo__wortlaut__mehrsprachigkeit"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "Grammatische Auslegung der DSGVO (Wortlaut, Mehrsprachigkeit)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 55 EUV",
+        "Art. 4 Nr. 1 DSGVO"
+      ],
+      "expected_keywords": [
+        "grammatische Auslegung",
+        "autonome Auslegung",
+        "EuGH",
+        "Sprachfassungen",
+        "personenbezogene Daten"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 55 EUV",
+      "Art. 4 Nr. 1 DSGVO"
+    ],
+    "expected_keywords": [
+      "grammatische Auslegung",
+      "autonome Auslegung",
+      "EuGH",
+      "Sprachfassungen",
+      "personenbezogene Daten"
+    ],
+    "min_sources": 2,
+    "category": "methodenwissen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_grammatische_auslegung_der_dsgvo__wortlaut__mehrsprachigkeit",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_010",
+    "source_canonical_id": "canonical_010",
+    "level": "messy",
+    "question": "Ein Fitnessstudio will ohne explizite Zustimmung der Mitglieder deren Trainingsdaten nutzen, um personalisierte Werbung für Proteinpulver zu schalten – ist das überhaupt erlaubt, wenn man sich anschaut, *warum* die DSGVO solche Regeln überhaupt gemacht hat?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_systematische_auslegung_der_dsgvo__erw_gungsgr_nde_als_konte"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 5 DSGVO"
+    ],
+    "should_ids": [
+      "Systematische Auslegung der DSGVO (Erwägungsgründe als Kontext)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 lit. f DSGVO",
+        "Art. 5 DSGVO"
+      ],
+      "expected_keywords": [
+        "Erwägungsgründe",
+        "systematische Auslegung",
+        "Normzusammenhang",
+        "Grundsätze"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 lit. f DSGVO",
+      "Art. 5 DSGVO"
+    ],
+    "expected_keywords": [
+      "Erwägungsgründe",
+      "systematische Auslegung",
+      "Normzusammenhang",
+      "Grundsätze"
+    ],
+    "min_sources": 2,
+    "category": "methodenwissen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_systematische_auslegung_der_dsgvo__erw_gungsgr_nde_als_konte",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_011",
+    "source_canonical_id": "canonical_011",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für Handmade-Schmuck will Kundendaten aus Deutschland und Frankreich in einer Cloud speichern – aber wie kriegt man das hin, ohne dass entweder die Bestellungen nicht mehr flutschen oder die Kunden Angst um ihre Daten haben?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_teleologische_auslegung_der_dsgvo__doppelzweck_art__1_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 1 DSGVO"
+    ],
+    "should_ids": [
+      "Teleologische Auslegung der DSGVO (Doppelzweck Art. 1)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 1 DSGVO"
+      ],
+      "expected_keywords": [
+        "teleologische Auslegung",
+        "Doppelzweck",
+        "Spannungsverhältnis",
+        "Abwägung",
+        "praktischer Ausgleich"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 1 DSGVO"
+    ],
+    "expected_keywords": [
+      "teleologische Auslegung",
+      "Doppelzweck",
+      "Spannungsverhältnis",
+      "Abwägung",
+      "praktischer Ausgleich"
+    ],
+    "min_sources": 2,
+    "category": "methodenwissen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_teleologische_auslegung_der_dsgvo__doppelzweck_art__1_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_012",
+    "source_canonical_id": "canonical_012",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für Handmade-Schmuck will seine Kundendatenbank aufräumen – aber was zählt eigentlich genau als *personenbezogene Daten*? Die alten EU-Regeln von vor 2018 waren da noch viel strenger, oder? Darf man sich da einfach an den alten Richtlinien orientieren, wenn es noch kein aktuelles Urteil dazu gibt?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_historische_auslegung__rl_95_46_eg_als_vorg_nger_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "Historische Auslegung (RL 95/46/EG als Vorgänger)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Richtlinie 95/46/EG",
+        "Konvention 108 des Europarats"
+      ],
+      "expected_keywords": [
+        "historische Auslegung",
+        "EuGH-Rechtsprechung",
+        "Datenschutzrichtlinie",
+        "personenbezogene Daten",
+        "Verantwortlicher"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Richtlinie 95/46/EG",
+      "Konvention 108 des Europarats"
+    ],
+    "expected_keywords": [
+      "historische Auslegung",
+      "EuGH-Rechtsprechung",
+      "Datenschutzrichtlinie",
+      "personenbezogene Daten",
+      "Verantwortlicher"
+    ],
+    "min_sources": 2,
+    "category": "methodenwissen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_historische_auslegung__rl_95_46_eg_als_vorg_nger_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_013",
+    "source_canonical_id": "canonical_013",
+    "level": "messy",
+    "question": "Stell dir vor, du betreibst einen kleinen Online-Shop und ein Kunde aus Frankreich beschwert sich, dass du seine Bestelldaten nicht richtig löschst – obwohl du dich an deutsche Regeln hältst. Wie entscheidet eigentlich das EU-Gericht in so nem Fall, wenn die Gesetze in jedem Land anders ausgelegt werden? Fällt die Entscheidung dann eher streng oder pragmatisch aus?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_eu_spezifische_auslegungsmethoden__autonome_auslegung__effet"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "EU-spezifische Auslegungsmethoden (autonome Auslegung, effet utile, Grundrechte)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 7 GRCh",
+        "Art. 8 GRCh",
+        "Art. 52 Abs. 1 GRCh"
+      ],
+      "expected_keywords": [
+        "autonome Auslegung",
+        "effet utile",
+        "grundrechtskonforme Auslegung",
+        "Verhältnismäßigkeitsprinzip"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 7 GRCh",
+      "Art. 8 GRCh",
+      "Art. 52 Abs. 1 GRCh"
+    ],
+    "expected_keywords": [
+      "autonome Auslegung",
+      "effet utile",
+      "grundrechtskonforme Auslegung",
+      "Verhältnismäßigkeitsprinzip"
+    ],
+    "min_sources": 2,
+    "category": "methodenwissen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_eu_spezifische_auslegungsmethoden__autonome_auslegung__effet",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_014",
+    "source_canonical_id": "canonical_014",
+    "level": "messy",
+    "question": "Ein Physiotherapie-Studio will die Krankengeschichten von Patienten digital speichern – inklusive Diagnosen und Therapieverläufe. Wann darf man so sensible Daten überhaupt in der Cloud ablegen, ohne Ärger mit dem Gesetz zu kriegen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_verbot_mit_erlaubnisvorbehalt_im_datenschutzrecht"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 9 DSGVO (Teil 1)",
+      "Art. 9 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Verbot mit Erlaubnisvorbehalt im Datenschutzrecht"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 DSGVO",
+        "Art. 9 DSGVO"
+      ],
+      "expected_keywords": [
+        "Verbot mit Erlaubnisvorbehalt",
+        "Rechtsgrundlage",
+        "besondere Kategorien personenbezogener Daten",
+        "Erlaubnistatbestände",
+        "informationelle Selbstbestimmung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 DSGVO",
+      "Art. 9 DSGVO"
+    ],
+    "expected_keywords": [
+      "Verbot mit Erlaubnisvorbehalt",
+      "Rechtsgrundlage",
+      "besondere Kategorien personenbezogener Daten",
+      "Erlaubnistatbestände",
+      "informationelle Selbstbestimmung"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_verbot_mit_erlaubnisvorbehalt_im_datenschutzrecht",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_015",
+    "source_canonical_id": "canonical_015",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für Handmade-Schmuck will jetzt Kundendaten für personalisierte Werbung nutzen – aber ein paar Kunden beschweren sich, dass das zu privat ist. Gibt’s da nicht irgendwelche alten Grundsatz-Entscheidungen von ganz oben, die sagen, wie weit man mit Kundendaten gehen darf, ohne dass die Leute sich kontrolliert fühlen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_informationelle_selbstbestimmung__bverfg_volksz_hlung_1983__"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "Informationelle Selbstbestimmung (BVerfG Volkszählung 1983) und IT-Grundrecht"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG",
+        "Art. 7 GRCh",
+        "Art. 8 GRCh"
+      ],
+      "expected_keywords": [
+        "informationelle Selbstbestimmung",
+        "IT-Grundrecht",
+        "Vertraulichkeit",
+        "Integrität",
+        "Recht auf Vergessen"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG",
+      "Art. 7 GRCh",
+      "Art. 8 GRCh"
+    ],
+    "expected_keywords": [
+      "informationelle Selbstbestimmung",
+      "IT-Grundrecht",
+      "Vertraulichkeit",
+      "Integrität",
+      "Recht auf Vergessen"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_informationelle_selbstbestimmung__bverfg_volksz_hlung_1983__",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_016",
+    "source_canonical_id": "canonical_016",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für selbstgemachte Kerzen sammelt bei Bestellungen Name, Adresse und E-Mail – aber die Kunden wissen oft gar nicht, was damit passiert. Was muss man denen genau sagen, damit es keine Ärger mit dem Datenschutz gibt, und was passiert, wenn man’s einfach lässt?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_art__5_abs__1_lit__a_dsgvo___rechtm__igkeit__verarbeitung_na"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 83 DSGVO (Teil 1)",
+      "Art. 83 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Art. 5 Abs. 1 lit. a DSGVO – Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 1 lit. a DSGVO",
+        "Art. 6 Abs. 1 DSGVO",
+        "Art. 83 Abs. 5 lit. a DSGVO"
+      ],
+      "expected_keywords": [
+        "Rechtmäßigkeit",
+        "Treu und Glauben",
+        "Transparenz",
+        "Bußgeld",
+        "Informationspflichten"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 1 lit. a DSGVO",
+      "Art. 6 Abs. 1 DSGVO",
+      "Art. 83 Abs. 5 lit. a DSGVO"
+    ],
+    "expected_keywords": [
+      "Rechtmäßigkeit",
+      "Treu und Glauben",
+      "Transparenz",
+      "Bußgeld",
+      "Informationspflichten"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_art__5_abs__1_lit__a_dsgvo___rechtm__igkeit__verarbeitung_na",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_017",
+    "source_canonical_id": "canonical_017",
+    "level": "messy",
+    "question": "Ein Fitnessstudio will die Kundendaten, die eigentlich nur für die Mitgliedschaft gebraucht wurden, plötzlich für personalisierte Werbe-E-Mails nutzen – geht das einfach so oder braucht man da noch was von den Leuten?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_art__5_abs__1_lit__b_dsgvo___zweckbindung"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Art. 5 Abs. 1 lit. b DSGVO – Zweckbindung"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 1 lit. b DSGVO",
+        "Art. 6 Abs. 4 DSGVO"
+      ],
+      "expected_keywords": [
+        "Zweckbindung",
+        "Kompatibilitätstest",
+        "Weiterverarbeitung",
+        "personenbezogene Daten"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 1 lit. b DSGVO",
+      "Art. 6 Abs. 4 DSGVO"
+    ],
+    "expected_keywords": [
+      "Zweckbindung",
+      "Kompatibilitätstest",
+      "Weiterverarbeitung",
+      "personenbezogene Daten"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_art__5_abs__1_lit__b_dsgvo___zweckbindung",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_018",
+    "source_canonical_id": "canonical_018",
+    "level": "messy",
+    "question": "Als kleine Online-Boutique für nachhaltige Mode wollen wir Kund:innen gezielt mit Rabattcodes ansprechen – aber nur mit den Daten, die wirklich nötig sind. Wie viel dürfen wir überhaupt speichern, und wie bauen wir das technisch so ein, dass nichts Unnötiges hängen bleibt?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_25"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_art__5_abs__1_lit__c_dsgvo___datenminimierung"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO",
+      "Art. 25 DSGVO"
+    ],
+    "should_ids": [
+      "Art. 5 Abs. 1 lit. c DSGVO – Datenminimierung"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 1 lit. c DSGVO",
+        "Art. 25 Abs. 1 DSGVO",
+        "Art. 25 Abs. 2 DSGVO"
+      ],
+      "expected_keywords": [
+        "Datenminimierung",
+        "Data Protection by Design",
+        "Data Protection by Default",
+        "Zweckbindung",
+        "Angemessenheit"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 1 lit. c DSGVO",
+      "Art. 25 Abs. 1 DSGVO",
+      "Art. 25 Abs. 2 DSGVO"
+    ],
+    "expected_keywords": [
+      "Datenminimierung",
+      "Data Protection by Design",
+      "Data Protection by Default",
+      "Zweckbindung",
+      "Angemessenheit"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_art__5_abs__1_lit__c_dsgvo___datenminimierung",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_019",
+    "source_canonical_id": "canonical_019",
+    "level": "messy",
+    "question": "Als Physiotherapie-Praxis haben wir in unseren Patientenakten manchmal veraltete Diagnosen oder falsche Adressen stehen – wie kriegen wir das sauber aktualisiert, ohne dass uns später jemand vorwirft, wir hätten schlampig mit den Daten umgegangen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_16",
+        "dsgvo_art_17"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_art__5_abs__1_lit__d_dsgvo___richtigkeit"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO",
+      "Art. 16 DSGVO",
+      "Art. 17 DSGVO"
+    ],
+    "should_ids": [
+      "Art. 5 Abs. 1 lit. d DSGVO – Richtigkeit"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 1 lit. d DSGVO",
+        "Art. 16 DSGVO",
+        "Art. 17 DSGVO"
+      ],
+      "expected_keywords": [
+        "Richtigkeit",
+        "Berichtigung",
+        "Löschung",
+        "Verantwortlicher",
+        "Maßnahmen"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 1 lit. d DSGVO",
+      "Art. 16 DSGVO",
+      "Art. 17 DSGVO"
+    ],
+    "expected_keywords": [
+      "Richtigkeit",
+      "Berichtigung",
+      "Löschung",
+      "Verantwortlicher",
+      "Maßnahmen"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_art__5_abs__1_lit__d_dsgvo___richtigkeit",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_020",
+    "source_canonical_id": "canonical_020",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für Fahrradzubehör macht täglich Backups der Kundendatenbank – einfach zur Sicherheit. Wie lange dürfen die alten Sicherungen eigentlich aufbewahrt werden, ohne dass es Ärger gibt, und wann wäre es okay, die doch länger liegen zu lassen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_89"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_art__5_abs__1_lit__e_dsgvo___speicherbegrenzung"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO",
+      "Art. 89 DSGVO"
+    ],
+    "should_ids": [
+      "Art. 5 Abs. 1 lit. e DSGVO – Speicherbegrenzung"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 1 lit. e DSGVO",
+        "Art. 89 Abs. 1 DSGVO"
+      ],
+      "expected_keywords": [
+        "Speicherbegrenzung",
+        "Löschkonzept",
+        "Sicherungskopien",
+        "Löschpflicht",
+        "Archivzwecke"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 1 lit. e DSGVO",
+      "Art. 89 Abs. 1 DSGVO"
+    ],
+    "expected_keywords": [
+      "Speicherbegrenzung",
+      "Löschkonzept",
+      "Sicherungskopien",
+      "Löschpflicht",
+      "Archivzwecke"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_art__5_abs__1_lit__e_dsgvo___speicherbegrenzung",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_021",
+    "source_canonical_id": "canonical_021",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für Handmade-Schmuck hat vor einem Monat die Kundendatenbank auf eine neue Cloud umgestellt – jetzt ist unklar, ob da jemand mitlesen könnte. Was muss ich *sofort* tun, um sicherzugehen, dass keine Adressen oder Bestellhistorien in falsche Hände geraten, und wann muss ich überhaupt jemanden offiziell warnen, falls doch was schiefgeht?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_32",
+        "dsgvo_art_33"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_art__5_abs__1_lit__f_dsgvo___integrit_t_und_vertraulichkeit"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO",
+      "Art. 32 DSGVO",
+      "Art. 33 DSGVO"
+    ],
+    "should_ids": [
+      "Art. 5 Abs. 1 lit. f DSGVO – Integrität und Vertraulichkeit"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 1 lit. f DSGVO",
+        "Art. 32 DSGVO",
+        "Art. 33 DSGVO"
+      ],
+      "expected_keywords": [
+        "technische und organisatorische Maßnahmen",
+        "Meldepflicht",
+        "Verletzung des Schutzes personenbezogener Daten",
+        "Sicherheit der Verarbeitung",
+        "Pseudonymisierung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 1 lit. f DSGVO",
+      "Art. 32 DSGVO",
+      "Art. 33 DSGVO"
+    ],
+    "expected_keywords": [
+      "technische und organisatorische Maßnahmen",
+      "Meldepflicht",
+      "Verletzung des Schutzes personenbezogener Daten",
+      "Sicherheit der Verarbeitung",
+      "Pseudonymisierung"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_art__5_abs__1_lit__f_dsgvo___integrit_t_und_vertraulichkeit",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_022",
+    "source_canonical_id": "canonical_022",
+    "level": "messy",
+    "question": "Stell dir vor, du betreibst ein kleines Fitnessstudio und sammelt Kundendaten für Mitgliedschaften und Trainingspläne. Wie kannst du im Zweifel beweisen, dass du mit den Daten auch wirklich alles richtig machst – ohne dass du jetzt extra teure Anwälte oder komplizierte Systeme brauchst?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_30",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_art__5_abs__2_dsgvo___rechenschaftspflicht__accountability_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO",
+      "Art. 30 DSGVO",
+      "Art. 35 DSGVO (Teil 1)",
+      "Art. 35 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Art. 5 Abs. 2 DSGVO – Rechenschaftspflicht (Accountability)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 2 DSGVO",
+        "Art. 30 DSGVO",
+        "Art. 35 DSGVO"
+      ],
+      "expected_keywords": [
+        "Rechenschaftspflicht",
+        "Verarbeitungsverzeichnis",
+        "Datenschutz-Folgenabschätzung",
+        "Beweislastumkehr",
+        "Compliance-Nachweis"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 2 DSGVO",
+      "Art. 30 DSGVO",
+      "Art. 35 DSGVO"
+    ],
+    "expected_keywords": [
+      "Rechenschaftspflicht",
+      "Verarbeitungsverzeichnis",
+      "Datenschutz-Folgenabschätzung",
+      "Beweislastumkehr",
+      "Compliance-Nachweis"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_art__5_abs__2_dsgvo___rechenschaftspflicht__accountability_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_023",
+    "source_canonical_id": "canonical_023",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für handgemachte Keramik will Kundendaten nutzen, um personalisierte Rabattcodes per Mail zu verschicken – aber ohne dass die Leute vorher explizit zugestimmt haben. Wie findet man raus, ob das überhaupt erlaubt ist und worauf muss man dabei achten?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_pr_fungsschema_datenschutzrecht___9_schritte_standardpr_fung"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 5 DSGVO"
+    ],
+    "should_ids": [
+      "Prüfungsschema Datenschutzrecht – 9-Schritte-Standardprüfung"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 DSGVO",
+        "Art. 5 DSGVO",
+        "Art. 4 Nr. 1 DSGVO"
+      ],
+      "expected_keywords": [
+        "personenbezogene Daten",
+        "Rechtsgrundlage",
+        "Verantwortlicher",
+        "Betroffenenrechte",
+        "Datenminimierung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 DSGVO",
+      "Art. 5 DSGVO",
+      "Art. 4 Nr. 1 DSGVO"
+    ],
+    "expected_keywords": [
+      "personenbezogene Daten",
+      "Rechtsgrundlage",
+      "Verantwortlicher",
+      "Betroffenenrechte",
+      "Datenminimierung"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_pr_fungsschema_datenschutzrecht___9_schritte_standardpr_fung",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_024",
+    "source_canonical_id": "canonical_024",
+    "level": "messy",
+    "question": "Ein Fitnessstudio will die E-Mail-Adressen von Mitgliedern nutzen, um ihnen Rabattaktionen für Proteinpulver zu schicken – die Leute haben zwar beim Anmeldeformular ein Kästchen angekreuzt, aber niemand hat genau erklärt, wofür die Adressen später wirklich benutzt werden. Reicht das aus, oder kann es Ärger geben?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_7",
+        "dsgvo_art_8"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_pr_fungsschema_einwilligung__art__7_dsgvo_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 7 DSGVO",
+      "Art. 8 DSGVO"
+    ],
+    "should_ids": [
+      "Prüfungsschema Einwilligung (Art. 7 DSGVO)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 7 DSGVO",
+        "Art. 7 Abs. 4 DSGVO",
+        "Art. 7 Abs. 3 DSGVO",
+        "Art. 8 DSGVO"
+      ],
+      "expected_keywords": [
+        "Freiwilligkeit",
+        "Informiertheit",
+        "Widerrufbarkeit",
+        "Nachweisbarkeit",
+        "Koppelungsverbot"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 7 DSGVO",
+      "Art. 7 Abs. 4 DSGVO",
+      "Art. 7 Abs. 3 DSGVO",
+      "Art. 8 DSGVO"
+    ],
+    "expected_keywords": [
+      "Freiwilligkeit",
+      "Informiertheit",
+      "Widerrufbarkeit",
+      "Nachweisbarkeit",
+      "Koppelungsverbot"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_pr_fungsschema_einwilligung__art__7_dsgvo_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_025",
+    "source_canonical_id": "canonical_025",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für Handmade-Schmuck will Kundendaten nutzen, um denen später passende Rabattcodes per Mail zu schicken – ohne dass die Leute extra zugestimmt haben. Wie entscheidet man eigentlich, ob das okay ist oder ob man sich damit Ärger einhandelt?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_pr_fungsschema_berechtigtes_interesse__art__6_abs__1_lit__f_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Prüfungsschema Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) – Dreistufiger Test"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 lit. f DSGVO",
+        "EG 47 DSGVO"
+      ],
+      "expected_keywords": [
+        "Dreistufiger Test",
+        "Interessenabwägung",
+        "Erforderlichkeit",
+        "Berechtigtes Interesse",
+        "Datenminimierung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 lit. f DSGVO",
+      "EG 47 DSGVO"
+    ],
+    "expected_keywords": [
+      "Dreistufiger Test",
+      "Interessenabwägung",
+      "Erforderlichkeit",
+      "Berechtigtes Interesse",
+      "Datenminimierung"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_pr_fungsschema_berechtigtes_interesse__art__6_abs__1_lit__f_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_026",
+    "source_canonical_id": "canonical_026",
+    "level": "messy",
+    "question": "Ein kleines Startup für KI-gestützte Bewerberauswahl will ab sofort automatisiert Lebensläufe scannen und Bewerber nach „Kulturfit“ bewerten – ohne dass jemand manuell mitguckt. Müssen wir da vorher irgendwas Offizielles prüfen, wie riskant das für die Leute ist, und wenn ja, was genau muss da rein?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_36",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_pr_fungsschema_datenschutz_folgenabsch_tzung__dsfa__art__35_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 35 DSGVO (Teil 1)",
+      "Art. 35 DSGVO (Teil 2)",
+      "Art. 36 DSGVO",
+      "Art. 9 DSGVO (Teil 1)",
+      "Art. 9 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Prüfungsschema Datenschutz-Folgenabschätzung (DSFA, Art. 35 DSGVO)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 35 DSGVO",
+        "Art. 36 DSGVO",
+        "Art. 9 DSGVO"
+      ],
+      "expected_keywords": [
+        "hohes Risiko",
+        "Verhältnismäßigkeit",
+        "Konsultation",
+        "Profiling",
+        "Abhilfemaßnahmen"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 35 DSGVO",
+      "Art. 36 DSGVO",
+      "Art. 9 DSGVO"
+    ],
+    "expected_keywords": [
+      "hohes Risiko",
+      "Verhältnismäßigkeit",
+      "Konsultation",
+      "Profiling",
+      "Abhilfemaßnahmen"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_pr_fungsschema_datenschutz_folgenabsch_tzung__dsfa__art__35_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_027",
+    "source_canonical_id": "canonical_027",
+    "level": "messy",
+    "question": "Ein Kunde droht mit einer Klage, weil seine persönlichen Daten bei uns im Fitnessstudio durch einen Hackerangriff geleakt wurden – er fühlt sich bloßgestellt und verlangt jetzt Geld für den seelischen Ärger. Was muss er konkret beweisen, damit das vor Gericht durchgeht?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_82",
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_pr_fungsschema_schadensersatz__art__82_dsgvo_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 82 DSGVO",
+      "Art. 28 DSGVO (Teil 1)",
+      "Art. 28 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Prüfungsschema Schadensersatz (Art. 82 DSGVO)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 82 DSGVO",
+        "Art. 28 DSGVO"
+      ],
+      "expected_keywords": [
+        "immaterieller Schaden",
+        "Kausalität",
+        "Exkulpation",
+        "Ausgleichsfunktion",
+        "EuGH-Rechtsprechung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 82 DSGVO",
+      "Art. 28 DSGVO"
+    ],
+    "expected_keywords": [
+      "immaterieller Schaden",
+      "Kausalität",
+      "Exkulpation",
+      "Ausgleichsfunktion",
+      "EuGH-Rechtsprechung"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_pr_fungsschema_schadensersatz__art__82_dsgvo_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_028",
+    "source_canonical_id": "canonical_028",
+    "level": "messy",
+    "question": "Wenn ein deutsches Unternehmen wegen Datenschutzverstößen in Frankreich und Italien gleichzeitig Ärger kriegt – wie sorgen die Behörden eigentlich dafür, dass alle nach denselben Regeln urteilen und nicht jeder sein eigenes Ding durchzieht?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_56",
+        "dsgvo_art_65"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_vorlageverfahren_art__267_aeuv_und_one_stop_shop_mechanismus"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 56 DSGVO",
+      "Art. 65 DSGVO"
+    ],
+    "should_ids": [
+      "Vorlageverfahren Art. 267 AEUV und One-Stop-Shop-Mechanismus"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 56 DSGVO",
+        "Art. 65 DSGVO",
+        "Art. 267 AEUV"
+      ],
+      "expected_keywords": [
+        "Vorlageverfahren",
+        "One-Stop-Shop-Mechanismus",
+        "Kohärenzverfahren",
+        "EDSA",
+        "federführende Aufsichtsbehörde"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 56 DSGVO",
+      "Art. 65 DSGVO",
+      "Art. 267 AEUV"
+    ],
+    "expected_keywords": [
+      "Vorlageverfahren",
+      "One-Stop-Shop-Mechanismus",
+      "Kohärenzverfahren",
+      "EDSA",
+      "federführende Aufsichtsbehörde"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_vorlageverfahren_art__267_aeuv_und_one_stop_shop_mechanismus",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_029",
+    "source_canonical_id": "canonical_029",
+    "level": "messy",
+    "question": "Ein Kunde hat bei uns im Elektronikmarkt persönliche Daten durch einen IT-Fehler verloren und verlangt jetzt Geld als Entschädigung – worauf kommt’s da eigentlich an, damit wir wissen, wie viel wir zahlen müssen oder ob das überhaupt gerechtfertigt ist?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_82"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_687_21_mediamarktsaturn___ausgleichsfunktion_des_scha"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 82 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-687/21 MediaMarktSaturn – Ausgleichsfunktion des Schadensersatzes"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 82 DSGVO"
+      ],
+      "expected_keywords": [
+        "Schadensersatz",
+        "Ausgleichsfunktion",
+        "tatsächlicher Schaden",
+        "Punitive Damages"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 82 DSGVO"
+    ],
+    "expected_keywords": [
+      "Schadensersatz",
+      "Ausgleichsfunktion",
+      "tatsächlicher Schaden",
+      "Punitive Damages"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_eugh_c_687_21_mediamarktsaturn___ausgleichsfunktion_des_scha",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_030",
+    "source_canonical_id": "canonical_030",
+    "level": "messy",
+    "question": "Ein Kunde meint, sein Fitnessstudio könnte seine Gesundheitsdaten an Versicherungen verkaufen – ohne Beweis, nur ein komisches Gefühl. Kann er trotzdem Schadensersatz verlangen, nur weil er sich jetzt ständig Sorgen macht?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_82"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_590_22___bef_rchtung_von_datenmissbrauch_als_immateri"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 82 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-590/22 – Befürchtung von Datenmissbrauch als immaterieller Schaden"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 82 DSGVO"
+      ],
+      "expected_keywords": [
+        "immaterieller Schaden",
+        "Datenmissbrauch",
+        "begründete Befürchtung",
+        "nachvollziehbar",
+        "personenbezogene Daten"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 82 DSGVO"
+    ],
+    "expected_keywords": [
+      "immaterieller Schaden",
+      "Datenmissbrauch",
+      "begründete Befürchtung",
+      "nachvollziehbar",
+      "personenbezogene Daten"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_eugh_c_590_22___bef_rchtung_von_datenmissbrauch_als_immateri",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_031",
+    "source_canonical_id": "canonical_031",
+    "level": "messy",
+    "question": "Ein Kunde hat bei einer Online-Bank persönliche Daten verloren, und jetzt nutzt jemand seine Identität für Betrug – kann er von der Bank Schadensersatz für den Stress und die Ängste verlangen, auch wenn er kein Geld verloren hat?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_82"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_182_22_scalable_capital___identit_tsdiebstahl_als_sch"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 82 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-182/22 Scalable Capital – Identitätsdiebstahl als Schaden"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 82 DSGVO"
+      ],
+      "expected_keywords": [
+        "immaterieller Schaden",
+        "Datenleck",
+        "Identitätsdiebstahl",
+        "ersatzfähiger Schaden",
+        "tatsächlicher Schaden"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 82 DSGVO"
+    ],
+    "expected_keywords": [
+      "immaterieller Schaden",
+      "Datenleck",
+      "Identitätsdiebstahl",
+      "ersatzfähiger Schaden",
+      "tatsächlicher Schaden"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_eugh_c_182_22_scalable_capital___identit_tsdiebstahl_als_sch",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_032",
+    "source_canonical_id": "canonical_032",
+    "level": "messy",
+    "question": "Ein Kunde hat bei uns im Fitnessstudio seine Mitgliedsdaten preisgegeben, weil wir ihm versichert haben, dass alles sicher ist – jetzt sind die Daten durch einen Hackerangriff im Netz aufgetaucht, aber es gab noch keinen Missbrauch. Kann er trotzdem von uns Schadensersatz verlangen, nur weil er sich jetzt ständig Sorgen macht?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_82"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_200_23___kontrollverlust_als_schaden"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 82 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-200/23 – Kontrollverlust als Schaden"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 82 DSGVO"
+      ],
+      "expected_keywords": [
+        "immaterieller Schaden",
+        "Kontrollverlust",
+        "personenbezogene Daten",
+        "unbefugte Offenlegung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 82 DSGVO"
+    ],
+    "expected_keywords": [
+      "immaterieller Schaden",
+      "Kontrollverlust",
+      "personenbezogene Daten",
+      "unbefugte Offenlegung"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_eugh_c_200_23___kontrollverlust_als_schaden",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_033",
+    "source_canonical_id": "canonical_033",
+    "level": "messy",
+    "question": "Ein Kunde hat sich bei uns im Fitnessstudio über eine peinliche Mail beschwert, wo sein Name und Trainingsplan versehentlich an alle Mitglieder ging – jetzt will er Schadensersatz für die Blamage. Reicht es, wenn ich mich persönlich bei ihm entschuldige und ihm ein Jahr Mitgliedschaft schenke, oder kann er trotzdem noch auf Geld bestehen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_82"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_507_23___entschuldigung_als_schadensausgleich__t_354_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 82 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-507/23 – Entschuldigung als Schadensausgleich; T-354/22 Bindl – 400 EUR für Drittlandtransfer"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 82 DSGVO",
+        "Art. 4 Nr. 12 DSGVO"
+      ],
+      "expected_keywords": [
+        "immaterieller Schaden",
+        "Schadensersatz",
+        "Entschuldigung",
+        "Drittlandtransfer",
+        "Ausgleich"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 82 DSGVO",
+      "Art. 4 Nr. 12 DSGVO"
+    ],
+    "expected_keywords": [
+      "immaterieller Schaden",
+      "Schadensersatz",
+      "Entschuldigung",
+      "Drittlandtransfer",
+      "Ausgleich"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_eugh_c_507_23___entschuldigung_als_schadensausgleich__t_354_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_034",
+    "source_canonical_id": "canonical_034",
+    "level": "messy",
+    "question": "Ein Online-Shop für Fahrradzubehör will Kunden, die mal was gekauft haben, per Mail über neue Produkte informieren – ohne dass die explizit zugestimmt haben. Wann ist das eigentlich erlaubt, nur weil’s dem Shop „wirtschaftlich nützt“?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_621_22_knltb___kommerzielle_interessen_als_berechtigt"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "EuGH C-621/22 KNLTB – Kommerzielle Interessen als berechtigtes Interesse"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 lit. f DSGVO"
+      ],
+      "expected_keywords": [
+        "berechtigtes Interesse",
+        "Interessenabwägung",
+        "kommerzielle Interessen",
+        "EuGH",
+        "Datenverarbeitung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 lit. f DSGVO"
+    ],
+    "expected_keywords": [
+      "berechtigtes Interesse",
+      "Interessenabwägung",
+      "kommerzielle Interessen",
+      "EuGH",
+      "Datenverarbeitung"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_eugh_c_621_22_knltb___kommerzielle_interessen_als_berechtigt",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_035",
+    "source_canonical_id": "canonical_035",
+    "level": "messy",
+    "question": "Ein Online-Shop für Sportkleidung will Kundendaten aus Newsletter-Anmeldungen, Bestellhistorie und Social-Media-Profilen kombinieren, um maßgeschneiderte Werbung zu schalten – darf man die Infos einfach so zusammenkleben oder gibt’s da jetzt wegen dem aktuellen EU-Urteil zu Facebooks Daten-Sammelwut neue Spielregeln?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_446_21_schrems_meta___datenminimierung_begrenzt_werbe"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-446/21 Schrems/Meta – Datenminimierung begrenzt Werbenutzung"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 1 lit. c DSGVO"
+      ],
+      "expected_keywords": [
+        "Datenminimierung",
+        "personenbezogene Daten",
+        "Werbezwecke",
+        "EuGH",
+        "Einwilligung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 1 lit. c DSGVO"
+    ],
+    "expected_keywords": [
+      "Datenminimierung",
+      "personenbezogene Daten",
+      "Werbezwecke",
+      "EuGH",
+      "Einwilligung"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_eugh_c_446_21_schrems_meta___datenminimierung_begrenzt_werbe",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_036",
+    "source_canonical_id": "canonical_036",
+    "level": "messy",
+    "question": "Ein Hausverwaltungsbüro hat versehentlich Mieterdaten an falsche Empfänger gemailt – jetzt droht Ärger von der Aufsichtsbehörde. Müssen die damit rechnen, dass es teuer wird, nur weil ein Mitarbeiter im Stress war, oder zählt da, ob sie eigentlich alles richtig machen wollten?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_807_21_deutsche_wohnen___bu_gelder_und_verschuldenspr"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 83 DSGVO (Teil 1)",
+      "Art. 83 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "EuGH C-807/21 Deutsche Wohnen – Bußgelder und Verschuldensprinzip"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 83 DSGVO"
+      ],
+      "expected_keywords": [
+        "Verschuldensprinzip",
+        "Fahrlässigkeit",
+        "Bußgeldbemessung",
+        "Unternehmenshaftung",
+        "Konzernumsatz"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 83 DSGVO"
+    ],
+    "expected_keywords": [
+      "Verschuldensprinzip",
+      "Fahrlässigkeit",
+      "Bußgeldbemessung",
+      "Unternehmenshaftung",
+      "Konzernumsatz"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_eugh_c_807_21_deutsche_wohnen___bu_gelder_und_verschuldenspr",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_037",
+    "source_canonical_id": "canonical_037",
+    "level": "messy",
+    "question": "Ein mittelständischer Logistikdienstleister mit mehreren Tochterfirmen in Europa hat versehentlich Kundendaten falsch weitergegeben – jetzt droht ein Strafgeld. Wie hoch kann das im schlimmsten Fall ausfallen, wenn die Hauptfirma in Deutschland sitzt, aber die Töchter in Polen und Frankreich mehr Umsatz machen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_383_23_ilva___konzernumsatz_bei_bu_geldbemessung"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 83 DSGVO (Teil 1)",
+      "Art. 83 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "EuGH C-383/23 ILVA – Konzernumsatz bei Bußgeldbemessung"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 83 Abs. 4 DSGVO",
+        "Art. 83 Abs. 5 DSGVO"
+      ],
+      "expected_keywords": [
+        "Konzernumsatz",
+        "wirtschaftliche Einheit",
+        "Bußgeldobergrenze",
+        "wettbewerbsrechtlicher Unternehmensbegriff"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 83 Abs. 4 DSGVO",
+      "Art. 83 Abs. 5 DSGVO"
+    ],
+    "expected_keywords": [
+      "Konzernumsatz",
+      "wirtschaftliche Einheit",
+      "Bußgeldobergrenze",
+      "wettbewerbsrechtlicher Unternehmensbegriff"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_eugh_c_383_23_ilva___konzernumsatz_bei_bu_geldbemessung",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_038",
+    "source_canonical_id": "canonical_038",
+    "level": "messy",
+    "question": "In unserer kleinen Spedition wollen wir die GPS-Daten unserer LKW-Fahrer auswerten, um Routen zu optimieren – aber jetzt heißt es plötzlich, die alten Regeln dazu wären nicht mehr gültig. Was müssen wir jetzt beachten, damit wir nicht Ärger mit dem Datenschutz kriegen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_88",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_34_21_____26_bdsg_unanwendbar"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 88 DSGVO",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "BDSG_§_26_Abs.1"
+    ],
+    "should_ids": [
+      "EuGH C-34/21 – § 26 BDSG unanwendbar"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 88 Abs. 2 DSGVO",
+        "Art. 6 Abs. 1 DSGVO",
+        "§ 26 BDSG"
+      ],
+      "expected_keywords": [
+        "Beschäftigtendatenschutz",
+        "spezifischere Vorschriften",
+        "geeignete und besondere Maßnahmen",
+        "Unanwendbarkeit",
+        "Rechtsgrundlage"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 88 Abs. 2 DSGVO",
+      "Art. 6 Abs. 1 DSGVO",
+      "§ 26 BDSG"
+    ],
+    "expected_keywords": [
+      "Beschäftigtendatenschutz",
+      "spezifischere Vorschriften",
+      "geeignete und besondere Maßnahmen",
+      "Unanwendbarkeit",
+      "Rechtsgrundlage"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_eugh_c_34_21_____26_bdsg_unanwendbar",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_039",
+    "source_canonical_id": "canonical_039",
+    "level": "messy",
+    "question": "In unserer Logistikfirma wollen wir die Arbeitszeiten per App tracken – die Belegschaft soll per Betriebsabsprache zustimmen. Reicht das aus, oder müssen wir da noch was beachten, damit das datenschutzrechtlich wasserdicht ist?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_88"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_65_23___betriebsvereinbarungen_m_ssen_dsgvo_konform_s"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 88 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-65/23 – Betriebsvereinbarungen müssen DSGVO-konform sein"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 88 Abs. 2 DSGVO",
+        "Art. 88 Abs. 1 DSGVO",
+        "§ 26 Abs. 4 BDSG"
+      ],
+      "expected_keywords": [
+        "Betriebsvereinbarung",
+        "Rechtsgrundlage",
+        "Datenschutzniveau",
+        "Datenverarbeitung",
+        "Schutzmaßnahmen"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 88 Abs. 2 DSGVO",
+      "Art. 88 Abs. 1 DSGVO",
+      "§ 26 Abs. 4 BDSG"
+    ],
+    "expected_keywords": [
+      "Betriebsvereinbarung",
+      "Rechtsgrundlage",
+      "Datenschutzniveau",
+      "Datenverarbeitung",
+      "Schutzmaßnahmen"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_eugh_c_65_23___betriebsvereinbarungen_m_ssen_dsgvo_konform_s",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_040",
+    "source_canonical_id": "canonical_040",
+    "level": "messy",
+    "question": "Ein Startup für medizinische Diagnose-KIs will Patientendaten nutzen, um ein System zu trainieren, das seltene Krankheiten erkennt – was müssen die Entwickler beachten, wenn sie sensible Gesundheitsdaten verarbeiten und gleichzeitig die neuen EU-Regeln für KI einhalten?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_dsgvo_und_ai_act__ki_verordnung_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 35 DSGVO (Teil 1)",
+      "Art. 35 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "DSGVO und AI Act (KI-Verordnung)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 35 DSGVO",
+        "Art. 10 Abs. 5 AI Act",
+        "Art. 27 AI Act"
+      ],
+      "expected_keywords": [
+        "Folgenabschätzung",
+        "Hochrisiko-KI-Systeme",
+        "personenbezogene Daten",
+        "Bias-Erkennung",
+        "FRIA"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 35 DSGVO",
+      "Art. 10 Abs. 5 AI Act",
+      "Art. 27 AI Act"
+    ],
+    "expected_keywords": [
+      "Folgenabschätzung",
+      "Hochrisiko-KI-Systeme",
+      "personenbezogene Daten",
+      "Bias-Erkennung",
+      "FRIA"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_dsgvo_und_ai_act__ki_verordnung_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_041",
+    "source_canonical_id": "canonical_041",
+    "level": "messy",
+    "question": "Ein Online-Marktplatz für Handwerker will Nutzerdaten nutzen, um gezielt Aufträge vorzuschlagen – aber jetzt gibt’s neue EU-Regeln für Plattformen. Müssen wir da noch was extra beachten, außer der normalen Einwilligung für die Datenverarbeitung?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_dsgvo_und_dsa__digital_services_act_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "DSGVO und DSA (Digital Services Act)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 DSGVO",
+        "Art. 2 Abs. 4 lit. g DSA",
+        "Verordnung (EU) 2022/2065"
+      ],
+      "expected_keywords": [
+        "Rechtsgrundlage",
+        "Datenverarbeitung",
+        "Kooperation",
+        "Aufsichtsbehörden",
+        "personenbezogene Daten"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 DSGVO",
+      "Art. 2 Abs. 4 lit. g DSA",
+      "Verordnung (EU) 2022/2065"
+    ],
+    "expected_keywords": [
+      "Rechtsgrundlage",
+      "Datenverarbeitung",
+      "Kooperation",
+      "Aufsichtsbehörden",
+      "personenbezogene Daten"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_dsgvo_und_dsa__digital_services_act_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_042",
+    "source_canonical_id": "canonical_042",
+    "level": "messy",
+    "question": "Ein Autovermieter will Kundendaten an einen Werkstattpartner weitergeben, weil der jetzt per EU-Gesetz Zugriff auf Reparaturhistorie verlangen darf – wer haftet, wenn dabei was schiefgeht?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_dsgvo_und_data_act___data_governance_act__dga_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "DSGVO und Data Act / Data Governance Act (DGA)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 4 Nr. 7 DSGVO",
+        "Art. 1 Abs. 5 Data Act",
+        "Art. 1 Abs. 3 DGA"
+      ],
+      "expected_keywords": [
+        "Verantwortlicher",
+        "Datenweitergabe",
+        "Vorrang der DSGVO",
+        "Rechtsgrundlage",
+        "personenbezogene Daten"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 4 Nr. 7 DSGVO",
+      "Art. 1 Abs. 5 Data Act",
+      "Art. 1 Abs. 3 DGA"
+    ],
+    "expected_keywords": [
+      "Verantwortlicher",
+      "Datenweitergabe",
+      "Vorrang der DSGVO",
+      "Rechtsgrundlage",
+      "personenbezogene Daten"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_dsgvo_und_data_act___data_governance_act__dga_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_043",
+    "source_canonical_id": "canonical_043",
+    "level": "messy",
+    "question": "Als kleine Physiotherapie-Praxis wollen wir Patientendaten digital in einer Cloud speichern, wo auch KI die Termine optimiert – müssen wir da vorher irgendwas Offizielles prüfen lassen, weil die Daten besonders sensibel sind?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "dsgvo_art_10",
+        "dsgvo_art_22"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_dsk_blacklist___17_dsfa_pflichtige_verarbeitungen"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 35 DSGVO (Teil 1)",
+      "Art. 35 DSGVO (Teil 2)",
+      "Art. 9 DSGVO (Teil 1)",
+      "Art. 9 DSGVO (Teil 2)",
+      "Art. 10 DSGVO",
+      "Art. 22 DSGVO"
+    ],
+    "should_ids": [
+      "DSK-Blacklist – 17 DSFA-pflichtige Verarbeitungen"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 35 Abs. 4 DSGVO",
+        "Art. 9 DSGVO",
+        "Art. 10 DSGVO",
+        "Art. 22 DSGVO"
+      ],
+      "expected_keywords": [
+        "Datenschutz-Folgenabschätzung",
+        "DSFA",
+        "Verarbeitungstätigkeiten",
+        "DSK-Blacklist",
+        "Videoüberwachung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 35 Abs. 4 DSGVO",
+      "Art. 9 DSGVO",
+      "Art. 10 DSGVO",
+      "Art. 22 DSGVO"
+    ],
+    "expected_keywords": [
+      "Datenschutz-Folgenabschätzung",
+      "DSFA",
+      "Verarbeitungstätigkeiten",
+      "DSK-Blacklist",
+      "Videoüberwachung"
+    ],
+    "min_sources": 2,
+    "category": "behoerden",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_dsk_blacklist___17_dsfa_pflichtige_verarbeitungen",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_044",
+    "source_canonical_id": "canonical_044",
+    "level": "messy",
+    "question": "Als Physiotherapie-Praxis wollen wir eine neue App einführen, die Patientendaten wie Behandlungspläne und Fortschrittsberichte automatisch auswertet – wann müssen wir da eigentlich vorher prüfen lassen, ob das datenschutzrechtlich heikel werden könnte?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_36"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_wp_248___2_aus_9_regel_f_r_dsfa_pflicht"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 35 DSGVO (Teil 1)",
+      "Art. 35 DSGVO (Teil 2)",
+      "Art. 36 DSGVO"
+    ],
+    "should_ids": [
+      "WP 248 – 2-aus-9-Regel für DSFA-Pflicht"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 35 DSGVO",
+        "Art. 36 DSGVO"
+      ],
+      "expected_keywords": [
+        "Datenschutz-Folgenabschätzung",
+        "Risikobewertung",
+        "Profiling",
+        "sensible Daten",
+        "automatisierte Entscheidungsfindung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 35 DSGVO",
+      "Art. 36 DSGVO"
+    ],
+    "expected_keywords": [
+      "Datenschutz-Folgenabschätzung",
+      "Risikobewertung",
+      "Profiling",
+      "sensible Daten",
+      "automatisierte Entscheidungsfindung"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_wp_248___2_aus_9_regel_f_r_dsfa_pflicht",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_045",
+    "source_canonical_id": "canonical_045",
+    "level": "messy",
+    "question": "Ein Kunde will bei mir im Möbelhaus einen Kredit aufnehmen, aber die Bank lehnt ab – angeblich wegen schlechter Schufa-Bewertung. Muss die Bank mir jetzt erklären, *wie* die Schufa zu dem Ergebnis kommt, oder kann die einfach nur sagen „Computer sagt nein“ und fertig?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_22",
+        "dsgvo_art_15"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_634_21_schufa___scoring_als_automatisierte_entscheidu"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 22 DSGVO",
+      "Art. 15 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-634/21 SCHUFA – Scoring als automatisierte Entscheidung"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 22 Abs. 1 DSGVO",
+        "Art. 15 Abs. 1 lit. h DSGVO"
+      ],
+      "expected_keywords": [
+        "automatisierte Entscheidung",
+        "Scoring",
+        "Recht auf Erläuterung",
+        "Vorverlagerung",
+        "Ausnahme"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 22 Abs. 1 DSGVO",
+      "Art. 15 Abs. 1 lit. h DSGVO"
+    ],
+    "expected_keywords": [
+      "automatisierte Entscheidung",
+      "Scoring",
+      "Recht auf Erläuterung",
+      "Vorverlagerung",
+      "Ausnahme"
+    ],
+    "min_sources": 2,
+    "category": "rechtsprechung",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_eugh_c_634_21_schufa___scoring_als_automatisierte_entscheidu",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_046",
+    "source_canonical_id": "canonical_046",
+    "level": "messy",
+    "question": "Ein Kreditauskunftei will mir nicht verraten, *wie* sie meine Bonität berechnet – nur, dass es „automatisch“ passiert. Was müssen die mir *mindestens* erklären, damit ich verstehe, warum ich abgelehnt wurde, ohne dass sie ihr System komplett auseinandernehmen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_15"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_eugh_c_203_22_dun___bradstreet___kein_recht_auf_algorithmus_"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 15 DSGVO"
+    ],
+    "should_ids": [
+      "EuGH C-203/22 Dun & Bradstreet – Kein Recht auf Algorithmus, aber aussagekräftige Logik-Info"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 15 Abs. 1 lit. h DSGVO"
+      ],
+      "expected_keywords": [
+        "aussagekräftige Informationen",
+        "Funktionsweise",
+        "Gewichtung der Faktoren",
+        "Nachvollziehbarkeit",
+        "Geschäftsgeheimnis"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 15 Abs. 1 lit. h DSGVO"
+    ],
+    "expected_keywords": [
+      "aussagekräftige Informationen",
+      "Funktionsweise",
+      "Gewichtung der Faktoren",
+      "Nachvollziehbarkeit",
+      "Geschäftsgeheimnis"
+    ],
+    "min_sources": 2,
+    "category": "betroffenenrechte",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_eugh_c_203_22_dun___bradstreet___kein_recht_auf_algorithmus_",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_047",
+    "source_canonical_id": "canonical_047",
+    "level": "messy",
+    "question": "Ein Online-Shop in Deutschland kriegt wegen derselben Datenpanne erst eine Strafe vom Landesdatenschutzbeauftragten und dann noch eine vom irischen DPC – obwohl die Kundendaten nur in Deutschland verarbeitet wurden. Kann man sich da irgendwie wehren, weil das doch doppelt bestraft wird?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_ne_bis_in_idem_und_nulla_poena_sine_lege_im_datenschutzrecht"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 83 DSGVO (Teil 1)",
+      "Art. 83 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Ne bis in idem und nulla poena sine lege im Datenschutzrecht"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 50 GRCh",
+        "Art. 83 DSGVO",
+        "Art. 49 GRCh"
+      ],
+      "expected_keywords": [
+        "Doppelbestrafung",
+        "Verwaltungssanktionen",
+        "Bußgelder",
+        "Tatbestandsbestimmtheit"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 50 GRCh",
+      "Art. 83 DSGVO",
+      "Art. 49 GRCh"
+    ],
+    "expected_keywords": [
+      "Doppelbestrafung",
+      "Verwaltungssanktionen",
+      "Bußgelder",
+      "Tatbestandsbestimmtheit"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_ne_bis_in_idem_und_nulla_poena_sine_lege_im_datenschutzrecht",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_048",
+    "source_canonical_id": "canonical_048",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für Handmade-Schmuck will jetzt bei jedem Kauf die Handynummer der Kundin abfragen – angeblich für Lieferupdates. Aber die meisten Bestellungen gehen eh per DHL-Paketstation raus, wo man gar keine Nummer braucht. Wann ist so eine Abfrage eigentlich zu viel des Guten und wann darf man die Daten einfach so sammeln?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_verh_ltnism__igkeitsprinzip_im_datenschutzrecht__art__52_abs"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 5 DSGVO"
+    ],
+    "should_ids": [
+      "Verhältnismäßigkeitsprinzip im Datenschutzrecht (Art. 52 Abs. 1 GRCh)"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 52 Abs. 1 GRCh",
+        "Art. 6 Abs. 1 DSGVO",
+        "Art. 5 Abs. 1 lit. c DSGVO"
+      ],
+      "expected_keywords": [
+        "Verhältnismäßigkeitsprinzip",
+        "Geeignetheit",
+        "Erforderlichkeit",
+        "Angemessenheit",
+        "Grundrechte"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 52 Abs. 1 GRCh",
+      "Art. 6 Abs. 1 DSGVO",
+      "Art. 5 Abs. 1 lit. c DSGVO"
+    ],
+    "expected_keywords": [
+      "Verhältnismäßigkeitsprinzip",
+      "Geeignetheit",
+      "Erforderlichkeit",
+      "Angemessenheit",
+      "Grundrechte"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_verh_ltnism__igkeitsprinzip_im_datenschutzrecht__art__52_abs",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_049",
+    "source_canonical_id": "canonical_049",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für Fahrradzubehör möchte seinen Stammkunden gelegentlich Rabattaktionen per Mail schicken – aber die meisten haben nie ein Häkchen bei „Newsletter“ gesetzt. Darf man die trotzdem einfach anschreiben, nur weil sie mal was gekauft haben?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_21"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_verhaeltnis_dsgvo_ttdsg_uwg_werbung"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 21 DSGVO"
+    ],
+    "should_ids": [
+      "Verhältnis DSGVO – TTDSG – § 7 UWG bei Werbung und Direktmarketing"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "§ 7 Abs. 3 UWG",
+        "Art. 6 Abs. 1 lit. f DSGVO",
+        "Art. 21 Abs. 2 DSGVO"
+      ],
+      "expected_keywords": [
+        "Bestandskundenausnahme",
+        "Widerspruchsrecht",
+        "berechtigtes Interesse",
+        "Direktwerbung",
+        "Opt-in"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "§ 7 Abs. 3 UWG",
+      "Art. 6 Abs. 1 lit. f DSGVO",
+      "Art. 21 Abs. 2 DSGVO"
+    ],
+    "expected_keywords": [
+      "Bestandskundenausnahme",
+      "Widerspruchsrecht",
+      "berechtigtes Interesse",
+      "Direktwerbung",
+      "Opt-in"
+    ],
+    "min_sources": 2,
+    "category": "cookies_tracking",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_verhaeltnis_dsgvo_ttdsg_uwg_werbung",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_050",
+    "source_canonical_id": "canonical_050",
+    "level": "messy",
+    "question": "Als Onlinehändler für handgefertigte Möbel aus Deutschland will ich Kundendaten für Bestellungen und Newsletter an unsere Tochterfirma in den USA schicken – geht das einfach so, oder muss ich da noch extra was beachten, weil die EU da streng ist?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_5",
+        "dsgvo_art_46"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_angemessenheitsbeschluesse_art45"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 45 DSGVO (Teil 1)",
+      "Art. 45 DSGVO (Teil 2)",
+      "Art. 5 DSGVO",
+      "Art. 46 DSGVO"
+    ],
+    "should_ids": [
+      "Angemessenheitsbeschlüsse der EU-Kommission nach Art. 45 DSGVO – Vollständige Liste"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 45 DSGVO",
+        "Art. 5 Abs. 2 DSGVO",
+        "Art. 46 DSGVO"
+      ],
+      "expected_keywords": [
+        "Angemessenheitsbeschluss",
+        "Datentransfer",
+        "Drittland",
+        "Rechenschaftspflicht",
+        "Transfer Impact Assessment"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 45 DSGVO",
+      "Art. 5 Abs. 2 DSGVO",
+      "Art. 46 DSGVO"
+    ],
+    "expected_keywords": [
+      "Angemessenheitsbeschluss",
+      "Datentransfer",
+      "Drittland",
+      "Rechenschaftspflicht",
+      "Transfer Impact Assessment"
+    ],
+    "min_sources": 2,
+    "category": "drittlandtransfer",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_angemessenheitsbeschluesse_art45",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_051",
+    "source_canonical_id": "canonical_051",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für nachhaltige Kinderkleidung möchte monatlich Infos zu neuen Kollektionen und Rabattaktionen per E-Mail verschicken – aber wie genau müssen die Kunden da eigentlich ihr Okay geben, und was ist mit diesen unsichtbaren Zählpixeln, die nachverfolgen, wer die Mails wirklich öffnet?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_newsletter_einwilligung_dreistufig"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "gran_TDDDG_§_25",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_newsletter_einwilligung_dreistufig"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "§ 7 Abs. 2 Nr. 3 UWG",
+        "§ 25 Abs. 1 TDDDG",
+        "Art. 6 Abs. 1 lit. a DSGVO"
+      ],
+      "expected_keywords": [
+        "Einwilligung",
+        "Double Opt-in",
+        "Tracking-Pixel",
+        "Widerspruchsrecht",
+        "Bestandskundenausnahme"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "§ 7 Abs. 2 Nr. 3 UWG",
+      "§ 25 Abs. 1 TDDDG",
+      "Art. 6 Abs. 1 lit. a DSGVO"
+    ],
+    "expected_keywords": [
+      "Einwilligung",
+      "Double Opt-in",
+      "Tracking-Pixel",
+      "Widerspruchsrecht",
+      "Bestandskundenausnahme"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_newsletter_einwilligung_dreistufig",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_052",
+    "source_canonical_id": "canonical_052",
+    "level": "messy",
+    "question": "In nem kleinen Logistikbetrieb checken die Chefs manchmal die Mails der Lagerarbeiter, weil die eigentlich nur für die Arbeit da sein sollen – aber keiner hat denen je gesagt, *wie* genau die das machen dürfen oder was zu weit geht. Was ist da eigentlich erlaubt und was nicht?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_beschaeftigtendatenschutz_email_it"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "BDSG_§_26_Abs.1"
+    ],
+    "should_ids": [
+      "mw_beschaeftigtendatenschutz_email_it"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 lit. f DSGVO",
+        "Art. 6 Abs. 1 lit. b DSGVO",
+        "§ 26 BDSG",
+        "§ 87 Abs. 1 Nr. 6 BetrVG"
+      ],
+      "expected_keywords": [
+        "Verhältnismäßigkeit",
+        "berechtigtes Interesse",
+        "Betriebsvereinbarung",
+        "Überwachung",
+        "Datenschutz"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 lit. f DSGVO",
+      "Art. 6 Abs. 1 lit. b DSGVO",
+      "§ 26 BDSG",
+      "§ 87 Abs. 1 Nr. 6 BetrVG"
+    ],
+    "expected_keywords": [
+      "Verhältnismäßigkeit",
+      "berechtigtes Interesse",
+      "Betriebsvereinbarung",
+      "Überwachung",
+      "Datenschutz"
+    ],
+    "min_sources": 2,
+    "category": "beschaeftigtendatenschutz",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_beschaeftigtendatenschutz_email_it",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_053",
+    "source_canonical_id": "canonical_053",
+    "level": "messy",
+    "question": "Ein Kunde füllt bei mir im Fitnessstudio das Anmeldeformular aus – was muss ich ihm da genau über seine Daten sagen? Und wenn ich stattdessen die Adresse von seinem alten Studio übernehme, kommt da noch was dazu?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_13",
+        "dsgvo_art_14_part0",
+        "dsgvo_art_14_part1",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_informationspflichten_art13_art14"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 13 DSGVO",
+      "Art. 14 DSGVO (Teil 1)",
+      "Art. 14 DSGVO (Teil 2)",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_informationspflichten_art13_art14"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 13 DSGVO",
+        "Art. 14 DSGVO",
+        "Art. 6 Abs. 1 lit. f DSGVO"
+      ],
+      "expected_keywords": [
+        "Informationspflicht",
+        "Direkterhebung",
+        "Dritterhebung",
+        "Betroffenenrechte",
+        "Rechtsgrundlage"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 13 DSGVO",
+      "Art. 14 DSGVO",
+      "Art. 6 Abs. 1 lit. f DSGVO"
+    ],
+    "expected_keywords": [
+      "Informationspflicht",
+      "Direkterhebung",
+      "Dritterhebung",
+      "Betroffenenrechte",
+      "Rechtsgrundlage"
+    ],
+    "min_sources": 2,
+    "category": "betroffenenrechte",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_informationspflichten_art13_art14",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_054",
+    "source_canonical_id": "canonical_054",
+    "level": "messy",
+    "question": "Ein kleines Startup für Sprachassistenten will mit echten Kundengesprächen (die sie aufgezeichnet haben) ihre KI trainieren – dürfen die das einfach so machen, oder müssen sie vorher was beachten?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_89"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_ki_training_zweckbindung"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 5 DSGVO",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 89 DSGVO"
+    ],
+    "should_ids": [
+      "mw_ki_training_zweckbindung"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 5 Abs. 1 lit. b DSGVO",
+        "Art. 6 Abs. 4 DSGVO",
+        "Art. 6 Abs. 1 lit. f DSGVO",
+        "Art. 89 DSGVO"
+      ],
+      "expected_keywords": [
+        "Zweckbindung",
+        "Interessenabwägung",
+        "Forschungsprivileg",
+        "Datenminimierung",
+        "Rechtsgrundlage"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 5 Abs. 1 lit. b DSGVO",
+      "Art. 6 Abs. 4 DSGVO",
+      "Art. 6 Abs. 1 lit. f DSGVO",
+      "Art. 89 DSGVO"
+    ],
+    "expected_keywords": [
+      "Zweckbindung",
+      "Interessenabwägung",
+      "Forschungsprivileg",
+      "Datenminimierung",
+      "Rechtsgrundlage"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_ki_training_zweckbindung",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_055",
+    "source_canonical_id": "canonical_055",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für Handmade-Schmuck will mit einer Influencerin zusammenarbeiten – sie postet Fotos von Kunden mit deren Einwilligung auf Instagram, aber der Shop speichert die Adressen für den Versand. Wer haftet eigentlich, wenn da was schiefgeht mit den Daten, und woran merkt man, dass man da überhaupt gemeinsam in der Pflicht steht?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_26",
+        "dsgvo_art_82"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_gemeinsame_verantwortlichkeit_art26"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 26 DSGVO",
+      "Art. 82 DSGVO"
+    ],
+    "should_ids": [
+      "mw_gemeinsame_verantwortlichkeit_art26"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 4 Nr. 7 DSGVO",
+        "Art. 26 DSGVO",
+        "Art. 82 Abs. 4 DSGVO"
+      ],
+      "expected_keywords": [
+        "gemeinsame Verantwortlichkeit",
+        "Zwecke und Mittel",
+        "Joint-Controller-Vereinbarung",
+        "gesamtschuldnerische Haftung",
+        "Auftragsverarbeitung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 4 Nr. 7 DSGVO",
+      "Art. 26 DSGVO",
+      "Art. 82 Abs. 4 DSGVO"
+    ],
+    "expected_keywords": [
+      "gemeinsame Verantwortlichkeit",
+      "Zwecke und Mittel",
+      "Joint-Controller-Vereinbarung",
+      "gesamtschuldnerische Haftung",
+      "Auftragsverarbeitung"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_gemeinsame_verantwortlichkeit_art26",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_056",
+    "source_canonical_id": "canonical_056",
+    "level": "messy",
+    "question": "Ein kleines Marketingteam will ChatGPT nutzen, um Kunden-E-Mails automatisch zu analysieren – dürfen die einfach die Adressen und Inhalte da reinpacken, oder gibt’s da Probleme, wenn die Daten irgendwo in den USA landen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_44",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_ki_datenschutz_pruefungsschema"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 28 DSGVO (Teil 1)",
+      "Art. 28 DSGVO (Teil 2)",
+      "Art. 44 DSGVO",
+      "Art. 35 DSGVO (Teil 1)",
+      "Art. 35 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_ki_datenschutz_pruefungsschema"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 DSGVO",
+        "Art. 28 DSGVO",
+        "Art. 44 DSGVO",
+        "Art. 35 DSGVO"
+      ],
+      "expected_keywords": [
+        "Auftragsverarbeitung",
+        "Drittlandtransfer",
+        "Datenschutz-Folgenabschätzung",
+        "Rechtsgrundlage",
+        "Zweckbindung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 DSGVO",
+      "Art. 28 DSGVO",
+      "Art. 44 DSGVO",
+      "Art. 35 DSGVO"
+    ],
+    "expected_keywords": [
+      "Auftragsverarbeitung",
+      "Drittlandtransfer",
+      "Datenschutz-Folgenabschätzung",
+      "Rechtsgrundlage",
+      "Zweckbindung"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_ki_datenschutz_pruefungsschema",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_057",
+    "source_canonical_id": "canonical_057",
+    "level": "messy",
+    "question": "Ein Fitnessstudio will in den Umkleiden und am Empfang Kameras aufhängen – was muss der Chef da beachten, damit er keine Ärger mit Kunden oder Behörden kriegt?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_4_Abs.1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_videoueberwachung_pruefungsschema"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "BDSG_§_4_Abs.1"
+    ],
+    "should_ids": [
+      "mw_videoueberwachung_pruefungsschema"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 lit. f DSGVO",
+        "§ 4 BDSG"
+      ],
+      "expected_keywords": [
+        "Interessenabwägung",
+        "Verhältnismäßigkeit",
+        "Hinweispflicht",
+        "Speicherdauer"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 lit. f DSGVO",
+      "§ 4 BDSG"
+    ],
+    "expected_keywords": [
+      "Interessenabwägung",
+      "Verhältnismäßigkeit",
+      "Hinweispflicht",
+      "Speicherdauer"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_videoueberwachung_pruefungsschema",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_058",
+    "source_canonical_id": "canonical_058",
+    "level": "messy",
+    "question": "Ein ehemaliger Kunde droht mir als Inhaber einer kleinen Marketingagentur mit Anwalt, weil sein Name bei Google noch mit einem alten, peinlichen Projekt von uns verknüpft wird – was kann ich jetzt konkret tun, damit das endlich verschwindet, ohne dass ich mir Ärger einhandle?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_17",
+        "dsgvo_art_21",
+        "dsgvo_art_19"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_recht_auf_vergessenwerden_pruefungsschema"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 17 DSGVO",
+      "Art. 21 DSGVO",
+      "Art. 19 DSGVO"
+    ],
+    "should_ids": [
+      "mw_recht_auf_vergessenwerden_pruefungsschema"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 17 DSGVO",
+        "Art. 21 DSGVO",
+        "Art. 19 DSGVO"
+      ],
+      "expected_keywords": [
+        "Löschung",
+        "Abwägung",
+        "Suchmaschinenbetreiber",
+        "öffentliches Interesse",
+        "EuGH-Urteil"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 17 DSGVO",
+      "Art. 21 DSGVO",
+      "Art. 19 DSGVO"
+    ],
+    "expected_keywords": [
+      "Löschung",
+      "Abwägung",
+      "Suchmaschinenbetreiber",
+      "öffentliches Interesse",
+      "EuGH-Urteil"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_recht_auf_vergessenwerden_pruefungsschema",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_059",
+    "source_canonical_id": "canonical_059",
+    "level": "messy",
+    "question": "Ein Kunde aus der Logistikbranche will seine Kundendaten an eine US-Softwarefirma schicken, die nicht in diesem offiziellen EU-Datenschutzabkommen drinsteht – was muss er jetzt konkret tun, damit das keine Ärger gibt?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_46",
+        "dsgvo_art_44"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_data_privacy_framework__dpf__und_pr_fungsschema_drittlandtra"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 45 DSGVO (Teil 1)",
+      "Art. 45 DSGVO (Teil 2)",
+      "Art. 46 DSGVO",
+      "Art. 44 DSGVO"
+    ],
+    "should_ids": [
+      "Data Privacy Framework (DPF) und Prüfungsschema Drittlandtransfer"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 45 DSGVO",
+        "Art. 46 DSGVO",
+        "Art. 44 DSGVO"
+      ],
+      "expected_keywords": [
+        "Standardvertragsklauseln",
+        "Transfer Impact Assessment",
+        "Drittlandtransfer",
+        "Angemessenheitsbeschluss",
+        "Dokumentation"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 45 DSGVO",
+      "Art. 46 DSGVO",
+      "Art. 44 DSGVO"
+    ],
+    "expected_keywords": [
+      "Standardvertragsklauseln",
+      "Transfer Impact Assessment",
+      "Drittlandtransfer",
+      "Angemessenheitsbeschluss",
+      "Dokumentation"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_data_privacy_framework__dpf__und_pr_fungsschema_drittlandtra",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_060",
+    "source_canonical_id": "canonical_060",
+    "level": "messy",
+    "question": "Als Betreiber eines kleinen Online-Shops für nachhaltige Mode will ich wissen, was ich beachten muss, damit die Besucher meiner Seite nicht plötzlich Werbung für meine Konkurrenz sehen – ohne dass ich Ärger mit dem Gesetz bekomme.",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_7"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_pruefungsschema_cookies_tracking"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "gran_TDDDG_§_25",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 7 DSGVO"
+    ],
+    "should_ids": [
+      "mw_pruefungsschema_cookies_tracking"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "§ 25 TDDDG",
+        "Art. 4 Nr. 11 DSGVO",
+        "Art. 6 Abs. 1 DSGVO",
+        "Art. 7 Abs. 4 DSGVO"
+      ],
+      "expected_keywords": [
+        "Einwilligung",
+        "Opt-In",
+        "personenbezogene Daten",
+        "Third-Party-Cookies",
+        "Koppelungsverbot"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "§ 25 TDDDG",
+      "Art. 4 Nr. 11 DSGVO",
+      "Art. 6 Abs. 1 DSGVO",
+      "Art. 7 Abs. 4 DSGVO"
+    ],
+    "expected_keywords": [
+      "Einwilligung",
+      "Opt-In",
+      "personenbezogene Daten",
+      "Third-Party-Cookies",
+      "Koppelungsverbot"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_pruefungsschema_cookies_tracking",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_061",
+    "source_canonical_id": "canonical_061",
+    "level": "messy",
+    "question": "Ein kleines Startup für personalisierte Lern-Apps will KI nutzen, um Nutzer:innen basierend auf ihren Lernfortschritten Tipps zu geben – aber wie genau muss man da eigentlich aufpassen, dass man nicht versehentlich gegen Regeln verstößt, wenn die KI mit echten Nutzerdaten trainiert wird?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_dsk_ki_positionen"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 35 DSGVO (Teil 1)",
+      "Art. 35 DSGVO (Teil 2)",
+      "Art. 5 DSGVO",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_dsk_ki_positionen"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 35 DSGVO",
+        "Art. 5 DSGVO",
+        "Art. 6 DSGVO"
+      ],
+      "expected_keywords": [
+        "Datenschutz-Folgenabschätzung",
+        "Transparenz",
+        "Zweckbindung",
+        "Rechtsgrundlage",
+        "personenbezogene Daten"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 35 DSGVO",
+      "Art. 5 DSGVO",
+      "Art. 6 DSGVO"
+    ],
+    "expected_keywords": [
+      "Datenschutz-Folgenabschätzung",
+      "Transparenz",
+      "Zweckbindung",
+      "Rechtsgrundlage",
+      "personenbezogene Daten"
+    ],
+    "min_sources": 2,
+    "category": "behoerden",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_dsk_ki_positionen",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_062",
+    "source_canonical_id": "canonical_062",
+    "level": "messy",
+    "question": "Ein kleiner Fitnessstudio-Besitzer will in den Umkleiden Kameras aufhängen, weil öfter Sachen geklaut werden – aber er hat Angst, dass er sich damit Ärger einhandelt. Gibt’s irgendwo offizielle Tipps von den Datenschützern, wie man das richtig macht, und sind die noch aktuell?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_dsk_videoueberwachung_stub"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "mw_dsk_videoueberwachung_stub"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [],
+      "expected_keywords": [
+        "Videoüberwachung",
+        "Datenschutzkonferenz",
+        "nicht-öffentliche Stellen",
+        "Orientierungshilfen"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [],
+    "expected_keywords": [
+      "Videoüberwachung",
+      "Datenschutzkonferenz",
+      "nicht-öffentliche Stellen",
+      "Orientierungshilfen"
+    ],
+    "min_sources": 2,
+    "category": "behoerden",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_dsk_videoueberwachung_stub",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_063",
+    "source_canonical_id": "canonical_063",
+    "level": "messy",
+    "question": "Ein Startup für Online-Kurse will Kundendaten in einer US-Cloud speichern – der Anbieter sagt, er macht nur, was wir anweisen, aber in den AGB steht was von „eigenen Analysen für Service-Verbesserungen“. Wer haftet eigentlich, wenn da was schiefgeht – wir oder die Cloud-Firma?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_32"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_auftragsverarbeitung_cloud"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 28 DSGVO (Teil 1)",
+      "Art. 28 DSGVO (Teil 2)",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 32 DSGVO"
+    ],
+    "should_ids": [
+      "mw_auftragsverarbeitung_cloud"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 28 DSGVO",
+        "Art. 6 DSGVO",
+        "Art. 32 DSGVO"
+      ],
+      "expected_keywords": [
+        "Weisungsgebundenheit",
+        "Funktionsübertragung",
+        "Verantwortlicher",
+        "TOM",
+        "Drittlandtransfer"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 28 DSGVO",
+      "Art. 6 DSGVO",
+      "Art. 32 DSGVO"
+    ],
+    "expected_keywords": [
+      "Weisungsgebundenheit",
+      "Funktionsübertragung",
+      "Verantwortlicher",
+      "TOM",
+      "Drittlandtransfer"
+    ],
+    "min_sources": 2,
+    "category": "auftragsverarbeitung",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_auftragsverarbeitung_cloud",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_064",
+    "source_canonical_id": "canonical_064",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für Fahrradteile speichert die IP-Adressen von Besuchern, die sich nur Produkte anschauen – ohne Account oder Kauf. Kann man daraus überhaupt herausfinden, wer die Person dahinter ist, oder ist das eher wie eine zufällige Nummer, die niemandem zuzuordnen ist?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_personenbezug_ip_adressen_bestimmbarkeit"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_personenbezug_ip_adressen_bestimmbarkeit"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 4 Nr. 1 DSGVO",
+        "Art. 6 DSGVO",
+        "EG 26 DSGVO"
+      ],
+      "expected_keywords": [
+        "Personenbezug",
+        "Identifizierbarkeit",
+        "rechtliche Mittel",
+        "verantwortliche Stelle",
+        "EuGH C-582/14"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 4 Nr. 1 DSGVO",
+      "Art. 6 DSGVO",
+      "EG 26 DSGVO"
+    ],
+    "expected_keywords": [
+      "Personenbezug",
+      "Identifizierbarkeit",
+      "rechtliche Mittel",
+      "verantwortliche Stelle",
+      "EuGH C-582/14"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_personenbezug_ip_adressen_bestimmbarkeit",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_065",
+    "source_canonical_id": "canonical_065",
+    "level": "messy",
+    "question": "Ein Online-Kreditvermittler will ab sofort per Algorithmus entscheiden, wer einen Kredit bekommt – ganz ohne Mensch im Hintergrund. Was muss der machen, damit das rechtlich okay ist und Kunden nicht einfach so abgelehnt werden?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_22",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "gran_BDSG_§_31_Abs.1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_pruefungsschema_profiling_scoring_art22"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 22 DSGVO",
+      "Art. 9 DSGVO (Teil 1)",
+      "Art. 9 DSGVO (Teil 2)",
+      "BDSG_§_31_Abs.1"
+    ],
+    "should_ids": [
+      "mw_pruefungsschema_profiling_scoring_art22"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 22 DSGVO",
+        "Art. 9 Abs. 1 DSGVO",
+        "§ 31 BDSG"
+      ],
+      "expected_keywords": [
+        "automatisierte Einzelentscheidung",
+        "Schutzmaßnahmen",
+        "Ausnahmen",
+        "rechtliche Wirkung",
+        "erhebliche Beeinträchtigung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 22 DSGVO",
+      "Art. 9 Abs. 1 DSGVO",
+      "§ 31 BDSG"
+    ],
+    "expected_keywords": [
+      "automatisierte Einzelentscheidung",
+      "Schutzmaßnahmen",
+      "Ausnahmen",
+      "rechtliche Wirkung",
+      "erhebliche Beeinträchtigung"
+    ],
+    "min_sources": 2,
+    "category": "pruefungsschemata",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_pruefungsschema_profiling_scoring_art22",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_066",
+    "source_canonical_id": "canonical_066",
+    "level": "messy",
+    "question": "Ein Kunde will seine ganzen Hochgeladenen Fotos, Chats und Likes aus unserer Fitness-App rausziehen, um zu einer Konkurrenz zu wechseln – aber nicht als PDF, sondern so, dass er die Daten direkt in deren System einpflegen kann. Was müssen wir ihm da konkret liefern und wie?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_20",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_datenportabilitaet_art20"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 20 DSGVO",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_datenportabilitaet_art20"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 20 DSGVO",
+        "Art. 6 Abs. 1 lit. a DSGVO",
+        "Art. 6 Abs. 1 lit. b DSGVO"
+      ],
+      "expected_keywords": [
+        "Datenübertragbarkeit",
+        "maschinenlesbares Format",
+        "automatisierte Verfahren",
+        "Einwilligung",
+        "Vertrag"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 20 DSGVO",
+      "Art. 6 Abs. 1 lit. a DSGVO",
+      "Art. 6 Abs. 1 lit. b DSGVO"
+    ],
+    "expected_keywords": [
+      "Datenübertragbarkeit",
+      "maschinenlesbares Format",
+      "automatisierte Verfahren",
+      "Einwilligung",
+      "Vertrag"
+    ],
+    "min_sources": 2,
+    "category": "betroffenenrechte",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_datenportabilitaet_art20",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_067",
+    "source_canonical_id": "canonical_067",
+    "level": "messy",
+    "question": "In der App für Teenager-Trainingstipps wollen wir 14-Jährige registrieren lassen – dürfen die einfach selbst auf „Zustimmen“ klicken oder müssen wir erst die Eltern fragen, und was passiert, wenn wir’s falsch machen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_8",
+        "dsgvo_art_12_part0",
+        "dsgvo_art_12_part1",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_minderjaerigenschutz_art8"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 8 DSGVO",
+      "Art. 12 DSGVO (Teil 1)",
+      "Art. 12 DSGVO (Teil 2)",
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_minderjaerigenschutz_art8"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 8 DSGVO",
+        "Art. 12 Abs. 1 DSGVO",
+        "Art. 6 Abs. 1 lit. f DSGVO"
+      ],
+      "expected_keywords": [
+        "Einwilligung",
+        "elterliche Verantwortung",
+        "Altersverifikation",
+        "kindgerechte Sprache",
+        "Interessenabwägung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 8 DSGVO",
+      "Art. 12 Abs. 1 DSGVO",
+      "Art. 6 Abs. 1 lit. f DSGVO"
+    ],
+    "expected_keywords": [
+      "Einwilligung",
+      "elterliche Verantwortung",
+      "Altersverifikation",
+      "kindgerechte Sprache",
+      "Interessenabwägung"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_minderjaerigenschutz_art8",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_068",
+    "source_canonical_id": "canonical_068",
+    "level": "messy",
+    "question": "Ein Kunde wirft uns vor, seine persönlichen Daten ohne Erlaubnis an einen Lieferanten weitergegeben zu haben – jetzt droht er mit Klagen. Was kann er von uns konkret verlangen, und gilt da nur EU-Recht oder auch deutsches?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_82"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_haftungssystem_dsgvo_national"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 82 DSGVO"
+    ],
+    "should_ids": [
+      "mw_haftungssystem_dsgvo_national"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 82 DSGVO",
+        "§ 823 Abs. 1 BGB",
+        "§ 823 Abs. 2 BGB"
+      ],
+      "expected_keywords": [
+        "Schadensersatz",
+        "informationelle Selbstbestimmung",
+        "Schutzgesetz",
+        "Beweislastumkehr",
+        "gesamtschuldnerische Haftung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 82 DSGVO",
+      "§ 823 Abs. 1 BGB",
+      "§ 823 Abs. 2 BGB"
+    ],
+    "expected_keywords": [
+      "Schadensersatz",
+      "informationelle Selbstbestimmung",
+      "Schutzgesetz",
+      "Beweislastumkehr",
+      "gesamtschuldnerische Haftung"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_haftungssystem_dsgvo_national",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_069",
+    "source_canonical_id": "canonical_069",
+    "level": "messy",
+    "question": "Als IT-Leiter in einer Steuerkanzlei will ich wissen, was die deutschen Datenschützer Ende 2022 an Microsoft 365 ausgesetzt haben – konkret, wo die Cloud-Dienste bei der sicheren Datenweitergabe an Dritte schwächeln.",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_dsk_microsoft365_stub"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 28 DSGVO (Teil 1)",
+      "Art. 28 DSGVO (Teil 2)",
+      "Art. 35 DSGVO (Teil 1)",
+      "Art. 35 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_dsk_microsoft365_stub"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 28 DSGVO",
+        "Art. 35 DSGVO"
+      ],
+      "expected_keywords": [
+        "Auftragsverarbeitung",
+        "Drittlandtransfer",
+        "Datenschutz-Folgenabschätzung",
+        "TOM",
+        "DPA"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 28 DSGVO",
+      "Art. 35 DSGVO"
+    ],
+    "expected_keywords": [
+      "Auftragsverarbeitung",
+      "Drittlandtransfer",
+      "Datenschutz-Folgenabschätzung",
+      "TOM",
+      "DPA"
+    ],
+    "min_sources": 2,
+    "category": "behoerden",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_dsk_microsoft365_stub",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_070",
+    "source_canonical_id": "canonical_070",
+    "level": "messy",
+    "question": "Als Inhaber eines kleinen Online-Shops für Handmade-Schmuck: Wenn ich Kundendaten wie Namen oder Lieferadressen an einen externen Versanddienstleister weitergebe – wer gilt da eigentlich vor dem Gesetz als derjenige, der die Verantwortung trägt, und was zählt überhaupt alles als „Daten von Personen“, die ich schützen muss?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_art4_index"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "Art. 4 DSGVO – Begriffsbestimmungen (Übersicht)\n\nArt. 4 DSGV"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 4 DSGVO"
+      ],
+      "expected_keywords": [
+        "Legaldefinition",
+        "personenbezogene Daten",
+        "Verantwortlicher",
+        "Auftragsverarbeiter",
+        "Pseudonymisierung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 4 DSGVO"
+    ],
+    "expected_keywords": [
+      "Legaldefinition",
+      "personenbezogene Daten",
+      "Verantwortlicher",
+      "Auftragsverarbeiter",
+      "Pseudonymisierung"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_art4_index",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_071",
+    "source_canonical_id": "canonical_071",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für handgemachte Keramik will Kundendaten speichern, um später personalisierte Rabattcodes rauszuschicken – darf man das einfach so machen oder muss man vorher was beachten?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_verbot_mit_erlaubnisvorbehalt"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 5 DSGVO"
+    ],
+    "should_ids": [
+      "mw_verbot_mit_erlaubnisvorbehalt"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 1 DSGVO",
+        "Art. 5 Abs. 2 DSGVO"
+      ],
+      "expected_keywords": [
+        "Verarbeitung",
+        "Rechtsgrundlage",
+        "Einwilligung",
+        "Rechenschaftspflicht",
+        "Dokumentation"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 1 DSGVO",
+      "Art. 5 Abs. 2 DSGVO"
+    ],
+    "expected_keywords": [
+      "Verarbeitung",
+      "Rechtsgrundlage",
+      "Einwilligung",
+      "Rechenschaftspflicht",
+      "Dokumentation"
+    ],
+    "min_sources": 2,
+    "category": "rechtsgrundlagen",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_verbot_mit_erlaubnisvorbehalt",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_072",
+    "source_canonical_id": "canonical_072",
+    "level": "messy",
+    "question": "Ein deutscher Online-Shop will Kundendaten an eine US-Firma schicken, die die Bestellungen abwickelt – was muss ich konkret abklopfen, bevor ich die Daten rausrücke?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_dpf_data_privacy_framework"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 45 DSGVO (Teil 1)",
+      "Art. 45 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_dpf_data_privacy_framework"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 45 DSGVO"
+      ],
+      "expected_keywords": [
+        "Angemessenheitsbeschluss",
+        "DPF-zertifiziert",
+        "Datenübermittlung",
+        "Standardvertragsklauseln"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 45 DSGVO"
+    ],
+    "expected_keywords": [
+      "Angemessenheitsbeschluss",
+      "DPF-zertifiziert",
+      "Datenübermittlung",
+      "Standardvertragsklauseln"
+    ],
+    "min_sources": 2,
+    "category": "drittlandtransfer",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_dpf_data_privacy_framework",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_073",
+    "source_canonical_id": "canonical_073",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop aus Deutschland will Kundendaten in die USA an einen Cloud-Anbieter schicken, obwohl die da eigentlich nicht so streng mit Datenschutz sind – was muss der Shop *konkret* tun, damit das nicht später Ärger mit den Behörden gibt?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_46"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_standardvertragsklauseln_scc"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 46 DSGVO"
+    ],
+    "should_ids": [
+      "mw_standardvertragsklauseln_scc"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 46 Abs. 2 lit. c DSGVO",
+        "Durchführungsbeschluss 2021/914"
+      ],
+      "expected_keywords": [
+        "Transfer Impact Assessment",
+        "angemessenes Schutzniveau",
+        "Zusätzliche Maßnahmen",
+        "EDPB Empfehlungen",
+        "Schrems II"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 46 Abs. 2 lit. c DSGVO",
+      "Durchführungsbeschluss 2021/914"
+    ],
+    "expected_keywords": [
+      "Transfer Impact Assessment",
+      "angemessenes Schutzniveau",
+      "Zusätzliche Maßnahmen",
+      "EDPB Empfehlungen",
+      "Schrems II"
+    ],
+    "min_sources": 2,
+    "category": "drittlandtransfer",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_standardvertragsklauseln_scc",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_074",
+    "source_canonical_id": "canonical_074",
+    "level": "messy",
+    "question": "Wenn ich als Logistikleiter für unsere Spedition eine verbindliche Anweisung für alle Mitarbeiter rausgeben will, wie sie mit Kundendaten wie Lieferadressen oder Frachtpapieren umgehen müssen – was muss da drinstehen, damit das rechtlich wasserdicht ist, und wer muss das eigentlich absegnen, bevor es gilt?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_47_part0",
+        "dsgvo_art_47_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_bcr_verbindliche_interne_vorschriften"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 47 DSGVO (Teil 1)",
+      "Art. 47 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_bcr_verbindliche_interne_vorschriften"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 47 DSGVO",
+        "Art. 4 Nr. 20 DSGVO"
+      ],
+      "expected_keywords": [
+        "Kohärenzverfahren",
+        "Datentransfer",
+        "Aufsichtsbehörde",
+        "Datenschutzgrundsätze",
+        "Genehmigungsverfahren"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 47 DSGVO",
+      "Art. 4 Nr. 20 DSGVO"
+    ],
+    "expected_keywords": [
+      "Kohärenzverfahren",
+      "Datentransfer",
+      "Aufsichtsbehörde",
+      "Datenschutzgrundsätze",
+      "Genehmigungsverfahren"
+    ],
+    "min_sources": 2,
+    "category": "drittlandtransfer",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_bcr_verbindliche_interne_vorschriften",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_075",
+    "source_canonical_id": "canonical_075",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für Handmade-Schmuck will Kundendaten speichern – jetzt sagt die Steuerberaterin, in Deutschland gelten da manchmal andere Regeln als in der EU. Wann ist das so und worauf muss man da genau achten?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_unmittelbare_geltung_dsgvo"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "mw_unmittelbare_geltung_dsgvo"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 288 Abs. 2 AEUV",
+        "Art. 6 DSGVO"
+      ],
+      "expected_keywords": [
+        "Öffnungsklauseln",
+        "Anwendungsvorrang",
+        "unmittelbare Geltung",
+        "nationales Recht"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 288 Abs. 2 AEUV",
+      "Art. 6 DSGVO"
+    ],
+    "expected_keywords": [
+      "Öffnungsklauseln",
+      "Anwendungsvorrang",
+      "unmittelbare Geltung",
+      "nationales Recht"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_unmittelbare_geltung_dsgvo",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_076",
+    "source_canonical_id": "canonical_076",
+    "level": "messy",
+    "question": "Als Physiotherapie-Praxis in Bayern wollen wir Patientendaten digital speichern – aber ein Kollege meint, Deutschland hätte da eigene Regeln, obwohl die EU eigentlich überall das Gleiche vorschreibt. Wo darf unser Land wirklich was anders machen als der Rest?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_vollharmonisierung_oeffnungsklauseln"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)",
+      "Art. 88 DSGVO",
+      "BDSG_§_26_Abs.1"
+    ],
+    "should_ids": [
+      "mw_vollharmonisierung_oeffnungsklauseln"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 6 Abs. 2-3 DSGVO",
+        "Art. 88 DSGVO",
+        "§ 26 BDSG"
+      ],
+      "expected_keywords": [
+        "Vollharmonisierung",
+        "Öffnungsklauseln",
+        "Schutzniveau",
+        "Beschäftigtendatenschutz"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 6 Abs. 2-3 DSGVO",
+      "Art. 88 DSGVO",
+      "§ 26 BDSG"
+    ],
+    "expected_keywords": [
+      "Vollharmonisierung",
+      "Öffnungsklauseln",
+      "Schutzniveau",
+      "Beschäftigtendatenschutz"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_vollharmonisierung_oeffnungsklauseln",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_077",
+    "source_canonical_id": "canonical_077",
+    "level": "messy",
+    "question": "Ein kleines Fitnessstudio will die Trainingsdaten seiner Mitglieder für Statistiken nutzen, aber ohne dass man Rückschlüsse auf einzelne Personen ziehen kann – wie müssen die Daten dafür bearbeitet werden, und wann darf man sie dann eigentlich einfach so weiterverwenden, ohne sich um Datenschutzregeln kümmern zu müssen?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "should_contain_chunk_ids": [
+        "mw_anonymisierung_vs_verarbeitung"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [
+      "Art. 6 DSGVO (Teil 1)",
+      "Art. 6 DSGVO (Teil 2)"
+    ],
+    "should_ids": [
+      "Anonymisierung und Verarbeitung: Die Anonymisierung personen"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 4 Nr. 2 DSGVO",
+        "Art. 6 Abs. 1 DSGVO",
+        "EG 26 DSGVO"
+      ],
+      "expected_keywords": [
+        "Verarbeitung",
+        "Rechtsgrundlage",
+        "Anonymisierung",
+        "personenbezogene Daten",
+        "Re-Identifizierung"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 4 Nr. 2 DSGVO",
+      "Art. 6 Abs. 1 DSGVO",
+      "EG 26 DSGVO"
+    ],
+    "expected_keywords": [
+      "Verarbeitung",
+      "Rechtsgrundlage",
+      "Anonymisierung",
+      "personenbezogene Daten",
+      "Re-Identifizierung"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_anonymisierung_vs_verarbeitung",
+    "generated_by": "mistral-medium-latest"
+  },
+  {
+    "id": "messy_078",
+    "source_canonical_id": "canonical_078",
+    "level": "messy",
+    "question": "Ein kleiner Online-Shop für Fahrradzubehör speichert die IP-Adressen von Besuchern, die sich nur Produkte anschauen, aber nichts kaufen. Kann man daraus überhaupt herausfinden, wer die Leute sind – oder ist das eher wie eine zufällige Nummer, die niemandem zuzuordnen ist?",
+    "retrieval_gold": {
+      "must_contain_chunk_ids": [],
+      "should_contain_chunk_ids": [
+        "mw_personenbezug_ip_adressen"
+      ],
+      "forbidden_chunk_ids": []
+    },
+    "gold_ids": [],
+    "should_ids": [
+      "IP-Adressen und Personenbezug: Nach EuGH C-582/14 (Breyer) k"
+    ],
+    "forbidden_ids": [],
+    "answer_gold": {
+      "expected_norms": [
+        "Art. 4 Nr. 1 DSGVO",
+        "Erwägungsgrund 26 DSGVO"
+      ],
+      "expected_keywords": [
+        "personenbezogenes Datum",
+        "Identifizierung",
+        "relativer Personenbezug",
+        "Verantwortlicher",
+        "verhältnismäßiger Aufwand"
+      ],
+      "expected_cases": [],
+      "forbidden_norms": [],
+      "min_sources": 2
+    },
+    "expected_norms": [
+      "Art. 4 Nr. 1 DSGVO",
+      "Erwägungsgrund 26 DSGVO"
+    ],
+    "expected_keywords": [
+      "personenbezogenes Datum",
+      "Identifizierung",
+      "relativer Personenbezug",
+      "Verantwortlicher",
+      "verhältnismäßiger Aufwand"
+    ],
+    "min_sources": 2,
+    "category": "allgemein",
+    "difficulty": "messy",
+    "source_mw_chunk": "mw_personenbezug_ip_adressen",
+    "generated_by": "mistral-medium-latest"
+  }
+]
