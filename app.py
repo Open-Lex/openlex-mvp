@@ -24,6 +24,17 @@ import gradio as gr
 import requests
 from sentence_transformers import SentenceTransformer, CrossEncoder
 
+try:
+    from query_understanding import (
+        expand_query_to_norms as _expand_qu_norms,
+        get_chroma_ids_for_norms as _qu_get_chroma_ids,
+    )
+except ImportError:
+    def _expand_qu_norms(q: str):  # type: ignore
+        return []
+    def _qu_get_chroma_ids(norms):  # type: ignore
+        return []
+
 # ---------------------------------------------------------------------------
 # Konfiguration
 # ---------------------------------------------------------------------------
@@ -777,7 +788,7 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             "source": "semantic",
         })
 
-    # b) Norm-basierte Suche
+    # b) Norm-basierte Suche (explizite Normen aus dem Fragetext)
     norms = extract_norms(question)
     for norm in norms[:5]:
         try:
@@ -806,6 +817,31 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                     })
         except Exception:
             pass
+
+    # b2) Query Understanding Light: deterministisches Chunk-Lookup
+    # Kein Embedding, kein Roundtrip: col.get() mit bekannten ChromaDB-IDs.
+    # Soft Injection: Chunks werden mit adjusted_distance=0.15 eingefügt,
+    # was sie in den Top-40 qualifiziert; der Cross-Encoder entscheidet final.
+    try:
+        qu_ids = _qu_get_chroma_ids(_expand_qu_norms(question))
+        if qu_ids:
+            qu_result = col.get(ids=qu_ids, include=["documents", "metadatas"])
+            for cid, doc, meta in zip(
+                qu_result["ids"], qu_result["documents"], qu_result["metadatas"]
+            ):
+                cid_norm = _normalize_az(meta.get("volladresse", "") or doc[:50])
+                if cid_norm not in seen_ids:
+                    seen_ids.add(cid_norm)
+                    chunks.append({
+                        "id": cid,
+                        "text": doc,
+                        "meta": meta,
+                        "distance": 0.15,
+                        "adjusted_distance": 0.15,
+                        "source": "qu_injection",
+                    })
+    except Exception:
+        pass
 
     # c) Keyword-Suche (hybride Suche): Für jedes wichtige Wort zusätzlich
     #    per where_document={'$contains': ...} suchen
