@@ -23,7 +23,7 @@ OUTPUT_PATH = Path(os.getenv("OPENLEX_EVAL_V4_OUTPUT_PATH",
 BACKUP_DIR = Path("/opt/openlex-mvp/eval_sets/v4/annotation_backups")
 BACKUP_DIR.mkdir(parents=True, exist_ok=True)
 
-# ─── ChromaDB Volltext-Cache ───────────────────────────────────────────────────
+# ─── ChromaDB ─────────────────────────────────────────────────────────────────
 try:
     _col = _chromadb.PersistentClient("/opt/openlex-mvp/chromadb").get_collection("openlex_datenschutz")
 except Exception as _e:
@@ -37,7 +37,6 @@ def get_full_chunk_text(chunk_id: str) -> str:
     if chunk_id in _chunk_cache:
         return _chunk_cache[chunk_id]
     if _col is None:
-        _chunk_cache[chunk_id] = ""
         return ""
     try:
         r = _col.get(ids=[chunk_id], include=["documents"])
@@ -49,6 +48,40 @@ def get_full_chunk_text(chunk_id: str) -> str:
         pass
     _chunk_cache[chunk_id] = ""
     return ""
+
+
+def get_chunk_meta(chunk_id: str) -> dict:
+    if _col is None:
+        return {}
+    try:
+        r = _col.get(ids=[chunk_id], include=["metadatas"])
+        if r["ids"]:
+            return r["metadatas"][0] or {}
+    except Exception:
+        pass
+    return {}
+
+
+# ─── Lazy retrieve ────────────────────────────────────────────────────────────
+_retrieve_fn = None
+
+
+def get_retrieve():
+    global _retrieve_fn
+    if _retrieve_fn is not None:
+        return _retrieve_fn
+    try:
+        os.environ.setdefault("OPENLEX_INTENT_ANALYSIS_ENABLED", "false")
+        os.environ.setdefault("OPENLEX_TRACE_MODE", "false")
+        import importlib
+        import app as _app
+        importlib.reload(_app)
+        _retrieve_fn = _app.retrieve
+        print("[annotation_tool] retrieve() geladen.", flush=True)
+    except Exception as e:
+        print(f"[annotation_tool] retrieve() nicht ladbar: {e}", flush=True)
+        _retrieve_fn = None
+    return _retrieve_fn
 
 
 # ─── Tag-Optionen ─────────────────────────────────────────────────────────────
@@ -111,7 +144,7 @@ ANFRAGE_TYPEN_OPTIONS = [
 ]
 
 
-# === State ===
+# === State ====================================================================
 def load_data():
     if OUTPUT_PATH.exists():
         with open(OUTPUT_PATH) as f:
@@ -139,57 +172,70 @@ def get_progress_text():
     return f"**{annotated}/{total} annotiert ({pct:.0f}%)**"
 
 
-def build_candidate_choices(q):
-    """Checkbox-Labels mit 800-Zeichen-Snippet + volladresse (ohne echte Newlines)."""
+def _make_label(chunk_id: str, score, volladr: str, snippet: str) -> str:
+    """Einheitliches Label-Format für alle Quellen."""
+    score_str = f"{score:.3f}" if isinstance(score, float) else str(score)
+    clean = " ".join(snippet.split())[:800]
+    return f"[{score_str}] {chunk_id} | {volladr} | {clean}"
+
+
+def build_candidate_choices(q) -> list[str]:
+    """
+    Checkbox-Choices aus retrieval_candidates.
+    Manuell hinzugefügte IDs (not in candidates) werden aus ChromaDB ergänzt.
+    """
     choices = []
+    seen_ids = set()
+
     for c in q.get("retrieval_candidates", []):
-        cid   = c.get("chunk_id", "")
-        score = c.get("score", 0.0)
-        volladr = c.get("volladresse") or c.get("gesetz") or ""
-        raw_snippet = c.get("snippet") or ""
-        # Newlines normalisieren — Gradio bricht Labels bei \n
-        snippet = " ".join(raw_snippet.split())[:800]
-        label = f"[{score:.3f}] {cid} | {volladr} | {snippet}"
+        cid = c.get("chunk_id", "")
+        seen_ids.add(cid)
+        volladr  = c.get("volladresse") or c.get("gesetz") or ""
+        snippet  = c.get("snippet") or ""
+        label    = _make_label(cid, c.get("score", 0.0), volladr, snippet)
         choices.append(label)
+
+    # Manuell gesetzte IDs, die nicht in candidates sind → aus DB nachladen
+    for cid in q.get("must_contain_chunk_ids", []):
+        if cid in seen_ids:
+            continue
+        seen_ids.add(cid)
+        meta    = get_chunk_meta(cid)
+        volladr = meta.get("volladresse") or meta.get("gesetz") or ""
+        snippet = get_full_chunk_text(cid)
+        label   = _make_label(cid, "manual", volladr, snippet)
+        choices.append(label)
+
     return choices
 
 
-def build_forbidden_choices(q):
-    choices = []
-    for fid in q.get("forbidden_candidates", []):
-        choices.append(str(fid))
-    return choices
+def build_forbidden_choices(q) -> list[str]:
+    return [str(fid) for fid in q.get("forbidden_candidates", [])]
 
 
 def build_candidates_markdown(q) -> str:
-    """Volltext-Details aller Kandidaten für das Accordion-Panel."""
     candidates = q.get("retrieval_candidates", [])
     if not candidates:
         return "_Keine Kandidaten vorhanden._"
     parts = []
     for i, c in enumerate(candidates, 1):
-        cid     = c.get("chunk_id", "")
-        score   = c.get("score", 0.0)
-        gesetz  = c.get("gesetz") or ""
-        vol     = c.get("volladresse") or ""
-        src     = c.get("source_type") or ""
-        # Volltext aus ChromaDB nachladen (gecacht)
-        full_text = get_full_chunk_text(cid)
-        if not full_text:
-            full_text = c.get("snippet") or "_Volltext nicht ladbar_"
-        # Auf 2000 Zeichen begrenzen, damit Gradio nicht hängt
-        if len(full_text) > 2000:
-            full_text = full_text[:2000] + "\n\n_(… gekürzt auf 2000 Zeichen)_"
+        cid    = c.get("chunk_id", "")
+        score  = c.get("score", 0.0)
+        gesetz = c.get("gesetz") or ""
+        vol    = c.get("volladresse") or ""
+        src    = c.get("source_type") or ""
+        full   = get_full_chunk_text(cid) or c.get("snippet") or "_Volltext nicht ladbar_"
+        if len(full) > 2000:
+            full = full[:2000] + "\n\n_(… gekürzt auf 2000 Zeichen)_"
         parts.append(
             f"### {i}. `{cid}` · Score {score:.3f}\n"
             f"**Gesetz:** {gesetz}  ·  **Volladresse:** {vol}  ·  **Source-Type:** {src}\n\n"
-            f"{full_text}\n\n---"
+            f"{full}\n\n---"
         )
     return "\n\n".join(parts)
 
 
 def extract_chunk_id(label: str) -> str:
-    """Extrahiert chunk_id aus Checkbox-Label: '[score] chunk_id | volladr | snippet'"""
     if "|" in label:
         part = label.split("|")[0].strip()
     else:
@@ -200,24 +246,6 @@ def extract_chunk_id(label: str) -> str:
 
 
 def get_query_data(idx: int):
-    """
-    Gibt alle UI-Werte für Query bei idx zurück.
-    Rückgabe (14 Werte):
-      0  qid
-      1  src
-      2  query
-      3  must_choices
-      4  pre_must
-      5  forb_choices
-      6  pre_forb
-      7  pre_rechtsgebiete
-      8  pre_anfrage_typen
-      9  normbezug_str
-      10 notes
-      11 is_deep
-      12 candidates_md
-      13 progress
-    """
     if not (0 <= idx < len(queries)):
         return ("", "", "", [], [], [], [],
                 [], [], "", "", False, "_Keine Kandidaten vorhanden._", get_progress_text())
@@ -239,9 +267,9 @@ def get_query_data(idx: int):
             pre_forb.append(sel_id)
 
     tags = q.get("tags", {})
-    pre_rechtsgebiete = [r for r in tags.get("rechtsgebiete", []) if r in RECHTSGEBIETE_OPTIONS]
-    pre_anfrage_typen = [a for a in tags.get("anfrage_typen", []) if a in ANFRAGE_TYPEN_OPTIONS]
-    normbezug_str     = ", ".join(tags.get("normbezug", []))
+    pre_rg  = [r for r in tags.get("rechtsgebiete", []) if r in RECHTSGEBIETE_OPTIONS]
+    pre_at  = [a for a in tags.get("anfrage_typen", []) if a in ANFRAGE_TYPEN_OPTIONS]
+    nb_str  = ", ".join(tags.get("normbezug", []))
 
     candidates_md = build_candidates_markdown(q)
 
@@ -249,13 +277,9 @@ def get_query_data(idx: int):
         q.get("query_id", ""),
         q.get("query_source", ""),
         q.get("query", ""),
-        must_choices,
-        pre_must,
-        forb_choices,
-        pre_forb,
-        pre_rechtsgebiete,
-        pre_anfrage_typen,
-        normbezug_str,
+        must_choices, pre_must,
+        forb_choices, pre_forb,
+        pre_rg, pre_at, nb_str,
         q.get("notes", ""),
         bool(q.get("is_deep_eval", False)),
         candidates_md,
@@ -268,8 +292,7 @@ def navigate(idx: int, delta: int = 0, target: int = None):
         new_idx = max(0, min(len(queries) - 1, target))
     else:
         new_idx = max(0, min(len(queries) - 1, idx + delta))
-    data = get_query_data(new_idx)
-    return data + (new_idx,)
+    return get_query_data(new_idx) + (new_idx,)
 
 
 def go_next_unannotated(idx: int):
@@ -281,14 +304,10 @@ def go_next_unannotated(idx: int):
 
 def go_filter(status: str, idx: int):
     for i, q in enumerate(queries):
-        if status == "unannotiert" and not q.get("must_contain_chunk_ids"):
-            return navigate(idx, target=i)
-        if status == "adversarial" and q.get("is_adversarial"):
-            return navigate(idx, target=i)
-        if status == "real_needs_query" and str(q.get("query", "")).startswith("[TO BE FILLED"):
-            return navigate(idx, target=i)
-        if status == "deep_eval" and q.get("is_deep_eval"):
-            return navigate(idx, target=i)
+        if status == "unannotiert"       and not q.get("must_contain_chunk_ids"):  return navigate(idx, target=i)
+        if status == "adversarial"       and q.get("is_adversarial"):              return navigate(idx, target=i)
+        if status == "real_needs_query"  and str(q.get("query","")).startswith("[TO BE FILLED"): return navigate(idx, target=i)
+        if status == "deep_eval"         and q.get("is_deep_eval"):                return navigate(idx, target=i)
     return navigate(idx, target=idx)
 
 
@@ -299,11 +318,11 @@ def save_annotation(idx, must_sel, forb_sel, query_text,
         return "❌ Ungültiger Index"
     q = queries[idx]
 
-    must_ids = [extract_chunk_id(label) for label in (must_sel or [])]
+    must_ids = [extract_chunk_id(lbl) for lbl in (must_sel or [])]
     must_ids = [x for x in must_ids if x]
     forb_ids = [fid.strip() for fid in (forb_sel or []) if fid.strip()]
 
-    q["must_contain_chunk_ids"]     = must_ids
+    q["must_contain_chunk_ids"]      = must_ids
     q["forbidden_contain_chunk_ids"] = forb_ids
     q["query"]      = query_text or q["query"]
     q["notes"]      = notes or ""
@@ -318,6 +337,96 @@ def save_annotation(idx, must_sel, forb_sel, query_text,
 
     save_data_to_disk(queries)
     return f"✅ Gespeichert — {q['query_id']} ({len(must_ids)} must-IDs)"
+
+
+# ─── Such-Handler ─────────────────────────────────────────────────────────────
+
+def do_search(search_text: str):
+    """Freitext → retrieve() → neue Choices in search_results_cbg."""
+    if not search_text.strip():
+        return gr.update(choices=[], value=[]), "Bitte Suchbegriff eingeben."
+
+    retrieve = get_retrieve()
+    if retrieve is None:
+        return gr.update(choices=[], value=[]), "❌ retrieve() nicht verfügbar."
+
+    try:
+        results = retrieve(search_text.strip())
+    except Exception as e:
+        return gr.update(choices=[], value=[]), f"❌ Fehler: {e}"
+
+    if isinstance(results, dict):
+        return gr.update(choices=[], value=[]), "⚠️ Rückfrage ausgelöst — bitte konkreteren Suchbegriff."
+
+    choices = []
+    for r in (results or [])[:10]:
+        meta    = r.get("meta") or r.get("metadata") or {}
+        cid     = meta.get("chunk_id") or r.get("id") or ""
+        score   = r.get("ce_score") or r.get("score") or 0.0
+        volladr = meta.get("volladresse") or meta.get("gesetz") or ""
+        snippet = r.get("document") or r.get("text") or ""
+        label   = _make_label(cid, float(score), volladr, snippet)
+        choices.append(label)
+
+    msg = f"✅ {len(choices)} Ergebnisse — auswählen und 'Hinzufügen' klicken."
+    return gr.update(choices=choices, value=[]), msg
+
+
+def do_add_direct(direct_id: str, must_choices: list, must_val: list):
+    """Direkte Chunk-ID → prüfen → zu Must-Contain hinzufügen."""
+    cid = direct_id.strip()
+    if not cid:
+        return gr.update(), gr.update(), "Bitte Chunk-ID eingeben."
+
+    # Schon vorhanden?
+    existing_ids = [extract_chunk_id(lbl) for lbl in (must_choices or [])]
+    if cid in existing_ids:
+        # Nur selektieren
+        new_val = list(must_val or [])
+        for lbl in (must_choices or []):
+            if cid in lbl and lbl not in new_val:
+                new_val.append(lbl)
+        return gr.update(choices=must_choices, value=new_val), gr.update(), f"ℹ️ `{cid}` war schon in der Liste, jetzt selektiert."
+
+    # In DB nachschlagen
+    meta    = get_chunk_meta(cid)
+    if not meta and _col is not None:
+        return gr.update(), gr.update(), f"❌ Chunk-ID `{cid}` nicht in ChromaDB gefunden."
+
+    volladr = meta.get("volladresse") or meta.get("gesetz") or ""
+    snippet = get_full_chunk_text(cid)
+    label   = _make_label(cid, "manual", volladr, snippet)
+
+    new_choices = list(must_choices or []) + [label]
+    new_val     = list(must_val or []) + [label]
+    return (
+        gr.update(choices=new_choices, value=new_val),
+        gr.update(choices=new_choices, value=new_val),
+        f"✅ `{cid}` hinzugefügt.",
+    )
+
+
+def do_add_search_to_must(search_sel: list, must_choices: list, must_val: list):
+    """Ausgewählte Suchergebnisse → Must-Contain übernehmen."""
+    if not search_sel:
+        return gr.update(), gr.update(), gr.update(choices=[], value=[]), "Nichts ausgewählt."
+
+    new_choices = list(must_choices or [])
+    new_val     = list(must_val or [])
+    added = 0
+    for lbl in search_sel:
+        if lbl not in new_choices:
+            new_choices.append(lbl)
+            added += 1
+        if lbl not in new_val:
+            new_val.append(lbl)
+
+    return (
+        gr.update(choices=new_choices, value=new_val),
+        gr.update(choices=new_choices, value=new_val),
+        gr.update(choices=[], value=[]),
+        f"✅ {added} Chunk(s) zu Must-Contain hinzugefügt.",
+    )
 
 
 # ─── Gradio UI ────────────────────────────────────────────────────────────────
@@ -354,30 +463,45 @@ with gr.Blocks(title="OpenLex Eval v4 Annotation", css=CSS) as demo:
 
     query_tb = gr.Textbox(label="Query (editierbar — z.B. für real_* Templates)", lines=3)
 
-    # ─── Strukturierte Tag-Felder ─────────────────────────────────────────────
+    # ─── Tags ─────────────────────────────────────────────────────────────────
     with gr.Row():
         rechtsgebiete_cbg = gr.CheckboxGroup(
-            choices=RECHTSGEBIETE_OPTIONS,
-            label="Rechtsgebiete (mindestens 1)",
-            scale=2,
-        )
+            choices=RECHTSGEBIETE_OPTIONS, label="Rechtsgebiete (mindestens 1)", scale=2)
         anfrage_typen_cbg = gr.CheckboxGroup(
-            choices=ANFRAGE_TYPEN_OPTIONS,
-            label="Anfrage-Typen (mindestens 1)",
-            scale=1,
-        )
+            choices=ANFRAGE_TYPEN_OPTIONS, label="Anfrage-Typen (mindestens 1)", scale=1)
     normbezug_tb = gr.Textbox(
         label="Normbezug (kommagetrennt, z.B. Art. 6 DSGVO, § 26 BDSG)",
-        placeholder="Art. 6 DSGVO, Art. 13 DSGVO",
-        lines=1,
-    )
+        placeholder="Art. 6 DSGVO, Art. 13 DSGVO", lines=1)
 
+    # ─── Must-Contain ─────────────────────────────────────────────────────────
     gr.Markdown("### ✅ Must-Contain-Chunks (1–5 auswählen)")
-    must_cbg = gr.CheckboxGroup(label="Retrieval-Kandidaten", choices=[])
+    must_cbg = gr.CheckboxGroup(label="Kandidaten (Vorauswahl + manuell hinzugefügte)", choices=[])
 
+    # ── Freitext-Suche ────────────────────────────────────────────────────────
+    with gr.Accordion("🔍 Eigene Suche — Schlagworte eingeben, bessere Chunks finden", open=False):
+        with gr.Row():
+            search_tb  = gr.Textbox(
+                label="Suchbegriff / Schlagworte / Normen",
+                placeholder="z.B. automatisierte Entscheidung SCHUFA Art. 22 DSGVO",
+                scale=4, lines=1)
+            btn_search = gr.Button("Suchen", size="sm", scale=1)
+        search_status_tb = gr.Textbox(label="", interactive=False, lines=1, show_label=False)
+        search_results_cbg = gr.CheckboxGroup(label="Suchergebnisse", choices=[])
+        btn_add_search = gr.Button("➕ Ausgewählte zu Must-Contain hinzufügen", size="sm")
+
+        gr.Markdown("**Oder direkte Chunk-ID:**")
+        with gr.Row():
+            direct_id_tb  = gr.Textbox(
+                label="Chunk-ID (z.B. gran_DSGVO_Art._22_Abs.1)",
+                placeholder="gran_DSGVO_...", scale=4, lines=1)
+            btn_add_direct = gr.Button("➕ Hinzufügen", size="sm", scale=1)
+        direct_status_tb = gr.Textbox(label="", interactive=False, lines=1, show_label=False)
+
+    # ── Volltext-Panel ────────────────────────────────────────────────────────
     with gr.Accordion("📖 Volltexte der Kandidaten (zum Nachschlagen)", open=False):
         candidates_detail_md = gr.Markdown(value="")
 
+    # ─── Forbidden ────────────────────────────────────────────────────────────
     gr.Markdown("### 🚫 Forbidden-Contain-Chunks (optional)")
     forb_cbg = gr.CheckboxGroup(label="Forbidden-Kandidaten", choices=[])
 
@@ -389,33 +513,27 @@ with gr.Blocks(title="OpenLex Eval v4 Annotation", css=CSS) as demo:
         btn_save    = gr.Button("💾 Speichern", variant="primary")
         save_status = gr.Textbox(label="Status", interactive=False)
 
-    # ─── Output-Liste (15 Elemente inkl. idx_state) ───────────────────────────
-    # get_query_data() → 14 Werte; navigate() hängt new_idx an → 15
+    # ─── Output-Liste für Navigation (15 Elemente) ────────────────────────────
     ALL_OUTPUTS = [
         qid_tb, src_tb, query_tb,
         must_cbg, must_cbg,           # choices + value
         forb_cbg, forb_cbg,           # choices + value
-        rechtsgebiete_cbg,            # value
-        anfrage_typen_cbg,            # value
-        normbezug_tb,                 # value
+        rechtsgebiete_cbg,
+        anfrage_typen_cbg,
+        normbezug_tb,
         notes_tb, deep_cb,
-        candidates_detail_md,         # ← neu
+        candidates_detail_md,
         progress_md,
         idx_state,
     ]
 
     def unpack(data_tuple):
-        """
-        Wandelt navigate()-Rückgabe (15 Werte) in gr.update()-Aufrufe um.
-        Reihenfolge entspricht get_query_data() + new_idx.
-        """
         (qid, src, query,
          must_choices, must_val,
          forb_choices, forb_val,
-         rechtsgebiete_val, anfrage_val, normbezug_val,
+         rg_val, at_val, nb_val,
          notes, deep,
-         candidates_md,
-         progress,
+         cand_md, progress,
          new_idx) = data_tuple
         return (
             qid, src, query,
@@ -423,12 +541,9 @@ with gr.Blocks(title="OpenLex Eval v4 Annotation", css=CSS) as demo:
             gr.update(choices=must_choices, value=must_val),
             gr.update(choices=forb_choices, value=forb_val),
             gr.update(choices=forb_choices, value=forb_val),
-            rechtsgebiete_val,
-            anfrage_val,
-            normbezug_val,
+            rg_val, at_val, nb_val,
             notes, deep,
-            candidates_md,
-            progress,
+            cand_md, progress,
             new_idx,
         )
 
@@ -438,17 +553,13 @@ with gr.Blocks(title="OpenLex Eval v4 Annotation", css=CSS) as demo:
     def do_jump(n):         return unpack(navigate(0, target=int(n) - 1))
     def do_filter(s, idx):  return unpack(go_filter(s, idx))
 
-    # Initial load
-    demo.load(
-        lambda: unpack(navigate(0, target=0)),
-        outputs=ALL_OUTPUTS,
-    )
+    demo.load(lambda: unpack(navigate(0, target=0)), outputs=ALL_OUTPUTS)
 
-    btn_prev.click(do_prev,   inputs=[idx_state],            outputs=ALL_OUTPUTS)
-    btn_next.click(do_next,   inputs=[idx_state],            outputs=ALL_OUTPUTS)
-    btn_unann.click(do_unann, inputs=[idx_state],            outputs=ALL_OUTPUTS)
-    btn_jump.click(do_jump,   inputs=[jump_num],             outputs=ALL_OUTPUTS)
-    btn_filter.click(do_filter, inputs=[filter_dd, idx_state], outputs=ALL_OUTPUTS)
+    btn_prev.click(do_prev,     inputs=[idx_state],              outputs=ALL_OUTPUTS)
+    btn_next.click(do_next,     inputs=[idx_state],              outputs=ALL_OUTPUTS)
+    btn_unann.click(do_unann,   inputs=[idx_state],              outputs=ALL_OUTPUTS)
+    btn_jump.click(do_jump,     inputs=[jump_num],               outputs=ALL_OUTPUTS)
+    btn_filter.click(do_filter, inputs=[filter_dd, idx_state],   outputs=ALL_OUTPUTS)
 
     btn_save.click(
         save_annotation,
@@ -456,6 +567,27 @@ with gr.Blocks(title="OpenLex Eval v4 Annotation", css=CSS) as demo:
                 rechtsgebiete_cbg, anfrage_typen_cbg, normbezug_tb,
                 notes_tb, deep_cb],
         outputs=[save_status],
+    )
+
+    # Such-Button
+    btn_search.click(
+        do_search,
+        inputs=[search_tb],
+        outputs=[search_results_cbg, search_status_tb],
+    )
+
+    # Suchergebnisse → Must-Contain
+    btn_add_search.click(
+        do_add_search_to_must,
+        inputs=[search_results_cbg, must_cbg, must_cbg],
+        outputs=[must_cbg, must_cbg, search_results_cbg, search_status_tb],
+    )
+
+    # Direkte Chunk-ID
+    btn_add_direct.click(
+        do_add_direct,
+        inputs=[direct_id_tb, must_cbg, must_cbg],
+        outputs=[must_cbg, must_cbg, direct_status_tb],
     )
 
 
