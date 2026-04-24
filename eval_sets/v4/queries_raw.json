@@ -1,0 +1,3969 @@
+[
+  {
+    "query_id": "v4_mw_001",
+    "query": "Muss die Bank mir erklären, wie mein SCHUFA-Score zustande kommt, wenn sie deshalb meinen Kredit ablehnt?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_eugh_c_634_21_schufa___scoring_als_automatisierte_entscheidu",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 15 DSGVO",
+        "Art. 13 DSGVO",
+        "Art. 14 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_002",
+    "query": "Zählt es als gültige Einwilligung, wenn ich eine vorangekreuzte Checkbox auf einer Website einfach nicht wegmache?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_pr_fungsschema_einwilligung__art__7_dsgvo_",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 4 Nr. 11 DSGVO",
+        "Art. 7 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_003",
+    "query": "Darf ich für mein KI-Projekt einfach öffentlich zugängliche Nutzerdaten aus dem Internet zum Training verwenden?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_ki_training_zweckbindung",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "handlungsanweisung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO",
+        "Art. 9 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_004",
+    "query": "Kann ich bei unklaren DSGVO-Begriffen auf alte Urteile zur Datenschutzrichtlinie 95/46/EG zurückgreifen?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_historische_auslegung__rl_95_46_eg_als_vorg_nger_",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH"
+      ],
+      "anfrage_typen": [
+        "normauslegung",
+        "rechtsprechung"
+      ],
+      "normbezug": [
+        "DSGVO",
+        "Richtlinie 95/46/EG"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_005",
+    "query": "Darf ich Kundendaten, die ich für Rechnungen gesammelt habe, später für Marketing nutzen – oder brauche ich dafür eine neue Einwilligung?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_art__5_abs__1_lit__b_dsgvo___zweckbindung",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO",
+        "Art. 7 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_006",
+    "query": "Muss ich meine Kundendaten verschlüsseln, wenn ich sie in der Cloud speichere?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_art__5_abs__1_lit__f_dsgvo___integrit_t_und_vertraulichkeit",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 32 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_007",
+    "query": "Ich betreibe eine Website mit eingebundenem Facebook-Like-Button – bin ich dann automatisch gemeinsam mit Facebook für die Datenverarbeitung verantwortlich?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_gemeinsame_verantwortlichkeit_art26",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH"
+      ],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": [
+        "Art. 26 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_008",
+    "query": "Kann ich von Google verlangen, dass alte Suchergebnisse zu meinem Namen gelöscht werden – auch wenn sie eigentlich wahr sind?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_recht_auf_vergessenwerden_pruefungsschema",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "rechtsprechung"
+      ],
+      "normbezug": [
+        "Art. 17 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_009",
+    "query": "Darf ich Kundendaten an Werbepartner weitergeben, wenn ich damit nur meinen Umsatz steigern will?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_eugh_c_621_22_knltb___kommerzielle_interessen_als_berechtigt",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO",
+        "Art. 7 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_010",
+    "query": "Muss ich auch meine Backup-Daten löschen, wenn die ursprüngliche Speicherfrist abgelaufen ist?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_art__5_abs__1_lit__e_dsgvo___speicherbegrenzung",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 5 DSGVO",
+        "Art. 17 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_011",
+    "query": "Wie nutze ich die Erwägungsgründe der DSGVO, um zu prüfen, ob mein berechtigtes Interesse nach Art. 6 Abs. 1 lit. f rechtmäßig ist?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_systematische_auslegung_der_dsgvo__erw_gungsgr_nde_als_konte",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Methodenwissen"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_012",
+    "query": "Kann ich wegen derselben Datenschutzverstöße sowohl von der DSGVO als auch nach nationalem Recht bestraft werden?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_ne_bis_in_idem_und_nulla_poena_sine_lege_im_datenschutzrecht",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 83 DSGVO",
+        "§ 41 BDSG"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_013",
+    "query": "Reicht es für eine Schadensersatzklage, wenn meine Daten *nur* durchsickerten – auch wenn niemand sie missbraucht hat?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_eugh_c_200_23___kontrollverlust_als_schaden",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "rechtsprechung"
+      ],
+      "normbezug": [
+        "Art. 82 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_014",
+    "query": "Kann mir als Tochterfirma eines Konzerns ein DSGVO-Bußgeld drohen, das sich am Umsatz des ganzen Konzerns orientiert?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_eugh_c_383_23_ilva___konzernumsatz_bei_bu_geldbemessung",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 83 DSGVO",
+        "§ 41 BDSG"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_015",
+    "query": "Reicht es für eine Schadensersatzklage, wenn meine Daten durch ein Leck gestohlen wurden, aber noch nichts passiert ist?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_eugh_c_182_22_scalable_capital___identit_tsdiebstahl_als_sch",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "rechtsprechung"
+      ],
+      "normbezug": [
+        "Art. 82 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_016",
+    "query": "Muss ich eine Datenschutz-Folgenabschätzung machen, wenn ich Standortdaten meiner Kunden systematisch auswerte?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_dsk_blacklist___17_dsfa_pflichtige_verarbeitungen",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "subsumtion"
+      ],
+      "normbezug": [
+        "Art. 35 DSGVO",
+        "Art. 36 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_017",
+    "query": "Muss ich jetzt einen Datenschutzbeauftragten bestellen, wenn ich 20 Mitarbeiter habe, die Kundendaten bearbeiten?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_deutsche_umsetzung_der_dsgvo__ffnungsklauseln_im_bdsg",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "subsumtion"
+      ],
+      "normbezug": [
+        "Art. 37 DSGVO",
+        "§38 BDSG"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_018",
+    "query": "Was muss ich konkret dokumentieren, um nachzuweisen, dass ich die DSGVO einhalte?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_art__5_abs__2_dsgvo___rechenschaftspflicht__accountability_",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung"
+      ],
+      "normbezug": [
+        "Art. 5 DSGVO",
+        "Art. 24 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_019",
+    "query": "Muss ich bei Datenübermittlungen in die USA immer prüfen, ob die Empfänger-Firma DPF-zertifiziert ist?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_angemessenheitsbeschluesse_art45",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "TDDDG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_020",
+    "query": "Muss ich auf meiner Website wirklich für *jeden* Cookie eine Opt-in-Einwilligung einholen – auch für technische?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_verh_ltnis_dsgvo_zu_eprivacy_ttdsg__lex_specialis_",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "TDDDG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO",
+        "Art. 5 Abs. 3 ePrivacy-Richtlinie"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_021",
+    "query": "Reicht es für Schadensersatz, wenn ich Angst habe, dass meine falsch zugestellten Gesundheitsdaten missbraucht werden – auch wenn nichts passiert ist?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_eugh_c_590_22___bef_rchtung_von_datenmissbrauch_als_immateri",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "rechtsprechung"
+      ],
+      "normbezug": [
+        "Art. 82 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_022",
+    "query": "Muss ich bei der DSGVO immer den Datenschutz höher gewichten als den freien Datenverkehr?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_teleologische_auslegung_der_dsgvo__doppelzweck_art__1_",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "normauslegung"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_023",
+    "query": "Muss ich für mein KI-Training mit sensiblen Daten *zwei* separate Risikobewertungen (DSFA + FRIA) durchführen?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_dsgvo_und_ai_act__ki_verordnung_",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Methodenwissen"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "prozedural"
+      ],
+      "normbezug": [
+        "Art. 35 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_024",
+    "query": "Muss ich als Website-Betreiber wirklich alle 9 Schritte prüfen, auch wenn ich nur Newsletter-E-Mails sammle?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_pr_fungsschema_datenschutzrecht___9_schritte_standardpr_fung",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Methodenwissen"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "prozedural"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO",
+        "Art. 7 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_025",
+    "query": "Kann ich einfach Daten an ein US-Unternehmen schicken, wenn es im *Data Privacy Framework* gelistet ist – oder muss ich trotzdem noch was prüfen?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_data_privacy_framework__dpf__und_pr_fungsschema_drittlandtra",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "subsumtion"
+      ],
+      "normbezug": [
+        "Art. 45 DSGVO",
+        "Schrems II"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_026",
+    "query": "Kann ich für personalisierte Werbung einfach die „berechtigten Interessen“ als Rechtsgrundlage nutzen – oder muss ich da was konkret prüfen?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_pr_fungsschema_berechtigtes_interesse__art__6_abs__1_lit__f_",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Leitlinien_EDPB"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "handlungsanweisung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_027",
+    "query": "Wenn mein Bundesland strengere Datenschutzregeln als die DSGVO hat – welche gilt dann für mich?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_normenhierarchie_im_eu_datenschutzrecht",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_028",
+    "query": "Ich möchte Bestandskunden per E-Mail über neue Produkte informieren – brauche ich dafür trotzdem ihre Einwilligung oder reicht ein Widerspruchs-Hinweis?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_verhaeltnis_dsgvo_ttdsg_uwg_werbung",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO",
+        "Art. 7 DSGVO",
+        "§7 BDSG"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_029",
+    "query": "Muss ich eine Datenschutz-Folgenabschätzung machen, wenn ich Kundendaten für automatisiertes Scoring nutze?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_pr_fungsschema_datenschutz_folgenabsch_tzung__dsfa__art__35_",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "subsumtion"
+      ],
+      "normbezug": [
+        "Art. 35 DSGVO",
+        "Art. 22 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_030",
+    "query": "Ich habe im Arbeitsvertrag keine Regelung zur Privatnutzung der E-Mails – darf mein Chef trotzdem meine Mails kontrollieren?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_beschaeftigtendatenschutz_email_it",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "handlungsanweisung"
+      ],
+      "normbezug": [
+        "Art. 88 DSGVO",
+        "§26 BDSG"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_031",
+    "query": "Muss ich als Website-Betreiber falsche Nutzerdaten sofort korrigieren, wenn mich jemand darauf hinweist?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_art__5_abs__1_lit__d_dsgvo___richtigkeit",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 5 DSGVO",
+        "Art. 16 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_032",
+    "query": "Kann ich bei einer DSGVO-Verletzung auch Schmerzensgeld verlangen, wenn ich keinen finanziellen Schaden hatte?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_eugh_c_687_21_mediamarktsaturn___ausgleichsfunktion_des_scha",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "rechtsprechung"
+      ],
+      "normbezug": [
+        "Art. 82 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_033",
+    "query": "Reicht es, wenn unsere Betriebsvereinbarung nur die DSGVO-Mindeststandards übernimmt – oder muss sie zusätzliche Schutzregeln enthalten?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_eugh_c_65_23___betriebsvereinbarungen_m_ssen_dsgvo_konform_s",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "handlungsanweisung"
+      ],
+      "normbezug": [
+        "Art. 88 DSGVO",
+        "§26 BDSG"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_034",
+    "query": "Ich habe von einem Unternehmen eine ungewollte Datenweitergabe an die USA erfahren – kann ich dafür Schadensersatz verlangen, auch wenn mir kein finanzieller Nachteil entstanden ist?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_pr_fungsschema_schadensersatz__art__82_dsgvo_",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "rechtsprechung"
+      ],
+      "normbezug": [
+        "Art. 82 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_035",
+    "query": "Muss ich als deutscher Richter die DSGVO immer nach EU-Recht auslegen – auch wenn deutsches Recht was anderes sagt?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_eu_spezifische_auslegungsmethoden__autonome_auslegung__effet",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH"
+      ],
+      "anfrage_typen": [
+        "normauslegung"
+      ],
+      "normbezug": [
+        "DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_036",
+    "query": "Kann mein Unternehmen ein DSGVO-Bußgeld bekommen, auch wenn kein Mitarbeiter absichtlich gegen die Regeln verstoßen hat?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_eugh_c_807_21_deutsche_wohnen___bu_gelder_und_verschuldenspr",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 83 DSGVO",
+        "§ 41 BDSG"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_037",
+    "query": "Wenn ich Daten nach dem Data Act weitergeben muss – bin ich dann automatisch der Verantwortliche nach DSGVO?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_dsgvo_und_data_act___data_governance_act__dga_",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "TDDDG"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 4 Nr. 7 DSGVO",
+        "Data Act"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_038",
+    "query": "Reicht eine ehrliche Entschuldigung meines Arbeitgebers aus, wenn er meine Daten illegal weitergegeben hat – oder kann ich trotzdem Schadensersatz fordern?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_eugh_c_507_23___entschuldigung_als_schadensausgleich__t_354_",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "handlungsanweisung"
+      ],
+      "normbezug": [
+        "Art. 82 DSGVO",
+        "Art. 5 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_039",
+    "query": "Muss ich in meiner Datenschutzerklärung wirklich alle 12 Punkte aus Art. 13 DSGVO auflisten – oder reichen die wichtigsten?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_informationspflichten_art13_art14",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 13 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_040",
+    "query": "Muss ich für *jede* Datenverarbeitung eine Einwilligung einholen – oder gibt es auch andere Ausnahmen?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_verbot_mit_erlaubnisvorbehalt_im_datenschutzrecht",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO",
+        "Art. 7 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_041",
+    "query": "Muss mein Arbeitgeber mir erklären, *wie* sein Bewertungssystem funktioniert – oder reicht eine vage Beschreibung?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_eugh_c_203_22_dun___bradstreet___kein_recht_auf_algorithmus_",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 12 DSGVO",
+        "Art. 13 DSGVO",
+        "Art. 14 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_042",
+    "query": "Ich möchte mein Büro mit Kameras überwachen – was muss ich beachten, damit es datenschutzkonform ist?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_videoueberwachung_pruefungsschema",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO",
+        "§ 4 BDSG"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_043",
+    "query": "Kann Deutschland die DSGVO durch eigene Gesetze einschränken – und wenn ja, wo sind die Grenzen?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw__ffnungsklauseln_der_dsgvo____bersicht",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO",
+        "Art. 23 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_044",
+    "query": "Was passiert, wenn mein Fall eine grenzüberschreitende Datenverarbeitung betrifft – welche Behörde ist dann für mich zuständig?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_vorlageverfahren_art__267_aeuv_und_one_stop_shop_mechanismus",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Methodenwissen"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "prozedural"
+      ],
+      "normbezug": [
+        "Art. 56 DSGVO",
+        "Art. 60 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_045",
+    "query": "Muss mein Arbeitgeber jetzt meine Daten nach der DSGVO statt nach § 26 BDSG verarbeiten?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_eugh_c_34_21_____26_bdsg_unanwendbar",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 88 DSGVO",
+        "§ 26 BDSG"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_046",
+    "query": "Gilt das Steuergeheimnis nach § 29b AO auch für meine Daten, wenn ich eine Selbstständigkeit anmelde?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_verh_ltnis_dsgvo_zu_sektorspezifischem_recht__sgb_x__ao__tkg",
+    "tags": {
+      "rechtsgebiete": [
+        "BDSG",
+        "Methodenwissen"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "§ 29b AO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_047",
+    "query": "Darf Facebook wirklich alle meine Daten aus Instagram, WhatsApp und anderen Websites dauerhaft für Werbung nutzen – selbst wenn ich zugestimmt habe?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_eugh_c_446_21_schrems_meta___datenminimierung_begrenzt_werbe",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO",
+        "Art. 7 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_048",
+    "query": "Muss ich für meinen Newsletter *immer* Double-Opt-in verwenden – oder reicht eine einfache Einwilligung per Häkchen?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_newsletter_einwilligung_dreistufig",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO",
+        "Art. 7 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_049",
+    "query": "Muss ich eine Datenschutz-Folgenabschätzung machen, wenn ich Kundenprofile mit KI auswerte und Speicherdauer 5 Jahre beträgt?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_wp_248___2_aus_9_regel_f_r_dsfa_pflicht",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "subsumtion"
+      ],
+      "normbezug": [
+        "Art. 35 DSGVO",
+        "Art. 6 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_050",
+    "query": "Wenn der EuGH und ein deutsches OLG zur DSGVO unterschiedlich urteilen – wessen Auslegung muss ich als Unternehmen eigentlich befolgen?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_quellengewichtung_im_datenschutzrecht___10_rang_system",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH",
+        "Rechtsprechung_BGH"
+      ],
+      "anfrage_typen": [
+        "rechtsprechung",
+        "handlungsanweisung"
+      ],
+      "normbezug": [
+        "DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_051",
+    "query": "Muss ich meine Kunden informieren, wenn ich ihre Daten in ChatGPT eingebe – und was muss ich dabei beachten?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_ki_datenschutz_pruefungsschema",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 13 DSGVO",
+        "Art. 14 DSGVO",
+        "Art. 12 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_052",
+    "query": "Was bedeutet es, wenn der EuGH sagt, dass „personenbezogene Daten“ in der DSGVO *autonom* ausgelegt werden müssen – und warum ist das für mich wichtig?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_grammatische_auslegung_der_dsgvo__wortlaut__mehrsprachigkeit",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH"
+      ],
+      "anfrage_typen": [
+        "definition",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 4 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_053",
+    "query": "Kann ich verlangen, dass Suchmaschinen alte, peinliche Infos über mich löschen – auch wenn die DSGVO nicht greift?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_informationelle_selbstbestimmung__bverfg_volksz_hlung_1983__",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "rechtsprechung"
+      ],
+      "normbezug": [
+        "Art. 17 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_054",
+    "query": "Muss ich meine Kunden aktiv darüber informieren, wenn ich ihre Daten für Marketing nutze – und wie genau?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_art__5_abs__1_lit__a_dsgvo___rechtm__igkeit__verarbeitung_na",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 13 DSGVO",
+        "Art. 14 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_055",
+    "query": "Muss ich in meinem Online-Shop wirklich nur die absolut nötigsten Kundendaten speichern, oder darf ich auch \"nice-to-have\"-Infos sammeln?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_art__5_abs__1_lit__c_dsgvo___datenminimierung",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 5 DSGVO",
+        "Art. 6 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_056",
+    "query": "Muss ich bei jeder Datenverarbeitung prüfen, ob es wirklich das mildeste Mittel gibt – oder reicht es, wenn es irgendwie hilft?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_verh_ltnism__igkeitsprinzip_im_datenschutzrecht__art__52_abs",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Methodenwissen"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 5 DSGVO",
+        "Art. 6 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_057",
+    "query": "Was passiert, wenn ein deutsches Gesetz gegen die DSGVO verstößt – muss ich mich trotzdem daran halten?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_anwendungsvorrang_des_eu_rechts__costa_enel__simmenthal_",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "normauslegung",
+        "subsumtion"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO",
+        "Art. 23 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_058",
+    "query": "Wie soll ich vorgehen, wenn es zu meiner Datenschutzfrage widersprüchliche Gerichtsurteile und Aufsichtsbehörden-Meinungen gibt?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_umgang_mit_meinungsstreit_im_datenschutzrecht",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH",
+        "Leitlinien_EDPB"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "prozedural"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_059",
+    "query": "Muss ich für KYC-Prüfungen nach dem DSA zusätzlich eine DSGVO-Rechtsgrundlage wie Einwilligung oder Vertrag vorweisen?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_dsgvo_und_dsa__digital_services_act_",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "DDG"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO",
+        "Digital Services Act"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_060",
+    "query": "Muss ich für Google Analytics auf meiner Website wirklich ein Opt-In-Cookie-Banner einbauen, auch wenn ich keine Nutzerdaten speichere?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_pruefungsschema_cookies_tracking",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "TDDDG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO",
+        "Art. 7 DSGVO",
+        "§ 25 TTDSG"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_061",
+    "query": "Muss ich vor dem Einsatz einer KI mit Kundendaten immer eine Datenschutz-Folgenabschätzung machen?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_dsk_ki_positionen",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 35 DSGVO",
+        "Art. 6 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_062",
+    "query": "Muss ich Besucher mit einem Hinweisschild über meine Videoüberwachung informieren, auch wenn nur der Hauseingang gefilmt wird?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_dsk_videoueberwachung_stub",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "subsumtion"
+      ],
+      "normbezug": [
+        "Art. 13 DSGVO",
+        "Art. 14 DSGVO",
+        "§ 4 BDSG"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_063",
+    "query": "Wenn ich einen externen Buchhalter beauftrage – muss ich dann einen AVV abschließen oder ist das eine Funktionsübertragung?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_auftragsverarbeitung_cloud",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "handlungsanweisung"
+      ],
+      "normbezug": [
+        "Art. 28 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_064",
+    "query": "Zählen dynamische IP-Adressen auf meiner Website als personenbezogene Daten, auch wenn ich die Nutzer nicht direkt kenne?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_personenbezug_ip_adressen_bestimmbarkeit",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH"
+      ],
+      "anfrage_typen": [
+        "definition",
+        "subsumtion"
+      ],
+      "normbezug": [
+        "Art. 4 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_065",
+    "query": "Muss ich als Online-Händler Kunden über mein Scoring-Verfahren informieren, wenn ich damit Kreditwürdigkeit prüfe?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_pruefungsschema_profiling_scoring_art22",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 13 DSGVO",
+        "Art. 14 DSGVO",
+        "Art. 22 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_066",
+    "query": "Kann ich meine Facebook-Daten in einem Format verlangen, das ich direkt bei LinkedIn hochladen kann?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_datenportabilitaet_art20",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 20 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_067",
+    "query": "Muss ich als App-Betreiber die Altersangabe von Nutzern unter 16 Jahren technisch überprüfen, wenn ich eine Lernplattform anbiete?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_minderjaerigenschutz_art8",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 8 DSGVO",
+        "§ 1 BDSG"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_068",
+    "query": "Ich habe wegen eines Datenschutzverstoßes einen immateriellen Schaden – kann ich einfach gegen das Unternehmen klagen oder muss ich die Schwere der Verletzung besonders beweisen?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_haftungssystem_dsgvo_national",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Rechtsprechung_EuGH"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "rechtsprechung"
+      ],
+      "normbezug": [
+        "Art. 82 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_069",
+    "query": "Kann ich Microsoft 365 jetzt problemlos nutzen, oder muss ich als Firma trotzdem noch selbst prüfen?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_dsk_microsoft365_stub",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "subsumtion"
+      ],
+      "normbezug": [
+        "Art. 28 DSGVO",
+        "Art. 32 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_070",
+    "query": "Zählt meine IP-Adresse laut Art. 4 Nr. 1 DSGVO als personenbezogenes Datum?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_art4_index",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": [
+        "Art. 4 Nr. 1 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_071",
+    "query": "Muss ich vor jeder Datenverarbeitung eine Rechtsgrundlage nach Art. 6 DSGVO schriftlich festhalten?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_verbot_mit_erlaubnisvorbehalt",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_072",
+    "query": "Muss ich trotz DPF-Zertifizierung des US-Partners zusätzlich Standardvertragsklauseln vereinbaren, um auf der sicheren Seite zu sein?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_dpf_data_privacy_framework",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Leitlinien_EDPB"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 46 DSGVO",
+        "Art. 45 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_073",
+    "query": "Muss ich als Unternehmen zusätzlich zu den neuen SCC noch ein Transfer Impact Assessment machen, wenn ich Daten in die USA übermittle?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_standardvertragsklauseln_scc",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "Leitlinien_EDPB"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 46 DSGVO",
+        "Schrems II"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_074",
+    "query": "Wie lange dauert es, bis meine Firmen-BCR von der Datenschutzbehörde genehmigt werden?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_bcr_verbindliche_interne_vorschriften",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "prozedural"
+      ],
+      "normbezug": [
+        "Art. 47 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_075",
+    "query": "Gilt die DSGVO in Deutschland automatisch – oder muss sie erst in ein deutsches Gesetz umgewandelt werden?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_unmittelbare_geltung_dsgvo",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 99 DSGVO",
+        "Art. 288 AEUV"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_076",
+    "query": "Darf Deutschland strengere Datenschutzregeln einführen als die DSGVO es eigentlich erlaubt?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_vollharmonisierung_oeffnungsklauseln",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO",
+        "§ 1 BDSG"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_077",
+    "query": "Muss ich eine Einwilligung einholen, wenn ich Kamerabilder sofort verpixle und nicht speichere?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_anonymisierung_vs_verarbeitung",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "subsumtion",
+        "handlungsanweisung"
+      ],
+      "normbezug": [
+        "Art. 6 DSGVO",
+        "Art. 9 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_mw_078",
+    "query": "Muss ich auf meiner Website IP-Adressen anonymisieren, obwohl ich die Nutzer gar nicht persönlich kenne?",
+    "query_source": "methodenwissen",
+    "source_chunk_id": "mw_personenbezug_ip_adressen",
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung",
+        "normauslegung"
+      ],
+      "normbezug": [
+        "Art. 4 Nr. 1 DSGVO",
+        "Art. 6 DSGVO"
+      ]
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": ""
+  },
+  {
+    "query_id": "v4_real_001",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_002",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_003",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_004",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_005",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_006",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_007",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_008",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_009",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_010",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_011",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_012",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_013",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_014",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_015",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_016",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_017",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_018",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_019",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_020",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_lfdi]",
+    "query_source": "real_lfdi",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_021",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_dsk]",
+    "query_source": "real_dsk",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_022",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_dsk]",
+    "query_source": "real_dsk",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_023",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_dsk]",
+    "query_source": "real_dsk",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_024",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_dsk]",
+    "query_source": "real_dsk",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_025",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_dsk]",
+    "query_source": "real_dsk",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_026",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_dsk]",
+    "query_source": "real_dsk",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_027",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_dsk]",
+    "query_source": "real_dsk",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_028",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_dsk]",
+    "query_source": "real_dsk",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_029",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_dsk]",
+    "query_source": "real_dsk",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_030",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_dsk]",
+    "query_source": "real_dsk",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_031",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_dsk]",
+    "query_source": "real_dsk",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_032",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_dsk]",
+    "query_source": "real_dsk",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_033",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_dsk]",
+    "query_source": "real_dsk",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_034",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_dsk]",
+    "query_source": "real_dsk",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_035",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_dsk]",
+    "query_source": "real_dsk",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_036",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_037",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_038",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_039",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_040",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_041",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_042",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_043",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_044",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_045",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_046",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_047",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_048",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_049",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_050",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_051",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_052",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_053",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_054",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_055",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_mandant]",
+    "query_source": "real_mandant",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_056",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_057",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_058",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_059",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_060",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_061",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_062",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_063",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_064",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_065",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_066",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_067",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_068",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_069",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_070",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_071",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_072",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_073",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_074",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_real_075",
+    "query": "[TO BE FILLED: reale Query aus Quelle real_forum]",
+    "query_source": "real_forum",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": false,
+    "adversarial_type": null,
+    "notes": "Query-Text durch Hendrik zu füllen"
+  },
+  {
+    "query_id": "v4_adv_001",
+    "query": "Darf mein Arbeitgeber meine Mails NICHT lesen, auch wenn er einen Verdacht hat?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "negation",
+    "notes": "Adversarial: negation"
+  },
+  {
+    "query_id": "v4_adv_002",
+    "query": "Wann muss ich keine Datenschutzerklärung auf meiner Website haben?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "negation",
+    "notes": "Adversarial: negation"
+  },
+  {
+    "query_id": "v4_adv_003",
+    "query": "In welchen Fällen ist eine Einwilligung nicht erforderlich?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "negation",
+    "notes": "Adversarial: negation"
+  },
+  {
+    "query_id": "v4_adv_004",
+    "query": "Ab wann ist ein Datenschutzbeauftragter nicht mehr nötig?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO",
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "negation",
+    "notes": "Adversarial: negation"
+  },
+  {
+    "query_id": "v4_adv_005",
+    "query": "Welche Daten dürfen ohne Einwilligung nicht verarbeitet werden?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "negation",
+    "notes": "Adversarial: negation"
+  },
+  {
+    "query_id": "v4_adv_006",
+    "query": "Da § 29 BDSG die Datenweitergabe regelt, wie lange darf ich Daten speichern?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "false_premise",
+    "notes": "Adversarial: false_premise"
+  },
+  {
+    "query_id": "v4_adv_007",
+    "query": "Das TMG schreibt vor, dass Cookies ohne Einwilligung erlaubt sind – was heisst das konkret?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "TDDDG"
+      ],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "false_premise",
+    "notes": "Adversarial: false_premise"
+  },
+  {
+    "query_id": "v4_adv_008",
+    "query": "Nach § 32 BDSG-alt darf der Arbeitgeber Mails lesen – was muss ich beachten?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "BDSG"
+      ],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "false_premise",
+    "notes": "Adversarial: false_premise"
+  },
+  {
+    "query_id": "v4_adv_009",
+    "query": "Da die DSGVO nur für grosse Firmen gilt, welche Pflichten habe ich als Kleinunternehmer?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "false_premise",
+    "notes": "Adversarial: false_premise"
+  },
+  {
+    "query_id": "v4_adv_010",
+    "query": "Die DSK hat entschieden, dass Gesichtserkennung immer erlaubt ist – stimmt das?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "Leitlinien_DSK"
+      ],
+      "anfrage_typen": [
+        "rechtsprechung"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "false_premise",
+    "notes": "Adversarial: false_premise"
+  },
+  {
+    "query_id": "v4_adv_011",
+    "query": "Seit DSGVO brauche ich nie wieder eine Einwilligung – wie stelle ich das um?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "false_premise",
+    "notes": "Adversarial: false_premise"
+  },
+  {
+    "query_id": "v4_adv_012",
+    "query": "Art. 6 Abs. 1 lit. f DSGVO erlaubt mir immer die Verarbeitung ohne Einwilligung.",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "normauslegung"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "false_premise",
+    "notes": "Adversarial: false_premise"
+  },
+  {
+    "query_id": "v4_adv_013",
+    "query": "Wie funktioniert NSA-Überwachung bei US-Cloud-Anbietern?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "definition"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "out_of_domain",
+    "notes": "Adversarial: out_of_domain"
+  },
+  {
+    "query_id": "v4_adv_014",
+    "query": "Was sagt das kalifornische CCPA zu meinen Rechten?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "normauslegung"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "out_of_domain",
+    "notes": "Adversarial: out_of_domain"
+  },
+  {
+    "query_id": "v4_adv_015",
+    "query": "Wie umgehe ich den Datenschutz, ohne erwischt zu werden?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [
+        "handlungsanweisung"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "out_of_domain",
+    "notes": "Adversarial: out_of_domain"
+  },
+  {
+    "query_id": "v4_adv_016",
+    "query": "Ist die DSGVO in der Schweiz anwendbar?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "out_of_domain",
+    "notes": "Adversarial: out_of_domain"
+  },
+  {
+    "query_id": "v4_adv_017",
+    "query": "Wie verschlüssele ich meine Festplatte am besten?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [
+        "handlungsanweisung"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "out_of_domain",
+    "notes": "Adversarial: out_of_domain"
+  },
+  {
+    "query_id": "v4_adv_018",
+    "query": "Was ist besser – AWS oder Azure für meine Kundendaten?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "out_of_domain",
+    "notes": "Adversarial: out_of_domain"
+  },
+  {
+    "query_id": "v4_adv_019",
+    "query": "Was passiert, wenn ich das chinesische Datenschutzgesetz nicht einhalte?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "out_of_domain",
+    "notes": "Adversarial: out_of_domain"
+  },
+  {
+    "query_id": "v4_adv_020",
+    "query": "Mein Chef liest meine Mails – ist das erlaubt?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "BDSG",
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "ambiguous_context",
+    "notes": "Adversarial: ambiguous_context"
+  },
+  {
+    "query_id": "v4_adv_021",
+    "query": "Ich möchte Daten löschen – was muss ich tun?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "handlungsanweisung"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "ambiguous_context",
+    "notes": "Adversarial: ambiguous_context"
+  },
+  {
+    "query_id": "v4_adv_022",
+    "query": "Darf ich das?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "ambiguous_context",
+    "notes": "Adversarial: ambiguous_context"
+  },
+  {
+    "query_id": "v4_adv_023",
+    "query": "Kann ich Fotos meiner Kunden veröffentlichen?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "ambiguous_context",
+    "notes": "Adversarial: ambiguous_context"
+  },
+  {
+    "query_id": "v4_adv_024",
+    "query": "Brauche ich eine Einwilligung?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "ambiguous_context",
+    "notes": "Adversarial: ambiguous_context"
+  },
+  {
+    "query_id": "v4_adv_025",
+    "query": "Ist das ein Datenleck?",
+    "query_source": "adversarial",
+    "source_chunk_id": null,
+    "tags": {
+      "rechtsgebiete": [
+        "DSGVO"
+      ],
+      "anfrage_typen": [
+        "subsumtion"
+      ],
+      "normbezug": []
+    },
+    "must_contain_chunk_ids": [],
+    "forbidden_contain_chunk_ids": [],
+    "is_deep_eval": false,
+    "legal_sufficiency_gold": null,
+    "is_adversarial": true,
+    "adversarial_type": "ambiguous_context",
+    "notes": "Adversarial: ambiguous_context"
+  }
+]
