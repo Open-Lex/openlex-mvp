@@ -63,6 +63,21 @@ except ImportError:
     _REWRITE_AVAILABLE = False
     _rewrite_query = None  # type: ignore
 
+# Norm-Zitat-Validator (hinter Feature-Flag)
+def _norm_validator_enabled() -> bool:
+    return os.getenv("OPENLEX_NORM_VALIDATOR_ENABLED", "false").lower() == "true"
+
+def _norm_warn_on_ungrounded() -> bool:
+    return os.getenv("OPENLEX_NORM_WARN_ON_UNGROUNDED", "true").lower() == "true"
+
+try:
+    from norm_validator import validate_answer as _validate_norms, format_warning as _format_norm_warning
+    _NORM_VALIDATOR_AVAILABLE = True
+except ImportError:
+    _NORM_VALIDATOR_AVAILABLE = False
+    _validate_norms = None  # type: ignore
+    _format_norm_warning = None  # type: ignore
+
 # ---------------------------------------------------------------------------
 # Konfiguration
 # ---------------------------------------------------------------------------
@@ -2252,9 +2267,28 @@ def chat_stream(message: str, history: list[list[str]]):
                 1,
             )
 
+    # === Norm-Zitat-Validator ===
+    norm_warning = None
+    if _norm_validator_enabled() and _NORM_VALIDATOR_AVAILABLE:
+        try:
+            import logging as _nv_logging
+            _nv_result = _validate_norms(
+                full_response,
+                retrieved_chunks=chunks,
+                warn_on_ungrounded=_norm_warn_on_ungrounded(),
+            )
+            norm_warning = _format_norm_warning(_nv_result)
+            if norm_warning:
+                _nv_logging.getLogger(__name__).warning("NormValidator: %s", norm_warning)
+        except Exception as _nv_e:
+            import logging as _nv_logging
+            _nv_logging.getLogger(__name__).warning("NormValidator error: %s", _nv_e)
+
     sources_md = format_sources(chunks, validations, question=message)
     n_docs = len(group_chunks_to_docs(chunks))
     full_response += f"\n\n\n*Modell: {model_label} | {n_docs} Dokumente ({len(chunks)} Chunks) | {len(validations)} Referenzen validiert*"
+    if norm_warning:
+        full_response += f"\n\n{norm_warning}"
     yield full_response, sources_md, chunks
 
 
