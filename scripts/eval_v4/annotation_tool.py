@@ -23,6 +23,37 @@ OUTPUT_PATH = Path(os.getenv("OPENLEX_EVAL_V4_OUTPUT_PATH",
 BACKUP_DIR = Path("/opt/openlex-mvp/eval_sets/v4/annotation_backups")
 BACKUP_DIR.mkdir(parents=True, exist_ok=True)
 
+# ─── Tag-Optionen ─────────────────────────────────────────────────────────────
+RECHTSGEBIETE_OPTIONS = [
+    "datenschutz_grundlagen",
+    "betroffenenrechte",
+    "auftragsverarbeitung",
+    "einwilligung",
+    "beschaeftigtendatenschutz",
+    "cookie_tracking",
+    "datenschutzbeauftragter",
+    "datenpanne_meldepflicht",
+    "datenuebermittlung_drittland",
+    "videoüberwachung",
+    "marketing_werbung",
+    "gesundheitsdaten",
+    "kinder_jugendliche",
+    "ki_automatisierung",
+    "out_of_domain",
+]
+
+ANFRAGE_TYPEN_OPTIONS = [
+    "rechtsfrage",
+    "praxisfall",
+    "normlookup",
+    "definition",
+    "vergleich",
+    "checkliste",
+    "verfahren",
+    "adversarial",
+    "deep_eval",
+]
+
 
 # === State ===
 def load_data():
@@ -74,11 +105,9 @@ def build_forbidden_choices(q):
 def extract_chunk_id(label: str) -> str:
     """Extrahiert chunk_id aus Checkbox-Label: '[score] chunk_id | gesetz | snippet'"""
     if "|" in label:
-        # Erstes Segment vor dem ersten |
         part = label.split("|")[0].strip()
     else:
         part = label.strip()
-    # Score-Prefix entfernen: "[0.123] chunk_id" → "chunk_id"
     if "] " in part:
         return part.split("] ", 1)[1].strip()
     return part.strip()
@@ -87,14 +116,14 @@ def extract_chunk_id(label: str) -> str:
 def get_query_data(idx: int):
     """Gibt alle UI-Werte für den Query bei idx zurück."""
     if not (0 <= idx < len(queries)):
-        return ("", "", "", "", [], [], [], [],
-                "{}", "", False, get_progress_text())
+        return ("", "", "", [], [], [], [],
+                [], [], "", "", False, get_progress_text())
 
     q = queries[idx]
     must_choices = build_candidate_choices(q)
     forb_choices = build_forbidden_choices(q)
 
-    # Bereits ausgewählte
+    # Bereits ausgewählte must-Chunks
     pre_must = []
     for sel_id in q.get("must_contain_chunk_ids", []):
         for label in must_choices:
@@ -102,22 +131,29 @@ def get_query_data(idx: int):
                 pre_must.append(label)
                 break
 
+    # Bereits ausgewählte forbidden-Chunks
     pre_forb = []
     for sel_id in q.get("forbidden_contain_chunk_ids", []):
         if sel_id in forb_choices:
             pre_forb.append(sel_id)
 
-    tags_str = json.dumps(q.get("tags", {}), indent=2, ensure_ascii=False)
+    # Tags aufschlüsseln
+    tags = q.get("tags", {})
+    pre_rechtsgebiete = [r for r in tags.get("rechtsgebiete", []) if r in RECHTSGEBIETE_OPTIONS]
+    pre_anfrage_typen = [a for a in tags.get("anfrage_typen", []) if a in ANFRAGE_TYPEN_OPTIONS]
+    normbezug_str = ", ".join(tags.get("normbezug", []))
 
     return (
         q.get("query_id", ""),
         q.get("query_source", ""),
         q.get("query", ""),
-        tags_str,
         must_choices,
         pre_must,
         forb_choices,
         pre_forb,
+        pre_rechtsgebiete,
+        pre_anfrage_typen,
+        normbezug_str,
         q.get("notes", ""),
         bool(q.get("is_deep_eval", False)),
         get_progress_text(),
@@ -130,7 +166,6 @@ def navigate(idx: int, delta: int = 0, target: int = None):
     else:
         new_idx = max(0, min(len(queries) - 1, idx + delta))
     data = get_query_data(new_idx)
-    # return: all outputs + new_idx
     return data + (new_idx,)
 
 
@@ -138,7 +173,7 @@ def go_next_unannotated(idx: int):
     for i in range(idx + 1, len(queries)):
         if not queries[i].get("must_contain_chunk_ids"):
             return navigate(i, target=i)
-    return navigate(idx, target=idx)  # nothing found, stay
+    return navigate(idx, target=idx)
 
 
 def go_filter(status: str, idx: int):
@@ -154,12 +189,14 @@ def go_filter(status: str, idx: int):
     return navigate(idx, target=idx)
 
 
-def save_annotation(idx, must_sel, forb_sel, query_text, tags_text, notes, is_deep):
+def save_annotation(idx, must_sel, forb_sel, query_text,
+                    rechtsgebiete_sel, anfrage_sel, normbezug_str,
+                    notes, is_deep):
     if not (0 <= idx < len(queries)):
         return "❌ Ungültiger Index"
     q = queries[idx]
 
-    # Extrahiere IDs
+    # Extrahiere Chunk-IDs
     must_ids = [extract_chunk_id(label) for label in (must_sel or [])]
     must_ids = [x for x in must_ids if x]
     forb_ids = [fid.strip() for fid in (forb_sel or []) if fid.strip()]
@@ -170,12 +207,13 @@ def save_annotation(idx, must_sel, forb_sel, query_text, tags_text, notes, is_de
     q["notes"] = notes or ""
     q["is_deep_eval"] = bool(is_deep)
 
-    try:
-        if tags_text and tags_text.strip():
-            parsed = json.loads(tags_text)
-            q["tags"] = parsed
-    except Exception as e:
-        return f"❌ Tags-JSON-Fehler: {e}"
+    # Tags aus strukturierten Feldern
+    normbezug = [n.strip() for n in (normbezug_str or "").split(",") if n.strip()]
+    q["tags"] = {
+        "rechtsgebiete": list(rechtsgebiete_sel or []),
+        "anfrage_typen": list(anfrage_sel or []),
+        "normbezug": normbezug,
+    }
 
     save_data_to_disk(queries)
     return f"✅ Gespeichert — {q['query_id']} ({len(must_ids)} must-IDs)"
@@ -215,7 +253,23 @@ with gr.Blocks(title="OpenLex Eval v4 Annotation", css=CSS) as demo:
 
     query_tb = gr.Textbox(label="Query (editierbar — z.B. für real_* Templates)", lines=3, scale=1)
 
-    tags_tb = gr.Code(label="Tags (JSON — editierbar)", language="json", lines=7)
+    # ─── Strukturierte Tag-Felder ──────────────────────────────────────────────
+    with gr.Row():
+        rechtsgebiete_cbg = gr.CheckboxGroup(
+            choices=RECHTSGEBIETE_OPTIONS,
+            label="Rechtsgebiete (mindestens 1)",
+            scale=2,
+        )
+        anfrage_typen_cbg = gr.CheckboxGroup(
+            choices=ANFRAGE_TYPEN_OPTIONS,
+            label="Anfrage-Typen (mindestens 1)",
+            scale=1,
+        )
+    normbezug_tb = gr.Textbox(
+        label="Normbezug (kommagetrennt, z.B. Art. 6 DSGVO, § 26 BDSG)",
+        placeholder="Art. 6 DSGVO, Art. 13 DSGVO",
+        lines=1,
+    )
 
     gr.Markdown("### ✅ Must-Contain-Chunks (1–5 auswählen)")
     must_cbg = gr.CheckboxGroup(label="Retrieval-Kandidaten", choices=[])
@@ -231,37 +285,45 @@ with gr.Blocks(title="OpenLex Eval v4 Annotation", css=CSS) as demo:
         btn_save    = gr.Button("💾 Speichern", variant="primary")
         save_status = gr.Textbox(label="Status", interactive=False)
 
-    # Alle UI-Outputs in einer Liste
+    # Alle UI-Outputs (ohne idx_state, der wird separat angehängt)
+    # get_query_data returns 13 values; navigate returns 14 (+ new_idx)
     ALL_OUTPUTS = [
-        qid_tb, src_tb, query_tb, tags_tb,
-        must_cbg, must_cbg,   # choices + value
-        forb_cbg, forb_cbg,   # choices + value
+        qid_tb, src_tb, query_tb,
+        must_cbg, must_cbg,       # choices + value
+        forb_cbg, forb_cbg,       # choices + value
+        rechtsgebiete_cbg,        # value
+        anfrage_typen_cbg,        # value
+        normbezug_tb,             # value
         notes_tb, deep_cb, progress_md,
         idx_state,
     ]
 
     def unpack(data_tuple):
         """Wandelt navigate()-Rückgabe in gr.update()-Aufrufe um."""
-        (qid, src, query, tags,
+        (qid, src, query,
          must_choices, must_val,
          forb_choices, forb_val,
+         rechtsgebiete_val, anfrage_val, normbezug_val,
          notes, deep, progress,
          new_idx) = data_tuple
         return (
-            qid, src, query, tags,
+            qid, src, query,
             gr.update(choices=must_choices, value=must_val),
             gr.update(choices=must_choices, value=must_val),
             gr.update(choices=forb_choices, value=forb_val),
             gr.update(choices=forb_choices, value=forb_val),
+            rechtsgebiete_val,
+            anfrage_val,
+            normbezug_val,
             notes, deep, progress,
             new_idx,
         )
 
-    def do_prev(idx):   return unpack(navigate(idx, delta=-1))
-    def do_next(idx):   return unpack(navigate(idx, delta=+1))
-    def do_unann(idx):  return unpack(go_next_unannotated(idx))
-    def do_jump(n):     return unpack(navigate(0, target=int(n) - 1))
-    def do_filter(s, idx): return unpack(go_filter(s, idx))
+    def do_prev(idx):       return unpack(navigate(idx, delta=-1))
+    def do_next(idx):       return unpack(navigate(idx, delta=+1))
+    def do_unann(idx):      return unpack(go_next_unannotated(idx))
+    def do_jump(n):         return unpack(navigate(0, target=int(n) - 1))
+    def do_filter(s, idx):  return unpack(go_filter(s, idx))
 
     # Initial load
     demo.load(
@@ -277,7 +339,9 @@ with gr.Blocks(title="OpenLex Eval v4 Annotation", css=CSS) as demo:
 
     btn_save.click(
         save_annotation,
-        inputs=[idx_state, must_cbg, forb_cbg, query_tb, tags_tb, notes_tb, deep_cb],
+        inputs=[idx_state, must_cbg, forb_cbg, query_tb,
+                rechtsgebiete_cbg, anfrage_typen_cbg, normbezug_tb,
+                notes_tb, deep_cb],
         outputs=[save_status],
     )
 
