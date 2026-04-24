@@ -52,6 +52,17 @@ except ImportError:
     _bm25_retrieve = None  # type: ignore
     _rrf_fuse = None  # type: ignore
 
+# LLM-Query-Rewriting (hinter Feature-Flag, Runtime-Flag für reload()-Kompatibilität)
+def _rewrite_enabled() -> bool:
+    return os.getenv("OPENLEX_REWRITE_ENABLED", "false").lower() == "true"
+
+try:
+    from query_rewriter import rewrite as _rewrite_query
+    _REWRITE_AVAILABLE = True
+except ImportError:
+    _REWRITE_AVAILABLE = False
+    _rewrite_query = None  # type: ignore
+
 # ---------------------------------------------------------------------------
 # Konfiguration
 # ---------------------------------------------------------------------------
@@ -754,16 +765,45 @@ def retrieve_candidates_only(question: str, top_k: int = 150) -> list[dict]:
 
 def retrieve(question: str, history: list[tuple[str, str]] | None = None,
              _candidates_only: bool = False, _candidates_top_k: int = 150,
-             return_trace: bool = False):
+             return_trace: bool = False, trace_format: str = "flat"):
     """Führt semantische + Norm-basierte + Keyword-Suche + Reranking durch.
 
     Interne Parameter (nicht für externe Aufrufer):
         _candidates_only: Wenn True, gibt den Candidate-Pool vor Cross-Encoder zurück.
         _candidates_top_k: Wie viele Kandidaten bei _candidates_only zurückgeben.
-        return_trace: Wenn True, gibt (results, trace_dict) statt nur results zurück.
-                      Für Experimente und Diagnose (entspricht OPENLEX_TRACE_MODE=true).
+        return_trace: Wenn True, gibt (results, trace) statt nur results zurück.
+        trace_format: "flat" (default, KW17-kompatibel: dict chunk_id→info) oder
+                      "rich" ({"chunks": dict, "rewrite": {...}}).
     """
     trace_this_call = return_trace or _trace_enabled()
+
+    # === LLM Query Rewriting (vor allem Retrieval) ===
+    original_question = question
+    rewrite_info: dict = {
+        "used": False,
+        "original": question,
+        "rewritten": question,
+        "from_cache": False,
+        "error": None,
+        "duration_ms": 0.0,
+    }
+    if _rewrite_enabled() and _REWRITE_AVAILABLE and _rewrite_query is not None:
+        try:
+            rw = _rewrite_query(question)
+            rewrite_info = {
+                "used": True,
+                "original": rw.original,
+                "rewritten": rw.rewritten,
+                "from_cache": rw.from_cache,
+                "error": rw.error,
+                "duration_ms": rw.duration_ms,
+            }
+            question = rw.rewritten  # Alle nachfolgenden Retrieval-Pfade nutzen umgeschriebene Query
+        except Exception as e:
+            import logging
+            logging.getLogger(__name__).warning(f"Rewrite path errored, using original: {e}")
+    # === /Rewriting ===
+
     model = get_model()
     col = get_collection()
 
@@ -1257,6 +1297,8 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                 info["filter_reason"] = "topk_slice"
 
     if return_trace:
+        if trace_format == "rich":
+            return selected, {"chunks": _trace, "rewrite": rewrite_info}
         return selected, _trace
     return selected
 
