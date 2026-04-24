@@ -184,7 +184,7 @@ def _validate_and_normalize(raw: dict) -> Optional[dict]:
 _MISTRAL_URL = "https://api.mistral.ai/v1/chat/completions"
 
 
-def _call_mistral(query: str) -> str:
+def _call_mistral(query: str, max_retries: int = 4) -> str:
     import requests as _requests
     api_key = os.getenv("MISTRAL_KEY") or os.getenv("MISTRAL_API_KEY")
     if not api_key:
@@ -203,9 +203,23 @@ def _call_mistral(query: str) -> str:
         "max_tokens": 500,
         "response_format": {"type": "json_object"},
     }
-    r = _requests.post(_MISTRAL_URL, headers=headers, json=payload, timeout=30)
-    r.raise_for_status()
-    return (r.json()["choices"][0]["message"]["content"] or "").strip()
+    last_exc = None
+    for attempt in range(max_retries):
+        try:
+            r = _requests.post(_MISTRAL_URL, headers=headers, json=payload, timeout=30)
+            if r.status_code == 429:
+                wait = min(2 ** attempt * 2, 30)  # 2, 4, 8, 16s
+                logger.warning(f"Rate limit, retry {attempt+1}/{max_retries} in {wait}s")
+                time.sleep(wait)
+                last_exc = ConnectionError(f"429 Rate Limit (attempt {attempt+1})")
+                continue
+            r.raise_for_status()
+            return (r.json()["choices"][0]["message"]["content"] or "").strip()
+        except Exception as e:
+            last_exc = e
+            if attempt < max_retries - 1:
+                time.sleep(1)
+    raise last_exc or RuntimeError("Mistral call failed")
 
 
 # === Public API ===
