@@ -240,6 +240,9 @@ _reranker: CrossEncoder | None = None
 RERANKER_MODEL = os.environ.get(
     "RERANKER_MODEL", "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
 )
+# BGE-reranker gibt Sigmoid-Scores [0,1] zurück; skalieren auf mmarco-Bereich (~0-10)
+# für Kompatibilität mit Keyword-Boost-Threshold und CE-Rank-Sortierung.
+_CE_SCORE_SCALE = 10.0 if "bge-reranker" in RERANKER_MODEL.lower() else 1.0
 
 
 def get_reranker() -> CrossEncoder:
@@ -1085,6 +1088,7 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     ce_scores = reranker.predict(pairs).tolist()
 
     for chunk, ce_score in zip(candidates, ce_scores):
+        ce_score = ce_score * _CE_SCORE_SCALE  # noop fuer mmarco, *10 fuer BGE
         # Keyword-Treffer behalten Mindest-Score von 3.0
         if chunk.get("source") in ("keyword", "hybrid") and ce_score < 3.0:
             ce_score = 3.0
