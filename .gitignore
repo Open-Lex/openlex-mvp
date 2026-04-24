@@ -71,3 +71,4 @@ _archive/
 bm25_index/
 experiment_results/
 cache/
+logs/

@@ -94,6 +94,14 @@ except ImportError:
     _validate_norms = None  # type: ignore
     _format_norm_warning = None  # type: ignore
 
+# Telemetrie (best-effort, kein PII)
+try:
+    from telemetry import log_query as _log_telemetry
+    _TELEMETRY_AVAILABLE = True
+except ImportError:
+    _TELEMETRY_AVAILABLE = False
+    _log_telemetry = None  # type: ignore
+
 # ---------------------------------------------------------------------------
 # Konfiguration
 # ---------------------------------------------------------------------------
@@ -2290,6 +2298,7 @@ def format_db_stats() -> str:
 def chat_stream(message: str, history: list[list[str]]):
     """Generator: Retrieval → LLM-Stream → Validation. Yields (partial_response, sources_md, chunks)."""
 
+    _t0 = time.time()
     # Retrieval (mit History-Kontext für Folgefragen)
     _retrieve_result = retrieve(message, history)
 
@@ -2379,6 +2388,30 @@ def chat_stream(message: str, history: list[list[str]]):
     full_response += f"\n\n\n*Modell: {model_label} | {n_docs} Dokumente ({len(chunks)} Chunks) | {len(validations)} Referenzen validiert*"
     if norm_warning:
         full_response += f"\n\n{norm_warning}"
+
+    # === Telemetrie (best-effort) ===
+    if _TELEMETRY_AVAILABLE and _log_telemetry is not None:
+        try:
+            _top_score = max((c.get("ce_score", 0.0) for c in chunks), default=0.0)
+            _source_types = list({c.get("meta", {}).get("source_type", "") for c in chunks if c.get("meta", {}).get("source_type")})
+            _nv_tel = None
+            if "_nv_result" in dir() and _nv_result is not None:
+                _nv_tel = {
+                    "unknown_norms": getattr(_nv_result, "unknown_norm_count", 0),
+                    "ungrounded_norms": getattr(_nv_result, "ungrounded_norm_count", 0),
+                    "warning_shown": bool(norm_warning),
+                }
+            _log_telemetry(
+                message,
+                retrieval={"chunks_returned": len(chunks), "top_score": float(_top_score), "source_types": _source_types},
+                validator=_nv_tel,
+                duration_ms=(time.time() - _t0) * 1000,
+                model=model_label,
+            )
+        except Exception:
+            pass
+    # === /Telemetrie ===
+
     yield full_response, sources_md, chunks
 
 
@@ -3241,6 +3274,8 @@ if __name__ == "__main__":
         .message h1, .message h2, .message h3, .message h4 {
             user-select: text !important; -webkit-user-select: text !important;
             font-size: 17px !important; color: var(--text) !important; line-height: 1.7 !important; }
+        .message strong, .message b { color: #fff !important; font-weight: 700 !important; }
+        .message em, .message i { color: var(--text) !important; font-style: italic !important; }
         .message h1, .message h2, .message h3, .message h4 {
             font-family: 'Source Serif 4', Georgia, serif !important;
             font-weight: 700 !important; margin: 12px 0 4px !important; }
