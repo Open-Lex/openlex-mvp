@@ -63,6 +63,22 @@ except ImportError:
     _REWRITE_AVAILABLE = False
     _rewrite_query = None  # type: ignore
 
+# Intent-Analyzer (hinter Feature-Flag)
+def _intent_analysis_enabled() -> bool:
+    return os.getenv("OPENLEX_INTENT_ANALYSIS_ENABLED", "false").lower() == "true"
+
+def _intent_clarify_enabled() -> bool:
+    return os.getenv("OPENLEX_INTENT_CLARIFY_ENABLED", "true").lower() == "true"
+
+_INTENT_THRESHOLD = float(os.getenv("OPENLEX_INTENT_COMPLETENESS_THRESHOLD", "0.5"))
+
+try:
+    from intent_analyzer import analyze as _analyze_intent
+    _INTENT_AVAILABLE = True
+except ImportError:
+    _INTENT_AVAILABLE = False
+    _analyze_intent = None  # type: ignore
+
 # Norm-Zitat-Validator (hinter Feature-Flag)
 def _norm_validator_enabled() -> bool:
     return os.getenv("OPENLEX_NORM_VALIDATOR_ENABLED", "false").lower() == "true"
@@ -783,7 +799,8 @@ def retrieve_candidates_only(question: str, top_k: int = 150) -> list[dict]:
 
 def retrieve(question: str, history: list[tuple[str, str]] | None = None,
              _candidates_only: bool = False, _candidates_top_k: int = 150,
-             return_trace: bool = False, trace_format: str = "flat"):
+             return_trace: bool = False, trace_format: str = "flat",
+             allow_clarification: bool = True):
     """Führt semantische + Norm-basierte + Keyword-Suche + Reranking durch.
 
     Interne Parameter (nicht für externe Aufrufer):
@@ -794,6 +811,48 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                       "rich" ({"chunks": dict, "rewrite": {...}}).
     """
     trace_this_call = return_trace or _trace_enabled()
+
+    # === Intent Analysis ===
+    intent_info: dict = {
+        "used": False, "intent_type": None, "completeness_score": None,
+        "clarification_question": None, "should_ask_clarification": False,
+        "detected_roles": [], "key_aspects": [],
+    }
+    if _intent_analysis_enabled() and _INTENT_AVAILABLE and _analyze_intent is not None:
+        try:
+            ia = _analyze_intent(question)
+            should_clarify = (
+                _intent_clarify_enabled()
+                and ia.completeness_score < _INTENT_THRESHOLD
+                and ia.clarification_question is not None
+                and allow_clarification
+            )
+            intent_info = {
+                "used": True,
+                "intent_type": ia.intent_type,
+                "completeness_score": ia.completeness_score,
+                "clarification_question": ia.clarification_question,
+                "should_ask_clarification": should_clarify,
+                "detected_roles": ia.detected_roles,
+                "key_aspects": ia.key_aspects,
+                "from_cache": ia.from_cache,
+                "error": ia.error,
+            }
+        except Exception as _ia_e:
+            import logging as _ia_log
+            _ia_log.getLogger(__name__).warning(f"Intent analysis failed: {_ia_e}")
+
+    # Early-Return bei Clarification
+    if intent_info.get("should_ask_clarification"):
+        clarification_result = {
+            "type": "clarification_needed",
+            "clarification_question": intent_info["clarification_question"],
+            "intent_analysis": intent_info,
+        }
+        if return_trace:
+            return clarification_result, {"chunks": {}, "rewrite": {}, "intent": intent_info}
+        return clarification_result
+    # === /Intent Analysis ===
 
     # === LLM Query Rewriting (vor allem Retrieval) ===
     original_question = question
@@ -1158,6 +1217,27 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                     if cid in _trace:
                         _trace[cid]["boosts_applied"].append("instanzgericht_div1.3")
 
+    # === Intent-basierte Boost-Multiplikatoren ===
+    _INTENT_BOOST_MAP = {
+        "prozedural":      {"methodenwissen": 1.3},
+        "rechtsprechung":  {"urteil": 1.3, "urteil_segmentiert": 1.2},
+        "definition":      {"methodenwissen": 1.2, "erwaegungsgrund": 1.1},
+    }
+    if intent_info.get("used") and intent_info.get("intent_type") in _INTENT_BOOST_MAP:
+        _ib = _INTENT_BOOST_MAP[intent_info["intent_type"]]
+        for c in candidates:
+            st = c["meta"].get("source_type", "")
+            for st_key, mult in _ib.items():
+                if st == st_key or st.startswith(st_key):
+                    c["ce_score"] = c.get("ce_score", 0) * mult
+                    if trace_this_call:
+                        cid = c.get("id") or c["text"][:40]
+                        if cid in _trace:
+                            _trace[cid]["boosts_applied"].append(
+                                f"intent_{intent_info['intent_type']}_x{mult}"
+                            )
+    # === /Intent-Boost ===
+
     # Pre-DSGVO-Filter: Veraltete Leitlinien abwerten oder entfernen
     post_dsgvo = [c for c in candidates if not _is_outdated_chunk(c)]
     if len(post_dsgvo) >= 3:
@@ -1317,7 +1397,7 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
 
     if return_trace:
         if trace_format == "rich":
-            return selected, {"chunks": _trace, "rewrite": rewrite_info}
+            return selected, {"chunks": _trace, "rewrite": rewrite_info, "intent": intent_info}
         return selected, _trace
     return selected
 
@@ -2211,7 +2291,17 @@ def chat_stream(message: str, history: list[list[str]]):
     """Generator: Retrieval → LLM-Stream → Validation. Yields (partial_response, sources_md, chunks)."""
 
     # Retrieval (mit History-Kontext für Folgefragen)
-    chunks = retrieve(message, history)
+    _retrieve_result = retrieve(message, history)
+
+    # === Clarification-Branch ===
+    if isinstance(_retrieve_result, dict) and _retrieve_result.get("type") == "clarification_needed":
+        cq = _retrieve_result["clarification_question"]
+        clarification_text = f"💡 {cq}\n\n*(Bitte antworten Sie mit mehr Kontext, damit ich präziser helfen kann.)*"
+        yield clarification_text, "", []
+        return
+    # === /Clarification-Branch ===
+
+    chunks = _retrieve_result
     context = format_context(chunks)
     sources_placeholder = format_sources(chunks, [], question=message) + '<p style="color:#888"><em>⏳ Validierung läuft nach Abschluss der Antwort...</em></p>'
 
