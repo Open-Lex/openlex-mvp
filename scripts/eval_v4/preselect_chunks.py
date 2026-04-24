@@ -85,6 +85,8 @@ def main():
                     "gesetz": meta.get("gesetz", ""),
                     "snippet": str(doc)[:300],
                     "volladresse": meta.get("volladresse", ""),
+                    "gericht": meta.get("gericht", ""),
+                    "aktenzeichen": meta.get("aktenzeichen", ""),
                 })
             q["retrieval_candidates"] = candidates
             q["forbidden_candidates"] = forbidden_global[:5]

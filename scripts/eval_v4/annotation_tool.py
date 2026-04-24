@@ -230,6 +230,13 @@ def build_candidates_markdown(q) -> str:
         gesetz = c.get("gesetz") or ""
         vol    = c.get("volladresse") or ""
         src    = c.get("source_type") or ""
+        # Urteile: gericht+aktenzeichen als Fallback wenn gesetz/volladresse leer
+        if not gesetz and not vol:
+            db_meta = get_chunk_meta(cid)
+            gericht = db_meta.get("gericht") or ""
+            az      = db_meta.get("aktenzeichen") or ""
+            gesetz  = gericht
+            vol     = az
         full   = get_full_chunk_text(cid) or c.get("snippet") or "_Volltext nicht ladbar_"
         if len(full) > 2000:
             full = full[:2000] + "\n\n_(… gekürzt auf 2000 Zeichen)_"
