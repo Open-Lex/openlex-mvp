@@ -53,20 +53,48 @@ def get_full_chunk_text(chunk_id: str) -> str:
 
 # ─── Tag-Optionen ─────────────────────────────────────────────────────────────
 RECHTSGEBIETE_OPTIONS = [
-    "datenschutz_grundlagen",
-    "betroffenenrechte",
-    "auftragsverarbeitung",
-    "einwilligung",
-    "beschaeftigtendatenschutz",
-    "cookie_tracking",
-    "datenschutzbeauftragter",
-    "datenpanne_meldepflicht",
-    "datenuebermittlung_drittland",
-    "videoüberwachung",
-    "marketing_werbung",
-    "gesundheitsdaten",
-    "kinder_jugendliche",
-    "ki_automatisierung",
+    # ── Grundlagen & Prinzipien ───────────────────────────────────────────────
+    "datenschutz_grundlagen",           # allgemeine Einführung, Begriffe
+    "datenschutz_grundsaetze",          # Art. 5 DSGVO — Zweckbindung, Sparsamkeit …
+    "rechtsgrundlagen_verarbeitung",    # Art. 6 DSGVO — berechtigtes Interesse, Vertrag …
+    "einwilligung",                     # Art. 7–8 DSGVO
+    "besondere_kategorien",             # Art. 9 — Gesundheit, Religion, Gewerkschaft …
+    # ── Informationspflichten ─────────────────────────────────────────────────
+    "informationspflichten",            # Art. 13–14 DSGVO
+    # ── Betroffenenrechte ─────────────────────────────────────────────────────
+    "betroffenenrechte",                # Art. 12 allgemein / mehrere Rechte zusammen
+    "auskunftsrecht",                   # Art. 15 DSGVO
+    "berichtigung_loeschung",           # Art. 16–17 DSGVO
+    "recht_auf_vergessen",              # Art. 17 DSGVO (Suchmaschinen, Social Media)
+    "verarbeitungseinschraenkung",      # Art. 18 DSGVO
+    "datenportabilitaet",               # Art. 20 DSGVO
+    "widerspruchsrecht",                # Art. 21 DSGVO
+    "automatisierte_entscheidung",      # Art. 22 DSGVO — Profiling, SCHUFA-Score
+    # ── Pflichten des Verantwortlichen ───────────────────────────────────────
+    "datenschutz_by_design",            # Art. 25 DSGVO
+    "auftragsverarbeitung",             # Art. 28 DSGVO
+    "gemeinsame_verantwortlichkeit",    # Art. 26 DSGVO
+    "datensicherheit",                  # Art. 32 DSGVO — TOMs
+    "datenpanne_meldepflicht",          # Art. 33–34 DSGVO
+    "datenschutz_folgenabschaetzung",   # Art. 35–36 DSGVO
+    "datenschutzbeauftragter",          # Art. 37–39 DSGVO
+    # ── Drittlandübermittlung ─────────────────────────────────────────────────
+    "datenuebermittlung_drittland",     # Art. 44–49 DSGVO — SCCs, Adequacy …
+    # ── Aufsicht & Durchsetzung ───────────────────────────────────────────────
+    "aufsicht_bussgelder",              # Art. 51ff, Art. 83–84 DSGVO
+    # ── Spezifische Verarbeitungskontexte ─────────────────────────────────────
+    "beschaeftigtendatenschutz",        # § 26 BDSG
+    "gesundheitsdaten",                 # Art. 9 Abs. 2 lit. h, § 22 BDSG
+    "kinder_jugendliche",               # Art. 8, ErwG 38
+    "videoüberwachung",                 # § 4 BDSG, Art. 6 Abs. 1 lit. f
+    "cookie_tracking",                  # TDDDG, Art. 6 Abs. 1 lit. a
+    "marketing_werbung",                # Art. 6 Abs. 1 lit. f, § 7 UWG
+    "scoring_profiling",                # § 31 BDSG, Art. 22 — SCHUFA, Bonitätsprüfung
+    "ki_automatisierung",               # Art. 22, KI-VO
+    "wissenschaft_forschung",           # Art. 89 DSGVO, § 27 BDSG
+    "oeffentliche_stellen",             # §§ 3, 45ff BDSG
+    "strafverfolgung_sicherheit",       # JI-Richtlinie, §§ 45–84 BDSG
+    # ── Sonstiges ─────────────────────────────────────────────────────────────
     "out_of_domain",
 ]
 
