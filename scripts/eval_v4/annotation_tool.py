@@ -172,10 +172,16 @@ def get_progress_text():
     return f"**{annotated}/{total} annotiert ({pct:.0f}%)**"
 
 
-def _make_label(chunk_id: str, score, volladr: str, snippet: str) -> str:
-    """Einheitliches Label-Format für alle Quellen."""
+def _make_label(chunk_id: str, score, volladr: str, snippet: str, meta: dict = None) -> str:
+    """Einheitliches Label-Format für alle Quellen.
+    Für Urteile (kein volladresse/gesetz): gericht + aktenzeichen als Fallback."""
     score_str = f"{score:.3f}" if isinstance(score, float) else str(score)
     clean = " ".join(snippet.split())[:800]
+    if not volladr and meta:
+        gericht = meta.get("gericht") or ""
+        az      = meta.get("aktenzeichen") or ""
+        if gericht or az:
+            volladr = f"{gericht} {az}".strip()
     return f"[{score_str}] {chunk_id} | {volladr} | {clean}"
 
 
@@ -192,7 +198,7 @@ def build_candidate_choices(q) -> list[str]:
         seen_ids.add(cid)
         volladr  = c.get("volladresse") or c.get("gesetz") or ""
         snippet  = c.get("snippet") or ""
-        label    = _make_label(cid, c.get("score", 0.0), volladr, snippet)
+        label    = _make_label(cid, c.get("score", 0.0), volladr, snippet, meta=c)
         choices.append(label)
 
     # Manuell gesetzte IDs, die nicht in candidates sind → aus DB nachladen
@@ -203,7 +209,7 @@ def build_candidate_choices(q) -> list[str]:
         meta    = get_chunk_meta(cid)
         volladr = meta.get("volladresse") or meta.get("gesetz") or ""
         snippet = get_full_chunk_text(cid)
-        label   = _make_label(cid, "manual", volladr, snippet)
+        label   = _make_label(cid, "manual", volladr, snippet, meta=meta)
         choices.append(label)
 
     return choices
@@ -365,7 +371,7 @@ def do_search(search_text: str):
         score   = r.get("ce_score") or r.get("score") or 0.0
         volladr = meta.get("volladresse") or meta.get("gesetz") or ""
         snippet = r.get("document") or r.get("text") or ""
-        label   = _make_label(cid, float(score), volladr, snippet)
+        label   = _make_label(cid, float(score), volladr, snippet, meta=meta)
         choices.append(label)
 
     msg = f"✅ {len(choices)} Ergebnisse — auswählen und 'Hinzufügen' klicken."
