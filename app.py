@@ -35,6 +35,23 @@ except ImportError:
     def _qu_get_chroma_ids(norms):  # type: ignore
         return []
 
+# BM25-Integration (hinter Feature-Flag aktiviert)
+# Flags werden zur Laufzeit gelesen, damit importlib.reload() sie auffrischen kann.
+def _bm25_enabled() -> bool:
+    return os.getenv("OPENLEX_BM25_ENABLED", "false").lower() == "true"
+
+def _trace_enabled() -> bool:
+    return os.getenv("OPENLEX_TRACE_MODE", "false").lower() == "true"
+
+try:
+    from bm25_index import retrieve as _bm25_retrieve
+    from rrf_fusion import rrf_fuse as _rrf_fuse
+    _BM25_AVAILABLE = True
+except ImportError:
+    _BM25_AVAILABLE = False
+    _bm25_retrieve = None  # type: ignore
+    _rrf_fuse = None  # type: ignore
+
 # ---------------------------------------------------------------------------
 # Konfiguration
 # ---------------------------------------------------------------------------
@@ -736,13 +753,17 @@ def retrieve_candidates_only(question: str, top_k: int = 150) -> list[dict]:
 
 
 def retrieve(question: str, history: list[tuple[str, str]] | None = None,
-             _candidates_only: bool = False, _candidates_top_k: int = 150) -> list[dict]:
+             _candidates_only: bool = False, _candidates_top_k: int = 150,
+             return_trace: bool = False):
     """Führt semantische + Norm-basierte + Keyword-Suche + Reranking durch.
 
     Interne Parameter (nicht für externe Aufrufer):
         _candidates_only: Wenn True, gibt den Candidate-Pool vor Cross-Encoder zurück.
         _candidates_top_k: Wie viele Kandidaten bei _candidates_only zurückgeben.
+        return_trace: Wenn True, gibt (results, trace_dict) statt nur results zurück.
+                      Für Experimente und Diagnose (entspricht OPENLEX_TRACE_MODE=true).
     """
+    trace_this_call = return_trace or _trace_enabled()
     model = get_model()
     col = get_collection()
 
@@ -843,6 +864,18 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     except Exception:
         pass
 
+    # b3) BM25-Pfad (nur wenn OPENLEX_BM25_ENABLED=true)
+    # Retrieval via Snowball-Stemmer + BM25s, persistierter Index.
+    # Ergebnisse werden in RRF-Fusion eingebracht (nach c).
+    _bm25_hits: list[dict] = []
+    if _BM25_AVAILABLE and _bm25_enabled() and _bm25_retrieve is not None:
+        try:
+            _bm25_hits = _bm25_retrieve(question, k=40)
+            # bm25_hits = [{"id": chunk_id, "bm25_score": float, "rank": int}, ...]
+        except Exception as e:
+            print(f"  BM25 retrieval failed, continuing without: {e}")
+            _bm25_hits = []
+
     # c) Keyword-Suche (hybride Suche): Für jedes wichtige Wort zusätzlich
     #    per where_document={'$contains': ...} suchen
     words = set()
@@ -921,9 +954,65 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                 "source": "keyword",
             })
 
+    # ── RRF-Fusion (nur wenn BM25 aktiv) ──
+    # Baut aus semantic, QU und BM25-Rankings eine fusionierte Reihenfolge.
+    # Fehlende BM25-Chunks werden via col.get() nachgeladen.
+    if _BM25_AVAILABLE and _bm25_enabled() and _bm25_hits:
+        try:
+            semantic_ids = [c["id"] for c in chunks if c.get("source") == "semantic" and c.get("id")]
+            qu_ids_rrf = [c["id"] for c in chunks if c.get("source") == "qu_injection" and c.get("id")]
+            bm25_ids = [h["id"] for h in _bm25_hits]
+
+            rankings = [r for r in [semantic_ids, qu_ids_rrf, bm25_ids] if r]
+            if rankings and _rrf_fuse is not None:
+                fused = _rrf_fuse(rankings, k=60)
+                fused_ids_ordered = list(fused.keys())[:80]
+
+                # Fehlende BM25-Chunks aus ChromaDB nachladen
+                existing_ids = {c["id"] for c in chunks if c.get("id")}
+                missing_ids = [cid for cid in fused_ids_ordered if cid not in existing_ids]
+                if missing_ids:
+                    try:
+                        additional = col.get(
+                            ids=missing_ids,
+                            include=["documents", "metadatas"],
+                        )
+                        for cid, doc, meta in zip(
+                            additional["ids"],
+                            additional["documents"],
+                            additional["metadatas"],
+                        ):
+                            cid_norm = _normalize_az(meta.get("volladresse", "") or doc[:50])
+                            if cid_norm not in seen_ids:
+                                seen_ids.add(cid_norm)
+                                chunks.append({
+                                    "id": cid,
+                                    "text": doc,
+                                    "meta": meta,
+                                    "distance": 0.20,
+                                    "adjusted_distance": 0.20,
+                                    "source": "rrf_injected",
+                                })
+                    except Exception as e:
+                        print(f"  RRF col.get() failed: {e}")
+
+                # Sortiere chunks nach RRF-Score (höherer Score = weiter vorne)
+                def _rrf_key(c):
+                    return -fused.get(c.get("id", ""), 0.0)
+                chunks.sort(key=_rrf_key)
+                chunks = chunks[:80]  # Top-80 für CE
+        except Exception as e:
+            print(f"  RRF fusion failed, falling back to distance sort: {e}")
+            chunks.sort(key=lambda x: x["adjusted_distance"])
+    else:
+        # Standard: Sortiere nach adjusted_distance
+        pass
+
     # ── Cross-Encoder Reranking ──
     # Pre-filter: Sortiere nach adjusted_distance, nimm Top-40 Kandidaten
-    chunks.sort(key=lambda x: x["adjusted_distance"])
+    # Wenn BM25+RRF aktiv, sind chunks bereits RRF-sortiert (oben).
+    if not (_BM25_AVAILABLE and _bm25_enabled() and _bm25_hits):
+        chunks.sort(key=lambda x: x["adjusted_distance"])
 
     # Diagnose-Hook: retrieve_candidates_only() gibt hier zurück, vor CE + Cutoff
     if _candidates_only:
@@ -932,7 +1021,24 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     candidates = chunks[:40]
 
     if not candidates:
+        if return_trace:
+            return [], {}
         return []
+
+    # ── Trace: pre_rerank-Zustand ──
+    _trace: dict = {}
+    if trace_this_call:
+        for rank, c in enumerate(candidates, start=1):
+            cid = c.get("id") or c["text"][:40]
+            _trace[cid] = {
+                "sources": [c.get("source", "?")],
+                "rrf_rank": rank,
+                "ce_score_raw": None,
+                "ce_rank": -1,
+                "boosts_applied": [],
+                "final_rank": -1,
+                "filter_reason": None,
+            }
 
     reranker = get_reranker()
     pairs = [(question, c["text"][:500]) for c in candidates]
@@ -944,12 +1050,24 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             ce_score = 3.0
         chunk["ce_score"] = ce_score
 
+    # ── Trace: CE-Scores festhalten ──
+    if trace_this_call:
+        for rank, c in enumerate(candidates, start=1):
+            cid = c.get("id") or c["text"][:40]
+            if cid in _trace:
+                _trace[cid]["ce_score_raw"] = float(c.get("ce_score", 0.0))
+                _trace[cid]["ce_rank"] = rank
+
     # FIX 1: Aktualitäts-Boost auf CE-Score anwenden
     for c in candidates:
         year = _extract_year(c)
         recency = _recency_factor(year)
         # Höherer CE-Score = besser → teile durch Recency (< 1 = Boost, > 1 = Penalty)
         c["ce_score"] = c["ce_score"] / recency
+        if trace_this_call and recency != 1.0:
+            cid = c.get("id") or c["text"][:40]
+            if cid in _trace:
+                _trace[cid]["boosts_applied"].append(f"aktualitaet_recency{recency:.2f}")
 
     # FIX: Schlüsselurteile boosten – Urteile mit Kurznamen aus urteilsnamen.json
     _load_urteilsnamen()
@@ -958,6 +1076,10 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             az = c["meta"].get("aktenzeichen", "")
             if az and get_urteilsname(az):
                 c["ce_score"] = c["ce_score"] * 1.5
+                if trace_this_call:
+                    cid = c.get("id") or c["text"][:40]
+                    if cid in _trace:
+                        _trace[cid]["boosts_applied"].append("schluesselurteil_x1.5")
 
     # FIX 3: Instanzgerichts-Penalty – niedrigrangige Gerichte abwerten,
     # es sei denn die Frage nennt explizit ein Gericht oder Aktenzeichen
@@ -972,6 +1094,10 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             gericht = (c["meta"].get("gericht") or "").lower()
             if any(g == gericht or gericht.startswith(g + " ") for g in _LOWER_COURTS):
                 c["ce_score"] = c.get("ce_score", 0) / 1.3
+                if trace_this_call:
+                    cid = c.get("id") or c["text"][:40]
+                    if cid in _trace:
+                        _trace[cid]["boosts_applied"].append("instanzgericht_div1.3")
 
     # Pre-DSGVO-Filter: Veraltete Leitlinien abwerten oder entfernen
     post_dsgvo = [c for c in candidates if not _is_outdated_chunk(c)]
@@ -980,6 +1106,11 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
         outdated_count = len(candidates) - len(post_dsgvo)
         if outdated_count:
             print(f"  Pre-DSGVO-Filter: {outdated_count} veraltete Chunks entfernt")
+        if trace_this_call:
+            removed_set = {c.get("id") or c["text"][:40] for c in candidates} - {c.get("id") or c["text"][:40] for c in post_dsgvo}
+            for cid in removed_set:
+                if cid in _trace:
+                    _trace[cid]["filter_reason"] = "pre_dsgvo"
         candidates = post_dsgvo
     else:
         # Zu wenig aktuelle → veraltete nur massiv abwerten + markieren
@@ -987,6 +1118,10 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             if _is_outdated_chunk(c):
                 c["ce_score"] = c.get("ce_score", 0) / 3.0
                 c["_pre_dsgvo"] = True
+                if trace_this_call:
+                    cid = c.get("id") or c["text"][:40]
+                    if cid in _trace:
+                        _trace[cid]["boosts_applied"].append("pre_dsgvo_div3.0")
 
     # Sortiere nach Cross-Encoder-Score (höher = besser)
     # Tie-breaker: Segment-Boost
@@ -1032,6 +1167,10 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     for chunk in candidates:
         dk = _doc_key(chunk.get("meta", {}))
         if doc_counts.get(dk, 0) >= MAX_PER_DOC:
+            if trace_this_call:
+                cid = chunk.get("id") or chunk["text"][:40]
+                if cid in _trace:
+                    _trace[cid]["filter_reason"] = "dedup"
             continue
         doc_counts[dk] = doc_counts.get(dk, 0) + 1
         deduped.append(chunk)
@@ -1056,6 +1195,10 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
         if ce >= CE_CUTOFF or dist < DIST_CUTOFF:
             selected.append(chunk)
             selected_ids.add(cid)
+        elif trace_this_call:
+            chunk_cid = chunk.get("id") or chunk["text"][:40]
+            if chunk_cid in _trace and _trace[chunk_cid]["filter_reason"] is None:
+                _trace[chunk_cid]["filter_reason"] = "ce_cutoff"
 
     # Gruppiere nach Dokument und prüfe Min/Max
     docs = group_chunks_to_docs(selected)
@@ -1103,6 +1246,18 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     # EG-Anreicherung: Passende Erwägungsgründe automatisch nachladen
     selected = _enrich_with_erwaegungsgruende(selected, col)
 
+    # ── Trace: final_rank + topk_slice markieren ──
+    if trace_this_call:
+        for rank, c in enumerate(selected, start=1):
+            cid = c.get("id") or c["text"][:40]
+            if cid in _trace:
+                _trace[cid]["final_rank"] = rank
+        for cid, info in _trace.items():
+            if info["final_rank"] == -1 and info["filter_reason"] is None:
+                info["filter_reason"] = "topk_slice"
+
+    if return_trace:
+        return selected, _trace
     return selected
 
 
