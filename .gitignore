@@ -67,3 +67,6 @@ _private/
 backups/
 *.bak-*
 _archive/
+
+bm25_index/
+experiment_results/

@@ -123,3 +123,5 @@ watchfiles==1.1.1
 websocket-client==1.9.0
 websockets==16.0
 zipp==3.23.0
+bm25s>=0.2,<0.3
+PyStemmer>=2.2.0
