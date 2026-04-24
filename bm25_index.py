@@ -155,9 +155,14 @@ def retrieve(query: str, k: int = 40) -> list:
     # results[0] = Array von k corpus-entries (strings)
     # scores[0] = Array von k float scores
     output = []
-    for rank, (chunk_id, score) in enumerate(zip(results[0], scores[0]), start=1):
+    for rank, (corpus_entry, score) in enumerate(zip(results[0], scores[0]), start=1):
+        # bm25s corpus entries are dicts {"id": int_index, "text": original_string}
+        if isinstance(corpus_entry, dict):
+            chunk_id = corpus_entry.get("text", str(corpus_entry))
+        else:
+            chunk_id = str(corpus_entry)
         output.append({
-            "id": str(chunk_id),
+            "id": chunk_id,
             "bm25_score": float(score),
             "rank": rank,
         })
