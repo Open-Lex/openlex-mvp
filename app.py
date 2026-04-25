@@ -2814,6 +2814,57 @@ PWA_HEAD = (
 )
 
 
+
+import re as _re
+
+_MD_TABLE_RE = _re.compile(
+    r'(?m)(?:^|\n)'
+    r'(\|.+\|[ \t]*\n)'
+    r'(\|[\s\-:|]+\|[ \t]*\n)'
+    r'((?:\|.+\|[ \t]*\n?)+)',
+)
+
+_MD_INLINE_RULES = [
+    (_re.compile(r'\*\*(.+?)\*\*'),         r'<strong style="color:#fff">\1</strong>'),
+    (_re.compile(r'`(.+?)`'),               r'<code style="color:#d4a843;background:rgba(212,168,67,.1);padding:1px 4px;border-radius:3px">\1</code>'),
+    (_re.compile(r'\[([^\]]+)\]\(([^)]+)\)'), r'<a href="\2" style="color:#d4a843">\1</a>'),
+    (_re.compile(r'\[([^\]]+)\]\[(\d+)\]'), r'\1 <sup style="color:#d4a843">[\2]</sup>'),
+]
+
+def _md_inline(text):
+    for pat, rep in _MD_INLINE_RULES:
+        text = pat.sub(rep, text)
+    return text
+
+def _parse_row(line):
+    cells = line.strip().strip('|').split('|')
+    return [c.strip() for c in cells]
+
+_TH = 'background:rgba(212,168,67,0.18);color:#fff;padding:8px 14px;border:1px solid rgba(255,255,255,0.2);font-weight:600;text-align:left;white-space:normal;'
+_TD = 'color:#fff;padding:8px 14px;border:1px solid rgba(255,255,255,0.12);white-space:normal;vertical-align:top;'
+_TD2 = 'color:#fff;padding:8px 14px;border:1px solid rgba(255,255,255,0.12);white-space:normal;vertical-align:top;background:rgba(255,255,255,0.04);'
+
+def _replace_table(m):
+    headers = _parse_row(m.group(1))
+    data_block = m.group(3).strip()
+    rows = []
+    for line in data_block.split('\n'):
+        line = line.strip()
+        if line and not re.match(r'^[\|\s\-:]+$', line):
+            rows.append(_parse_row(line))
+    tbl = '<div style="overflow-x:auto;margin:12px 0"><table style="border-collapse:collapse;width:100%">'
+    tbl += '<thead><tr>' + ''.join(f'<th style="{_TH}">{_md_inline(h)}</th>' for h in headers) + '</tr></thead>'
+    tbl += '<tbody>'
+    for i, row in enumerate(rows):
+        s = _TD2 if i % 2 else _TD
+        tbl += '<tr>' + ''.join(f'<td style="{s}">{_md_inline(c)}</td>' for c in row) + '</tr>'
+    tbl += '</tbody></table></div>'
+    return tbl
+
+def _render_tables(text: str) -> str:
+    return _MD_TABLE_RE.sub(_replace_table, text)
+
+
 def build_app() -> gr.Blocks:
     """Erstellt die Gradio-App im Clean Chat Layout."""
 
@@ -2988,7 +3039,7 @@ def build_app() -> gr.Blocks:
             yield chat_history, "", "", ""
 
             for partial_response, sources_md, chunks in chat_stream(message, history_tuples):
-                full_msg = partial_response
+                full_msg = _render_tables(partial_response)
                 if sources_md:
                     clean_src = _SRC_STYLE_RE.sub('', sources_md)
                     full_msg += '\n\n<details class="src-collapse"><summary>\U0001f4da Quellen anzeigen</summary>\n\n' + clean_src + '\n\n</details>'
