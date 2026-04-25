@@ -2990,6 +2990,7 @@ def build_app() -> gr.Blocks:
             elem_id="ol-chatbot",
             show_label=False,
             autoscroll=False,
+            sanitize_html=False,
         )
 
         # ── Footer ──
