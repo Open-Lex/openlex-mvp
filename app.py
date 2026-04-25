@@ -1347,7 +1347,7 @@ def _inject_tenor_chunks(selected: list, col) -> list:
 
         try:
             r = col.get(
-                where={"aktenzeichen": az, "segment": "tenor"},
+                where={"$and": [{"aktenzeichen": {"$eq": az}}, {"segment": {"$eq": "tenor"}}]},
                 include=["metadatas", "documents"],
                 limit=1,
             )
@@ -1413,7 +1413,7 @@ def _fetch_deep_chunks(selected: list, col) -> list:
 
         try:
             r = col.get(
-                where={"aktenzeichen": az, "segment": "entscheidungsgruende"},
+                where={"$and": [{"aktenzeichen": {"$eq": az}}, {"segment": {"$eq": "entscheidungsgruende"}}]},
                 include=["metadatas", "documents"],
                 limit=limit + 5,   # Puffer: mehr holen, dann filtern
             )
