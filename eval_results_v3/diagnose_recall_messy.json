@@ -1,0 +1,1871 @@
+{
+  "eval_set": "messy.json",
+  "n_questions": 78,
+  "n_with_gold": 67,
+  "k_values": [
+    20,
+    40,
+    80,
+    150
+  ],
+  "aggregate": {
+    "avg_recall@20": 0.014,
+    "avg_recall@40": 0.014,
+    "avg_recall@80": 0.014,
+    "avg_recall@150": 0.014
+  },
+  "by_category_recall40": {
+    "allgemein": 0.0,
+    "methodenwissen": 0.0,
+    "cookies_tracking": 0.0,
+    "rechtsgrundlagen": 0.0,
+    "pruefungsschemata": 0.068,
+    "rechtsprechung": 0.0,
+    "behoerden": 0.0,
+    "betroffenenrechte": 0.0,
+    "drittlandtransfer": 0.0,
+    "beschaeftigtendatenschutz": 0.0,
+    "auftragsverarbeitung": 0.2
+  },
+  "zero_recall_at_max_k": [
+    {
+      "id": "messy_002",
+      "category": "allgemein",
+      "gold": [
+        "dsgvo_art_88"
+      ]
+    },
+    {
+      "id": "messy_003",
+      "category": "methodenwissen",
+      "gold": [
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1"
+      ]
+    },
+    {
+      "id": "messy_004",
+      "category": "methodenwissen",
+      "gold": [
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1",
+        "dsgvo_art_89",
+        "dsgvo_art_23"
+      ]
+    },
+    {
+      "id": "messy_005",
+      "category": "cookies_tracking",
+      "gold": [
+        "dsgvo_art_95",
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ]
+    },
+    {
+      "id": "messy_006",
+      "category": "allgemein",
+      "gold": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_85"
+      ]
+    },
+    {
+      "id": "messy_010",
+      "category": "methodenwissen",
+      "gold": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ]
+    },
+    {
+      "id": "messy_011",
+      "category": "methodenwissen",
+      "gold": [
+        "dsgvo_art_1"
+      ]
+    },
+    {
+      "id": "messy_014",
+      "category": "rechtsgrundlagen",
+      "gold": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1"
+      ]
+    },
+    {
+      "id": "messy_016",
+      "category": "rechtsgrundlagen",
+      "gold": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ]
+    },
+    {
+      "id": "messy_017",
+      "category": "rechtsgrundlagen",
+      "gold": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ]
+    },
+    {
+      "id": "messy_018",
+      "category": "rechtsgrundlagen",
+      "gold": [
+        "dsgvo_art_5",
+        "dsgvo_art_25"
+      ]
+    },
+    {
+      "id": "messy_019",
+      "category": "rechtsgrundlagen",
+      "gold": [
+        "dsgvo_art_5",
+        "dsgvo_art_16",
+        "dsgvo_art_17"
+      ]
+    },
+    {
+      "id": "messy_020",
+      "category": "rechtsgrundlagen",
+      "gold": [
+        "dsgvo_art_5",
+        "dsgvo_art_89"
+      ]
+    },
+    {
+      "id": "messy_021",
+      "category": "rechtsgrundlagen",
+      "gold": [
+        "dsgvo_art_5",
+        "dsgvo_art_32",
+        "dsgvo_art_33"
+      ]
+    },
+    {
+      "id": "messy_022",
+      "category": "rechtsgrundlagen",
+      "gold": [
+        "dsgvo_art_5",
+        "dsgvo_art_30",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ]
+    },
+    {
+      "id": "messy_023",
+      "category": "pruefungsschemata",
+      "gold": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ]
+    },
+    {
+      "id": "messy_024",
+      "category": "rechtsgrundlagen",
+      "gold": [
+        "dsgvo_art_7",
+        "dsgvo_art_8"
+      ]
+    },
+    {
+      "id": "messy_025",
+      "category": "rechtsgrundlagen",
+      "gold": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ]
+    },
+    {
+      "id": "messy_026",
+      "category": "pruefungsschemata",
+      "gold": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_36",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1"
+      ]
+    },
+    {
+      "id": "messy_027",
+      "category": "pruefungsschemata",
+      "gold": [
+        "dsgvo_art_82",
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1"
+      ]
+    },
+    {
+      "id": "messy_028",
+      "category": "allgemein",
+      "gold": [
+        "dsgvo_art_56",
+        "dsgvo_art_65"
+      ]
+    },
+    {
+      "id": "messy_029",
+      "category": "rechtsprechung",
+      "gold": [
+        "dsgvo_art_82"
+      ]
+    },
+    {
+      "id": "messy_030",
+      "category": "rechtsprechung",
+      "gold": [
+        "dsgvo_art_82"
+      ]
+    },
+    {
+      "id": "messy_031",
+      "category": "rechtsprechung",
+      "gold": [
+        "dsgvo_art_82"
+      ]
+    },
+    {
+      "id": "messy_032",
+      "category": "rechtsprechung",
+      "gold": [
+        "dsgvo_art_82"
+      ]
+    },
+    {
+      "id": "messy_033",
+      "category": "rechtsprechung",
+      "gold": [
+        "dsgvo_art_82"
+      ]
+    },
+    {
+      "id": "messy_034",
+      "category": "rechtsprechung",
+      "gold": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ]
+    },
+    {
+      "id": "messy_035",
+      "category": "rechtsprechung",
+      "gold": [
+        "dsgvo_art_5"
+      ]
+    },
+    {
+      "id": "messy_036",
+      "category": "rechtsprechung",
+      "gold": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ]
+    },
+    {
+      "id": "messy_037",
+      "category": "rechtsprechung",
+      "gold": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ]
+    },
+    {
+      "id": "messy_038",
+      "category": "rechtsprechung",
+      "gold": [
+        "dsgvo_art_88",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_26_Abs.1"
+      ]
+    },
+    {
+      "id": "messy_039",
+      "category": "rechtsprechung",
+      "gold": [
+        "dsgvo_art_88"
+      ]
+    },
+    {
+      "id": "messy_040",
+      "category": "allgemein",
+      "gold": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ]
+    },
+    {
+      "id": "messy_041",
+      "category": "allgemein",
+      "gold": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ]
+    },
+    {
+      "id": "messy_043",
+      "category": "behoerden",
+      "gold": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "dsgvo_art_10",
+        "dsgvo_art_22"
+      ]
+    },
+    {
+      "id": "messy_044",
+      "category": "allgemein",
+      "gold": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_36"
+      ]
+    },
+    {
+      "id": "messy_045",
+      "category": "rechtsprechung",
+      "gold": [
+        "dsgvo_art_22",
+        "dsgvo_art_15"
+      ]
+    },
+    {
+      "id": "messy_046",
+      "category": "betroffenenrechte",
+      "gold": [
+        "dsgvo_art_15"
+      ]
+    },
+    {
+      "id": "messy_047",
+      "category": "allgemein",
+      "gold": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ]
+    },
+    {
+      "id": "messy_048",
+      "category": "rechtsgrundlagen",
+      "gold": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ]
+    },
+    {
+      "id": "messy_049",
+      "category": "cookies_tracking",
+      "gold": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_21"
+      ]
+    },
+    {
+      "id": "messy_050",
+      "category": "drittlandtransfer",
+      "gold": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_5",
+        "dsgvo_art_46"
+      ]
+    },
+    {
+      "id": "messy_051",
+      "category": "pruefungsschemata",
+      "gold": [
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ]
+    },
+    {
+      "id": "messy_052",
+      "category": "beschaeftigtendatenschutz",
+      "gold": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_26_Abs.1"
+      ]
+    },
+    {
+      "id": "messy_053",
+      "category": "betroffenenrechte",
+      "gold": [
+        "dsgvo_art_13",
+        "dsgvo_art_14_part0",
+        "dsgvo_art_14_part1",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ]
+    },
+    {
+      "id": "messy_054",
+      "category": "pruefungsschemata",
+      "gold": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_89"
+      ]
+    },
+    {
+      "id": "messy_056",
+      "category": "pruefungsschemata",
+      "gold": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_44",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ]
+    },
+    {
+      "id": "messy_057",
+      "category": "rechtsgrundlagen",
+      "gold": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_4_Abs.1"
+      ]
+    },
+    {
+      "id": "messy_058",
+      "category": "pruefungsschemata",
+      "gold": [
+        "dsgvo_art_17",
+        "dsgvo_art_21",
+        "dsgvo_art_19"
+      ]
+    },
+    {
+      "id": "messy_059",
+      "category": "pruefungsschemata",
+      "gold": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_46",
+        "dsgvo_art_44"
+      ]
+    },
+    {
+      "id": "messy_060",
+      "category": "pruefungsschemata",
+      "gold": [
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_7"
+      ]
+    },
+    {
+      "id": "messy_061",
+      "category": "behoerden",
+      "gold": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ]
+    },
+    {
+      "id": "messy_064",
+      "category": "allgemein",
+      "gold": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ]
+    },
+    {
+      "id": "messy_066",
+      "category": "betroffenenrechte",
+      "gold": [
+        "dsgvo_art_20",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ]
+    },
+    {
+      "id": "messy_067",
+      "category": "allgemein",
+      "gold": [
+        "dsgvo_art_8",
+        "dsgvo_art_12_part0",
+        "dsgvo_art_12_part1",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ]
+    },
+    {
+      "id": "messy_068",
+      "category": "allgemein",
+      "gold": [
+        "dsgvo_art_82"
+      ]
+    },
+    {
+      "id": "messy_069",
+      "category": "behoerden",
+      "gold": [
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ]
+    },
+    {
+      "id": "messy_071",
+      "category": "rechtsgrundlagen",
+      "gold": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ]
+    },
+    {
+      "id": "messy_072",
+      "category": "drittlandtransfer",
+      "gold": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1"
+      ]
+    },
+    {
+      "id": "messy_073",
+      "category": "drittlandtransfer",
+      "gold": [
+        "dsgvo_art_46"
+      ]
+    },
+    {
+      "id": "messy_074",
+      "category": "drittlandtransfer",
+      "gold": [
+        "dsgvo_art_47_part0",
+        "dsgvo_art_47_part1"
+      ]
+    },
+    {
+      "id": "messy_075",
+      "category": "allgemein",
+      "gold": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ]
+    },
+    {
+      "id": "messy_076",
+      "category": "allgemein",
+      "gold": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1"
+      ]
+    },
+    {
+      "id": "messy_077",
+      "category": "allgemein",
+      "gold": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "messy_001",
+      "category": "methodenwissen",
+      "gold_ids": [],
+      "n_candidates": 71,
+      "duration_s": 5.55,
+      "recall": {
+        "recall@20": 1.0,
+        "recall@40": 1.0,
+        "recall@80": 1.0,
+        "recall@150": 1.0
+      }
+    },
+    {
+      "id": "messy_002",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_88"
+      ],
+      "n_candidates": 74,
+      "duration_s": 0.94,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_003",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "n_candidates": 71,
+      "duration_s": 1.04,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_004",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1",
+        "dsgvo_art_89",
+        "dsgvo_art_23"
+      ],
+      "n_candidates": 71,
+      "duration_s": 0.89,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_005",
+      "category": "cookies_tracking",
+      "gold_ids": [
+        "dsgvo_art_95",
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "n_candidates": 65,
+      "duration_s": 0.96,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_006",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_85"
+      ],
+      "n_candidates": 63,
+      "duration_s": 0.81,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_007",
+      "category": "allgemein",
+      "gold_ids": [],
+      "n_candidates": 60,
+      "duration_s": 0.96,
+      "recall": {
+        "recall@20": 1.0,
+        "recall@40": 1.0,
+        "recall@80": 1.0,
+        "recall@150": 1.0
+      }
+    },
+    {
+      "id": "messy_008",
+      "category": "allgemein",
+      "gold_ids": [],
+      "n_candidates": 76,
+      "duration_s": 1.03,
+      "recall": {
+        "recall@20": 1.0,
+        "recall@40": 1.0,
+        "recall@80": 1.0,
+        "recall@150": 1.0
+      }
+    },
+    {
+      "id": "messy_009",
+      "category": "methodenwissen",
+      "gold_ids": [],
+      "n_candidates": 69,
+      "duration_s": 1.08,
+      "recall": {
+        "recall@20": 1.0,
+        "recall@40": 1.0,
+        "recall@80": 1.0,
+        "recall@150": 1.0
+      }
+    },
+    {
+      "id": "messy_010",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "n_candidates": 64,
+      "duration_s": 0.86,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_011",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "dsgvo_art_1"
+      ],
+      "n_candidates": 64,
+      "duration_s": 0.9,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_012",
+      "category": "methodenwissen",
+      "gold_ids": [],
+      "n_candidates": 54,
+      "duration_s": 0.95,
+      "recall": {
+        "recall@20": 1.0,
+        "recall@40": 1.0,
+        "recall@80": 1.0,
+        "recall@150": 1.0
+      }
+    },
+    {
+      "id": "messy_013",
+      "category": "methodenwissen",
+      "gold_ids": [],
+      "n_candidates": 67,
+      "duration_s": 0.92,
+      "recall": {
+        "recall@20": 1.0,
+        "recall@40": 1.0,
+        "recall@80": 1.0,
+        "recall@150": 1.0
+      }
+    },
+    {
+      "id": "messy_014",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1"
+      ],
+      "n_candidates": 67,
+      "duration_s": 0.88,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_015",
+      "category": "allgemein",
+      "gold_ids": [],
+      "n_candidates": 70,
+      "duration_s": 0.92,
+      "recall": {
+        "recall@20": 1.0,
+        "recall@40": 1.0,
+        "recall@80": 1.0,
+        "recall@150": 1.0
+      }
+    },
+    {
+      "id": "messy_016",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "n_candidates": 65,
+      "duration_s": 0.92,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_017",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "n_candidates": 70,
+      "duration_s": 0.85,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_018",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_25"
+      ],
+      "n_candidates": 61,
+      "duration_s": 0.87,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_019",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_16",
+        "dsgvo_art_17"
+      ],
+      "n_candidates": 58,
+      "duration_s": 0.95,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_020",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_89"
+      ],
+      "n_candidates": 66,
+      "duration_s": 0.91,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_021",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_32",
+        "dsgvo_art_33"
+      ],
+      "n_candidates": 77,
+      "duration_s": 1.12,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_022",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_30",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "n_candidates": 70,
+      "duration_s": 1.09,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_023",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "n_candidates": 70,
+      "duration_s": 0.88,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_024",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_7",
+        "dsgvo_art_8"
+      ],
+      "n_candidates": 60,
+      "duration_s": 1.03,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_025",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "n_candidates": 59,
+      "duration_s": 1.06,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_026",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_36",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1"
+      ],
+      "n_candidates": 55,
+      "duration_s": 0.84,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_027",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_82",
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1"
+      ],
+      "n_candidates": 58,
+      "duration_s": 0.91,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_028",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_56",
+        "dsgvo_art_65"
+      ],
+      "n_candidates": 71,
+      "duration_s": 0.9,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_029",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "n_candidates": 62,
+      "duration_s": 0.77,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_030",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "n_candidates": 63,
+      "duration_s": 0.82,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_031",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "n_candidates": 64,
+      "duration_s": 0.82,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_032",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "n_candidates": 65,
+      "duration_s": 0.95,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_033",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "n_candidates": 72,
+      "duration_s": 0.93,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_034",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "n_candidates": 62,
+      "duration_s": 0.98,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_035",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_5"
+      ],
+      "n_candidates": 47,
+      "duration_s": 0.77,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_036",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "n_candidates": 72,
+      "duration_s": 0.92,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_037",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "n_candidates": 64,
+      "duration_s": 1.04,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_038",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_88",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "n_candidates": 68,
+      "duration_s": 0.91,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_039",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_88"
+      ],
+      "n_candidates": 57,
+      "duration_s": 0.73,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_040",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "n_candidates": 76,
+      "duration_s": 0.92,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_041",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "n_candidates": 74,
+      "duration_s": 0.9,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_042",
+      "category": "allgemein",
+      "gold_ids": [],
+      "n_candidates": 67,
+      "duration_s": 0.82,
+      "recall": {
+        "recall@20": 1.0,
+        "recall@40": 1.0,
+        "recall@80": 1.0,
+        "recall@150": 1.0
+      }
+    },
+    {
+      "id": "messy_043",
+      "category": "behoerden",
+      "gold_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "dsgvo_art_10",
+        "dsgvo_art_22"
+      ],
+      "n_candidates": 67,
+      "duration_s": 0.89,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_044",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_36"
+      ],
+      "n_candidates": 55,
+      "duration_s": 0.73,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_045",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_22",
+        "dsgvo_art_15"
+      ],
+      "n_candidates": 57,
+      "duration_s": 0.9,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_046",
+      "category": "betroffenenrechte",
+      "gold_ids": [
+        "dsgvo_art_15"
+      ],
+      "n_candidates": 65,
+      "duration_s": 0.88,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_047",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "n_candidates": 69,
+      "duration_s": 0.88,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_048",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "n_candidates": 58,
+      "duration_s": 0.99,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_049",
+      "category": "cookies_tracking",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_21"
+      ],
+      "n_candidates": 61,
+      "duration_s": 0.84,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_050",
+      "category": "drittlandtransfer",
+      "gold_ids": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_5",
+        "dsgvo_art_46"
+      ],
+      "n_candidates": 69,
+      "duration_s": 0.73,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_051",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "n_candidates": 55,
+      "duration_s": 0.75,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_052",
+      "category": "beschaeftigtendatenschutz",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "n_candidates": 62,
+      "duration_s": 1.01,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_053",
+      "category": "betroffenenrechte",
+      "gold_ids": [
+        "dsgvo_art_13",
+        "dsgvo_art_14_part0",
+        "dsgvo_art_14_part1",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "n_candidates": 64,
+      "duration_s": 0.65,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_054",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_89"
+      ],
+      "n_candidates": 54,
+      "duration_s": 0.67,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_055",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_26",
+        "dsgvo_art_82"
+      ],
+      "n_candidates": 70,
+      "duration_s": 1.09,
+      "recall": {
+        "recall@20": 0.5,
+        "recall@40": 0.5,
+        "recall@80": 0.5,
+        "recall@150": 0.5
+      }
+    },
+    {
+      "id": "messy_056",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_44",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "n_candidates": 63,
+      "duration_s": 0.93,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_057",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_4_Abs.1"
+      ],
+      "n_candidates": 59,
+      "duration_s": 0.74,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_058",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_17",
+        "dsgvo_art_21",
+        "dsgvo_art_19"
+      ],
+      "n_candidates": 68,
+      "duration_s": 1.05,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_059",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_46",
+        "dsgvo_art_44"
+      ],
+      "n_candidates": 75,
+      "duration_s": 0.91,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_060",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_7"
+      ],
+      "n_candidates": 63,
+      "duration_s": 0.82,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_061",
+      "category": "behoerden",
+      "gold_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "n_candidates": 67,
+      "duration_s": 0.8,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_062",
+      "category": "behoerden",
+      "gold_ids": [],
+      "n_candidates": 62,
+      "duration_s": 0.85,
+      "recall": {
+        "recall@20": 1.0,
+        "recall@40": 1.0,
+        "recall@80": 1.0,
+        "recall@150": 1.0
+      }
+    },
+    {
+      "id": "messy_063",
+      "category": "auftragsverarbeitung",
+      "gold_ids": [
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_32"
+      ],
+      "n_candidates": 69,
+      "duration_s": 0.85,
+      "recall": {
+        "recall@20": 0.2,
+        "recall@40": 0.2,
+        "recall@80": 0.2,
+        "recall@150": 0.2
+      }
+    },
+    {
+      "id": "messy_064",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "n_candidates": 73,
+      "duration_s": 1.0,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_065",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_22",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "gran_BDSG_§_31_Abs.1"
+      ],
+      "n_candidates": 61,
+      "duration_s": 0.9,
+      "recall": {
+        "recall@20": 0.25,
+        "recall@40": 0.25,
+        "recall@80": 0.25,
+        "recall@150": 0.25
+      }
+    },
+    {
+      "id": "messy_066",
+      "category": "betroffenenrechte",
+      "gold_ids": [
+        "dsgvo_art_20",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "n_candidates": 59,
+      "duration_s": 0.83,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_067",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_8",
+        "dsgvo_art_12_part0",
+        "dsgvo_art_12_part1",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "n_candidates": 64,
+      "duration_s": 0.86,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_068",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "n_candidates": 61,
+      "duration_s": 0.94,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_069",
+      "category": "behoerden",
+      "gold_ids": [
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "n_candidates": 68,
+      "duration_s": 0.88,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_070",
+      "category": "allgemein",
+      "gold_ids": [],
+      "n_candidates": 56,
+      "duration_s": 0.98,
+      "recall": {
+        "recall@20": 1.0,
+        "recall@40": 1.0,
+        "recall@80": 1.0,
+        "recall@150": 1.0
+      }
+    },
+    {
+      "id": "messy_071",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "n_candidates": 68,
+      "duration_s": 0.85,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_072",
+      "category": "drittlandtransfer",
+      "gold_ids": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1"
+      ],
+      "n_candidates": 65,
+      "duration_s": 0.86,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_073",
+      "category": "drittlandtransfer",
+      "gold_ids": [
+        "dsgvo_art_46"
+      ],
+      "n_candidates": 72,
+      "duration_s": 1.0,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_074",
+      "category": "drittlandtransfer",
+      "gold_ids": [
+        "dsgvo_art_47_part0",
+        "dsgvo_art_47_part1"
+      ],
+      "n_candidates": 71,
+      "duration_s": 0.93,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_075",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "n_candidates": 76,
+      "duration_s": 0.86,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_076",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "n_candidates": 74,
+      "duration_s": 0.95,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_077",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "n_candidates": 65,
+      "duration_s": 0.84,
+      "recall": {
+        "recall@20": 0.0,
+        "recall@40": 0.0,
+        "recall@80": 0.0,
+        "recall@150": 0.0
+      }
+    },
+    {
+      "id": "messy_078",
+      "category": "allgemein",
+      "gold_ids": [],
+      "n_candidates": 78,
+      "duration_s": 1.0,
+      "recall": {
+        "recall@20": 1.0,
+        "recall@40": 1.0,
+        "recall@80": 1.0,
+        "recall@150": 1.0
+      }
+    }
+  ],
+  "duration_s": 74.9
+}

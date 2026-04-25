@@ -1,0 +1,189 @@
+{
+  "summary": {
+    "avg_hit@3": 0.2,
+    "avg_ndcg@3": 0.152,
+    "forbidden_hit_rate@3": 0.0,
+    "avg_hit@5": 0.2,
+    "avg_ndcg@5": 0.152,
+    "forbidden_hit_rate@5": 0.0,
+    "avg_hit@10": 0.2,
+    "avg_ndcg@10": 0.152,
+    "forbidden_hit_rate@10": 0.0,
+    "avg_mrr": 0.2,
+    "by_category": {
+      "allgemein": 0.0,
+      "cookies_tracking": 1.0,
+      "methodenwissen": 0.0
+    },
+    "duration_s": 23.6,
+    "n_questions": 5,
+    "timestamp": "2026-04-22 16:42"
+  },
+  "results": [
+    {
+      "id": "canonical_001",
+      "question": "Wie ist die Rangfolge der verschiedenen Rechtsquellen im europäischen Datenschutzrecht und welche Prinzipien gelten bei Normenkollisionen?",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "mw_normenhierarchie_im_eu_datenschutzrecht"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-65_23_rechtsrahmen_0",
+        "eugh_C-710_23_rechtsrahmen_0",
+        "eugh_C-446_21_rechtsrahmen_0",
+        "eugh_C-33_22_vf_3_0",
+        "eugh_C-638_23_rechtsrahmen_0",
+        "eugh_C-154_21_rechtsrahmen_0",
+        "eugh_C-492_23_rechtsrahmen_2",
+        "eugh_C-268_21_vf_2_1",
+        "eugh_C-645_19_wuerdigung_15",
+        "eugh_C-460_20_vf_1_0"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 17.61
+    },
+    {
+      "id": "canonical_002",
+      "question": "Wie ist der Anwendungsvorrang des EU-Rechts, insbesondere der DSGVO, im Verhältnis zu nationalen Datenschutzbestimmungen wie dem BDSG zu handhaben, und welche Konsequenzen ergeben sich daraus für nationale Gerichte?",
+      "category": "allgemein",
+      "gold_ids": [
+        "mw_anwendungsvorrang_des_eu_rechts__costa_enel__simmenthal_"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-33_22_vf_3_1",
+        "eugh_C-65_23_vf_2_0",
+        "eugh_C-340_21_rechtsrahmen_0",
+        "eugh_c_621_22_wuerdigung_1",
+        "eugh_C-268_21_vf_2_0",
+        "eugh_C-710_23_rechtsrahmen_0",
+        "eugh_C-807_21_vf_1_3",
+        "eugh_C-21_23_rechtsrahmen_1",
+        "eugh_C-768_21_sachverhalt_2",
+        "eugh_C-34_21_vf_2_0"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.6
+    },
+    {
+      "id": "canonical_003",
+      "question": "Welche spezifischen Öffnungsklauseln der DSGVO ermöglichen es den Mitgliedstaaten, nationale Regelungen im Bereich des Beschäftigtendatenschutzes und der Verarbeitung besonderer Kategorien personenbezogener Daten im Arbeitsrecht zu erlassen?",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "mw__ffnungsklauseln_der_dsgvo____bersicht"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 88 DSGVO",
+        "Art. 6 DSGVO (Teil 1)",
+        "Art. 6 DSGVO (Teil 2)",
+        "dd8676b5fa6eb84d",
+        "8c5a57d49b9a3646",
+        "beh_14Beschäftigtendatenschutz_3",
+        "eugh_C-34_21_vf_1_1",
+        "eugh_C-34_21_vorlagefragen_3",
+        "eugh_C-65_23_vf_1_0",
+        "eugh_C-34_21_vf_2_0"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.6
+    },
+    {
+      "id": "canonical_004",
+      "question": "Welche spezifischen Vorschriften des BDSG setzen die Öffnungsklauseln der DSGVO um und welche davon wurden durch den EuGH als nicht den Anforderungen der DSGVO entsprechend eingestuft?",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "mw_deutsche_umsetzung_der_dsgvo__ffnungsklauseln_im_bdsg"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 88 DSGVO",
+        "eugh_C-65_23_vf_1_0",
+        "eugh_C-34_21_vf_1_3",
+        "eugh_C-34_21_vf_2_0",
+        "eugh_C-203_22_sachverhalt_3",
+        "eugh_C-203_22_sachverhalt_2",
+        "eugh_c_307_22_rechtsrahmen_0",
+        "eugh_c_621_22_wuerdigung_1",
+        "eugh_C-34_21_vf_1_0",
+        "eugh_C-416_23_vf_2_1"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.44
+    },
+    {
+      "id": "canonical_005",
+      "question": "Welche spezifischen Regelungen gelten für den Zugriff auf Endgeräte im Rahmen der elektronischen Kommunikation und wie ist das Verhältnis zwischen TTDSG und DSGVO in diesem Kontext?",
+      "category": "cookies_tracking",
+      "gold_ids": [
+        "mw_verh_ltnis_dsgvo_zu_eprivacy_ttdsg__lex_specialis_"
+      ],
+      "retrieved_ids_top10": [
+        "Verhältnis DSGVO zu ePrivacy/TTDSG (lex specialis)",
+        "beh_November_2024-_Orientierungshilfe_der_Au_36",
+        "beh_November_2024-_Orientierungshilfe_der_Au_14",
+        "beh_November_2024-_Orientierungshilfe_der_Au_20",
+        "beh_11.07.2023–_Stellungnahme_zum_Referent_13",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_216",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_319",
+        "beh_30.11.2022-_Orientierungshilfe_der_Aufsi_136",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_111",
+        "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_14"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.76,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.76,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.76,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.38
+    }
+  ]
+}

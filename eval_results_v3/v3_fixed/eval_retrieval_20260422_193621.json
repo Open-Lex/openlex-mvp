@@ -1,0 +1,2703 @@
+{
+  "summary": {
+    "avg_hit@3": 0.322,
+    "avg_ndcg@3": 0.223,
+    "forbidden_hit_rate@3": 0.0,
+    "avg_hit@5": 0.341,
+    "avg_ndcg@5": 0.202,
+    "forbidden_hit_rate@5": 0.0,
+    "avg_hit@10": 0.341,
+    "avg_ndcg@10": 0.201,
+    "forbidden_hit_rate@10": 0.0,
+    "avg_mrr": 0.317,
+    "by_category": {
+      "allgemein": 0.105,
+      "auftragsverarbeitung": 0.0,
+      "behoerden": 0.5,
+      "beschaeftigtendatenschutz": 0.5,
+      "betroffenenrechte": 0.0,
+      "cookies_tracking": 0.5,
+      "drittlandtransfer": 0.188,
+      "methodenwissen": 0.25,
+      "pruefungsschemata": 0.727,
+      "rechtsgrundlagen": 0.192,
+      "rechtsprechung": 0.5
+    },
+    "duration_s": 134.8,
+    "n_questions": 78,
+    "timestamp": "2026-04-22 19:36"
+  },
+  "results": [
+    {
+      "id": "canonical_001",
+      "question": "Wie ist die Rangfolge der Rechtsnormen im europäischen Datenschutzrecht strukturiert und welche konkreten Rechtsquellen sind auf den jeweiligen Ebenen zu beachten?",
+      "category": "methodenwissen",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_C-416_23_rechtsrahmen_0",
+        "eugh_C-638_23_rechtsrahmen_0",
+        "eugh_C-768_21_rechtsrahmen_0",
+        "eugh_C-446_21_rechtsrahmen_0",
+        "eugh_C-487_21_rechtsrahmen_0",
+        "eugh_C-492_23_rechtsrahmen_2",
+        "eugh_C-33_22_vf_3_0",
+        "eugh_C-60_22_vf_1_3",
+        "eugh_C-604_22_sachverhalt_3",
+        "eugh_C-460_20_vf_1_0"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 17.94
+    },
+    {
+      "id": "canonical_002",
+      "question": "Unter welchen Voraussetzungen müssen nationale Gerichte Vorschriften des Bundesdatenschutzgesetzes unangewendet lassen, wenn diese mit der Datenschutz-Grundverordnung in Konflikt stehen?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_88"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-65_23_vf_2_0",
+        "eugh_C-34_21_vf_2_0",
+        "eugh_c_140_20_sachverhalt_3",
+        "eugh_C-645_19_wuerdigung_15",
+        "beh_11.05.2023-_Notwendigkeit_spezifischer_R_6",
+        "eugh_C-26_22_rechtsrahmen_5",
+        "eugh_C-453_21_sachverhalt_1",
+        "eugh_C-740_22_vf_2_3_0",
+        "eugh_C-313_23_rechtsrahmen_0",
+        "beh_14.11.2018-_Orientierungshilfe_der_Daten_25"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.37
+    },
+    {
+      "id": "canonical_003",
+      "question": "Welche spezifischen Öffnungsklauseln der DSGVO ermöglichen es den Mitgliedstaaten, nationale Regelungen für die Verarbeitung besonderer Kategorien personenbezogener Daten im Arbeitsrecht zu erlassen?",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 88 DSGVO",
+        "eugh_C-34_21_vf_1_1",
+        "eugh_C-34_21_vorlagefragen_3",
+        "eugh_C-65_23_vf_1_0",
+        "eugh_C-667_21_vf_1_3",
+        "beh_14Beschäftigtendatenschutz_3",
+        "eugh_C-534_20_vf_1_1",
+        "eugh_C-311_18_sachverhalt_5",
+        "Art. 88 DSGVO",
+        "beh_11.05.2023-_Notwendigkeit_spezifischer_R_6"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.25,
+        "ndcg@3": 0.469,
+        "forbidden_hit@3": false,
+        "hit@5": 0.25,
+        "ndcg@5": 0.363,
+        "forbidden_hit@5": false,
+        "hit@10": 0.25,
+        "ndcg@10": 0.363,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.42
+    },
+    {
+      "id": "canonical_004",
+      "question": "Welche konkreten Vorschriften des BDSG setzen die Öffnungsklauseln der DSGVO um und welche besonderen Anforderungen oder Einschränkungen ergeben sich dabei insbesondere im Beschäftigtendatenschutz?",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1",
+        "dsgvo_art_89",
+        "dsgvo_art_23"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 88 DSGVO",
+        "Art. 6 DSGVO (Teil 1)",
+        "Art. 6 DSGVO (Teil 2)",
+        "dd8676b5fa6eb84d",
+        "8c5a57d49b9a3646",
+        "eugh_C-34_21_vf_1_3",
+        "eugh_C-34_21_vorlagefragen_3",
+        "eugh_C-34_21_vf_1_1",
+        "beh_20Einwilligung_nach_der_DS-GVOin_Überar_56",
+        "beh_11.05.2023-_Notwendigkeit_spezifischer_R_4"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.25,
+        "ndcg@3": 0.469,
+        "forbidden_hit@3": false,
+        "hit@5": 0.25,
+        "ndcg@5": 0.363,
+        "forbidden_hit@5": false,
+        "hit@10": 0.25,
+        "ndcg@10": 0.363,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.65
+    },
+    {
+      "id": "canonical_005",
+      "question": "Welche spezifischen Regelungen des TTDSG sind bei der Verwendung von Cookies auf einer Website zu beachten und wie verhält sich diese Regelung zur DSGVO?",
+      "category": "cookies_tracking",
+      "gold_ids": [
+        "dsgvo_art_95",
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "gran_TDDDG_§_25",
+        "gran_TDDDG_§_29",
+        "Verhältnis DSGVO zu ePrivacy/TTDSG (lex specialis)",
+        "Verhältnis DSGVO – TTDSG – § 7 UWG bei Werbung und Direktmarketing",
+        "eugh_C-65_23_vf_1_3",
+        "beh_November_2024-_Orientierungshilfe_der_Au_60",
+        "beh_November_2024-_Orientierungshilfe_der_Au_14",
+        "beh_November_2024-_Orientierungshilfe_der_Au_66",
+        "beh_11.07.2023–_Stellungnahme_zum_Referent_13",
+        "beh_30.11.2022-_Orientierungshilfe_der_Aufsi_114"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.25,
+        "ndcg@3": 0.587,
+        "forbidden_hit@3": false,
+        "hit@5": 0.25,
+        "ndcg@5": 0.454,
+        "forbidden_hit@5": false,
+        "hit@10": 0.25,
+        "ndcg@10": 0.454,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.37
+    },
+    {
+      "id": "canonical_006",
+      "question": "Welche spezifischen Regelungen des sektorspezifischen Datenschutzrechts sind bei der Verarbeitung von Sozialdaten und Steuerdaten zu beachten und wie verhalten sich diese zu den allgemeinen Bestimmungen der DSGVO?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_85"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-34_21_vf_1_3",
+        "eugh_C-667_21_rechtsrahmen_5",
+        "eugh_C-61_22_wuerdigung_9",
+        "eugh_T-553_23_header_44",
+        "eugh_T-553_23_header_32",
+        "eugh_C-654_23_rechtsrahmen_3",
+        "eugh_C-496_17_sachverhalt_4",
+        "beh_11.05.2023-_Notwendigkeit_spezifischer_R_6",
+        "beh_11.05.2023-_Notwendigkeit_spezifischer_R_4",
+        "beh_10.08.2023–_Stellungnahme_der_unabhän_7"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.62
+    },
+    {
+      "id": "canonical_007",
+      "question": "Welche Hierarchie der Rechtsquellen und Autoritäten ist bei der juristischen Analyse im Datenschutzrecht zu beachten und welche praktische Relevanz haben die Leitlinien des Europäischen Datenschutzausschusses?",
+      "category": "allgemein",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_C-132_21_rechtsrahmen_0",
+        "eugh_C-710_23_rechtsrahmen_0",
+        "eugh_C-526_24_rechtsrahmen_0",
+        "eugh_C-33_22_vf_3_0",
+        "eugh_C-203_22_wuerdigung_0",
+        "eugh_C-710_23_rechtsrahmen_1",
+        "eugh_C-272_19_rechtsrahmen_0",
+        "eugh_C-645_19_wuerdigung_15",
+        "eugh_C-311_18_sachverhalt_5",
+        "eugh_C-511_18_rechtsrahmen_11"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.57
+    },
+    {
+      "id": "canonical_008",
+      "question": "Wie ist bei ungeklärten Rechtsfragen im Datenschutzrecht vorzugehen, wenn die EuGH-Rechtsprechung noch keine klare Linie aufweist?",
+      "category": "allgemein",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_C-203_22_sachverhalt_3",
+        "eugh_C-21_23_vf_1_7",
+        "eugh_C-205_21_vf_3_4",
+        "eugh_C-492_23_vf_4_1",
+        "eugh_c_97_23_rechtsrahmen_0",
+        "eugh_c_333_22_vf_2b_2",
+        "eugh_C-470_21_wuerdigung_18",
+        "eugh_C-645_19_wuerdigung_12",
+        "eugh_C-311_18_vf_8_6",
+        "eugh_C-645_19_wuerdigung_10"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.58
+    },
+    {
+      "id": "canonical_009",
+      "question": "Wie ist bei der Auslegung der DSGVO mit unterschiedlichen Formulierungen in den verschiedenen Sprachfassungen umzugehen und welche Rolle spielt dabei der EuGH?",
+      "category": "methodenwissen",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_C-34_21_vf_1_0",
+        "eugh_C-252_21_rechtsrahmen_8",
+        "eugh_C-667_21_vf_5_0",
+        "eugh_C-422_24_sachverhalt_4",
+        "eugh_C-667_21_rechtsrahmen_6",
+        "eugh_C-604_22_rechtsrahmen_2",
+        "eugh_C-203_22_wuerdigung_0",
+        "eugh_C-667_21_vf_5_1",
+        "eugh_c_621_22_wuerdigung_1",
+        "eugh_C-46_23_vf_1_3"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.59
+    },
+    {
+      "id": "canonical_010",
+      "question": "Wie sind die Erwägungsgründe der DSGVO bei der Auslegung von Art. 6 Abs. 1 lit. f DSGVO zu berücksichtigen?",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "retrieved_ids_top10": [
+        "Systematische Auslegung der DSGVO (Erwägungsgründe als Kontext)",
+        "beh_29.03.2019-_Orientierungshilfe_der_Aufsi_36",
+        "Erwägungsgrund 6 DSGVO – Gewährleistung eines hohen Datensch",
+        "eugh_C-252_21_vf_6b_0",
+        "Art. 35 DSGVO (Teil 2)",
+        "Erwägungsgrund 90 DSGVO – Datenschutz-Folgenabschätzung*\n\n1",
+        "BDSG_§_4_Abs.1_S.6",
+        "BDSG_§_66_Abs.1_S.7",
+        "BDSG_§_76_Abs.1_S.4",
+        "DDG_§_12_Abs.1_S.3"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.235,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.213,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.213,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 0.94
+    },
+    {
+      "id": "canonical_011",
+      "question": "Wie lässt sich das Spannungsverhältnis zwischen dem Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und dem freien Datenverkehr innerhalb der Europäischen Union nach der Datenschutz-Grundverordnung in der Praxis auflösen?",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "dsgvo_art_1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-46_23_rechtsrahmen_0",
+        "eugh_C-638_23_rechtsrahmen_0",
+        "eugh_C-655_23_rechtsrahmen_0",
+        "eugh_C-154_21_rechtsrahmen_0",
+        "eugh_C-34_21_rechtsrahmen_1",
+        "eugh_C-645_19_rechtsrahmen_0",
+        "eugh_C-311_18_rechtsrahmen_1",
+        "eugh_C-136_17_rechtsrahmen_3",
+        "eugh_C-507_17_rechtsrahmen_4",
+        "eugh_C-507_17_rechtsrahmen_3"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.24
+    },
+    {
+      "id": "canonical_012",
+      "question": "Welche historischen Rechtsquellen und Dokumente sind bei der Auslegung von Begriffen der Datenschutz-Grundverordnung (DSGVO) heranzuziehen, wenn der Europäische Gerichtshof (EuGH) hierzu noch keine Rechtsprechung entwickelt hat?",
+      "category": "methodenwissen",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_c_582_14_tenor",
+        "eugh_C-65_23_rechtsrahmen_0",
+        "eugh_C-203_22_wuerdigung_1",
+        "eugh_C-180_21_vf_2_1",
+        "eugh_c_25_17_sachverhalt_3",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_37",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_62",
+        "beh_26.03.2025-_Eckpunkte_für_eine_freiheit_1",
+        "eugh_c_398_15_rechtsrahmen_3",
+        "eugh_C-131_12_wuerdigung_4"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.57
+    },
+    {
+      "id": "canonical_013",
+      "question": "Welche spezifischen Auslegungsmethoden wendet der EuGH bei der Interpretation der DSGVO an und wie beeinflussen diese die praktische Anwendung des Datenschutzrechts?",
+      "category": "methodenwissen",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_C-659_22_rechtsrahmen_0",
+        "eugh_C-807_21_vf_1_3",
+        "eugh_c_621_22_wuerdigung_1",
+        "eugh_C-291_24_sachverhalt_4",
+        "eugh_C-203_22_sachverhalt_3",
+        "eugh_C-203_22_sachverhalt_2",
+        "eugh_C-655_23_vf_5_2",
+        "eugh_C-180_21_vf_2_1",
+        "eugh_C-311_18_sachverhalt_5",
+        "eugh_C-740_22_vf_1_1"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.56
+    },
+    {
+      "id": "canonical_014",
+      "question": "Welche Voraussetzungen müssen erfüllt sein, damit die Verarbeitung personenbezogener Daten, insbesondere besonderer Kategorien, nach der Datenschutz-Grundverordnung rechtmäßig ist?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-634_21_rechtsrahmen_3",
+        "eugh_C-34_21_rechtsrahmen_5",
+        "BDSG_§_24_Abs.1_S.2",
+        "BDSG_§_23_Abs.1_S.3",
+        "eugh_C-654_23_rechtsrahmen_3",
+        "eugh_C-60_22_rechtsrahmen_3",
+        "beh_14Beschäftigtendatenschutz_34",
+        "BDSG_§_48_Abs.1",
+        "Art. 6 DSGVO (Teil 1)",
+        "eugh_C-184_20_rechtsrahmen_4"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.09
+    },
+    {
+      "id": "canonical_015",
+      "question": "Welche verfassungsrechtlichen Grundlagen sind für das deutsche Datenschutzrecht maßgeblich und welche Kernaussagen treffen die entsprechenden Urteile des Bundesverfassungsgerichts?",
+      "category": "allgemein",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_c_621_22_wuerdigung_1",
+        "eugh_C-710_23_rechtsrahmen_0",
+        "eugh_C-446_21_rechtsrahmen_0",
+        "eugh_c_140_20_vorlagefragen_3",
+        "eugh_C-394_23_rechtsrahmen_0",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_31",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_94",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_113",
+        "beh_26.03.2025-_Eckpunkte_für_eine_freiheit_5",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_62"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.55
+    },
+    {
+      "id": "canonical_016",
+      "question": "Welche konkreten Anforderungen stellt der Grundsatz der Rechtmäßigkeit, Verarbeitung nach Treu und Glauben sowie Transparenz gemäß Art. 5 Abs. 1 lit. a DSGVO an die Datenverarbeitung und welche Rechtsfolgen drohen bei einem Verstoß?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-492_23_vorlagefragen_8",
+        "beh_Leitlinien_03_2022_zu_119",
+        "eugh_C-654_23_rechtsrahmen_3",
+        "eugh_C-154_21_rechtsrahmen_1",
+        "eugh_C-667_21_rechtsrahmen_4",
+        "eugh_C-46_23_rechtsrahmen_1",
+        "Art. 5 DSGVO",
+        "beh_Leitlinien_3_2020_für_die_Verarbeitung_v_14",
+        "Erwägungsgrund 39 DSGVO – Grundsätze der Datenverarbeitung*",
+        "eugh_C-26_22_rechtsrahmen_5"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.54
+    },
+    {
+      "id": "canonical_017",
+      "question": "Unter welchen Voraussetzungen ist eine Weiterverarbeitung personenbezogener Daten zu einem anderen Zweck als dem ursprünglichen Erhebungszweck nach der Datenschutz-Grundverordnung zulässig?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-77_21_rechtsrahmen_1",
+        "Erwägungsgrund 50 DSGVO – Weiterverarbeitung*\n\n1\nDie Verarbe",
+        "beh_Leitlinien_06_2020_zum_Zusammenspiel_zwi_24",
+        "BDSG_§_49_Abs.1_S.1",
+        "BDSG_§_24_Abs.1_S.2",
+        "BDSG_§_23_Abs.1_S.3",
+        "eugh_C-175_20_rechtsrahmen_3",
+        "eugh_C-492_23_rechtsrahmen_4",
+        "eugh_C-77_21_vf_1_1",
+        "beh_14.11.2018-_Orientierungshilfe_der_Daten_25"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.48
+    },
+    {
+      "id": "canonical_018",
+      "question": "Welche konkreten Anforderungen stellt der Grundsatz der Datenminimierung nach Art. 5 Abs. 1 lit. c DSGVO an die Verarbeitung personenbezogener Daten für Werbezwecke und welche technischen Maßnahmen sind zur Umsetzung dieses Prinzips erforderlich?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_25"
+      ],
+      "retrieved_ids_top10": [
+        "beh_Leitlinien_06_2020_zum_Zusammenspiel_zwi_51",
+        "beh_September_2025-_Anwendungshinweise_zu_de_13",
+        "eugh_C-446_21_vf_2b_2",
+        "eugh_c_97_23_sachverhalt_21",
+        "beh_Stand_April_2018_-_Standard-Datenschutzm_31",
+        "beh_September_2025-_Anwendungshinweise_zu_de_14",
+        "beh_10.10.2025–_Stellungnahme_der_Konferen_5",
+        "beh_Standard-Datenschutzmodell_(SDM)_Version_138",
+        "beh_Das_Standard-Datenschutzmodell_(SDM)_Ver_133",
+        "beh_Leitlinien_3_2020_für_die_Verarbeitung_v_23"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.63
+    },
+    {
+      "id": "canonical_019",
+      "question": "Welche konkreten Maßnahmen muss ein Verantwortlicher ergreifen, um den Grundsatz der Richtigkeit personenbezogener Daten gemäß den Vorgaben der DSGVO zu gewährleisten?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_16",
+        "dsgvo_art_17"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-741_21_rechtsrahmen_2",
+        "eugh_C-492_23_rechtsrahmen_5",
+        "BDSG_§_26_Abs.1_S.11",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_24",
+        "BDSG_§_74_Abs.1_S.1",
+        "BDSG_§_74_Abs.1",
+        "eugh_C-579_21_rechtsrahmen_0",
+        "beh_Dezember_2025-_Orientierungshilfe_zur_Zu_27",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_20",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_21"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.25
+    },
+    {
+      "id": "canonical_020",
+      "question": "Welche Anforderungen stellt der Grundsatz der Speicherbegrenzung nach der DSGVO an die Aufbewahrung von personenbezogenen Daten in Sicherungskopien und welche Ausnahmen gelten dabei?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_89"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 15 DSGVO",
+        "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_27",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_27",
+        "eugh_C-61_22_wuerdigung_23",
+        "eugh_c_307_22_sachverhalt_2",
+        "eugh_C-77_21_vf_1_4",
+        "eugh_C-184_20_rechtsrahmen_4",
+        "beh_22_23.11.2023-_Rahmenbedingungen_und_Emp_27",
+        "beh_Standard-Datenschutzmodell_(SDM)_Version_93",
+        "beh_Das_Standard-Datenschutzmodell_(SDM)_Ver_84"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.39
+    },
+    {
+      "id": "canonical_021",
+      "question": "Welche konkreten Maßnahmen müssen gemäß DSGVO ergriffen werden, um die Integrität und Vertraulichkeit personenbezogener Daten zu gewährleisten, und welche Meldepflichten bestehen bei einer Verletzung dieser Prinzipien?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_32",
+        "dsgvo_art_33"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 33 DSGVO",
+        "Art. 34 DSGVO",
+        "beh_Anforderungen_an_datenschutzrechtliche_Z_0",
+        "beh_Anforderungen_an_datenschutzrechtliche_Z_398",
+        "eugh_C-741_21_rechtsrahmen_2",
+        "eugh_C-768_21_rechtsrahmen_2",
+        "eugh_C-667_21_rechtsrahmen_4",
+        "eugh_C-203_22_sachverhalt_2",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_21",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_160"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.333,
+        "ndcg@3": 0.469,
+        "forbidden_hit@3": false,
+        "hit@5": 0.333,
+        "ndcg@5": 0.426,
+        "forbidden_hit@5": false,
+        "hit@10": 0.333,
+        "ndcg@10": 0.426,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.41
+    },
+    {
+      "id": "canonical_022",
+      "question": "Welche konkreten Maßnahmen muss ein Unternehmen ergreifen, um die Rechenschaftspflicht nach Art. 5 Abs. 2 DSGVO zu erfüllen und die Einhaltung der Datenschutzgrundsätze nachweisen zu können?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_30",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 24 DSGVO",
+        "eugh_C-340_21_vf_2_1",
+        "eugh_C-46_23_vf_1_1",
+        "eugh_C-203_22_sachverhalt_2",
+        "eugh_C-203_22_sachverhalt_3",
+        "beh_November_2024-_Orientierungshilfe_der_Au_68",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_19",
+        "beh_Leitlinien_03_2022_zu_119",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_63",
+        "beh_Leitlinien_3_2020_für_die_Verarbeitung_v_24"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.71
+    },
+    {
+      "id": "canonical_023",
+      "question": "Welche rechtlichen Schritte sind bei der Prüfung der Zulässigkeit einer Datenverarbeitung nach der Datenschutz-Grundverordnung zu beachten und welche Normen sind dabei insbesondere zu berücksichtigen?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-654_23_rechtsrahmen_3",
+        "eugh_C-492_23_rechtsrahmen_4",
+        "eugh_C-340_21_rechtsrahmen_3",
+        "eugh_C-340_21_rechtsrahmen_0",
+        "eugh_C-180_21_rechtsrahmen_0",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_86",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_49",
+        "beh_Stand_April_2018_-_Standard-Datenschutzm_153",
+        "beh_Stand_April_2018_-_Standard-Datenschutzm_151",
+        "beh_Stand_April_2018_-_Standard-Datenschutzm_152"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.41
+    },
+    {
+      "id": "canonical_024",
+      "question": "Welche rechtlichen Anforderungen müssen erfüllt sein, damit eine Einwilligung nach den Vorgaben der Datenschutz-Grundverordnung als wirksam angesehen werden kann?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_7",
+        "dsgvo_art_8"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 7 DSGVO",
+        "Art. 70 DSGVO (Teil 1)",
+        "gran_TDDDG_§_25",
+        "gran_TDDDG_§_29",
+        "eugh_C-200_23_rechtsrahmen_8",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_303",
+        "beh_Standard-Datenschutzmodell_(SDM)_Version_129",
+        "beh_November_2024-_Orientierungshilfe_der_Au_69",
+        "beh_Das_Standard-Datenschutzmodell_(SDM)_Ver_122",
+        "beh_November_2024-_Orientierungshilfe_der_Au_47"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.5,
+        "ndcg@3": 0.532,
+        "forbidden_hit@3": false,
+        "hit@5": 0.5,
+        "ndcg@5": 0.532,
+        "forbidden_hit@5": false,
+        "hit@10": 0.5,
+        "ndcg@10": 0.532,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.55
+    },
+    {
+      "id": "canonical_025",
+      "question": "Welche Kriterien müssen bei der Prüfung eines berechtigten Interesses gemäß Art. 6 Abs. 1 lit. f DSGVO im Rahmen des dreistufigen Tests berücksichtigt werden?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "beh_Leitlinien_3_2019_zur_Verarbeitung_18",
+        "beh_EDPB_Zusammenfassung_Berechtigtes_Intere_1",
+        "beh_EDPB_Zusammenfassung_Berechtigtes_Intere_0",
+        "beh_EDPB_Zusammenfassung_Berechtigtes_Intere_2",
+        "beh_September_2025-_Anwendungshinweise_zu_de_7",
+        "beh_November_2024-_Orientierungshilfe_der_Au_74",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_336",
+        "beh_Leitlinien_8_2020_über_die_gezielte_Ansp_36",
+        "beh_29.03.2019-_Orientierungshilfe_der_Aufsi_37",
+        "beh_29.03.2019-_Orientierungshilfe_der_Aufsi_36"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.4
+    },
+    {
+      "id": "canonical_026",
+      "question": "Unter welchen Voraussetzungen ist eine Datenschutz-Folgenabschätzung nach der Datenschutz-Grundverordnung durchzuführen und welche inhaltlichen Anforderungen sind dabei zu beachten?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_36",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 35 DSGVO (Teil 1)",
+        "Art. 35 DSGVO (Teil 2)",
+        "beh_23.10.2020-_Videokonferenzsysteme_45",
+        "eugh_C-492_23_rechtsrahmen_4",
+        "Erwägungsgrund 90 DSGVO – Datenschutz-Folgenabschätzung*\n\n1",
+        "Erwägungsgrund 91 DSGVO – Erforderlichkeit einer Datenschutz",
+        "beh_November_2024-_Orientierungshilfe_der_DS_55",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_137",
+        "Erwägungsgrund 93 DSGVO – Datenschutz-Folgenabschätzung bei",
+        "beh_Standard-Datenschutzmodell_(SDM)_Version_50"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.4,
+        "ndcg@3": 0.765,
+        "forbidden_hit@3": false,
+        "hit@5": 0.4,
+        "ndcg@5": 0.553,
+        "forbidden_hit@5": false,
+        "hit@10": 0.4,
+        "ndcg@10": 0.522,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.46
+    },
+    {
+      "id": "canonical_027",
+      "question": "Unter welchen Voraussetzungen kann ein Betroffener nach Art. 82 DSGVO Schadensersatz für einen immateriellen Schaden geltend machen, und welche Kriterien hat der EuGH hierfür aufgestellt?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_82",
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 82 DSGVO",
+        "eugh_c_182_22_vf_5b_1",
+        "eugh_C-741_21_sachverhalt_1",
+        "eugh_C-590_22_vf_1_2_1",
+        "eugh_C-655_23_sachverhalt_2",
+        "BGH_1._Zivilsenat_I_ZR_97_25_entscheidungsgruende_15",
+        "eugh_C-300_21_vf_3",
+        "eugh_C-655_23_vf_5_2",
+        "eugh_C-200_23_vf_7_1",
+        "eugh_C-300_21_sachverhalt_2"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.333,
+        "ndcg@3": 0.469,
+        "forbidden_hit@3": false,
+        "hit@5": 0.333,
+        "ndcg@5": 0.426,
+        "forbidden_hit@5": false,
+        "hit@10": 0.333,
+        "ndcg@10": 0.426,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.67
+    },
+    {
+      "id": "canonical_028",
+      "question": "Welche zentralen Verfahrensinstrumente auf EU-Ebene stehen den nationalen Gerichten und Aufsichtsbehörden zur Verfügung, um eine einheitliche Anwendung und Auslegung der DSGVO in grenzüberschreitenden Fällen sicherzustellen?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_56",
+        "dsgvo_art_65"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-65_23_rechtsrahmen_0",
+        "eugh_C-252_21_rechtsrahmen_8",
+        "eugh_C-33_22_vf_3_0",
+        "eugh_c_97_23_rechtsrahmen_9",
+        "eugh_C-200_23_vf_8_2",
+        "eugh_C-645_19_wuerdigung_9",
+        "eugh_C-311_18_vf_8_1",
+        "eugh_C-311_18_sachverhalt_5",
+        "eugh_C-311_18_vf_10_9",
+        "eugh_C-313_23_wuerdigung_15"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.49
+    },
+    {
+      "id": "canonical_029",
+      "question": "Welche Funktion hat der Schadensersatzanspruch nach Art. 82 DSGVO und welche Kriterien sind für die Bemessung des Schadensersatzes maßgeblich?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 82 DSGVO",
+        "eugh_C-667_21_vf_4_0",
+        "eugh_C-590_22_vf_4_5_0",
+        "eugh_c_507_23_wuerdigung_10",
+        "eugh_C-741_21_vf_3_4_0",
+        "eugh_c_182_22_vf_1b_0",
+        "eugh_C-300_21_vf_2_1",
+        "eugh_C-300_21_vf_1_2",
+        "eugh_C-300_21_vf_1_1",
+        "eugh_C-667_21_vf_5_2"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.76,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.76,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.76,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.46
+    },
+    {
+      "id": "canonical_030",
+      "question": "Unter welchen Voraussetzungen kann die bloße Befürchtung eines Datenmissbrauchs als immaterieller Schaden im Sinne der DSGVO anerkannt werden?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 82 DSGVO",
+        "eugh_C-655_23_vf_4_2",
+        "eugh_C-340_21_vf_5_0",
+        "eugh_c_182_22_vf_5b_1",
+        "eugh_C-590_22_vf_3",
+        "eugh_C-200_23_vf_7_1",
+        "eugh_C-655_23_vf_4_0",
+        "BGH_6._Zivilsenat_VI_ZR_258_24_entscheidungsgruende_11",
+        "BGH_6._Zivilsenat_VI_ZR_396_24_entscheidungsgruende_17",
+        "BGH_6._Zivilsenat_VI_ZR_396_24_entscheidungsgruende_19"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.76,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.76,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.76,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.45
+    },
+    {
+      "id": "canonical_031",
+      "question": "Unter welchen Voraussetzungen kann ein Identitätsdiebstahl nach einem Datenleck als ersatzfähiger immaterieller Schaden im Sinne der DSGVO geltend gemacht werden?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 82 DSGVO",
+        "Prüfungsschema Datenschutzrecht – 9-Schritte-Standardprüfung",
+        "eugh_c_182_22_vf_5b_1",
+        "eugh_c_182_22_vf_5b_0",
+        "eugh_c_182_22_tenor",
+        "eugh_C-590_22_vf_1_2_1",
+        "eugh_C-655_23_sachverhalt_3",
+        "eugh_C-340_21_vf_5_0",
+        "eugh_C-526_24_vf_8_0",
+        "eugh_C-340_21_sachverhalt_2"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.76,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.76,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.76,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.57
+    },
+    {
+      "id": "canonical_032",
+      "question": "Unter welchen Voraussetzungen kann der bloße Kontrollverlust über personenbezogene Daten als immaterieller Schaden im Sinne der Datenschutz-Grundverordnung angesehen werden?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 82 DSGVO",
+        "Art. 4 DSGVO – Begriffsbestimmungen (Übersicht)\n\nArt. 4 DSGV",
+        "eugh_c_582_14_tenor",
+        "eugh_c_182_22_vf_5b_1",
+        "eugh_C-655_23_vf_4_0",
+        "eugh_C-200_23_vf_7_0",
+        "eugh_C-526_24_vf_8_1",
+        "eugh_C-741_21_vf_1_1",
+        "eugh_C-526_24_vf_8_0",
+        "BGH_6._Zivilsenat_VI_ZR_396_24_entscheidungsgruende_19"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.76,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.76,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.76,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.64
+    },
+    {
+      "id": "canonical_033",
+      "question": "Unter welchen Voraussetzungen kann eine Entschuldigung des Verantwortlichen als ausreichender Ausgleich für immaterielle Schäden im Sinne der DSGVO angesehen werden?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-655_23_vf_5_3",
+        "eugh_c_507_23_wuerdigung_9",
+        "eugh_C-655_23_sachverhalt_3",
+        "eugh_C-741_21_sachverhalt_1",
+        "eugh_C-655_23_vf_5_0",
+        "eugh_c_182_22_vf_3b_1",
+        "eugh_c_182_22_vf_4b",
+        "eugh_C-340_21_vf_5_0",
+        "eugh_C-526_24_vf_8_1",
+        "eugh_C-340_21_vf_5_1"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.29
+    },
+    {
+      "id": "canonical_034",
+      "question": "Unter welchen Voraussetzungen können kommerzielle Interessen als berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO gewertet werden?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "0c2f81f4f1a2edac",
+        "BVerwG_6._Senat_6_C_3_23_tatbestand_5",
+        "9c6462dd1332d694",
+        "13b123df401a7579",
+        "eugh_c_621_22_wuerdigung_5",
+        "eugh_C-252_21_vf_6_5",
+        "eugh_c_621_22_wuerdigung_8",
+        "eugh_C-252_21_vf_6_3",
+        "eugh_C-252_21_vf_3_4",
+        "beh_EDPB_Zusammenfassung_Berechtigtes_Intere_0"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.46
+    },
+    {
+      "id": "canonical_035",
+      "question": "Welche Einschränkungen ergeben sich aus dem Grundsatz der Datenminimierung für die Zusammenführung personenbezogener Daten zu Werbezwecken, insbesondere im Hinblick auf die Entscheidung des EuGH in der Rechtssache C-446/21?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_5"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "eugh_C-446_21_vf_2b_5",
+        "eugh_C-446_21_vf_2b_0",
+        "eugh_C-446_21_sachverhalt_5",
+        "eugh_c_118_22_sachverhalt_4",
+        "eugh_C-817_19_wuerdigung_45"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.74
+    },
+    {
+      "id": "canonical_036",
+      "question": "Unter welchen Voraussetzungen können Bußgelder nach der DSGVO gegen ein Unternehmen verhängt werden, und welche Rolle spielt dabei das Verschuldensprinzip?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "retrieved_ids_top10": [
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_13",
+        "EuGH C-807/21 Deutsche Wohnen – Bußgelder und Verschuldensprinzip",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_177",
+        "BAG_8._Senat_8_AZR_209_21_entscheidungsgruende_6",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_52"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.168,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.168,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.168,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.19
+    },
+    {
+      "id": "canonical_037",
+      "question": "Wie ist die Bußgeldobergrenze bei einem Datenschutzverstoß innerhalb eines Konzerns zu berechnen und welche Kriterien sind dabei maßgeblich?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_c_97_23_sachverhalt_7",
+        "eugh_C-768_21_sachverhalt_1",
+        "eugh_C-768_21_sachverhalt_2",
+        "eugh_C-383_23_wuerdigung_1",
+        "eugh_C-807_21_sachverhalt_2",
+        "eugh_C-654_23_rechtsrahmen_5",
+        "eugh_C-383_23_rechtsrahmen_1",
+        "beh_11.05.2023-_Stellungnahme_zur_Verbesseru_12",
+        "beh_11.05.2023-_Stellungnahme_zur_Verbesseru_15",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_157"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.54
+    },
+    {
+      "id": "canonical_038",
+      "question": "Welche konkreten Anforderungen stellt der EuGH in seinem Urteil C-34/21 an nationale Vorschriften zum Beschäftigtendatenschutz und welche Konsequenzen ergeben sich daraus für die Anwendung des § 26 BDSG?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_88",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 88 DSGVO",
+        "Art. 6 DSGVO (Teil 1)",
+        "Art. 6 DSGVO (Teil 2)",
+        "dd8676b5fa6eb84d",
+        "8c5a57d49b9a3646",
+        "beh_11.05.2023-_Notwendigkeit_spezifischer_R_2",
+        "eugh_T-553_23_header_22",
+        "eugh_C-311_18_sachverhalt_5",
+        "eugh_c_140_20_sachverhalt_3",
+        "beh_11.05.2023-_Notwendigkeit_spezifischer_R_6"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.75,
+        "ndcg@3": 1.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.75,
+        "ndcg@5": 0.773,
+        "forbidden_hit@5": false,
+        "hit@10": 0.75,
+        "ndcg@10": 0.773,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.72
+    },
+    {
+      "id": "canonical_039",
+      "question": "Welche Anforderungen müssen Betriebsvereinbarungen nach der Rechtsprechung des EuGH in der Sache C-65/23 erfüllen, um als Rechtsgrundlage für die Datenverarbeitung nach der DSGVO zu gelten?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_88"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 88 DSGVO",
+        "Art. 6 DSGVO (Teil 1)",
+        "Art. 6 DSGVO (Teil 2)",
+        "dd8676b5fa6eb84d",
+        "8c5a57d49b9a3646",
+        "eugh_C-65_23_vf_1_0",
+        "eugh_C-65_23_vf_2_1",
+        "eugh_C-34_21_vf_1_3",
+        "eugh_C-65_23_vf_2_0",
+        "eugh_C-200_23_vf_5_0"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.76,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.76,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.76,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.72
+    },
+    {
+      "id": "canonical_040",
+      "question": "Welche spezifischen Anforderungen ergeben sich aus dem Zusammenspiel von DSGVO und AI Act bei der Verarbeitung besonderer Kategorien personenbezogener Daten für die Entwicklung von Hochrisiko-KI-Systemen?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "DSGVO und AI Act (KI-Verordnung)",
+        "beh_12.12.2025-_DSGVO-Reform_Rechtssicherhe_2",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_99",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_27",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_2"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.095,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.66
+    },
+    {
+      "id": "canonical_041",
+      "question": "Welche rechtlichen Anforderungen sind bei der Verarbeitung personenbezogener Daten im Rahmen des Digital Services Act zusätzlich zu beachten, und welche Rolle spielt dabei Art. 6 Abs. 1 DSGVO?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-252_21_vf_3_4",
+        "eugh_C-252_21_vf_5",
+        "beh_November_2024-_Orientierungshilfe_der_Au_71",
+        "eugh_C-710_23_vf_2_0",
+        "beh_03.04.2019-_Positionspapier_zur_biometri_162",
+        "beh_November_2024-_Orientierungshilfe_der_Au_70",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_68",
+        "beh_November_2024-_Orientierungshilfe_der_Au_68",
+        "beh_November_2024-_Orientierungshilfe_der_DS_34",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_24"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.41
+    },
+    {
+      "id": "canonical_042",
+      "question": "Welche rechtlichen Konsequenzen ergeben sich für die Verantwortlichkeit nach der Datenschutz-Grundverordnung, wenn personenbezogene Daten gemäß den Bestimmungen des Data Act weitergegeben werden?",
+      "category": "allgemein",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_c_582_14_tenor",
+        "eugh_C-60_22_sachverhalt_1",
+        "eugh_C-492_23_rechtsrahmen_4",
+        "eugh_C-311_18_vf_8_9",
+        "eugh_C-311_18_vf_8_8",
+        "beh_November_2024-_Orientierungshilfe_der_DS_27",
+        "beh_November_2024-_Orientierungshilfe_der_DS_28",
+        "eugh_C-687_21_vf_3_4_0",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_137",
+        "beh_November_2024-_Orientierungshilfe_der_DS_26"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.5
+    },
+    {
+      "id": "canonical_043",
+      "question": "Welche Verarbeitungstätigkeiten sind gemäß den Vorgaben der Datenschutzkonferenz zwingend einer Datenschutz-Folgenabschätzung zu unterziehen?",
+      "category": "behoerden",
+      "gold_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "dsgvo_art_10",
+        "dsgvo_art_22"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 35 DSGVO (Teil 1)",
+        "Art. 35 DSGVO (Teil 2)",
+        "eugh_C-492_23_rechtsrahmen_4",
+        "Erwägungsgrund 91 DSGVO – Erforderlichkeit einer Datenschutz",
+        "eugh_C-311_18_vf_8_10",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_86",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_137",
+        "beh_BayLDA_Checkliste_Datenschutzkonforme_Kü_21",
+        "beh_23.10.2020-_Videokonferenzsysteme_45",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_195"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.333,
+        "ndcg@3": 0.765,
+        "forbidden_hit@3": false,
+        "hit@5": 0.333,
+        "ndcg@5": 0.553,
+        "forbidden_hit@5": false,
+        "hit@10": 0.333,
+        "ndcg@10": 0.47,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.48
+    },
+    {
+      "id": "canonical_044",
+      "question": "Unter welchen Voraussetzungen ist gemäß den Leitlinien des Europäischen Datenschutzausschusses eine Datenschutz-Folgenabschätzung durchzuführen?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_36"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 35 DSGVO (Teil 1)",
+        "Art. 35 DSGVO (Teil 2)",
+        "eugh_C-492_23_rechtsrahmen_4",
+        "eugh_C-623_17_vf_2_4",
+        "Erwägungsgrund 90 DSGVO – Datenschutz-Folgenabschätzung*\n\n1",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_137",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_86",
+        "beh_23.10.2020-_Videokonferenzsysteme_45",
+        "beh_Leitlinien_8_2020_über_die_gezielte_Ansp_63",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_198"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.667,
+        "ndcg@3": 0.765,
+        "forbidden_hit@3": false,
+        "hit@5": 0.667,
+        "ndcg@5": 0.695,
+        "forbidden_hit@5": false,
+        "hit@10": 0.667,
+        "ndcg@10": 0.695,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.4
+    },
+    {
+      "id": "canonical_045",
+      "question": "Unter welchen Voraussetzungen stellt die Bonitätsbewertung durch die SCHUFA eine automatisierte Entscheidung im Sinne der DSGVO dar und welche Rechte haben Betroffene in diesem Zusammenhang?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_22",
+        "dsgvo_art_15"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "EuGH C-634/21 SCHUFA – Scoring als automatisierte Entscheidung",
+        "eugh_C-634_21_vf_1_1",
+        "eugh_C-203_22_wuerdigung_4",
+        "eugh_C-634_21_sachverhalt_0",
+        "eugh_C-634_21_sachverhalt_2"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.095,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.53
+    },
+    {
+      "id": "canonical_046",
+      "question": "Welche konkreten Informationen über die Logik eines automatisierten Entscheidungsprozesses muss ein Verantwortlicher gemäß der Rechtsprechung des EuGH im Fall C-203/22 (Dun & Bradstreet Austria) den betroffenen Personen bereitstellen, ohne dabei den genauen Algorithmus offenlegen zu müssen?",
+      "category": "betroffenenrechte",
+      "gold_ids": [
+        "dsgvo_art_15"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 13 DSGVO",
+        "Art. 14 DSGVO (Teil 1)",
+        "Art. 14 DSGVO (Teil 2)",
+        "eugh_C-203_22_wuerdigung_5",
+        "eugh_C-203_22_rechtsrahmen_2",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_42",
+        "eugh_C-203_22_wuerdigung_4",
+        "eugh_C-422_24_sachverhalt_5",
+        "eugh_C-446_21_vf_2b_0",
+        "eugh_C-634_21_sachverhalt_3"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.99
+    },
+    {
+      "id": "canonical_047",
+      "question": "Unter welchen Voraussetzungen ist das Verbot der Doppelbestrafung (ne bis in idem) im Datenschutzrecht anwendbar, insbesondere bei parallelen Sanktionen nach der DSGVO und nationalen Vorschriften?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_c_97_23_sachverhalt_20",
+        "eugh_c_151_20_sachverhalt_3",
+        "eugh_c_182_22_vf_5b_1",
+        "eugh_c_27_22_vf_3c_0",
+        "eugh_c_27_22_vf_1b_0",
+        "eugh_c_27_22_rechtsrahmen_0",
+        "eugh_C-46_23_vf_1_1",
+        "eugh_C-77_21_sachverhalt_1",
+        "eugh_C-311_18_vf_8_0",
+        "eugh_C-311_18_vf_8_1"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.49
+    },
+    {
+      "id": "canonical_048",
+      "question": "Welche Kriterien müssen bei der Prüfung der Verhältnismäßigkeit einer datenschutzrechtlichen Maßnahme nach Art. 52 Abs. 1 GRCh berücksichtigt werden?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-340_21_vf_2_0",
+        "eugh_C-340_21_vf_2_1",
+        "eugh_C-654_23_rechtsrahmen_3",
+        "eugh_C-741_21_rechtsrahmen_2",
+        "eugh_C-340_21_vf_1_1",
+        "eugh_C-446_21_rechtsrahmen_0",
+        "eugh_C-492_23_rechtsrahmen_7",
+        "eugh_C-634_21_vf_1_4",
+        "eugh_c_140_20_sachverhalt_3",
+        "eugh_C-311_18_sachverhalt_5"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.24
+    },
+    {
+      "id": "canonical_049",
+      "question": "Welche rechtlichen Voraussetzungen müssen erfüllt sein, um E-Mail-Werbung an Bestandskunden ohne deren ausdrückliche Einwilligung versenden zu dürfen?",
+      "category": "cookies_tracking",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_21"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 7 DSGVO",
+        "Art. 70 DSGVO (Teil 1)",
+        "gran_TDDDG_§_25",
+        "gran_TDDDG_§_29",
+        "mw_newsletter_einwilligung_dreistufig",
+        "eugh_C-654_23_rechtsrahmen_0",
+        "eugh_C-654_23_sachverhalt_3",
+        "eugh_C-654_23_wuerdigung_3",
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_50",
+        "eugh_C-102_20_sachverhalt_2"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.36
+    },
+    {
+      "id": "canonical_050",
+      "question": "Welche Länder haben derzeit einen gültigen Angemessenheitsbeschluss der EU-Kommission gemäß Art. 45 DSGVO, der einen Datentransfer ohne zusätzliche Garantien ermöglicht?",
+      "category": "drittlandtransfer",
+      "gold_ids": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_5",
+        "dsgvo_art_46"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "eugh_C-33_22_vf_3_1",
+        "beh_September_2025-_Anwendungshinweise_zu_de_25",
+        "eugh_C-311_18_vf_8_2",
+        "eugh_C-311_18_vf_8_3",
+        "eugh_C-311_18_vf_8_4"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.5,
+        "ndcg@3": 0.531,
+        "forbidden_hit@3": false,
+        "hit@5": 0.75,
+        "ndcg@5": 0.567,
+        "forbidden_hit@5": false,
+        "hit@10": 0.75,
+        "ndcg@10": 0.567,
+        "forbidden_hit@10": false,
+        "mrr": 0.5
+      },
+      "duration_s": 1.5
+    },
+    {
+      "id": "canonical_051",
+      "question": "Welche rechtlichen Anforderungen müssen bei der Versendung von Newslettern kumulativ erfüllt werden, insbesondere im Hinblick auf die Einwilligung und die Verwendung von Tracking-Technologien?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "gran_TDDDG_§_25",
+        "gran_TDDDG_§_29",
+        "Art. 7 DSGVO",
+        "eugh_C-654_23_wuerdigung_6",
+        "eugh_C-741_21_sachverhalt_0",
+        "beh_November_2024-_Orientierungshilfe_der_Au_27",
+        "beh_November_2024-_Orientierungshilfe_der_Au_38",
+        "beh_November_2024-_Orientierungshilfe_der_Au_69",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_8",
+        "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_89"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.333,
+        "ndcg@3": 0.469,
+        "forbidden_hit@3": false,
+        "hit@5": 0.333,
+        "ndcg@5": 0.426,
+        "forbidden_hit@5": false,
+        "hit@10": 0.333,
+        "ndcg@10": 0.426,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.68
+    },
+    {
+      "id": "canonical_052",
+      "question": "Welche rechtlichen Grundlagen und Grenzen sind bei der Kontrolle von E-Mails durch den Arbeitgeber zu beachten, wenn die Privatnutzung der betrieblichen IT-Infrastruktur verboten ist?",
+      "category": "beschaeftigtendatenschutz",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 88 DSGVO",
+        "Art. 6 DSGVO (Teil 1)",
+        "Art. 6 DSGVO (Teil 2)",
+        "dd8676b5fa6eb84d",
+        "8c5a57d49b9a3646",
+        "eugh_c_140_20_sachverhalt_3",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_62",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_35",
+        "beh_11.05.2023-_Notwendigkeit_spezifischer_R_1",
+        "eugh_c_203_15_rechtsrahmen_0"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.667,
+        "ndcg@3": 0.531,
+        "forbidden_hit@3": false,
+        "hit@5": 0.667,
+        "ndcg@5": 0.482,
+        "forbidden_hit@5": false,
+        "hit@10": 0.667,
+        "ndcg@10": 0.482,
+        "forbidden_hit@10": false,
+        "mrr": 0.5
+      },
+      "duration_s": 1.71
+    },
+    {
+      "id": "canonical_053",
+      "question": "Welche spezifischen Angaben müssen in einer Datenschutzerklärung enthalten sein, wenn personenbezogene Daten direkt beim Betroffenen erhoben werden, und welche zusätzlichen Informationen sind erforderlich, wenn die Daten aus anderen Quellen stammen?",
+      "category": "betroffenenrechte",
+      "gold_ids": [
+        "dsgvo_art_13",
+        "dsgvo_art_14_part0",
+        "dsgvo_art_14_part1",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_c_582_14_tenor",
+        "eugh_C-422_24_rechtsrahmen_1",
+        "eugh_C-422_24_rechtsrahmen_3",
+        "eugh_C-200_23_vf_5_1",
+        "eugh_C-422_24_sachverhalt_5",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_27",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_210",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_12",
+        "eugh_C-479_22_wuerdigung_12",
+        "eugh_c_212_13_rechtsrahmen_3"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.65
+    },
+    {
+      "id": "canonical_054",
+      "question": "Welche datenschutzrechtlichen Voraussetzungen müssen bei der Verwendung personenbezogener Daten für das Training von KI-Modellen erfüllt sein, insbesondere im Hinblick auf die Zweckbindung und die Rechtsgrundlagen?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_89"
+      ],
+      "retrieved_ids_top10": [
+        "mw_dsk_ki_positionen",
+        "mw_ki_datenschutz_pruefungsschema",
+        "mw_ki_training_zweckbindung",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_21",
+        "beh_12.12.2025-_DSGVO-Reform_Rechtssicherhe_2",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_20",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_1",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_22",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_53",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_18"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.117,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.091,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.091,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.38
+    },
+    {
+      "id": "canonical_055",
+      "question": "Welche Kriterien müssen erfüllt sein, damit eine gemeinsame Verantwortlichkeit nach der Datenschutz-Grundverordnung vorliegt, und welche rechtlichen Konsequenzen ergeben sich daraus?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_26",
+        "dsgvo_art_82"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 26 DSGVO",
+        "eugh_C-60_22_rechtsrahmen_0",
+        "eugh_C-46_23_rechtsrahmen_1",
+        "eugh_C-683_21_vf_5",
+        "eugh_C-231_22_vf_2_1",
+        "eugh_C-492_23_rechtsrahmen_4",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_39",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_2",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_62",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_129"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.5,
+        "ndcg@3": 0.532,
+        "forbidden_hit@3": false,
+        "hit@5": 0.5,
+        "ndcg@5": 0.532,
+        "forbidden_hit@5": false,
+        "hit@10": 0.5,
+        "ndcg@10": 0.532,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.43
+    },
+    {
+      "id": "canonical_056",
+      "question": "Welche datenschutzrechtlichen Anforderungen sind bei der Nutzung von KI-Tools wie ChatGPT zu beachten, insbesondere hinsichtlich der Rechtsgrundlage, der Auftragsverarbeitung und der Datenübermittlung in Drittländer?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_44",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 28 DSGVO (Teil 1)",
+        "Art. 28 DSGVO (Teil 2)",
+        "Art. 29 DSGVO",
+        "eugh_C-604_22_rechtsrahmen_0",
+        "eugh_C-252_21_sachverhalt_5",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_2",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_88",
+        "beh_BayLDA_Checkliste_Datenschutzkonforme_Kü_27",
+        "beh_BayLDA_Checkliste_Datenschutzkonforme_Kü_31",
+        "beh_BayLDA_Checkliste_Datenschutzkonforme_Kü_19"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.286,
+        "ndcg@3": 0.765,
+        "forbidden_hit@3": false,
+        "hit@5": 0.286,
+        "ndcg@5": 0.553,
+        "forbidden_hit@5": false,
+        "hit@10": 0.286,
+        "ndcg@10": 0.43,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.86
+    },
+    {
+      "id": "canonical_057",
+      "question": "Welche Rechtsgrundlagen sind bei der Videoüberwachung von öffentlich zugänglichen Räumen durch nicht-öffentliche Stellen zu beachten und welche spezifischen Anforderungen ergeben sich daraus?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_4_Abs.1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 88 DSGVO",
+        "Art. 6 DSGVO (Teil 1)",
+        "Art. 6 DSGVO (Teil 2)",
+        "Prüfungsschema Datenschutz-Folgenabschätzung (DSFA, Art. 35 DSGVO)",
+        "DSK-Blacklist – 17 DSFA-pflichtige Verarbeitungen",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_31",
+        "eugh_c_212_13_rechtsrahmen_7",
+        "BDSG_§_4_Abs.1_S.1",
+        "beh_23.10.2020-_Videokonferenzsysteme_34",
+        "beh_11.11.2020-_Checkliste_Datenschutz_in_Vi_4"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.667,
+        "ndcg@3": 0.531,
+        "forbidden_hit@3": false,
+        "hit@5": 0.667,
+        "ndcg@5": 0.482,
+        "forbidden_hit@5": false,
+        "hit@10": 0.667,
+        "ndcg@10": 0.482,
+        "forbidden_hit@10": false,
+        "mrr": 0.5
+      },
+      "duration_s": 1.65
+    },
+    {
+      "id": "canonical_058",
+      "question": "Welche rechtlichen Schritte und Abwägungen sind erforderlich, um einen Anspruch auf Löschung von Suchergebnissen gemäß dem Recht auf Vergessenwerden durchzusetzen?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_17",
+        "dsgvo_art_21",
+        "dsgvo_art_19"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 17 DSGVO",
+        "beh_08.10.2014-_Zum_Recht_auf_Sperrung_von_S_1",
+        "beh_Leitlinien_8_2020_über_die_gezielte_Ansp_82",
+        "beh_Leitlinien_8_2020_über_die_gezielte_Ansp_81",
+        "eugh_C-203_22_sachverhalt_3",
+        "eugh_C-307_22_header_4",
+        "eugh_C-97_23_header_4",
+        "eugh_C-307_22_header_3",
+        "eugh_C-307_22_header_9",
+        "eugh_C-460_20_vf_1_2"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.333,
+        "ndcg@3": 0.469,
+        "forbidden_hit@3": false,
+        "hit@5": 0.333,
+        "ndcg@5": 0.426,
+        "forbidden_hit@5": false,
+        "hit@10": 0.333,
+        "ndcg@10": 0.426,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.62
+    },
+    {
+      "id": "canonical_059",
+      "question": "Welche rechtlichen Schritte sind erforderlich, um personenbezogene Daten in die USA zu übermitteln, wenn der Empfänger nicht unter dem Data Privacy Framework zertifiziert ist?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_46",
+        "dsgvo_art_44"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "mw_dpf_data_privacy_framework",
+        "beh_Übermittlung_personenbezogener_Daten_au_182",
+        "beh_Übermittlung_personenbezogener_Daten_au_7",
+        "beh_Übermittlung_personenbezogener_Daten_au_68",
+        "beh_Prüfschema_zum_Datenschutz_bei_Windows_30"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.75,
+        "ndcg@3": 1.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.93,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.93,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.6
+    },
+    {
+      "id": "canonical_060",
+      "question": "Welche rechtlichen Anforderungen müssen erfüllt sein, um Cookies und Tracking-Tools auf einer Website datenschutzkonform einzusetzen?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_7"
+      ],
+      "retrieved_ids_top10": [
+        "gran_TDDDG_§_25",
+        "gran_TDDDG_§_29",
+        "beh_November_2024-_Orientierungshilfe_der_Au_66",
+        "beh_November_2024-_Orientierungshilfe_der_Au_25",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_187",
+        "beh_26.03.2025-_Eckpunkte_für_eine_freiheit_5",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_21",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_50",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_10",
+        "beh_November_2024-_Orientierungshilfe_der_Au_65"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.25,
+        "ndcg@3": 0.469,
+        "forbidden_hit@3": false,
+        "hit@5": 0.25,
+        "ndcg@5": 0.363,
+        "forbidden_hit@5": false,
+        "hit@10": 0.25,
+        "ndcg@10": 0.363,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.39
+    },
+    {
+      "id": "canonical_061",
+      "question": "Welche zentralen datenschutzrechtlichen Anforderungen stellen die Aufsichtsbehörden an den Einsatz von KI-Systemen, die personenbezogene Daten verarbeiten?",
+      "category": "behoerden",
+      "gold_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 4 DSGVO – Begriffsbestimmungen (Übersicht)\n\nArt. 4 DSGV",
+        "eugh_c_582_14_tenor",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_2",
+        "beh_12.12.2025-_DSGVO-Reform_Rechtssicherhe_2",
+        "beh_03.04.2019-_Hambacher_Erklärung_zur_kü_33",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_24",
+        "beh_BayLDA_Checkliste_Datenschutzkonforme_Kü_2",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_29",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_27",
+        "beh_03.04.2019-_Hambacher_Erklärung_zur_kü_31"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.42
+    },
+    {
+      "id": "canonical_062",
+      "question": "Welche Orientierungshilfen hat die Datenschutzkonferenz für die Videoüberwachung durch nicht-öffentliche Stellen veröffentlicht und wann wurden diese zuletzt aktualisiert?",
+      "category": "behoerden",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "Art. 88 DSGVO",
+        "Art. 6 DSGVO (Teil 1)",
+        "Art. 6 DSGVO (Teil 2)",
+        "beh_30.11.2022-_Orientierungshilfe_der_Aufsi_11",
+        "beh_30.11.2022-_Orientierungshilfe_der_Aufsi_12",
+        "beh_11.11.2020-_Checkliste_Datenschutz_in_Vi_15",
+        "beh_30.11.2022-_Orientierungshilfe_der_Aufsi_316",
+        "beh_Leitlinien_2_2020_zu_Artikel_46_Absatz_2_6",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_4",
+        "beh_11.11.2020-_Checkliste_Datenschutz_in_Vi_66"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.56
+    },
+    {
+      "id": "canonical_063",
+      "question": "Welche Kriterien sind entscheidend, um zu bestimmen, ob ein Cloud-Dienstleister als Auftragsverarbeiter nach Art. 28 DSGVO oder als eigenständiger Verantwortlicher einzustufen ist?",
+      "category": "auftragsverarbeitung",
+      "gold_ids": [
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_32"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "beh_Dezember_2025-_Orientierungshilfe_zur_Zu_27",
+        "beh_November_2024-_Orientierungshilfe_der_Au_65",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_33",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_87",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_75"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.79
+    },
+    {
+      "id": "canonical_064",
+      "question": "Unter welchen Voraussetzungen sind dynamische IP-Adressen als personenbezogene Daten im Sinne der DSGVO zu qualifizieren?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_c_582_14_tenor",
+        "eugh_C-683_21_vf_4_1",
+        "eugh_C-200_23_vf_6",
+        "eugh_C-604_22_vf_1_3",
+        "eugh_C-252_21_vf_3_4",
+        "eugh_C-638_23_sachverhalt_5",
+        "eugh_C-604_22_vf_1_2",
+        "beh_September_2025-_Anwendungshinweise_zu_de_33",
+        "eugh_C-313_23_sachverhalt_3",
+        "eugh_C-413_23_wuerdigung_14"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.27
+    },
+    {
+      "id": "canonical_065",
+      "question": "Welche Voraussetzungen müssen erfüllt sein, damit eine automatisierte Entscheidungsfindung nach Art. 22 DSGVO zulässig ist, und welche Schutzmaßnahmen sind in diesem Fall zu ergreifen?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_22",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "gran_BDSG_§_31_Abs.1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-634_21_vf_1_5",
+        "eugh_C-634_21_vf_1_0",
+        "eugh_C-634_21_vf_1_4",
+        "eugh_C-203_22_wuerdigung_4",
+        "eugh_C-203_22_rechtsrahmen_2",
+        "eugh_T-553_23_header_28",
+        "eugh_C-340_21_vf_2_0",
+        "eugh_C-203_22_sachverhalt_2",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_42",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_35"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.42
+    },
+    {
+      "id": "canonical_066",
+      "question": "Unter welchen Voraussetzungen können Nutzer ihre in einem sozialen Netzwerk generierten Daten in einem maschinenlesbaren Format anfordern und welche technischen Anforderungen sind dabei zu beachten?",
+      "category": "betroffenenrechte",
+      "gold_ids": [
+        "dsgvo_art_20",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-252_21_vf_3_4",
+        "eugh_C-200_23_vf_4_1",
+        "eugh_C-203_22_rechtsrahmen_2",
+        "eugh_C-487_21_rechtsrahmen_2",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_145",
+        "eugh_C-26_22_vf_1_8",
+        "beh_11.07.2023–_Stellungnahme_zum_Referent_34",
+        "eugh_C-319_22_vf_2_0",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_21",
+        "eugh_C-579_21_vf_1_2_5"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.36
+    },
+    {
+      "id": "canonical_067",
+      "question": "Welche Anforderungen stellt die DSGVO an die Einwilligungsfähigkeit von Minderjährigen bei der Nutzung von Diensten der Informationsgesellschaft und welche Pflichten ergeben sich daraus für die Anbieter solcher Dienste?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_8",
+        "dsgvo_art_12_part0",
+        "dsgvo_art_12_part1",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 7 DSGVO",
+        "Art. 70 DSGVO (Teil 1)",
+        "gran_TDDDG_§_25",
+        "gran_TDDDG_§_29",
+        "eugh_C-492_23_vorlagefragen_10",
+        "eugh_C-252_21_vf_6b_1",
+        "beh_November_2024-_Orientierungshilfe_der_Au_46",
+        "beh_November_2024-_Orientierungshilfe_der_Au_48",
+        "beh_November_2024-_Orientierungshilfe_der_Au_38",
+        "beh_11.07.2023–_Stellungnahme_zum_Referent_13"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.71
+    },
+    {
+      "id": "canonical_068",
+      "question": "Welche Anspruchsgrundlagen kommen bei einem Datenschutzverstoß im deutschen Recht in Betracht und wie verhalten sich diese zu den Regelungen der DSGVO?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-590_22_rechtsrahmen_0",
+        "eugh_C-741_21_rechtsrahmen_0",
+        "eugh_C-300_21_vf_1_1",
+        "eugh_C-456_22_rechtsrahmen",
+        "eugh_c_507_23_wuerdigung_2",
+        "eugh_c_507_23_wuerdigung_1",
+        "eugh_C-526_24_vf_5_6_1",
+        "eugh_c_507_23_wuerdigung_7",
+        "eugh_C-200_23_rechtsrahmen_10",
+        "eugh_C-200_23_vf_8_1"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.65
+    },
+    {
+      "id": "canonical_069",
+      "question": "Welche konkreten Kritikpunkte wurden von der Datenschutzkonferenz (DSK) im November 2022 an der Auftragsverarbeitung von Microsoft 365 im Hinblick auf die Einhaltung der Anforderungen des Art. 28 DSGVO festgestellt?",
+      "category": "behoerden",
+      "gold_ids": [
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 28 DSGVO (Teil 1)",
+        "Art. 28 DSGVO (Teil 2)",
+        "Art. 29 DSGVO",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_24",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_20",
+        "beh_11.07.2023–_Stellungnahme_zum_Referent_13",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_35",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_107",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_112",
+        "beh_14.08.2023–_Stellungnahme_der_DSK_zum_8"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.5,
+        "ndcg@3": 0.765,
+        "forbidden_hit@3": false,
+        "hit@5": 0.5,
+        "ndcg@5": 0.592,
+        "forbidden_hit@5": false,
+        "hit@10": 0.5,
+        "ndcg@10": 0.592,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.72
+    },
+    {
+      "id": "canonical_070",
+      "question": "Welche Definitionen von zentralen Begriffen wie 'personenbezogene Daten', 'Verantwortlicher' und 'Auftragsverarbeiter' sind in der Datenschutz-Grundverordnung verbindlich festgelegt?",
+      "category": "allgemein",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_c_582_14_tenor",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_80",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_4",
+        "eugh_C-492_23_rechtsrahmen_4",
+        "eugh_C-180_21_rechtsrahmen_4",
+        "eugh_C-180_21_vf_2_1",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_79",
+        "eugh_C-496_17_rechtsrahmen_3",
+        "beh_Dezember_2025-_Orientierungshilfe_zur_Zu_27",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_43"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.84
+    },
+    {
+      "id": "canonical_071",
+      "question": "Welche Voraussetzungen müssen erfüllt sein, damit die Verarbeitung personenbezogener Daten nach der DSGVO rechtmäßig ist?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-492_23_vorlagefragen_8",
+        "eugh_C-34_21_rechtsrahmen_5",
+        "Art. 6 DSGVO (Teil 1)",
+        "eugh_C-654_23_rechtsrahmen_3",
+        "Erwägungsgrund 40 DSGVO – Rechtmäßigkeit der Datenverarbeitu",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_28",
+        "beh_Leitlinien_06_2020_zum_Zusammenspiel_zwi_20",
+        "eugh_C-446_21_rechtsrahmen_0",
+        "beh_November_2024-_Orientierungshilfe_der_Au_71",
+        "beh_29.03.2019-_Orientierungshilfe_der_Aufsi_68"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.23
+    },
+    {
+      "id": "canonical_072",
+      "question": "Welche Schritte sind erforderlich, um die Zulässigkeit einer Datenübermittlung an ein US-Unternehmen im Rahmen des EU-US Data Privacy Framework zu prüfen?",
+      "category": "drittlandtransfer",
+      "gold_ids": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1"
+      ],
+      "retrieved_ids_top10": [
+        "mw_dpf_data_privacy_framework",
+        "eugh_T-553_23_header_5",
+        "eugh_C-311_18_vf_10_0",
+        "eugh_C-311_18_sachverhalt_5",
+        "beh_September_2025-_Anwendungshinweise_zu_de_6",
+        "beh_23.10.2020-_Videokonferenzsysteme_47",
+        "Prüfungsschema Datenschutzrecht – 9-Schritte-Standardprüfung",
+        "beh_Übermittlung_personenbezogener_Daten_au_52",
+        "beh_Übermittlung_personenbezogener_Daten_au_46",
+        "beh_Übermittlung_personenbezogener_Daten_au_22"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.266,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.266,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.266,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.77
+    },
+    {
+      "id": "canonical_073",
+      "question": "Welche zusätzlichen Maßnahmen müssen neben den Standardvertragsklauseln ergriffen werden, um einen datenschutzkonformen Drittlandtransfer gemäß den Vorgaben des EuGH-Urteils Schrems II zu gewährleisten?",
+      "category": "drittlandtransfer",
+      "gold_ids": [
+        "dsgvo_art_46"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "eugh_C-311_18_sachverhalt_0",
+        "eugh_C-311_18_sachverhalt_1",
+        "eugh_C-311_18_sachverhalt_2",
+        "eugh_C-362_14_wuerdigung_0",
+        "eugh_C-362_14_wuerdigung_1"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.327,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.327,
+        "forbidden_hit@10": false,
+        "mrr": 0.25
+      },
+      "duration_s": 1.87
+    },
+    {
+      "id": "canonical_074",
+      "question": "Welche inhaltlichen Anforderungen müssen verbindliche interne Datenschutzvorschriften nach der Datenschutz-Grundverordnung erfüllen und welches Verfahren ist für deren Genehmigung vorgesehen?",
+      "category": "drittlandtransfer",
+      "gold_ids": [
+        "dsgvo_art_47_part0",
+        "dsgvo_art_47_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-46_23_rechtsrahmen_1",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_134",
+        "Art. 47 DSGVO (Teil 1)",
+        "beh_Leitlinien_2_2020_zu_Artikel_46_Absatz_2_8",
+        "beh_Anforderungen_zur_Akkreditierung_gemäß_171",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_62",
+        "beh_14.11.2018-_Orientierungshilfe_der_Daten_25",
+        "beh_Leitlinien_1_2018_für_die_Zertifizierung_6",
+        "beh_Stand_April_2018_-_Standard-Datenschutzm_156",
+        "beh_Stand_April_2018_-_Standard-Datenschutzm_153"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.26
+    },
+    {
+      "id": "canonical_075",
+      "question": "In welchen Fällen darf das Bundesdatenschutzgesetz (BDSG) strengere Regelungen als die Datenschutz-Grundverordnung (DSGVO) vorsehen und welche rechtlichen Grundlagen sind dabei zu beachten?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-34_21_vf_1_3",
+        "eugh_C-492_23_rechtsrahmen_4",
+        "beh_11.05.2023-_Notwendigkeit_spezifischer_R_6",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_86",
+        "beh_23.11.2023-_Datenschutz_in_der_Forschung_12",
+        "beh_12.04.2024–_Stellungnahme_der_DSK_zum_43",
+        "beh_12.04.2024–_Stellungnahme_der_DSK_zum_135",
+        "beh_06.09.2023–_Stellungnahme_der_unabhän_14",
+        "beh_12.04.2024–_Stellungnahme_der_DSK_zum_123",
+        "eugh_C-453_21_vf_1_2"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.59
+    },
+    {
+      "id": "canonical_076",
+      "question": "In welchen Bereichen der Datenschutz-Grundverordnung haben die Mitgliedstaaten die Möglichkeit, durch nationale Regelungen vom grundsätzlichen Prinzip der Vollharmonisierung abzuweichen?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 88 DSGVO",
+        "eugh_C-34_21_vf_1_3",
+        "eugh_C-65_23_rechtsrahmen_0",
+        "eugh_C-252_21_vf_1_7_3",
+        "eugh_C-65_23_vf_1_1",
+        "eugh_C-667_21_vf_1_3",
+        "eugh_C-34_21_rechtsrahmen_1",
+        "eugh_C-247_23_rechtsrahmen_0",
+        "eugh_C-311_18_vf_8_0",
+        "eugh_C-311_18_rechtsrahmen_1"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.25,
+        "ndcg@3": 0.469,
+        "forbidden_hit@3": false,
+        "hit@5": 0.25,
+        "ndcg@5": 0.363,
+        "forbidden_hit@5": false,
+        "hit@10": 0.25,
+        "ndcg@10": 0.363,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.59
+    },
+    {
+      "id": "canonical_077",
+      "question": "Welche Rechtsgrundlagen sind für die Anonymisierung personenbezogener Daten erforderlich und unter welchen Bedingungen fallen die Daten nach der Anonymisierung nicht mehr unter den Anwendungsbereich der DSGVO?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 25 DSGVO",
+        "Art. 89 DSGVO",
+        "eugh_C-268_21_vf_2_3",
+        "eugh_C-683_21_vf_4_1",
+        "eugh_C-268_21_rechtsrahmen_0",
+        "eugh_C-604_22_rechtsrahmen_0",
+        "eugh_C-487_21_rechtsrahmen_0",
+        "eugh_C-205_21_rechtsrahmen_0",
+        "eugh_C-34_21_rechtsrahmen_0",
+        "eugh_C-252_21_vf_6_5"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.56
+    },
+    {
+      "id": "canonical_078",
+      "question": "Unter welchen Voraussetzungen stellt eine dynamische IP-Adresse ein personenbezogenes Datum im Sinne der DSGVO dar?",
+      "category": "allgemein",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_c_582_14_vf_1b_0",
+        "eugh_C-604_22_vf_1_3",
+        "eugh_C-200_23_vf_6",
+        "eugh_C-638_23_sachverhalt_5",
+        "eugh_C-252_21_vf_3_4",
+        "eugh_C-579_21_vf_1_2_2",
+        "eugh_c_582_14_vf_1b_2",
+        "eugh_c_582_14_vf_1b_1",
+        "eugh_C-597_19_vf_3b_0",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_301"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.39
+    }
+  ]
+}

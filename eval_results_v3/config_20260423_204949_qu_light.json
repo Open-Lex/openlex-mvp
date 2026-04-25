@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-04-23T20:49:49.414302",
+  "eval_set": "canonical_v3.json",
+  "output_suffix": "qu_light",
+  "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+  "ce_cutoff": 3.0,
+  "top_k_retrieval": 40,
+  "reranker_input_truncation": 500,
+  "git_commit": "c976c54",
+  "git_branch": "feature/query-understanding-light"
+}

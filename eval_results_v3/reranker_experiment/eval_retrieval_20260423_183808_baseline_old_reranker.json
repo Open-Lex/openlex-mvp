@@ -1,0 +1,4044 @@
+{
+  "summary": {
+    "avg_hit@3": 0.222,
+    "avg_ndcg@3": 0.08,
+    "forbidden_hit_rate@3": 0.0,
+    "avg_hit@5": 0.238,
+    "avg_ndcg@5": 0.078,
+    "forbidden_hit_rate@5": 0.0,
+    "avg_hit@10": 0.238,
+    "avg_ndcg@10": 0.077,
+    "forbidden_hit_rate@10": 0.0,
+    "avg_mrr": 0.119,
+    "by_category": {
+      "allgemein": 0.0,
+      "auftragsverarbeitung": 0.0,
+      "behoerden": 0.0,
+      "beschaeftigtendatenschutz": 0.0,
+      "betroffenenrechte": 0.0,
+      "cookies_tracking": 0.5,
+      "drittlandtransfer": 0.188,
+      "methodenwissen": 0.25,
+      "pruefungsschemata": 0.091,
+      "rechtsgrundlagen": 0.038,
+      "rechtsprechung": 0.333
+    },
+    "duration_s": 180.5,
+    "n_questions": 78,
+    "timestamp": "2026-04-23 18:38",
+    "latency": {
+      "warmup_queries_excluded": 3,
+      "n_measured": 75,
+      "total_ms_mean": 1750.7,
+      "total_ms_median": 1736.6,
+      "total_ms_p95": 2195.9,
+      "reranker_ms_mean": 455.9,
+      "reranker_ms_median": 425.1,
+      "reranker_ms_p95": 724.7
+    }
+  },
+  "results": [
+    {
+      "id": "messy_001",
+      "question": "Ein Kunde aus der Logistik fragt: Wenn wir Daten von EU-Bürgern verarbeiten, aber auch noch lokale Gesetze in Spanien und Deutschland beachten müssen – was gilt dann eigentlich zuerst, und wo steht das überhaupt alles nachlesbar?",
+      "category": "methodenwissen",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-34_21_rechtsrahmen_6",
+        "eugh_C-205_21_vf_2_2",
+        "eugh_C-203_22_header",
+        "eugh_C-658_19_header",
+        "eugh_C-511_18_vf_1_3",
+        "eugh_C-623_17_vf_1_1",
+        "beh_01.09.2023–_Stellungnahme_der_DSK_zum_30",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_24",
+        "beh_06.09.2023–_Stellungnahme_der_unabhän_24"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-34_21_rechtsrahmen_6",
+        "eugh_C-205_21_vf_2_2",
+        "eugh_C-203_22_header",
+        "eugh_C-658_19_header",
+        "eugh_C-511_18_vf_1_3",
+        "eugh_C-623_17_vf_1_1",
+        "beh_01.09.2023–_Stellungnahme_der_DSK_zum_30",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_24",
+        "beh_06.09.2023–_Stellungnahme_der_unabhän_24"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 10.86,
+      "latency": {
+        "total_ms": 10541.0,
+        "reranker_ms": 318.2,
+        "warmup": true
+      }
+    },
+    {
+      "id": "messy_002",
+      "question": "Ein kleiner Online-Shop für Fahrradzubehör will Kundendaten wie bisher lokal speichern, aber ein Anwalt meint, die EU-Datenschutzregeln wären strenger als das deutsche Gesetz – was gilt jetzt wirklich, wenn die beiden sich widersprechen?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_88"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-655_23_vorlagefragen_3",
+        "eugh_C-33_22_vf_3_0",
+        "eugh_C-21_23_sachverhalt_2",
+        "eugh_c_97_23_sachverhalt_20",
+        "eugh_C-741_21_vf_1_1",
+        "eugh_C-807_21_rechtsrahmen_1",
+        "eugh_C-683_21_rechtsrahmen_0",
+        "eugh_C-21_23_rechtsrahmen_1",
+        "eugh_C-34_21_vf_2_0",
+        "eugh_C-645_19_wuerdigung_10"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-655_23_vorlagefragen_3",
+        "eugh_C-33_22_vf_3_0",
+        "eugh_C-21_23_sachverhalt_2",
+        "eugh_c_97_23_sachverhalt_20",
+        "eugh_C-741_21_vf_1_1",
+        "eugh_C-807_21_rechtsrahmen_1",
+        "eugh_C-683_21_rechtsrahmen_0",
+        "eugh_C-21_23_rechtsrahmen_1",
+        "eugh_C-34_21_vf_2_0",
+        "eugh_C-645_19_wuerdigung_10"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.06,
+      "latency": {
+        "total_ms": 1762.5,
+        "reranker_ms": 301.0,
+        "warmup": true
+      }
+    },
+    {
+      "id": "messy_003",
+      "question": "In unserer kleinen Physiotherapie-Praxis wollen wir die Gesundheitsdaten unserer Angestellten digital verwalten – aber jeder sagt, da gäbe es strenge Regeln. Können wir uns da einfach an deutsche Gesetze halten, oder muss alles nach EU-Vorgaben laufen, auch wenn’s um Krankentage oder Impfstatus geht?",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 9 DSGVO (Teil 1)",
+        "Art. 9 DSGVO (Teil 2)",
+        "eugh_C-34_21_vf_1_3",
+        "eugh_C-34_21_vf_2_0",
+        "eugh_C-768_21_sachverhalt_5",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-65_23_vf_1_2",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_5",
+        "beh_22_23.11.2023-_Rahmenbedingungen_und_Emp_15",
+        "eugh_C-579_21_sachverhalt_1"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "eugh_C-34_21_vf_1_3",
+        "eugh_C-34_21_vf_2_0",
+        "eugh_C-768_21_sachverhalt_5",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-65_23_vf_1_2",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_5",
+        "beh_22_23.11.2023-_Rahmenbedingungen_und_Emp_15",
+        "eugh_C-579_21_sachverhalt_1"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.5,
+        "ndcg@3": 0.765,
+        "forbidden_hit@3": false,
+        "hit@5": 0.5,
+        "ndcg@5": 0.592,
+        "forbidden_hit@5": false,
+        "hit@10": 0.5,
+        "ndcg@10": 0.592,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 2.09,
+      "latency": {
+        "total_ms": 1650.1,
+        "reranker_ms": 436.2,
+        "warmup": true
+      }
+    },
+    {
+      "id": "messy_004",
+      "question": "Als Chef einer kleinen Spedition will ich die Personaldaten meiner Fahrer digital verwalten – aber was muss ich in Deutschland *zusätzlich* zu den EU-Datenschutzregeln beachten, wenn’s um Mitarbeiterdaten geht? Gibt’s da Fallstricke, die andere Länder nicht haben?",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1",
+        "dsgvo_art_89",
+        "dsgvo_art_23"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 88 DSGVO",
+        "Art. 6 DSGVO (Teil 1)",
+        "Art. 6 DSGVO (Teil 2)",
+        "dd8676b5fa6eb84d",
+        "8c5a57d49b9a3646",
+        "eugh_T-553_23_header_40",
+        "eugh_T-553_23_header_49",
+        "eugh_T-553_23_header_48",
+        "eugh_C-34_21_rechtsrahmen_6",
+        "beh_11.05.2023-_Notwendigkeit_spezifischer_R_4"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_88",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dd8676b5fa6eb84d",
+        "8c5a57d49b9a3646",
+        "eugh_T-553_23_header_40",
+        "eugh_T-553_23_header_49",
+        "eugh_T-553_23_header_48",
+        "eugh_C-34_21_rechtsrahmen_6",
+        "beh_11.05.2023-_Notwendigkeit_spezifischer_R_4"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.25,
+        "ndcg@3": 0.469,
+        "forbidden_hit@3": false,
+        "hit@5": 0.25,
+        "ndcg@5": 0.363,
+        "forbidden_hit@5": false,
+        "hit@10": 0.25,
+        "ndcg@10": 0.363,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 2.3,
+      "latency": {
+        "total_ms": 1597.7,
+        "reranker_ms": 701.4,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_005",
+      "question": "Ein kleiner Online-Shop für Fahrradzubehör will jetzt endlich diese nervige Cookie-Abfrage einbauen – aber was muss da eigentlich rein, wenn man nicht gleich abgemahnt werden will, und reicht es nicht einfach, das in die Datenschutzerklärung zu schreiben?",
+      "category": "cookies_tracking",
+      "gold_ids": [
+        "dsgvo_art_95",
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "gran_TDDDG_§_25",
+        "gran_TDDDG_§_29",
+        "Art. 13 DSGVO",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-604_22_vf_2_3",
+        "eugh_C-21_23_vf_2_0",
+        "eugh_C-102_20_vorlagefragen_0",
+        "beh_November_2024-_Orientierungshilfe_der_Au_60",
+        "beh_01.09.2023–_Stellungnahme_der_DSK_zum_30",
+        "beh_November_2024-_Orientierungshilfe_der_Au_27"
+      ],
+      "retrieved_raw_ids_top10": [
+        "gran_TDDDG_§_25",
+        "gran_TDDDG_§_29",
+        "dsgvo_art_13",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-604_22_vf_2_3",
+        "eugh_C-21_23_vf_2_0",
+        "eugh_C-102_20_vorlagefragen_0",
+        "beh_November_2024-_Orientierungshilfe_der_Au_60",
+        "beh_01.09.2023–_Stellungnahme_der_DSK_zum_30",
+        "beh_November_2024-_Orientierungshilfe_der_Au_27"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.25,
+        "ndcg@3": 0.469,
+        "forbidden_hit@3": false,
+        "hit@5": 0.25,
+        "ndcg@5": 0.363,
+        "forbidden_hit@5": false,
+        "hit@10": 0.25,
+        "ndcg@10": 0.363,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 2.52,
+      "latency": {
+        "total_ms": 1958.2,
+        "reranker_ms": 563.1,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_006",
+      "question": "Als Steuerberatung wollen wir für Mandanten Sozialhilfeanträge vorbereiten und dabei deren Steuerunterlagen mit den Ämtern teilen – was müssen wir beachten, damit wir da nicht in die Bredouille kommen, wenn es um den Umgang mit diesen sensiblen Daten geht?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_85"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-667_21_rechtsrahmen_2",
+        "eugh_C-590_22_sachverhalt_0",
+        "eugh_C-590_22_header",
+        "eugh_C-634_21_rechtsrahmen_1",
+        "eugh_C-511_18_vf_1_13",
+        "eugh_C-496_17_sachverhalt_5",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_165",
+        "eugh_C-757_22_sachverhalt_6",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_217",
+        "beh_10.08.2023–_Stellungnahme_der_unabhän_7"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-667_21_rechtsrahmen_2",
+        "eugh_C-590_22_sachverhalt_0",
+        "eugh_C-590_22_header",
+        "eugh_C-634_21_rechtsrahmen_1",
+        "eugh_C-511_18_vf_1_13",
+        "eugh_C-496_17_sachverhalt_5",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_165",
+        "eugh_C-757_22_sachverhalt_6",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_217",
+        "beh_10.08.2023–_Stellungnahme_der_unabhän_7"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.12,
+      "latency": {
+        "total_ms": 1782.2,
+        "reranker_ms": 334.9,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_007",
+      "question": "Als Inhaber einer kleinen Online-Apotheke will ich wissen: Wenn ich Kunden-Daten verarbeite, was wiegt mehr – deutsche Gesetze, EU-Vorgaben oder die Tipps von dieser europäischen Datenschutz-Behörde, die immer wieder neue Empfehlungen rausgibt? Und kann ich mich einfach an die halten, ohne Ärger zu kriegen?",
+      "category": "allgemein",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_C-21_23_vf_2_0",
+        "eugh_C-492_23_vorlagefragen_11",
+        "eugh_C-21_23_vf_1_1",
+        "eugh_C-21_23_vf_2_3",
+        "eugh_C-655_23_vorlagefragen_3",
+        "eugh_C-492_23_rechtsrahmen_4",
+        "beh_12.12.2025-_DSGVO-Reform_IT-Hersteller_4",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_24",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_86",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_3"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-21_23_vf_2_0",
+        "eugh_C-492_23_vorlagefragen_11",
+        "eugh_C-21_23_vf_1_1",
+        "eugh_C-21_23_vf_2_3",
+        "eugh_C-655_23_vorlagefragen_3",
+        "eugh_C-492_23_rechtsrahmen_4",
+        "beh_12.12.2025-_DSGVO-Reform_IT-Hersteller_4",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_24",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_86",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_3"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.27,
+      "latency": {
+        "total_ms": 1819.0,
+        "reranker_ms": 452.2,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_008",
+      "question": "In unserer kleinen Physiotherapie-Praxis streiten sich die Kollegen, ob wir für die Online-Terminbuchung wirklich diese komplizierte Einwilligungserklärung brauchen – manche sagen ja, andere nein, und keiner weiß, was am Ende wirklich gilt. Wie entscheiden wir das jetzt, ohne uns Ärger einzuhandeln?",
+      "category": "allgemein",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "Art. 7 DSGVO",
+        "Art. 70 DSGVO (Teil 1)",
+        "gran_TDDDG_§_25",
+        "gran_TDDDG_§_29",
+        "eugh_C-667_21_sachverhalt_2",
+        "eugh_C-655_23_sachverhalt_3",
+        "eugh_C-21_23_vf_2_0",
+        "eugh_C-21_23_vf_2_3",
+        "eugh_C-453_21_vf_1_3",
+        "eugh_C-26_22_vf_1_11"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_7",
+        "dsgvo_art_70_part0",
+        "gran_TDDDG_§_25",
+        "gran_TDDDG_§_29",
+        "eugh_C-667_21_sachverhalt_2",
+        "eugh_C-655_23_sachverhalt_3",
+        "eugh_C-21_23_vf_2_0",
+        "eugh_C-21_23_vf_2_3",
+        "eugh_C-453_21_vf_1_3",
+        "eugh_C-26_22_vf_1_11"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.75,
+      "latency": {
+        "total_ms": 2129.0,
+        "reranker_ms": 624.9,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_009",
+      "question": "Ein deutscher Online-Shop will seine Datenschutzerklärung anpassen, findet aber in der englischen DSGVO-Fassung eine andere Formulierung als im deutschen Text – auf welche Version soll er sich jetzt verlassen, und wer entscheidet das am Ende?",
+      "category": "methodenwissen",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "Art. 13 DSGVO",
+        "Art. 14 DSGVO (Teil 1)",
+        "Art. 14 DSGVO (Teil 2)",
+        "eugh_C-247_23_vf_1_0",
+        "eugh_C-667_21_vf_5_0",
+        "eugh_C-683_21_sachverhalt_2",
+        "eugh_C-34_21_vf_1_0",
+        "eugh_C-46_23_vf_1_1",
+        "beh_November_2024-_Orientierungshilfe_der_DS_28",
+        "beh_Dezember_2025-_Orientierungshilfe_zu_aus_8"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_13",
+        "dsgvo_art_14_part0",
+        "dsgvo_art_14_part1",
+        "eugh_C-247_23_vf_1_0",
+        "eugh_C-667_21_vf_5_0",
+        "eugh_C-683_21_sachverhalt_2",
+        "eugh_C-34_21_vf_1_0",
+        "eugh_C-46_23_vf_1_1",
+        "beh_November_2024-_Orientierungshilfe_der_DS_28",
+        "beh_Dezember_2025-_Orientierungshilfe_zu_aus_8"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.98,
+      "latency": {
+        "total_ms": 1467.3,
+        "reranker_ms": 512.1,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_010",
+      "question": "Ein Fitnessstudio will ohne explizite Zustimmung der Mitglieder deren Trainingsdaten nutzen, um personalisierte Werbung für Proteinpulver zu schalten – ist das überhaupt erlaubt, wenn man sich anschaut, *warum* die DSGVO solche Regeln überhaupt gemacht hat?",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "retrieved_ids_top10": [
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_5",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_27",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_8",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_10",
+        "eugh_C-252_21_vf_3_4",
+        "eugh_C-252_21_vf_1_7_8",
+        "eugh_C-252_21_vf_6_5",
+        "eugh_C-34_21_vf_1_3",
+        "eugh_C-33_22_vf_2_2",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_13"
+      ],
+      "retrieved_raw_ids_top10": [
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_5",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_27",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_8",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_10",
+        "eugh_C-252_21_vf_3_4",
+        "eugh_C-252_21_vf_1_7_8",
+        "eugh_C-252_21_vf_6_5",
+        "eugh_C-34_21_vf_1_3",
+        "eugh_C-33_22_vf_2_2",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_13"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.97,
+      "latency": {
+        "total_ms": 1635.2,
+        "reranker_ms": 339.2,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_011",
+      "question": "Ein kleiner Online-Shop für Handmade-Schmuck will Kundendaten aus Deutschland und Frankreich in einer Cloud speichern – aber wie kriegt man das hin, ohne dass entweder die Bestellungen nicht mehr flutschen oder die Kunden Angst um ihre Daten haben?",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "dsgvo_art_1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "eugh_C-807_21_rechtsrahmen_1",
+        "eugh_C-21_23_rechtsrahmen_1",
+        "eugh_C-200_23_vf_4_7",
+        "eugh_C-492_23_vorlagefragen_11",
+        "eugh_C-136_17_header"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_44",
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_46",
+        "seg_eugh_C-311_18_tenor",
+        "eugh_C-807_21_rechtsrahmen_1",
+        "eugh_C-21_23_rechtsrahmen_1",
+        "eugh_C-200_23_vf_4_7",
+        "eugh_C-492_23_vorlagefragen_11",
+        "eugh_C-136_17_header"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.11,
+      "latency": {
+        "total_ms": 1607.0,
+        "reranker_ms": 501.9,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_012",
+      "question": "Ein kleiner Online-Shop für Handmade-Schmuck will seine Kundendatenbank aufräumen – aber was zählt eigentlich genau als *personenbezogene Daten*? Die alten EU-Regeln von vor 2018 waren da noch viel strenger, oder? Darf man sich da einfach an den alten Richtlinien orientieren, wenn es noch kein aktuelles Urteil dazu gibt?",
+      "category": "methodenwissen",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_c_582_14_tenor",
+        "eugh_C-487_21_wuerdigung_1",
+        "eugh_C-21_23_vf_2_0",
+        "eugh_C-21_23_rechtsrahmen_1",
+        "eugh_C-604_22_vf_1_2",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-252_21_vf_1_7_3",
+        "eugh_C-61_22_wuerdigung_22",
+        "eugh_C-807_21_rechtsrahmen_1",
+        "eugh_C-817_19_wuerdigung_47"
+      ],
+      "retrieved_raw_ids_top10": [
+        "seg_eugh_c_582_14_tenor",
+        "eugh_C-487_21_wuerdigung_1",
+        "eugh_C-21_23_vf_2_0",
+        "eugh_C-21_23_rechtsrahmen_1",
+        "eugh_C-604_22_vf_1_2",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-252_21_vf_1_7_3",
+        "eugh_C-61_22_wuerdigung_22",
+        "eugh_C-807_21_rechtsrahmen_1",
+        "eugh_C-817_19_wuerdigung_47"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.26,
+      "latency": {
+        "total_ms": 1975.4,
+        "reranker_ms": 279.7,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_013",
+      "question": "Stell dir vor, du betreibst einen kleinen Online-Shop und ein Kunde aus Frankreich beschwert sich, dass du seine Bestelldaten nicht richtig löschst – obwohl du dich an deutsche Regeln hältst. Wie entscheidet eigentlich das EU-Gericht in so nem Fall, wenn die Gesetze in jedem Land anders ausgelegt werden? Fällt die Entscheidung dann eher streng oder pragmatisch aus?",
+      "category": "methodenwissen",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_C-383_23_wuerdigung_2",
+        "eugh_C-683_21_vf_6_1",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_c_118_22_sachverhalt_4",
+        "eugh_C-252_21_vf_1_7_3",
+        "eugh_C-604_22_sachverhalt_3",
+        "eugh_C-807_21_vf_1_3",
+        "eugh_C-623_17_vf_2_4",
+        "eugh_C-817_19_wuerdigung_38",
+        "eugh_C-311_18_vf_8_9"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-383_23_wuerdigung_2",
+        "eugh_C-683_21_vf_6_1",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_c_118_22_sachverhalt_4",
+        "eugh_C-252_21_vf_1_7_3",
+        "eugh_C-604_22_sachverhalt_3",
+        "eugh_C-807_21_vf_1_3",
+        "eugh_C-623_17_vf_2_4",
+        "eugh_C-817_19_wuerdigung_38",
+        "eugh_C-311_18_vf_8_9"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.06,
+      "latency": {
+        "total_ms": 1747.3,
+        "reranker_ms": 311.7,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_014",
+      "question": "Ein Physiotherapie-Studio will die Krankengeschichten von Patienten digital speichern – inklusive Diagnosen und Therapieverläufe. Wann darf man so sensible Daten überhaupt in der Cloud ablegen, ohne Ärger mit dem Gesetz zu kriegen?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "eugh_C-667_21_vf_1_0",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-667_21_vf_1_3",
+        "beh_27.03.2023–_Stellungnahme_zum_Europäi_20",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_71"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_44",
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_46",
+        "seg_eugh_C-311_18_tenor",
+        "eugh_C-667_21_vf_1_0",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-667_21_vf_1_3",
+        "beh_27.03.2023–_Stellungnahme_zum_Europäi_20",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_71"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.28,
+      "latency": {
+        "total_ms": 1903.8,
+        "reranker_ms": 374.5,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_015",
+      "question": "Ein kleiner Online-Shop für Handmade-Schmuck will jetzt Kundendaten für personalisierte Werbung nutzen – aber ein paar Kunden beschweren sich, dass das zu privat ist. Gibt’s da nicht irgendwelche alten Grundsatz-Entscheidungen von ganz oben, die sagen, wie weit man mit Kundendaten gehen darf, ohne dass die Leute sich kontrolliert fühlen?",
+      "category": "allgemein",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_C-252_21_vf_1_7_8",
+        "eugh_C-252_21_vf_6_5",
+        "eugh_C-21_23_vf_2_0",
+        "eugh_C-492_23_vorlagefragen_10",
+        "eugh_C-21_23_rechtsrahmen_1",
+        "eugh_C-645_19_rechtsrahmen_0",
+        "eugh_C-817_19_wuerdigung_41",
+        "eugh_C-311_18_rechtsrahmen_16",
+        "eugh_C-136_17_header",
+        "eugh_C-394_23_vf_1_0"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-252_21_vf_1_7_8",
+        "eugh_C-252_21_vf_6_5",
+        "eugh_C-21_23_vf_2_0",
+        "eugh_C-492_23_vorlagefragen_10",
+        "eugh_C-21_23_rechtsrahmen_1",
+        "eugh_C-645_19_rechtsrahmen_0",
+        "eugh_C-817_19_wuerdigung_41",
+        "eugh_C-311_18_rechtsrahmen_16",
+        "eugh_C-136_17_header",
+        "eugh_C-394_23_vf_1_0"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.95,
+      "latency": {
+        "total_ms": 1649.6,
+        "reranker_ms": 299.8,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_016",
+      "question": "Ein kleiner Online-Shop für selbstgemachte Kerzen sammelt bei Bestellungen Name, Adresse und E-Mail – aber die Kunden wissen oft gar nicht, was damit passiert. Was muss man denen genau sagen, damit es keine Ärger mit dem Datenschutz gibt, und was passiert, wenn man’s einfach lässt?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-654_23_rechtsrahmen_2",
+        "eugh_C-21_23_vf_2_3",
+        "eugh_C-492_23_vorlagefragen_11",
+        "eugh_C-492_23_rechtsrahmen_4",
+        "eugh_C-21_23_vf_2_0",
+        "eugh_C-492_23_vorlagefragen_12",
+        "eugh_C-655_23_vf_4_0",
+        "eugh_C-300_21_sachverhalt_0",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_94",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_137"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-654_23_rechtsrahmen_2",
+        "eugh_C-21_23_vf_2_3",
+        "eugh_C-492_23_vorlagefragen_11",
+        "eugh_C-492_23_rechtsrahmen_4",
+        "eugh_C-21_23_vf_2_0",
+        "eugh_C-492_23_vorlagefragen_12",
+        "eugh_C-655_23_vf_4_0",
+        "eugh_C-300_21_sachverhalt_0",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_94",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_137"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.12,
+      "latency": {
+        "total_ms": 1665.3,
+        "reranker_ms": 451.0,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_017",
+      "question": "Ein Fitnessstudio will die Kundendaten, die eigentlich nur für die Mitgliedschaft gebraucht wurden, plötzlich für personalisierte Werbe-E-Mails nutzen – geht das einfach so oder braucht man da noch was von den Leuten?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-102_20_vorlagefragen_3",
+        "eugh_C-77_21_sachverhalt_0",
+        "eugh_C-102_20_vorlagefragen_5",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_20",
+        "beh_12.04.2024–_Stellungnahme_der_DSK_zum_145",
+        "eugh_C-394_23_vf_1_1",
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_15",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_148",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_152"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-102_20_vorlagefragen_3",
+        "eugh_C-77_21_sachverhalt_0",
+        "eugh_C-102_20_vorlagefragen_5",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_20",
+        "beh_12.04.2024–_Stellungnahme_der_DSK_zum_145",
+        "eugh_C-394_23_vf_1_1",
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_15",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_148",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_152"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.88,
+      "latency": {
+        "total_ms": 1590.9,
+        "reranker_ms": 288.1,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_018",
+      "question": "Als kleine Online-Boutique für nachhaltige Mode wollen wir Kund:innen gezielt mit Rabattcodes ansprechen – aber nur mit den Daten, die wirklich nötig sind. Wie viel dürfen wir überhaupt speichern, und wie bauen wir das technisch so ein, dass nichts Unnötiges hängen bleibt?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_25"
+      ],
+      "retrieved_ids_top10": [
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_252",
+        "beh_November_2024-_Orientierungshilfe_der_Au_46",
+        "eugh_c_582_14_rechtsrahmen_2",
+        "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_51",
+        "beh_Leitlinien_3_2020_für_die_Verarbeitung_v_24",
+        "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_91",
+        "beh_Leitlinien_2_2020_zu_Artikel_46_Absatz_2_20",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_85",
+        "beh_Leitlinien_03_2022_zu_55",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_172"
+      ],
+      "retrieved_raw_ids_top10": [
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_252",
+        "beh_November_2024-_Orientierungshilfe_der_Au_46",
+        "eugh_c_582_14_rechtsrahmen_2",
+        "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_51",
+        "beh_Leitlinien_3_2020_für_die_Verarbeitung_v_24",
+        "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_91",
+        "beh_Leitlinien_2_2020_zu_Artikel_46_Absatz_2_20",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_85",
+        "beh_Leitlinien_03_2022_zu_55",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_172"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.07,
+      "latency": {
+        "total_ms": 1650.3,
+        "reranker_ms": 415.2,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_019",
+      "question": "Als Physiotherapie-Praxis haben wir in unseren Patientenakten manchmal veraltete Diagnosen oder falsche Adressen stehen – wie kriegen wir das sauber aktualisiert, ohne dass uns später jemand vorwirft, wir hätten schlampig mit den Daten umgegangen?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_16",
+        "dsgvo_art_17"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 9 DSGVO (Teil 1)",
+        "Art. 9 DSGVO (Teil 2)",
+        "eugh_c_339_20_wuerdigung_3",
+        "eugh_c_339_20_rechtsrahmen_6",
+        "beh_15.05.2024-_Besserer_Schutz_von_Patiente_14",
+        "beh_15.05.2024-_Besserer_Schutz_von_Patiente_8",
+        "beh_15.05.2024-_Besserer_Schutz_von_Patiente_5",
+        "eugh_C-479_22_wuerdigung_11",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_67",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_101"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "eugh_c_339_20_wuerdigung_3",
+        "eugh_c_339_20_rechtsrahmen_6",
+        "beh_15.05.2024-_Besserer_Schutz_von_Patiente_14",
+        "beh_15.05.2024-_Besserer_Schutz_von_Patiente_8",
+        "beh_15.05.2024-_Besserer_Schutz_von_Patiente_5",
+        "eugh_C-479_22_wuerdigung_11",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_67",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_101"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.34,
+      "latency": {
+        "total_ms": 1798.5,
+        "reranker_ms": 538.0,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_020",
+      "question": "Ein kleiner Online-Shop für Fahrradzubehör macht täglich Backups der Kundendatenbank – einfach zur Sicherheit. Wie lange dürfen die alten Sicherungen eigentlich aufbewahrt werden, ohne dass es Ärger gibt, und wann wäre es okay, die doch länger liegen zu lassen?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_89"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-655_23_vf_4_1",
+        "eugh_C-492_23_vorlagefragen_11",
+        "eugh_c_339_20_rechtsrahmen_10",
+        "eugh_c_140_20_vorlagefragen_8",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_26",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_188",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_252",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_29",
+        "eugh_C-319_22_vf_2_0"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-655_23_vf_4_1",
+        "eugh_C-492_23_vorlagefragen_11",
+        "eugh_c_339_20_rechtsrahmen_10",
+        "eugh_c_140_20_vorlagefragen_8",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_26",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_188",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_252",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_29",
+        "eugh_C-319_22_vf_2_0"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.12,
+      "latency": {
+        "total_ms": 1693.3,
+        "reranker_ms": 425.1,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_021",
+      "question": "Ein kleiner Online-Shop für Handmade-Schmuck hat vor einem Monat die Kundendatenbank auf eine neue Cloud umgestellt – jetzt ist unklar, ob da jemand mitlesen könnte. Was muss ich *sofort* tun, um sicherzugehen, dass keine Adressen oder Bestellhistorien in falsche Hände geraten, und wann muss ich überhaupt jemanden offiziell warnen, falls doch was schiefgeht?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_32",
+        "dsgvo_art_33"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_193",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_46",
+        "beh_November_2024-_Orientierungshilfe_der_Au_38",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_75",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_74"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_44",
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_46",
+        "seg_eugh_C-311_18_tenor",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_193",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_46",
+        "beh_November_2024-_Orientierungshilfe_der_Au_38",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_75",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_74"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.97,
+      "latency": {
+        "total_ms": 2405.0,
+        "reranker_ms": 568.4,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_022",
+      "question": "Stell dir vor, du betreibst ein kleines Fitnessstudio und sammelt Kundendaten für Mitgliedschaften und Trainingspläne. Wie kannst du im Zweifel beweisen, dass du mit den Daten auch wirklich alles richtig machst – ohne dass du jetzt extra teure Anwälte oder komplizierte Systeme brauchst?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_30",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-768_21_sachverhalt_5",
+        "eugh_C-340_21_vf_2_2",
+        "eugh_C-180_21_vf_1_2",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_21",
+        "beh_BayLDA_Checkliste_Datenschutzkonforme_Kü_17",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_34",
+        "beh_Oktober_2025-_Datenschutzrechtliche_Beso_3",
+        "eugh_C-755_21_sachverhalt_23",
+        "eugh_C-413_23_wuerdigung_8",
+        "beh_Januar_2026-_Orientierungshilfe_zur_Einh_41"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-768_21_sachverhalt_5",
+        "eugh_C-340_21_vf_2_2",
+        "eugh_C-180_21_vf_1_2",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_21",
+        "beh_BayLDA_Checkliste_Datenschutzkonforme_Kü_17",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_34",
+        "beh_Oktober_2025-_Datenschutzrechtliche_Beso_3",
+        "eugh_C-755_21_sachverhalt_23",
+        "eugh_C-413_23_wuerdigung_8",
+        "beh_Januar_2026-_Orientierungshilfe_zur_Einh_41"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.3,
+      "latency": {
+        "total_ms": 1931.6,
+        "reranker_ms": 368.3,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_023",
+      "question": "Ein kleiner Online-Shop für handgemachte Keramik will Kundendaten nutzen, um personalisierte Rabattcodes per Mail zu verschicken – aber ohne dass die Leute vorher explizit zugestimmt haben. Wie findet man raus, ob das überhaupt erlaubt ist und worauf muss man dabei achten?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-252_21_vf_1_7_6",
+        "eugh_C-61_19_wuerdigung_1",
+        "eugh_C-102_20_vorlagefragen_3",
+        "beh_November_2024-_Orientierungshilfe_der_Au_48",
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_47",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_32",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_26",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_37",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_167",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_85"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-252_21_vf_1_7_6",
+        "eugh_C-61_19_wuerdigung_1",
+        "eugh_C-102_20_vorlagefragen_3",
+        "beh_November_2024-_Orientierungshilfe_der_Au_48",
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_47",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_32",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_26",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_37",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_167",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_85"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.09,
+      "latency": {
+        "total_ms": 1654.1,
+        "reranker_ms": 430.9,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_024",
+      "question": "Ein Fitnessstudio will die E-Mail-Adressen von Mitgliedern nutzen, um ihnen Rabattaktionen für Proteinpulver zu schicken – die Leute haben zwar beim Anmeldeformular ein Kästchen angekreuzt, aber niemand hat genau erklärt, wofür die Adressen später wirklich benutzt werden. Reicht das aus, oder kann es Ärger geben?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_7",
+        "dsgvo_art_8"
+      ],
+      "retrieved_ids_top10": [
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_8",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_10",
+        "eugh_C-590_22_sachverhalt_2",
+        "eugh_C-655_23_vf_4_0",
+        "eugh_C-300_21_sachverhalt_0",
+        "eugh_C-655_23_vf_4_2",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_23",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_175",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_204",
+        "beh_Leitlinien_03_2022_zu_197"
+      ],
+      "retrieved_raw_ids_top10": [
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_8",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_10",
+        "eugh_C-590_22_sachverhalt_2",
+        "eugh_C-655_23_vf_4_0",
+        "eugh_C-300_21_sachverhalt_0",
+        "eugh_C-655_23_vf_4_2",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_23",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_175",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_204",
+        "beh_Leitlinien_03_2022_zu_197"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.61,
+      "latency": {
+        "total_ms": 2004.7,
+        "reranker_ms": 608.7,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_025",
+      "question": "Ein kleiner Online-Shop für Handmade-Schmuck will Kundendaten nutzen, um denen später passende Rabattcodes per Mail zu schicken – ohne dass die Leute extra zugestimmt haben. Wie entscheidet man eigentlich, ob das okay ist oder ob man sich damit Ärger einhandelt?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-654_23_rechtsrahmen_2",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-200_23_vf_7_1",
+        "eugh_C-655_23_vf_4_0",
+        "eugh_C-655_23_sachverhalt_3",
+        "beh_11.07.2023–_Stellungnahme_zum_Referent_31",
+        "eugh_C-755_21_sachverhalt_23",
+        "beh_16.06.2021-_Maßnahmen_zum_Schutz_person_22",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_106",
+        "beh_Leitlinien_03_2022_zu_105"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-654_23_rechtsrahmen_2",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-200_23_vf_7_1",
+        "eugh_C-655_23_vf_4_0",
+        "eugh_C-655_23_sachverhalt_3",
+        "beh_11.07.2023–_Stellungnahme_zum_Referent_31",
+        "eugh_C-755_21_sachverhalt_23",
+        "beh_16.06.2021-_Maßnahmen_zum_Schutz_person_22",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_106",
+        "beh_Leitlinien_03_2022_zu_105"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.35,
+      "latency": {
+        "total_ms": 1877.2,
+        "reranker_ms": 474.8,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_026",
+      "question": "Ein kleines Startup für KI-gestützte Bewerberauswahl will ab sofort automatisiert Lebensläufe scannen und Bewerber nach „Kulturfit“ bewerten – ohne dass jemand manuell mitguckt. Müssen wir da vorher irgendwas Offizielles prüfen, wie riskant das für die Leute ist, und wenn ja, was genau muss da rein?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_36",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1"
+      ],
+      "retrieved_ids_top10": [
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_30",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_117",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_35",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_52",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_43",
+        "beh_BayLDA_Checkliste_Datenschutzkonforme_Kü_30",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_85",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_4",
+        "beh_11.05.2023-_Stellungnahme_zur_Verbesseru_28",
+        "beh_04.05.2022-_Die_Zeit_für_ein_Beschäfti_9"
+      ],
+      "retrieved_raw_ids_top10": [
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_30",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_117",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_35",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_52",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_43",
+        "beh_BayLDA_Checkliste_Datenschutzkonforme_Kü_30",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_85",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_4",
+        "beh_11.05.2023-_Stellungnahme_zur_Verbesseru_28",
+        "beh_04.05.2022-_Die_Zeit_für_ein_Beschäfti_9"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.24,
+      "latency": {
+        "total_ms": 1767.4,
+        "reranker_ms": 471.0,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_027",
+      "question": "Ein Kunde droht mit einer Klage, weil seine persönlichen Daten bei uns im Fitnessstudio durch einen Hackerangriff geleakt wurden – er fühlt sich bloßgestellt und verlangt jetzt Geld für den seelischen Ärger. Was muss er konkret beweisen, damit das vor Gericht durchgeht?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_82",
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-340_21_sachverhalt_2",
+        "eugh_c_182_22_sachverhalt_0",
+        "eugh_C-741_21_sachverhalt_0",
+        "eugh_C-200_23_vf_7_3",
+        "eugh_C-590_22_vf_1_2_1",
+        "eugh_C-413_23_wuerdigung_8",
+        "eugh_C-757_22_sachverhalt_3",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_13",
+        "eugh_C-319_20_sachverhalt_7",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_169"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-340_21_sachverhalt_2",
+        "eugh_c_182_22_sachverhalt_0",
+        "eugh_C-741_21_sachverhalt_0",
+        "eugh_C-200_23_vf_7_3",
+        "eugh_C-590_22_vf_1_2_1",
+        "eugh_C-413_23_wuerdigung_8",
+        "eugh_C-757_22_sachverhalt_3",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_13",
+        "eugh_C-319_20_sachverhalt_7",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_169"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.94,
+      "latency": {
+        "total_ms": 1560.0,
+        "reranker_ms": 384.2,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_028",
+      "question": "Wenn ein deutsches Unternehmen wegen Datenschutzverstößen in Frankreich und Italien gleichzeitig Ärger kriegt – wie sorgen die Behörden eigentlich dafür, dass alle nach denselben Regeln urteilen und nicht jeder sein eigenes Ding durchzieht?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_56",
+        "dsgvo_art_65"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-655_23_tenor",
+        "eugh_C-252_21_vf_1_7_3",
+        "eugh_C-252_21_vf_1_7_1",
+        "eugh_C-46_23_vf_1_1",
+        "eugh_C-470_21_header_2",
+        "eugh_C-645_19_wuerdigung_4",
+        "eugh_C-311_18_vf_8_1",
+        "eugh_C-507_17_rechtsrahmen_8",
+        "eugh_c_210_16_vf_5_6_1",
+        "eugh_C-507_17_rechtsrahmen_12"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-655_23_tenor",
+        "eugh_C-252_21_vf_1_7_3",
+        "eugh_C-252_21_vf_1_7_1",
+        "eugh_C-46_23_vf_1_1",
+        "eugh_C-470_21_header_2",
+        "eugh_C-645_19_wuerdigung_4",
+        "eugh_C-311_18_vf_8_1",
+        "eugh_C-507_17_rechtsrahmen_8",
+        "eugh_c_210_16_vf_5_6_1",
+        "eugh_C-507_17_rechtsrahmen_12"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.8,
+      "latency": {
+        "total_ms": 1501.6,
+        "reranker_ms": 297.2,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_029",
+      "question": "Ein Kunde hat bei uns im Elektronikmarkt persönliche Daten durch einen IT-Fehler verloren und verlangt jetzt Geld als Entschädigung – worauf kommt’s da eigentlich an, damit wir wissen, wie viel wir zahlen müssen oder ob das überhaupt gerechtfertigt ist?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_c_182_22_sachverhalt_1",
+        "eugh_C-590_22_vf_1_2_1",
+        "eugh_c_182_22_vf_1b_1",
+        "eugh_c_507_23_wuerdigung_2",
+        "eugh_C-741_21_vf_1_1",
+        "eugh_C-456_22_rechtsrahmen",
+        "eugh_C-590_22_sachverhalt_1",
+        "eugh_C-526_24_vf_8_0",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-65_23_sachverhalt_3"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_c_182_22_sachverhalt_1",
+        "eugh_C-590_22_vf_1_2_1",
+        "eugh_c_182_22_vf_1b_1",
+        "eugh_c_507_23_wuerdigung_2",
+        "eugh_C-741_21_vf_1_1",
+        "eugh_C-456_22_rechtsrahmen",
+        "eugh_C-590_22_sachverhalt_1",
+        "eugh_C-526_24_vf_8_0",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-65_23_sachverhalt_3"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.95,
+      "latency": {
+        "total_ms": 1645.6,
+        "reranker_ms": 305.8,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_030",
+      "question": "Ein Kunde meint, sein Fitnessstudio könnte seine Gesundheitsdaten an Versicherungen verkaufen – ohne Beweis, nur ein komisches Gefühl. Kann er trotzdem Schadensersatz verlangen, nur weil er sich jetzt ständig Sorgen macht?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 82 DSGVO",
+        "Art. 9 DSGVO (Teil 1)",
+        "Art. 9 DSGVO (Teil 2)",
+        "eugh_C-200_23_vf_8_1",
+        "eugh_C-526_24_vf_8_0",
+        "eugh_C-667_21_sachverhalt_2",
+        "eugh_C-741_21_vf_2_0",
+        "eugh_C-300_21_vf_2_0",
+        "eugh_C-340_21_sachverhalt_2",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_169"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_82",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "eugh_C-200_23_vf_8_1",
+        "eugh_C-526_24_vf_8_0",
+        "eugh_C-667_21_sachverhalt_2",
+        "eugh_C-741_21_vf_2_0",
+        "eugh_C-300_21_vf_2_0",
+        "eugh_C-340_21_sachverhalt_2",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_169"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.76,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.76,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.76,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 2.09,
+      "latency": {
+        "total_ms": 1498.6,
+        "reranker_ms": 586.4,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_031",
+      "question": "Ein Kunde hat bei einer Online-Bank persönliche Daten verloren, und jetzt nutzt jemand seine Identität für Betrug – kann er von der Bank Schadensersatz für den Stress und die Ängste verlangen, auch wenn er kein Geld verloren hat?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 82 DSGVO",
+        "eugh_c_182_22_vf_5b_1",
+        "eugh_C-526_24_vf_8_0",
+        "eugh_C-200_23_vf_7_3",
+        "eugh_c_182_22_sachverhalt_1",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_49",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_103",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_31",
+        "eugh_C-40_17_sachverhalt_3",
+        "beh_Leitlinien_2_2019_für_die_Verarbeitung_p_35"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_82",
+        "eugh_c_182_22_vf_5b_1",
+        "eugh_C-526_24_vf_8_0",
+        "eugh_C-200_23_vf_7_3",
+        "eugh_c_182_22_sachverhalt_1",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_49",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_103",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_31",
+        "eugh_C-40_17_sachverhalt_3",
+        "beh_Leitlinien_2_2019_für_die_Verarbeitung_p_35"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.76,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.76,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.76,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 2.36,
+      "latency": {
+        "total_ms": 1732.3,
+        "reranker_ms": 625.6,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_032",
+      "question": "Ein Kunde hat bei uns im Fitnessstudio seine Mitgliedsdaten preisgegeben, weil wir ihm versichert haben, dass alles sicher ist – jetzt sind die Daten durch einen Hackerangriff im Netz aufgetaucht, aber es gab noch keinen Missbrauch. Kann er trotzdem von uns Schadensersatz verlangen, nur weil er sich jetzt ständig Sorgen macht?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 82 DSGVO",
+        "eugh_C-200_23_vf_7_1",
+        "eugh_C-200_23_vf_7_3",
+        "eugh_C-200_23_vf_8_1",
+        "eugh_C-526_24_vf_8_1",
+        "eugh_C-340_21_sachverhalt_2",
+        "eugh_C-340_21_vf_2_2",
+        "beh_06.09.2023–_Stellungnahme_der_unabhän_14",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_169",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_155"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_82",
+        "eugh_C-200_23_vf_7_1",
+        "eugh_C-200_23_vf_7_3",
+        "eugh_C-200_23_vf_8_1",
+        "eugh_C-526_24_vf_8_1",
+        "eugh_C-340_21_sachverhalt_2",
+        "eugh_C-340_21_vf_2_2",
+        "beh_06.09.2023–_Stellungnahme_der_unabhän_14",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_169",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_155"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.76,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.76,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.76,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 2.79,
+      "latency": {
+        "total_ms": 2021.5,
+        "reranker_ms": 768.8,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_033",
+      "question": "Ein Kunde hat sich bei uns im Fitnessstudio über eine peinliche Mail beschwert, wo sein Name und Trainingsplan versehentlich an alle Mitglieder ging – jetzt will er Schadensersatz für die Blamage. Reicht es, wenn ich mich persönlich bei ihm entschuldige und ihm ein Jahr Mitgliedschaft schenke, oder kann er trotzdem noch auf Geld bestehen?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 82 DSGVO",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_8",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_10",
+        "eugh_C-590_22_sachverhalt_2",
+        "eugh_C-654_23_rechtsrahmen_6",
+        "eugh_c_507_23_wuerdigung_5",
+        "eugh_c_507_23_wuerdigung_4",
+        "eugh_C-687_21_sachverhalt_2",
+        "beh_EDPB_Zusammenfassung_Datenpannen___Leitl_0",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_200"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_82",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_8",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_10",
+        "eugh_C-590_22_sachverhalt_2",
+        "eugh_C-654_23_rechtsrahmen_6",
+        "eugh_c_507_23_wuerdigung_5",
+        "eugh_c_507_23_wuerdigung_4",
+        "eugh_C-687_21_sachverhalt_2",
+        "beh_EDPB_Zusammenfassung_Datenpannen___Leitl_0",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_200"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.76,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.76,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.76,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 2.5,
+      "latency": {
+        "total_ms": 1934.2,
+        "reranker_ms": 566.6,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_034",
+      "question": "Ein Online-Shop für Fahrradzubehör will Kunden, die mal was gekauft haben, per Mail über neue Produkte informieren – ohne dass die explizit zugestimmt haben. Wann ist das eigentlich erlaubt, nur weil’s dem Shop „wirtschaftlich nützt“?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-654_23_wuerdigung_0",
+        "eugh_C-654_23_rechtsrahmen_2",
+        "eugh_C-654_23_wuerdigung_1",
+        "eugh_C-102_20_vorlagefragen_4",
+        "beh_11.07.2023–_Stellungnahme_zum_Referent_31",
+        "beh_November_2024-_Orientierungshilfe_der_Au_58",
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_51",
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_48",
+        "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_34",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_16"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-654_23_wuerdigung_0",
+        "eugh_C-654_23_rechtsrahmen_2",
+        "eugh_C-654_23_wuerdigung_1",
+        "eugh_C-102_20_vorlagefragen_4",
+        "beh_11.07.2023–_Stellungnahme_zum_Referent_31",
+        "beh_November_2024-_Orientierungshilfe_der_Au_58",
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_51",
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_48",
+        "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_34",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_16"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.04,
+      "latency": {
+        "total_ms": 1687.2,
+        "reranker_ms": 352.4,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_035",
+      "question": "Ein Online-Shop für Sportkleidung will Kundendaten aus Newsletter-Anmeldungen, Bestellhistorie und Social-Media-Profilen kombinieren, um maßgeschneiderte Werbung zu schalten – darf man die Infos einfach so zusammenkleben oder gibt’s da jetzt wegen dem aktuellen EU-Urteil zu Facebooks Daten-Sammelwut neue Spielregeln?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_5"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "eugh_C-446_21_sachverhalt_5",
+        "eugh_C-252_21_sachverhalt_5",
+        "eugh_C-252_21_sachverhalt_0",
+        "eugh_C-817_19_wuerdigung_30",
+        "eugh_c_210_16_vf_1_2_2"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_44",
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_46",
+        "seg_eugh_C-311_18_tenor",
+        "eugh_C-446_21_sachverhalt_5",
+        "eugh_C-252_21_sachverhalt_5",
+        "eugh_C-252_21_sachverhalt_0",
+        "eugh_C-817_19_wuerdigung_30",
+        "eugh_c_210_16_vf_1_2_2"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.66,
+      "latency": {
+        "total_ms": 2056.2,
+        "reranker_ms": 606.0,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_036",
+      "question": "Ein Hausverwaltungsbüro hat versehentlich Mieterdaten an falsche Empfänger gemailt – jetzt droht Ärger von der Aufsichtsbehörde. Müssen die damit rechnen, dass es teuer wird, nur weil ein Mitarbeiter im Stress war, oder zählt da, ob sie eigentlich alles richtig machen wollten?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 88 DSGVO",
+        "Art. 6 DSGVO (Teil 1)",
+        "Art. 6 DSGVO (Teil 2)",
+        "dd8676b5fa6eb84d",
+        "8c5a57d49b9a3646",
+        "eugh_C-416_23_vf_3_1",
+        "eugh_C-340_21_rechtsrahmen_1",
+        "eugh_C-416_23_rechtsrahmen_2",
+        "eugh_C-741_21_vf_2_1",
+        "eugh_C-768_21_sachverhalt_6"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_88",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dd8676b5fa6eb84d",
+        "8c5a57d49b9a3646",
+        "eugh_C-416_23_vf_3_1",
+        "eugh_C-340_21_rechtsrahmen_1",
+        "eugh_C-416_23_rechtsrahmen_2",
+        "eugh_C-741_21_vf_2_1",
+        "eugh_C-768_21_sachverhalt_6"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.71,
+      "latency": {
+        "total_ms": 2195.9,
+        "reranker_ms": 514.2,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_037",
+      "question": "Ein mittelständischer Logistikdienstleister mit mehreren Tochterfirmen in Europa hat versehentlich Kundendaten falsch weitergegeben – jetzt droht ein Strafgeld. Wie hoch kann das im schlimmsten Fall ausfallen, wenn die Hauptfirma in Deutschland sitzt, aber die Töchter in Polen und Frankreich mehr Umsatz machen?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 28 DSGVO (Teil 1)",
+        "Art. 28 DSGVO (Teil 2)",
+        "Art. 29 DSGVO",
+        "eugh_C-658_19_tenor",
+        "eugh_c_339_20_header_0",
+        "eugh_C-658_19_rechtsrahmen_12",
+        "eugh_c_210_16_sachverhalt_3",
+        "eugh_c_210_16_rechtsrahmen_2",
+        "beh_01.09.2023–_Stellungnahme_der_DSK_zum_24",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_167"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_29",
+        "eugh_C-658_19_tenor",
+        "eugh_c_339_20_header_0",
+        "eugh_C-658_19_rechtsrahmen_12",
+        "eugh_c_210_16_sachverhalt_3",
+        "eugh_c_210_16_rechtsrahmen_2",
+        "beh_01.09.2023–_Stellungnahme_der_DSK_zum_24",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_167"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.53,
+      "latency": {
+        "total_ms": 1973.7,
+        "reranker_ms": 560.6,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_038",
+      "question": "In unserer kleinen Spedition wollen wir die GPS-Daten unserer LKW-Fahrer auswerten, um Routen zu optimieren – aber jetzt heißt es plötzlich, die alten Regeln dazu wären nicht mehr gültig. Was müssen wir jetzt beachten, damit wir nicht Ärger mit dem Datenschutz kriegen?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_88",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-252_21_vf_1_7_3",
+        "eugh_C-492_23_rechtsrahmen_4",
+        "eugh_C-817_19_wuerdigung_38",
+        "eugh_c_25_17_sachverhalt_0",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_134",
+        "beh_13.03.2025–_Stellungnahme_der_unabhän_6",
+        "beh_01.09.2023–_Stellungnahme_der_DSK_zum_24",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_137",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_164",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_86"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-252_21_vf_1_7_3",
+        "eugh_C-492_23_rechtsrahmen_4",
+        "eugh_C-817_19_wuerdigung_38",
+        "eugh_c_25_17_sachverhalt_0",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_134",
+        "beh_13.03.2025–_Stellungnahme_der_unabhän_6",
+        "beh_01.09.2023–_Stellungnahme_der_DSK_zum_24",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_137",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_164",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_86"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.24,
+      "latency": {
+        "total_ms": 1823.1,
+        "reranker_ms": 412.3,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_039",
+      "question": "In unserer Logistikfirma wollen wir die Arbeitszeiten per App tracken – die Belegschaft soll per Betriebsabsprache zustimmen. Reicht das aus, oder müssen wir da noch was beachten, damit das datenschutzrechtlich wasserdicht ist?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_88"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-590_22_sachverhalt_2",
+        "eugh_C-252_21_vf_1_7_3",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_245",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_4",
+        "eugh_c_342_12_tenor",
+        "eugh_c_342_12_vf_2_3b_4",
+        "eugh_c_342_12_sachverhalt_0",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_106",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_116",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_166"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-590_22_sachverhalt_2",
+        "eugh_C-252_21_vf_1_7_3",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_245",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_4",
+        "eugh_c_342_12_tenor",
+        "eugh_c_342_12_vf_2_3b_4",
+        "eugh_c_342_12_sachverhalt_0",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_106",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_116",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_166"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.76,
+      "latency": {
+        "total_ms": 1474.5,
+        "reranker_ms": 288.6,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_040",
+      "question": "Ein Startup für medizinische Diagnose-KIs will Patientendaten nutzen, um ein System zu trainieren, das seltene Krankheiten erkennt – was müssen die Entwickler beachten, wenn sie sensible Gesundheitsdaten verarbeiten und gleichzeitig die neuen EU-Regeln für KI einhalten?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 9 DSGVO (Teil 1)",
+        "Art. 9 DSGVO (Teil 2)",
+        "eugh_C-623_17_vf_2_4",
+        "eugh_C-511_18_vf_1_13",
+        "beh_12.12.2025-_DSGVO-Reform_Rechtssicherhe_2",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_111",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_2",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_24",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_27",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_13"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "eugh_C-623_17_vf_2_4",
+        "eugh_C-511_18_vf_1_13",
+        "beh_12.12.2025-_DSGVO-Reform_Rechtssicherhe_2",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_111",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_2",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_24",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_27",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_13"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.02,
+      "latency": {
+        "total_ms": 1674.1,
+        "reranker_ms": 346.5,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_041",
+      "question": "Ein Online-Marktplatz für Handwerker will Nutzerdaten nutzen, um gezielt Aufträge vorzuschlagen – aber jetzt gibt’s neue EU-Regeln für Plattformen. Müssen wir da noch was extra beachten, außer der normalen Einwilligung für die Datenverarbeitung?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 7 DSGVO",
+        "Art. 70 DSGVO (Teil 1)",
+        "gran_TDDDG_§_25",
+        "gran_TDDDG_§_29",
+        "eugh_C-252_21_vf_1_7_3",
+        "eugh_C-34_21_vf_1_3",
+        "eugh_C-446_21_vf_2b_5",
+        "eugh_C-252_21_vf_1_7_2",
+        "eugh_C-184_20_rechtsrahmen_11",
+        "eugh_C-136_17_header"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_7",
+        "dsgvo_art_70_part0",
+        "gran_TDDDG_§_25",
+        "gran_TDDDG_§_29",
+        "eugh_C-252_21_vf_1_7_3",
+        "eugh_C-34_21_vf_1_3",
+        "eugh_C-446_21_vf_2b_5",
+        "eugh_C-252_21_vf_1_7_2",
+        "eugh_C-184_20_rechtsrahmen_11",
+        "eugh_C-136_17_header"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.15,
+      "latency": {
+        "total_ms": 1779.2,
+        "reranker_ms": 373.1,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_042",
+      "question": "Ein Autovermieter will Kundendaten an einen Werkstattpartner weitergeben, weil der jetzt per EU-Gesetz Zugriff auf Reparaturhistorie verlangen darf – wer haftet, wenn dabei was schiefgeht?",
+      "category": "allgemein",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "96b58c284f4faf85",
+        "f470cf7e00f5a7a6",
+        "eugh_C-492_23_rechtsrahmen_6",
+        "eugh_c_140_20_vorlagefragen_3",
+        "eugh_C-77_21_sachverhalt_1",
+        "eugh_C-319_22_vf_3_2",
+        "eugh_C-319_22_vf_2_0",
+        "eugh_C-319_22_rechtsrahmen_0",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_177",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_170"
+      ],
+      "retrieved_raw_ids_top10": [
+        "96b58c284f4faf85",
+        "f470cf7e00f5a7a6",
+        "eugh_C-492_23_rechtsrahmen_6",
+        "eugh_c_140_20_vorlagefragen_3",
+        "eugh_C-77_21_sachverhalt_1",
+        "eugh_C-319_22_vf_3_2",
+        "eugh_C-319_22_vf_2_0",
+        "eugh_C-319_22_rechtsrahmen_0",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_177",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_170"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.92,
+      "latency": {
+        "total_ms": 1549.0,
+        "reranker_ms": 374.8,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_043",
+      "question": "Als kleine Physiotherapie-Praxis wollen wir Patientendaten digital in einer Cloud speichern, wo auch KI die Termine optimiert – müssen wir da vorher irgendwas Offizielles prüfen lassen, weil die Daten besonders sensibel sind?",
+      "category": "behoerden",
+      "gold_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "dsgvo_art_10",
+        "dsgvo_art_22"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "eugh_C-667_21_vf_1_0",
+        "eugh_C-492_23_vorlagefragen_11",
+        "eugh_C-21_23_vf_2_0",
+        "eugh_C-61_22_wuerdigung_8",
+        "eugh_C-21_23_rechtsrahmen_1"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_44",
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_46",
+        "seg_eugh_C-311_18_tenor",
+        "eugh_C-667_21_vf_1_0",
+        "eugh_C-492_23_vorlagefragen_11",
+        "eugh_C-21_23_vf_2_0",
+        "eugh_C-61_22_wuerdigung_8",
+        "eugh_C-21_23_rechtsrahmen_1"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.34,
+      "latency": {
+        "total_ms": 1695.6,
+        "reranker_ms": 643.3,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_044",
+      "question": "Als Physiotherapie-Praxis wollen wir eine neue App einführen, die Patientendaten wie Behandlungspläne und Fortschrittsberichte automatisch auswertet – wann müssen wir da eigentlich vorher prüfen lassen, ob das datenschutzrechtlich heikel werden könnte?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_36"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 9 DSGVO (Teil 1)",
+        "Art. 9 DSGVO (Teil 2)",
+        "eugh_C-492_23_vorlagefragen_9",
+        "beh_September_2025-_Anwendungshinweise_zu_de_6",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_35",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_112",
+        "beh_24.11.2022-_Petersberger_Erklärung_zur_37",
+        "beh_24.11.2022-_Petersberger_Erklärung_zur_29",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_93",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_11"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "eugh_C-492_23_vorlagefragen_9",
+        "beh_September_2025-_Anwendungshinweise_zu_de_6",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_35",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_112",
+        "beh_24.11.2022-_Petersberger_Erklärung_zur_37",
+        "beh_24.11.2022-_Petersberger_Erklärung_zur_29",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_93",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_11"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.21,
+      "latency": {
+        "total_ms": 1655.6,
+        "reranker_ms": 558.5,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_045",
+      "question": "Ein Kunde will bei mir im Möbelhaus einen Kredit aufnehmen, aber die Bank lehnt ab – angeblich wegen schlechter Schufa-Bewertung. Muss die Bank mir jetzt erklären, *wie* die Schufa zu dem Ergebnis kommt, oder kann die einfach nur sagen „Computer sagt nein“ und fertig?",
+      "category": "rechtsprechung",
+      "gold_ids": [
+        "dsgvo_art_22",
+        "dsgvo_art_15"
+      ],
+      "retrieved_ids_top10": [
+        "96b58c284f4faf85",
+        "f470cf7e00f5a7a6",
+        "eugh_C-634_21_sachverhalt_0",
+        "eugh_C-634_21_vf_1_1",
+        "eugh_C-252_21_sachverhalt_5",
+        "eugh_c_210_16_sachverhalt_0",
+        "eugh_C-26_22_vf_1_7",
+        "beh_22.06.2022-_FAQ_zu_Facebook-Fanpages_21",
+        "beh_Leitlinien_03_2022_zu_192",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_66"
+      ],
+      "retrieved_raw_ids_top10": [
+        "96b58c284f4faf85",
+        "f470cf7e00f5a7a6",
+        "eugh_C-634_21_sachverhalt_0",
+        "eugh_C-634_21_vf_1_1",
+        "eugh_C-252_21_sachverhalt_5",
+        "eugh_c_210_16_sachverhalt_0",
+        "eugh_C-26_22_vf_1_7",
+        "beh_22.06.2022-_FAQ_zu_Facebook-Fanpages_21",
+        "beh_Leitlinien_03_2022_zu_192",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_66"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.32,
+      "latency": {
+        "total_ms": 1778.0,
+        "reranker_ms": 539.2,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_046",
+      "question": "Ein Kreditauskunftei will mir nicht verraten, *wie* sie meine Bonität berechnet – nur, dass es „automatisch“ passiert. Was müssen die mir *mindestens* erklären, damit ich verstehe, warum ich abgelehnt wurde, ohne dass sie ihr System komplett auseinandernehmen?",
+      "category": "betroffenenrechte",
+      "gold_ids": [
+        "dsgvo_art_15"
+      ],
+      "retrieved_ids_top10": [
+        "96b58c284f4faf85",
+        "f470cf7e00f5a7a6",
+        "eugh_C-203_22_sachverhalt_1",
+        "eugh_C-634_21_sachverhalt_0",
+        "eugh_C-203_22_wuerdigung_4",
+        "eugh_C-634_21_vf_1_1",
+        "eugh_C-203_22_wuerdigung_0",
+        "beh_Januar_2026-_Orientierungshilfe_zur_Einh_46",
+        "eugh_C-26_22_vf_1_7",
+        "beh_24.01.2024-_Orientierungshilfe_der_Aufsi_61"
+      ],
+      "retrieved_raw_ids_top10": [
+        "96b58c284f4faf85",
+        "f470cf7e00f5a7a6",
+        "eugh_C-203_22_sachverhalt_1",
+        "eugh_C-634_21_sachverhalt_0",
+        "eugh_C-203_22_wuerdigung_4",
+        "eugh_C-634_21_vf_1_1",
+        "eugh_C-203_22_wuerdigung_0",
+        "beh_Januar_2026-_Orientierungshilfe_zur_Einh_46",
+        "eugh_C-26_22_vf_1_7",
+        "beh_24.01.2024-_Orientierungshilfe_der_Aufsi_61"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.51,
+      "latency": {
+        "total_ms": 1756.0,
+        "reranker_ms": 752.9,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_047",
+      "question": "Ein Online-Shop in Deutschland kriegt wegen derselben Datenpanne erst eine Strafe vom Landesdatenschutzbeauftragten und dann noch eine vom irischen DPC – obwohl die Kundendaten nur in Deutschland verarbeitet wurden. Kann man sich da irgendwie wehren, weil das doch doppelt bestraft wird?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_83_part0",
+        "dsgvo_art_83_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 37 DSGVO",
+        "Art. 33 DSGVO",
+        "Art. 34 DSGVO",
+        "beh_Anforderungen_an_datenschutzrechtliche_Z_0",
+        "beh_Anforderungen_an_datenschutzrechtliche_Z_398",
+        "eugh_C-252_21_vf_1_7_5",
+        "eugh_C-46_23_vf_1_3",
+        "eugh_C-46_23_vf_1_1",
+        "eugh_C-683_21_vf_6_1",
+        "eugh_C-683_21_vf_6_3"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_37",
+        "dsgvo_art_33",
+        "dsgvo_art_34",
+        "beh_Anforderungen_an_datenschutzrechtliche_Z_0",
+        "beh_Anforderungen_an_datenschutzrechtliche_Z_398",
+        "eugh_C-252_21_vf_1_7_5",
+        "eugh_C-46_23_vf_1_3",
+        "eugh_C-46_23_vf_1_1",
+        "eugh_C-683_21_vf_6_1",
+        "eugh_C-683_21_vf_6_3"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.72,
+      "latency": {
+        "total_ms": 2038.7,
+        "reranker_ms": 676.6,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_048",
+      "question": "Ein kleiner Online-Shop für Handmade-Schmuck will jetzt bei jedem Kauf die Handynummer der Kundin abfragen – angeblich für Lieferupdates. Aber die meisten Bestellungen gehen eh per DHL-Paketstation raus, wo man gar keine Nummer braucht. Wann ist so eine Abfrage eigentlich zu viel des Guten und wann darf man die Daten einfach so sammeln?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_c_210_16_vf_1_2_3",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_23",
+        "eugh_c_203_15_rechtsrahmen_11",
+        "beh_29.04.2021–_Stellungnahme_der_DSK_zu_T_3",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_16",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_44",
+        "beh_Leitlinien_03_2022_zu_47",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_310",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_41",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_56"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_c_210_16_vf_1_2_3",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_23",
+        "eugh_c_203_15_rechtsrahmen_11",
+        "beh_29.04.2021–_Stellungnahme_der_DSK_zu_T_3",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_16",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_44",
+        "beh_Leitlinien_03_2022_zu_47",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_310",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_41",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_56"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.78,
+      "latency": {
+        "total_ms": 2054.7,
+        "reranker_ms": 724.7,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_049",
+      "question": "Ein kleiner Online-Shop für Fahrradzubehör möchte seinen Stammkunden gelegentlich Rabattaktionen per Mail schicken – aber die meisten haben nie ein Häkchen bei „Newsletter“ gesetzt. Darf man die trotzdem einfach anschreiben, nur weil sie mal was gekauft haben?",
+      "category": "cookies_tracking",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_21"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 7 DSGVO",
+        "Art. 70 DSGVO (Teil 1)",
+        "gran_TDDDG_§_25",
+        "gran_TDDDG_§_29",
+        "eugh_C-654_23_wuerdigung_0",
+        "eugh_C-654_23_sachverhalt_3",
+        "eugh_C-654_23_rechtsrahmen_0",
+        "eugh_C-102_20_vorlagefragen_0",
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_50",
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_47"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_7",
+        "dsgvo_art_70_part0",
+        "gran_TDDDG_§_25",
+        "gran_TDDDG_§_29",
+        "eugh_C-654_23_wuerdigung_0",
+        "eugh_C-654_23_sachverhalt_3",
+        "eugh_C-654_23_rechtsrahmen_0",
+        "eugh_C-102_20_vorlagefragen_0",
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_50",
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_47"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.52,
+      "latency": {
+        "total_ms": 1883.6,
+        "reranker_ms": 637.7,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_050",
+      "question": "Als Onlinehändler für handgefertigte Möbel aus Deutschland will ich Kundendaten für Bestellungen und Newsletter an unsere Tochterfirma in den USA schicken – geht das einfach so, oder muss ich da noch extra was beachten, weil die EU da streng ist?",
+      "category": "drittlandtransfer",
+      "gold_ids": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_5",
+        "dsgvo_art_46"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "eugh_C-654_23_wuerdigung_5",
+        "eugh_C-654_23_wuerdigung_6",
+        "eugh_C-654_23_wuerdigung_7",
+        "eugh_C-526_24_vorlagefragen_4",
+        "eugh_C-311_18_rechtsrahmen_22"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_44",
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_46",
+        "seg_eugh_C-311_18_tenor",
+        "eugh_C-654_23_wuerdigung_5",
+        "eugh_C-654_23_wuerdigung_6",
+        "eugh_C-654_23_wuerdigung_7",
+        "eugh_C-526_24_vorlagefragen_4",
+        "eugh_C-311_18_rechtsrahmen_22"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.5,
+        "ndcg@3": 0.531,
+        "forbidden_hit@3": false,
+        "hit@5": 0.75,
+        "ndcg@5": 0.567,
+        "forbidden_hit@5": false,
+        "hit@10": 0.75,
+        "ndcg@10": 0.567,
+        "forbidden_hit@10": false,
+        "mrr": 0.5
+      },
+      "duration_s": 2.39,
+      "latency": {
+        "total_ms": 2006.5,
+        "reranker_ms": 383.7,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_051",
+      "question": "Ein kleiner Online-Shop für nachhaltige Kinderkleidung möchte monatlich Infos zu neuen Kollektionen und Rabattaktionen per E-Mail verschicken – aber wie genau müssen die Kunden da eigentlich ihr Okay geben, und was ist mit diesen unsichtbaren Zählpixeln, die nachverfolgen, wer die Mails wirklich öffnet?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-654_23_wuerdigung_0",
+        "eugh_C-654_23_rechtsrahmen_2",
+        "eugh_C-102_20_vorlagefragen_4",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_23",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_56",
+        "beh_Leitlinien_8_2020_über_die_gezielte_Ansp_45",
+        "beh_Leitlinien_8_2020_über_die_gezielte_Ansp_46",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_55",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_54",
+        "beh_16.06.2021-_Maßnahmen_zum_Schutz_person_48"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-654_23_wuerdigung_0",
+        "eugh_C-654_23_rechtsrahmen_2",
+        "eugh_C-102_20_vorlagefragen_4",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_23",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_56",
+        "beh_Leitlinien_8_2020_über_die_gezielte_Ansp_45",
+        "beh_Leitlinien_8_2020_über_die_gezielte_Ansp_46",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_55",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_54",
+        "beh_16.06.2021-_Maßnahmen_zum_Schutz_person_48"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.79,
+      "latency": {
+        "total_ms": 1443.2,
+        "reranker_ms": 350.3,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_052",
+      "question": "In nem kleinen Logistikbetrieb checken die Chefs manchmal die Mails der Lagerarbeiter, weil die eigentlich nur für die Arbeit da sein sollen – aber keiner hat denen je gesagt, *wie* genau die das machen dürfen oder was zu weit geht. Was ist da eigentlich erlaubt und was nicht?",
+      "category": "beschaeftigtendatenschutz",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-817_19_wuerdigung_15",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_40",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_38",
+        "beh_16.06.2021-_Maßnahmen_zum_Schutz_person_48",
+        "beh_29.04.2021–_Stellungnahme_der_DSK_zu_T_3",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_96",
+        "beh_04.05.2022-_Die_Zeit_für_ein_Beschäfti_4",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_137",
+        "beh_14.11.2018-_Orientierungshilfe_der_Daten_25",
+        "beh_07.11.2019-_Whitepaper_zu_technischen_Da_13"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-817_19_wuerdigung_15",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_40",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_38",
+        "beh_16.06.2021-_Maßnahmen_zum_Schutz_person_48",
+        "beh_29.04.2021–_Stellungnahme_der_DSK_zu_T_3",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_96",
+        "beh_04.05.2022-_Die_Zeit_für_ein_Beschäfti_4",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_137",
+        "beh_14.11.2018-_Orientierungshilfe_der_Daten_25",
+        "beh_07.11.2019-_Whitepaper_zu_technischen_Da_13"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.8,
+      "latency": {
+        "total_ms": 1491.0,
+        "reranker_ms": 312.0,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_053",
+      "question": "Ein Kunde füllt bei mir im Fitnessstudio das Anmeldeformular aus – was muss ich ihm da genau über seine Daten sagen? Und wenn ich stattdessen die Adresse von seinem alten Studio übernehme, kommt da noch was dazu?",
+      "category": "betroffenenrechte",
+      "gold_ids": [
+        "dsgvo_art_13",
+        "dsgvo_art_14_part0",
+        "dsgvo_art_14_part1",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_c_307_22_rechtsrahmen_3",
+        "eugh_C-154_21_rechtsrahmen_4",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_180",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_12",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_10",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_10",
+        "beh_24.01.2024-_Orientierungshilfe_der_Aufsi_51",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_94",
+        "eugh_C-579_21_rechtsrahmen_3",
+        "beh_Januar_2026-_Orientierungshilfe_zur_Einh_50"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_c_307_22_rechtsrahmen_3",
+        "eugh_C-154_21_rechtsrahmen_4",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_180",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_12",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_10",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_10",
+        "beh_24.01.2024-_Orientierungshilfe_der_Aufsi_51",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_94",
+        "eugh_C-579_21_rechtsrahmen_3",
+        "beh_Januar_2026-_Orientierungshilfe_zur_Einh_50"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.66,
+      "latency": {
+        "total_ms": 1391.5,
+        "reranker_ms": 267.6,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_054",
+      "question": "Ein kleines Startup für Sprachassistenten will mit echten Kundengesprächen (die sie aufgezeichnet haben) ihre KI trainieren – dürfen die das einfach so machen, oder müssen sie vorher was beachten?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_89"
+      ],
+      "retrieved_ids_top10": [
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_20",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_52",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_10",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_91",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_1",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_43",
+        "beh_BayLDA_Checkliste_Datenschutzkonforme_Kü_7",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_30",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_85",
+        "beh_November_2024-_Orientierungshilfe_der_Au_56"
+      ],
+      "retrieved_raw_ids_top10": [
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_20",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_52",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_10",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_91",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_1",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_43",
+        "beh_BayLDA_Checkliste_Datenschutzkonforme_Kü_7",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_30",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_85",
+        "beh_November_2024-_Orientierungshilfe_der_Au_56"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.78,
+      "latency": {
+        "total_ms": 1420.9,
+        "reranker_ms": 356.7,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_055",
+      "question": "Ein kleiner Online-Shop für Handmade-Schmuck will mit einer Influencerin zusammenarbeiten – sie postet Fotos von Kunden mit deren Einwilligung auf Instagram, aber der Shop speichert die Adressen für den Versand. Wer haftet eigentlich, wenn da was schiefgeht mit den Daten, und woran merkt man, dass man da überhaupt gemeinsam in der Pflicht steht?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_26",
+        "dsgvo_art_82"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "eugh_C-200_23_vf_8_0",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-645_19_wuerdigung_1",
+        "beh_06.09.2023–_Stellungnahme_der_unabhän_24",
+        "beh_12.12.2025-_DSGVO-Reform_IT-Hersteller_1"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_44",
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_46",
+        "seg_eugh_C-311_18_tenor",
+        "eugh_C-200_23_vf_8_0",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-645_19_wuerdigung_1",
+        "beh_06.09.2023–_Stellungnahme_der_unabhän_24",
+        "beh_12.12.2025-_DSGVO-Reform_IT-Hersteller_1"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.8,
+      "latency": {
+        "total_ms": 2221.1,
+        "reranker_ms": 583.2,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_056",
+      "question": "Ein kleines Marketingteam will ChatGPT nutzen, um Kunden-E-Mails automatisch zu analysieren – dürfen die einfach die Adressen und Inhalte da reinpacken, oder gibt’s da Probleme, wenn die Daten irgendwo in den USA landen?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_44",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "eugh_c_621_22_wuerdigung_10",
+        "eugh_c_621_22_wuerdigung_3",
+        "eugh_C-245_20_rechtsrahmen_1",
+        "eugh_C-511_18_vf_2_3_3",
+        "eugh_C-460_20_vf_1_0"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_44",
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_46",
+        "seg_eugh_C-311_18_tenor",
+        "eugh_c_621_22_wuerdigung_10",
+        "eugh_c_621_22_wuerdigung_3",
+        "eugh_C-245_20_rechtsrahmen_1",
+        "eugh_C-511_18_vf_2_3_3",
+        "eugh_C-460_20_vf_1_0"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.143,
+        "ndcg@3": 0.469,
+        "forbidden_hit@3": false,
+        "hit@5": 0.143,
+        "ndcg@5": 0.339,
+        "forbidden_hit@5": false,
+        "hit@10": 0.143,
+        "ndcg@10": 0.263,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 2.54,
+      "latency": {
+        "total_ms": 1870.7,
+        "reranker_ms": 668.2,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_057",
+      "question": "Ein Fitnessstudio will in den Umkleiden und am Empfang Kameras aufhängen – was muss der Chef da beachten, damit er keine Ärger mit Kunden oder Behörden kriegt?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "gran_BDSG_§_4_Abs.1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 88 DSGVO",
+        "Art. 6 DSGVO (Teil 1)",
+        "Art. 6 DSGVO (Teil 2)",
+        "Prüfungsschema Datenschutz-Folgenabschätzung (DSFA, Art. 35 DSGVO)",
+        "DSK-Blacklist – 17 DSFA-pflichtige Verarbeitungen",
+        "eugh_C-655_23_sachverhalt_3",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_58",
+        "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_13",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_79",
+        "beh_Leitlinien_3_2019_zur_Verarbeitung_53"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_88",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "mw_pr_fungsschema_datenschutz_folgenabsch_tzung__dsfa__art__35_",
+        "mw_dsk_blacklist___17_dsfa_pflichtige_verarbeitungen",
+        "eugh_C-655_23_sachverhalt_3",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_58",
+        "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_13",
+        "beh_20.12.2021-_Häufige_Fragestellungen_neb_79",
+        "beh_Leitlinien_3_2019_zur_Verarbeitung_53"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.667,
+        "ndcg@3": 0.531,
+        "forbidden_hit@3": false,
+        "hit@5": 0.667,
+        "ndcg@5": 0.482,
+        "forbidden_hit@5": false,
+        "hit@10": 0.667,
+        "ndcg@10": 0.482,
+        "forbidden_hit@10": false,
+        "mrr": 0.5
+      },
+      "duration_s": 2.03,
+      "latency": {
+        "total_ms": 1668.6,
+        "reranker_ms": 360.7,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_058",
+      "question": "Ein ehemaliger Kunde droht mir als Inhaber einer kleinen Marketingagentur mit Anwalt, weil sein Name bei Google noch mit einem alten, peinlichen Projekt von uns verknüpft wird – was kann ich jetzt konkret tun, damit das endlich verschwindet, ohne dass ich mir Ärger einhandle?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_17",
+        "dsgvo_art_21",
+        "dsgvo_art_19"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-129_21_vf_4_1",
+        "eugh_C-129_21_vf_4_0",
+        "eugh_C-102_20_rechtsrahmen_0",
+        "eugh_C-102_20_vorlagefragen_0",
+        "eugh_C-102_20_rechtsrahmen_3",
+        "eugh_C-136_17_vf_2_1",
+        "eugh_C-507_17_wuerdigung_0",
+        "eugh_C-136_17_header",
+        "eugh_C-136_17_sachverhalt_0",
+        "eugh_C-131_12_wuerdigung_9"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-129_21_vf_4_1",
+        "eugh_C-129_21_vf_4_0",
+        "eugh_C-102_20_rechtsrahmen_0",
+        "eugh_C-102_20_vorlagefragen_0",
+        "eugh_C-102_20_rechtsrahmen_3",
+        "eugh_C-136_17_vf_2_1",
+        "eugh_C-507_17_wuerdigung_0",
+        "eugh_C-136_17_header",
+        "eugh_C-136_17_sachverhalt_0",
+        "eugh_C-131_12_wuerdigung_9"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.4,
+      "latency": {
+        "total_ms": 1868.7,
+        "reranker_ms": 531.8,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_059",
+      "question": "Ein Kunde aus der Logistikbranche will seine Kundendaten an eine US-Softwarefirma schicken, die nicht in diesem offiziellen EU-Datenschutzabkommen drinsteht – was muss er jetzt konkret tun, damit das keine Ärger gibt?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_46",
+        "dsgvo_art_44"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-655_23_sachverhalt_3",
+        "eugh_C-655_23_vf_4_2",
+        "eugh_C-655_23_vf_4_0",
+        "eugh_C-311_18_vf_8_9",
+        "eugh_C-311_18_rechtsrahmen_18",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_5",
+        "beh_Leitlinien_5_2021_über_das_Zusammenspiel_4",
+        "beh_21.05.2021–_Stellungnahme_zur_Verantwo_3",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_104",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_41"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-655_23_sachverhalt_3",
+        "eugh_C-655_23_vf_4_2",
+        "eugh_C-655_23_vf_4_0",
+        "eugh_C-311_18_vf_8_9",
+        "eugh_C-311_18_rechtsrahmen_18",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_5",
+        "beh_Leitlinien_5_2021_über_das_Zusammenspiel_4",
+        "beh_21.05.2021–_Stellungnahme_zur_Verantwo_3",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_104",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_41"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.76,
+      "latency": {
+        "total_ms": 1423.9,
+        "reranker_ms": 337.5,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_060",
+      "question": "Als Betreiber eines kleinen Online-Shops für nachhaltige Mode will ich wissen, was ich beachten muss, damit die Besucher meiner Seite nicht plötzlich Werbung für meine Konkurrenz sehen – ohne dass ich Ärger mit dem Gesetz bekomme.",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "gran_TDDDG_§_25",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_7"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-252_21_vf_1_7_6",
+        "eugh_C-492_23_vorlagefragen_12",
+        "eugh_C-655_23_vf_4_0",
+        "eugh_C-300_21_sachverhalt_2",
+        "eugh_C-655_23_sachverhalt_3",
+        "eugh_C-492_23_vf_4_3",
+        "eugh_C-492_23_vf_4_0",
+        "eugh_c_210_16_vf_1_2_3",
+        "eugh_C-26_22_rechtsrahmen_6",
+        "eugh_C-131_12_wuerdigung_17"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-252_21_vf_1_7_6",
+        "eugh_C-492_23_vorlagefragen_12",
+        "eugh_C-655_23_vf_4_0",
+        "eugh_C-300_21_sachverhalt_2",
+        "eugh_C-655_23_sachverhalt_3",
+        "eugh_C-492_23_vf_4_3",
+        "eugh_C-492_23_vf_4_0",
+        "eugh_c_210_16_vf_1_2_3",
+        "eugh_C-26_22_rechtsrahmen_6",
+        "eugh_C-131_12_wuerdigung_17"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.65,
+      "latency": {
+        "total_ms": 1302.7,
+        "reranker_ms": 347.9,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_061",
+      "question": "Ein kleines Startup für personalisierte Lern-Apps will KI nutzen, um Nutzer:innen basierend auf ihren Lernfortschritten Tipps zu geben – aber wie genau muss man da eigentlich aufpassen, dass man nicht versehentlich gegen Regeln verstößt, wenn die KI mit echten Nutzerdaten trainiert wird?",
+      "category": "behoerden",
+      "gold_ids": [
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-623_17_vf_2_4",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_20",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_118",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_72",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_21",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_85",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_30",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_29",
+        "beh_Oktober_2025-_Datenschutzrechtliche_Beso_10",
+        "beh_10.10.2025–_Stellungnahme_der_Konferen_4"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-623_17_vf_2_4",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_20",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_118",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_72",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_21",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_85",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_30",
+        "beh_Juni_2025-_Orientierungshilfe_zu_empfohl_29",
+        "beh_Oktober_2025-_Datenschutzrechtliche_Beso_10",
+        "beh_10.10.2025–_Stellungnahme_der_Konferen_4"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.27,
+      "latency": {
+        "total_ms": 1737.2,
+        "reranker_ms": 531.7,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_062",
+      "question": "Ein kleiner Fitnessstudio-Besitzer will in den Umkleiden Kameras aufhängen, weil öfter Sachen geklaut werden – aber er hat Angst, dass er sich damit Ärger einhandelt. Gibt’s irgendwo offizielle Tipps von den Datenschützern, wie man das richtig macht, und sind die noch aktuell?",
+      "category": "behoerden",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "Art. 88 DSGVO",
+        "Art. 6 DSGVO (Teil 1)",
+        "Art. 6 DSGVO (Teil 2)",
+        "eugh_C-655_23_sachverhalt_3",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_23",
+        "beh_12.12.2025-_DSGVO-Reform_IT-Hersteller_1",
+        "beh_Leitlinien_03_2022_zu_64",
+        "beh_Leitlinien_04_2022_für_die_Berechnung_vo_126",
+        "beh_23.10.2020-_Videokonferenzsysteme_9",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_172"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_88",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "eugh_C-655_23_sachverhalt_3",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_23",
+        "beh_12.12.2025-_DSGVO-Reform_IT-Hersteller_1",
+        "beh_Leitlinien_03_2022_zu_64",
+        "beh_Leitlinien_04_2022_für_die_Berechnung_vo_126",
+        "beh_23.10.2020-_Videokonferenzsysteme_9",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_172"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.42,
+      "latency": {
+        "total_ms": 1732.0,
+        "reranker_ms": 686.4,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_063",
+      "question": "Ein Startup für Online-Kurse will Kundendaten in einer US-Cloud speichern – der Anbieter sagt, er macht nur, was wir anweisen, aber in den AGB steht was von „eigenen Analysen für Service-Verbesserungen“. Wer haftet eigentlich, wenn da was schiefgeht – wir oder die Cloud-Firma?",
+      "category": "auftragsverarbeitung",
+      "gold_ids": [
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_32"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-46_23_vf_1_4",
+        "eugh_C-46_23_vf_1_0",
+        "eugh_C-46_23_sachverhalt_2",
+        "eugh_C-311_18_rechtsrahmen_16"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_44",
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_46",
+        "seg_eugh_C-311_18_tenor",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-46_23_vf_1_4",
+        "eugh_C-46_23_vf_1_0",
+        "eugh_C-46_23_sachverhalt_2",
+        "eugh_C-311_18_rechtsrahmen_16"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.99,
+      "latency": {
+        "total_ms": 2256.7,
+        "reranker_ms": 729.1,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_064",
+      "question": "Ein kleiner Online-Shop für Fahrradteile speichert die IP-Adressen von Besuchern, die sich nur Produkte anschauen – ohne Account oder Kauf. Kann man daraus überhaupt herausfinden, wer die Person dahinter ist, oder ist das eher wie eine zufällige Nummer, die niemandem zuzuordnen ist?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-470_21_wuerdigung_17",
+        "eugh_C-807_21_rechtsrahmen_1",
+        "eugh_C-511_18_vf_1_19",
+        "eugh_C-129_21_rechtsrahmen_0",
+        "beh_11.07.2023–_Stellungnahme_zum_Referent_13",
+        "beh_17.10.2023-_Geplante_Chatkontrolle_führ_5",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_73",
+        "eugh_c_582_14_vf_1b_0",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_37",
+        "beh_Leitlinien_2_2020_zu_Artikel_46_Absatz_2_25"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-470_21_wuerdigung_17",
+        "eugh_C-807_21_rechtsrahmen_1",
+        "eugh_C-511_18_vf_1_19",
+        "eugh_C-129_21_rechtsrahmen_0",
+        "beh_11.07.2023–_Stellungnahme_zum_Referent_13",
+        "beh_17.10.2023-_Geplante_Chatkontrolle_führ_5",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_73",
+        "eugh_c_582_14_vf_1b_0",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_37",
+        "beh_Leitlinien_2_2020_zu_Artikel_46_Absatz_2_25"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.05,
+      "latency": {
+        "total_ms": 1766.3,
+        "reranker_ms": 286.4,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_065",
+      "question": "Ein Online-Kreditvermittler will ab sofort per Algorithmus entscheiden, wer einen Kredit bekommt – ganz ohne Mensch im Hintergrund. Was muss der machen, damit das rechtlich okay ist und Kunden nicht einfach so abgelehnt werden?",
+      "category": "pruefungsschemata",
+      "gold_ids": [
+        "dsgvo_art_22",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "gran_BDSG_§_31_Abs.1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-634_21_vf_1_1",
+        "eugh_T-553_23_header_42",
+        "eugh_C-203_22_wuerdigung_4",
+        "eugh_C-604_22_sachverhalt_0",
+        "eugh_T-553_23_header_28",
+        "eugh_C-61_19_rechtsrahmen_2",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_29",
+        "beh_11.05.2023-_Stellungnahme_zur_Verbesseru_42",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_31",
+        "beh_11.05.2023-_Stellungnahme_zur_Verbesseru_46"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-634_21_vf_1_1",
+        "eugh_T-553_23_header_42",
+        "eugh_C-203_22_wuerdigung_4",
+        "eugh_C-604_22_sachverhalt_0",
+        "eugh_T-553_23_header_28",
+        "eugh_C-61_19_rechtsrahmen_2",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_29",
+        "beh_11.05.2023-_Stellungnahme_zur_Verbesseru_42",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_31",
+        "beh_11.05.2023-_Stellungnahme_zur_Verbesseru_46"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.95,
+      "latency": {
+        "total_ms": 1656.8,
+        "reranker_ms": 293.4,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_066",
+      "question": "Ein Kunde will seine ganzen Hochgeladenen Fotos, Chats und Likes aus unserer Fitness-App rausziehen, um zu einer Konkurrenz zu wechseln – aber nicht als PDF, sondern so, dass er die Daten direkt in deren System einpflegen kann. Was müssen wir ihm da konkret liefern und wie?",
+      "category": "betroffenenrechte",
+      "gold_ids": [
+        "dsgvo_art_20",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "beh_September_2019_-_LfDI_BW_-_Fotografieren_4",
+        "eugh_C-252_21_sachverhalt_5",
+        "beh_BayLDA_Checkliste_Datenschutzkonforme_Kü_27",
+        "beh_17.10.2023-_Geplante_Chatkontrolle_führ_6",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_11",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_121",
+        "beh_23.10.2020-_Videokonferenzsysteme_52",
+        "beh_23.10.2020-_Videokonferenzsysteme_17",
+        "beh_Leitlinien_03_2022_zu_51",
+        "beh_07.11.2019-_Whitepaper_zu_technischen_Da_26"
+      ],
+      "retrieved_raw_ids_top10": [
+        "beh_September_2019_-_LfDI_BW_-_Fotografieren_4",
+        "eugh_C-252_21_sachverhalt_5",
+        "beh_BayLDA_Checkliste_Datenschutzkonforme_Kü_27",
+        "beh_17.10.2023-_Geplante_Chatkontrolle_führ_6",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_11",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_121",
+        "beh_23.10.2020-_Videokonferenzsysteme_52",
+        "beh_23.10.2020-_Videokonferenzsysteme_17",
+        "beh_Leitlinien_03_2022_zu_51",
+        "beh_07.11.2019-_Whitepaper_zu_technischen_Da_26"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.77,
+      "latency": {
+        "total_ms": 1454.3,
+        "reranker_ms": 313.1,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_067",
+      "question": "In der App für Teenager-Trainingstipps wollen wir 14-Jährige registrieren lassen – dürfen die einfach selbst auf „Zustimmen“ klicken oder müssen wir erst die Eltern fragen, und was passiert, wenn wir’s falsch machen?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_8",
+        "dsgvo_art_12_part0",
+        "dsgvo_art_12_part1",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "beh_November_2024-_Orientierungshilfe_der_Au_42",
+        "beh_11.07.2023–_Stellungnahme_zum_Referent_20",
+        "beh_September_2025-_Anwendungshinweise_zu_de_19",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_54",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_50",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_56",
+        "beh_30.11.2022-_Orientierungshilfe_der_Aufsi_174",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_137",
+        "beh_Leitlinien_03_2022_zu_51",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_136"
+      ],
+      "retrieved_raw_ids_top10": [
+        "beh_November_2024-_Orientierungshilfe_der_Au_42",
+        "beh_11.07.2023–_Stellungnahme_zum_Referent_20",
+        "beh_September_2025-_Anwendungshinweise_zu_de_19",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_54",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_50",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_56",
+        "beh_30.11.2022-_Orientierungshilfe_der_Aufsi_174",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_137",
+        "beh_Leitlinien_03_2022_zu_51",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_136"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.61,
+      "latency": {
+        "total_ms": 1386.3,
+        "reranker_ms": 220.7,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_068",
+      "question": "Ein Kunde wirft uns vor, seine persönlichen Daten ohne Erlaubnis an einen Lieferanten weitergegeben zu haben – jetzt droht er mit Klagen. Was kann er von uns konkret verlangen, und gilt da nur EU-Recht oder auch deutsches?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_82"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-21_23_vf_1_1",
+        "eugh_C-154_21_rechtsrahmen_3",
+        "eugh_c_178_22_sachverhalt_4",
+        "eugh_C-132_21_rechtsrahmen_2",
+        "eugh_c_307_22_rechtsrahmen_3",
+        "eugh_C-817_19_wuerdigung_72",
+        "eugh_C-507_17_rechtsrahmen_6",
+        "eugh_C-169_23_rechtsrahmen_2",
+        "eugh_C-757_22_rechtsrahmen_4",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_167"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-21_23_vf_1_1",
+        "eugh_C-154_21_rechtsrahmen_3",
+        "eugh_c_178_22_sachverhalt_4",
+        "eugh_C-132_21_rechtsrahmen_2",
+        "eugh_c_307_22_rechtsrahmen_3",
+        "eugh_C-817_19_wuerdigung_72",
+        "eugh_C-507_17_rechtsrahmen_6",
+        "eugh_C-169_23_rechtsrahmen_2",
+        "eugh_C-757_22_rechtsrahmen_4",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_167"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.75,
+      "latency": {
+        "total_ms": 1533.0,
+        "reranker_ms": 216.3,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_069",
+      "question": "Als IT-Leiter in einer Steuerkanzlei will ich wissen, was die deutschen Datenschützer Ende 2022 an Microsoft 365 ausgesetzt haben – konkret, wo die Cloud-Dienste bei der sicheren Datenweitergabe an Dritte schwächeln.",
+      "category": "behoerden",
+      "gold_ids": [
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "eugh_C-807_21_vf_1_1",
+        "eugh_C-184_20_vf_1_0",
+        "eugh_C-184_20_vf_1_5",
+        "beh_16.06.2025-_Confidential_Cloud_Computing_4",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_25"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_44",
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_46",
+        "seg_eugh_C-311_18_tenor",
+        "eugh_C-807_21_vf_1_1",
+        "eugh_C-184_20_vf_1_0",
+        "eugh_C-184_20_vf_1_5",
+        "beh_16.06.2025-_Confidential_Cloud_Computing_4",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_25"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.26,
+      "latency": {
+        "total_ms": 1670.8,
+        "reranker_ms": 590.3,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_070",
+      "question": "Als Inhaber eines kleinen Online-Shops für Handmade-Schmuck: Wenn ich Kundendaten wie Namen oder Lieferadressen an einen externen Versanddienstleister weitergebe – wer gilt da eigentlich vor dem Gesetz als derjenige, der die Verantwortung trägt, und was zählt überhaupt alles als „Daten von Personen“, die ich schützen muss?",
+      "category": "allgemein",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "Art. 28 DSGVO (Teil 1)",
+        "Art. 28 DSGVO (Teil 2)",
+        "Art. 29 DSGVO",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-604_22_vf_2_4",
+        "eugh_C-340_21_vf_2_2",
+        "eugh_C-807_21_vf_1_1",
+        "eugh_C-311_18_vf_1_1",
+        "beh_06.09.2023–_Stellungnahme_der_unabhän_24",
+        "eugh_C-319_22_vf_3_0"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_28_part0",
+        "dsgvo_art_28_part1",
+        "dsgvo_art_29",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-604_22_vf_2_4",
+        "eugh_C-340_21_vf_2_2",
+        "eugh_C-807_21_vf_1_1",
+        "eugh_C-311_18_vf_1_1",
+        "beh_06.09.2023–_Stellungnahme_der_unabhän_24",
+        "eugh_C-319_22_vf_3_0"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.5,
+      "latency": {
+        "total_ms": 1895.9,
+        "reranker_ms": 602.5,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_071",
+      "question": "Ein kleiner Online-Shop für handgemachte Keramik will Kundendaten speichern, um später personalisierte Rabattcodes rauszuschicken – darf man das einfach so machen oder muss man vorher was beachten?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_5"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-492_23_vorlagefragen_11",
+        "eugh_C-252_21_vf_1_7_8",
+        "eugh_C-446_21_vf_2b_4",
+        "eugh_C-604_22_vf_2_4",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_193",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_179",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_41",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_76",
+        "beh_Leitlinien_8_2020_über_die_gezielte_Ansp_28",
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_33"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-492_23_vorlagefragen_11",
+        "eugh_C-252_21_vf_1_7_8",
+        "eugh_C-446_21_vf_2b_4",
+        "eugh_C-604_22_vf_2_4",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_193",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_179",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_41",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_76",
+        "beh_Leitlinien_8_2020_über_die_gezielte_Ansp_28",
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_33"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.79,
+      "latency": {
+        "total_ms": 1514.9,
+        "reranker_ms": 279.7,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_072",
+      "question": "Ein deutscher Online-Shop will Kundendaten an eine US-Firma schicken, die die Bestellungen abwickelt – was muss ich konkret abklopfen, bevor ich die Daten rausrücke?",
+      "category": "drittlandtransfer",
+      "gold_ids": [
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-768_21_sachverhalt_0",
+        "eugh_C-492_23_vorlagefragen_10",
+        "eugh_C-65_23_sachverhalt_0",
+        "eugh_C-252_21_vf_3_4",
+        "eugh_C-252_21_vf_1_7_8",
+        "eugh_C-311_18_rechtsrahmen_18",
+        "eugh_C-311_18_vf_8_9",
+        "eugh_C-17_22_rechtsrahmen_3",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_193",
+        "eugh_C-362_14_wuerdigung_7"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-768_21_sachverhalt_0",
+        "eugh_C-492_23_vorlagefragen_10",
+        "eugh_C-65_23_sachverhalt_0",
+        "eugh_C-252_21_vf_3_4",
+        "eugh_C-252_21_vf_1_7_8",
+        "eugh_C-311_18_rechtsrahmen_18",
+        "eugh_C-311_18_vf_8_9",
+        "eugh_C-17_22_rechtsrahmen_3",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_193",
+        "eugh_C-362_14_wuerdigung_7"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.75,
+      "latency": {
+        "total_ms": 1499.6,
+        "reranker_ms": 250.7,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_073",
+      "question": "Ein kleiner Online-Shop aus Deutschland will Kundendaten in die USA an einen Cloud-Anbieter schicken, obwohl die da eigentlich nicht so streng mit Datenschutz sind – was muss der Shop *konkret* tun, damit das nicht später Ärger mit den Behörden gibt?",
+      "category": "drittlandtransfer",
+      "gold_ids": [
+        "dsgvo_art_46"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 44 DSGVO",
+        "Art. 45 DSGVO (Teil 1)",
+        "Art. 45 DSGVO (Teil 2)",
+        "Art. 46 DSGVO",
+        "eugh_C-311_18_tenor",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-311_18_vf_8_1",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_24",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_217",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_23"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_44",
+        "dsgvo_art_45_part0",
+        "dsgvo_art_45_part1",
+        "dsgvo_art_46",
+        "seg_eugh_C-311_18_tenor",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-311_18_vf_8_1",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_24",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_217",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_23"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.327,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.327,
+        "forbidden_hit@10": false,
+        "mrr": 0.25
+      },
+      "duration_s": 2.41,
+      "latency": {
+        "total_ms": 1869.8,
+        "reranker_ms": 544.9,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_074",
+      "question": "Wenn ich als Logistikleiter für unsere Spedition eine verbindliche Anweisung für alle Mitarbeiter rausgeben will, wie sie mit Kundendaten wie Lieferadressen oder Frachtpapieren umgehen müssen – was muss da drinstehen, damit das rechtlich wasserdicht ist, und wer muss das eigentlich absegnen, bevor es gilt?",
+      "category": "drittlandtransfer",
+      "gold_ids": [
+        "dsgvo_art_47_part0",
+        "dsgvo_art_47_part1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 88 DSGVO",
+        "Art. 6 DSGVO (Teil 1)",
+        "Art. 6 DSGVO (Teil 2)",
+        "dd8676b5fa6eb84d",
+        "8c5a57d49b9a3646",
+        "eugh_C-311_18_rechtsrahmen_13",
+        "beh_16.06.2025-_Confidential_Cloud_Computing_4",
+        "beh_November_2024-_Orientierungshilfe_der_Au_73",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_32",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_110"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_88",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dd8676b5fa6eb84d",
+        "8c5a57d49b9a3646",
+        "eugh_C-311_18_rechtsrahmen_13",
+        "beh_16.06.2025-_Confidential_Cloud_Computing_4",
+        "beh_November_2024-_Orientierungshilfe_der_Au_73",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_32",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_110"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.45,
+      "latency": {
+        "total_ms": 1932.3,
+        "reranker_ms": 513.6,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_075",
+      "question": "Ein kleiner Online-Shop für Handmade-Schmuck will Kundendaten speichern – jetzt sagt die Steuerberaterin, in Deutschland gelten da manchmal andere Regeln als in der EU. Wann ist das so und worauf muss man da genau achten?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "eugh_C-21_23_rechtsrahmen_1",
+        "eugh_C-807_21_rechtsrahmen_1",
+        "eugh_C-252_21_vf_1_7_3",
+        "eugh_C-667_21_vf_3_1",
+        "eugh_c_339_20_wuerdigung_3",
+        "eugh_c_339_20_wuerdigung_5",
+        "eugh_c_339_20_sachverhalt_2",
+        "eugh_C-77_21_vf_1_4",
+        "eugh_C-77_21_vf_1_6",
+        "eugh_C-77_21_vf_1_5"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-21_23_rechtsrahmen_1",
+        "eugh_C-807_21_rechtsrahmen_1",
+        "eugh_C-252_21_vf_1_7_3",
+        "eugh_C-667_21_vf_3_1",
+        "eugh_c_339_20_wuerdigung_3",
+        "eugh_c_339_20_wuerdigung_5",
+        "eugh_c_339_20_sachverhalt_2",
+        "eugh_C-77_21_vf_1_4",
+        "eugh_C-77_21_vf_1_6",
+        "eugh_C-77_21_vf_1_5"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.05,
+      "latency": {
+        "total_ms": 1736.6,
+        "reranker_ms": 313.7,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_076",
+      "question": "Als Physiotherapie-Praxis in Bayern wollen wir Patientendaten digital speichern – aber ein Kollege meint, Deutschland hätte da eigene Regeln, obwohl die EU eigentlich überall das Gleiche vorschreibt. Wo darf unser Land wirklich was anders machen als der Rest?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_88",
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 9 DSGVO (Teil 1)",
+        "Art. 9 DSGVO (Teil 2)",
+        "eugh_C-667_21_tenor",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-34_21_vf_1_3",
+        "eugh_C-667_21_sachverhalt_2",
+        "eugh_C-667_21_vf_2_0",
+        "eugh_C-511_18_vf_1_13",
+        "beh_06.09.2023–_Stellungnahme_der_unabhän_26",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_24"
+      ],
+      "retrieved_raw_ids_top10": [
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "eugh_C-667_21_tenor",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-34_21_vf_1_3",
+        "eugh_C-667_21_sachverhalt_2",
+        "eugh_C-667_21_vf_2_0",
+        "eugh_C-511_18_vf_1_13",
+        "beh_06.09.2023–_Stellungnahme_der_unabhän_26",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_24"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.23,
+      "latency": {
+        "total_ms": 1853.1,
+        "reranker_ms": 375.5,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_077",
+      "question": "Ein kleines Fitnessstudio will die Trainingsdaten seiner Mitglieder für Statistiken nutzen, aber ohne dass man Rückschlüsse auf einzelne Personen ziehen kann – wie müssen die Daten dafür bearbeitet werden, und wann darf man sie dann eigentlich einfach so weiterverwenden, ohne sich um Datenschutzregeln kümmern zu müssen?",
+      "category": "allgemein",
+      "gold_ids": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "retrieved_ids_top10": [
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_5",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_27",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_8",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_10",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-34_21_rechtsrahmen_7",
+        "eugh_c_210_16_vf_1_2_3",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_53",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_64",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_16"
+      ],
+      "retrieved_raw_ids_top10": [
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_5",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_27",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_8",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_10",
+        "eugh_C-492_23_vorlagefragen_9",
+        "eugh_C-34_21_rechtsrahmen_7",
+        "eugh_c_210_16_vf_1_2_3",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_53",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_64",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_16"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.94,
+      "latency": {
+        "total_ms": 1559.4,
+        "reranker_ms": 385.1,
+        "warmup": false
+      }
+    },
+    {
+      "id": "messy_078",
+      "question": "Ein kleiner Online-Shop für Fahrradzubehör speichert die IP-Adressen von Besuchern, die sich nur Produkte anschauen, aber nichts kaufen. Kann man daraus überhaupt herausfinden, wer die Leute sind – oder ist das eher wie eine zufällige Nummer, die niemandem zuzuordnen ist?",
+      "category": "allgemein",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_C-604_22_vf_1_2",
+        "eugh_C-807_21_rechtsrahmen_1",
+        "eugh_C-21_23_rechtsrahmen_1",
+        "eugh_C-129_21_rechtsrahmen_0",
+        "beh_17.10.2023-_Geplante_Chatkontrolle_führ_5",
+        "beh_11.07.2023–_Stellungnahme_zum_Referent_13",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_73",
+        "eugh_c_582_14_vf_2b_0",
+        "eugh_C-131_12_wuerdigung_12",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_85"
+      ],
+      "retrieved_raw_ids_top10": [
+        "eugh_C-604_22_vf_1_2",
+        "eugh_C-807_21_rechtsrahmen_1",
+        "eugh_C-21_23_rechtsrahmen_1",
+        "eugh_C-129_21_rechtsrahmen_0",
+        "beh_17.10.2023-_Geplante_Chatkontrolle_führ_5",
+        "beh_11.07.2023–_Stellungnahme_zum_Referent_13",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_73",
+        "eugh_c_582_14_vf_2b_0",
+        "eugh_C-131_12_wuerdigung_12",
+        "beh_Leitlinien_01_2021_zu_Beispielen_für_die_85"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 2.19,
+      "latency": {
+        "total_ms": 1857.8,
+        "reranker_ms": 328.5,
+        "warmup": false
+      }
+    }
+  ]
+}

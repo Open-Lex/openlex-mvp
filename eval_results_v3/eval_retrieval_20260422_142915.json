@@ -1,0 +1,190 @@
+{
+  "summary": {
+    "avg_hit@3": 0.4,
+    "avg_ndcg@3": 0.4,
+    "forbidden_hit_rate@3": 0.0,
+    "avg_hit@5": 0.4,
+    "avg_ndcg@5": 0.4,
+    "forbidden_hit_rate@5": 0.0,
+    "avg_hit@10": 0.4,
+    "avg_ndcg@10": 0.4,
+    "forbidden_hit_rate@10": 0.0,
+    "avg_mrr": 0.4,
+    "by_category": {
+      "beschaeftigtendatenschutz": 0.0,
+      "betroffenenrechte": 1.0,
+      "grundsaetze": 1.0,
+      "rechtsgrundlagen": 0.0
+    },
+    "duration_s": 11.2,
+    "n_questions": 5,
+    "timestamp": "2026-04-22 14:29"
+  },
+  "results": [
+    {
+      "id": "Anwendungsvorrang des EU-Rechts (Costa/ENEL, Simmenthal)_q1",
+      "question": "Was passiert, wenn deutsches Datenschutzrecht (z.B. das BDSG) gegen EU-Recht (z.B. die DSGVO) verstößt?",
+      "category": "beschaeftigtendatenschutz",
+      "gold_ids": [
+        "Anwendungsvorrang des EU-Rechts (Costa/ENEL, Simmenthal)"
+      ],
+      "retrieved_ids_top10": [
+        "BDSG_§_41_Abs.1_S.1",
+        "mw_unmittelbare_geltung_dsgvo",
+        "BDSG_§_65_Abs.1_S.8",
+        "BDSG_§_16_Abs.1_S.5",
+        "BDSG_§_41_Abs.1_S.3",
+        "BDSG_§_1_Abs.1_S.12",
+        "BDSG_§_16_Abs.1_S.2",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_113",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_135",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_124"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 10.59
+    },
+    {
+      "id": "Art. 5 Abs. 1 lit. a DSGVO – Rechtmäßigkeit, Verarbeitung nach Treu und Glauben,_q1",
+      "question": "Wann ist eine Datenverarbeitung nach der DSGVO überhaupt erlaubt und welche Regeln muss ich dabei beachten?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "Art. 5 Abs. 1 lit. a DSGVO – Rechtmäßigkeit, Verarbeitung nach Treu und Glauben,"
+      ],
+      "retrieved_ids_top10": [
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_28",
+        "beh_8Maßnahmenplan_„DS-GVO“_für_Untern_15",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_18",
+        "Art. 29 DSGVO",
+        "beh_Anforderungen_an_datenschutzrechtliche_Z_73",
+        "beh_20Einwilligung_nach_der_DS-GVOin_Überar_55",
+        "eugh_C-638_23_rechtsrahmen_2",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_113",
+        "Art. 44 DSGVO",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_92"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 0.14
+    },
+    {
+      "id": "Art. 5 Abs. 1 lit. b DSGVO – Zweckbindung_q1",
+      "question": "Darf ich personenbezogene Daten, die ich für einen bestimmten Zweck erhoben habe, auch für einen anderen Zweck verwenden?",
+      "category": "rechtsgrundlagen",
+      "gold_ids": [
+        "Art. 5 Abs. 1 lit. b DSGVO – Zweckbindung"
+      ],
+      "retrieved_ids_top10": [
+        "BDSG_§_49_Abs.1_S.1",
+        "BDSG_§_49_Abs.1",
+        "BDSG_§_23_Abs.1_S.1",
+        "BDSG_§_49_Abs.1_S.2",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_123",
+        "BDSG_§_24_Abs.1_S.1",
+        "BDSG_§_23_Abs.1",
+        "beh_14Beschäftigtendatenschutz_50",
+        "BDSG_§_24_Abs.1",
+        "BDSG_§_40_Abs.1_S.5"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 0.17
+    },
+    {
+      "id": "Art. 5 Abs. 1 lit. c DSGVO – Datenminimierung_q1",
+      "question": "Was bedeutet der Grundsatz der Datenminimierung nach der DSGVO und wie wird er praktisch umgesetzt?",
+      "category": "grundsaetze",
+      "gold_ids": [
+        "Art. 5 Abs. 1 lit. c DSGVO – Datenminimierung"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 5 Abs. 1 lit. c DSGVO – Datenminimierung",
+        "beh_Leitlinien_06_2020_zum_Zusammenspiel_zwi_51",
+        "beh_Leitlinien_4_2019_zu_Artikel_25_61",
+        "beh_Stand_April_2018_-_Standard-Datenschutzm_32",
+        "beh_Das_Standard-Datenschutzmodell_(SDM)_Ver_80",
+        "beh_Das_Standard-Datenschutzmodell_(SDM)_Ver_133",
+        "beh_Standard-Datenschutzmodell_(SDM)_Version_138",
+        "beh_Standard-Datenschutzmodell_(SDM)_Version_87",
+        "beh_Leitlinien_3_2020_für_die_Verarbeitung_v_23",
+        "beh_Leitlinien_2_2019_für_die_Verarbeitung_p_14"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 1.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 1.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 1.0,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 0.14
+    },
+    {
+      "id": "Art. 5 Abs. 1 lit. d DSGVO – Richtigkeit_q1",
+      "question": "Was bedeutet der Grundsatz der Richtigkeit bei personenbezogenen Daten nach der DSGVO und welche Pflichten hat der Verantwortliche?",
+      "category": "betroffenenrechte",
+      "gold_ids": [
+        "Art. 5 Abs. 1 lit. d DSGVO – Richtigkeit"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 5 Abs. 1 lit. d DSGVO – Richtigkeit",
+        "beh_Standard-Datenschutzmodell_(SDM)_Version_92",
+        "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_19",
+        "Art. 5 DSGVO",
+        "Erwägungsgrund 74 DSGVO – Verantwortung und Haftung des Vera",
+        "eugh_C-492_23_rechtsrahmen_5",
+        "Erwägungsgrund 39 DSGVO – Grundsätze der Datenverarbeitung*",
+        "eugh_C-439_19_rechtsrahmen_4",
+        "eugh_C-34_21_rechtsrahmen_5",
+        "beh_29.03.2019-_Orientierungshilfe_der_Aufsi_68"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 1.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 1.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 1.0,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 0.13
+    }
+  ]
+}

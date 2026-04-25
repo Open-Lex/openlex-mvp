@@ -1,0 +1,189 @@
+{
+  "summary": {
+    "avg_hit@3": 0.0,
+    "avg_ndcg@3": 0.038,
+    "forbidden_hit_rate@3": 0.0,
+    "avg_hit@5": 0.0,
+    "avg_ndcg@5": 0.038,
+    "forbidden_hit_rate@5": 0.0,
+    "avg_hit@10": 0.0,
+    "avg_ndcg@10": 0.038,
+    "forbidden_hit_rate@10": 0.0,
+    "avg_mrr": 0.0,
+    "by_category": {
+      "allgemein": 0.0,
+      "cookies_tracking": 0.0,
+      "methodenwissen": 0.0
+    },
+    "duration_s": 11.4,
+    "n_questions": 5,
+    "timestamp": "2026-04-22 15:05"
+  },
+  "results": [
+    {
+      "id": "canonical_001",
+      "question": "Wie ist die Rangfolge der verschiedenen Rechtsquellen im europäischen Datenschutzrecht geregelt und welche Konsequenzen ergeben sich daraus für die Anwendung nationaler Datenschutzgesetze?",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "mw_normenhierarchie_im_eu_datenschutzrecht"
+      ],
+      "retrieved_ids_top10": [
+        "Quellengewichtung im Datenschutzrecht – 10-Rang-System",
+        "Normenhierarchie im EU-Datenschutzrecht",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_135",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_132",
+        "Anwendungsvorrang des EU-Rechts (Costa/ENEL, Simmenthal)",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_136",
+        "eugh_C-65_23_rechtsrahmen_0",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_92",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_142",
+        "mw_unmittelbare_geltung_dsgvo"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 10.52
+    },
+    {
+      "id": "canonical_002",
+      "question": "Wie ist der Anwendungsvorrang des EU-Rechts im Verhältnis zum nationalen Recht, insbesondere im Kontext der DSGVO, zu verstehen und welche grundlegenden Urteile des EuGH prägen dieses Prinzip?",
+      "category": "allgemein",
+      "gold_ids": [
+        "mw_anwendungsvorrang_des_eu_rechts__costa_enel__simmenthal_"
+      ],
+      "retrieved_ids_top10": [
+        "Anwendungsvorrang des EU-Rechts (Costa/ENEL, Simmenthal)",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_135",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_132",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_136",
+        "mw_unmittelbare_geltung_dsgvo",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_142",
+        "a8473d51ab1c1b4b",
+        "BVerwG_6._Senat_6_C_3_23_entscheidungsgruende_17",
+        "BFH_9._Senat_IX_R_10_23_entscheidungsgruende_3",
+        "Normenhierarchie im EU-Datenschutzrecht"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 0.21
+    },
+    {
+      "id": "canonical_003",
+      "question": "Welche spezifischen Öffnungsklauseln der DSGVO ermöglichen es den Mitgliedstaaten, nationale Regelungen für die Verarbeitung besonderer Kategorien personenbezogener Daten im Arbeitsrecht sowie für öffentliche Stellen zu erlassen?",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "mw__ffnungsklauseln_der_dsgvo____bersicht"
+      ],
+      "retrieved_ids_top10": [
+        "Öffnungsklauseln der DSGVO – Übersicht",
+        "Deutsche Umsetzung der DSGVO-Öffnungsklauseln im BDSG",
+        "beh_14Beschäftigtendatenschutz_3",
+        "mw_vollharmonisierung_oeffnungsklauseln",
+        "eugh_C-34_21_vorlagefragen_3",
+        "eugh_C-65_23_vf_1_0",
+        "BAG_1._Senat_1_ABR_14_22_entscheidungsgruende_16",
+        "dd8676b5fa6eb84d",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_52",
+        "Art. 88 DSGVO"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 0.24
+    },
+    {
+      "id": "canonical_004",
+      "question": "Welche spezifischen Vorschriften des BDSG setzen die Öffnungsklauseln der DSGVO um und welche davon sind aufgrund aktueller EuGH-Rechtsprechung nicht anwendbar?",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "mw_deutsche_umsetzung_der_dsgvo__ffnungsklauseln_im_bdsg"
+      ],
+      "retrieved_ids_top10": [
+        "Deutsche Umsetzung der DSGVO-Öffnungsklauseln im BDSG",
+        "mw_unmittelbare_geltung_dsgvo",
+        "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_46",
+        "mw_vollharmonisierung_oeffnungsklauseln",
+        "Öffnungsklauseln der DSGVO – Übersicht",
+        "EuGH C-34/21 – § 26 BDSG unanwendbar",
+        "beh_29.03.2019-_Orientierungshilfe_der_Aufsi_16",
+        "BDSG_§_1_Abs.1_S.12",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_52",
+        "beh_18.01.2023–_Stellungnahme_zu_Grundsatz_112"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 0.18
+    },
+    {
+      "id": "canonical_005",
+      "question": "Welche spezifischen Regelungen gelten für den Zugriff auf Endgeräte im Rahmen der elektronischen Kommunikation und wie ist das Verhältnis zwischen TTDSG und DSGVO in diesem Kontext?",
+      "category": "cookies_tracking",
+      "gold_ids": [
+        "mw_verh_ltnis_dsgvo_zu_eprivacy_ttdsg__lex_specialis_"
+      ],
+      "retrieved_ids_top10": [
+        "Verhältnis DSGVO zu ePrivacy/TTDSG (lex specialis)",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_319",
+        "gran_TDDDG_§_25",
+        "beh_27.03.2014-_Anlage_Entschließung_Elektr_24",
+        "Verhältnis DSGVO – TTDSG – § 7 UWG bei Werbung und Direktmarketing",
+        "beh_30.11.2022-_Orientierungshilfe_der_Aufsi_136",
+        "beh_November_2024-_Orientierungshilfe_der_Au_36",
+        "gran_TDDDG_§_29",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_111",
+        "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_14"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.19,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.19,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.19,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 0.25
+    }
+  ]
+}

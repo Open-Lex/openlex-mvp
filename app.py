@@ -1287,6 +1287,12 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                         print(f"  Diversifizierung: {group_name}-Chunk nachgeschoben")
                         break
 
+    # Tenor-Injektion: Für jedes Urteil den Tenor-Chunk sicherstellen
+    selected = _inject_tenor_chunks(selected, col)
+
+    # Dynamische Tiefe: Für hochrelevante Urteile EG-Chunks nachladen
+    selected = _fetch_deep_chunks(selected, col)
+
     # EG-Anreicherung: Passende Erwägungsgründe automatisch nachladen
     selected = _enrich_with_erwaegungsgruende(selected, col)
 
@@ -1305,6 +1311,135 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             return selected, {"chunks": _trace, "rewrite": rewrite_info}
         return selected, _trace
     return selected
+
+
+
+def _inject_tenor_chunks(selected: list, col) -> list:
+    """Stellt sicher, dass für jedes Urteil in den Ergebnissen auch der Tenor-Chunk da ist.
+
+    Wenn ein Urteil (urteil oder urteil_segmentiert) in den Ergebnissen vorkommt,
+    aber sein Tenor-Chunk fehlt, wird er aus ChromaDB nachgeladen und eingefügt.
+    Der Tenor ist der rechtlich bindende Kern — er soll immer sichtbar sein.
+    """
+    # Welche Aktenzeichen sind in den Ergebnissen? Höchster ce_score pro AZ merken.
+    seen_az: dict[str, float] = {}
+    for c in selected:
+        st = c.get("meta", {}).get("source_type", "")
+        if st not in ("urteil", "urteil_segmentiert"):
+            continue
+        az = c.get("meta", {}).get("aktenzeichen", "")
+        if az:
+            seen_az[az] = max(seen_az.get(az, 0.0), c.get("ce_score", 0.0))
+
+    if not seen_az:
+        return selected
+
+    injected = []
+    for az, score in seen_az.items():
+        # Tenor schon vorhanden?
+        already_has_tenor = any(
+            c.get("meta", {}).get("aktenzeichen") == az
+            and c.get("meta", {}).get("segment") == "tenor"
+            for c in selected
+        )
+        if already_has_tenor:
+            continue
+
+        try:
+            r = col.get(
+                where={"aktenzeichen": az, "segment": "tenor"},
+                include=["metadatas", "documents"],
+                limit=1,
+            )
+        except Exception:
+            continue
+
+        if r["ids"]:
+            meta = r["metadatas"][0] or {}
+            doc = r["documents"][0] or ""
+            injected.append({
+                "id": r["ids"][0],
+                "text": doc,
+                "meta": meta,
+                "ce_score": score * 0.85,   # knapp unter dem auslösenden Chunk
+                "adjusted_distance": 1.0,
+                "source": "tenor_injected",
+                "_tenor_injected": True,
+            })
+            print(f"  Tenor injiziert: {az}")
+
+    return selected + injected
+
+
+def _fetch_deep_chunks(selected: list, col) -> list:
+    """Lädt für hochrelevante Urteile zusätzliche Entscheidungsgründe-Chunks nach.
+
+    Tier-Logik basiert auf dem besten ce_score pro Aktenzeichen:
+      ≥ 0.6  →  bis zu 3 weitere EG-Chunks
+      ≥ 0.35 →  bis zu 1 weiterer EG-Chunk
+      < 0.35 →  nur Tenor (bereits via _inject_tenor_chunks)
+
+    Tatbestand wird nicht automatisch geholt — er enthält selten rechtlich
+    Verwertbares für die direkte Antwort.
+    """
+    URTEIL_DEEP_THRESHOLDS = [
+        (0.6,  3),   # score ≥ 0.6  → +3 EG-Chunks
+        (0.35, 1),   # score ≥ 0.35 → +1 EG-Chunk
+    ]
+
+    # Bester Score pro AZ (nur urteil_segmentiert — flat urteile haben keine Segmente)
+    az_scores: dict[str, float] = {}
+    for c in selected:
+        if c.get("meta", {}).get("source_type") != "urteil_segmentiert":
+            continue
+        az = c.get("meta", {}).get("aktenzeichen", "")
+        if az:
+            az_scores[az] = max(az_scores.get(az, 0.0), c.get("ce_score", 0.0))
+
+    if not az_scores:
+        return selected
+
+    already_ids = {c.get("id", "") for c in selected}
+    extra = []
+
+    for az, score in az_scores.items():
+        limit = 0
+        for threshold, n in URTEIL_DEEP_THRESHOLDS:
+            if score >= threshold:
+                limit = n
+                break
+        if limit == 0:
+            continue
+
+        try:
+            r = col.get(
+                where={"aktenzeichen": az, "segment": "entscheidungsgruende"},
+                include=["metadatas", "documents"],
+                limit=limit + 5,   # Puffer: mehr holen, dann filtern
+            )
+        except Exception:
+            continue
+
+        added = 0
+        for cid, m, d in zip(r["ids"], r["metadatas"], r["documents"]):
+            if cid in already_ids or added >= limit:
+                break
+            extra.append({
+                "id": cid,
+                "text": d or "",
+                "meta": m or {},
+                "ce_score": score * 0.75,
+                "adjusted_distance": 1.0,
+                "source": "deep_injected",
+                "_deep_injected": True,
+            })
+            already_ids.add(cid)
+            added += 1
+
+        if added > 0:
+            print(f"  Deep-Chunks: {az} (score={score:.2f}) → +{added} EG-Chunks")
+
+    return selected + extra
 
 
 def _enrich_with_erwaegungsgruende(results: list[dict], col) -> list[dict]:
@@ -2388,16 +2523,16 @@ PWA_HEAD = (
     '    var h=document.querySelector(".ol-hamburger");'
     '    var bd=document.getElementById("menu-backdrop");'
     '    bindOnce(x, closeMenu);'
-    '    bindOnce(h, function(){'
-    '      var p=document.getElementById("menu-panel");'
-    '      if(p && p.classList.contains("menu-closed")) openMenu(); else closeMenu();'
-    '    });'
     '    bindOnce(bd, closeMenu);'
-    '    if(x && h && bd) clearInterval(t);'
+    '    if(x && bd) clearInterval(t);'
     '  }, 300);'
     '  setTimeout(function(){clearInterval(t);}, 15000);'
     '  document.addEventListener("keydown", function(e){ if(e.key==="Escape") closeMenu(); });'
     '  window.__olCloseMenu = closeMenu;'
+    '  window.__olToggle = function(){'
+    '    var p=document.getElementById("menu-panel");'
+    '    if(p && p.classList.contains("menu-closed")) openMenu(); else closeMenu();'
+    '  };'
     '})();'
     '</script>'
     '<script>'
@@ -2740,7 +2875,7 @@ def build_app() -> gr.Blocks:
     HEADER_MENU_HTML = (
         '<div id="ol-header">'
         '<div class="ol-brand"><span class="ol-open">Open</span><span class="ol-lex">Lex</span></div>'
-        f'<div class="ol-hamburger" onclick="{TOGGLE_MENU}" ontouchend="this.click();event.preventDefault();">\u2630</div>'
+        '<div class="ol-hamburger" onclick="window.__olToggle&&window.__olToggle()" ontouchend="window.__olToggle&&window.__olToggle();event.preventDefault()">\u2630</div>'
         '</div>'
         '<div id="menu-panel" class="menu-closed">'
         '<div class="menu-top">'
@@ -3142,13 +3277,27 @@ if __name__ == "__main__":
         .copy-qa-btn.copied { color: var(--gold) !important; border-color: var(--gold) !important; opacity: 1; }
         #ol-chatbot .bot.message-row, #ol-chatbot [data-testid="bot"].message-row,
         #ol-chatbot .message-wrap:has(.bot) { position: relative; }
-        /* Tables: horizontal scroll instead of squeezing */
-        .message table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch;
-                         border-collapse: collapse; white-space: nowrap; margin: 12px 0; }
-        .message th, .message td { padding: 8px 14px !important; border: 1px solid var(--border) !important;
-                                    font-size: 15px !important; white-space: normal; min-width: 140px; }
-        .message th { background: var(--surface) !important; font-weight: 600 !important; }
-        .message td { background: transparent !important; }
+        /* Tables: horizontal scroll + explizite Farben (höhere Spezifität via #ol-chatbot) */
+        #ol-chatbot .message table, .message table {
+            display: block !important; overflow-x: auto !important;
+            -webkit-overflow-scrolling: touch !important;
+            border-collapse: collapse !important; white-space: nowrap !important; margin: 12px 0 !important; }
+        #ol-chatbot .message th, #ol-chatbot .message td,
+        .message th, .message td {
+            padding: 8px 14px !important;
+            border: 1px solid rgba(255,255,255,0.15) !important;
+            font-size: 15px !important; white-space: normal !important;
+            min-width: 120px !important;
+            color: #e0e0e0 !important; }
+        #ol-chatbot .message th, .message th {
+            background: rgba(212,168,67,0.12) !important;
+            font-weight: 600 !important;
+            color: #f0f0f0 !important;
+            border-bottom: 2px solid rgba(212,168,67,0.4) !important; }
+        #ol-chatbot .message td, .message td {
+            background: rgba(255,255,255,0.03) !important; }
+        #ol-chatbot .message tr:nth-child(even) td, .message tr:nth-child(even) td {
+            background: rgba(255,255,255,0.06) !important; }
 
         /* ── Inline Sources (collapsed in chat message) ── */
         .src-collapse { margin-top: 16px !important; border-top: 1px solid var(--border); padding-top: 8px; }

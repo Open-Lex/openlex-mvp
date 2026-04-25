@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-04-23T18:57:51.876826",
+  "eval_set": "messy.json",
+  "output_suffix": "bge_v2_m3",
+  "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+  "ce_cutoff": 3.0,
+  "top_k_retrieval": 40,
+  "reranker_input_truncation": 500,
+  "git_commit": "f4ba23b",
+  "git_branch": "feature/reranker-bge-v2-m3"
+}

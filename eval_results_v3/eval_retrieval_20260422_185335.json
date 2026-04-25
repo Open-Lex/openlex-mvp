@@ -1,0 +1,184 @@
+{
+  "summary": {
+    "avg_hit@3": 0.6,
+    "avg_ndcg@3": 0.19,
+    "forbidden_hit_rate@3": 0.0,
+    "avg_hit@5": 0.6,
+    "avg_ndcg@5": 0.19,
+    "forbidden_hit_rate@5": 0.0,
+    "avg_hit@10": 0.6,
+    "avg_ndcg@10": 0.19,
+    "forbidden_hit_rate@10": 0.0,
+    "avg_mrr": 0.2,
+    "by_category": {
+      "allgemein": 0.0,
+      "cookies_tracking": 1.0,
+      "methodenwissen": 0.0
+    },
+    "duration_s": 23.6,
+    "n_questions": 5,
+    "timestamp": "2026-04-22 18:53"
+  },
+  "results": [
+    {
+      "id": "canonical_001",
+      "question": "Wie ist die Rangfolge der Rechtsnormen im europäischen Datenschutzrecht strukturiert und welche konkreten Rechtsquellen sind auf den einzelnen Ebenen zu beachten?",
+      "category": "methodenwissen",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_C-416_23_rechtsrahmen_0",
+        "eugh_C-638_23_rechtsrahmen_0",
+        "eugh_C-446_21_rechtsrahmen_0",
+        "eugh_C-487_21_rechtsrahmen_0",
+        "eugh_C-683_21_rechtsrahmen_0",
+        "eugh_c_307_22_rechtsrahmen_0",
+        "eugh_C-604_22_sachverhalt_3",
+        "eugh_C-492_23_rechtsrahmen_0",
+        "eugh_C-446_21_vf_2b_2",
+        "eugh_C-65_23_vf_1_3"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 17.55
+    },
+    {
+      "id": "canonical_002",
+      "question": "Unter welchen Voraussetzungen müssen nationale Gerichte Vorschriften des Bundesdatenschutzgesetzes unangewendet lassen, wenn diese mit der Datenschutz-Grundverordnung in Konflikt stehen?",
+      "category": "allgemein",
+      "gold_ids": [],
+      "retrieved_ids_top10": [
+        "eugh_C-65_23_vf_2_0",
+        "eugh_C-492_23_rechtsrahmen_4",
+        "eugh_c_140_20_sachverhalt_3",
+        "eugh_C-645_19_wuerdigung_15",
+        "beh_11.05.2023-_Notwendigkeit_spezifischer_R_6",
+        "eugh_C-26_22_rechtsrahmen_5",
+        "eugh_C-453_21_sachverhalt_1",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_86",
+        "eugh_C-313_23_rechtsrahmen_0",
+        "eugh_C-740_22_vf_2_3_0"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.36
+    },
+    {
+      "id": "canonical_003",
+      "question": "Welche spezifischen Öffnungsklauseln der DSGVO ermöglichen es den Mitgliedstaaten, nationale Regelungen für die Verarbeitung besonderer Kategorien personenbezogener Daten im Arbeitsrecht zu erlassen?",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 88 DSGVO",
+        "eugh_C-34_21_vf_1_1",
+        "eugh_C-34_21_vorlagefragen_3",
+        "eugh_C-65_23_vf_1_0",
+        "eugh_C-34_21_vf_2_0",
+        "beh_14Beschäftigtendatenschutz_3",
+        "eugh_C-311_18_sachverhalt_5",
+        "beh_11.05.2023-_Notwendigkeit_spezifischer_R_6",
+        "beh_11.05.2023-_Notwendigkeit_spezifischer_R_4"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.61
+    },
+    {
+      "id": "canonical_004",
+      "question": "Welche konkreten Vorschriften des BDSG setzen die Öffnungsklauseln der DSGVO um und welche rechtlichen Einschränkungen ergeben sich dabei insbesondere im Bereich des Beschäftigtendatenschutzes?",
+      "category": "methodenwissen",
+      "gold_ids": [
+        "gran_BDSG_§_26_Abs.1"
+      ],
+      "retrieved_ids_top10": [
+        "Art. 88 DSGVO",
+        "Art. 6 DSGVO (Teil 1)",
+        "Art. 6 DSGVO (Teil 2)",
+        "dd8676b5fa6eb84d",
+        "8c5a57d49b9a3646",
+        "eugh_C-34_21_vf_1_3",
+        "eugh_C-34_21_vorlagefragen_3",
+        "eugh_C-65_23_rechtsrahmen_4",
+        "eugh_C-34_21_sachverhalt_1",
+        "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_30"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 0.0,
+        "ndcg@3": 0.0,
+        "forbidden_hit@3": false,
+        "hit@5": 0.0,
+        "ndcg@5": 0.0,
+        "forbidden_hit@5": false,
+        "hit@10": 0.0,
+        "ndcg@10": 0.0,
+        "forbidden_hit@10": false,
+        "mrr": 0.0
+      },
+      "duration_s": 1.76
+    },
+    {
+      "id": "canonical_005",
+      "question": "Welche spezifischen rechtlichen Anforderungen sind bei der Verwendung von Cookies auf einer Website zu beachten und wie verhalten sich dabei die Regelungen des TTDSG zu denen der DSGVO?",
+      "category": "cookies_tracking",
+      "gold_ids": [
+        "gran_TDDDG_§_25"
+      ],
+      "retrieved_ids_top10": [
+        "gran_TDDDG_§_25",
+        "gran_TDDDG_§_29",
+        "Verhältnis DSGVO zu ePrivacy/TTDSG (lex specialis)",
+        "Verhältnis DSGVO – TTDSG – § 7 UWG bei Werbung und Direktmarketing",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_92",
+        "beh_November_2024-_Orientierungshilfe_der_Au_60",
+        "beh_November_2024-_Orientierungshilfe_der_Au_66",
+        "beh_November_2024-_Orientierungshilfe_der_Au_25",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_43",
+        "beh_30.11.2022-_Orientierungshilfe_der_Aufsi_114"
+      ],
+      "retrieval_metrics": {
+        "hit@3": 1.0,
+        "ndcg@3": 0.95,
+        "forbidden_hit@3": false,
+        "hit@5": 1.0,
+        "ndcg@5": 0.95,
+        "forbidden_hit@5": false,
+        "hit@10": 1.0,
+        "ndcg@10": 0.95,
+        "forbidden_hit@10": false,
+        "mrr": 1.0
+      },
+      "duration_s": 1.29
+    }
+  ]
+}
