@@ -739,7 +739,10 @@ def main():
     # Embedden
     items = []
     for chunk in CHUNKS:
-        cid = f"mw_{re.sub(r'[^a-z0-9]', '_', chunk['thema'].lower())[:60]}"
+        def _slug(t):
+            for a, b in [('Ä','Ae'),('Ö','Oe'),('Ü','Ue'),('ä','ae'),('ö','oe'),('ü','ue'),('ß','ss')]: t = t.replace(a, b)
+            return re.sub(r'[^a-z0-9]+', '_', t.lower()).strip('_')
+        cid = f"mw_{_slug(chunk['thema'])[:60]}"
         if cid in existing_ids:
             continue
         items.append({

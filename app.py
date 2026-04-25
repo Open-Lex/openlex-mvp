@@ -3289,13 +3289,8 @@ if __name__ == "__main__":
             font-size: 15px !important; white-space: normal !important;
             min-width: 120px !important;
             color: #ffffff !important; }
-        #ol-chatbot .message th, #ol-chatbot .message td p,
-        #ol-chatbot .message td span, #ol-chatbot .message td strong,
-        #ol-chatbot .message td em, #ol-chatbot .message td a,
-        .message th, .message td p, .message td span,
-        .message td strong, .message td em, .message td a,
-        .message th p, .message th span, .message th strong {
-            color: #ffffff !important; }
+        #ol-chatbot .message td *, #ol-chatbot .message th *,
+        .message td *, .message th * { color: #ffffff !important; }
         #ol-chatbot .message th, .message th {
             background: rgba(212,168,67,0.15) !important;
             font-weight: 600 !important;
