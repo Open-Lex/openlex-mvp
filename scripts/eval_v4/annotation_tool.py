@@ -62,6 +62,53 @@ def get_chunk_meta(chunk_id: str) -> dict:
     return {}
 
 
+
+# Segment-Sortierung: Tenor zuerst, dann leitsatz, dann EG, dann Tatbestand
+_SEGMENT_ORDER = {"tenor": 0, "leitsatz": 1, "entscheidungsgruende": 2,
+                  "wuerdigung": 3, "vorlagefragen": 4, "sachverhalt": 5, "tatbestand": 6}
+
+
+def load_urteil_chunks(aktenzeichen: str) -> list[dict]:
+    """Lädt alle Chunks eines Urteils aus ChromaDB, sortiert nach Segment-Typ."""
+    if _col is None or not aktenzeichen:
+        return []
+    try:
+        r = _col.get(
+            where={"aktenzeichen": aktenzeichen},
+            include=["metadatas", "documents"],
+            limit=100,
+        )
+        result = []
+        for cid, meta, doc in zip(r["ids"], r["metadatas"], r["documents"]):
+            seg = (meta or {}).get("segment", "")
+            result.append({
+                "chunk_id": cid,
+                "segment": seg,
+                "text": doc or "",
+                "meta": meta or {},
+                "sort_key": (_SEGMENT_ORDER.get(seg.split("_")[0], 9), cid),
+            })
+        result.sort(key=lambda x: x["sort_key"])
+        for c in result:
+            _chunk_cache[c["chunk_id"]] = c["text"]
+        return result
+    except Exception as e:
+        print(f"[load_urteil_chunks] {aktenzeichen}: {e}", flush=True)
+        return []
+
+
+def _seg_prefix(segment: str) -> str:
+    """Kurzes Label-Präfix für Segment-Typ."""
+    if segment == "tenor":      return "[Tenor]"
+    if segment == "leitsatz":   return "[Leitsatz]"
+    if segment.startswith("entscheidungsgruende"): return "[EG]"
+    if segment.startswith("wuerdigung"):           return "[EG]"
+    if segment.startswith("vorlagefragen"):        return "[VF]"
+    if segment.startswith("sachverhalt"):          return "[SV]"
+    if segment == "tatbestand": return "[TB]"
+    return f"[{segment[:6]}]"
+
+
 # ─── Lazy retrieve ────────────────────────────────────────────────────────────
 _retrieve_fn = None
 
@@ -188,20 +235,56 @@ def _make_label(chunk_id: str, score, volladr: str, snippet: str, meta: dict = N
 def build_candidate_choices(q) -> list[str]:
     """
     Checkbox-Choices aus retrieval_candidates.
-    Manuell hinzugefügte IDs (not in candidates) werden aus ChromaDB ergänzt.
+    Urteile: Tenor-Chunk zuerst (auch wenn nicht in Kandidaten), dann weitere Segmente.
+    Manuell gesetzte IDs werden am Ende ergänzt.
     """
     choices = []
-    seen_ids = set()
+    seen_ids: set[str] = set()
+
+    # Kandidaten nach source_type aufteilen
+    urteil_az: dict[str, dict] = {}   # az → {score, gericht, az, kandidaten_ids}
+    other_candidates = []
 
     for c in q.get("retrieval_candidates", []):
+        st = c.get("source_type", "")
+        az = c.get("aktenzeichen", "")
+        if st in ("urteil", "urteil_segmentiert") and az:
+            if az not in urteil_az:
+                urteil_az[az] = {"score": c.get("score", 0.0),
+                                 "gericht": c.get("gericht", ""),
+                                 "az": az}
+            else:
+                urteil_az[az]["score"] = max(urteil_az[az]["score"], c.get("score", 0.0))
+        else:
+            other_candidates.append(c)
+
+    # Urteile: Tenor zuerst, dann alle weiteren Chunks als separate Checkboxen
+    for az, info in urteil_az.items():
+        chunks = load_urteil_chunks(az)
+        gericht = info.get("gericht", "")
+        for chunk in chunks:
+            cid = chunk["chunk_id"]
+            if cid in seen_ids:
+                continue
+            seen_ids.add(cid)
+            seg    = chunk.get("segment", "")
+            prefix = _seg_prefix(seg)
+            snip   = (chunk.get("text") or "")[:300]
+            label  = f"{prefix} {gericht} {az} | {cid} | {snip}"
+            choices.append(label)
+
+    # Nicht-Urteil-Kandidaten flach
+    for c in other_candidates:
         cid = c.get("chunk_id", "")
+        if cid in seen_ids:
+            continue
         seen_ids.add(cid)
-        volladr  = c.get("volladresse") or c.get("gesetz") or ""
-        snippet  = c.get("snippet") or ""
-        label    = _make_label(cid, c.get("score", 0.0), volladr, snippet, meta=c)
+        volladr = c.get("volladresse") or c.get("gesetz") or ""
+        snippet = c.get("snippet") or ""
+        label   = _make_label(cid, c.get("score", 0.0), volladr, snippet, meta=c)
         choices.append(label)
 
-    # Manuell gesetzte IDs, die nicht in candidates sind → aus DB nachladen
+    # Manuell gesetzte IDs die nicht in candidates sind
     for cid in q.get("must_contain_chunk_ids", []):
         if cid in seen_ids:
             continue
@@ -220,31 +303,104 @@ def build_forbidden_choices(q) -> list[str]:
 
 
 def build_candidates_markdown(q) -> str:
+    """
+    Kandidaten-Detail-Ansicht.
+    Urteile: Tenor vollständig + <details>-Accordion für restliche Segmente.
+    Andere Quellen: flache Liste wie bisher.
+    """
     candidates = q.get("retrieval_candidates", [])
     if not candidates:
         return "_Keine Kandidaten vorhanden._"
+
+    # Urteile gruppieren
+    urteil_az: dict[str, dict] = {}
+    other_candidates = []
+    for c in candidates:
+        st = c.get("source_type", "")
+        az = c.get("aktenzeichen", "")
+        if st in ("urteil", "urteil_segmentiert") and az:
+            if az not in urteil_az:
+                urteil_az[az] = {
+                    "gericht": c.get("gericht", ""),
+                    "az": az,
+                    "score": c.get("score", 0.0),
+                }
+            else:
+                urteil_az[az]["score"] = max(urteil_az[az]["score"], c.get("score", 0.0))
+        else:
+            other_candidates.append(c)
+
     parts = []
-    for i, c in enumerate(candidates, 1):
-        cid    = c.get("chunk_id", "")
-        score  = c.get("score", 0.0)
-        gesetz = c.get("gesetz") or ""
-        vol    = c.get("volladresse") or ""
-        src    = c.get("source_type") or ""
-        # Urteile: gericht+aktenzeichen als Fallback wenn gesetz/volladresse leer
-        if not gesetz and not vol:
-            db_meta = get_chunk_meta(cid)
-            gericht = db_meta.get("gericht") or ""
-            az      = db_meta.get("aktenzeichen") or ""
-            gesetz  = gericht
-            vol     = az
-        full   = get_full_chunk_text(cid) or c.get("snippet") or "_Volltext nicht ladbar_"
-        if len(full) > 2000:
-            full = full[:2000] + "\n\n_(… gekürzt auf 2000 Zeichen)_"
-        parts.append(
-            f"### {i}. `{cid}` · Score {score:.3f}\n"
-            f"**Gesetz:** {gesetz}  ·  **Volladresse:** {vol}  ·  **Source-Type:** {src}\n\n"
-            f"{full}\n\n---"
-        )
+
+    # ── Urteile ──────────────────────────────────────────────────────────────
+    if urteil_az:
+        parts.append("## ⚖️ Urteile")
+        for az, info in urteil_az.items():
+            gericht = info["gericht"]
+            score   = info["score"]
+            chunks  = load_urteil_chunks(az)
+            if not chunks:
+                parts.append(f"### {gericht} · {az}\n_Keine Chunks in DB._\n\n---")
+                continue
+
+            tenor_chunks = [c for c in chunks if c["segment"] == "tenor"]
+            other_chunks = [c for c in chunks if c["segment"] != "tenor"]
+
+            # Header
+            parts.append(f"### {gericht} · `{az}` · Score {score:.3f}")
+
+            # Tenor: immer vollständig angezeigt
+            for tc in tenor_chunks:
+                text = (tc["text"] or "_kein Tenor-Text_")
+                cid  = tc["chunk_id"]
+                parts.append(
+                    f"**🎯 Tenor** `{cid}`\n\n"
+                    f"> {text.replace(chr(10), chr(10) + '> ')}"
+                )
+
+            # Restliche Segmente als aufklappbare HTML-Details
+            if other_chunks:
+                # Segmente gruppieren für übersichtlichere Darstellung
+                seg_groups: dict[str, list] = {}
+                for c in other_chunks:
+                    seg_base = c["segment"].split("_")[0] if "_" in c["segment"] else c["segment"]
+                    seg_groups.setdefault(seg_base, []).append(c)
+
+                detail_lines = []
+                for seg_base, seg_chunks in seg_groups.items():
+                    for c in seg_chunks:
+                        cid  = c["chunk_id"]
+                        text = (c["text"] or "")[:600]
+                        if len(c["text"] or "") > 600:
+                            text += "…"
+                        detail_lines.append(
+                            f"<p><strong>{_seg_prefix(c['segment'])} <code>{cid}</code></strong><br>"
+                            f"<small>{text}</small></p>"
+                        )
+
+                parts.append(
+                    f'<details><summary>▶ Weitere {len(other_chunks)} Chunks '
+                    f'({", ".join(f"{len(v)}× {k}" for k, v in seg_groups.items())})'
+                    f'</summary>\n\n{"".join(detail_lines)}\n</details>'
+                )
+            parts.append("\n---")
+
+    # ── Andere Quellen ────────────────────────────────────────────────────────
+    if other_candidates:
+        parts.append("## 📄 Gesetze / Leitlinien / Sonstiges")
+        for i, c in enumerate(other_candidates, 1):
+            cid    = c.get("chunk_id", "")
+            score  = c.get("score", 0.0)
+            gesetz = c.get("gesetz") or c.get("volladresse") or ""
+            st     = c.get("source_type") or ""
+            full   = get_full_chunk_text(cid) or c.get("snippet") or "_Volltext nicht ladbar_"
+            if len(full) > 1500:
+                full = full[:1500] + "\n\n_(… gekürzt)_"
+            parts.append(
+                f"### {i}. `{cid}` · Score {score:.3f}\n"
+                f"**{gesetz}** · {st}\n\n{full}\n\n---"
+            )
+
     return "\n\n".join(parts)
 
 
