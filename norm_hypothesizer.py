@@ -39,6 +39,39 @@ Regeln:
 6. Bei Fragen zur Rechtsprechung: zusätzlich relevante Normen, KEINE Aktenzeichen
 7. Bei unklaren Fragen: weniger Hypothesen mit niedriger Confidence
 
+WICHTIGE FAKTEN-REGELN — NICHT VERLETZEN:
+
+8. Gesetz-Strukturen (verwende NUR existierende Paragraphen/Artikel):
+   - DSGVO: Art. 1 bis Art. 99, plus Erwägungsgründe 1 bis 173
+   - BDSG (neu, seit 25.05.2018): § 1 bis § 85 — KEINE Paragraphen darüber
+   - TDDDG: § 1 bis § 23 (vormals TTDSG, am 14.05.2024 umbenannt im Zuge des Digitale-Dienste-Gesetzes)
+   - DDG: in Kraft seit 14.05.2024
+   - Erfinde NIEMALS Paragraphen oder Artikel, die nicht existieren.
+
+9. Aktualität deutscher Datenschutz-Gesetze:
+   - Verwende TDDDG, NICHT TTDSG (Umbenennung Mai 2024)
+   - TMG (Telemediengesetz) wurde 2021 weitgehend durch TTDSG/TDDDG ersetzt — bei Cookie-/Tracking-Fragen IMMER TDDDG verwenden, NICHT TMG
+   - § 32 BDSG (alt, vor 2018) wurde durch § 26 BDSG (neu) ersetzt
+   - Wenn der User explizit nach veralteter Norm fragt: aktuelle Nachfolgenorm + Hinweis als Begründung
+
+10. Häufig verwechselte Normen (Klarstellungen):
+    - § 32 BDSG (neu, seit 2018): regelt Informationspflichten im JI-Bereich (Strafverfolgung) — NICHT Beschäftigten- oder Vereinsdatenschutz
+    - § 26 BDSG: Beschäftigtendatenschutz (Nachfolger von § 32 BDSG a.F.)
+    - § 62 BDSG: Datenverarbeitung im JI-Bereich (Polizei) — NICHT Bußgelder oder Auftragsverarbeitung
+    - § 5 TDDDG: Vertraulichkeit der Kommunikation — NICHT Datenschutzbeauftragter
+    - Art. 45 DSGVO: Angemessenheitsbeschluss — Art. 46 DSGVO: Geeignete Garantien (z.B. SCCs)
+    - § 38 BDSG: nationale Verschärfung der DSB-Pflicht
+    - § 41/§ 43 BDSG: Bußgeldvorschriften (NICHT § 42, das ist die Strafvorschrift)
+
+11. Vereinsdatenschutz (häufiger Stolperstein):
+    - Es gibt KEINE BDSG-Spezialnorm für Vereinsdatenschutz
+    - Vereine fallen unter die allgemeinen DSGVO-Normen (Art. 6, 9 bei Religionsgemeinschaften)
+    - § 32 BDSG ist HIER NICHT EINSCHLÄGIG
+
+12. Begründungs-Genauigkeit:
+    - Wenn du dir bei der Begründung unsicher bist, halte sie kurz (1 Wort) — erfinde KEINE inhaltlichen Aussagen
+    - Lieber "Definition" als "Definition Sensible Daten Abs. 3" wenn du die Stelle nicht 100% sicher kennst
+
 Beispiele:
 
 Query: "Darf mein Arbeitgeber meine E-Mails lesen?"
@@ -61,7 +94,24 @@ Output:
 [
   {"norm": "Art. 82 DSGVO", "confidence": 0.95, "reason": "Schadensersatzanspruch"},
   {"norm": "Art. 22 DSGVO", "confidence": 0.85, "reason": "Automatisierte Entscheidung"},
-  {"norm": "Art. 15 DSGVO", "confidence": 0.6, "reason": "Auskunftsanspruch"}
+  {"norm": "§ 31 BDSG", "confidence": 0.8, "reason": "Scoring-Spezialnorm"}
+]
+
+Query: "Datenschutz im Verein"
+Output:
+[
+  {"norm": "Art. 6 DSGVO", "confidence": 0.85, "reason": "Rechtsgrundlage"},
+  {"norm": "Art. 9 DSGVO", "confidence": 0.6, "reason": "ggf. Sonderkategorien"},
+  {"norm": "Art. 13 DSGVO", "confidence": 0.7, "reason": "Informationspflichten"},
+  {"norm": "Art. 30 DSGVO", "confidence": 0.5, "reason": "Verzeichnis (ab 250 MA)"}
+]
+
+Query: "Sind Cookies ohne Einwilligung erlaubt?"
+Output:
+[
+  {"norm": "§ 25 TDDDG", "confidence": 1.0, "reason": "Cookie-Einwilligung"},
+  {"norm": "Art. 6 DSGVO", "confidence": 0.7, "reason": "Rechtsgrundlage"},
+  {"norm": "Art. 4 DSGVO", "confidence": 0.5, "reason": "Einwilligungsdefinition Nr. 11"}
 ]
 
 Antworte ausschließlich mit JSON-Array, kein Markdown, keine Erklärung."""
@@ -158,18 +208,32 @@ def _validate_hypothesis(item: dict) -> Optional[dict]:
 
 
 def _parse_response(raw: str) -> Optional[list]:
-    """Parst LLM-Output zu validierter Hypothesen-Liste."""
+    """Parst LLM-Output zu validierter Hypothesen-Liste.
+    
+    Robuste Strategie:
+    1. Suche das erste "[" im Response
+    2. raw_decode() parst genau das erste valide JSON-Array (stoppt bei trailing text)
+    3. Markdown-Fences werden vorab entfernt
+    4. Validierung jedes Items
+    """
     if not raw:
         return None
 
-    # Markdown-Fences entfernen falls LLM trotzdem welche setzt
+    # Markdown-Fences entfernen
     cleaned = raw.strip()
-    if cleaned.startswith("```"):
+    if "```" in cleaned:
         lines = cleaned.split("\n")
-        cleaned = "\n".join(ln for ln in lines if not ln.startswith("```"))
+        cleaned = "\n".join(ln for ln in lines if not ln.startswith("```")).strip()
 
+    # Erstes "[" finden
+    start = cleaned.find("[")
+    if start == -1:
+        return None
+
+    # raw_decode parst das erste valide JSON-Objekt, ignoriert trailing text
+    decoder = json.JSONDecoder()
     try:
-        parsed = json.loads(cleaned)
+        parsed, _ = decoder.raw_decode(cleaned, start)
     except json.JSONDecodeError:
         return None
 
@@ -204,7 +268,7 @@ def _call_mistral(query: str) -> str:
             {"role": "user", "content": query},
         ],
         "temperature": 0.0,
-        "max_tokens": 600,
+        "max_tokens": 1000,
     }
 
     backoff = 1.0
