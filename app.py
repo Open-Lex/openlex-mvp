@@ -2924,6 +2924,16 @@ if __name__ == "__main__":
         :root {
             --bg: #111114; --surface: #16161a; --border: #2a2a30;
             --gold: #d4a843; --text: #e0e0e0; --dim: #6b6b70;
+            /* Override Gradio CSS vars so svelte markdown uses dark-mode colors */
+            --body-text-color: #e0e0e0;
+            --body-text-color-subdued: #6b6b70;
+            --body-background-fill: #111114;
+            --background-fill-primary: #111114;
+            --background-fill-secondary: #16161a;
+            --border-color-primary: #2a2a30;
+            --table-text-color: #e0e0e0;
+            --link-text-color: #d4a843;
+            --link-text-color-hover: #e0bb66;
         }
 
         /* ── Base ── */
