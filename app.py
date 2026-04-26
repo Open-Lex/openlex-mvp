@@ -807,6 +807,68 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             logging.getLogger(__name__).warning(f"Rewrite path errored, using original: {e}")
     # === /Rewriting ===
 
+    # === Phase 0b: Norm-Hypothesizer (Shadow-Mode) ===
+    # Generiert priorisierte Norm-Liste, loggt sie — nutzt sie NICHT im Retrieval.
+    # Steuerung: OPENLEX_NORM_HYPOTHESIS_ENABLED=true/false
+    norm_hypotheses: list = []
+    norm_hypothesis_meta: dict = {"enabled": False, "duration_ms": 0.0, "error": None, "from_cache": False}
+
+    if os.getenv("OPENLEX_NORM_HYPOTHESIS_ENABLED", "false").lower() == "true":
+        try:
+            from norm_hypothesizer import hypothesize as _hypothesize
+            timeout_ms = int(os.getenv("OPENLEX_NORM_HYPOTHESIS_TIMEOUT_MS", "8000"))
+            _t0 = time.time()
+            try:
+                _hyp_result = _hypothesize(original_question, use_cache=True)
+                _duration = (time.time() - _t0) * 1000
+                if _duration > timeout_ms:
+                    logging.getLogger(__name__).warning(
+                        f"Norm hypothesis exceeded timeout: {_duration:.0f}ms > {timeout_ms}ms"
+                    )
+                norm_hypotheses = [
+                    {"norm": h.norm, "confidence": h.confidence, "reason": h.reason}
+                    for h in _hyp_result.hypotheses
+                ]
+                norm_hypothesis_meta = {
+                    "enabled": True,
+                    "duration_ms": _duration,
+                    "error": _hyp_result.error,
+                    "from_cache": _hyp_result.from_cache,
+                }
+            except Exception as _e:
+                logging.getLogger(__name__).warning(f"Norm hypothesis call failed: {_e}")
+                norm_hypothesis_meta["error"] = str(_e)
+        except ImportError as _e:
+            logging.getLogger(__name__).warning(f"Norm hypothesizer not available: {_e}")
+
+        # Telemetrie schreiben (non-blocking on error)
+        try:
+            from norm_hypothesis_telemetry import log_hypothesis as _log_hyp
+            _qu_norms: list = []
+            try:
+                _qu_norms = list(_expand_qu_norms(original_question)) or []
+            except Exception:
+                pass
+            _log_hyp(
+                query=original_question,
+                hypotheses=norm_hypotheses,
+                duration_ms=norm_hypothesis_meta["duration_ms"],
+                from_cache=norm_hypothesis_meta.get("from_cache", False),
+                error=norm_hypothesis_meta.get("error"),
+                qu_norms=_qu_norms,
+            )
+        except Exception as _e:
+            logging.getLogger(__name__).warning(f"Hypothesis telemetry failed: {_e}")
+
+        if _trace_enabled() and norm_hypothesis_meta["enabled"]:
+            logging.getLogger(__name__).info(
+                f"[trace] norm_hypotheses: {len(norm_hypotheses)} in "
+                f"{norm_hypothesis_meta['duration_ms']:.0f}ms, "
+                f"top: {[h['norm'] for h in norm_hypotheses[:3]]}"
+            )
+    # WICHTIG: norm_hypotheses wird hier NICHT im Retrieval verwendet (-> Schritt 1.3)
+    # === /Phase 0b ===
+
     model = get_model()
     col = get_collection()
 
