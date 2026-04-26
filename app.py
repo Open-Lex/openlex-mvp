@@ -2926,7 +2926,7 @@ if __name__ == "__main__":
             --gold: #d4a843; --text: #e0e0e0; --dim: #6b6b70;
             /* Override Gradio CSS vars so svelte markdown uses dark-mode colors */
             --body-text-color: #e0e0e0;
-            --body-text-color-subdued: #6b6b70;
+            --body-text-color-subdued: #9ca3af;
             --body-background-fill: #111114;
             --background-fill-primary: #111114;
             --background-fill-secondary: #16161a;
@@ -3068,7 +3068,7 @@ if __name__ == "__main__":
         .welcome-title { font-size: 2.6rem !important; font-weight: 700 !important; line-height: 1.2 !important;
                          color: #fff !important; margin: 0 0 16px !important; }
         .welcome-title .gold { color: var(--gold); }
-        .welcome-sub { color: var(--dim); font-size: 1.05rem; margin-bottom: 32px; }
+        .welcome-sub { color: #9ca3af !important; font-size: 1.05rem; margin-bottom: 32px; }
         .example-questions { display: flex; flex-direction: column; gap: 8px; max-width: 520px; margin: 0 auto; }
         .eq { background: var(--surface) !important; border: 1px solid var(--border) !important;
               color: var(--text) !important; padding: 12px 16px !important; border-radius: 10px !important;
