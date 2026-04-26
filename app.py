@@ -3146,9 +3146,11 @@ if __name__ == "__main__":
         .message table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch;
                          border-collapse: collapse; white-space: nowrap; margin: 12px 0; }
         .message th, .message td { padding: 8px 14px !important; border: 1px solid var(--border) !important;
-                                    font-size: 15px !important; white-space: normal; min-width: 140px; }
-        .message th { background: var(--surface) !important; font-weight: 600 !important; }
-        .message td { background: transparent !important; }
+                                    font-size: 15px !important; white-space: normal; min-width: 140px;
+                                    color: #ffffff !important; }
+        .message th { background: var(--surface) !important; font-weight: 600 !important;
+                       color: #ffffff !important; }
+        .message td { background: transparent !important; color: #ffffff !important; }
 
         /* ── Inline Sources (collapsed in chat message) ── */
         .src-collapse { margin-top: 16px !important; border-top: 1px solid var(--border); padding-top: 8px; }
