@@ -75,7 +75,7 @@ OLLAMA_MODELS = ["gemma4:e4b"]
 TOP_K_RETRIEVAL = 20
 TOP_K_CONTEXT = 10  # Legacy, jetzt dynamischer Cutoff
 MIN_DOCS = 3
-MAX_DOCS = 15
+MAX_DOCS = int(os.getenv("OPENLEX_MAX_DOCS", "8"))  # Schritt 2.4: von 15 auf 8 gesenkt
 CE_CUTOFF = 3.0
 DIST_CUTOFF = 0.25
 
