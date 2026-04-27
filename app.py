@@ -819,11 +819,13 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
 
     # a) Semantische Suche: Top-40 (breiterer Trichter für Merge)
     q_embedding = model.encode([search_query]).tolist()
+    _t_single_start = time.time()
     results = col.query(
         query_embeddings=q_embedding,
         n_results=40,
         include=["documents", "metadatas", "distances"],
     )
+    _single_call_duration_ms = (time.time() - _t_single_start) * 1000
 
     chunks = []
     seen_ids = set()
@@ -1060,6 +1062,78 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     # Diagnose-Hook: retrieve_candidates_only() gibt hier zurück, vor CE + Cutoff
     if _candidates_only:
         return chunks[:_candidates_top_k]
+
+    # ===== Schritt 2.2: Per-Source-Retrieval (Shadow-Mode) =====
+    # Läuft parallel zum Single-Call. Verwendet wird weiterhin der Single-Call.
+    # Steuerung via OPENLEX_PER_SOURCE_RETRIEVAL_ENABLED.
+    if os.getenv("OPENLEX_PER_SOURCE_RETRIEVAL_ENABLED", "false").lower() == "true":
+        try:
+            from per_source_retrieval import per_source_query as _ps_query, merge_with_type_budget as _ps_merge
+            from per_source_telemetry import log_per_source as _ps_log
+
+            _ps_t_start = time.time()
+
+            # Embedding bereits berechnet → cachen
+            _q_emb_cached = list(q_embedding[0]) if isinstance(q_embedding[0], list) else list(q_embedding)
+            _ps_embed_fn = lambda _: _q_emb_cached
+
+            _ps_result = _ps_query(
+                query_text=search_query,
+                embed_fn=_ps_embed_fn,
+            )
+            _ps_merged = _ps_merge(_ps_result)
+
+            _ps_duration_ms = (time.time() - _ps_t_start) * 1000
+
+            # Single-Call top-10 IDs
+            _single_top10 = [c.get("id", "") for c in chunks[:10] if c.get("id")]
+
+            # Per-Source top-10 IDs (nach Budget)
+            _ps_after_budget_ids = [c["chunk_id"] for c in _ps_merged[:10]]
+
+            # Overlap
+            _single_set = set(_single_top10)
+            _overlap = [cid for cid in _ps_after_budget_ids if cid in _single_set]
+
+            # Per-Source pro Typ: Top-5 IDs
+            _ps_top_per_type = {
+                st: src.chunk_ids[:5]
+                for st, src in _ps_result.per_source.items()
+            }
+
+            _ps_log(
+                query=question,
+                single_call_top10=_single_top10,
+                per_source_top_per_type=_ps_top_per_type,
+                per_source_after_budget=_ps_after_budget_ids,
+                single_call_duration_ms=_single_call_duration_ms,
+                per_source_duration_ms=_ps_duration_ms,
+                overlap_top10=_overlap,
+            )
+
+            print(
+                f"  [Per-Source Shadow] {len(_ps_after_budget_ids)} chunks, "
+                f"{len(_overlap)} overlap, {_ps_duration_ms:.0f}ms"
+            )
+        except Exception as _ps_err:
+            print(f"  [Per-Source Shadow] WARN: {_ps_err}")
+            try:
+                from per_source_telemetry import log_per_source as _ps_log_err
+                _ps_log_err(
+                    query=question,
+                    single_call_top10=[],
+                    per_source_top_per_type={},
+                    per_source_after_budget=[],
+                    single_call_duration_ms=0,
+                    per_source_duration_ms=0,
+                    overlap_top10=[],
+                    error=str(_ps_err),
+                )
+            except Exception:
+                pass
+    # WICHTIG: Pipeline verwendet weiterhin chunks aus Single-Call.
+    # Per-Source fließt erst in Schritt 2.3 aktiv ins Retrieval ein.
+    # ===== Ende Per-Source Shadow-Block =====
 
     candidates = chunks[:40]
 
