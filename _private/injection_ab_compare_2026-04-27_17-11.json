@@ -1,0 +1,3805 @@
+{
+  "summary": {
+    "total": 30,
+    "valid": 30,
+    "identical": 3,
+    "changed_top10": 27,
+    "changed_top3": 15,
+    "avg_new_hyp_per_changed": 4.6
+  },
+  "baseline": [
+    {
+      "query": "Darf mein Arbeitgeber meine E-Mails lesen?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_88",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_eugh_c_34_21_26_bdsg_unanwendbar",
+          "score": 5.8607072830200195,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-65_23_rechtsrahmen_4",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-34_21_vf_1_1",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_50",
+          "score": 5.4766985949348,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_14BeschÃ¤ftigtendatenschutz_38",
+          "score": 3.735347270965576,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_67",
+          "score": 3.5294117647058822,
+          "source": "keyword"
+        },
+        {
+          "id": "mw_beschaeftigtendatenschutz_email_it",
+          "score": 3.328855514526367,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "Was ist eine Auftragsverarbeitung?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "mw_art4_index",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_c_582_14_tenor",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_28_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_28_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_29",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_70",
+          "score": 8.98506613338695,
+          "source": "hybrid"
+        },
+        {
+          "id": "dsgvo_art_28_part1",
+          "score": 6.1376495361328125,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_61",
+          "score": 4.285714285714286,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_13Auftragsverarbeitung,_Art._28_DS-GVOin_30",
+          "score": 4.2489800453186035,
+          "source": "semantic"
+        },
+        {
+          "id": "beh_13Auftragsverarbeitung,_Art._28_DS-GVOin_16",
+          "score": 3.6534805297851562,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Welche Rechte habe ich nach DSGVO?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_17",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_recht_auf_vergessenwerden_pruefungsschema",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_15",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_27",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_27",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-307_22_header_4",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-307_22_header_10",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-307_22_header_8",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_48",
+          "score": 4.285714285714286,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_55",
+          "score": 4.285714285714286,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "Kann ich Schadensersatz nach SCHUFA-Urteil verlangen?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_82",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-526_24_vf_5_6_0",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-200_23_vf_7_1",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-526_24_vf_5_6_1",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_c_507_23_wuerdigung_10",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-655_23_sachverhalt_2",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-768_21_sachverhalt_4",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-634_21_sachverhalt_0",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-634_21_vf_1_2",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-634_21_sachverhalt_2",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "Wann ist eine DSFA verpflichtend?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_35_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_35_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_ki_datenschutz_pruefungsschema",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_videoueberwachung_pruefungsschema",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_pruefungsschema_datenschutz_folgenabschaetzung_dsfa_art_35_d",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_35_part0",
+          "score": 7.496547698974609,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_September_2025-_Anwendungshinweise_zu_de_22",
+          "score": 6.09588486807687,
+          "source": "semantic"
+        },
+        {
+          "id": "dsgvo_eg_90",
+          "score": 4.7403178215026855,
+          "source": "semantic"
+        },
+        {
+          "id": "beh_5Datenschutz-FolgenabschÃ¤tzung_nach_Art_31",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_5Datenschutz-FolgenabschÃ¤tzung_nach_Art_21",
+          "score": 3.0,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Wer braucht einen Datenschutzbeauftragten?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_37",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_180",
+          "score": 10.46477710499483,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_88",
+          "score": 7.140198314891142,
+          "source": "hybrid"
+        },
+        {
+          "id": "dsgvo_art_37",
+          "score": 6.84745979309082,
+          "source": "hybrid"
+        },
+        {
+          "id": "gran_BDSG_§_38_Abs.1_S.1",
+          "score": 5.137847423553467,
+          "source": "semantic"
+        },
+        {
+          "id": "gran_BDSG_§_38_Abs.1",
+          "score": 4.840861797332764,
+          "source": "semantic"
+        },
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_178",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_95",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_26.04.2018-_Datenschutzbeauftragten-Best_6",
+          "score": 3.1578947368421053,
+          "source": "hybrid"
+        },
+        {
+          "id": "mw_deutsche_umsetzung_der_dsgvo_oeffnungsklauseln_im_bdsg",
+          "score": 3.0,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "Wie lange darf eine Bewerbung gespeichert werden?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "seg_BVerwG_6._Senat_6_C_3_23_tatbestand_5",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_08.01.2019-_Zusatz_zur_Orientierungshilf_6",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-26_22_vf_1_12",
+          "score": 4.285714285714286,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_75",
+          "score": 4.285714285714286,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_74",
+          "score": 4.285714285714286,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_115",
+          "score": 4.285714285714286,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_04.05.2022-_Die_Zeit_fÃ¼r_ein_BeschÃ¤fti_9",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_61",
+          "score": 3.5294117647058822,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_20.12.2021-_HÃ¤ufige_Fragestellungen_neb_156",
+          "score": 3.5294117647058822,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_Leitlinien_2_2019_für_die_Verarbeitung_p_10",
+          "score": 3.1578947368421053,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Sind Cookies ohne Einwilligung erlaubt?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "gran_TDDDG_§_25",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_TDDDG_§_29",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_7",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_68",
+          "score": 4.285714285714286,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_September_2025-_Anwendungshinweise_zu_de_34",
+          "score": 4.285714285714286,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_47",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_30.11.2022-_Orientierungshilfe_der_Aufsi_325",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Leitlinien_8_2020_über_die_gezielte_Ansp_45",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_18",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_40",
+          "score": 3.5294117647058822,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "Wann muss ich eine Datenpanne melden?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_33",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_34",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_Anforderungen_an_datenschutzrechtliche_Z_0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_Anforderungen_an_datenschutzrechtliche_Z_398",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-768_21_rechtsrahmen_2",
+          "score": 8.356974465506418,
+          "source": "hybrid"
+        },
+        {
+          "id": "dsgvo_art_33",
+          "score": 5.6015706062316895,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Das_Standard-Datenschutzmodell_(SDM)_Ver_68",
+          "score": 4.6034417152404785,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_20.11.2025-_Verbesserung_des_Datenschutz_18",
+          "score": 4.285714285714286,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_12.02.2026â_Stellungnahme_der_Konferen_16",
+          "score": 4.285714285714286,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_23.10.2020-_Videokonferenzsysteme_44",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Datenschutz im Verein",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_8",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_10",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-65_23_rechtsrahmen_4",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_20",
+          "score": 4.794792848474839,
+          "source": "semantic"
+        },
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_54",
+          "score": 4.0641966988058655,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_16",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_26",
+          "score": 3.5294117647058822,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_BGH_2._Zivilsenat_II_ZR_132_24_entscheidungsgruende_4",
+          "score": 3.0,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "Welche Rechtsgrundlagen sind für die Anonymisierung relevant?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_25",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_89",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-34_21_vf_1_3",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-34_21_rechtsrahmen_0",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-683_21_vf_4_1",
+          "score": 4.844765833445958,
+          "source": "semantic"
+        },
+        {
+          "id": "beh_23.11.2023-_Datenschutz_in_der_Forschung_20",
+          "score": 4.285714285714286,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-268_21_vf_2_3",
+          "score": 3.7268216269356866,
+          "source": "semantic"
+        },
+        {
+          "id": "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_61",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_60",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Leitlinien_3_2020_für_die_Verarbeitung_v_23",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Welche Kriterien müssen bei der Prüfung der Verhältnismäßigkeit gelten?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "seg_eugh_C-252_21_vf_6_5",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-340_21_vf_2_0",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-340_21_vf_2_2",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_26.03.2025-_Eckpunkte_fÃ¼r_eine_freiheit_7",
+          "score": 4.285714285714286,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_18.01.2023â_Stellungnahme_zu_Grundsatz_189",
+          "score": 4.285714285714286,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-439_19_vf_2_2",
+          "score": 3.5294117647058822,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_29.03.2019-_Orientierungshilfe_der_Aufsi_68",
+          "score": 3.1578947368421053,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Stand_April_2018_-_Standard-Datenschutzm_17",
+          "score": 3.1578947368421053,
+          "source": "keyword"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_BGH_6._Zivilsenat_VI_ZR_431_24_entscheidungsgruende_8",
+          "score": 3.0,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Unter welchen Voraussetzungen stellt eine dynamische IP-Adresse personenbezogene Daten dar?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "seg_eugh_c_582_14_tenor",
+          "score": 6.478522474115545,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-604_22_vf_1_1",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_c_582_14_vf_1b_0",
+          "score": 4.090909090909091,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_BGH_6._Zivilsenat_VI_ZR_258_24_entscheidungsgruende_7",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_BGH_6._Zivilsenat_VI_ZR_258_24_entscheidungsgruende_4",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_BGH_6._Zivilsenat_VI_ZR_258_24_entscheidungsgruende_5",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_BGH_1._Zivilsenat_I_ZR_115_25_entscheidungsgruende_9",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "BFH_9._Senat_IX_R_26_22_entscheidungsgruende_1",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-413_23_wuerdigung_23",
+          "score": -3.049822875431606,
+          "source": "semantic"
+        },
+        {
+          "id": "seg_eugh_C-579_21_vf_1_2_1",
+          "score": -3.1277162688119073,
+          "source": "semantic"
+        }
+      ]
+    },
+    {
+      "query": "Welche rechtlichen Voraussetzungen müssen für E-Mail-Werbung erfüllt sein?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_7",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_70_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_TDDDG_§_25",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_TDDDG_§_29",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_newsletter_einwilligung_dreistufig",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-654_23_sachverhalt_3",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-102_20_vorlagefragen_3",
+          "score": 5.294117647058823,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_50",
+          "score": 3.55620075674618,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_38",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_83",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Welche Länder haben derzeit einen gültigen Angemessenheitsbeschluss?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_44",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_45_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_45_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_46",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-311_18_tenor",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_angemessenheitsbeschluesse_art45",
+          "score": 7.2902374267578125,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_September_2025-_Anwendungshinweise_zu_de_25",
+          "score": 11.358717509678433,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-311_18_vf_8_3",
+          "score": 6.459197296815759,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-311_18_vf_8_2",
+          "score": 5.294117647058823,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-311_18_vf_8_5",
+          "score": 5.294117647058823,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Welche rechtlichen Anforderungen müssen bei der Verarbeitung biometrischer Daten erfüllt sein?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "seg_eugh_C-205_21_vf_2_1",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-252_21_rechtsrahmen_5",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-634_21_rechtsrahmen_3",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_03.04.2019-_Positionspapier_zur_biometri_126",
+          "score": 5.704735203793175,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_11",
+          "score": 4.285714285714286,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_03.04.2019-_Positionspapier_zur_biometri_149",
+          "score": 4.0963684885125415,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Leitlinien_3_2019_zur_Verarbeitung_58",
+          "score": 3.801546849702534,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_85",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Leitlinien_3_2019_zur_Verarbeitung_37",
+          "score": 3.1578947368421053,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_03.04.2019-_Positionspapier_zur_biometri_157",
+          "score": 3.1578947368421053,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Welche rechtlichen Grundlagen und Grenzen sind beim Einsatz von Kamera-Systemen am Arbeitsplatz zu beachten?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_88",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_videoueberwachung_pruefungsschema",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_dsk_videoueberwachung_stub",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-65_23_rechtsrahmen_4",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-34_21_rechtsrahmen_6",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_50",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_13",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_BAG_2._Senat_2_AZR_297_22_entscheidungsgruende_11",
+          "score": 3.0,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Welche spezifischen Angaben müssen in einer Datenschutzerklärung enthalten sein?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_13",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_14_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_14_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_Leitlinien_8_2020_über_die_gezielte_Ansp_57",
+          "score": 9.189633201150333,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-97_23_header_3",
+          "score": 8.604176044464111,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_35",
+          "score": 6.763583351584042,
+          "source": "keyword"
+        },
+        {
+          "id": "dsgvo_art_12_part0",
+          "score": 6.523633003234863,
+          "source": "semantic"
+        },
+        {
+          "id": "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_67",
+          "score": 6.185965538024902,
+          "source": "keyword"
+        },
+        {
+          "id": "dsgvo_art_14_part1",
+          "score": 5.126129627227783,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_93",
+          "score": 4.285714285714286,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "Welche Rechtsgrundlagen sind bei der Videoüberwachung im öffentlichen Raum zu beachten?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_88",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_videoueberwachung_pruefungsschema",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_dsk_videoueberwachung_stub",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_33",
+          "score": 10.109810548670152,
+          "source": "hybrid"
+        },
+        {
+          "id": "gran_BDSG_§_4_Abs.1",
+          "score": 4.866200923919678,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_15VideoÃ¼berwachung_nach_der_Datenschutz_4",
+          "score": 4.8567728996276855,
+          "source": "hybrid"
+        },
+        {
+          "id": "gran_BDSG_§_4_Abs.1_S.1",
+          "score": 4.653000354766846,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Leitlinien_3_2019_zur_Verarbeitung_24",
+          "score": 4.061004237124795,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Welche rechtlichen Schritte sind erforderlich, um Daten in ein Drittland zu übermitteln?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_44",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_45_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_45_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_46",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-311_18_tenor",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_data_privacy_framework_dpf_und_pruefungsschema_drittlandtran",
+          "score": 4.558535099029541,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_September_2025-_Anwendungshinweise_zu_de_25",
+          "score": 9.001851763044085,
+          "source": "semantic"
+        },
+        {
+          "id": "dsgvo_art_45_part0",
+          "score": 8.1989107131958,
+          "source": "hybrid"
+        },
+        {
+          "id": "dsgvo_eg_107",
+          "score": 4.807919979095459,
+          "source": "semantic"
+        },
+        {
+          "id": "beh_Ãbermittlung_personenbezogener_Daten_au_27",
+          "score": 4.556694030761719,
+          "source": "semantic"
+        }
+      ]
+    },
+    {
+      "query": "Mein Chef liest meine Mails",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_88",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_14BeschÃ¤ftigtendatenschutz_9",
+          "score": 3.950576066970825,
+          "source": "semantic"
+        },
+        {
+          "id": "mw_beschaeftigtendatenschutz_email_it",
+          "score": 3.7345845699310303,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_14BeschÃ¤ftigtendatenschutz_38",
+          "score": 3.638321876525879,
+          "source": "hybrid"
+        },
+        {
+          "id": "mw_eugh_c_34_21_26_bdsg_unanwendbar",
+          "score": 3.4034221172332764,
+          "source": "hybrid"
+        },
+        {
+          "id": "BAG_1._Senat_1_ABR_14_22_leitsatz",
+          "score": 3.0,
+          "source": "keyword"
+        },
+        {
+          "id": "gran_BDSG_§_26_Abs.1_S.6",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_BAG_1._Senat_1_ABR_14_22_entscheidungsgruende_20",
+          "score": 3.0,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "DSGVO und Werbung",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_21",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_21.06.2023â_Stellungnahme_zum_politisc_6",
+          "score": 3.269758565085275,
+          "source": "semantic"
+        },
+        {
+          "id": "beh_07.11.2018-_Orientierungshilfe_der_Aufsi_45",
+          "score": 3.1578947368421053,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_07.11.2018-_Orientierungshilfe_der_Aufsi_19",
+          "score": 3.1578947368421053,
+          "source": "hybrid"
+        },
+        {
+          "id": "mw_eugh_c_446_21_schrems_meta_datenminimierung_begrenzt_werbenu",
+          "score": 3.0,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_3Verarbeitung_personenbezogener_Daten_fÃ_38",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_3Verarbeitung_personenbezogener_Daten_fÃ_40",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "dsgvo_eg_47",
+          "score": 3.0,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_3Verarbeitung_personenbezogener_Daten_fÃ_13",
+          "score": 2.149003267288208,
+          "source": "semantic"
+        },
+        {
+          "id": "beh_07.11.2018-_Orientierungshilfe_der_Aufsi_4",
+          "score": 1.1442252209312038,
+          "source": "semantic"
+        }
+      ]
+    },
+    {
+      "query": "Was ist mit § 32 BDSG-alt?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "mw_deutsche_umsetzung_der_dsgvo_oeffnungsklauseln_im_bdsg",
+          "score": -0.13645589351654053,
+          "source": "semantic"
+        },
+        {
+          "id": "mw_eugh_c_34_21_26_bdsg_unanwendbar",
+          "score": -1.192268967628479,
+          "source": "semantic"
+        },
+        {
+          "id": "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_134",
+          "score": -1.735508301678826,
+          "source": "semantic"
+        },
+        {
+          "id": "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_131",
+          "score": -2.097599085639505,
+          "source": "semantic"
+        },
+        {
+          "id": "beh_13Auftragsverarbeitung,_Art._28_DS-GVOin_7",
+          "score": -2.240694761276245,
+          "source": "semantic"
+        },
+        {
+          "id": "gran_BDSG_§_11_Abs.1_S.3",
+          "score": -2.4173576831817627,
+          "source": "semantic"
+        },
+        {
+          "id": "gran_BDSG_§_32_Abs.1_S.6",
+          "score": -2.790667772293091,
+          "source": "norm_lookup"
+        },
+        {
+          "id": "gran_DDG_§_32_Abs.1_S.6",
+          "score": -4.957568168640137,
+          "source": "semantic"
+        },
+        {
+          "id": "gran_DDG_§_2_Abs.1_S.3",
+          "score": -5.245797634124756,
+          "source": "semantic"
+        }
+      ]
+    },
+    {
+      "query": "Da § 29 BDSG das regelt, wie lange darf ich speichern?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_26",
+          "score": 4.285714285714286,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_c_293_12_vf_1b_10",
+          "score": 4.090909090909091,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_85",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_76",
+          "score": 3.5294117647058822,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_287",
+          "score": 3.5294117647058822,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_139",
+          "score": 3.5294117647058822,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_138",
+          "score": 3.5294117647058822,
+          "source": "keyword"
+        },
+        {
+          "id": "gran_BDSG_§_27_Abs.1_S.6",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "gran_BDSG_§_56_Abs.1",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "BGH_1._Zivilsenat_I_ZR_97_25_entscheidungsgruende_12",
+          "score": 3.0,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "Was hat der EuGH zu Schrems II entschieden?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_44",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_45_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_45_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_46",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-311_18_tenor",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-311_18_sachverhalt_0",
+          "score": 10.0,
+          "source": "urteil_name"
+        },
+        {
+          "id": "seg_eugh_C-311_18_sachverhalt_1",
+          "score": 10.0,
+          "source": "urteil_name"
+        },
+        {
+          "id": "seg_eugh_C-311_18_sachverhalt_2",
+          "score": 10.0,
+          "source": "urteil_name"
+        },
+        {
+          "id": "seg_eugh_C-362_14_wuerdigung_0",
+          "score": 10.0,
+          "source": "urteil_name"
+        },
+        {
+          "id": "seg_eugh_C-362_14_wuerdigung_1",
+          "score": 10.0,
+          "source": "urteil_name"
+        }
+      ]
+    },
+    {
+      "query": "Darf ich Mitarbeiterfotos auf der Website veröffentlichen?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_88",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_September_2019_-_LfDI_BW_-_Fotografieren_4",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-460_20_vf_2b_0",
+          "score": 5.294117647058823,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-184_20_vf_1_1",
+          "score": 5.294117647058823,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-460_20_sachverhalt_4",
+          "score": 5.294117647058823,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-460_20_vf_2b_2",
+          "score": 5.294117647058823,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_29.03.2019-_Orientierungshilfe_der_Aufsi_64",
+          "score": 3.1578947368421053,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_September_2019_-_LfDI_BW_-_Fotografieren_23",
+          "score": 3.1578947368421053,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "Wann liegt berechtigtes Interesse vor?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "seg_BVerwG_6._Senat_6_C_3_23_tatbestand_5",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_08.01.2019-_Zusatz_zur_Orientierungshilf_6",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_EDPB_Zusammenfassung_Berechtigtes_Intere_1",
+          "score": 4.860758440835135,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_EDPB_Zusammenfassung_Berechtigtes_Intere_0",
+          "score": 4.285714285714286,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_EDPB_Zusammenfassung_Berechtigtes_Intere_2",
+          "score": 4.285714285714286,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-17_22_rechtsrahmen_1",
+          "score": 4.285714285714286,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_29.03.2019-_Orientierungshilfe_der_Aufsi_69",
+          "score": 3.1578947368421053,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Leitlinien_3_2019_zur_Verarbeitung_19",
+          "score": 3.1578947368421053,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_29.03.2019-_Orientierungshilfe_der_Aufsi_39",
+          "score": 3.1578947368421053,
+          "source": "hybrid"
+        },
+        {
+          "id": "BGH_6._Zivilsenat_VI_ZR_431_24_entscheidungsgruende_7",
+          "score": 3.0,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Was bedeutet Pseudonymisierung?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "seg_eugh_c_582_14_tenor",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-413_23_wuerdigung_17",
+          "score": 8.294144357953753,
+          "source": "semantic"
+        },
+        {
+          "id": "seg_eugh_C-683_21_vf_4_1",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_61",
+          "score": 5.733572455013499,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-413_23_wuerdigung_16",
+          "score": 4.285714285714286,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_Stand_Februar_2018_-_Hinweise_zum_Verzei_59",
+          "score": 3.1578947368421053,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_03.04.2019-_Positionspapier_zur_biometri_130",
+          "score": 3.1578947368421053,
+          "source": "hybrid"
+        },
+        {
+          "id": "gran_BDSG_§_22_Abs.1_S.8",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "gran_BDSG_§_64_Abs.1_S.3",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Das_Standard-Datenschutzmodell_(SDM)_Ver_145",
+          "score": 3.0,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Was sind besondere Kategorien personenbezogener Daten?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "beh_Leitlinien_8_2020_über_die_gezielte_Ansp_66",
+          "score": 12.68450007719152,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_November_2024-_Orientierungshilfe_der_DS_22",
+          "score": 8.940738950456891,
+          "source": "semantic"
+        },
+        {
+          "id": "beh_Stand_Februar_2018_-_Muster_fÃ¼r_Verantw_11",
+          "score": 4.727624090094316,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_17Besondere_Kategorien_personenbezogener_16",
+          "score": 4.63913106918335,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_14BeschÃ¤ftigtendatenschutz_34",
+          "score": 3.155729055404663,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_17Besondere_Kategorien_personenbezogener_3",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_17Besondere_Kategorien_personenbezogener_35",
+          "score": 3.0,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Welche Folgen hat das SCHUFA-Urteil?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "seg_BGH_1._Zivilsenat_I_ZR_97_25_entscheidungsgruende_0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_BGH_6._Zivilsenat_VI_ZR_431_24_entscheidungsgruende_11",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-634_21_sachverhalt_0",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-203_22_wuerdigung_8",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-634_21_sachverhalt_2",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_c_140_20_sachverhalt_3",
+          "score": 5.294117647058823,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-26_22_vf_1_9",
+          "score": 4.285714285714286,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_18.01.2023â_Stellungnahme_zu_Grundsatz_62",
+          "score": 4.285714285714286,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_11.05.2023-_Stellungnahme_zur_Verbesseru_7",
+          "score": 4.285714285714286,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_11.05.2023-_Stellungnahme_zur_Verbesseru_36",
+          "score": 4.285714285714286,
+          "source": "keyword"
+        }
+      ]
+    }
+  ],
+  "treatment": [
+    {
+      "query": "Darf mein Arbeitgeber meine E-Mails lesen?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_88",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_26_Abs.1_S.16",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_26_Abs.1_S.20",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_5",
+          "score": 7.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "mw_eugh_c_34_21_26_bdsg_unanwendbar",
+          "score": 5.8607072830200195,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-65_23_rechtsrahmen_4",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-34_21_vf_1_1",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_50",
+          "score": 5.4766985949348,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Was ist eine Auftragsverarbeitung?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "mw_art4_index",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_c_582_14_tenor",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_28_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_28_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_29",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_32",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art4_daten_identitaet",
+          "score": 9.5,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art4_rollen_verarbeitung",
+          "score": 9.5,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "beh_Leitlinien_07_2020_zu_den_Begriffen_„Ver_70",
+          "score": 8.98506613338695,
+          "source": "hybrid"
+        },
+        {
+          "id": "dsgvo_art_28_part1",
+          "score": 6.1376495361328125,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Welche Rechte habe ich nach DSGVO?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_17",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_recht_auf_vergessenwerden_pruefungsschema",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_15",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_27",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_27",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_16",
+          "score": 9.5,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_18",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_20",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "seg_eugh_C-307_22_header_4",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-307_22_header_10",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "Kann ich Schadensersatz nach SCHUFA-Urteil verlangen?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_82",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_31_Abs.1",
+          "score": 9.275,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_31_Abs.1_S.1",
+          "score": 9.275,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_5",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_15",
+          "score": 7.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_22",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "seg_eugh_C-526_24_vf_5_6_0",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-200_23_vf_7_1",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-526_24_vf_5_6_1",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_c_507_23_wuerdigung_10",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Wann ist eine DSFA verpflichtend?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_35_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_35_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_ki_datenschutz_pruefungsschema",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_videoueberwachung_pruefungsschema",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_pruefungsschema_datenschutz_folgenabschaetzung_dsfa_art_35_d",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_64_Abs.1_S.15",
+          "score": 7.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_64_Abs.1_S.2",
+          "score": 7.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_36",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_35_part0",
+          "score": 7.496547698974609,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_September_2025-_Anwendungshinweise_zu_de_22",
+          "score": 6.09588486807687,
+          "source": "semantic"
+        }
+      ]
+    },
+    {
+      "query": "Wer braucht einen Datenschutzbeauftragten?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_37",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_38_Abs.1_S.1",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_38_Abs.1",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_38",
+          "score": 9.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_39",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_180",
+          "score": 10.46477710499483,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_88",
+          "score": 7.140198314891142,
+          "source": "hybrid"
+        },
+        {
+          "id": "dsgvo_art_37",
+          "score": 6.84745979309082,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_178",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_95",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Wie lange darf eine Bewerbung gespeichert werden?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "seg_BVerwG_6._Senat_6_C_3_23_tatbestand_5",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_08.01.2019-_Zusatz_zur_Orientierungshilf_6",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_26_Abs.1_S.16",
+          "score": 9.275,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_26_Abs.1_S.20",
+          "score": 9.275,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_5",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_13",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_17",
+          "score": 7.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "seg_eugh_C-26_22_vf_1_12",
+          "score": 4.285714285714286,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Sind Cookies ohne Einwilligung erlaubt?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "gran_TDDDG_§_25",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_TDDDG_§_29",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_7",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_TDDDG_§_26",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 7.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 7.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_68",
+          "score": 4.285714285714286,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_September_2025-_Anwendungshinweise_zu_de_34",
+          "score": 4.285714285714286,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_47",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_30.11.2022-_Orientierungshilfe_der_Aufsi_325",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Wann muss ich eine Datenpanne melden?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_33",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_34",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_Anforderungen_an_datenschutzrechtliche_Z_0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_Anforderungen_an_datenschutzrechtliche_Z_398",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_42_Abs.1",
+          "score": 7.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_42_Abs.1_S.1",
+          "score": 7.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_32",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art4_daten_identitaet",
+          "score": 9.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art4_rollen_verarbeitung",
+          "score": 9.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "seg_eugh_C-768_21_rechtsrahmen_2",
+          "score": 8.356974465506418,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Datenschutz im Verein",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_8",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_10",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_9_part0",
+          "score": 7.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_9_part1",
+          "score": 7.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_13",
+          "score": 9.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_30",
+          "score": 7.0,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "seg_eugh_C-65_23_rechtsrahmen_4",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_20",
+          "score": 4.794792848474839,
+          "source": "semantic"
+        }
+      ]
+    },
+    {
+      "query": "Welche Rechtsgrundlagen sind für die Anonymisierung relevant?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_25",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_89",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_5",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 9.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 9.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art4_daten_identitaet",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art4_rollen_verarbeitung",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "seg_eugh_C-34_21_vf_1_3",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-34_21_rechtsrahmen_0",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-683_21_vf_4_1",
+          "score": 4.844765833445958,
+          "source": "semantic"
+        }
+      ]
+    },
+    {
+      "query": "Welche Kriterien müssen bei der Prüfung der Verhältnismäßigkeit gelten?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "gran_BDSG_§_26_Abs.1_S.16",
+          "score": 7.3,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_26_Abs.1_S.20",
+          "score": 7.3,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_5",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 9.275,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 9.275,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_22",
+          "score": 7.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_88",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "seg_eugh_C-252_21_vf_6_5",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-340_21_vf_2_0",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-340_21_vf_2_2",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "Unter welchen Voraussetzungen stellt eine dynamische IP-Adresse personenbezogene Daten dar?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "gran_TDDDG_§_23",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 9.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 9.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art4_daten_identitaet",
+          "score": 9.5,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art4_rollen_verarbeitung",
+          "score": 9.5,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "seg_eugh_c_582_14_tenor",
+          "score": 6.478522474115545,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-604_22_vf_1_1",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_c_582_14_vf_1b_0",
+          "score": 4.090909090909091,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_BGH_6._Zivilsenat_VI_ZR_258_24_entscheidungsgruende_7",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_BGH_6._Zivilsenat_VI_ZR_258_24_entscheidungsgruende_4",
+          "score": 3.0,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Welche rechtlichen Voraussetzungen müssen für E-Mail-Werbung erfüllt sein?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_7",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_70_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_TDDDG_§_25",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_TDDDG_§_29",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_newsletter_einwilligung_dreistufig",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_13",
+          "score": 9.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_21",
+          "score": 7.5,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "seg_eugh_C-654_23_sachverhalt_3",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "Welche Länder haben derzeit einen gültigen Angemessenheitsbeschluss?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_44",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_45_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_45_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_46",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-311_18_tenor",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_angemessenheitsbeschluesse_art45",
+          "score": 7.2902374267578125,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_September_2025-_Anwendungshinweise_zu_de_25",
+          "score": 11.358717509678433,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-311_18_vf_8_3",
+          "score": 6.459197296815759,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-311_18_vf_8_2",
+          "score": 5.294117647058823,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-311_18_vf_8_5",
+          "score": 5.294117647058823,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Welche rechtlichen Anforderungen müssen bei der Verarbeitung biometrischer Daten erfüllt sein?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "gran_BDSG_§_22_Abs.1_S.7",
+          "score": 9.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_22_Abs.1_S.6",
+          "score": 9.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_9_part0",
+          "score": 9.5,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_9_part1",
+          "score": 9.5,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_35_part0",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_35_part1",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art4_daten_identitaet",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art4_rollen_verarbeitung",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        }
+      ]
+    },
+    {
+      "query": "Welche rechtlichen Grundlagen und Grenzen sind beim Einsatz von Kamera-Systemen am Arbeitsplatz zu beachten?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_88",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_videoueberwachung_pruefungsschema",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_dsk_videoueberwachung_stub",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_26_Abs.1_S.16",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_26_Abs.1_S.20",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_4_Abs.1_S.7",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_4_Abs.1_S.6",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_9_part0",
+          "score": 7.5,
+          "source": "hypothesis_pflicht"
+        }
+      ]
+    },
+    {
+      "query": "Welche spezifischen Angaben müssen in einer Datenschutzerklärung enthalten sein?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_13",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_14_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_14_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_TDDDG_§_13",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_5",
+          "score": 9.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_12_part0",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_12_part1",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "beh_Leitlinien_8_2020_über_die_gezielte_Ansp_57",
+          "score": 9.189633201150333,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-97_23_header_3",
+          "score": 8.604176044464111,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_35",
+          "score": 6.763583351584042,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "Welche Rechtsgrundlagen sind bei der Videoüberwachung im öffentlichen Raum zu beachten?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_88",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_videoueberwachung_pruefungsschema",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_dsk_videoueberwachung_stub",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_4_Abs.1_S.7",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_4_Abs.1_S.6",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_9_part0",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_9_part1",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_13",
+          "score": 9.2,
+          "source": "hypothesis_pflicht"
+        }
+      ]
+    },
+    {
+      "query": "Welche rechtlichen Schritte sind erforderlich, um Daten in ein Drittland zu übermitteln?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_44",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_45_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_45_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_46",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-311_18_tenor",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_17_Abs.1",
+          "score": 7.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_17_Abs.1_S.5",
+          "score": 7.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_49_part0",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_49_part1",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "mw_data_privacy_framework_dpf_und_pruefungsschema_drittlandtran",
+          "score": 4.558535099029541,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "Mein Chef liest meine Mails",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_88",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_26_Abs.1_S.16",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_26_Abs.1_S.20",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_TDDDG_§_5",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_5",
+          "score": 7.0,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "beh_14BeschÃ¤ftigtendatenschutz_9",
+          "score": 3.950576066970825,
+          "source": "semantic"
+        },
+        {
+          "id": "mw_beschaeftigtendatenschutz_email_it",
+          "score": 3.7345845699310303,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_14BeschÃ¤ftigtendatenschutz_38",
+          "score": 3.638321876525879,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "DSGVO und Werbung",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_7",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_70_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_TDDDG_§_25",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_TDDDG_§_29",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "mw_newsletter_einwilligung_dreistufig",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_13",
+          "score": 9.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_21",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "mw_verbot_mit_erlaubnisvorbehalt",
+          "score": 8.504103660583496,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "Was ist mit § 32 BDSG-alt?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_88",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_26_Abs.1_S.16",
+          "score": 9.5,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_26_Abs.1_S.20",
+          "score": 9.5,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "seg_eugh_C-65_23_rechtsrahmen_4",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-340_21_vf_2_2",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_30",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_26",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_51",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Da § 29 BDSG das regelt, wie lange darf ich speichern?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "gran_BDSG_§_35_Abs.1_S.1",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_35_Abs.1_S.6",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_5",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_17",
+          "score": 9.275,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_10",
+          "score": 4.285714285714286,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_20.12.2021-_HÃ¤ufige_Fragestellungen_neb_156",
+          "score": 3.5294117647058822,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_170",
+          "score": 3.5294117647058822,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_20.12.2021-_HÃ¤ufige_Fragestellungen_neb_153",
+          "score": 3.5294117647058822,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "Was hat der EuGH zu Schrems II entschieden?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_44",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_45_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_45_part1",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_46",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-311_18_tenor",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-311_18_sachverhalt_0",
+          "score": 10.0,
+          "source": "urteil_name"
+        },
+        {
+          "id": "seg_eugh_C-311_18_sachverhalt_1",
+          "score": 10.0,
+          "source": "urteil_name"
+        },
+        {
+          "id": "seg_eugh_C-311_18_sachverhalt_2",
+          "score": 10.0,
+          "source": "urteil_name"
+        },
+        {
+          "id": "seg_eugh_C-362_14_wuerdigung_0",
+          "score": 10.0,
+          "source": "urteil_name"
+        },
+        {
+          "id": "seg_eugh_C-362_14_wuerdigung_1",
+          "score": 10.0,
+          "source": "urteil_name"
+        }
+      ]
+    },
+    {
+      "query": "Darf ich Mitarbeiterfotos auf der Website veröffentlichen?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "dsgvo_art_7",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_70_part0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_TDDDG_§_25",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_TDDDG_§_29",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_26_Abs.1_S.16",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_26_Abs.1_S.20",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_9_part0",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_9_part1",
+          "score": 7.4,
+          "source": "hypothesis_pflicht"
+        }
+      ]
+    },
+    {
+      "query": "Wann liegt berechtigtes Interesse vor?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "seg_BVerwG_6._Senat_6_C_3_23_tatbestand_5",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "beh_08.01.2019-_Zusatz_zur_Orientierungshilf_6",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part0",
+          "score": 9.5,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_6_part1",
+          "score": 9.5,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_13",
+          "score": 7.5,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_21",
+          "score": 9.275,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "seg_eugh_C-252_21_vf_6_5",
+          "score": 14.600559302738734,
+          "source": "semantic"
+        },
+        {
+          "id": "seg_eugh_C-268_21_vf_1_1",
+          "score": 9.139293602534703,
+          "source": "semantic"
+        },
+        {
+          "id": "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_72",
+          "score": 8.407292366027832,
+          "source": "semantic"
+        },
+        {
+          "id": "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_207",
+          "score": 6.286798925960765,
+          "source": "keyword"
+        }
+      ]
+    },
+    {
+      "query": "Was bedeutet Pseudonymisierung?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "seg_eugh_c_582_14_tenor",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_eugh_C-413_23_wuerdigung_17",
+          "score": 8.294144357953753,
+          "source": "semantic"
+        },
+        {
+          "id": "seg_eugh_C-683_21_vf_4_1",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_61",
+          "score": 5.733572455013499,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-413_23_wuerdigung_16",
+          "score": 4.285714285714286,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_Stand_Februar_2018_-_Hinweise_zum_Verzei_59",
+          "score": 3.1578947368421053,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_03.04.2019-_Positionspapier_zur_biometri_130",
+          "score": 3.1578947368421053,
+          "source": "hybrid"
+        },
+        {
+          "id": "gran_BDSG_§_22_Abs.1_S.8",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "gran_BDSG_§_64_Abs.1_S.3",
+          "score": 3.0,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Das_Standard-Datenschutzmodell_(SDM)_Ver_145",
+          "score": 3.0,
+          "source": "hybrid"
+        }
+      ]
+    },
+    {
+      "query": "Was sind besondere Kategorien personenbezogener Daten?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "seg_eugh_c_582_14_tenor",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_22_Abs.1_S.7",
+          "score": 7.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_22_Abs.1_S.6",
+          "score": 7.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "seg_eugh_C-252_21_vf_6_9",
+          "score": 6.428571428571429,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-180_21_rechtsrahmen_4",
+          "score": 5.294117647058823,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_Leitlinien_06_2020_zum_Zusammenspiel_zwi_46",
+          "score": 3.5294117647058822,
+          "source": "hybrid"
+        },
+        {
+          "id": "beh_Leitlinien_3_2020_für_die_Verarbeitung_v_8",
+          "score": 3.5294117647058822,
+          "source": "keyword"
+        },
+        {
+          "id": "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_49",
+          "score": 3.5294117647058822,
+          "source": "keyword"
+        },
+        {
+          "id": "seg_eugh_C-634_21_rechtsrahmen_3",
+          "score": 3.2916912010737827,
+          "source": "semantic"
+        },
+        {
+          "id": "seg_eugh_C-492_23_vorlagefragen_9",
+          "score": 3.289890800203596,
+          "source": "semantic"
+        }
+      ]
+    },
+    {
+      "query": "Welche Folgen hat das SCHUFA-Urteil?",
+      "type": "ok",
+      "chunks": [
+        {
+          "id": "seg_BGH_1._Zivilsenat_I_ZR_97_25_entscheidungsgruende_0",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "seg_BGH_6._Zivilsenat_VI_ZR_431_24_entscheidungsgruende_11",
+          "score": 10.0,
+          "source": "pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_31_Abs.1",
+          "score": 9.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "gran_BDSG_§_31_Abs.1_S.1",
+          "score": 9.2,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_5",
+          "score": 9.275,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_13",
+          "score": 7.5,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_22",
+          "score": 9.35,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "dsgvo_art_82",
+          "score": 9.425,
+          "source": "hypothesis_pflicht"
+        },
+        {
+          "id": "seg_eugh_C-203_22_wuerdigung_2",
+          "score": 10.19251993724278,
+          "source": "hybrid"
+        },
+        {
+          "id": "seg_eugh_C-203_22_wuerdigung_8",
+          "score": 6.428571428571429,
+          "source": "hybrid"
+        }
+      ]
+    }
+  ],
+  "diffs": [
+    {
+      "query": "Darf mein Arbeitgeber meine E-Mails lesen?",
+      "new_hyp_chunks": [
+        "gran_BDSG_§_26_Abs.1_S.16",
+        "gran_BDSG_§_26_Abs.1_S.20",
+        "dsgvo_art_5"
+      ],
+      "removed_from_top10": [
+        "mw_beschaeftigtendatenschutz_email_it",
+        "beh_14BeschÃ¤ftigtendatenschutz_38",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_67"
+      ]
+    },
+    {
+      "query": "Was ist eine Auftragsverarbeitung?",
+      "new_hyp_chunks": [
+        "dsgvo_art_32",
+        "dsgvo_art4_daten_identitaet",
+        "dsgvo_art4_rollen_verarbeitung"
+      ],
+      "removed_from_top10": [
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_61",
+        "beh_13Auftragsverarbeitung,_Art._28_DS-GVOin_16",
+        "beh_13Auftragsverarbeitung,_Art._28_DS-GVOin_30"
+      ]
+    },
+    {
+      "query": "Welche Rechte habe ich nach DSGVO?",
+      "new_hyp_chunks": [
+        "dsgvo_art_16",
+        "dsgvo_art_18",
+        "dsgvo_art_20"
+      ],
+      "removed_from_top10": [
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_55",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_48",
+        "seg_eugh_C-307_22_header_8"
+      ]
+    },
+    {
+      "query": "Kann ich Schadensersatz nach SCHUFA-Urteil verlangen?",
+      "new_hyp_chunks": [
+        "gran_BDSG_§_31_Abs.1",
+        "gran_BDSG_§_31_Abs.1_S.1",
+        "dsgvo_art_5",
+        "dsgvo_art_15",
+        "dsgvo_art_22"
+      ],
+      "removed_from_top10": [
+        "seg_eugh_C-655_23_sachverhalt_2",
+        "seg_eugh_C-634_21_sachverhalt_0",
+        "seg_eugh_C-768_21_sachverhalt_4",
+        "seg_eugh_C-634_21_vf_1_2",
+        "seg_eugh_C-634_21_sachverhalt_2"
+      ]
+    },
+    {
+      "query": "Wann ist eine DSFA verpflichtend?",
+      "new_hyp_chunks": [
+        "gran_BDSG_§_64_Abs.1_S.15",
+        "gran_BDSG_§_64_Abs.1_S.2",
+        "dsgvo_art_36"
+      ],
+      "removed_from_top10": [
+        "beh_5Datenschutz-FolgenabschÃ¤tzung_nach_Art_21",
+        "beh_5Datenschutz-FolgenabschÃ¤tzung_nach_Art_31",
+        "dsgvo_eg_90"
+      ]
+    },
+    {
+      "query": "Wer braucht einen Datenschutzbeauftragten?",
+      "new_hyp_chunks": [
+        "gran_BDSG_§_38_Abs.1_S.1",
+        "gran_BDSG_§_38_Abs.1",
+        "dsgvo_art_38",
+        "dsgvo_art_39"
+      ],
+      "removed_from_top10": [
+        "mw_deutsche_umsetzung_der_dsgvo_oeffnungsklauseln_im_bdsg",
+        "beh_26.04.2018-_Datenschutzbeauftragten-Best_6"
+      ]
+    },
+    {
+      "query": "Wie lange darf eine Bewerbung gespeichert werden?",
+      "new_hyp_chunks": [
+        "gran_BDSG_§_26_Abs.1_S.16",
+        "gran_BDSG_§_26_Abs.1_S.20",
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_13",
+        "dsgvo_art_17"
+      ],
+      "removed_from_top10": [
+        "beh_20.12.2021-_HÃ¤ufige_Fragestellungen_neb_156",
+        "beh_04.05.2022-_Die_Zeit_fÃ¼r_ein_BeschÃ¤fti_9",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_115",
+        "beh_Leitlinien_2_2019_für_die_Verarbeitung_p_10",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_74",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_61",
+        "beh_LfDI_BW_Diskussionspapier_Rechtsgrundlag_75"
+      ]
+    },
+    {
+      "query": "Sind Cookies ohne Einwilligung erlaubt?",
+      "new_hyp_chunks": [
+        "gran_TDDDG_§_26",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1"
+      ],
+      "removed_from_top10": [
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_40",
+        "beh_Leitlinien_8_2020_über_die_gezielte_Ansp_45",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_18"
+      ]
+    },
+    {
+      "query": "Wann muss ich eine Datenpanne melden?",
+      "new_hyp_chunks": [
+        "gran_BDSG_§_42_Abs.1",
+        "gran_BDSG_§_42_Abs.1_S.1",
+        "dsgvo_art_32",
+        "dsgvo_art4_daten_identitaet",
+        "dsgvo_art4_rollen_verarbeitung"
+      ],
+      "removed_from_top10": [
+        "beh_20.11.2025-_Verbesserung_des_Datenschutz_18",
+        "beh_12.02.2026â_Stellungnahme_der_Konferen_16",
+        "beh_23.10.2020-_Videokonferenzsysteme_44",
+        "beh_Das_Standard-Datenschutzmodell_(SDM)_Ver_68"
+      ]
+    },
+    {
+      "query": "Datenschutz im Verein",
+      "new_hyp_chunks": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "dsgvo_art_13",
+        "dsgvo_art_30"
+      ],
+      "removed_from_top10": [
+        "seg_BGH_2._Zivilsenat_II_ZR_132_24_entscheidungsgruende_4",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_16",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_54",
+        "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_26"
+      ]
+    },
+    {
+      "query": "Welche Rechtsgrundlagen sind für die Anonymisierung relevant?",
+      "new_hyp_chunks": [
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art4_daten_identitaet",
+        "dsgvo_art4_rollen_verarbeitung"
+      ],
+      "removed_from_top10": [
+        "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_60",
+        "seg_eugh_C-268_21_vf_2_3",
+        "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_61",
+        "beh_Leitlinien_3_2020_für_die_Verarbeitung_v_23",
+        "beh_23.11.2023-_Datenschutz_in_der_Forschung_20"
+      ]
+    },
+    {
+      "query": "Welche Kriterien müssen bei der Prüfung der Verhältnismäßigkeit g",
+      "new_hyp_chunks": [
+        "gran_BDSG_§_26_Abs.1_S.16",
+        "gran_BDSG_§_26_Abs.1_S.20",
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_22",
+        "dsgvo_art_88"
+      ],
+      "removed_from_top10": [
+        "beh_Stand_April_2018_-_Standard-Datenschutzm_17",
+        "seg_eugh_C-439_19_vf_2_2",
+        "beh_18.01.2023â_Stellungnahme_zu_Grundsatz_189",
+        "beh_29.03.2019-_Orientierungshilfe_der_Aufsi_68",
+        "beh_26.03.2025-_Eckpunkte_fÃ¼r_eine_freiheit_7",
+        "seg_BGH_6._Zivilsenat_VI_ZR_431_24_entscheidungsgruende_8"
+      ]
+    },
+    {
+      "query": "Unter welchen Voraussetzungen stellt eine dynamische IP-Adresse p",
+      "new_hyp_chunks": [
+        "gran_TDDDG_§_23",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art4_daten_identitaet",
+        "dsgvo_art4_rollen_verarbeitung"
+      ],
+      "removed_from_top10": [
+        "seg_eugh_C-413_23_wuerdigung_23",
+        "seg_eugh_C-579_21_vf_1_2_1",
+        "BFH_9._Senat_IX_R_26_22_entscheidungsgruende_1",
+        "seg_BGH_6._Zivilsenat_VI_ZR_258_24_entscheidungsgruende_5",
+        "seg_BGH_1._Zivilsenat_I_ZR_115_25_entscheidungsgruende_9"
+      ]
+    },
+    {
+      "query": "Welche rechtlichen Voraussetzungen müssen für E-Mail-Werbung erfü",
+      "new_hyp_chunks": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_13",
+        "dsgvo_art_21"
+      ],
+      "removed_from_top10": [
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_38",
+        "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_83",
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_50",
+        "seg_eugh_C-102_20_vorlagefragen_3"
+      ]
+    },
+    {
+      "query": "Welche rechtlichen Anforderungen müssen bei der Verarbeitung biom",
+      "new_hyp_chunks": [
+        "gran_BDSG_§_22_Abs.1_S.7",
+        "gran_BDSG_§_22_Abs.1_S.6",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "dsgvo_art_35_part0",
+        "dsgvo_art_35_part1",
+        "dsgvo_art4_daten_identitaet",
+        "dsgvo_art4_rollen_verarbeitung"
+      ],
+      "removed_from_top10": [
+        "beh_03.04.2019-_Positionspapier_zur_biometri_126",
+        "seg_eugh_C-252_21_rechtsrahmen_5",
+        "seg_eugh_C-205_21_vf_2_1",
+        "seg_eugh_C-634_21_rechtsrahmen_3",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_85",
+        "beh_03.04.2019-_Positionspapier_zur_biometri_149",
+        "beh_10.03.2026-_Stellungnahme_zum_Digital_Fi_11",
+        "beh_03.04.2019-_Positionspapier_zur_biometri_157",
+        "beh_Leitlinien_3_2019_zur_Verarbeitung_58",
+        "beh_Leitlinien_3_2019_zur_Verarbeitung_37"
+      ]
+    },
+    {
+      "query": "Welche rechtlichen Grundlagen und Grenzen sind beim Einsatz von K",
+      "new_hyp_chunks": [
+        "gran_BDSG_§_26_Abs.1_S.16",
+        "gran_BDSG_§_26_Abs.1_S.20",
+        "gran_BDSG_§_4_Abs.1_S.7",
+        "gran_BDSG_§_4_Abs.1_S.6",
+        "dsgvo_art_9_part0"
+      ],
+      "removed_from_top10": [
+        "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_50",
+        "seg_BAG_2._Senat_2_AZR_297_22_entscheidungsgruende_11",
+        "seg_eugh_C-65_23_rechtsrahmen_4",
+        "beh_Leitlinien_05_2020_zur_Einwilligung_gemä_13",
+        "seg_eugh_C-34_21_rechtsrahmen_6"
+      ]
+    },
+    {
+      "query": "Welche spezifischen Angaben müssen in einer Datenschutzerklärung ",
+      "new_hyp_chunks": [
+        "gran_TDDDG_§_13",
+        "dsgvo_art_5",
+        "dsgvo_art_12_part0",
+        "dsgvo_art_12_part1"
+      ],
+      "removed_from_top10": [
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_93",
+        "beh_06.05.2024-_Orientierungshilfe_der_DSK_z_67"
+      ]
+    },
+    {
+      "query": "Welche Rechtsgrundlagen sind bei der Videoüberwachung im öffentli",
+      "new_hyp_chunks": [
+        "gran_BDSG_§_4_Abs.1_S.7",
+        "gran_BDSG_§_4_Abs.1_S.6",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1",
+        "dsgvo_art_13"
+      ],
+      "removed_from_top10": [
+        "gran_BDSG_§_4_Abs.1_S.1",
+        "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_33",
+        "beh_Leitlinien_3_2019_zur_Verarbeitung_24",
+        "gran_BDSG_§_4_Abs.1",
+        "beh_15VideoÃ¼berwachung_nach_der_Datenschutz_4"
+      ]
+    },
+    {
+      "query": "Welche rechtlichen Schritte sind erforderlich, um Daten in ein Dr",
+      "new_hyp_chunks": [
+        "gran_BDSG_§_17_Abs.1",
+        "gran_BDSG_§_17_Abs.1_S.5",
+        "dsgvo_art_49_part0",
+        "dsgvo_art_49_part1"
+      ],
+      "removed_from_top10": [
+        "beh_Ãbermittlung_personenbezogener_Daten_au_27",
+        "beh_September_2025-_Anwendungshinweise_zu_de_25",
+        "dsgvo_eg_107"
+      ]
+    },
+    {
+      "query": "Mein Chef liest meine Mails",
+      "new_hyp_chunks": [
+        "gran_BDSG_§_26_Abs.1_S.16",
+        "gran_BDSG_§_26_Abs.1_S.20",
+        "gran_TDDDG_§_5",
+        "dsgvo_art_5"
+      ],
+      "removed_from_top10": [
+        "gran_BDSG_§_26_Abs.1_S.6",
+        "mw_eugh_c_34_21_26_bdsg_unanwendbar",
+        "seg_BAG_1._Senat_1_ABR_14_22_entscheidungsgruende_20",
+        "BAG_1._Senat_1_ABR_14_22_leitsatz"
+      ]
+    },
+    {
+      "query": "DSGVO und Werbung",
+      "new_hyp_chunks": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_13",
+        "dsgvo_art_21"
+      ],
+      "removed_from_top10": [
+        "beh_3Verarbeitung_personenbezogener_Daten_fÃ_40",
+        "mw_eugh_c_446_21_schrems_meta_datenminimierung_begrenzt_werbenu",
+        "beh_21.06.2023â_Stellungnahme_zum_politisc_6",
+        "beh_3Verarbeitung_personenbezogener_Daten_fÃ_13",
+        "beh_07.11.2018-_Orientierungshilfe_der_Aufsi_4",
+        "beh_07.11.2018-_Orientierungshilfe_der_Aufsi_45",
+        "beh_07.11.2018-_Orientierungshilfe_der_Aufsi_19",
+        "beh_3Verarbeitung_personenbezogener_Daten_fÃ_38",
+        "dsgvo_eg_47",
+        "beh_18.02.2022-_Orientierungshilfe_der_Aufsi_21"
+      ]
+    },
+    {
+      "query": "Was ist mit § 32 BDSG-alt?",
+      "new_hyp_chunks": [
+        "gran_BDSG_§_26_Abs.1_S.16",
+        "gran_BDSG_§_26_Abs.1_S.20"
+      ],
+      "removed_from_top10": [
+        "gran_DDG_§_2_Abs.1_S.3",
+        "mw_deutsche_umsetzung_der_dsgvo_oeffnungsklauseln_im_bdsg",
+        "beh_13Auftragsverarbeitung,_Art._28_DS-GVOin_7",
+        "gran_DDG_§_32_Abs.1_S.6",
+        "mw_eugh_c_34_21_26_bdsg_unanwendbar",
+        "gran_BDSG_§_11_Abs.1_S.3",
+        "gran_BDSG_§_32_Abs.1_S.6",
+        "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_131",
+        "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_134"
+      ]
+    },
+    {
+      "query": "Da § 29 BDSG das regelt, wie lange darf ich speichern?",
+      "new_hyp_chunks": [
+        "gran_BDSG_§_35_Abs.1_S.1",
+        "gran_BDSG_§_35_Abs.1_S.6",
+        "dsgvo_art_5",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_17"
+      ],
+      "removed_from_top10": [
+        "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_139",
+        "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_76",
+        "beh_20.12.2021-_Orientierungshilfe_der_Aufsi_287",
+        "gran_BDSG_§_56_Abs.1",
+        "gran_BDSG_§_27_Abs.1_S.6",
+        "beh_02.03.2021-_Stellungnahme_der_DSK_zur_Ev_138",
+        "beh_16.08.2024-_Datenverarbeitung_im_Zusamme_26",
+        "BGH_1._Zivilsenat_I_ZR_97_25_entscheidungsgruende_12",
+        "seg_eugh_c_293_12_vf_1b_10",
+        "beh_Leitlinien_01_2020_zur_Verarbeitung_pers_85"
+      ]
+    },
+    {
+      "query": "Darf ich Mitarbeiterfotos auf der Website veröffentlichen?",
+      "new_hyp_chunks": [
+        "gran_BDSG_§_26_Abs.1_S.16",
+        "gran_BDSG_§_26_Abs.1_S.20",
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_9_part0",
+        "dsgvo_art_9_part1"
+      ],
+      "removed_from_top10": [
+        "dsgvo_art_88",
+        "seg_eugh_C-460_20_vf_2b_0",
+        "beh_September_2019_-_LfDI_BW_-_Fotografieren_4",
+        "seg_eugh_C-460_20_sachverhalt_4",
+        "beh_29.03.2019-_Orientierungshilfe_der_Aufsi_64",
+        "seg_eugh_C-184_20_vf_1_1",
+        "beh_September_2019_-_LfDI_BW_-_Fotografieren_23",
+        "seg_eugh_C-460_20_vf_2b_2"
+      ]
+    },
+    {
+      "query": "Wann liegt berechtigtes Interesse vor?",
+      "new_hyp_chunks": [
+        "dsgvo_art_6_part0",
+        "dsgvo_art_6_part1",
+        "dsgvo_art_13",
+        "dsgvo_art_21"
+      ],
+      "removed_from_top10": [
+        "BGH_6._Zivilsenat_VI_ZR_431_24_entscheidungsgruende_7",
+        "beh_EDPB_Zusammenfassung_Berechtigtes_Intere_0",
+        "beh_29.03.2019-_Orientierungshilfe_der_Aufsi_39",
+        "beh_29.03.2019-_Orientierungshilfe_der_Aufsi_69",
+        "beh_EDPB_Zusammenfassung_Berechtigtes_Intere_2",
+        "seg_eugh_C-17_22_rechtsrahmen_1",
+        "beh_Leitlinien_3_2019_zur_Verarbeitung_19",
+        "beh_EDPB_Zusammenfassung_Berechtigtes_Intere_1"
+      ]
+    },
+    {
+      "query": "Was sind besondere Kategorien personenbezogener Daten?",
+      "new_hyp_chunks": [
+        "gran_BDSG_§_22_Abs.1_S.7",
+        "gran_BDSG_§_22_Abs.1_S.6"
+      ],
+      "removed_from_top10": [
+        "beh_Stand_Februar_2018_-_Muster_fÃ¼r_Verantw_11",
+        "beh_17Besondere_Kategorien_personenbezogener_3",
+        "beh_Leitlinien_8_2020_über_die_gezielte_Ansp_66",
+        "beh_17Besondere_Kategorien_personenbezogener_35",
+        "beh_17Besondere_Kategorien_personenbezogener_16",
+        "beh_November_2024-_Orientierungshilfe_der_DS_22",
+        "beh_14BeschÃ¤ftigtendatenschutz_34"
+      ]
+    },
+    {
+      "query": "Welche Folgen hat das SCHUFA-Urteil?",
+      "new_hyp_chunks": [
+        "gran_BDSG_§_31_Abs.1",
+        "gran_BDSG_§_31_Abs.1_S.1",
+        "dsgvo_art_5",
+        "dsgvo_art_13",
+        "dsgvo_art_22",
+        "dsgvo_art_82"
+      ],
+      "removed_from_top10": [
+        "beh_18.01.2023â_Stellungnahme_zu_Grundsatz_62",
+        "seg_eugh_C-634_21_sachverhalt_0",
+        "beh_11.05.2023-_Stellungnahme_zur_Verbesseru_7",
+        "beh_11.05.2023-_Stellungnahme_zur_Verbesseru_36",
+        "seg_eugh_c_140_20_sachverhalt_3",
+        "seg_eugh_C-634_21_sachverhalt_2",
+        "seg_eugh_C-26_22_vf_1_9"
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 """
-Telemetrie für Norm-Hypothesizer im Shadow-Mode.
+Telemetrie für Norm-Hypothesizer im Shadow-Mode und Injection-Mode.
 Loggt jede Hypothesen-Generierung in JSONL für spätere Auswertung.
 """
 import os
@@ -26,6 +26,8 @@ def log_hypothesis(
     from_cache: bool,
     error: Optional[str] = None,
     qu_norms: Optional[list] = None,
+    injected_chunks: Optional[int] = None,   # Schritt 1.3: wie viele Chunks injiziert
+    resolved_chunks: Optional[int] = None,   # Schritt 1.3: wie viele Chunks aufgelöst
 ):
     """Schreibt einen JSONL-Eintrag für eine Hypothesen-Generierung."""
     Path(_LOG_PATH).parent.mkdir(parents=True, exist_ok=True)
@@ -39,6 +41,8 @@ def log_hypothesis(
         "from_cache": from_cache,
         "error": error,
         "qu_norms": qu_norms or [],  # Aus Vergleichszweck: was QU-Regex liefert
+        "injected_chunks": injected_chunks,  # None wenn Injection nicht aktiv
+        "resolved_chunks": resolved_chunks,  # None wenn Injection nicht aktiv
     }
 
     try:

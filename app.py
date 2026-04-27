@@ -849,14 +849,14 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                 _qu_norms = list(_expand_qu_norms(original_question)) or []
             except Exception:
                 pass
-            _log_hyp(
-                query=original_question,
-                hypotheses=norm_hypotheses,
-                duration_ms=norm_hypothesis_meta["duration_ms"],
-                from_cache=norm_hypothesis_meta.get("from_cache", False),
-                error=norm_hypothesis_meta.get("error"),
-                qu_norms=_qu_norms,
-            )
+            # Telemetrie-Call wird NACH Injection-Block ausgeführt (Schritt 1.3)
+            # damit injected_chunks/resolved_chunks im Log enthalten sind.
+            _pending_telemetry = {
+                "fn": _log_hyp,
+                "query": original_question,
+                "hypotheses": norm_hypotheses,
+                "qu_norms": _qu_norms,
+            }
         except Exception as _e:
             logging.getLogger(__name__).warning(f"Hypothesis telemetry failed: {_e}")
 
@@ -866,7 +866,7 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                 f"{norm_hypothesis_meta['duration_ms']:.0f}ms, "
                 f"top: {[h['norm'] for h in norm_hypotheses[:3]]}"
             )
-    # WICHTIG: norm_hypotheses wird hier NICHT im Retrieval verwendet (-> Schritt 1.3)
+    # norm_hypotheses wird in Schritt 1.3 via _inject_hypothesis_pflicht_chunks() genutzt.
     # === /Phase 0b ===
 
     model = get_model()
@@ -1265,6 +1265,75 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
         if c["id"] not in pflicht_ids:
             pflicht.append(c)
             pflicht_ids.add(c["id"])
+
+    # === Schritt 1.3: Hypothesen-Pflicht-Chunks ===
+    # Wird nur aktiv wenn OPENLEX_NORM_HYPOTHESIS_INJECT_ENABLED=true
+    # und Hypothesizer Ergebnisse geliefert hat.
+    # Graceful Degradation: jeder Fehler wird geloggt, kein Block.
+    _hyp_injected_count = 0
+    _hyp_resolved_count = 0
+    if (
+        os.getenv("OPENLEX_NORM_HYPOTHESIS_INJECT_ENABLED", "false").lower() == "true"
+        and norm_hypothesis_meta.get("enabled")
+        and norm_hypotheses
+    ):
+        try:
+            from norm_chunk_resolver import resolve_hypotheses_to_chunks as _resolve_hyp
+            _min_conf = float(os.getenv("OPENLEX_NORM_HYPOTHESIS_MIN_CONFIDENCE", "0.5"))
+            _hyp_proposals = _resolve_hyp(
+                norm_hypotheses,
+                min_confidence=_min_conf,
+                max_chunks_per_norm=2,
+            )
+            _hyp_resolved_count = len(_hyp_proposals)
+            if _hyp_proposals:
+                # Chunk-IDs der Proposals aus ChromaDB laden
+                _proposal_ids = [p["chunk_id"] for p in _hyp_proposals if p["chunk_id"] not in pflicht_ids]
+                if _proposal_ids:
+                    _hyp_result = col.get(ids=_proposal_ids, include=["documents", "metadatas"])
+                    # Score-Lookup: chunk_id -> score
+                    _score_map = {p["chunk_id"]: p["score"] for p in _hyp_proposals}
+                    for _cid, _doc, _meta in zip(
+                        _hyp_result["ids"], _hyp_result["documents"], _hyp_result["metadatas"]
+                    ):
+                        if _cid in pflicht_ids:
+                            continue
+                        pflicht.append({
+                            "id": _cid,
+                            "text": _doc,
+                            "meta": _meta or {},
+                            "distance": 0.05,
+                            "adjusted_distance": 0.05,
+                            "source": "hypothesis_pflicht",
+                            "ce_score": _score_map.get(_cid, 7.0),
+                        })
+                        pflicht_ids.add(_cid)
+                        _hyp_injected_count += 1
+            if _hyp_injected_count:
+                print(f"  Hypothesen-Injection: {_hyp_injected_count} Chunks ({_hyp_resolved_count} resolved)")
+        except Exception as _hyp_e:
+            logging.getLogger(__name__).warning(
+                f"Hypothesis injection failed (graceful degradation): {_hyp_e}"
+            )
+    # Telemetrie: Injection-Stats zurückschreiben + deferred Log-Call
+    if norm_hypothesis_meta.get("enabled"):
+        norm_hypothesis_meta["injected_chunks"] = _hyp_injected_count
+        norm_hypothesis_meta["resolved_chunks"] = _hyp_resolved_count
+        if "_pending_telemetry" in locals() and _pending_telemetry:
+            try:
+                _pending_telemetry["fn"](
+                    query=_pending_telemetry["query"],
+                    hypotheses=_pending_telemetry["hypotheses"],
+                    duration_ms=norm_hypothesis_meta["duration_ms"],
+                    from_cache=norm_hypothesis_meta.get("from_cache", False),
+                    error=norm_hypothesis_meta.get("error"),
+                    qu_norms=_pending_telemetry["qu_norms"],
+                    injected_chunks=_hyp_injected_count,
+                    resolved_chunks=_hyp_resolved_count,
+                )
+            except Exception as _tel_e:
+                logging.getLogger(__name__).warning(f"Deferred telemetry failed: {_tel_e}")
+    # === /Schritt 1.3 ===
 
     # Document-Level Deduplication: max 3 Chunks pro Dokument
     MAX_PER_DOC = 3
