@@ -948,26 +948,39 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     # Kein Embedding, kein Roundtrip: col.get() mit bekannten ChromaDB-IDs.
     # Soft Injection: Chunks werden mit adjusted_distance=0.15 eingefügt,
     # was sie in den Top-40 qualifiziert; der Cross-Encoder entscheidet final.
-    try:
-        qu_ids = _qu_get_chroma_ids(_expand_qu_norms(question))
-        if qu_ids:
-            qu_result = col.get(ids=qu_ids, include=["documents", "metadatas"])
-            for cid, doc, meta in zip(
-                qu_result["ids"], qu_result["documents"], qu_result["metadatas"]
-            ):
-                cid_norm = _normalize_az(meta.get("volladresse", "") or doc[:50])
-                if cid_norm not in seen_ids:
-                    seen_ids.add(cid_norm)
-                    chunks.append({
-                        "id": cid,
-                        "text": doc,
-                        "meta": meta,
-                        "distance": 0.15,
-                        "adjusted_distance": 0.15,
-                        "source": "qu_injection",
-                    })
-    except Exception:
-        pass
+    #
+    # Schritt 1.4: In Primary-Modus überspringen wenn Hypothesen vorhanden.
+    # Hypothesen übernehmen dann die Norm-Steuerung; QU bleibt Fallback.
+    _hyp_primary_mode = os.getenv("OPENLEX_NORM_HYPOTHESIS_PRIMARY", "false").lower() == "true"
+    _hyp_available_for_primary = bool(norm_hypotheses) and norm_hypothesis_meta.get("enabled")
+    _qu_skipped_for_primary = _hyp_primary_mode and _hyp_available_for_primary
+
+    if not _qu_skipped_for_primary:
+        try:
+            qu_ids = _qu_get_chroma_ids(_expand_qu_norms(question))
+            if qu_ids:
+                qu_result = col.get(ids=qu_ids, include=["documents", "metadatas"])
+                for cid, doc, meta in zip(
+                    qu_result["ids"], qu_result["documents"], qu_result["metadatas"]
+                ):
+                    cid_norm = _normalize_az(meta.get("volladresse", "") or doc[:50])
+                    if cid_norm not in seen_ids:
+                        seen_ids.add(cid_norm)
+                        chunks.append({
+                            "id": cid,
+                            "text": doc,
+                            "meta": meta,
+                            "distance": 0.15,
+                            "adjusted_distance": 0.15,
+                            "source": "qu_injection",
+                        })
+        except Exception:
+            pass
+    else:
+        if _trace_enabled():
+            logging.getLogger(__name__).info(
+                "[trace] b2 QU-Injection übersprungen (primary mode, Hypothesen vorhanden)"
+            )
 
     # b3) BM25-Pfad (nur wenn OPENLEX_BM25_ENABLED=true)
     # Retrieval via Snowball-Stemmer + BM25s, persistierter Index.
@@ -1266,12 +1279,31 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             pflicht.append(c)
             pflicht_ids.add(c["id"])
 
-    # === Schritt 1.3: Hypothesen-Pflicht-Chunks ===
+    # === Schritt 1.3/1.4: Hypothesen-Pflicht-Chunks ===
     # Wird nur aktiv wenn OPENLEX_NORM_HYPOTHESIS_INJECT_ENABLED=true
     # und Hypothesizer Ergebnisse geliefert hat.
     # Graceful Degradation: jeder Fehler wird geloggt, kein Block.
+    #
+    # injection_strategy:
+    #   "additive"           — Schritt 1.3: Hypothesen + QU beide aktiv
+    #   "primary_hypothesis" — Schritt 1.4: nur Hypothesen (QU war overridden)
+    #   "fallback_qu"        — Schritt 1.4: Hypothesen leer/fehler, QU läuft normal
+    #   "disabled"           — Injection-Flag aus
     _hyp_injected_count = 0
     _hyp_resolved_count = 0
+    _injection_strategy = "disabled"
+
+    # Strategie bestimmen
+    if os.getenv("OPENLEX_NORM_HYPOTHESIS_INJECT_ENABLED", "false").lower() == "true":
+        if _hyp_primary_mode:
+            if norm_hypothesis_meta.get("enabled") and norm_hypotheses:
+                _injection_strategy = "primary_hypothesis"
+            else:
+                _injection_strategy = "fallback_qu"
+        else:
+            if norm_hypothesis_meta.get("enabled") and norm_hypotheses:
+                _injection_strategy = "additive"
+
     if (
         os.getenv("OPENLEX_NORM_HYPOTHESIS_INJECT_ENABLED", "false").lower() == "true"
         and norm_hypothesis_meta.get("enabled")
@@ -1319,6 +1351,7 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     if norm_hypothesis_meta.get("enabled"):
         norm_hypothesis_meta["injected_chunks"] = _hyp_injected_count
         norm_hypothesis_meta["resolved_chunks"] = _hyp_resolved_count
+        norm_hypothesis_meta["injection_strategy"] = _injection_strategy
         if "_pending_telemetry" in locals() and _pending_telemetry:
             try:
                 _pending_telemetry["fn"](
@@ -1330,6 +1363,7 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                     qu_norms=_pending_telemetry["qu_norms"],
                     injected_chunks=_hyp_injected_count,
                     resolved_chunks=_hyp_resolved_count,
+                    injection_strategy=_injection_strategy,
                 )
             except Exception as _tel_e:
                 logging.getLogger(__name__).warning(f"Deferred telemetry failed: {_tel_e}")
