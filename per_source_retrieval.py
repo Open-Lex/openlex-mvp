@@ -34,13 +34,14 @@ DEFAULT_TOP_K: dict[str, int] = {
 }
 
 # Default Typ-Budget für merge_with_type_budget()
+# Schritt 2.3: schärferes Budget (max 10 Chunks total)
 # (min, max) pro Source-Type
 DEFAULT_BUDGET: dict[str, tuple[int, int]] = {
-    "gesetz_granular":    (2, 4),
-    "urteil_segmentiert": (0, 3),
-    "leitlinie":          (0, 3),
-    "erwaegungsgrund":    (0, 2),
-    "methodenwissen":     (0, 2),
+    "gesetz_granular":    (0, 4),
+    "urteil_segmentiert": (0, 2),
+    "leitlinie":          (0, 2),
+    "methodenwissen":     (0, 1),
+    "erwaegungsgrund":    (0, 1),
 }
 
 

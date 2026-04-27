@@ -1063,10 +1063,14 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     if _candidates_only:
         return chunks[:_candidates_top_k]
 
-    # ===== Schritt 2.2: Per-Source-Retrieval (Shadow-Mode) =====
-    # Läuft parallel zum Single-Call. Verwendet wird weiterhin der Single-Call.
-    # Steuerung via OPENLEX_PER_SOURCE_RETRIEVAL_ENABLED.
-    if os.getenv("OPENLEX_PER_SOURCE_RETRIEVAL_ENABLED", "false").lower() == "true":
+    # ===== Schritt 2.2/2.3: Per-Source-Retrieval =====
+    # 2.2 (Shadow): läuft parallel, Telemetrie, Single-Call bleibt aktiv
+    # 2.3 (Aktiv):  Per-Source ersetzt chunks → Typ-Budget aktiv
+    # Flags: OPENLEX_PER_SOURCE_RETRIEVAL_ENABLED (shadow), OPENLEX_PER_SOURCE_BUDGET_ACTIVE (aktiv)
+    _ps_shadow_mode = os.getenv("OPENLEX_PER_SOURCE_RETRIEVAL_ENABLED", "false").lower() == "true"
+    _ps_budget_active = os.getenv("OPENLEX_PER_SOURCE_BUDGET_ACTIVE", "false").lower() == "true"
+
+    if _ps_shadow_mode or _ps_budget_active:
         try:
             from per_source_retrieval import per_source_query as _ps_query, merge_with_type_budget as _ps_merge
             from per_source_telemetry import log_per_source as _ps_log
@@ -1085,7 +1089,7 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
 
             _ps_duration_ms = (time.time() - _ps_t_start) * 1000
 
-            # Single-Call top-10 IDs
+            # Single-Call top-10 IDs (Baseline für Telemetrie)
             _single_top10 = [c.get("id", "") for c in chunks[:10] if c.get("id")]
 
             # Per-Source top-10 IDs (nach Budget)
@@ -1111,12 +1115,37 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                 overlap_top10=_overlap,
             )
 
-            print(
-                f"  [Per-Source Shadow] {len(_ps_after_budget_ids)} chunks, "
-                f"{len(_overlap)} overlap, {_ps_duration_ms:.0f}ms"
-            )
+            if _ps_budget_active:
+                # ── Schritt 2.3: Per-Source ersetzt chunks ──
+                # Konvertiere ps_merged in das chunks-Format der Pipeline
+                _ps_replacement = []
+                for _psc in _ps_merged:
+                    _psc_meta = _psc.get("metadata") or _psc.get("meta") or {}
+                    _psc_source_type = _psc.get("source_type", "")
+                    _psc_segment = _psc_meta.get("segment", "")
+                    _psc_boost = SEGMENT_BOOST.get(_psc_segment or _psc_source_type, 1.0)
+                    _psc_dist = _psc.get("distance", 0.5)
+                    _ps_replacement.append({
+                        "text": _psc.get("document") or _psc.get("text") or "",
+                        "meta": _psc_meta,
+                        "id": _psc.get("chunk_id") or _psc.get("id"),
+                        "distance": _psc_dist,
+                        "adjusted_distance": _psc_dist * _psc_boost,
+                        "source": "per_source",
+                    })
+                chunks = _ps_replacement
+                print(
+                    f"  [Per-Source Aktiv] {len(chunks)} chunks (Budget), "
+                    f"{len(_overlap)} Overlap mit Single-Call, {_ps_duration_ms:.0f}ms"
+                )
+            else:
+                # Shadow-only: Single-Call-Ergebnis bleibt in chunks
+                print(
+                    f"  [Per-Source Shadow] {len(_ps_after_budget_ids)} chunks, "
+                    f"{len(_overlap)} overlap, {_ps_duration_ms:.0f}ms"
+                )
         except Exception as _ps_err:
-            print(f"  [Per-Source Shadow] WARN: {_ps_err}")
+            print(f"  [Per-Source] WARN — fallback auf Single-Call: {_ps_err}")
             try:
                 from per_source_telemetry import log_per_source as _ps_log_err
                 _ps_log_err(
@@ -1131,9 +1160,7 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                 )
             except Exception:
                 pass
-    # WICHTIG: Pipeline verwendet weiterhin chunks aus Single-Call.
-    # Per-Source fließt erst in Schritt 2.3 aktiv ins Retrieval ein.
-    # ===== Ende Per-Source Shadow-Block =====
+    # ===== Ende Per-Source Block =====
 
     candidates = chunks[:40]
 
