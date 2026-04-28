@@ -248,13 +248,21 @@ def build_candidate_choices(q) -> list[str]:
     for c in q.get("retrieval_candidates", []):
         st = c.get("source_type", "")
         az = c.get("aktenzeichen", "")
+        gericht = c.get("gericht", "")
+        if st in ("urteil", "urteil_segmentiert") and not az:
+            # aktenzeichen fehlt im JSON → aus ChromaDB nachladen
+            meta = get_chunk_meta(c.get("chunk_id", ""))
+            az = meta.get("aktenzeichen", "")
+            gericht = gericht or meta.get("gericht", "")
         if st in ("urteil", "urteil_segmentiert") and az:
             if az not in urteil_az:
                 urteil_az[az] = {"score": c.get("score", 0.0),
-                                 "gericht": c.get("gericht", ""),
+                                 "gericht": gericht,
                                  "az": az}
             else:
                 urteil_az[az]["score"] = max(urteil_az[az]["score"], c.get("score", 0.0))
+                if not urteil_az[az]["gericht"]:
+                    urteil_az[az]["gericht"] = gericht
         else:
             other_candidates.append(c)
 
@@ -318,15 +326,23 @@ def build_candidates_markdown(q) -> str:
     for c in candidates:
         st = c.get("source_type", "")
         az = c.get("aktenzeichen", "")
+        gericht = c.get("gericht", "")
+        if st in ("urteil", "urteil_segmentiert") and not az:
+            # aktenzeichen fehlt im JSON → aus ChromaDB nachladen
+            meta = get_chunk_meta(c.get("chunk_id", ""))
+            az = meta.get("aktenzeichen", "")
+            gericht = gericht or meta.get("gericht", "")
         if st in ("urteil", "urteil_segmentiert") and az:
             if az not in urteil_az:
                 urteil_az[az] = {
-                    "gericht": c.get("gericht", ""),
+                    "gericht": gericht,
                     "az": az,
                     "score": c.get("score", 0.0),
                 }
             else:
                 urteil_az[az]["score"] = max(urteil_az[az]["score"], c.get("score", 0.0))
+                if not urteil_az[az]["gericht"]:
+                    urteil_az[az]["gericht"] = gericht
         else:
             other_candidates.append(c)
 
