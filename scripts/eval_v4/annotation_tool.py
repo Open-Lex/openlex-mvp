@@ -685,22 +685,23 @@ _SUB_CHUNK_JS = """
     metaEl.textContent = meta;
 
     var previewEl = document.createElement("span");
-    previewEl.className   = "ol-preview";
-    previewEl.textContent = chunkText.slice(0, PREVIEW) + "\\u2026";
+    previewEl.className      = "ol-preview";
+    previewEl.style.display  = "none";   /* standardmäßig versteckt */
+    previewEl.textContent    = chunkText.slice(0, PREVIEW) + "\\u2026";
 
     var fullEl = document.createElement("span");
     fullEl.className    = "ol-full";
-    fullEl.style.display = "none";
+    fullEl.style.display = "";           /* standardmäßig sichtbar */
     fullEl.textContent  = chunkText;
 
     var btn = document.createElement("button");
-    btn.textContent = "\\u25bc mehr";
+    btn.textContent = "\\u25b2 weniger";  /* startet aufgeklappt */
     btn.style.cssText = "font-size:0.72em;padding:1px 5px;cursor:pointer;margin-left:5px;" +
                         "background:transparent;border:1px solid #555;border-radius:3px;color:#888;" +
                         "vertical-align:middle;line-height:1.4;";
     btn.addEventListener("click", function(e) {
       e.preventDefault();
-      e.stopPropagation();   /* WICHTIG: keine Checkbox-Auswahl triggern */
+      e.stopPropagation();
       var open = fullEl.style.display !== "none";
       fullEl.style.display    = open ? "none" : "";
       previewEl.style.display = open ? ""     : "none";
