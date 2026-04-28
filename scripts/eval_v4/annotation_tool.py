@@ -638,6 +638,19 @@ def do_add_search_to_must(search_sel: list, must_choices: list, must_val: list):
 CSS = """
 .annotation-header { font-size: 1.1rem; font-weight: 600; }
 .status-bar { background: #1a1a2e; padding: 8px 12px; border-radius: 6px; }
+
+/* ── Urteil-Subsegment-Einträge (▸-Prefix) ── */
+.must-sub-item {
+    background: rgba(100, 120, 160, 0.08) !important;
+    border-left: 3px solid #4a6fa5 !important;
+    margin-left: 12px !important;
+    border-radius: 4px !important;
+}
+.must-sub-item label,
+.must-sub-item span {
+    color: #8ba3c7 !important;
+    font-size: 0.88em !important;
+}
 """
 
 with gr.Blocks(title="OpenLex Eval v4 Annotation", css=CSS) as demo:
@@ -681,7 +694,44 @@ with gr.Blocks(title="OpenLex Eval v4 Annotation", css=CSS) as demo:
     # ─── Must-Contain ─────────────────────────────────────────────────────────
     gr.Markdown("### ✅ Must-Contain-Chunks (1–5 auswählen)")
     gr.Markdown("_Urteile: Tenor normal · weitere Segmente direkt darunter eingerückt (▸) — alle anwählbar_")
-    must_cbg = gr.CheckboxGroup(label="Kandidaten", choices=[])
+    must_cbg = gr.CheckboxGroup(label="Kandidaten", choices=[], elem_id="must-cbg")
+
+    # JS: sub-chunk styling (▸ items get .must-sub-item class via MutationObserver)
+    gr.HTML("""<script>
+(function(){
+  function styleSubItems() {
+    var cbg = document.getElementById("must-cbg");
+    if (!cbg) return;
+    /* Gradio wraps each checkbox in a label inside a .wrap div */
+    var items = cbg.querySelectorAll("label");
+    items.forEach(function(lbl) {
+      var txt = lbl.textContent || "";
+      if (txt.trimStart().startsWith("▸")) {
+        lbl.classList.add("must-sub-item");
+      } else {
+        lbl.classList.remove("must-sub-item");
+      }
+    });
+  }
+
+  /* Run once + watch for Gradio re-renders */
+  var _obs = null;
+  function attach() {
+    var cbg = document.getElementById("must-cbg");
+    if (!cbg) return false;
+    styleSubItems();
+    if (_obs) _obs.disconnect();
+    _obs = new MutationObserver(styleSubItems);
+    _obs.observe(cbg, {childList: true, subtree: true});
+    return true;
+  }
+
+  var tries = 0;
+  var t = setInterval(function() {
+    if (attach() || ++tries > 60) clearInterval(t);
+  }, 300);
+})();
+</script>""")
 
     # ── Freitext-Suche ────────────────────────────────────────────────────────
     with gr.Accordion("🔍 Eigene Suche — Schlagworte eingeben, bessere Chunks finden", open=False):
