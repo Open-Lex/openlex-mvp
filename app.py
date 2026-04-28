@@ -2727,6 +2727,28 @@ PWA_HEAD = (
     '</script>'
     '<script>'
     '(function(){'
+    '  /* Mobile submit-button touchend fix: iOS/Android may not fire'
+    '     the Gradio click handler on tap. Bind touchend on the inner'
+    '     <button> to immediately dispatch click (e.preventDefault'
+    '     cancels the 300ms-delayed synthetic click). */'
+    '  var _tb=false;'
+    '  function _bindTS(){'
+    '    var b=document.querySelector("#submit-btn button");'
+    '    if(!b||_tb) return; _tb=true;'
+    '    b.addEventListener("touchend",function(e){'
+    '      e.preventDefault();'
+    '      var ta=document.querySelector("#msg-input textarea");'
+    '      if(ta && !ta.value.trim()) return;'
+    '      b.click();'
+    '    },{passive:false});'
+    '  }'
+    '  var _ti=0, _tt=setInterval(function(){'
+    '    _bindTS(); if(_tb||++_ti>40) clearInterval(_tt);'
+    '  },250);'
+    '})();'
+    '</script>'
+    '<script>'
+    '(function(){'
     '  /* Add copy button to each bot answer – copies Q+A together */'
     '  function addCopyBtns(){'
     '    var cb=document.getElementById("ol-chatbot");'
@@ -2966,12 +2988,14 @@ def build_app() -> gr.Blocks:
             inputs=[msg_input, chatbot],
             outputs=[chatbot, copy_store, msg_input, welcome],
             show_progress="hidden",
+            concurrency_limit=10,
         )
         msg_input.submit(
             respond,
             inputs=[msg_input, chatbot],
             outputs=[chatbot, copy_store, msg_input, welcome],
             show_progress="hidden",
+            concurrency_limit=10,
         )
         clear_trigger.click(
             lambda: ([], "", "", WELCOME_HTML),
@@ -3011,7 +3035,7 @@ if __name__ == "__main__":
 
     app = build_app()
     static_dir = os.path.join(os.path.dirname(__file__), "static")
-    app.queue().launch(
+    app.queue(default_concurrency_limit=10).launch(
         server_name="127.0.0.1",
         server_port=7860,
         share=False,
