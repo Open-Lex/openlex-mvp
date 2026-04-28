@@ -232,40 +232,50 @@ def _make_label(chunk_id: str, score, volladr: str, snippet: str, meta: dict = N
     return f"[{score_str}] {chunk_id} | {volladr} | {clean}"
 
 
-def _urteil_label(chunk: dict, gericht: str, az: str, kurzname: str) -> str:
-    """Einheitliches Label für Urteil-Chunks: [Prefix] chunk_id | Gericht AZ · Kurzname | Snippet"""
-    seg    = chunk.get("segment", "")
-    cid    = chunk["chunk_id"]
-    prefix = _seg_prefix(seg)
-    snip   = (chunk.get("text") or "")[:280]
+def _urteil_label(chunk: dict, gericht: str, az: str, kurzname: str,
+                  sub: bool = False) -> str:
+    """Label für Urteil-Chunks.
+    Tenor:  '[Tenor] chunk_id | Gericht AZ · Kurzname | Snippet'
+    Sub:    '  ▸ [EG] chunk_id | Gericht AZ · Kurzname | Snippet'
+    extract_chunk_id() findet chunk_id immer als erstes Token nach '] '.
+    """
+    seg      = chunk.get("segment", "")
+    cid      = chunk["chunk_id"]
+    prefix   = _seg_prefix(seg)
+    snip     = (chunk.get("text") or "")[:280]
     kurzinfo = f" · {kurzname}" if kurzname else ""
-    return f"{prefix} {cid} | {gericht} {az}{kurzinfo} | {snip}"
+    indent   = "  ▸ " if sub else ""
+    return f"{indent}{prefix} {cid} | {gericht} {az}{kurzinfo} | {snip}"
 
 
-def build_candidate_choices(q) -> tuple[list[str], list[str]]:
+def build_candidate_choices(q) -> list[str]:
     """
-    Checkbox-Choices aus retrieval_candidates, aufgeteilt in zwei Listen:
-      main_choices  — Tenor-Chunks + alle Nicht-Urteil-Kandidaten (immer sichtbar)
-      seg_choices   — alle weiteren Urteil-Segmente (Leitsatz, EG, SV, TB…)
+    Eine einzige flache Choices-Liste für das Must-Contain CheckboxGroup.
 
-    Label-Format für Urteile: "[Prefix] chunk_id | Gericht AZ · Kurzname | Snippet"
-    Damit funktioniert extract_chunk_id() korrekt für beide Listen.
+    Reihenfolge pro Urteil:
+      1. Tenor-Chunk (normal)
+      2. Alle anderen Segmente direkt darunter, eingerückt mit '  ▸ '
+         (Leitsatz, EG, SV, TB, VF …)
+    Danach: alle Nicht-Urteil-Kandidaten (Gesetze, Leitlinien, …).
+    Am Ende: manuell gesetzte IDs, die noch nicht in der Liste sind.
+
+    Label-Format: '[Prefix] chunk_id | Info | Snippet'
+    → extract_chunk_id() findet chunk_id korrekt.
     """
-    main_choices: list[str] = []
-    seg_choices:  list[str] = []
+    choices: list[str] = []
     seen_ids: set[str] = set()
 
-    # Kandidaten nach source_type aufteilen, aktenzeichen ggf. aus ChromaDB
+    # Kandidaten nach AZ gruppieren, aktenzeichen ggf. aus ChromaDB
     urteil_az: dict[str, dict] = {}
     other_candidates = []
 
     for c in q.get("retrieval_candidates", []):
-        st = c.get("source_type", "")
-        az = c.get("aktenzeichen", "")
+        st      = c.get("source_type", "")
+        az      = c.get("aktenzeichen", "")
         gericht = c.get("gericht", "")
         if st in ("urteil", "urteil_segmentiert") and not az:
-            meta = get_chunk_meta(c.get("chunk_id", ""))
-            az = meta.get("aktenzeichen", "")
+            meta    = get_chunk_meta(c.get("chunk_id", ""))
+            az      = meta.get("aktenzeichen", "")
             gericht = gericht or meta.get("gericht", "")
         if st in ("urteil", "urteil_segmentiert") and az:
             if az not in urteil_az:
@@ -278,9 +288,9 @@ def build_candidate_choices(q) -> tuple[list[str], list[str]]:
         else:
             other_candidates.append(c)
 
-    # Urteile: Tenor → main_choices; alle anderen Segmente → seg_choices
+    # Urteile: Tenor → normal; Nicht-Tenor → eingerückt direkt darunter
     for az, info in urteil_az.items():
-        chunks   = load_urteil_chunks(az)
+        chunks   = load_urteil_chunks(az)   # bereits tenor-first sortiert
         gericht  = info.get("gericht", "")
         kurzname = (chunks[0]["meta"].get("kurzname", "") if chunks else "")
         for chunk in chunks:
@@ -288,13 +298,10 @@ def build_candidate_choices(q) -> tuple[list[str], list[str]]:
             if cid in seen_ids:
                 continue
             seen_ids.add(cid)
-            label = _urteil_label(chunk, gericht, az, kurzname)
-            if chunk.get("segment") == "tenor":
-                main_choices.append(label)
-            else:
-                seg_choices.append(label)
+            is_sub = chunk.get("segment") != "tenor"
+            choices.append(_urteil_label(chunk, gericht, az, kurzname, sub=is_sub))
 
-    # Nicht-Urteil-Kandidaten flach → main_choices
+    # Nicht-Urteil-Kandidaten flach
     for c in other_candidates:
         cid = c.get("chunk_id", "")
         if cid in seen_ids:
@@ -302,10 +309,9 @@ def build_candidate_choices(q) -> tuple[list[str], list[str]]:
         seen_ids.add(cid)
         volladr = c.get("volladresse") or c.get("gesetz") or ""
         snippet = c.get("snippet") or ""
-        label   = _make_label(cid, c.get("score", 0.0), volladr, snippet, meta=c)
-        main_choices.append(label)
+        choices.append(_make_label(cid, c.get("score", 0.0), volladr, snippet, meta=c))
 
-    # Manuell gesetzte IDs die noch in keiner Liste sind
+    # Manuell gesetzte IDs die noch nicht in der Liste sind
     for cid in q.get("must_contain_chunk_ids", []):
         if cid in seen_ids:
             continue
@@ -313,10 +319,9 @@ def build_candidate_choices(q) -> tuple[list[str], list[str]]:
         meta    = get_chunk_meta(cid)
         volladr = meta.get("volladresse") or meta.get("gesetz") or ""
         snippet = get_full_chunk_text(cid)
-        label   = _make_label(cid, "manual", volladr, snippet, meta=meta)
-        main_choices.append(label)
+        choices.append(_make_label(cid, "manual", volladr, snippet, meta=meta))
 
-    return main_choices, seg_choices
+    return choices
 
 
 def build_forbidden_choices(q) -> list[str]:
@@ -434,6 +439,8 @@ def build_candidates_markdown(q) -> str:
 
 
 def extract_chunk_id(label: str) -> str:
+    # Strip sub-item indent (▸ prefix) before parsing
+    label = label.lstrip(" \t▸").strip()
     if "|" in label:
         part = label.split("|")[0].strip()
     else:
@@ -445,27 +452,19 @@ def extract_chunk_id(label: str) -> str:
 
 def get_query_data(idx: int):
     if not (0 <= idx < len(queries)):
-        return ("", "", "", [], [], [], [], [], [],
+        return ("", "", "", [], [], [], [],
                 [], [], "", "", False, "_Keine Kandidaten vorhanden._", get_progress_text())
 
     q = queries[idx]
-    main_choices, seg_choices = build_candidate_choices(q)
+    must_choices = build_candidate_choices(q)
     forb_choices = build_forbidden_choices(q)
-    all_choices  = main_choices + seg_choices
 
-    # Vorauswahl für bereits annotierte Queries
     pre_must = []
-    pre_seg  = []
     for sel_id in q.get("must_contain_chunk_ids", []):
-        for label in main_choices:
+        for label in must_choices:
             if sel_id in label:
                 pre_must.append(label)
                 break
-        else:
-            for label in seg_choices:
-                if sel_id in label:
-                    pre_seg.append(label)
-                    break
 
     pre_forb = []
     for sel_id in q.get("forbidden_contain_chunk_ids", []):
@@ -483,8 +482,7 @@ def get_query_data(idx: int):
         q.get("query_id", ""),
         q.get("query_source", ""),
         q.get("query", ""),
-        main_choices, pre_must,
-        seg_choices, pre_seg,
+        must_choices, pre_must,
         forb_choices, pre_forb,
         pre_rg, pre_at, nb_str,
         q.get("notes", ""),
@@ -518,16 +516,14 @@ def go_filter(status: str, idx: int):
     return navigate(idx, target=idx)
 
 
-def save_annotation(idx, must_sel, seg_sel, forb_sel, query_text,
+def save_annotation(idx, must_sel, forb_sel, query_text,
                     rechtsgebiete_sel, anfrage_sel, normbezug_str,
                     notes, is_deep):
     if not (0 <= idx < len(queries)):
         return "❌ Ungültiger Index"
     q = queries[idx]
 
-    # Beide CheckboxGroups zusammenführen (Tenor + weitere Segmente)
-    all_sel  = list(must_sel or []) + list(seg_sel or [])
-    must_ids = [extract_chunk_id(lbl) for lbl in all_sel]
+    must_ids = [extract_chunk_id(lbl) for lbl in (must_sel or [])]
     must_ids = [x for x in must_ids if x]
     forb_ids = [fid.strip() for fid in (forb_sel or []) if fid.strip()]
 
@@ -684,9 +680,8 @@ with gr.Blocks(title="OpenLex Eval v4 Annotation", css=CSS) as demo:
 
     # ─── Must-Contain ─────────────────────────────────────────────────────────
     gr.Markdown("### ✅ Must-Contain-Chunks (1–5 auswählen)")
-    must_cbg = gr.CheckboxGroup(label="Tenor & Gesetze / Leitlinien (Hauptansicht)", choices=[])
-    with gr.Accordion("⚖️ Weitere Urteil-Segmente aufklappen (EG, SV, TB, Leitsatz …)", open=False):
-        seg_cbg = gr.CheckboxGroup(label="Weitere Segmente — ebenfalls anwählbar für Must-Contain", choices=[])
+    gr.Markdown("_Urteile: Tenor normal · weitere Segmente direkt darunter eingerückt (▸) — alle anwählbar_")
+    must_cbg = gr.CheckboxGroup(label="Kandidaten", choices=[])
 
     # ── Freitext-Suche ────────────────────────────────────────────────────────
     with gr.Accordion("🔍 Eigene Suche — Schlagworte eingeben, bessere Chunks finden", open=False):
@@ -724,11 +719,10 @@ with gr.Blocks(title="OpenLex Eval v4 Annotation", css=CSS) as demo:
         btn_save    = gr.Button("💾 Speichern", variant="primary")
         save_status = gr.Textbox(label="Status", interactive=False)
 
-    # ─── Output-Liste für Navigation (17 Elemente) ────────────────────────────
+    # ─── Output-Liste für Navigation (15 Elemente) ────────────────────────────
     ALL_OUTPUTS = [
         qid_tb, src_tb, query_tb,
-        must_cbg, must_cbg,           # choices + value (Tenor + Nicht-Urteile)
-        seg_cbg,  seg_cbg,            # choices + value (weitere Urteil-Segmente)
+        must_cbg, must_cbg,           # choices + value
         forb_cbg, forb_cbg,           # choices + value
         rechtsgebiete_cbg,
         anfrage_typen_cbg,
@@ -742,7 +736,6 @@ with gr.Blocks(title="OpenLex Eval v4 Annotation", css=CSS) as demo:
     def unpack(data_tuple):
         (qid, src, query,
          must_choices, must_val,
-         seg_choices,  seg_val,
          forb_choices, forb_val,
          rg_val, at_val, nb_val,
          notes, deep,
@@ -752,8 +745,6 @@ with gr.Blocks(title="OpenLex Eval v4 Annotation", css=CSS) as demo:
             qid, src, query,
             gr.update(choices=must_choices, value=must_val),
             gr.update(choices=must_choices, value=must_val),
-            gr.update(choices=seg_choices,  value=seg_val),
-            gr.update(choices=seg_choices,  value=seg_val),
             gr.update(choices=forb_choices, value=forb_val),
             gr.update(choices=forb_choices, value=forb_val),
             rg_val, at_val, nb_val,
@@ -778,7 +769,7 @@ with gr.Blocks(title="OpenLex Eval v4 Annotation", css=CSS) as demo:
 
     btn_save.click(
         save_annotation,
-        inputs=[idx_state, must_cbg, seg_cbg, forb_cbg, query_tb,
+        inputs=[idx_state, must_cbg, forb_cbg, query_tb,
                 rechtsgebiete_cbg, anfrage_typen_cbg, normbezug_tb,
                 notes_tb, deep_cb],
         outputs=[save_status],
