@@ -223,7 +223,7 @@ def _make_label(chunk_id: str, score, volladr: str, snippet: str, meta: dict = N
     """Einheitliches Label-Format für alle Quellen.
     Für Urteile (kein volladresse/gesetz): gericht + aktenzeichen als Fallback."""
     score_str = f"{score:.3f}" if isinstance(score, float) else str(score)
-    clean = " ".join(snippet.split())[:800]
+    clean = " ".join(snippet.split())
     if not volladr and meta:
         gericht = meta.get("gericht") or ""
         az      = meta.get("aktenzeichen") or ""
@@ -242,7 +242,7 @@ def _urteil_label(chunk: dict, gericht: str, az: str, kurzname: str,
     seg      = chunk.get("segment", "")
     cid      = chunk["chunk_id"]
     prefix   = _seg_prefix(seg)
-    snip     = (chunk.get("text") or "")[:280]
+    snip     = (chunk.get("text") or "")
     kurzinfo = f" · {kurzname}" if kurzname else ""
     indent   = "  ▸ " if sub else ""
     return f"{indent}{prefix} {cid} | {gericht} {az}{kurzinfo} | {snip}"
