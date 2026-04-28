@@ -640,43 +640,97 @@ CSS = """
 .status-bar { background: #1a1a2e; padding: 8px 12px; border-radius: 6px; }
 """
 
-# JS injected via demo.load(js=...) — zuverlässiger als gr.HTML <script>
-# Inline-Styles statt CSS-Klassen → kein Svelte-Spezifitätsproblem
+# JS: sub-chunk styling + lazy expand/collapse für lange Chunk-Texte
+# Wird via demo.load(js=...) injiziert (zuverlässiger als gr.HTML <script>).
+# Inline-Styles umgehen Svelte-CSS-Scoping.
 _SUB_CHUNK_JS = """
 () => {
-  function styleSubItems() {
+  var PREVIEW = 180;
+
+  function processLabel(lbl) {
+    /* Bereits verarbeitet? Nur Expand-State bei neuem Inhalt resetten. */
+    var sp = lbl.querySelector("span:not(.ol-meta):not(.ol-preview):not(.ol-full)");
+    if (!sp) return;
+
+    /* ── Sub-Chunk Styling (▸-Prefix) ── */
+    var raw = (sp.textContent || "").replace(/\\u00a0/g," ").trimStart();
+    var isSub = raw.startsWith("\\u25b8") || raw.startsWith("  \\u25b8");
+    if (isSub) {
+      lbl.style.cssText = "background:rgba(74,111,165,0.12);border-left:3px solid #4a6fa5;" +
+                          "padding-left:10px;border-radius:4px;margin-left:10px;display:block;";
+      sp.style.color = "#8ba3c7";
+      sp.style.fontSize = "0.88em";
+    } else {
+      lbl.style.cssText = "";
+      sp.style.color = "";
+      sp.style.fontSize = "";
+    }
+
+    /* ── Lazy-Expand für langen Text ── */
+    /* Label-Format: "[Prefix] chunk_id | Meta-Info | CHUNK_TEXT"
+       Wir suchen das letzte "|" — alles danach ist der eigentliche Chunk-Text */
+    var fullText = sp.textContent || "";
+    var lastPipe = fullText.lastIndexOf("|");
+    if (lastPipe < 0 || fullText.length - lastPipe - 1 <= PREVIEW) return;
+
+    var meta      = fullText.slice(0, lastPipe + 1) + " ";
+    var chunkText = fullText.slice(lastPipe + 1).trim();
+
+    /* DOM neu aufbauen */
+    sp.textContent = "";
+    sp.className   = "ol-rebuilt";
+
+    var metaEl = document.createElement("span");
+    metaEl.className   = "ol-meta";
+    metaEl.textContent = meta;
+
+    var previewEl = document.createElement("span");
+    previewEl.className   = "ol-preview";
+    previewEl.textContent = chunkText.slice(0, PREVIEW) + "\\u2026";
+
+    var fullEl = document.createElement("span");
+    fullEl.className    = "ol-full";
+    fullEl.style.display = "none";
+    fullEl.textContent  = chunkText;
+
+    var btn = document.createElement("button");
+    btn.textContent = "\\u25bc mehr";
+    btn.style.cssText = "font-size:0.72em;padding:1px 5px;cursor:pointer;margin-left:5px;" +
+                        "background:transparent;border:1px solid #555;border-radius:3px;color:#888;" +
+                        "vertical-align:middle;line-height:1.4;";
+    btn.addEventListener("click", function(e) {
+      e.preventDefault();
+      e.stopPropagation();   /* WICHTIG: keine Checkbox-Auswahl triggern */
+      var open = fullEl.style.display !== "none";
+      fullEl.style.display    = open ? "none" : "";
+      previewEl.style.display = open ? ""     : "none";
+      btn.textContent         = open ? "\\u25bc mehr" : "\\u25b2 weniger";
+    }, true);
+
+    sp.appendChild(metaEl);
+    sp.appendChild(previewEl);
+    sp.appendChild(fullEl);
+    sp.appendChild(btn);
+  }
+
+  function processAll() {
     var cbg = document.getElementById("must-cbg");
     if (!cbg) return;
-    cbg.querySelectorAll("label").forEach(function(lbl) {
-      var txt = (lbl.textContent || "").replace(/\\u00a0/g, " ").trimStart();
-      if (txt.startsWith("\\u25b8") || txt.startsWith("\\u2023") || txt.startsWith("  \\u25b8")) {
-        lbl.style.background      = "rgba(74,111,165,0.12)";
-        lbl.style.borderLeft      = "3px solid #4a6fa5";
-        lbl.style.paddingLeft     = "10px";
-        lbl.style.borderRadius    = "4px";
-        lbl.style.marginLeft      = "10px";
-        lbl.style.display         = "block";
-        var sp = lbl.querySelector("span");
-        if (sp) { sp.style.color = "#8ba3c7"; sp.style.fontSize = "0.88em"; }
-      } else {
-        lbl.style.background   = "";
-        lbl.style.borderLeft   = "";
-        lbl.style.paddingLeft  = "";
-        lbl.style.borderRadius = "";
-        lbl.style.marginLeft   = "";
-        var sp = lbl.querySelector("span");
-        if (sp) { sp.style.color = ""; sp.style.fontSize = ""; }
-      }
-    });
+    cbg.querySelectorAll("label").forEach(processLabel);
   }
 
   var _obs = null;
   function attach() {
     var cbg = document.getElementById("must-cbg");
     if (!cbg) return false;
-    styleSubItems();
+    processAll();
     if (_obs) _obs.disconnect();
-    _obs = new MutationObserver(styleSubItems);
+    _obs = new MutationObserver(function(muts) {
+      /* Nur bei echter DOM-Änderung reagieren, nicht bei style-Mutations */
+      for (var i = 0; i < muts.length; i++) {
+        if (muts[i].addedNodes.length > 0) { processAll(); return; }
+      }
+    });
     _obs.observe(cbg, {childList: true, subtree: true});
     return true;
   }
