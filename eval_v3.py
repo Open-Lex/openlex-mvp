@@ -423,18 +423,25 @@ def run_eval(
         # Retrieval – gibt (normalized_ids, raw_chroma_ids, total_ms, reranker_ms) zurück
         retrieved_ids, retrieved_raw_ids, total_ms, reranker_ms = retrieve_ids(question_text, max_k=max_k)
 
-        # Bevorzugt retrieval_gold-Schema (v4), Fallback auf Top-Level (v3-kompatibel)
-        rg = q.get("retrieval_gold", {})
-        use_rg = bool(rg)
-        if use_rg:
-            gold_ids = rg.get("must_contain_chunk_ids") or []
-            should_ids = rg.get("should_contain_chunk_ids") or []
+        # Schema-Hierarchie (Vorrang: höchste Priorität zuerst):
+        #   1. Top-Level must_contain_chunk_ids  → Annotation-Tool (v4, roh ChromaDB-IDs)
+        #   2. retrieval_gold.must_contain_chunk_ids → Legacy v4-Schema (roh ChromaDB-IDs)
+        #   3. Top-Level gold_ids                → v3-kompatibel (normalized IDs)
+        if q.get("must_contain_chunk_ids"):
+            gold_ids     = q.get("must_contain_chunk_ids") or []
+            should_ids   = q.get("should_contain_chunk_ids") or []
+            forbidden_ids = q.get("forbidden_contain_chunk_ids") or []
+            # Annotation-Tool schreibt rohe ChromaDB-IDs → raw_ids zum Vergleich nutzen
+            eval_ids = retrieved_raw_ids
+        elif q.get("retrieval_gold"):
+            rg = q["retrieval_gold"]
+            gold_ids     = rg.get("must_contain_chunk_ids") or []
+            should_ids   = rg.get("should_contain_chunk_ids") or []
             forbidden_ids = rg.get("forbidden_chunk_ids") or []
-            # retrieval_gold enthält rohe ChromaDB-IDs → raw_ids zum Vergleich nutzen
             eval_ids = retrieved_raw_ids
         else:
-            gold_ids = q.get("gold_ids", [])
-            should_ids = q.get("should_ids", [])
+            gold_ids     = q.get("gold_ids", [])
+            should_ids   = q.get("should_ids", [])
             forbidden_ids = q.get("forbidden_ids", [])
             # top-level gold_ids sind normalized → normalized_ids nutzen
             eval_ids = retrieved_ids
