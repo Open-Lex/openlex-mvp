@@ -12,6 +12,18 @@ Gradio-Interface mit RAG-Pipeline:
 
 from __future__ import annotations
 
+# Defensive: load .env if present, even when called outside systemd.
+# Production via systemd uses EnvironmentFile; this is for direct invocations
+# (eval scripts, tests, ad-hoc python3 calls). override=False ensures
+# systemd env takes precedence over .env values.
+try:
+    from dotenv import load_dotenv as _load_dotenv
+    import pathlib as _pathlib
+    _load_dotenv(str(_pathlib.Path(__file__).resolve().parent / ".env"), override=False)
+    del _load_dotenv, _pathlib
+except ImportError:
+    pass  # python-dotenv optional; systemd EnvironmentFile is primary
+
 import json
 import os
 import re
