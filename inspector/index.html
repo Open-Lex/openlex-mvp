@@ -162,7 +162,7 @@ function App() {
     setError(null);
     setResult(null);
     try {
-      const resp = await fetch('/api/inspect', {
+      const resp = await fetch('api/inspect', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({query: query.trim(), chunk_search: chunkSearch.trim() || null}),
