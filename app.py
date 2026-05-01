@@ -1403,6 +1403,9 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     # EG-Anreicherung: Passende Erwägungsgründe automatisch nachladen
     selected = _enrich_with_erwaegungsgruende(selected, col)
 
+    # ── Tenor-Enforce: Pflicht-Slot für Tenor/Leitsatz ──
+    selected, _tenor_trace = _ensure_tenor_chunks(selected, col)
+
     # ── Trace: final_rank + topk_slice markieren ──
     if trace_this_call:
         for rank, c in enumerate(selected, start=1):
@@ -1415,9 +1418,158 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
 
     if return_trace:
         if trace_format == "rich":
-            return selected, {"chunks": _trace, "rewrite": rewrite_info}
+            return selected, {"chunks": _trace, "rewrite": rewrite_info, "tenor_enforce": _tenor_trace}
         return selected, _trace
     return selected
+
+
+
+# ── Tenor-Enforce ──────────────────────────────────────────────────────────
+# Pflicht-Slot: Für jedes urteil_segmentiert-Treffer wird geprüft ob ein
+# Tenor/Leitsatz-Chunk vorhanden ist. Falls nicht: aus ChromaDB nachladen.
+# Feature-Flag: OPENLEX_TENOR_ENFORCE=true (default)
+
+_TENOR_PRIORITY_SEGMENTS = ["leitsatz", "tenor"]   # leitsatz: BGH/BAG/BFH, tenor: EuGH/EuG
+_TENOR_FALLBACK_SEGMENT   = "entscheidungsgruende"  # Fallback wenn beides fehlt
+_TENOR_LOG_PATH = "/opt/openlex-mvp/logs/tenor_enforce_misses.jsonl"
+_tenor_log_lock = __import__('threading').Lock()
+_tenor_log_seen_this_call: set = set()
+
+
+def _ensure_tenor_chunks(selected: list, col) -> tuple:
+    """Stellt sicher dass für jedes Urteil ein Tenor/Leitsatz-Chunk in selected liegt.
+
+    Returns:
+        (updated_selected, tenor_trace)
+        tenor_trace dict mit "injected", "already_present", "misses" Listen.
+    """
+    if os.getenv("OPENLEX_TENOR_ENFORCE", "true").lower() != "true":
+        return selected, {"injected": [], "already_present": [], "misses": []}
+
+    import time as _time
+
+    # AZs mit urteil_segmentiert sammeln, höchsten CE-Score und ob Tenor vorhanden
+    az_best_score: dict = {}
+    az_has_tenor: set   = set()
+
+    for c in selected:
+        if c.get("meta", {}).get("source_type") not in ("urteil", "urteil_segmentiert"):
+            continue
+        az  = c["meta"].get("aktenzeichen", "")
+        seg = c["meta"].get("segment", "")
+        if not az:
+            continue
+        score = c.get("ce_score", 0.0)
+        az_best_score[az] = max(az_best_score.get(az, 0.0), score)
+        if seg in _TENOR_PRIORITY_SEGMENTS:
+            az_has_tenor.add(az)
+
+    MAX_TENOR_SLOTS = 3
+    tenor_trace = {"injected": [], "already_present": [], "misses": []}
+    already_ids = {c.get("id") or c.get("meta", {}).get("chunk_id", "") for c in selected}
+    slots_used  = 0
+    _tenor_log_seen_this_call.clear()
+
+    for az, best_score in az_best_score.items():
+        if az in az_has_tenor:
+            tenor_trace["already_present"].append(az)
+            continue
+        if slots_used >= MAX_TENOR_SLOTS:
+            break
+
+        injected_chunk = None
+        injected_seg   = None
+
+        # leitsatz → tenor → entscheidungsgruende
+        for seg_name in _TENOR_PRIORITY_SEGMENTS:
+            try:
+                r = col.get(
+                    where={"aktenzeichen": az, "segment": seg_name},
+                    include=["ids", "metadatas", "documents"],
+                    limit=1,
+                )
+                if r["ids"] and r["ids"][0] not in already_ids:
+                    injected_chunk = {
+                        "id":       r["ids"][0],
+                        "meta":     r["metadatas"][0] or {},
+                        "text":     r["documents"][0] or "",
+                        "document": r["documents"][0] or "",
+                        "distance": 0.10,
+                        "adjusted_distance": 0.10,
+                        "ce_score": best_score * 0.90,
+                        "source":   "tenor_enforce",
+                        "_tenor_injected": True,
+                    }
+                    injected_seg = seg_name
+                    break
+            except Exception:
+                pass
+
+        if injected_chunk is None:
+            try:
+                r = col.get(
+                    where={"aktenzeichen": az, "segment": _TENOR_FALLBACK_SEGMENT},
+                    include=["ids", "metadatas", "documents"],
+                    limit=1,
+                )
+                if r["ids"] and r["ids"][0] not in already_ids:
+                    injected_chunk = {
+                        "id":       r["ids"][0],
+                        "meta":     r["metadatas"][0] or {},
+                        "text":     r["documents"][0] or "",
+                        "document": r["documents"][0] or "",
+                        "distance": 0.10,
+                        "adjusted_distance": 0.10,
+                        "ce_score": best_score * 0.80,
+                        "source":   "tenor_enforce_fallback",
+                        "_tenor_injected": True,
+                    }
+                    injected_seg = _TENOR_FALLBACK_SEGMENT
+            except Exception:
+                pass
+
+        if injected_chunk:
+            selected.append(injected_chunk)
+            already_ids.add(injected_chunk["id"])
+            slots_used += 1
+            tenor_trace["injected"].append({
+                "az":       az,
+                "chunk_id": injected_chunk["id"],
+                "segment":  injected_seg,
+            })
+            print(f"  [TenorEnforce] +{injected_seg} fuer {az}: {injected_chunk['id']}")
+        else:
+            tenor_trace["misses"].append(az)
+            _log_tenor_miss(az, col)
+
+    return selected, tenor_trace
+
+
+def _log_tenor_miss(az: str, col) -> None:
+    """Schreibt einen JSONL-Eintrag fuer Urteile ohne verfuegbaren Tenor/Leitsatz."""
+    if az in _tenor_log_seen_this_call:
+        return
+    _tenor_log_seen_this_call.add(az)
+    import time as _time, os as _os, json as _json_te
+    try:
+        r = col.get(where={"aktenzeichen": az}, include=["metadatas"], limit=50)
+        available_segs = sorted({m.get("segment", "") for m in r["metadatas"] if m})
+    except Exception:
+        available_segs = []
+    entry = {
+        "timestamp":          _time.strftime("%Y-%m-%dT%H:%M:%SZ", _time.gmtime()),
+        "aktenzeichen":       az,
+        "available_segments": available_segs,
+        "fallback_used":      None,
+    }
+    try:
+        _os.makedirs(_os.path.dirname(_TENOR_LOG_PATH), exist_ok=True)
+        with _tenor_log_lock:
+            with open(_TENOR_LOG_PATH, "a", encoding="utf-8") as f:
+                f.write(_json_te.dumps(entry, ensure_ascii=False) + "\n")
+    except Exception as e:
+        print(f"  [TenorEnforce] WARNING: Log fehlgeschlagen: {e}")
+
 
 
 def _enrich_with_erwaegungsgruende(results: list[dict], col) -> list[dict]:
