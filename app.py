@@ -1484,8 +1484,8 @@ def _ensure_tenor_chunks(selected: list, col) -> tuple:
         for seg_name in _TENOR_PRIORITY_SEGMENTS:
             try:
                 r = col.get(
-                    where={"aktenzeichen": az, "segment": seg_name},
-                    include=["ids", "metadatas", "documents"],
+                    where={"$and": [{"aktenzeichen": {"$eq": az}}, {"segment": {"$eq": seg_name}}]},
+                    include=["metadatas", "documents"],
                     limit=1,
                 )
                 if r["ids"] and r["ids"][0] not in already_ids:
@@ -1508,8 +1508,8 @@ def _ensure_tenor_chunks(selected: list, col) -> tuple:
         if injected_chunk is None:
             try:
                 r = col.get(
-                    where={"aktenzeichen": az, "segment": _TENOR_FALLBACK_SEGMENT},
-                    include=["ids", "metadatas", "documents"],
+                    where={"$and": [{"aktenzeichen": {"$eq": az}}, {"segment": {"$eq": _TENOR_FALLBACK_SEGMENT}}]},
+                    include=["metadatas", "documents"],
                     limit=1,
                 )
                 if r["ids"] and r["ids"][0] not in already_ids:

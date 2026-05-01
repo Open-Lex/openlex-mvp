@@ -100,8 +100,9 @@ async def inspect_pipeline(req: InspectRequest):
 
     duration_ms = (time.time() - t0) * 1000
 
-    chunks_trace: dict = rich_trace.get("chunks", {})
-    rewrite_info: dict = rich_trace.get("rewrite", {})
+    chunks_trace: dict    = rich_trace.get("chunks", {})
+    rewrite_info: dict    = rich_trace.get("rewrite", {})
+    tenor_enforce: dict   = rich_trace.get("tenor_enforce", {})
 
     # ── Alle Chunks als flache Liste aufbauen ──
     all_chunks = []
@@ -134,8 +135,48 @@ async def inspect_pipeline(req: InspectRequest):
             "doc_preview": doc_preview,
         })
 
+    # ── Chunks aus results die nicht im _trace sind nachladen ──
+    # Betrifft: urteilsname-injizierte Chunks, tenor-enforce-Chunks, etc.
+    # Diese gehen direkt in selected ein und bekommen kein _trace-Eintrag.
+    injected_ids = {e["chunk_id"] for e in tenor_enforce.get("injected", [])}
+    trace_ids    = {c["id"] for c in all_chunks}
+    for i, res in enumerate(results, start=1):
+        rid = res.get("id") or res.get("meta", {}).get("chunk_id", "")
+        if not rid or rid in trace_ids:
+            continue  # already in trace
+        meta = res.get("meta", {})
+        src  = res.get("source", "urteilsname") or "injected"
+        is_tenor_chunk = rid in injected_ids
+        all_chunks.append({
+            "id":             rid,
+            "sources":        [src],
+            "rrf_rank":       -1,
+            "ce_score_raw":   res.get("ce_score"),
+            "ce_rank":        -1,
+            "boosts_applied": ["tenor_enforced"] if is_tenor_chunk else [],
+            "final_rank":     i,
+            "filter_reason":  None,
+            "source_type":    meta.get("source_type", ""),
+            "gericht":        meta.get("gericht", ""),
+            "aktenzeichen":   meta.get("aktenzeichen", ""),
+            "gesetz":         meta.get("gesetz", ""),
+            "titel":          meta.get("titel", ""),
+            "segment":        meta.get("segment", ""),
+            "doc_preview":    (res.get("text") or res.get("document", ""))[:200],
+            "_tenor_injected": is_tenor_chunk,
+        })
+        trace_ids.add(rid)
+
+    # Final-Rank für trace-Chunks die noch keinen Rank haben (z.B. EG-Enrichment)
+    for i, res in enumerate(results, start=1):
+        rid = res.get("id") or res.get("meta", {}).get("chunk_id", "")
+        for c in all_chunks:
+            if c["id"] == rid and c["final_rank"] == -1:
+                c["final_rank"] = i
+                break
+
     # ── Pipeline-Stages berechnen ──
-    stages = _compute_stages(all_chunks, rewrite_info)
+    stages = _compute_stages(all_chunks, rewrite_info, tenor_enforce)
 
     # ── Chunk-Suche (für Röttler-Diagnose) ──
     tracked_ids = []
@@ -163,6 +204,7 @@ async def inspect_pipeline(req: InspectRequest):
         "chunks": all_chunks,
         "tracked_chunks": tracked_ids,
         "final_results": final,
+        "tenor_enforce": tenor_enforce,
         "duration_ms": round(duration_ms, 1),
     }
 
@@ -206,7 +248,7 @@ async def search_chunk_in_db(q: str, limit: int = 10):
         raise HTTPException(500, f"Suche fehlgeschlagen: {e}")
 
 
-def _compute_stages(chunks: list[dict], rewrite_info: dict) -> list[dict]:
+def _compute_stages(chunks: list[dict], rewrite_info: dict, tenor_enforce: dict | None = None) -> list[dict]:
     """Berechnet die Chunk-Anzahl pro Pipeline-Stage."""
 
     def count_by_source(*src_names):
@@ -337,6 +379,29 @@ def _compute_stages(chunks: list[dict], rewrite_info: dict) -> list[dict]:
             "detail": f"{n_final} Chunks in Antwort (min=3, max=8)",
         },
     ]
+
+    # Tenor-Enforce Stage anhängen
+    if tenor_enforce is not None:
+        n_injected = len(tenor_enforce.get("injected", []))
+        n_misses   = len(tenor_enforce.get("misses", []))
+        already    = tenor_enforce.get("already_present", [])
+        detail_parts = []
+        if n_injected:
+            segs = [e["segment"] for e in tenor_enforce.get("injected", [])]
+            detail_parts.append(f"+{n_injected} injiziert ({', '.join(segs)})")
+        if already:
+            detail_parts.append(f"{len(already)} AZ bereits mit Tenor")
+        if n_misses:
+            detail_parts.append(f"⚠ {n_misses} AZ ohne Tenor verfügbar")
+        stages.append({
+            "id": "tenor_enforce",
+            "label": "Tenor-Enforce",
+            "active": n_injected > 0 or n_misses > 0,
+            "count_in": n_final,
+            "count_out": n_final + n_injected,
+            "detail": " | ".join(detail_parts) if detail_parts else "Kein Urteil in Ergebnissen",
+        })
+
     return stages
 
 
