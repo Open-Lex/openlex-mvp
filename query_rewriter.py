@@ -3,6 +3,7 @@ LLM-basiertes Query-Rewriting: Alltagssprache → juristische Fachsprache.
 Nutzt Mistral Medium mit persistentem SQLite-Cache.
 """
 import os
+import re as _re
 import sqlite3
 import hashlib
 import time
@@ -38,6 +39,8 @@ Regeln:
 4. Maximal 20 Wörter.
 5. Wenn die Frage bereits juristisch präzise ist (z.B. "Art. 82 DSGVO Schadensersatz"), gib sie unverändert zurück.
 6. Bei unklaren oder themenfremden Queries: gib die Original-Query unverändert zurück.
+7. Eigennamen (Kläger, Beklagte, Urteilsnamen wie "Rottler", "Schrems", "Breyer") EXAKT aus der Nutzerfrage übernehmen — niemals verändern, korrigieren oder ersetzen.
+8. Gerichtsbezeichnungen (EuGH, EuG, BGH, BAG, BSG, BVerwG, BFH) aus der Nutzerfrage unverändert übernehmen. Niemals eine Gerichtsbezeichnung hinzufügen, die nicht in der Frage stand.
 
 Eingabe-Format: Nutzerfrage auf Deutsch.
 Ausgabe-Format: Nur die umgeschriebene Query, eine Zeile, keine Anführungszeichen."""
@@ -105,15 +108,43 @@ def _cache_put(query: str, rewritten: str, model: str):
         conn.close()
 
 
+# === Compiled patterns für Guards (einmal kompilieren) ===
+# Guard A: EuGH/EuG-Aktenzeichen z.B. C-526/24, T-123/21
+_AZ_PAT = _re.compile(r'\b[CT][-‑‐–—]\d+/\d+\b', _re.UNICODE)
+
+# Guard B: Gerichtsbezeichnungen
+_COURT_PAT = _re.compile(
+    r'\b(EuGH|EuG|BGH|BAG|BSG|BVerwG|BFH|OLG|LG|VG|AG)\b', _re.IGNORECASE
+)
+
+# Guard C: Eigennamen direkt neben "Urteil/Entscheidung/Fall/Klage/Rechtssache"
+# Matcht z.B. "Rottler Urteil", "Urteil Rottler", "brillen rottler urteil" (case-insensitive)
+_URTEIL_NEIGHBOR = _re.compile(
+    r'\b([A-ZÄÖÜa-zäöüß][a-zäöüß]{2,})\s+(?:Urteil|Entscheidung|Fall|Klage|Rechtssache)\b'
+    r'|(?:Urteil|Entscheidung|Fall|Klage|Rechtssache)\s+([A-ZÄÖÜa-zäöüß][a-zäöüß]{2,})\b',
+    _re.UNICODE | _re.IGNORECASE
+)
+
+# Wörter, die trotz Großschreibung kein Eigenname sind (juristische Schlüsselwörter)
+_NOT_PROPER_NOUNS = frozenset({
+    "das", "die", "der", "ein", "eine", "ist", "hat", "muss", "darf",
+    "dsgvo", "bdsg", "tdddg", "recht", "gesetz", "urteil", "entscheidung",
+    "fall", "klage", "rechtssache", "datenschutz", "gericht", "instanz",
+    "artikel", "absatz", "paragraph", "satz",
+})
+
+
 # === Sanity-Checks am LLM-Output ===
 def _is_valid_rewrite(original: str, candidate: str) -> bool:
-    """Minimale Halluzinations-Kontrolle."""
+    """Halluzinations-Kontrolle: Format + Proper-Noun-Erhaltung."""
     if not candidate or not candidate.strip():
         return False
     c = candidate.strip()
+
     # Extrem lang → Halluzination wahrscheinlich
     if len(c.split()) > 30:
         return False
+
     # LLM liefert Erklärung statt Rewrite zurück
     lower = c.lower()
     bad_prefixes = (
@@ -122,9 +153,50 @@ def _is_valid_rewrite(original: str, candidate: str) -> bool:
     )
     if any(lower.startswith(p) for p in bad_prefixes):
         return False
+
     # Enthält mehrere Newlines → LLM hat Erklärung dazugehängt
     if c.count("\n") > 1:
         return False
+
+    # ── Guard A: Aktenzeichen (C-526/24 etc.) müssen erhalten bleiben ──
+    orig_az = {m.lower() for m in _AZ_PAT.findall(original)}
+    if orig_az:
+        cand_az = {m.lower() for m in _AZ_PAT.findall(c)}
+        if not orig_az.issubset(cand_az):
+            logger.warning(
+                f"Rewrite dropped/changed Aktenzeichen: {orig_az} not in '{c[:60]}'"
+            )
+            return False
+
+    # ── Guard B: Wenn Original ein Gericht nennt, muss es im Rewrite erhalten bleiben ──
+    # (EuGH→BGH oder EuGH weggelassen = Fallback)
+    # Wenn Original kein Gericht nennt, darf der Rewrite eines ergänzen (ok).
+    orig_courts = {m.lower() for m in _COURT_PAT.findall(original)}
+    if orig_courts:
+        cand_courts = {m.lower() for m in _COURT_PAT.findall(c)}
+        if not orig_courts.issubset(cand_courts):
+            logger.warning(
+                f"Rewrite dropped/changed court: {orig_courts} not in '{c[:60]}'"
+            )
+            return False
+
+    # ── Guard C: Eigennamen neben "Urteil/Fall/…" müssen erhalten bleiben ──
+    # Extrahiert Wörter direkt neben Urteil-Schlüsselwörtern im Original,
+    # die nicht zu juristischen Schlüsselwörtern gehören.
+    orig_names: set[str] = set()
+    for m in _URTEIL_NEIGHBOR.finditer(original):
+        for grp in [m.group(1), m.group(2)]:
+            if grp and grp.lower() not in _NOT_PROPER_NOUNS:
+                orig_names.add(grp.lower())
+    if orig_names:
+        cand_lower = c.lower()
+        missing = [name for name in orig_names if name not in cand_lower]
+        if missing:
+            logger.warning(
+                f"Rewrite changed proper noun(s) {missing}: '{original[:60]}' → '{c[:60]}'"
+            )
+            return False
+
     return True
 
 
@@ -190,7 +262,7 @@ def rewrite(query: str, use_cache: bool = True) -> RewriteResult:
             error=str(e),
         )
 
-    # Sanity-Check
+    # Sanity-Check (inkl. Proper-Noun-Guards)
     if not _is_valid_rewrite(query, raw):
         logger.warning(
             f"Invalid rewrite, falling back. Original: {query[:50]}... "
