@@ -71,3 +71,16 @@ _archive/
 bm25_index/
 experiment_results/
 cache/
+
+# build artifacts
+__pycache__/
+*.pyc
+*.pyo
+
+# runtime data
+logs/
+eval_results_v3/
+eval_results_v4/
+
+# backup files
+*.OLD_*.json
