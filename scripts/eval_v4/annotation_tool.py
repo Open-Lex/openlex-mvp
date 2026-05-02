@@ -648,8 +648,8 @@ _SUB_CHUNK_JS = """
   var PREVIEW = 180;
 
   function processLabel(lbl) {
-    /* Bereits verarbeitet? Nur Expand-State bei neuem Inhalt resetten. */
-    var sp = lbl.querySelector("span:not(.ol-meta):not(.ol-preview):not(.ol-full)");
+    if (lbl.dataset.olDone) return;   /* bereits verarbeitet — nicht nochmal anfassen */
+    var sp = lbl.querySelector("span:not(.ol-meta):not(.ol-preview):not(.ol-full):not(.ol-rebuilt)");
     if (!sp) return;
 
     /* ── Sub-Chunk Styling (▸-Prefix) ── */
@@ -676,6 +676,8 @@ _SUB_CHUNK_JS = """
     var meta      = fullText.slice(0, lastPipe + 1) + " ";
     var chunkText = fullText.slice(lastPipe + 1).trim();
 
+    lbl.dataset.olDone = "1";   /* markieren, bevor DOM verändert wird */
+
     /* DOM neu aufbauen */
     sp.textContent = "";
     sp.className   = "ol-rebuilt";
@@ -686,16 +688,16 @@ _SUB_CHUNK_JS = """
 
     var previewEl = document.createElement("span");
     previewEl.className      = "ol-preview";
-    previewEl.style.display  = "none";   /* standardmäßig versteckt */
+    previewEl.style.display  = "";        /* standardmäßig sichtbar */
     previewEl.textContent    = chunkText.slice(0, PREVIEW) + "\\u2026";
 
     var fullEl = document.createElement("span");
     fullEl.className    = "ol-full";
-    fullEl.style.display = "";           /* standardmäßig sichtbar */
+    fullEl.style.display = "none";       /* standardmäßig versteckt */
     fullEl.textContent  = chunkText;
 
     var btn = document.createElement("button");
-    btn.textContent = "\\u25b2 weniger";  /* startet aufgeklappt */
+    btn.textContent = "\\u25bc mehr";    /* startet eingeklappt */
     btn.style.cssText = "font-size:0.72em;padding:1px 5px;cursor:pointer;margin-left:5px;" +
                         "background:transparent;border:1px solid #555;border-radius:3px;color:#888;" +
                         "vertical-align:middle;line-height:1.4;";
@@ -727,9 +729,14 @@ _SUB_CHUNK_JS = """
     processAll();
     if (_obs) _obs.disconnect();
     _obs = new MutationObserver(function(muts) {
-      /* Nur bei echter DOM-Änderung reagieren, nicht bei style-Mutations */
       for (var i = 0; i < muts.length; i++) {
-        if (muts[i].addedNodes.length > 0) { processAll(); return; }
+        if (muts[i].addedNodes.length > 0) {
+          /* Observer trennen während Verarbeitung — verhindert Endlosschleife */
+          _obs.disconnect();
+          processAll();
+          _obs.observe(cbg, {childList: true, subtree: true});
+          return;
+        }
       }
     });
     _obs.observe(cbg, {childList: true, subtree: true});
