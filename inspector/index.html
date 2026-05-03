@@ -300,6 +300,9 @@
       font-size: 12px;
       color: var(--gold);
       letter-spacing: 0.03em;
+      position: sticky;
+      top: 0;
+      z-index: 5;
     }
 
     .phase-hdr:hover { background: var(--bg3); }
@@ -307,13 +310,40 @@
 
     .phase-lanes {
       display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      padding: 9px 11px;
-      align-items: flex-start;
+      flex-wrap: nowrap;        /* bands must stay inline */
+      overflow-x: auto;
+      gap: 0;                   /* gap handled by SVG band width */
+      padding: 10px 11px;
+      align-items: center;
     }
 
+    .phase-lanes::-webkit-scrollbar { height: 3px; }
+
     .phase.collapsed .phase-lanes { display: none; }
+
+    /* ── Phase transition accent ─────────────────────────────── */
+    .phase-xn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 3px 11px;
+      margin-bottom: 8px;
+    }
+
+    .phase-xn-line {
+      flex: 1;
+      height: 0.5px;
+      background: linear-gradient(to right, transparent, rgba(201,160,74,0.25), transparent);
+    }
+
+    .phase-xn-label {
+      font-size: 9px;
+      color: var(--text3);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      font-family: 'JetBrains Mono', monospace;
+    }
 
     /* ── Stage node ──────────────────────────────────────────── */
     .snode {
@@ -363,12 +393,66 @@
     .sc-out.eq   { color: var(--text3); }
     .sc-dec { color: var(--text3); font-size: 9px; margin-left: 3px; }
 
-    .stage-arrow {
-      display: flex;
-      align-items: center;
+    /* ── Flow bands (Sankey-light) ─────────────────────────── */
+    .flow-band {
+      flex-shrink: 0;
       align-self: center;
-      color: var(--border2);
-      font-size: 13px;
+      overflow: visible;
+      display: block;
+    }
+
+    .flow-band path { transition: stroke-width 0.25s, opacity 0.25s; }
+
+    /* Tracking overlays applied via JS */
+    .flow-band.lane-tracked path {
+      stroke: #c9a04a !important;
+      opacity: 1 !important;
+      filter: drop-shadow(0 0 3px rgba(201,160,74,0.65));
+    }
+
+    .flow-band.lane-tracked-ended path {
+      stroke: #c84040 !important;
+      stroke-dasharray: 4 2;
+      opacity: 0.85 !important;
+    }
+
+    .flow-band.lane-dimmed { opacity: 0.18; }
+
+    /* ── Per-stage indicators ────────────────────────────────── */
+    .sn-indic {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      width: 3px;
+      border-radius: 2px;
+      min-height: 4px;
+      pointer-events: none;
+    }
+
+    .sn-indic-inject { background: linear-gradient(to top, #3a7a4a, #6abf6a); }
+    .sn-indic-filter { background: linear-gradient(to top, #7a3a3a, #c06060); }
+
+    .sn-boost-dot {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #c9a04a;
+      box-shadow: 0 0 4px rgba(201,160,74,0.8);
+      pointer-events: none;
+    }
+
+    /* ── Tracking-mode stage borders ────────────────────────── */
+    .snode.sn-tracked          { border-color: var(--gold) !important; box-shadow: 0 0 5px rgba(201,160,74,0.25); }
+    .snode.sn-tracked-filtered { border-color: var(--red)  !important; box-shadow: 0 0 5px rgba(160,74,74,0.25); }
+    .snode.sn-dimmed           { opacity: 0.28; }
+
+    /* ── Responsive: hide bands when too narrow ──────────────── */
+    @media (max-width: 1000px) {
+      .flow-band { display: none; }
+      .phase-lanes { flex-wrap: wrap; gap: 6px; }
     }
 
     /* ── Detail panel ────────────────────────────────────────── */
@@ -765,6 +849,120 @@ async function doInspect() {
 }
 
 // ═══════════════════════════════════════════════════════════════
+// SANKEY-LIGHT HELPERS
+// ═══════════════════════════════════════════════════════════════
+
+/** Proportional stroke-width: sqrt scale, clamped 2–24px */
+function bandWidth(count) {
+  if (!count || count <= 0) return 2;
+  return Math.max(2, Math.min(24, Math.sqrt(count) * 4));
+}
+
+/** Inline SVG band between two stage cards */
+function flowBandHtml(fromId, toId, count, isXn) {
+  const w    = bandWidth(count);
+  const col  = isXn ? "#e0b87a" : "#c9a04a";
+  const op   = isXn ? 0.70       : 0.60;
+  const tip  = `${fromId} → ${toId}: ${count} Chunks`;
+  return `<svg class="flow-band" role="img"
+    data-from="${esc(fromId)}" data-to="${esc(toId)}" data-count="${count}"
+    width="34" height="54" viewBox="0 0 34 54" aria-label="${esc(tip)}">
+    <title>${esc(tip)}</title>
+    <path d="M0 27 C17 27 17 27 34 27"
+      stroke="${col}" stroke-width="${w.toFixed(1)}"
+      stroke-linecap="round" fill="none" opacity="${op}"/>
+  </svg>`;
+}
+
+/** Per-stage mini-indicator: green bar (inject), red bar (filter), gold dot (boosts) */
+function stageIndicatorHtml(s) {
+  const kind = s.kind || "";
+  if (kind === "injector") {
+    const n = (s.count_injected != null)
+      ? s.count_injected
+      : Math.max(0, (s.count_out || 0) - (s.count_in || 0));
+    if (n <= 0) return "";
+    const h = Math.max(4, Math.min(40, Math.round(n * 1.8)));
+    return `<div class="sn-indic sn-indic-inject" style="height:${h}px" title="+${n} injiziert"></div>`;
+  }
+  if (kind === "filter") {
+    const n = (s.count_filtered != null)
+      ? s.count_filtered
+      : Math.max(0, (s.count_in || 0) - (s.count_out || 0));
+    if (n <= 0) return "";
+    const h = Math.max(4, Math.min(40, Math.round(n * 1.8)));
+    return `<div class="sn-indic sn-indic-filter" style="height:${h}px" title="−${n} gefiltert"></div>`;
+  }
+  if (s.id === "boosts" && (s.decisions || []).length > 0) {
+    return `<div class="sn-boost-dot" title="Scores verändert"></div>`;
+  }
+  return "";
+}
+
+/** Build presence map: chunkId → { stageId: "included"|"filtered"|null } */
+function buildChunkPresence(chunkId) {
+  const ft = S.data && S.data.full_trace;
+  if (!ft || !ft.stages || !chunkId) return {};
+  const map = {};
+  for (const stage of ft.stages) {
+    let state = null;
+    for (const d of (stage.decisions || [])) {
+      if (d.chunk_id !== chunkId) continue;
+      if (d.action === "filtered") { state = "filtered"; break; }
+      state = "included";
+    }
+    map[stage.id] = state;
+  }
+  return map;
+}
+
+/** Apply tracking-mode CSS classes to DOM after renderLanes() */
+function applyTrackingOverlay() {
+  const cid = S.selectedChunk;
+  // Clear all existing tracking classes
+  document.querySelectorAll(".flow-band").forEach(el => {
+    el.classList.remove("lane-tracked", "lane-tracked-ended", "lane-dimmed");
+  });
+  document.querySelectorAll(".snode").forEach(el => {
+    el.classList.remove("sn-tracked", "sn-tracked-filtered", "sn-dimmed");
+  });
+
+  if (!cid || S.mode !== "tracking") return;
+
+  const presence = buildChunkPresence(cid);
+  const hasAny   = Object.values(presence).some(v => v != null);
+  if (!hasAny) return;
+
+  // Stage node highlighting
+  document.querySelectorAll(".snode[data-stage]").forEach(el => {
+    const sid   = el.dataset.stage;
+    const state = presence[sid];
+    if (state === "included")  el.classList.add("sn-tracked");
+    else if (state === "filtered") el.classList.add("sn-tracked-filtered");
+    else el.classList.add("sn-dimmed");
+  });
+
+  // Band highlighting
+  document.querySelectorAll(".flow-band[data-from]").forEach(el => {
+    const fromState = presence[el.dataset.from];
+    const toState   = presence[el.dataset.to];
+
+    if (fromState === "included" && toState === "included") {
+      el.classList.add("lane-tracked");
+    } else if (fromState === "included" && !toState) {
+      el.classList.add("lane-tracked-ended");
+    } else if (fromState === "filtered") {
+      // chunk was already gone before this band
+      el.classList.add("lane-dimmed");
+    } else if (!fromState && !toState) {
+      el.classList.add("lane-dimmed");
+    } else {
+      el.classList.add("lane-dimmed");
+    }
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════
 // RENDER
 // ═══════════════════════════════════════════════════════════════
 
@@ -826,9 +1024,31 @@ function renderLanes() {
     html += `</div>`;
   }
 
-  // Phases
-  for (const phase of PHASES) {
+  // Phases + phase-transition accents between them
+  for (let phIdx = 0; phIdx < PHASES.length; phIdx++) {
+    const phase     = PHASES[phIdx];
     const collapsed = !!S.collapsedPhases[phase.id];
+
+    // Phase-transition accent BETWEEN phases (not before first)
+    if (phIdx > 0) {
+      const prevPhase   = PHASES[phIdx - 1];
+      const lastSidPrev = prevPhase.stages[prevPhase.stages.length - 1];
+      const firstSidCur = phase.stages[0];
+      const outPrev     = (sm[lastSidPrev] || {}).count_out;
+      const inCur       = (sm[firstSidCur] || {}).count_in;
+      const xnCount     = outPrev != null ? outPrev : (inCur != null ? inCur : 0);
+      const xnW         = bandWidth(xnCount);
+      html += `<div class="phase-xn">
+        <div class="phase-xn-line"></div>
+        <span class="phase-xn-label"
+          style="border:0.5px solid rgba(201,160,74,0.2);padding:1px 8px;border-radius:2px"
+          title="${esc(lastSidPrev)} → ${esc(firstSidCur)}: ${xnCount} Chunks">
+          ↓ ${xnCount} Chunks
+        </span>
+        <div class="phase-xn-line"></div>
+      </div>`;
+    }
+
     html += `<div class="phase${collapsed ? " collapsed" : ""}" data-phase-id="${esc(phase.id)}">
       <div class="phase-hdr" onclick="togglePhase('${esc(phase.id)}')">
         <span>${esc(phase.label)}</span>
@@ -837,14 +1057,20 @@ function renderLanes() {
       <div class="phase-lanes">`;
 
     for (let i = 0; i < phase.stages.length; i++) {
-      const sid  = phase.stages[i];
-      const s    = sm[sid];
+      const sid   = phase.stages[i];
+      const s     = sm[sid];
       const isSel = S.selectedStage === sid;
 
-      if (i > 0) html += `<div class="stage-arrow">→</div>`;
+      // SVG flow band before this stage (except first)
+      if (i > 0) {
+        const prevSid   = phase.stages[i - 1];
+        const prevS     = sm[prevSid];
+        const flowCount = prevS && prevS.count_out != null ? prevS.count_out : 0;
+        html += flowBandHtml(prevSid, sid, flowCount, false);
+      }
 
       if (!s) {
-        html += `<div class="snode sn-inactive" title="Keine Daten">
+        html += `<div class="snode sn-inactive" data-stage="${esc(sid)}" title="Keine Daten">
           <div class="sn-id">${esc(sid)}</div>
           <div class="sn-label" style="color:var(--text3)">${esc(sid)}</div>
           <div style="font-size:9px;color:var(--text3)">–</div>
@@ -858,15 +1084,14 @@ function renderLanes() {
       const isBound  = !!s.flow_boundary;
       const isIso    = !!s.flow_isolated;
       const decCount = (s.decisions || []).length;
-
-      const cin  = s.count_in;
-      const cout = s.count_out;
+      const cin      = s.count_in;
+      const cout     = s.count_out;
 
       let coutCls = "sc-out";
       if (cin !== undefined && cout !== undefined) {
-        if (cout > cin)       coutCls += " up";
-        else if (cout < cin)  coutCls += " down";
-        else                  coutCls += " eq";
+        if      (cout > cin) coutCls += " up";
+        else if (cout < cin) coutCls += " down";
+        else                 coutCls += " eq";
       }
 
       const countsHtml = (cin !== undefined || cout !== undefined)
@@ -880,12 +1105,16 @@ function renderLanes() {
 
       const cls = [
         "snode",
-        isSel     ? "sn-selected" : "",
-        active    ? "sn-active"   : "sn-inactive",
-        isBound   ? "sn-boundary" : "",
+        isSel   ? "sn-selected" : "",
+        active  ? "sn-active"   : "sn-inactive",
+        isBound ? "sn-boundary" : "",
       ].filter(Boolean).join(" ");
 
-      const titleStr = [s._detail, isIso ? "flow_isolated" : "", isBound ? "flow_boundary" : ""].filter(Boolean).join(" | ");
+      const titleStr = [
+        s._detail,
+        isIso   ? "flow_isolated"  : "",
+        isBound ? "flow_boundary"  : "",
+      ].filter(Boolean).join(" | ");
 
       html += `<div class="${cls}"
         data-stage="${esc(sid)}"
@@ -895,6 +1124,7 @@ function renderLanes() {
         <div class="sn-id">${esc(sid)}</div>
         <div class="sn-label">${esc(label)}</div>
         ${countsHtml}
+        ${stageIndicatorHtml(s)}
       </div>`;
     }
 
@@ -902,6 +1132,7 @@ function renderLanes() {
   }
 
   laneView.innerHTML = html;
+  applyTrackingOverlay();
 }
 
 function renderSidebar() {
@@ -1079,6 +1310,7 @@ function selectStage(sid) {
 function selectChunk(cid) {
   S.selectedChunk = (S.selectedChunk === cid) ? null : cid;
   renderSidebar();
+  applyTrackingOverlay();   // re-apply even if mode != tracking (clears on null)
 }
 
 function setMode(mode) {
@@ -1087,6 +1319,7 @@ function setMode(mode) {
     b.classList.toggle("active", b.dataset.mode === mode);
   });
   renderSidebar();
+  applyTrackingOverlay();
 }
 
 // ═══════════════════════════════════════════════════════════════
