@@ -1949,11 +1949,12 @@ def _validate_full_trace(trace: dict, results: list) -> dict:
         # Inter-stage flow check (skipped for query-level / fork stages)
         if i > 0:
             prev = stages[i - 1]
-            # Skip if prev is a query-level stage (flow_boundary) or
-            # if current is a fork stage (flow_isolated) or
-            # if prev is a fork stage (flow_isolated).
+            # Skip if prev or curr is a query-level/merge stage (flow_boundary),
+            # or if current/prev is a fork stage (flow_isolated).
+            # flow_boundary on CURR means it's a merge point (multiple inputs) — skip.
             _skip_flow = (
                 prev.get("flow_boundary")
+                or s.get("flow_boundary")
                 or s.get("flow_isolated")
                 or prev.get("flow_isolated")
             )
