@@ -1854,7 +1854,7 @@ const detailPanel = document.getElementById("detail-panel");
 
 function collapseDetail() {
   detailPanel.classList.add("dp-collapsed");
-  dTitle.textContent = "Klick auf eine Stage → Decisions";
+  dTitle.textContent = "Klick auf Stage oder Chunk für Details";
   dMeta.innerHTML = "";
   dBody.innerHTML = "";
 }
@@ -1865,6 +1865,105 @@ function expandDetail() {
 
 function resetDetail() {
   collapseDetail();
+}
+
+// ═══════════════════════════════════════════════════════════════
+// CHUNK DETAIL
+// ═══════════════════════════════════════════════════════════════
+
+function renderChunkDetail(cid) {
+  if (!cid || !S.data) { resetDetail(); return; }
+
+  const chunk = (S.data.chunks || []).find(c => c.id === cid);
+  if (!chunk) { resetDetail(); return; }
+
+  expandDetail();
+
+  // Title: AZ or truncated ID
+  const title = chunk.aktenzeichen || chunk.gesetz || cid.slice(0, 40);
+  dTitle.textContent = title;
+
+  // Meta row
+  const rank    = chunk.final_rank > 0 ? `#${chunk.final_rank}` : "×";
+  const ceStr   = chunk.ce_score_raw != null ? chunk.ce_score_raw.toFixed(3) : "–";
+  dMeta.innerHTML = `
+    <span>${esc(chunk.source_type || "–")}</span>
+    <span>${esc(chunk.segment || "–")}</span>
+    <span>Rang ${rank}</span>
+    <span>CE ${ceStr}</span>
+    ${chunk.filter_reason ? `<span style="color:var(--red)">✗ ${esc(chunk.filter_reason)}</span>` : ""}
+  `;
+
+  // Body: metadata grid + doc preview + decisions
+  let html = "";
+
+  // Metadata key-value pairs
+  const kvRows = [
+    ["Gericht",    chunk.gericht],
+    ["Gesetz",     chunk.gesetz],
+    ["Titel",      chunk.titel],
+    ["Aktenzeichen", chunk.aktenzeichen],
+    ["Segment",    chunk.segment],
+    ["Source type", chunk.source_type],
+    ["Chunk ID",   cid],
+  ].filter(([, v]) => v);
+
+  if (kvRows.length) {
+    html += `<table class="dtable" style="margin-bottom:8px">
+      <thead><tr><th>Feld</th><th>Wert</th></tr></thead><tbody>`;
+    for (const [k, v] of kvRows) {
+      html += `<tr><td style="color:var(--text3)">${esc(k)}</td>
+               <td>${esc(String(v))}</td></tr>`;
+    }
+    html += `</tbody></table>`;
+  }
+
+  // Doc preview
+  const preview = chunk.doc_preview || "";
+  if (preview) {
+    html += `<div style="margin:6px 0 4px;font-size:9px;color:var(--text3);
+              text-transform:uppercase;letter-spacing:0.06em">Text-Vorschau</div>
+             <div style="font-size:11px;color:var(--text2);line-height:1.5;
+              border-left:2px solid var(--border2);padding-left:8px;
+              white-space:pre-wrap;word-break:break-word">${esc(preview)}</div>`;
+  }
+
+  // Decisions for this chunk from full_trace
+  const ft = S.data.full_trace;
+  if (ft && ft.stages) {
+    const chunkDecs = [];
+    for (const stage of ft.stages) {
+      for (const dec of stage.decisions || []) {
+        if (dec.chunk_id === cid) {
+          chunkDecs.push({ stage: stage.id, ...dec });
+          break;
+        }
+      }
+    }
+    if (chunkDecs.length) {
+      html += `<div style="margin:10px 0 4px;font-size:9px;color:var(--text3);
+                text-transform:uppercase;letter-spacing:0.06em">Pipeline-Verlauf</div>
+               <table class="dtable"><thead>
+                 <tr><th>Stage</th><th>Aktion</th><th>Grund</th></tr>
+               </thead><tbody>`;
+      for (const d of chunkDecs) {
+        const actCls = d.action === "injected" ? "act-injected"
+                     : d.action === "filtered"  ? "act-filtered"
+                     : "act-kept";
+        html += `<tr>
+          <td style="color:var(--text3)">${esc(d.stage)}</td>
+          <td class="${actCls}">${esc(d.action || "–")}</td>
+          <td>${esc(d.reason || "–")}</td>
+        </tr>`;
+      }
+      html += `</tbody></table>`;
+    } else {
+      html += `<div class="detail-empty" style="text-align:left;padding:8px 0">
+        Kein Pipeline-Verlauf in full_trace — Full-Mode aktivieren.</div>`;
+    }
+  }
+
+  dBody.innerHTML = html;
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -1885,8 +1984,11 @@ function selectStage(sid) {
 
 function selectChunk(cid) {
   S.selectedChunk = (S.selectedChunk === cid) ? null : cid;
+  S.selectedStage = null;   // chunk view takes over the detail panel
   renderSidebar();
-  applyTrackingOverlay();  // shows chunk journey through stages in lane view
+  renderLanes();             // clear stage selection highlight
+  applyTrackingOverlay();   // shows chunk journey through stages in lane view
+  renderChunkDetail(S.selectedChunk);
 }
 
 function setRunMode(rm) {
