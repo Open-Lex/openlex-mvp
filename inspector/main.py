@@ -50,6 +50,7 @@ app = FastAPI(title="OpenLex Pipeline Inspector", version="1.0.0")
 class InspectRequest(BaseModel):
     query: str
     chunk_search: Optional[str] = None  # AZ, Chunk-ID oder Keyword
+    trace_format: Optional[str] = "rich"  # "rich" (default) oder "full"
 
 
 class InspectResponse(BaseModel):
@@ -93,7 +94,7 @@ async def inspect_pipeline(req: InspectRequest):
         results, rich_trace = _retrieve(
             req.query,
             return_trace=True,
-            trace_format="rich",
+            trace_format=req.trace_format or "rich",
         )
     except Exception as e:
         raise HTTPException(500, f"retrieve() Fehler: {e}")
@@ -206,6 +207,7 @@ async def inspect_pipeline(req: InspectRequest):
         "final_results": final,
         "tenor_enforce": tenor_enforce,
         "duration_ms": round(duration_ms, 1),
+        "full_trace": rich_trace.get("full"),
     }
 
 

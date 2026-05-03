@@ -819,6 +819,28 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             logging.getLogger(__name__).warning(f"Rewrite path errored, using original: {e}")
     # === /Rewriting ===
 
+
+    # ── Full-Trace Init ──
+    _full_trace: dict | None = None
+    if trace_format == "full":
+        _full_trace = {
+            "query": question,
+            "config": {
+                "embed_model": MODEL_NAME,
+                "reranker_model": RERANKER_MODEL,
+                "rewrite_enabled": _rewrite_enabled() if '_rewrite_enabled' in dir() else False,
+                "per_source_budget_active": os.getenv("OPENLEX_PER_SOURCE_BUDGET_ACTIVE", "false").lower() == "true",
+                "tenor_enforce_enabled": os.getenv("OPENLEX_TENOR_ENFORCE", "true").lower() == "true",
+                "ce_cutoff": CE_CUTOFF,
+                "dist_cutoff": DIST_CUTOFF,
+                "min_docs": MIN_DOCS,
+                "max_docs": MAX_DOCS,
+            },
+            "stages": [],
+            "final_chunks": [],
+            "consistency": {"valid": True, "issues": []},
+        }
+    # ── /Full-Trace Init ──
     model = get_model()
     col = get_collection()
 
@@ -830,7 +852,21 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             search_query = f"{last_user} – {question}"
 
     # a) Semantische Suche: Top-40 (breiterer Trichter für Merge)
+    _t_embed_start = time.time()
     q_embedding = model.encode([search_query]).tolist()
+    _t_embed_ms = (time.time() - _t_embed_start) * 1000
+    if _full_trace is not None:
+        _full_trace["stages"].append({
+            "id": "embedding",
+            "label": "Query Embedding",
+            "active": True,
+            "duration_ms": round(_t_embed_ms, 1),
+            "model": MODEL_NAME,
+            "input_text": search_query,
+            "count_in": 1,
+            "count_out": 1,
+            "decisions": [],
+        })
     _t_single_start = time.time()
     results = col.query(
         query_embeddings=q_embedding,
@@ -842,6 +878,7 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     chunks = []
     seen_ids = set()
     chroma_ids_semantic = results.get("ids", [[]])[0]
+    _semantic_decisions = [] if _full_trace is not None else None
     for i, (doc, meta, dist) in enumerate(zip(
         results["documents"][0], results["metadatas"][0], results["distances"][0]
     )):
@@ -857,6 +894,16 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
         boost = SEGMENT_BOOST.get(boost_key, 1.0)
         adjusted_dist = dist * boost
 
+        cid_for_trace = chroma_ids_semantic[i] if i < len(chroma_ids_semantic) else chunk_id
+        if _semantic_decisions is not None:
+            _semantic_decisions.append({
+                "chunk_id": cid_for_trace,
+                "raw_distance": round(dist, 4),
+                "segment_boost_factor": boost,
+                "segment_boost_delta": round(adjusted_dist - dist, 4),
+                "boosted_distance": round(adjusted_dist, 4),
+            })
+
         chunks.append({
             "text": doc,
             "meta": meta,
@@ -864,6 +911,16 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             "distance": dist,
             "adjusted_distance": adjusted_dist,
             "source": "semantic",
+        })
+    if _full_trace is not None:
+        _full_trace["stages"].append({
+            "id": "semantic",
+            "label": "Semantic Top-40",
+            "active": True,
+            "duration_ms": round((time.time() - _t_single_start) * 1000, 1),
+            "count_in": 1,
+            "count_out": len(chunks),
+            "decisions": _semantic_decisions or [],
         })
 
     # b) Norm-basierte Suche (explizite Normen aus dem Fragetext)
@@ -1079,6 +1136,10 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     # 2.2 (Shadow): läuft parallel, Telemetrie, Single-Call bleibt aktiv
     # 2.3 (Aktiv):  Per-Source ersetzt chunks → Typ-Budget aktiv
     # Flags: OPENLEX_PER_SOURCE_RETRIEVAL_ENABLED (shadow), OPENLEX_PER_SOURCE_BUDGET_ACTIVE (aktiv)
+    # ── Full-Trace: snapshot pool size before per_source ──
+    _pre_ps_pool_size = len(chunks)
+    # ── /snapshot ──
+
     _ps_shadow_mode = os.getenv("OPENLEX_PER_SOURCE_RETRIEVAL_ENABLED", "false").lower() == "true"
     _ps_budget_active = os.getenv("OPENLEX_PER_SOURCE_BUDGET_ACTIVE", "false").lower() == "true"
 
@@ -1176,6 +1237,37 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
 
     candidates = chunks[:40]
 
+    if _full_trace is not None:
+        _ps_budget_active_flag = os.getenv("OPENLEX_PER_SOURCE_BUDGET_ACTIVE", "false").lower() == "true"
+        _full_trace["stages"].append({
+            "id": "per_source",
+            "label": "Per-Source Budget" if _ps_budget_active_flag else "Candidate Pool (Single-Call)",
+            "active": True,
+            "count_in": _pre_ps_pool_size,
+            "count_out": len(candidates),
+            "budget_active": _ps_budget_active_flag,
+            "decisions": [
+                {
+                    "chunk_id": c.get("id") or c["text"][:40],
+                    "source_type": c.get("meta", {}).get("source_type", ""),
+                    "source": c.get("source", ""),
+                    "adjusted_distance": round(c.get("adjusted_distance", 0), 4),
+                    "kept": True,
+                }
+                for c in candidates
+            ] + [
+                {
+                    "chunk_id": c.get("id") or c["text"][:40],
+                    "source_type": c.get("meta", {}).get("source_type", ""),
+                    "source": c.get("source", ""),
+                    "adjusted_distance": round(c.get("adjusted_distance", 0), 4),
+                    "kept": False,
+                    "reason": "beyond_top40",
+                }
+                for c in chunks[40:]
+            ],
+        })
+
     if not candidates:
         if return_trace:
             return [], {}
@@ -1214,6 +1306,39 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             if cid in _trace:
                 _trace[cid]["ce_score_raw"] = float(c.get("ce_score", 0.0))
                 _trace[cid]["ce_rank"] = rank
+    if _full_trace is not None:
+        _ce_decisions = []
+        for rank, c in enumerate(candidates, start=1):
+            _ce_decisions.append({
+                "chunk_id": c.get("id") or c["text"][:40],
+                "ce_score_raw": round(float(c.get("ce_score", 0.0)), 4),
+                "rank_by_distance": rank,  # rank before CE re-sort
+            })
+        _full_trace["stages"].append({
+            "id": "cross_encoder",
+            "label": "Cross-Encoder",
+            "active": True,
+            "model": RERANKER_MODEL,
+            "count_in": len(candidates),
+            "count_out": len(candidates),
+            "decisions": _ce_decisions,
+        })
+        # Store ce_score_raw per chunk for boost stage
+        _full_ce_raw: dict = {d["chunk_id"]: d["ce_score_raw"] for d in _ce_decisions}
+    else:
+        _full_ce_raw = {}
+
+    # ── Full-Trace: snapshot ce_score BEFORE boosts ──
+    if _full_trace is not None:
+        _boost_score_before: dict = {
+            c.get("id") or c["text"][:40]: round(float(c.get("ce_score", 0.0)), 4)
+            for c in candidates
+        }
+        _boost_log: dict = {
+            c.get("id") or c["text"][:40]: []
+            for c in candidates
+        }
+    # ── /snapshot ──
 
     # FIX 1: Aktualitäts-Boost auf CE-Score anwenden
     for c in candidates:
@@ -1225,6 +1350,10 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             cid = c.get("id") or c["text"][:40]
             if cid in _trace:
                 _trace[cid]["boosts_applied"].append(f"aktualitaet_recency{recency:.2f}")
+        if _full_trace is not None and recency != 1.0:
+            cid = c.get("id") or c["text"][:40]
+            if cid in _boost_log:
+                _boost_log[cid].append({"name": f"aktualitaet_recency", "factor": round(1.0/recency, 4)})
 
     # FIX: Schlüsselurteile boosten – Urteile mit Kurznamen aus urteilsnamen.json
     _load_urteilsnamen()
@@ -1237,6 +1366,10 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                     cid = c.get("id") or c["text"][:40]
                     if cid in _trace:
                         _trace[cid]["boosts_applied"].append("schluesselurteil_x1.5")
+                if _full_trace is not None:
+                    cid = c.get("id") or c["text"][:40]
+                    if cid in _boost_log:
+                        _boost_log[cid].append({"name": "schluesselurteil", "factor": 1.5})
 
     # FIX 3: Instanzgerichts-Penalty – niedrigrangige Gerichte abwerten,
     # es sei denn die Frage nennt explizit ein Gericht oder Aktenzeichen
@@ -1255,6 +1388,10 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                     cid = c.get("id") or c["text"][:40]
                     if cid in _trace:
                         _trace[cid]["boosts_applied"].append("instanzgericht_div1.3")
+                if _full_trace is not None:
+                    cid = c.get("id") or c["text"][:40]
+                    if cid in _boost_log:
+                        _boost_log[cid].append({"name": "instanzgericht_penalty", "factor": round(1/1.3, 4)})
 
     # Pre-DSGVO-Filter: Veraltete Leitlinien abwerten oder entfernen
     post_dsgvo = [c for c in candidates if not _is_outdated_chunk(c)]
@@ -1279,6 +1416,10 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                     cid = c.get("id") or c["text"][:40]
                     if cid in _trace:
                         _trace[cid]["boosts_applied"].append("pre_dsgvo_div3.0")
+                if _full_trace is not None:
+                    cid = c.get("id") or c["text"][:40]
+                    if cid in _boost_log:
+                        _boost_log[cid].append({"name": "pre_dsgvo_penalty", "factor": round(1/3.0, 4)})
 
     # Sortiere nach Cross-Encoder-Score (höher = besser)
     # Tie-breaker: Segment-Boost
@@ -1290,6 +1431,33 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
         return -(ce + (1.0 - boost) * 0.3)
 
     candidates.sort(key=sort_key)
+
+    if _full_trace is not None:
+        _boost_decisions = []
+        for c in candidates:
+            cid = c.get("id") or c["text"][:40]
+            score_before = _boost_score_before.get(cid, 0.0)
+            score_after = round(float(c.get("ce_score", 0.0)), 4)
+            boosts = _boost_log.get(cid, [])
+            _boost_decisions.append({
+                "chunk_id": cid,
+                "ce_score_before": score_before,
+                "ce_score_after": score_after,
+                "ce_score_delta": round(score_after - score_before, 4),
+                "boosts_applied": boosts,
+            })
+        _full_trace["stages"].append({
+            "id": "boosts",
+            "label": "Boosts & Penalties",
+            "active": True,
+            "count_in": len(candidates),
+            "count_out": len(candidates),
+            "decisions": _boost_decisions,
+        })
+        # Build ce_score_final map for filter stage
+        _full_ce_final: dict = {d["chunk_id"]: d["ce_score_after"] for d in _boost_decisions}
+    else:
+        _full_ce_final = {}
 
     # FIX: Methodenwissen-Chunks priorisieren – MW mit CE > 4.0 nach vorne
     mw_top = []
@@ -1334,6 +1502,12 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     n_removed = len(candidates) - len(deduped)
     if n_removed:
         print(f"  Doc-Dedup: {n_removed} Duplikate entfernt (max {MAX_PER_DOC}/Dokument)")
+
+    if _full_trace is not None:
+        _pre_dedup_ids = {c.get("id") or c["text"][:40] for c in deduped}
+        _dedup_dropped_ids = {c.get("id") or c["text"][:40] for c in candidates if (c.get("id") or c["text"][:40]) not in _pre_dedup_ids}
+        _pre_filter_snap = list(candidates)  # before dedup, track what was deduplicated
+
     candidates = deduped
 
     # Dynamischer Cutoff: CE-Score > CE_CUTOFF ODER adjusted_distance < DIST_CUTOFF
@@ -1356,6 +1530,37 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             chunk_cid = chunk.get("id") or chunk["text"][:40]
             if chunk_cid in _trace and _trace[chunk_cid]["filter_reason"] is None:
                 _trace[chunk_cid]["filter_reason"] = "ce_cutoff"
+
+    if _full_trace is not None:
+        _filter_decisions = []
+        for c in deduped:
+            cid = c.get("id") or c["text"][:40]
+            ce_final = _full_ce_final.get(cid, round(float(c.get("ce_score", 0.0)), 4))
+            in_selected = any(
+                (s.get("id") or s["text"][:40]) == cid for s in selected
+            )
+            deduped_out = cid in (_dedup_dropped_ids if '_dedup_dropped_ids' in dir() else set())
+            _filter_decisions.append({
+                "chunk_id": cid,
+                "ce_score_final": ce_final,
+                "adjusted_distance": round(c.get("adjusted_distance", 0), 4),
+                "kept": in_selected,
+                "reason": (
+                    "dedup" if (c.get("id") or c["text"][:40]) in
+                    {x.get("id") or x["text"][:40] for x in (candidates if False else [])}
+                    else ("above_cutoff" if in_selected else "below_ce_cutoff")
+                ),
+            })
+        _full_trace["stages"].append({
+            "id": "filter",
+            "label": "Filter & Cutoff",
+            "active": True,
+            "ce_cutoff_threshold": CE_CUTOFF,
+            "dist_cutoff_threshold": DIST_CUTOFF,
+            "count_in": len(deduped),
+            "count_out": len(selected),
+            "decisions": _filter_decisions,
+        })
 
     # Gruppiere nach Dokument und prüfe Min/Max
     docs = group_chunks_to_docs(selected)
@@ -1401,10 +1606,41 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                         break
 
     # EG-Anreicherung: Passende Erwägungsgründe automatisch nachladen
+    _pre_eg_count = len(selected)
     selected = _enrich_with_erwaegungsgruende(selected, col)
+    if _full_trace is not None:
+        _eg_injected = [
+            {"chunk_id": c.get("id") or c.get("meta", {}).get("chunk_id", ""), "source": "eg_enrichment"}
+            for c in selected[_pre_eg_count:]
+        ]
+        _full_trace["stages"].append({
+            "id": "eg_enrichment",
+            "label": "EG-Enrichment",
+            "active": True,
+            "count_in": _pre_eg_count,
+            "count_out": len(selected),
+            "decisions": _eg_injected,
+        })
 
     # ── Tenor-Enforce: Pflicht-Slot für Tenor/Leitsatz ──
     selected, _tenor_trace = _ensure_tenor_chunks(selected, col)
+
+    if _full_trace is not None:
+        _tenor_decisions = []
+        for item in _tenor_trace.get("injected", []):
+            _tenor_decisions.append({"action": "injected", "az": item["az"], "chunk_id": item["chunk_id"], "segment": item["segment"]})
+        for az in _tenor_trace.get("already_present", []):
+            _tenor_decisions.append({"action": "already_present", "az": az})
+        for az in _tenor_trace.get("misses", []):
+            _tenor_decisions.append({"action": "miss", "az": az})
+        _full_trace["stages"].append({
+            "id": "tenor_enforce",
+            "label": "Tenor-Enforce",
+            "active": os.getenv("OPENLEX_TENOR_ENFORCE", "true").lower() == "true",
+            "count_in": len(selected) - len(_tenor_trace.get("injected", [])),
+            "count_out": len(selected),
+            "decisions": _tenor_decisions,
+        })
 
     # ── Trace: final_rank + topk_slice markieren ──
     if trace_this_call:
@@ -1416,12 +1652,60 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             if info["final_rank"] == -1 and info["filter_reason"] is None:
                 info["filter_reason"] = "topk_slice"
 
+    if _full_trace is not None:
+        _full_trace["final_chunks"] = [
+            {
+                "chunk_id": c.get("id") or c.get("meta", {}).get("chunk_id", ""),
+                "rank": i,
+                "ce_score_final": round(float(c.get("ce_score", 0.0)), 4),
+                "source_type": c.get("meta", {}).get("source_type", ""),
+                "aktenzeichen": c.get("meta", {}).get("aktenzeichen", ""),
+                "segment": c.get("meta", {}).get("segment", ""),
+                "gericht": c.get("meta", {}).get("gericht", ""),
+                "source": c.get("source", ""),
+                "_tenor_injected": c.get("_tenor_injected", False),
+                "doc_preview": (c.get("text") or c.get("document", ""))[:200],
+            }
+            for i, c in enumerate(selected, 1)
+        ]
+        _full_trace["consistency"] = _validate_full_trace(_full_trace, selected)
+
     if return_trace:
         if trace_format == "rich":
-            return selected, {"chunks": _trace, "rewrite": rewrite_info, "tenor_enforce": _tenor_trace}
+            rich_out = {"chunks": _trace, "rewrite": rewrite_info, "tenor_enforce": _tenor_trace}
+            if _full_trace is not None:
+                rich_out["full"] = _full_trace
+            return selected, rich_out
+        if trace_format == "full":
+            return selected, {"chunks": _trace, "rewrite": rewrite_info, "tenor_enforce": _tenor_trace, "full": _full_trace}
         return selected, _trace
     return selected
 
+
+
+
+# ── Full-Trace Infrastructure ───────────────────────────────────────────────
+# Stages that merge multiple retrieval sources — count gaps are expected here.
+_TRACE_MERGE_STAGES = frozenset({"semantic", "norm_lookup", "qu_injection", "keyword", "bm25_rrf"})
+
+def _validate_full_trace(trace: dict, results: list) -> dict:
+    """Self-consistency check for trace_format='full' output.
+    Count gaps at merge stages (semantic/norm/QU feed same pool) are expected and skipped.
+    """
+    issues = []
+    warnings = []
+    stages = [s for s in trace.get("stages", []) if s.get("active", True)]
+    for i in range(len(stages) - 1):
+        a, b = stages[i], stages[i + 1]
+        if a["id"] in _TRACE_MERGE_STAGES or b["id"] in _TRACE_MERGE_STAGES:
+            continue  # merge stages legitimately have different counts
+        if (a.get("count_out") is not None and b.get("count_in") is not None
+                and a["count_out"] != b["count_in"]):
+            issues.append(
+                f"Flow gap: {a['id']}.count_out={a['count_out']} "
+                f"!= {b['id']}.count_in={b['count_in']}"
+            )
+    return {"valid": len(issues) == 0, "issues": issues, "warnings": warnings}
 
 
 # ── Tenor-Enforce ──────────────────────────────────────────────────────────
