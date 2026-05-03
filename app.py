@@ -858,11 +858,13 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     if _full_trace is not None:
         _full_trace["stages"].append({
             "id": "embedding",
+            "flow_boundary": True,  # query-level stage, not part of chunk pipeline
             "label": "Query Embedding",
             "active": True,
             "duration_ms": round(_t_embed_ms, 1),
             "model": MODEL_NAME,
             "input_text": search_query,
+            "kind": "transformer",
             "count_in": 1,
             "count_out": 1,
             "decisions": [],
@@ -916,12 +918,15 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
         _full_trace["stages"].append({
             "id": "semantic",
             "label": "Semantic Top-40",
+            "kind": "injector",
             "active": True,
             "duration_ms": round((time.time() - _t_single_start) * 1000, 1),
-            "count_in": 1,
+            "count_in": 0,
+            "count_injected": len(chunks),
             "count_out": len(chunks),
             "decisions": _semantic_decisions or [],
         })
+    _pool_after_semantic = len(chunks)
 
     # b) Norm-basierte Suche (explizite Normen aus dem Fragetext)
     norms = extract_norms(question)
@@ -953,6 +958,23 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
         except Exception:
             pass
 
+    if _full_trace is not None:
+        _norm_injected = len(chunks) - _pool_after_semantic
+        _full_trace["stages"].append({
+            "id": "norm_lookup_injection",
+            "label": "Norm-Lookup Injection",
+            "kind": "injector",
+            "active": bool(norms),
+            "count_in": _pool_after_semantic,
+            "count_injected": _norm_injected,
+            "count_out": len(chunks),
+            "decisions": [
+                {"chunk_id": c.get("id") or c["text"][:40], "action": "injected", "norm": c.get("meta", {}).get("volladresse", "")}
+                for c in chunks[_pool_after_semantic:]
+            ],
+        })
+    _pool_after_norm = len(chunks)
+
     # b2) Query Understanding Light: deterministisches Chunk-Lookup
     # Kein Embedding, kein Roundtrip: col.get() mit bekannten ChromaDB-IDs.
     # Soft Injection: Chunks werden mit adjusted_distance=0.15 eingefügt,
@@ -977,6 +999,23 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                     })
     except Exception:
         pass
+
+    if _full_trace is not None:
+        _qu_injected = len(chunks) - _pool_after_norm
+        _full_trace["stages"].append({
+            "id": "qu_injection",
+            "label": "QU-Injection",
+            "kind": "injector",
+            "active": True,
+            "count_in": _pool_after_norm,
+            "count_injected": _qu_injected,
+            "count_out": len(chunks),
+            "decisions": [
+                {"chunk_id": c.get("id") or c["text"][:40], "action": "injected", "source": "qu_injection"}
+                for c in chunks[_pool_after_norm:]
+            ],
+        })
+    _pool_after_qu = len(chunks)
 
     # b3) BM25-Pfad (nur wenn OPENLEX_BM25_ENABLED=true)
     # Retrieval via Snowball-Stemmer + BM25s, persistierter Index.
@@ -1068,6 +1107,29 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                 "source": "keyword",
             })
 
+    if _full_trace is not None:
+        _kw_injected = len(chunks) - _pool_after_qu
+        # Keyword boosts on existing chunks (hybrid)
+        _kw_boosted = [c for c in chunks[:_pool_after_qu] if c.get("source") == "hybrid"]
+        _full_trace["stages"].append({
+            "id": "keyword_injection",
+            "label": "Keyword-Injection",
+            "kind": "injector",
+            "active": bool(keyword_hits),
+            "count_in": _pool_after_qu,
+            "count_injected": _kw_injected,
+            "count_out": len(chunks),
+            "count_boosted_existing": len(_kw_boosted),
+            "decisions": [
+                {"chunk_id": c.get("id") or c["text"][:40], "action": "injected", "source": "keyword"}
+                for c in chunks[_pool_after_qu:]
+            ] + [
+                {"chunk_id": c.get("id") or c["text"][:40], "action": "boosted", "source": "hybrid"}
+                for c in _kw_boosted
+            ],
+        })
+    _pool_after_keyword = len(chunks)
+
     # ── RRF-Fusion (nur wenn BM25 aktiv) ──
     # Baut aus semantic, QU und BM25-Rankings eine fusionierte Reihenfolge.
     # Fehlende BM25-Chunks werden via col.get() nachgeladen.
@@ -1131,6 +1193,25 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     # Diagnose-Hook: retrieve_candidates_only() gibt hier zurück, vor CE + Cutoff
     if _candidates_only:
         return chunks[:_candidates_top_k]
+
+    if _full_trace is not None:
+        _bm25_active = bool(_BM25_AVAILABLE and _bm25_enabled() and _bm25_hits)
+        _pool_after_rrf = len(chunks)
+        _full_trace["stages"].append({
+            "id": "bm25_rrf",
+            "label": "BM25 + RRF Fusion",
+            "kind": "injector",
+            "active": _bm25_active,
+            "count_in": _pool_after_keyword,
+            "count_injected": _pool_after_rrf - _pool_after_keyword,
+            "count_out": _pool_after_rrf,
+            "decisions": [
+                {"chunk_id": c.get("id") or c["text"][:40], "action": "injected", "source": "rrf_injected"}
+                for c in chunks if c.get("source") == "rrf_injected"
+            ],
+        })
+    else:
+        _pool_after_rrf = len(chunks)
 
     # ===== Schritt 2.2/2.3: Per-Source-Retrieval =====
     # 2.2 (Shadow): läuft parallel, Telemetrie, Single-Call bleibt aktiv
@@ -1239,30 +1320,32 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
 
     if _full_trace is not None:
         _ps_budget_active_flag = os.getenv("OPENLEX_PER_SOURCE_BUDGET_ACTIVE", "false").lower() == "true"
+        _n_filtered = _pre_ps_pool_size - len(candidates)
         _full_trace["stages"].append({
             "id": "per_source",
-            "label": "Per-Source Budget" if _ps_budget_active_flag else "Candidate Pool (Single-Call)",
+            "label": "Per-Source Budget" if _ps_budget_active_flag else "Pool → Top-40 Slice",
+            "kind": "filter",
             "active": True,
             "count_in": _pre_ps_pool_size,
+            "count_filtered": _n_filtered,
             "count_out": len(candidates),
             "budget_active": _ps_budget_active_flag,
             "decisions": [
                 {
                     "chunk_id": c.get("id") or c["text"][:40],
+                    "action": "kept",
                     "source_type": c.get("meta", {}).get("source_type", ""),
                     "source": c.get("source", ""),
                     "adjusted_distance": round(c.get("adjusted_distance", 0), 4),
-                    "kept": True,
                 }
                 for c in candidates
             ] + [
                 {
                     "chunk_id": c.get("id") or c["text"][:40],
-                    "source_type": c.get("meta", {}).get("source_type", ""),
-                    "source": c.get("source", ""),
-                    "adjusted_distance": round(c.get("adjusted_distance", 0), 4),
-                    "kept": False,
+                    "action": "filtered",
                     "reason": "beyond_top40",
+                    "source_type": c.get("meta", {}).get("source_type", ""),
+                    "adjusted_distance": round(c.get("adjusted_distance", 0), 4),
                 }
                 for c in chunks[40:]
             ],
@@ -1317,6 +1400,7 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
         _full_trace["stages"].append({
             "id": "cross_encoder",
             "label": "Cross-Encoder",
+            "kind": "transformer",
             "active": True,
             "model": RERANKER_MODEL,
             "count_in": len(candidates),
@@ -1394,6 +1478,7 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                         _boost_log[cid].append({"name": "instanzgericht_penalty", "factor": round(1/1.3, 4)})
 
     # Pre-DSGVO-Filter: Veraltete Leitlinien abwerten oder entfernen
+    _pre_dsgvo_pool_size = len(candidates)
     post_dsgvo = [c for c in candidates if not _is_outdated_chunk(c)]
     if len(post_dsgvo) >= 3:
         # Genug aktuelle Quellen → veraltete komplett entfernen
@@ -1420,6 +1505,26 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                     cid = c.get("id") or c["text"][:40]
                     if cid in _boost_log:
                         _boost_log[cid].append({"name": "pre_dsgvo_penalty", "factor": round(1/3.0, 4)})
+
+    # Full-Trace: pre_dsgvo_filter stage
+    if _full_trace is not None:
+        _dsgvo_filtered = _pre_dsgvo_pool_size - len(candidates)
+        _dsgvo_decisions = []
+        if _dsgvo_filtered > 0:
+            _current_ids = {c.get("id") or c["text"][:40] for c in candidates}
+            for cid in list(_full_ce_raw.keys()):
+                if cid not in _current_ids:
+                    _dsgvo_decisions.append({"chunk_id": cid, "filtered": True, "reason": "pre_dsgvo"})
+        _full_trace["stages"].append({
+            "id": "pre_dsgvo_filter",
+            "label": "Pre-DSGVO Filter",
+            "kind": "filter",
+            "active": _dsgvo_filtered > 0,
+            "count_in": _pre_dsgvo_pool_size,
+            "count_filtered": _dsgvo_filtered,
+            "count_out": len(candidates),
+            "decisions": _dsgvo_decisions,
+        })
 
     # Sortiere nach Cross-Encoder-Score (höher = besser)
     # Tie-breaker: Segment-Boost
@@ -1449,6 +1554,7 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
         _full_trace["stages"].append({
             "id": "boosts",
             "label": "Boosts & Penalties",
+            "kind": "transformer",
             "active": True,
             "count_in": len(candidates),
             "count_out": len(candidates),
@@ -1474,6 +1580,21 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     if mw_top:
         candidates = mw_top + non_mw + mw_rest
         print(f"  MW-Priorisierung: {len(mw_top)} Chunks an Position 1-{len(mw_top)} gesetzt")
+
+    if _full_trace is not None:
+        _full_trace["stages"].append({
+            "id": "mw_priorization",
+            "label": "MW-Priorisierung",
+            "kind": "transformer",
+            "active": bool(mw_top),
+            "count_in": len(candidates),
+            "count_out": len(candidates),
+            "count_mw_promoted": len(mw_top),
+            "decisions": [
+                {"chunk_id": c.get("id") or c["text"][:40], "action": "promoted_to_front"}
+                for c in mw_top
+            ],
+        })
 
     # FIX 4: Pflicht-Chunks für erkannte Themen voranstellen
     pflicht = _find_pflicht_chunks(question, col)
@@ -1503,10 +1624,27 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     if n_removed:
         print(f"  Doc-Dedup: {n_removed} Duplikate entfernt (max {MAX_PER_DOC}/Dokument)")
 
+    _pre_dedup_count = len(candidates)
+
     if _full_trace is not None:
-        _pre_dedup_ids = {c.get("id") or c["text"][:40] for c in deduped}
-        _dedup_dropped_ids = {c.get("id") or c["text"][:40] for c in candidates if (c.get("id") or c["text"][:40]) not in _pre_dedup_ids}
-        _pre_filter_snap = list(candidates)  # before dedup, track what was deduplicated
+        _dedup_dropped = [c for c in candidates if c not in deduped]
+        _full_trace["stages"].append({
+            "id": "dedup",
+            "label": "Doc-Dedup (max 3/Dokument)",
+            "kind": "filter",
+            "active": True,
+            "count_in": len(candidates),
+            "count_filtered": len(_dedup_dropped),
+            "count_out": len(deduped),
+            "decisions": [
+                {"chunk_id": c.get("id") or c["text"][:40], "action": "filtered", "reason": "dedup_max_per_doc",
+                 "doc_key": _doc_key(c.get("meta", {}))}
+                for c in _dedup_dropped
+            ] + [
+                {"chunk_id": c.get("id") or c["text"][:40], "action": "kept"}
+                for c in deduped
+            ],
+        })
 
     candidates = deduped
 
@@ -1532,35 +1670,70 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                 _trace[chunk_cid]["filter_reason"] = "ce_cutoff"
 
     if _full_trace is not None:
-        _filter_decisions = []
-        for c in deduped:
-            cid = c.get("id") or c["text"][:40]
-            ce_final = _full_ce_final.get(cid, round(float(c.get("ce_score", 0.0)), 4))
-            in_selected = any(
-                (s.get("id") or s["text"][:40]) == cid for s in selected
-            )
-            deduped_out = cid in (_dedup_dropped_ids if '_dedup_dropped_ids' in dir() else set())
-            _filter_decisions.append({
-                "chunk_id": cid,
-                "ce_score_final": ce_final,
-                "adjusted_distance": round(c.get("adjusted_distance", 0), 4),
-                "kept": in_selected,
-                "reason": (
-                    "dedup" if (c.get("id") or c["text"][:40]) in
-                    {x.get("id") or x["text"][:40] for x in (candidates if False else [])}
-                    else ("above_cutoff" if in_selected else "below_ce_cutoff")
-                ),
-            })
+        # Stage: pflicht_urteilsname_injection — chunks bypassing CE
+        _n_pflicht = len(pflicht)
         _full_trace["stages"].append({
-            "id": "filter",
-            "label": "Filter & Cutoff",
+            "id": "pflicht_urteilsname_injection",
+            "flow_isolated": True,  # parallel fork, not part of main chunk flow
+            "label": "Pflicht + Urteilsname Injection",
+            "kind": "injector",
+            "active": bool(pflicht),
+            "count_in": 0,
+            "count_injected": _n_pflicht,
+            "count_out": _n_pflicht,
+            "decisions": [
+                {"chunk_id": c.get("id") or c["text"][:40], "action": "injected",
+                 "source": c.get("source", "pflicht"), "bypass_ce": True}
+                for c in pflicht
+            ],
+        })
+
+        # Stage: ce_cutoff — filter deduped candidates by CE score
+        _ce_kept = [c for c in deduped
+                    if (c.get("ce_score", 0) >= CE_CUTOFF or c.get("adjusted_distance", 1.0) < DIST_CUTOFF)
+                    and (c.get("meta", {}).get("chunk_id", "") or c.get("meta", {}).get("thema", "") or c["text"][:30]) not in
+                    {c2.get("meta", {}).get("chunk_id", "") or c2.get("meta", {}).get("thema", "") or c2["text"][:30] for c2 in pflicht}]
+        _ce_dropped = [c for c in deduped if c not in _ce_kept and
+                       (c.get("meta", {}).get("chunk_id", "") or c.get("meta", {}).get("thema", "") or c["text"][:30]) not in
+                       {c2.get("meta", {}).get("chunk_id", "") or c2.get("meta", {}).get("thema", "") or c2["text"][:30] for c2 in pflicht}]
+        _n_ce_from_deduped = len([c for c in deduped if (c.get("meta", {}).get("chunk_id","") or c["text"][:30]) not in
+                                  {c2.get("meta",{}).get("chunk_id","") or c2["text"][:30] for c2 in pflicht}])
+        _full_trace["stages"].append({
+            "id": "ce_cutoff",
+            "label": "CE-Cutoff Filter",
+            "kind": "filter",
             "active": True,
             "ce_cutoff_threshold": CE_CUTOFF,
             "dist_cutoff_threshold": DIST_CUTOFF,
             "count_in": len(deduped),
-            "count_out": len(selected),
-            "decisions": _filter_decisions,
+            "count_filtered": len(_ce_dropped),
+            "count_out": len(deduped) - len(_ce_dropped),
+            "decisions": [
+                {"chunk_id": c.get("id") or c["text"][:40], "action": "kept",
+                 "ce_score_final": _full_ce_final.get(c.get("id") or c["text"][:40], round(float(c.get("ce_score",0)),4)),
+                 "reason": "above_cutoff"}
+                for c in _ce_kept
+            ] + [
+                {"chunk_id": c.get("id") or c["text"][:40], "action": "filtered",
+                 "ce_score_final": _full_ce_final.get(c.get("id") or c["text"][:40], round(float(c.get("ce_score",0)),4)),
+                 "reason": "below_ce_cutoff"}
+                for c in _ce_dropped
+            ],
         })
+
+        # Stage: selected_merge — combine pflicht + ce_passed into selected
+        _n_selected_from_ce = len(deduped) - len(_ce_dropped)
+        _full_trace["stages"].append({
+            "id": "selected_merge",
+            "label": "Selected-Merge (Pflicht + CE-Passed)",
+            "kind": "injector",
+            "active": True,
+            "count_in": _n_selected_from_ce,
+            "count_injected": _n_pflicht,
+            "count_out": _n_pflicht + _n_selected_from_ce,
+        })
+        # Correct selected count for subsequent stages
+        _n_post_merge = _n_pflicht + _n_selected_from_ce
 
     # Gruppiere nach Dokument und prüfe Min/Max
     docs = group_chunks_to_docs(selected)
@@ -1606,6 +1779,25 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                         break
 
     # EG-Anreicherung: Passende Erwägungsgründe automatisch nachladen
+    if _full_trace is not None:
+        _n_after_minmax_div = len(selected)
+        # Compare with _n_post_merge to compute injected/filtered
+        _n_minmax_injected = max(0, _n_after_minmax_div - _n_post_merge)
+        _n_minmax_filtered = max(0, _n_post_merge - _n_after_minmax_div)
+        _full_trace["stages"].append({
+            "id": "min_max_diversification",
+            "label": "Min-Docs / Max-Docs / Diversification",
+            "kind": "injector" if _n_minmax_injected > 0 else ("filter" if _n_minmax_filtered > 0 else "transformer"),
+            "active": True,
+            "count_in": _n_post_merge,
+            "count_injected": _n_minmax_injected,
+            "count_filtered": _n_minmax_filtered,
+            "count_out": _n_after_minmax_div,
+            "min_docs": MIN_DOCS,
+            "max_docs": MAX_DOCS,
+            "decisions": [],
+        })
+
     _pre_eg_count = len(selected)
     selected = _enrich_with_erwaegungsgruende(selected, col)
     if _full_trace is not None:
@@ -1616,8 +1808,10 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
         _full_trace["stages"].append({
             "id": "eg_enrichment",
             "label": "EG-Enrichment",
+            "kind": "injector",
             "active": True,
             "count_in": _pre_eg_count,
+            "count_injected": len(selected) - _pre_eg_count,
             "count_out": len(selected),
             "decisions": _eg_injected,
         })
@@ -1633,11 +1827,14 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             _tenor_decisions.append({"action": "already_present", "az": az})
         for az in _tenor_trace.get("misses", []):
             _tenor_decisions.append({"action": "miss", "az": az})
+        _n_tenor_injected = len(_tenor_trace.get("injected", []))
         _full_trace["stages"].append({
             "id": "tenor_enforce",
             "label": "Tenor-Enforce",
+            "kind": "injector",
             "active": os.getenv("OPENLEX_TENOR_ENFORCE", "true").lower() == "true",
-            "count_in": len(selected) - len(_tenor_trace.get("injected", [])),
+            "count_in": len(selected) - _n_tenor_injected,
+            "count_injected": _n_tenor_injected,
             "count_out": len(selected),
             "decisions": _tenor_decisions,
         })
@@ -1685,26 +1882,52 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
 
 
 # ── Full-Trace Infrastructure ───────────────────────────────────────────────
-# Stages that merge multiple retrieval sources — count gaps are expected here.
-_TRACE_MERGE_STAGES = frozenset({"semantic", "norm_lookup", "qu_injection", "keyword", "bm25_rrf"})
-
 def _validate_full_trace(trace: dict, results: list) -> dict:
-    """Self-consistency check for trace_format='full' output.
-    Count gaps at merge stages (semantic/norm/QU feed same pool) are expected and skipped.
+    """Strict kind-aware consistency check for trace_format='full' output.
+
+    Rules per kind:
+      injector:    count_in + count_injected == count_out
+      filter:      count_in - count_filtered == count_out
+      transformer: count_in == count_out
+    Inter-stage:   prev.count_out == stage.count_in
     """
     issues = []
     warnings = []
     stages = [s for s in trace.get("stages", []) if s.get("active", True)]
-    for i in range(len(stages) - 1):
-        a, b = stages[i], stages[i + 1]
-        if a["id"] in _TRACE_MERGE_STAGES or b["id"] in _TRACE_MERGE_STAGES:
-            continue  # merge stages legitimately have different counts
-        if (a.get("count_out") is not None and b.get("count_in") is not None
-                and a["count_out"] != b["count_in"]):
-            issues.append(
-                f"Flow gap: {a['id']}.count_out={a['count_out']} "
-                f"!= {b['id']}.count_in={b['count_in']}"
+    for i, s in enumerate(stages):
+        kind = s.get("kind", "transformer")
+        ci = s.get("count_in")
+        co = s.get("count_out")
+        inj = s.get("count_injected", 0)
+        fil = s.get("count_filtered", 0)
+        if ci is None or co is None:
+            continue
+        if kind == "injector":
+            if ci + inj != co:
+                issues.append(f"{s['id']}: injector {ci}+{inj} != {co}")
+        elif kind == "filter":
+            if ci - fil != co:
+                issues.append(f"{s['id']}: filter {ci}-{fil} != {co}")
+        elif kind == "transformer":
+            if ci != co:
+                issues.append(f"{s['id']}: transformer {ci} != {co}")
+        # Inter-stage flow check (skipped for query-level / fork stages)
+        if i > 0:
+            prev = stages[i - 1]
+            # Skip if prev is a query-level stage (flow_boundary) or
+            # if current is a fork stage (flow_isolated) or
+            # if prev is a fork stage (flow_isolated).
+            _skip_flow = (
+                prev.get("flow_boundary")
+                or s.get("flow_isolated")
+                or prev.get("flow_isolated")
             )
+            if not _skip_flow and prev.get("count_out") is not None and ci is not None:
+                if prev["count_out"] != ci:
+                    issues.append(
+                        f"flow gap: {prev['id']}.count_out={prev['count_out']} "
+                        f"!= {s['id']}.count_in={ci}"
+                    )
     return {"valid": len(issues) == 0, "issues": issues, "warnings": warnings}
 
 
