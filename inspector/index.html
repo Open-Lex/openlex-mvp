@@ -1298,19 +1298,19 @@ function renderLanes() {
         html += flowBandHtml(prevSid, sid, flowCount, false, bandInact);
       }
 
+      // Special: LLM-Generation stage — muss VOR !s stehen, da sm["llm_generation"] immer undefined
+      if (sid === "llm_generation") {
+        const llm = S.data && S.data.llm;
+        html += llmStageCardHtml(sid, llm, isSel);
+        continue;
+      }
+
       if (!s) {
         html += `<div class="snode sn-inactive" data-stage="${esc(sid)}" title="Keine Daten">
           <div class="sn-id">${esc(sid)}</div>
           <div class="sn-label" style="color:var(--text3)">${esc(sid)}</div>
           <div style="font-size:9px;color:var(--text3)">–</div>
         </div>`;
-        continue;
-      }
-
-      // Special: LLM-Generation stage
-      if (sid === "llm_generation") {
-        const llm = S.data && S.data.llm;
-        html += llmStageCardHtml(sid, llm, isSel);
         continue;
       }
 
