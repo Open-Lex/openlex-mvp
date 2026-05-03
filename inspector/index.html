@@ -155,29 +155,7 @@
     #inspect-btn:hover { opacity: 0.8; }
     #inspect-btn:disabled { opacity: 0.38; cursor: not-allowed; }
 
-    .mode-btns {
-      display: flex;
-      gap: 1px;
-      background: var(--border2);
-      border: 0.5px solid var(--border2);
-      padding: 1px;
-      flex-shrink: 0;
-    }
 
-    .mode-btn {
-      background: transparent;
-      border: none;
-      color: var(--text3);
-      padding: 3px 11px;
-      font-size: 11px;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-
-    .mode-btn.active {
-      background: var(--gold-dim);
-      color: var(--gold);
-    }
 
     /* ── Main layout ─────────────────────────────────────────── */
     #main {
@@ -225,9 +203,13 @@
     }
 
     .chunk-item:hover   { background: var(--bg3); }
-    .chunk-item.ci-final    { border-left-color: var(--green); }
-    .chunk-item.ci-filtered { opacity: 0.45; }
-    .chunk-item.ci-tracked  { background: rgba(201,160,74,0.06); }
+    .chunk-item.ci-final      { border-left-color: var(--green); }
+    .chunk-item.not-in-final  { opacity: 0.55; }
+    .chunk-item.search-match  {
+      border-left: 2px solid #c9a04a;
+      background: rgba(201,160,74,0.06);
+      padding-left: 10px;
+    }
     .chunk-item.ci-selected { background: var(--gold-dim); border-left-color: var(--gold); }
 
     .ci-top {
@@ -472,6 +454,7 @@
     .snode.sn-tracked          { border-color: var(--gold) !important; box-shadow: 0 0 5px rgba(201,160,74,0.25); }
     .snode.sn-tracked-filtered { border-color: var(--red)  !important; box-shadow: 0 0 5px rgba(160,74,74,0.25); }
     .snode.sn-dimmed           { opacity: 0.28; }
+    .snode.sn-search-match     { outline: 1.5px solid #c9a04a; outline-offset: 2px; filter: drop-shadow(0 0 4px rgba(201,160,74,0.6)); }
 
     /* ── Responsive: hide bands when too narrow ──────────────── */
     @media (max-width: 1000px) {
@@ -816,11 +799,7 @@
     <button class="rmb active" data-rm="retrieval" title="Retrieval only — kein LLM-Aufruf">Retrieval</button>
     <button class="rmb rmb-full" data-rm="full" title="Full run mit LLM-Antwort (20-30s)">Full</button>
   </div>
-  <div class="mode-btns" id="mode-btns">
-    <button class="mode-btn active" data-mode="default">Default</button>
-    <button class="mode-btn" data-mode="all">All</button>
-    <button class="mode-btn" data-mode="tracking">Tracking</button>
-  </div>
+
 </div>
 
 <!-- ── Main ────────────────────────────────────────────────────────────── -->
@@ -907,7 +886,6 @@ const S = {
   loading:         false,
   error:           null,
   data:            null,
-  mode:            "default",   // default | all | tracking
   selectedStage:   null,
   selectedChunk:   null,
   collapsedPhases: {},
@@ -1039,7 +1017,7 @@ async function doInspect() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         query,
-        chunk_search: csInput.value.trim() || null,
+
         trace_format: "full",
       }),
     });
@@ -1150,7 +1128,7 @@ function applyTrackingOverlay() {
     el.classList.remove("sn-tracked", "sn-tracked-filtered", "sn-dimmed");
   });
 
-  if (!cid || S.mode !== "tracking") return;
+  if (!cid) return;
 
   const presence = buildChunkPresence(cid);
   const hasAny   = Object.values(presence).some(v => v != null);
@@ -1649,60 +1627,62 @@ function renderLanes() {
   applyTrackingOverlay();
 }
 
+function chunkMatchesSearch(chunk, searchTerm) {
+  if (!searchTerm) return false;
+  const lower = searchTerm.toLowerCase();
+  const id    = (chunk.id || '').toLowerCase();
+  const az    = (chunk.aktenzeichen || '').toLowerCase();
+  const titel = (chunk.titel || '').toLowerCase();
+  const seg   = (chunk.segment || '').toLowerCase();
+  return id.includes(lower) || az.includes(lower) || titel.includes(lower) || seg.includes(lower);
+}
+
 function renderSidebar() {
   if (!S.data) return;
 
-  const chunks    = S.data.chunks || [];
-  const trackedS  = new Set(S.data.tracked_chunks || []);
-  const finalRank = new Map((S.data.final_results || []).map(c => [c.id, c.final_rank]));
+  const chunks     = S.data.chunks || [];
+  const searchTerm = csInput.value.trim();
 
-  let filtered;
-  if (S.mode === "default") {
-    filtered = chunks
-      .filter(c => c.final_rank > 0)
-      .sort((a, b) => a.final_rank - b.final_rank);
-  } else if (S.mode === "tracking") {
-    filtered = chunks.filter(c => trackedS.has(c.id));
-  } else { // all
-    filtered = [...chunks].sort((a, b) => {
-      const ra = a.final_rank > 0 ? a.final_rank : 999;
-      const rb = b.final_rank > 0 ? b.final_rank : 999;
-      if (ra !== rb) return ra - rb;
-      return (b.ce_score_raw || -99) - (a.ce_score_raw || -99);
-    });
+  // Sort: final pool first (by rank asc), then non-final (by ce_score desc)
+  const sorted = [...chunks].sort((a, b) => {
+    const ra = a.final_rank > 0 ? a.final_rank : 999;
+    const rb = b.final_rank > 0 ? b.final_rank : 999;
+    if (ra !== rb) return ra - rb;
+    return (b.ce_score_raw || -99) - (a.ce_score_raw || -99);
+  });
+
+  // Counter
+  if (!searchTerm) {
+    scCount.textContent = chunks.length;
+  } else {
+    const matchCount = sorted.filter(c => chunkMatchesSearch(c, searchTerm)).length;
+    scCount.textContent = matchCount === 0
+      ? `${chunks.length} · kein Treffer`
+      : `${chunks.length} · ${matchCount} Treffer`;
   }
 
-  scCount.textContent = filtered.length;
-
-  if (filtered.length === 0) {
-    chunkList.innerHTML = `<div class="detail-empty">${
-      S.mode === "tracking" ? "Keine Treffer" : "Keine Chunks"
-    }</div>`;
+  if (sorted.length === 0) {
+    chunkList.innerHTML = `<div class="detail-empty">Keine Chunks</div>`;
     return;
   }
 
   let html = "";
-  for (const c of filtered) {
-    const isFinal    = c.final_rank > 0;
-    const isTracked  = trackedS.has(c.id);
-    const isSel      = S.selectedChunk === c.id;
-    const isFiltered = !!c.filter_reason;
+  for (const c of sorted) {
+    const isFinal  = c.final_rank > 0;
+    const isMatch  = chunkMatchesSearch(c, searchTerm);
+    const isSel    = S.selectedChunk === c.id;
 
     const cls = [
       "chunk-item",
-      isFinal   ? "ci-final"    : "",
-      isFiltered && !isFinal ? "ci-filtered" : "",
-      isTracked ? "ci-tracked"  : "",
-      isSel     ? "ci-selected" : "",
+      isFinal ? "ci-final"      : "not-in-final",
+      isMatch ? "search-match"  : "",
+      isSel   ? "ci-selected"   : "",
     ].filter(Boolean).join(" ");
 
     const label    = c.aktenzeichen || c.gericht || c.gesetz || c.id.slice(0, 22);
     const scoreStr = c.ce_score_raw != null ? c.ce_score_raw.toFixed(3) : "–";
-
-    let rankStr = "–";
-    let rankCls = "ci-rank";
-    if (isFinal)        { rankStr = "#" + c.final_rank; }
-    else if (isFiltered){ rankStr = "✗"; rankCls += " filtered"; }
+    const rankStr  = isFinal ? "#" + c.final_rank : "×";
+    const rankCls  = isFinal ? "ci-rank" : "ci-rank filtered";
 
     html += `<div class="${cls}"
       onclick="selectChunk('${esc(c.id)}')"
@@ -1717,6 +1697,43 @@ function renderSidebar() {
   }
 
   chunkList.innerHTML = html;
+  applySearchHighlight();
+}
+
+/** Highlight stage nodes for all chunks matching the current search term */
+function applySearchHighlight() {
+  // Clear previous search highlights
+  document.querySelectorAll(".snode").forEach(el => el.classList.remove("sn-search-match"));
+
+  const searchTerm = csInput.value.trim();
+  if (!searchTerm || !S.data) return;
+
+  const chunks = S.data.chunks || [];
+  const matchIds = new Set(
+    chunks.filter(c => chunkMatchesSearch(c, searchTerm)).map(c => c.id)
+  );
+  if (matchIds.size === 0) return;
+
+  // Find which stages contain at least one matching chunk
+  const ft = S.data.full_trace;
+  if (!ft || !ft.stages) return;
+
+  const stagesWithMatch = new Set();
+  for (const stage of ft.stages) {
+    for (const dec of stage.decisions || []) {
+      if (matchIds.has(dec.chunk_id)) {
+        stagesWithMatch.add(stage.id);
+        break;
+      }
+    }
+  }
+
+  // Apply glow to matching stage nodes
+  document.querySelectorAll(".snode[data-stage]").forEach(el => {
+    if (stagesWithMatch.has(el.dataset.stage)) {
+      el.classList.add("sn-search-match");
+    }
+  });
 }
 
 function renderDetail() {
@@ -1869,16 +1886,7 @@ function selectStage(sid) {
 function selectChunk(cid) {
   S.selectedChunk = (S.selectedChunk === cid) ? null : cid;
   renderSidebar();
-  applyTrackingOverlay();   // re-apply even if mode != tracking (clears on null)
-}
-
-function setMode(mode) {
-  S.mode = mode;
-  document.querySelectorAll(".mode-btn").forEach(b => {
-    b.classList.toggle("active", b.dataset.mode === mode);
-  });
-  renderSidebar();
-  applyTrackingOverlay();
+  applyTrackingOverlay();  // shows chunk journey through stages in lane view
 }
 
 function setRunMode(rm) {
@@ -1894,11 +1902,9 @@ function setRunMode(rm) {
 
 iBtn.addEventListener("click", doInspect);
 qInput.addEventListener("keydown", e => { if (e.key === "Enter") doInspect(); });
-csInput.addEventListener("keydown", e => { if (e.key === "Enter") doInspect(); });
-
-document.getElementById("mode-btns").addEventListener("click", e => {
-  const b = e.target.closest(".mode-btn");
-  if (b) setMode(b.dataset.mode);
+csInput.addEventListener("input", () => {
+  renderSidebar();
+  applySearchHighlight();
 });
 
 document.getElementById("run-mode-toggle").addEventListener("click", e => {
