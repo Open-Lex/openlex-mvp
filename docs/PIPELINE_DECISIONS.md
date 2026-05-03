@@ -594,9 +594,9 @@ Bei `valid=false` mit `issues` → Dokumentation darf nicht aktualisiert werden 
 | 12 | `dedup` | Doc-Dedup (max 3/Dokument) | filter | true | — | Ja (filtered+kept mit doc_key) | — |
 | 13 | `pflicht_urteilsname_injection` | Pflicht + Urteilsname Injection | injector | false | flow_isolated | Ja (wenn injected) | warum kein match |
 | 14 | `ce_cutoff` | CE-Cutoff Filter | filter | true | — | Ja (kept+filtered mit ce_score_final) | — |
-| 15 | `selected_merge` | Selected-Merge (Pflicht + CE-Passed) | injector | true | — | Nein (kein decisions-Array) | — |
-| 16 | `min_max_diversification` | Min-Docs / Max-Docs / Diversification | filter/injector/transformer | true | — | Nein | welche Chunks entfernt/hinzugefügt |
-| 17 | `eg_enrichment` | EG-Enrichment | injector | true | — | Ja (chunk_id, source) | chunk_id leer-Bug, welche EG-Nummern |
+| 15 | `selected_merge` | Selected-Merge (Pflicht + CE-Passed) | injector | true | flow_boundary | Nein | — |
+| 16 | `min_max_diversification` | Min-Docs / Max-Docs / Diversification | filter/injector/transformer | true | — | Ja (action=injected/filtered pro Sub-Op) | — |
+| 17 | `eg_enrichment` | EG-Enrichment | injector | true | — | Ja (action=injected, chunk_id korrekt) | — |
 | 18 | `tenor_enforce` | Tenor-Enforce | injector | true | — | Ja (injected/already_present/miss) | tried_segments bei miss |
 
 ---
@@ -621,8 +621,8 @@ Bei `valid=false` mit `issues` → Dokumentation darf nicht aktualisiert werden 
 ### Verbleibende Lücken (Stand 2026-05-03)
 
 1. **LLM-Stage** (Generierung, Streaming, Quellen-Attribution) — geplant Paket 3
-2. **eg_enrichment chunk_id leer**: Wenn `c.get("id")` und `c.get("meta", {}).get("chunk_id", "")` beide leer sind, wird leerer String im Decision-Eintrag gesetzt. Fix: EG-Chunks beim Laden mit `id` aus der ChromaDB-ID belegen.
-3. **min_max_diversification decisions**: Kein `decisions`-Array — es ist nicht nachvollziehbar welche Chunks konkret entfernt oder nachgeschoben wurden.
+2. ~~**eg_enrichment chunk_id leer**~~ — **geschlossen Patch 1.2**: `id=chroma_id` auf EG-Chunks gesetzt, decisions mit `action="injected"` und korrekter chunk_id
+3. ~~**min_max_diversification decisions**~~ — **geschlossen Patch 1.2**: min_docs_fill, max_docs_filter, diversification-Loops instrumentiert; `selected_merge.flow_boundary` + `_n_pre_minmax` als Ground-Truth
 4. **year_extracted im boosts-Trace**: Welches Jahr `_extract_year()` für den Recency-Faktor verwendet hat, fehlt im `boosts_applied`-Array.
 5. **qu_module_available / warum QU kein Match**: Stage `qu_injection` liefert zwar count=0, aber nicht ob das Modul fehlt oder die Normen-Extraktion leer war.
 6. **tried_segments bei tenor_enforce miss**: Im `decisions`-Eintrag `action="miss"` fehlt welche Segmente versucht wurden (nur im JSONL-Log).
@@ -669,6 +669,16 @@ Neu hinzugefügt:
 - `full_trace.consistency`: `{valid, issues, warnings}`
 
 Ergebnis: 18 explizite Stages, `consistency.valid=true`, 12 von 14 ursprünglichen Lücken geschlossen.
+
+### 2026-05-03 — Patch 1.2: Kritische Trace-Lücken geschlossen
+
+- **eg_enrichment**:  auf injizierte EG-Chunks; decisions mit  und korrekter chunk_id (z.B. )
+- **min_max_diversification**: min_docs_fill, max_docs_filter, diversification-Loops instrumentiert; per-Chunk decisions (action=injected/filtered + reason)
+- **_n_pre_minmax**:  vor dem Block als Ground-Truth für  — ersetzt stale  (Edge-Case bei empty chunk_ids)
+- **selected_merge.flow_boundary=True**: Merge-Stage korrekt als Flow-Boundary markiert
+- **Validator has_action_schema**: Decision-Zähl-Check nur für Stages mit  Schema
+- consistency.valid=True für drei Test-Queries
+- Eval unverändert: Hit@3=0.384, MRR=0.389
 
 ### Offene Lücken (Stand 2026-05-03)
 
