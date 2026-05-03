@@ -689,12 +689,14 @@ function updateLamps() {
   if (ft && ft.stages && ft.stages.length > 1) {
     let gapFound = false;
     const stages = ft.stages;
-    for (let i = 1; i < stages.length; i++) {
-      const prev = stages[i - 1];
-      const curr = stages[i];
-      if (curr.flow_boundary || curr.flow_isolated || prev.flow_isolated) continue;
-      if (prev.count_out !== undefined && curr.count_in !== undefined) {
-        if (prev.count_out !== curr.count_in) { gapFound = true; break; }
+    for (let i = 0; i < stages.length - 1; i++) {
+      const cur  = stages[i];
+      const next = stages[i + 1];
+      // Skip if cur OR next is a boundary/isolated stage (merge points, forks, query-level)
+      if (cur.flow_boundary  || cur.flow_isolated)  continue;
+      if (next.flow_boundary || next.flow_isolated) continue;
+      if (cur.count_out !== undefined && next.count_in !== undefined) {
+        if (cur.count_out !== next.count_in) { gapFound = true; break; }
       }
     }
     lamp("lamp-flow",
