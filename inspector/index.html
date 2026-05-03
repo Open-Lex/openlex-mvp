@@ -628,6 +628,63 @@
     .consistency-warn { color: var(--yellow); font-size: 10px; }
     .consistency-fail { color: var(--red);    font-size: 10px; }
 
+
+    /* ── Run-mode toggle ──────────────────────────────────────────── */
+    .run-mode-toggle { display:flex; gap:2px; align-items:center; margin-left:8px; }
+
+    .rmb {
+      background: transparent;
+      border: 0.5px solid var(--border2);
+      color: var(--text3);
+      font-size: 10px;
+      padding: 3px 8px;
+      cursor: pointer;
+      border-radius: 2px;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.04em;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+    .rmb:hover   { border-color: var(--border); color: var(--text2); }
+    .rmb.active  { border-color: var(--gold);  color: var(--gold);  background: var(--gold-dim); }
+    .rmb.rmb-full.active {
+      border-color: #4a9a6a; color: #4a9a6a;
+      background: rgba(74,154,106,0.10);
+    }
+
+    /* ── LLM stage card ──────────────────────────────────────────── */
+    .sn-grounding-bar {
+      width: 100%; height: 3px;
+      background: var(--bg); border-radius: 1px;
+      margin-top: 5px; overflow: hidden;
+    }
+    .sn-grounding-fill { height:100%; border-radius:1px; transition: width 0.4s; }
+
+    .snode.sn-llm          { border-left: 2px solid #4a9a6a; }
+    .snode.sn-llm.sn-halluc{ border-left-color: var(--red); }
+
+    /* ── LLM detail panel ────────────────────────────────────────── */
+    .llm-answer {
+      font-size: 11px; line-height: 1.65; color: var(--text2);
+      white-space: pre-wrap; word-break: break-word;
+      padding: 2px 0; max-height: 280px; overflow-y: auto;
+    }
+    .llm-gs-row {
+      display: flex; flex-wrap: wrap; gap: 5px;
+      margin-bottom: 7px; font-size: 10px;
+    }
+    .llm-gs-pill {
+      background: var(--bg3); border: 0.5px solid var(--border2);
+      padding: 1px 6px; border-radius: 2px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .llm-gs-pill.gs-ok   { border-color: rgba(74,154,106,0.4);  color: var(--green); }
+    .llm-gs-pill.gs-warn { border-color: rgba(154,74,74,0.4);   color: var(--red);   }
+    .llm-grounding-bar-lg {
+      width:100%; height:5px; background:var(--bg);
+      border-radius:2px; overflow:hidden; margin-bottom:6px;
+    }
+    .llm-grounding-fill-lg { height:100%; border-radius:2px; transition:width 0.4s; }
+
   </style>
 </head>
 <body>
@@ -664,6 +721,10 @@
     placeholder="Chunk-Suche: AZ, ID, Keyword…"
     autocomplete="off">
   <button id="inspect-btn">Inspect</button>
+  <div class="run-mode-toggle" id="run-mode-toggle">
+    <button class="rmb active" data-rm="retrieval" title="Retrieval only — kein LLM-Aufruf">Retrieval</button>
+    <button class="rmb rmb-full" data-rm="full" title="Full run mit LLM-Antwort (20-30s)">Full</button>
+  </div>
   <div class="mode-btns" id="mode-btns">
     <button class="mode-btn active" data-mode="default">Default</button>
     <button class="mode-btn" data-mode="all">All</button>
@@ -743,7 +804,7 @@ const PHASES = [
   {
     id: "final",
     label: "Phase D — Final",
-    stages: ["pflicht_urteilsname_injection", "selected_merge", "min_max_diversification", "eg_enrichment", "tenor_enforce"],
+    stages: ["pflicht_urteilsname_injection", "selected_merge", "min_max_diversification", "eg_enrichment", "tenor_enforce", "llm_generation"],
   },
 ];
 
@@ -759,6 +820,7 @@ const S = {
   selectedStage:   null,
   selectedChunk:   null,
   collapsedPhases: {},
+  runMode: "retrieval",   // "retrieval" | "full"
 };
 
 // ═══════════════════════════════════════════════════════════════
@@ -836,8 +898,29 @@ function updateLamps() {
     lamp("lamp-flow", "", "Kein full_trace");
   }
 
-  // Lamp 3: LLM-Grounding — n/a until Paket 3
-  lamp("lamp-llm", "", "n/a — verfügbar ab Paket 3");
+  // Lamp 3: LLM-Grounding
+  if (d.llm) {
+    const g     = d.llm.grounding || {};
+    const score = g.grounding_score != null ? g.grounding_score : 1.0;
+    const halluc = (g.cited_not_in_context || []).length > 0;
+    if (halluc) {
+      lamp("lamp-llm", "lamp-red",
+        "Halluzination: [Quelle " + (g.cited_not_in_context || []).join(", ") + "] nicht im Kontext");
+    } else if (score >= 1.0 && (g.cited_nums || []).length > 0) {
+      lamp("lamp-llm", "lamp-green",
+        "Grounding 100% — alle " + g.cited_nums.length + " Quellen im Kontext");
+    } else if (score > 0 || (g.cited_nums || []).length > 0) {
+      lamp("lamp-llm", "lamp-yellow",
+        "Grounding " + Math.round(score * 100) + "% — "
+        + (g.cited_nums || []).length + " Quellen zitiert");
+    } else {
+      lamp("lamp-llm", "", "LLM ohne [Quelle]-Zitate");
+    }
+  } else if (S.runMode === "full") {
+    lamp("lamp-llm", "lamp-yellow", "Full-Mode — warte auf LLM");
+  } else {
+    lamp("lamp-llm", "", "Retrieval-only — kein LLM-Run");
+  }
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -853,11 +936,14 @@ async function doInspect() {
   S.selectedStage = null;
   S.selectedChunk = null;
   iBtn.disabled = true;
-  iBtn.innerHTML = '<span class="spinner"></span>';
+  iBtn.innerHTML = S.runMode === "full"
+    ? '<span class="spinner"></span> LLM…'
+    : '<span class="spinner"></span>';
   metaMs.textContent = "";
 
   try {
-    const resp = await fetch(apiUrl("api/inspect"), {
+    const endpoint = S.runMode === "full" ? "api/full" : "api/inspect";
+    const resp = await fetch(apiUrl(endpoint), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -1009,6 +1095,100 @@ function applyTrackingOverlay() {
 }
 
 // ═══════════════════════════════════════════════════════════════
+// LLM STAGE HELPERS (Paket 3)
+// ═══════════════════════════════════════════════════════════════
+
+function llmStageCardHtml(sid, llm, isSelected) {
+  const noData   = !llm;
+  const g        = llm && llm.grounding ? llm.grounding : {};
+  const scoreP   = noData ? 0 : Math.round((g.grounding_score != null ? g.grounding_score : 1.0) * 100);
+  const hasHalluc = !noData && (g.cited_not_in_context || []).length > 0;
+
+  const barColor = hasHalluc       ? "var(--red)"
+                 : scoreP >= 100   ? "var(--green)"
+                 :                   "var(--yellow)";
+
+  const cls = [
+    "snode sn-llm",
+    isSelected  ? "sn-selected" : "",
+    !noData     ? "sn-active"   : "sn-inactive",
+    hasHalluc   ? "sn-halluc"   : "",
+  ].filter(Boolean).join(" ");
+
+  let countsHtml = "";
+  let groundingHtml = "";
+
+  if (noData) {
+    countsHtml = `<div style="font-size:9px;color:var(--text3)">${
+      S.runMode === "full" ? "Lädt…" : "Retrieval-only"
+    }</div>`;
+  } else {
+    const coutCls = "sc-out " + (scoreP >= 100 ? "up" : scoreP > 50 ? "eq" : "down");
+    countsHtml = `<div class="sn-counts">
+      <span class="sc-in">${llm.approx_tokens || "?"}</span>
+      <span class="sc-arr">tok</span>
+      <span class="${esc(coutCls)}">${scoreP}%</span>
+    </div>`;
+    groundingHtml = `<div class="sn-grounding-bar">
+      <div class="sn-grounding-fill" style="width:${scoreP}%;background:${barColor}"></div>
+    </div>`;
+  }
+
+  const titleStr = noData
+    ? (S.runMode === "full" ? "LLM läuft…" : "Kein LLM-Run — Full-Mode aktivieren")
+    : `Provider: ${esc(llm.provider)} | ${llm.duration_ms}ms | Grounding: ${scoreP}%`;
+
+  return `<div class="${cls}"
+    data-stage="${esc(sid)}"
+    onclick="selectStage('${esc(sid)}')"
+    title="${titleStr}">
+    <div class="sn-id">${esc(sid)}</div>
+    <div class="sn-label">LLM-Antwort</div>
+    ${countsHtml}
+    ${groundingHtml}
+  </div>`;
+}
+
+function renderLlmDetail(llm) {
+  const g      = llm.grounding || {};
+  const scoreP = Math.round((g.grounding_score != null ? g.grounding_score : 1.0) * 100);
+  const halluc = (g.cited_not_in_context || []).length > 0;
+  const barColor = halluc         ? "var(--red)"
+                 : scoreP >= 100  ? "var(--green)"
+                 :                  "var(--yellow)";
+
+  dTitle.textContent = "LLM-Antwort";
+  dMeta.innerHTML = [
+    `<span class="llm-gs-pill">Provider: ${esc(llm.provider || "–")}</span>`,
+    `<span class="llm-gs-pill">~${llm.approx_tokens || "?"} Tokens</span>`,
+    `<span class="llm-gs-pill">${llm.duration_ms || "?"}ms</span>`,
+    `<span class="llm-gs-pill ${scoreP >= 100 && !halluc ? "gs-ok" : "gs-warn"}">Grounding ${scoreP}%</span>`,
+  ].join("");
+
+  let alerts = "";
+  if (halluc) {
+    alerts += `<div style="color:var(--red);font-size:10px;margin-bottom:4px">
+      ⚠ [Quelle ${esc((g.cited_not_in_context || []).join(", "))}] nicht im Kontext (Halluzination?)
+    </div>`;
+  }
+  if ((g.cited_nums || []).length > 0) {
+    alerts += `<div style="color:var(--text3);font-size:10px;margin-bottom:6px">
+      Zitiert: [Quelle ${esc((g.cited_nums || []).join(", "))}] — ${g.total_docs || 0} Quelldokumente
+    </div>`;
+  }
+
+  dBody.innerHTML = `
+    <div class="llm-grounding-bar-lg">
+      <div class="llm-grounding-fill-lg" style="width:${scoreP}%;background:${barColor}"></div>
+    </div>
+    ${alerts}
+    ${llm.error ? `<div style="color:var(--red);font-size:10px;margin-bottom:6px">LLM-Fehler: ${esc(llm.error)}</div>` : ""}
+    <div class="llm-answer">${esc(llm.answer || "(keine Antwort)")}</div>
+  `;
+}
+
+
+// ═══════════════════════════════════════════════════════════════
 // RENDER
 // ═══════════════════════════════════════════════════════════════
 
@@ -1124,6 +1304,13 @@ function renderLanes() {
           <div class="sn-label" style="color:var(--text3)">${esc(sid)}</div>
           <div style="font-size:9px;color:var(--text3)">–</div>
         </div>`;
+        continue;
+      }
+
+      // Special: LLM-Generation stage
+      if (sid === "llm_generation") {
+        const llm = S.data && S.data.llm;
+        html += llmStageCardHtml(sid, llm, isSel);
         continue;
       }
 
@@ -1257,6 +1444,24 @@ function renderSidebar() {
 
 function renderDetail() {
   if (!S.selectedStage) { resetDetail(); return; }
+
+  // Special: LLM-Generation stage
+  if (S.selectedStage === "llm_generation") {
+    if (S.data && S.data.llm) {
+      expandDetail();
+      renderLlmDetail(S.data.llm);
+    } else {
+      expandDetail();
+      dTitle.textContent = "LLM-Antwort";
+      dMeta.innerHTML = "";
+      dBody.innerHTML = `<div class="detail-empty">${
+        S.runMode === "full"
+          ? "LLM läuft — bitte warten…"
+          : "Kein LLM-Run. Full-Mode aktivieren und erneut inspizieren."
+      }</div>`;
+    }
+    return;
+  }
   expandDetail();
 
   const ft    = S.data && S.data.full_trace;
@@ -1385,6 +1590,13 @@ function setMode(mode) {
   applyTrackingOverlay();
 }
 
+function setRunMode(rm) {
+  S.runMode = rm;
+  document.querySelectorAll(".rmb").forEach(b => {
+    b.classList.toggle("active", b.dataset.rm === rm);
+  });
+}
+
 // ═══════════════════════════════════════════════════════════════
 // EVENTS
 // ═══════════════════════════════════════════════════════════════
@@ -1396,6 +1608,11 @@ csInput.addEventListener("keydown", e => { if (e.key === "Enter") doInspect(); }
 document.getElementById("mode-btns").addEventListener("click", e => {
   const b = e.target.closest(".mode-btn");
   if (b) setMode(b.dataset.mode);
+});
+
+document.getElementById("run-mode-toggle").addEventListener("click", e => {
+  const b = e.target.closest(".rmb");
+  if (b) setRunMode(b.dataset.rm);
 });
 
 document.getElementById("detail-close").addEventListener("click", () => {

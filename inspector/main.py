@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import os
+import re as _re
 import sys
 import time
 from pathlib import Path
@@ -19,20 +20,29 @@ _ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(_ROOT))
 
 # Lazy imports — schwere Modelle erst beim ersten Request laden
-_retrieve = None
-_get_collection = None
-_is_initialized = False
+_retrieve          = None
+_get_collection    = None
+_format_context    = None
+_build_llm_messages  = None
+_stream_with_fallback = None
+_group_chunks_to_docs = None
+_is_initialized    = False
 _init_error: Optional[str] = None
 
 
 def _initialize():
-    global _retrieve, _get_collection, _is_initialized, _init_error
+    global _retrieve, _get_collection, _format_context, _build_llm_messages
+    global _stream_with_fallback, _group_chunks_to_docs, _is_initialized, _init_error
     if _is_initialized:
         return
     try:
         import app as _app
-        _retrieve = _app.retrieve
-        _get_collection = _app.get_collection
+        _retrieve             = _app.retrieve
+        _get_collection       = _app.get_collection
+        _format_context       = _app.format_context
+        _build_llm_messages   = _app._build_llm_messages
+        _stream_with_fallback = _app.stream_with_fallback
+        _group_chunks_to_docs = _app.group_chunks_to_docs
         _is_initialized = True
     except Exception as e:
         _init_error = str(e)
@@ -53,14 +63,10 @@ class InspectRequest(BaseModel):
     trace_format: Optional[str] = "rich"  # "rich" (default) oder "full"
 
 
-class InspectResponse(BaseModel):
+class FullRunRequest(BaseModel):
     query: str
-    rewrite: dict
-    pipeline_stages: list[dict]  # Eine Zeile pro Stage
-    chunks: list[dict]           # Alle Chunks mit Trace-Info
-    tracked_chunks: list[str]    # IDs der gesuchten Chunks (für Röttler etc.)
-    final_results: list[dict]    # Die ausgewählten Chunks (final_rank > 0)
-    duration_ms: float
+    chunk_search: Optional[str] = None
+    trace_format: Optional[str] = "full"
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -81,34 +87,138 @@ async def health():
     }
 
 
-@app.post("/api/inspect")
-async def inspect_pipeline(req: InspectRequest):
-    _initialize()
-    if _init_error:
-        raise HTTPException(500, f"Pipeline-Init fehlgeschlagen: {_init_error}")
-    if not _retrieve:
-        raise HTTPException(500, "retrieve() nicht verfügbar")
+# ═══════════════════════════════════════════════════════════════════════
+# GROUNDING HELPERS (Paket 3)
+# ═══════════════════════════════════════════════════════════════════════
 
+_QUELLE_PAT = _re.compile(r'\[Quellen?\s+([\d][,\d\s]*)\]', _re.IGNORECASE)
+
+
+def _approx_tokens(text: str) -> int:
+    """Rough token estimate: words × 1.33 (German words avg 1.33 tok)."""
+    return int(len(text.split()) * 1.33)
+
+
+def _compute_grounding(answer: str, chunks: list[dict]) -> dict:
+    """Parse [Quelle X] citations from LLM answer, check against provided context.
+
+    Returns grounding summary dict.
+    """
+    if not _group_chunks_to_docs:
+        return {"grounding_score": 1.0, "cited_in_context": [], "cited_not_in_context": [], "cited_nums": [], "total_docs": 0}
+
+    docs = _group_chunks_to_docs(chunks)
+    # Map 1-based doc index → list of chunk IDs in that doc
+    doc_chunk_ids: dict[str, list[str]] = {}
+    for i, doc in enumerate(docs, 1):
+        doc_chunk_ids[str(i)] = [
+            c.get("id") or c.get("meta", {}).get("chunk_id", "")
+            for c in doc["chunks"]
+        ]
+
+    # Extract all cited Quelle numbers from answer
+    cited_nums: set[str] = set()
+    for m in _QUELLE_PAT.finditer(answer):
+        for num in _re.findall(r'\d+', m.group(0)):
+            cited_nums.add(num)
+
+    cited_in_context: list[str] = []
+    cited_not_in_context: list[str] = []
+
+    for num in sorted(cited_nums, key=lambda x: int(x)):
+        if num in doc_chunk_ids:
+            cited_in_context.extend(doc_chunk_ids[num])
+        else:
+            cited_not_in_context.append(num)
+
+    total = len(cited_nums)
+    in_ctx = len([n for n in cited_nums if n in doc_chunk_ids])
+
+    return {
+        "cited_nums":            sorted(cited_nums, key=lambda x: int(x)),
+        "cited_in_context":      cited_in_context,
+        "cited_not_in_context":  cited_not_in_context,
+        "grounding_score":       in_ctx / total if total > 0 else 1.0,
+        "total_docs":            len(docs),
+    }
+
+
+def _run_llm_with_trace(query: str, chunks: list[dict]) -> dict:
+    """Run LLM synchronously (blocking). Returns answer + grounding trace."""
     t0 = time.time()
+
+    if not _format_context or not _build_llm_messages or not _stream_with_fallback:
+        return {
+            "answer": "LLM-Funktionen nicht initialisiert.",
+            "provider": "n/a",
+            "approx_tokens": 0,
+            "duration_ms": 0,
+            "error": "not_initialized",
+            "grounding": {"grounding_score": 0.0, "cited_in_context": [], "cited_not_in_context": [], "cited_nums": [], "total_docs": 0},
+        }
+
     try:
-        results, rich_trace = _retrieve(
-            req.query,
-            return_trace=True,
-            trace_format=req.trace_format or "rich",
-        )
+        context  = _format_context(chunks)
+        messages = _build_llm_messages(query, context, [])
     except Exception as e:
-        raise HTTPException(500, f"retrieve() Fehler: {e}")
+        return {
+            "answer": f"Kontext-Aufbau fehlgeschlagen: {e}",
+            "provider": "n/a",
+            "approx_tokens": 0,
+            "duration_ms": round((time.time() - t0) * 1000, 1),
+            "error": str(e),
+            "grounding": {"grounding_score": 0.0, "cited_in_context": [], "cited_not_in_context": [], "cited_nums": [], "total_docs": 0},
+        }
 
-    duration_ms = (time.time() - t0) * 1000
+    tokens: list[str] = []
+    provider_used = "unknown"
+    error_msg: Optional[str] = None
 
-    chunks_trace: dict    = rich_trace.get("chunks", {})
-    rewrite_info: dict    = rich_trace.get("rewrite", {})
-    tenor_enforce: dict   = rich_trace.get("tenor_enforce", {})
+    try:
+        for token, provider in _stream_with_fallback(messages):
+            tokens.append(token)
+            provider_used = provider
+    except Exception as e:
+        error_msg = str(e)
+
+    answer     = "".join(tokens)
+    duration_ms = round((time.time() - t0) * 1000, 1)
+
+    grounding: dict = {
+        "grounding_score": 0.0, "cited_in_context": [], "cited_not_in_context": [],
+        "cited_nums": [], "total_docs": 0,
+    }
+    if answer and not error_msg:
+        try:
+            grounding = _compute_grounding(answer, chunks)
+        except Exception:
+            pass
+
+    return {
+        "answer":         answer,
+        "provider":       provider_used,
+        "approx_tokens":  _approx_tokens(answer),
+        "duration_ms":    duration_ms,
+        "error":          error_msg,
+        "grounding":      grounding,
+    }
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# SHARED RETRIEVE RESULT PROCESSOR
+# ═══════════════════════════════════════════════════════════════════════
+
+def _process_retrieve_result(query: str, chunk_search: Optional[str],
+                              results: list, rich_trace: dict,
+                              duration_ms: float) -> dict:
+    """Converts retrieve() output into inspect API response dict."""
+    chunks_trace: dict   = rich_trace.get("chunks", {})
+    rewrite_info: dict   = rich_trace.get("rewrite", {})
+    tenor_enforce: dict  = rich_trace.get("tenor_enforce", {})
 
     # ── Alle Chunks als flache Liste aufbauen ──
     all_chunks = []
     for cid, info in chunks_trace.items():
-        # Metadaten aus den Ergebnissen holen, falls vorhanden
         meta = {}
         doc_preview = ""
         for r in results:
@@ -137,14 +247,12 @@ async def inspect_pipeline(req: InspectRequest):
         })
 
     # ── Chunks aus results die nicht im _trace sind nachladen ──
-    # Betrifft: urteilsname-injizierte Chunks, tenor-enforce-Chunks, etc.
-    # Diese gehen direkt in selected ein und bekommen kein _trace-Eintrag.
     injected_ids = {e["chunk_id"] for e in tenor_enforce.get("injected", [])}
     trace_ids    = {c["id"] for c in all_chunks}
     for i, res in enumerate(results, start=1):
         rid = res.get("id") or res.get("meta", {}).get("chunk_id", "")
         if not rid or rid in trace_ids:
-            continue  # already in trace
+            continue
         meta = res.get("meta", {})
         src  = res.get("source", "urteilsname") or "injected"
         is_tenor_chunk = rid in injected_ids
@@ -168,7 +276,7 @@ async def inspect_pipeline(req: InspectRequest):
         })
         trace_ids.add(rid)
 
-    # Final-Rank für trace-Chunks die noch keinen Rank haben (z.B. EG-Enrichment)
+    # Final-Rank für trace-Chunks die noch keinen Rank haben
     for i, res in enumerate(results, start=1):
         rid = res.get("id") or res.get("meta", {}).get("chunk_id", "")
         for c in all_chunks:
@@ -176,13 +284,12 @@ async def inspect_pipeline(req: InspectRequest):
                 c["final_rank"] = i
                 break
 
-    # ── Pipeline-Stages berechnen ──
     stages = _compute_stages(all_chunks, rewrite_info, tenor_enforce)
 
-    # ── Chunk-Suche (für Röttler-Diagnose) ──
+    # ── Chunk-Suche ──
     tracked_ids = []
-    if req.chunk_search:
-        search_lower = req.chunk_search.lower()
+    if chunk_search:
+        search_lower = chunk_search.lower()
         for c in all_chunks:
             cid_lower = c["id"].lower()
             az_lower = c["aktenzeichen"].lower()
@@ -192,23 +299,85 @@ async def inspect_pipeline(req: InspectRequest):
                     or search_lower in c["titel"].lower()):
                 tracked_ids.append(c["id"])
 
-    # ── Final Results ──
     final = sorted(
         [c for c in all_chunks if c["final_rank"] > 0],
         key=lambda x: x["final_rank"]
     )
 
     return {
-        "query": req.query,
-        "rewrite": rewrite_info,
+        "query":           query,
+        "rewrite":         rewrite_info,
         "pipeline_stages": stages,
-        "chunks": all_chunks,
-        "tracked_chunks": tracked_ids,
-        "final_results": final,
-        "tenor_enforce": tenor_enforce,
-        "duration_ms": round(duration_ms, 1),
-        "full_trace": rich_trace.get("full"),
+        "chunks":          all_chunks,
+        "tracked_chunks":  tracked_ids,
+        "final_results":   final,
+        "tenor_enforce":   tenor_enforce,
+        "duration_ms":     round(duration_ms, 1),
+        "full_trace":      rich_trace.get("full"),
     }
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# ENDPOINTS
+# ═══════════════════════════════════════════════════════════════════════
+
+@app.post("/api/inspect")
+async def inspect_pipeline(req: InspectRequest):
+    _initialize()
+    if _init_error:
+        raise HTTPException(500, f"Pipeline-Init fehlgeschlagen: {_init_error}")
+    if not _retrieve:
+        raise HTTPException(500, "retrieve() nicht verfügbar")
+
+    t0 = time.time()
+    try:
+        results, rich_trace = _retrieve(
+            req.query,
+            return_trace=True,
+            trace_format=req.trace_format or "rich",
+        )
+    except Exception as e:
+        raise HTTPException(500, f"retrieve() Fehler: {e}")
+
+    duration_ms = (time.time() - t0) * 1000
+    return _process_retrieve_result(req.query, req.chunk_search, results, rich_trace, duration_ms)
+
+
+@app.post("/api/full")
+async def full_run(req: FullRunRequest):
+    """Full pipeline: Retrieval + LLM generation with grounding trace."""
+    _initialize()
+    if _init_error:
+        raise HTTPException(500, f"Pipeline-Init fehlgeschlagen: {_init_error}")
+    if not _retrieve:
+        raise HTTPException(500, "retrieve() nicht verfügbar")
+
+    t0 = time.time()
+
+    # Step 1: Retrieval
+    try:
+        results, rich_trace = _retrieve(
+            req.query,
+            return_trace=True,
+            trace_format=req.trace_format or "full",
+        )
+    except Exception as e:
+        raise HTTPException(500, f"retrieve() Fehler: {e}")
+
+    retrieval_ms = (time.time() - t0) * 1000
+
+    # Step 2: LLM generation (sync, run in thread to not block event loop)
+    import asyncio
+    loop = asyncio.get_event_loop()
+    llm_result = await loop.run_in_executor(None, _run_llm_with_trace, req.query, results)
+
+    total_ms = (time.time() - t0) * 1000
+
+    response = _process_retrieve_result(req.query, req.chunk_search, results, rich_trace, retrieval_ms)
+    response["llm"]          = llm_result
+    response["duration_ms"]  = round(total_ms, 1)
+    response["retrieval_ms"] = round(retrieval_ms, 1)
+    return response
 
 
 @app.get("/api/search-chunk")
@@ -220,7 +389,6 @@ async def search_chunk_in_db(q: str, limit: int = 10):
 
     try:
         col = _get_collection()
-        # Suche per get mit where-Filter auf Aktenzeichen
         r = col.get(
             where={"aktenzeichen": {"$contains": q}} if len(q) > 3 else None,
             include=["metadatas", "documents"],
@@ -235,10 +403,8 @@ async def search_chunk_in_db(q: str, limit: int = 10):
             })
         return {"query": q, "results": items}
     except Exception as e:
-        # Fallback: kein where-Filter
         try:
             col = _get_collection()
-            # Direkte ID-Suche
             try:
                 r = col.get(ids=[q], include=["metadatas", "documents"])
                 items = [{"id": r["ids"][0], "meta": r["metadatas"][0], "doc_preview": (r["documents"][0] or "")[:200]}]
@@ -268,7 +434,6 @@ def _compute_stages(chunks: list[dict], rewrite_info: dict, tenor_enforce: dict 
                           if c["ce_score_raw"] is not None and c["filter_reason"] is None])
     n_final = len([c for c in chunks if c["final_rank"] > 0])
 
-    # Filter-Breakdown
     by_filter: dict[str, int] = {}
     for c in chunks:
         fr = c.get("filter_reason")
