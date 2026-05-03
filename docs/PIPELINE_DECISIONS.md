@@ -1,661 +1,681 @@
 # OpenLex Pipeline Decisions
 
 **Erstellt:** 2026-05-01  
+**Zuletzt aktualisiert:** 2026-05-03  
 **Auditor:** Pipeline-Audit via SSH + Trace-Run  
-**Trace-Query:** „Wie hat der EuGH zu IP-Adressen entschieden?" (chunk_search: C-507/23)  
-**Trace-Datei:** `/tmp/audit_trace.json`  
-**Gesamtdauer Trace:** 9591 ms  
+**Trace-Query:** „Was ist ein personenbezogenes Datum nach Art. 4 DSGVO?"  
+**Trace-Datei:** `/tmp/doku_reference.json`  
+**Branch:** `feature/inspector-trace-completion`  
+**Paket-Stand:** Paket 1 + Patch 1.1 + Patch 1.1b  
 
 ---
 
-## Stage 1: Query-Eingang & Intent-Analyse / Klärungsfrage
+## Überblick: 18 Stages in `trace_format="full"`
 
-**Was passiert hier (Funktional):**  
-Die User-Query wird entgegengenommen. Eine explizite Intent-Analyse oder Klärungsfrage-Logik existiert **nicht** als eigenständige Stage im Code. Der System-Prompt enthält die Anweisung „Wenn die Frage zu unspezifisch ist, stelle maximal 3 gezielte Rückfragen" — das delegiert die Klärungsfrage an das LLM, nicht an die Retrieval-Pipeline. Die Query wird direkt an retrieve() übergeben.
+Der Trace liefert 18 explizite Stages im `full_trace.stages`-Array. Jede Stage hat:
+- `id`, `label`, `kind` (`injector` / `filter` / `transformer`)
+- `active` (bool) — ob die Stage in diesem Aufruf aktiv war
+- `count_in`, `count_out`, `count_injected` oder `count_filtered` (wo zutreffend)
+- `decisions` — Array mit chunk-level Entscheidungen (nur bei `trace_format="full"`)
+- `flow_boundary` (nur Stage 1: `embedding`) — Query-Level-Stage, nicht Teil des Chunk-Flusses
+- `flow_isolated` (nur Stage 13: `pflicht_urteilsname_injection`) — paralleler Fork, kein Continuity-Check
 
-**Quell-Code-Stelle:**  
-app.py:2460–2464 (`chat_stream`), app.py:781–783 (`retrieve` Signatur), app.py:142–174 (SYSTEM_PROMPT)
-
-**Eingabe:**  
-Roher User-Text (str), optionale History (list[list[str]])
-
-**Ausgabe:**  
-Query-String (unverändert, bis Rewrite greift), history wird für Folgefragen-Erkennung genutzt
-
-**Entscheidungen pro Chunk:**  
-Keine — diese Stage erzeugt noch keine Chunks.
-
-**Heute im Trace sichtbar (return_trace=True, trace_format=rich):**  
-`query: "Wie hat der EuGH zu IP-Adressen entschieden?"` — die rohe Query ist im JSON-Root sichtbar.
-
-**Heute im Trace NICHT sichtbar:**  
-- Keine Intent-Kategorie (z.B. „Rechtsprechungsfrage", „Definitionsfrage")  
-- Keine Klärungsfrage-Entscheidung (wird das LLM triggern oder nicht?)  
-- Kein History-Kontext-Merge-Flag (ob search_query = question oder = history+question)
-
-**Konsequenz für den Inspector:**  
-NEIN — Intent-Analyse und Klärungsfrage-Weg sind nicht traceable. Fehlend: `intent_type`, `clarification_needed`, `search_query_augmented`
+**Consistency-Check** (`full_trace.consistency`):  
+`_validate_full_trace()` (app.py:1885) prüft `count_out[n] == count_in[n+1]` zwischen allen Stages, überspringt dabei `flow_boundary`- und `flow_isolated`-Stages. Bei `valid=true` und leeren `issues`/`warnings` ist der Trace konsistent.
 
 ---
 
-## Stage 2: Query-Rewrite (deaktiviert)
+## Stage 1: embedding
 
-**Was passiert hier (Funktional):**  
-Wenn `OPENLEX_REWRITE_ENABLED=true`, wird die Query via Mistral Medium (`mistral-medium-latest`) in juristische Fachsprache umgeschrieben. Nutzt SQLite-Cache (`/opt/openlex-mvp/cache/rewrite_cache.sqlite`). Drei Guards verhindern Halluzinationen: Aktenzeichen-Guard (C-/T-Muster), Gerichts-Guard (EuGH etc.), Eigenname-Guard. Bei ungültigem Rewrite Fallback auf Originalquery. Temperature=0.0, max_tokens=80.
+**Was passiert hier:**  
+`model.encode([search_query])` erzeugt einen Dense-Vektor mit SentenceTransformer `mixedbread-ai/deepset-mxbai-embed-de-large-v1`. Das resultierende Embedding wird für alle nachgelagerten ChromaDB-Abfragen (Semantic, Norm-Lookup, Keyword) wiederverwendet. Das Modell läuft lokal, kein API-Call.
 
-**Quell-Code-Stelle:**  
-app.py:795–820 (Rewrite-Block in `retrieve`), query_rewriter.py:1–309
+**Code-Stelle:** app.py:855–871
 
-**Eingabe:**  
-Original-Query (str)
+**kind:** `transformer` | `flow_boundary=True` (Query-Level-Stage, zählt nicht in Chunk-Continuity)
 
-**Ausgabe:**  
-RewriteResult(original, rewritten, from_cache, duration_ms, error)
+**count-Felder:** `count_in=1` (die Query), `count_out=1`
 
-**Entscheidungen pro Chunk:**  
-Keine — beeinflusst aber alle nachfolgenden Embedding-Berechnungen.
+**decisions:** Keine (leeres Array) — das Embedding-Ergebnis wird nicht als Chunk-Entscheidung gelogged.
 
-**Heute im Trace sichtbar:**  
+**Live-Trace-Werte:**
 ```json
-"rewrite": {
-  "used": false, "original": "...", "rewritten": "...",
-  "from_cache": false, "error": null, "duration_ms": 0.0
+{
+  "id": "embedding",
+  "flow_boundary": true,
+  "label": "Query Embedding",
+  "active": true,
+  "duration_ms": 127.8,
+  "model": "mixedbread-ai/deepset-mxbai-embed-de-large-v1",
+  "input_text": "Was ist ein personenbezogenes Datum nach Art. 4 DSGVO?",
+  "kind": "transformer",
+  "count_in": 1,
+  "count_out": 1,
+  "decisions": []
 }
 ```
-Vollständig dokumentiert, da `used=false` → kein echter Aufruf.
 
-**Heute im Trace NICHT sichtbar:**  
-- Bei `used=true`: kein `cache_hit_key`, keine `guard_triggered` Flags, kein Mistral-Latenz-Aufschlüsselung
-
-**Konsequenz für den Inspector:**  
-NEIN für aktiven Fall — fehlend wenn aktiv: `guard_triggered` (welcher Guard hat ausgelöst), `cache_key`
+**Verbleibende Lücken:**  
+- Vektor-Dimension nicht im Trace  
+- History-Augmentation-Flag fehlt (ob `search_query` mit History erweitert wurde)
 
 ---
 
-## Stage 3: Norm-Validator (Regex / QU-Klassifikation)
+## Stage 2: semantic
 
-**Was passiert hier (Funktional):**  
-Zwei separate Extraktionen laufen **vor** dem Embedding:  
-1. `extract_norms(question)` — Regex `NORM_RE` extrahiert Normreferenzen (Art. X DSGVO, § X BDSG etc.)  
-2. `extract_aktenzeichen(question)` — Regex `AZ_RE` extrahiert EuGH/BGH-Aktenzeichen  
-Diese werden für Norm-Lookup (Stage 5b) und Keyword-Suche (Stage 7) genutzt. Die Validierung der **Antwort** (nach LLM) ist davon getrennt (validate_response).
+**Was passiert hier:**  
+`col.query(query_embeddings, n_results=40)` — ein ChromaDB-Call über alle Source-Types. Pro Chunk wird `adjusted_distance = distance × SEGMENT_BOOST[segment|source_type]` berechnet (Methodenwissen: ×0.70, leitsatz: ×0.85, gesetz_granular: ×0.92, tenor/wuerdigung: ×0.92–0.95, tatbestand/sachverhalt: ×1.05). Ergebnis: Chunks mit `source="semantic"`.
 
-**Quell-Code-Stelle:**  
-app.py:305–312 (`extract_norms`, `extract_aktenzeichen`), app.py:870 (Norm-Lookup Schleife), app.py:180–201 (NORM_RE, AZ_RE)
+**Code-Stelle:** app.py:919–933
 
-**Eingabe:**  
-Query-String
+**kind:** `injector` (fügt Chunks in den leeren Pool ein)
 
-**Ausgabe:**  
-list[str] Normen (max 5 für Lookup), list[str] Aktenzeichen (für Keyword-Boost)
+**count-Felder:** `count_in=0`, `count_injected=N`, `count_out=N`
 
-**Entscheidungen pro Chunk:**  
-Keine direkt — Ergebnis bestimmt welche Norm-Lookup-Queries abgesetzt werden.
+**decisions in `trace_format="full"`:** Ja — ein Eintrag pro injiziertem Chunk.
 
-**Heute im Trace sichtbar:**  
-Nur indirekt: Chunks mit `source=norm_lookup` zeigen ob Norm-Extraktion etwas gefunden hat. Im Trace dieser Query: `norm_lookup: count_out=None` (weil Per-Source aktiv, intern).
+**Decisions-Schema:**
+```json
+{
+  "chunk_id": "mw_art4_index",
+  "raw_distance": 0.1438,
+  "segment_boost_factor": 0.7,
+  "segment_boost_delta": -0.0431,
+  "boosted_distance": 0.1006
+}
+```
 
-**Heute im Trace NICHT sichtbar:**  
-- Welche Normen/AZ extrahiert wurden  
-- Anzahl der extrahierten Normen  
-- Welche Synonyme aus `_SYNONYM_MAP` expandiert wurden
+**Live-Trace-Werte:** `count_in=0`, `count_out=39`, `count_injected=39`, `dec=39`
 
-**Konsequenz für den Inspector:**  
-NEIN — fehlend: `extracted_norms: ["..."]`, `extracted_az: ["..."]`, `synonym_expansion: ["..."]`
+**Verbleibende Lücken:** Keine wesentlichen — `raw_distance`, `segment_boost_factor`, `boosted_distance` sind vollständig dokumentiert.
 
 ---
 
-## Stage 4: Norm-Hypothesizer
+## Stage 3: norm_lookup_injection
 
-**Was passiert hier (Funktional):**  
-`_expand_qu_norms(question)` und `_qu_get_chroma_ids(norms)` aus `query_understanding.py` führen eine deterministischen Norm-zu-Chunk-ID-Mapping durch (kein Embedding). Gibt bekannte ChromaDB-IDs für Normen zurück. Wird als „QU Injection" (Stage 8) in die Pipeline eingespeist. Derzeit in diesem Trace **nicht aktiv** (qu_injection count=0).
+**Was passiert hier:**  
+Für bis zu 5 Normen, die `extract_norms(question)` aus der Query extrahiert (Regex `NORM_RE`): je ein ChromaDB-Query mit `where={"source_type": {"$in": ["gesetz_granular", "gesetz"]}}`, n_results=5. `adjusted_distance = dist × 0.85` (10% Boost). Bei aktiver Query — z.B. „Art. 4 DSGVO" — werden passende Gesetzs-Chunks injiziert. Bei keiner erkannten Norm ist `active=false` und `count_injected=0`.
 
-**Quell-Code-Stelle:**  
-app.py:39–48 (Import-Versuch), app.py:899–922 (QU-Injection Block)
+**Code-Stelle:** app.py:935–964
 
-**Eingabe:**  
-Query-String → norm-Liste → ChromaDB-IDs
+**kind:** `injector`
 
-**Ausgabe:**  
-list[str] Chunk-IDs (direkt per `col.get()` ladbar)
+**count-Felder:** `count_in` (Pool-Größe nach Semantic), `count_injected`, `count_out`
 
-**Entscheidungen pro Chunk:**  
-Chunk erhält `adjusted_distance=0.15`, `source="qu_injection"` — qualifiziert sich für Top-40.
+**decisions in `trace_format="full"`:** Ja — ein Eintrag pro injiziertem Chunk.
 
-**Heute im Trace sichtbar:**  
-`qu_injection: active=false, detail="intern"` in pipeline_stages.
+**Decisions-Schema:**
+```json
+{
+  "chunk_id": "gran_BDSG_§_14_Abs.1_S.4",
+  "action": "injected",
+  "norm": "§ 14 Abs. 1 S. 4 BDSG"
+}
+```
 
-**Heute im Trace NICHT sichtbar:**  
-- Welche Normen `_expand_qu_norms` zurückgab  
-- Warum QU nicht aktiv ist (module fehlt? keine Normen? leere ID-Liste?)  
-- Mapping: Norm → Chunk-ID
+**Live-Trace-Werte:** `count_in=39`, `count_out=44`, `count_injected=5`, `dec=5`
 
-**Konsequenz für den Inspector:**  
-NEIN — fehlend: `qu_norms_expanded`, `qu_ids_injected`, `qu_module_available`
-
----
-
-## Stage 5: Query-Embedding
-
-**Was passiert hier (Funktional):**  
-`model.encode([search_query])` erzeugt einen Dense-Vektor via SentenceTransformer `mixedbread-ai/deepset-mxbai-embed-de-large-v1`. Das Embedding wird für die Semantic-Suche (40 Ergebnisse) und alle Keyword-Suchen (`where_document` + `query_embeddings`) wiederverwendet. Bei Per-Source: das vorberechnete Embedding wird gecacht und als lambda an `per_source_query()` übergeben.
-
-**Quell-Code-Stelle:**  
-app.py:822–833 (Embedding-Berechnung), app.py:1092–1094 (Per-Source Embedding-Cache), per_source_retrieval.py:107–114
-
-**Eingabe:**  
-search_query (str, ggf. mit History-Augmentation)
-
-**Ausgabe:**  
-list[list[float]] — 1D-Liste mit Vektordimension des Modells
-
-**Entscheidungen pro Chunk:**  
-Kein direkter Effekt — Embedding bestimmt Ähnlichkeitsranking in ChromaDB.
-
-**Heute im Trace sichtbar:**  
-Nicht sichtbar. Embedding wird nirgends im Trace ausgegeben.
-
-**Heute im Trace NICHT sichtbar:**  
-- Embedding-Berechnung-Dauer (ms)  
-- Modell-Name  
-- Vektor-Dimension  
-- History-Augmentation-Flag (wurde search_query erweitert?)
-
-**Konsequenz für den Inspector:**  
-NEIN — fehlend: `embedding_model`, `embedding_duration_ms`, `search_query_used`, `history_augmented`
+**Verbleibende Lücken:**  
+- Welche Normen `extract_norms` aus der Query extrahiert hat, steht nicht separat im Trace  
+- Synonym-Expansion (`_SYNONYM_MAP`) nicht sichtbar
 
 ---
 
-## Stage 6: Semantic Top-K aus ChromaDB
+## Stage 4: qu_injection
 
-**Was passiert hier (Funktional):**  
-`col.query(query_embeddings, n_results=40)` — ein einziger ChromaDB-Call über alle Source-Types. Liefert 40 Chunks sortiert nach Kosinus-Distanz. Anschließend wird pro Chunk `adjusted_distance = distance * SEGMENT_BOOST[segment/source_type]` berechnet. Methodenwissen: ×0.70, leitsatz: ×0.85, gesetz_granular: ×0.92, tenor/wuerdigung: ×0.92–0.95, tatbestand/sachverhalt: ×1.05.
+**Was passiert hier:**  
+`_expand_qu_norms(question)` + `_qu_get_chroma_ids(norms)` — deterministisches Norm-zu-Chunk-ID-Mapping ohne Embedding-Roundtrip. Direkte `col.get(ids=[...])`. Chunks werden mit `adjusted_distance=0.15` und `source="qu_injection"` injiziert. Läuft immer, aber injiziert nur wenn das QU-Modul verfügbar ist und Normen gefunden werden. In diesem Trace: kein Treffer, `count_injected=0`.
 
-**Quell-Code-Stelle:**  
-app.py:835–867 (Semantic-Suche Block), app.py:215–225 (SEGMENT_BOOST Tabelle)
+**Code-Stelle:** app.py:977–1018
 
-**Eingabe:**  
-query_embeddings (40-Call), n_results=40
+**kind:** `injector`
 
-**Ausgabe:**  
-list[dict] mit text, meta, distance, adjusted_distance, source="semantic"
+**count-Felder:** `count_in`, `count_injected`, `count_out`
 
-**Entscheidungen pro Chunk:**  
-`adjusted_distance = distance × SEGMENT_BOOST` — bestimmt Position im Pre-CE-Sort.
+**decisions in `trace_format="full"`:** Ja (wenn injected) — Schema analog norm_lookup_injection mit `source="qu_injection"`.
 
-**Heute im Trace sichtbar:**  
-Nur indirekt wenn Per-Source **deaktiviert**. Mit Per-Source aktiv: `semantic: count_out=None, detail="ChromaDB top-40 → intern von Per-Source genutzt"`.
+**Live-Trace-Werte:** `count_in=44`, `count_out=44`, `count_injected=0`, `dec=0`
 
-**Heute im Trace NICHT sichtbar:**  
-- Rohe distance-Werte vor Boost  
-- adjusted_distance nach Boost  
-- Welcher SEGMENT_BOOST angewendet wurde  
-- Anzahl tatsächlich zurückgegebener Chunks (n_results vs tatsächlich)
+```json
+{
+  "id": "qu_injection",
+  "label": "QU-Injection",
+  "kind": "injector",
+  "active": true,
+  "count_in": 44,
+  "count_injected": 0,
+  "count_out": 44,
+  "decisions": []
+}
+```
 
-**Konsequenz für den Inspector:**  
-NEIN (bei Per-Source aktiv) — fehlend: `raw_distances`, `segment_boost_applied`, `adjusted_distances`
-
----
-
-## Stage 7: Per-Source-Retrieval mit Type-Budget
-
-**Was passiert hier (Funktional):**  
-`OPENLEX_PER_SOURCE_BUDGET_ACTIVE=true` → ersetzt den Single-Call durch 5 separate ChromaDB-Calls (je source_type). Budget: gesetz_granular max 4, urteil_segmentiert max 2, leitlinie max 2, methodenwissen max 1, erwaegungsgrund max 1. Alle Chunks werden nach Distance sortiert, dann Budget angewendet. Max 10 Chunks total. Das Single-Call-Embedding wird gecacht und wiederverwendet.
-
-Shadow-Modus (`OPENLEX_PER_SOURCE_RETRIEVAL_ENABLED=true`, Budget inaktiv): läuft parallel, schreibt Telemetrie via `per_source_telemetry.log_per_source()`, Single-Call-Ergebnis bleibt aktiv.
-
-**Quell-Code-Stelle:**  
-app.py:1078–1175 (Per-Source Block), per_source_retrieval.py:82–219
-
-**Eingabe:**  
-query_text, embed_fn (gecachtes Embedding), DEFAULT_TOP_K={gesetz_granular:6, urteil_segmentiert:6, leitlinie:6, erwaegungsgrund:4, methodenwissen:4}
-
-**Ausgabe:**  
-list[dict] mit chunk_id, distance, source_type, metadata, document (max 10 nach Budget)
-
-**Entscheidungen pro Chunk:**  
-Budget `(min, max)` pro Typ — Chunk wird akzeptiert wenn `counts[type] < max`. Unbekannte Types immer genommen.
-
-**Heute im Trace sichtbar:**  
-`per_source: active=true, count_out=10, detail="10 Chunks nach Typ-Budget (ersetzt Single-Call)"`. Pro Chunk: `sources=["per_source"]`.
-
-**Heute im Trace NICHT sichtbar:**  
-- Wie viele Chunks **jeder Typ** vor Budget-Anwendung hatte  
-- Welches Budget pro Typ angewendet wurde  
-- Overlap-Wert zwischen Single-Call und Per-Source (wird nur in Telemetrie geloggt)  
-- Per-Source-Dauer (ms)  
-- Welche Chunks durch Budget abgeschnitten wurden
-
-**Konsequenz für den Inspector:**  
-TEILWEISE — fehlend: `per_source_budget_counts`, `per_source_overlap`, `per_source_duration_ms`
+**Verbleibende Lücken:**  
+- Warum keine Injection stattfand (kein Modul? keine Normen? leere ID-Liste?) nicht explizit geloggt  
+- `qu_module_available` Flag fehlt
 
 ---
 
-## Stage 8: QU-Injection
+## Stage 5: keyword_injection
 
-**Was passiert hier (Funktional):**  
-`query_understanding.expand_query_to_norms(question)` → Norm-Namen → `get_chroma_ids_for_norms(norms)` → direkte `col.get(ids=[...])`. Kein Embedding-Roundtrip. Chunks werden mit `adjusted_distance=0.15` und `source="qu_injection"` in den Pool eingespeist. Soft-Injection: Cross-Encoder entscheidet final. Abhängig davon ob `query_understanding` importierbar ist.
+**Was passiert hier:**  
+Für jedes relevante Wort aus der Query (min. 5 Zeichen, inkl. Umlaut-Varianten und Synonym-Expansion via `_SYNONYM_MAP`, max 10 Keywords): `col.query(..., where_document={"$contains": word})`, n_results=5. **Bereits vorhandene** Chunks: `adjusted_distance *= 0.5` (starker Boost), `source="hybrid"`. Neue Chunks: `adjusted_distance=0.15×SEGMENT_BOOST`, `source="keyword"`. `count_boosted_existing` zählt Hybrid-Boosts separat.
 
-**Quell-Code-Stelle:**  
-app.py:899–922 (QU-Injection Block), app.py:39–48 (Import-Block)
+**Code-Stelle:** app.py:1115–1162
 
-**Eingabe:**  
-Query-String → Norm-Mapping → ChromaDB-IDs
+**kind:** `injector`
 
-**Ausgabe:**  
-Chunks mit source="qu_injection", adjusted_distance=0.15
+**count-Felder:** `count_in`, `count_injected` (nur neue), `count_out`, `count_boosted_existing`
 
-**Entscheidungen pro Chunk:**  
-Feste adjusted_distance=0.15 → landet in Top-40 vor CE.
+**decisions in `trace_format="full"`:** Ja — Einträge für alle neu injizierten und alle hybrid-geboosteten Chunks.
 
-**Heute im Trace sichtbar:**  
-`qu_injection: active=false, detail="intern"` — keine QU-Chunks in diesem Trace.
+**Decisions-Schema (injected):**
+```json
+{
+  "chunk_id": "beh_Juni_2020_-_LfDI_BW_-_Orientierungshilfe_171",
+  "action": "injected",
+  "source": "keyword"
+}
+```
 
-**Heute im Trace NICHT sichtbar:**  
-- Ob `query_understanding` Modul verfügbar ist  
-- Welche Normen erkannt wurden  
-- Warum keine Injection stattfand (kein Modul? Keine Normen? Leere ID-Liste?)
+**Live-Trace-Werte:** `count_in=44`, `count_out=45`, `count_injected=1`, `dec=9` (9 Entscheidungen: 1 injected + 8 boosted)
 
-**Konsequenz für den Inspector:**  
-NEIN — fehlend: `qu_module_available`, `qu_norms_found`, `qu_ids_count`
+**Verbleibende Lücken:** Welche Keywords tatsächlich Treffer hatten, nicht einzeln gelistet.
 
 ---
 
-## Stage 9: Norm-Lookup-Injection + Urteilsname-Pfad
+## Stage 6: bm25_rrf
 
-**Was passiert hier (Funktional):**  
-**9a) Norm-Lookup:** Für bis zu 5 extrahierte Normen aus der Query: separater `col.query()` mit `where={"source_type": {"$in": ["gesetz_granular", "gesetz"]}}`, n_results=5. Ergebnisse mit `adjusted_distance = dist * 0.85` (10% Boost gegenüber raw).
+**Was passiert hier:**  
+BM25-Suche mit Snowball-Stemmer + RRF-Fusion (Reciprocal Rank Fusion, k=60) über semantic, QU und BM25-Rankings. Fehlende BM25-Chunks werden via `col.get()` nachgeladen (`source="rrf_injected"`, distance=0.20). Nur aktiv wenn `OPENLEX_BM25_ENABLED=true` und BM25-Modul importierbar. In diesem Trace: **inaktiv** (`active=false`).
 
-**9b) Urteilsname-Pfad:** `_find_urteil_by_name(question, col)` — durchsucht `urteilsnamen.json` (lazy geladen). Wenn ein Kurzname (z.B. „Breyer", „Schrems II") in der Query gefunden wird: `col.get(where={"aktenzeichen": az})` lädt bis zu 30 Chunks, sortiert nach Segment-Priorität (tenor→wuerdigung→sachverhalt), max 3 Chunks. Source: `"urteil_name"`, ce_score=10.0 (Pflicht).
+**Code-Stelle:** app.py:1201–1230
 
-**Quell-Code-Stelle:**  
-app.py:869–897 (Norm-Lookup), app.py:717–764 (`_find_urteil_by_name`), app.py:1310–1318 (Urteilsname-Merge in Pflicht-Slots)
+**kind:** `injector`
 
-**Eingabe:**  
-Extrahierte Normen (list[str]), Query-String vs. urteilsnamen.json
+**count-Felder:** `count_in`, `count_injected`, `count_out`
 
-**Ausgabe:**  
-Norm-Lookup: Chunks source="norm_lookup", adjusted_distance=dist*0.85  
-Urteilsname: Chunks source="urteil_name", ce_score=10.0
+**decisions in `trace_format="full"`:** Ja (wenn aktiv) — Einträge für `rrf_injected`-Chunks.
 
-**Entscheidungen pro Chunk:**  
-Norm-Lookup: 10% Distance-Boost. Urteilsname: feste ce_score=10.0 → immer in finale Auswahl.
+**Live-Trace-Werte:** `active=false`, `count_in=45`, `count_out=45`, `count_injected=0`, `dec=0`
 
-**Heute im Trace sichtbar:**  
-`norm_lookup: active=true, detail="intern (vor Per-Source)"` — aber count_in/count_out=None weil Per-Source aktiv. Keine Chunks mit source="norm_lookup" oder "urteil_name" in diesem Trace.
-
-**Heute im Trace NICHT sichtbar:**  
-- Welche Normen für Norm-Lookup verwendet wurden  
-- Ob Urteilsname-Match stattfand (welcher Name gematcht)  
-- Anzahl injizierter Norm-Chunks  
-- Urteilsnamen-Datei-Status (geladen? Anzahl Einträge?)
-
-**Konsequenz für den Inspector:**  
-NEIN — fehlend: `norm_lookup_queries`, `urteilsname_matched`, `urteilsname_chunks_injected`
+**Verbleibende Lücken:** Da inaktiv kein Trace nötig. Wenn aktiv wären fehlend: BM25-Score pro Chunk, RRF-Score pro Chunk, Overlap BM25∩Semantic.
 
 ---
 
-## Stage 10: BM25 + RRF (deaktiviert)
+## Stage 7: per_source
 
-**Was passiert hier (Funktional):**  
-Wenn `OPENLEX_BM25_ENABLED=true` und `bm25_index.retrieve` importierbar: BM25-Suche mit Snowball-Stemmer, persistierter Index, k=40 Treffer. Anschließend RRF-Fusion (`rrf_fuse(rankings, k=60)`) über semantic_ids + qu_ids + bm25_ids. Fehlende BM25-Chunks werden via `col.get()` nachgeladen (source="rrf_injected"). Sortierung nach RRF-Score, Top-80 für CE. Bei Fehler: Fallback auf Distance-Sort.
+**Was passiert hier:**  
+Wenn `OPENLEX_PER_SOURCE_BUDGET_ACTIVE=true`: 5 separate ChromaDB-Calls je source_type ersetzen den Single-Call-Pool. Budget: gesetz_granular max 4, urteil_segmentiert max 2, leitlinie max 2, methodenwissen max 1, erwaegungsgrund max 1. Chunks sortiert nach Distance, dann Budget angewendet. Unbekannte Types immer genommen. Max 10 Chunks total. Das Embedding wird gecacht und wiederverwendet. Die Stage fungiert auch als Pre-CE-Slice (≤40 Kandidaten).
 
-**Quell-Code-Stelle:**  
-app.py:50–65 (Feature-Flags + Import), app.py:924–934 (BM25-Retrieval), app.py:1014–1063 (RRF-Fusion Block)
+**Code-Stelle:** app.py:1325–1352
 
-**Eingabe:**  
-Query-String → BM25-Index, semantic_ids + qu_ids
+**kind:** `filter`
 
-**Ausgabe:**  
-Fusionierte, RRF-sortierte Chunk-Liste (max 80)
+**count-Felder:** `count_in` (Pool nach bm25_rrf), `count_filtered` (durch Budget/Slice verworfen), `count_out`
 
-**Entscheidungen pro Chunk:**  
-RRF-Score = 1/(k+rank_i) für jedes Ranking-Signal. Chunks nur aus BM25: source="rrf_injected", distance=0.20.
+**decisions in `trace_format="full"`:** Ja — `action="kept"` für alle Candidates, `action="filtered"/"beyond_top40"` für verworfene.
 
-**Heute im Trace sichtbar:**  
-`bm25_rrf: active=false, detail="Deaktiviert"` in pipeline_stages.
+**Decisions-Schema:**
+```json
+{
+  "chunk_id": "mw_art4_index",
+  "action": "kept",
+  "source_type": "methodenwissen",
+  "source": "per_source",
+  "adjusted_distance": 0.1006
+}
+```
 
-**Heute im Trace NICHT sichtbar:**  
-Da deaktiviert: alle BM25-internen Metriken. Wenn aktiv wären fehlend: BM25-Score pro Chunk, RRF-Score pro Chunk, Overlap BM25∩Semantic.
+**Live-Trace-Werte:** `count_in=45`, `count_out=10`, `count_filtered=35`, `dec=10`
 
-**Konsequenz für den Inspector:**  
-NEIN (deaktiviert, kein Trace nötig) — wenn aktiviert fehlend: `bm25_score`, `rrf_score`, `bm25_rank`
-
----
-
-## Stage 11: Pre-CE Filter
-
-**Was passiert hier (Funktional):**  
-Sortierung des gesamten Candidate-Pools nach `adjusted_distance`. Bei BM25+RRF aktiv: bereits nach RRF sortiert. Dann Slice auf `candidates[:40]` → max 40 Chunks als Cross-Encoder-Input. Wenn Per-Source aktiv: der Per-Source-Output (max 10) ist bereits der Pool — Pre-CE ist damit faktisch ein No-Op.
-
-**Quell-Code-Stelle:**  
-app.py:1068–1076 (Pre-CE Sort + Slice), app.py:1177 (`candidates = chunks[:40]`)
-
-**Eingabe:**  
-Gesamter Candidate-Pool (semantic + norm + qu + keyword + per_source)
-
-**Ausgabe:**  
-list[dict] max 40 Chunks, sortiert nach adjusted_distance
-
-**Entscheidungen pro Chunk:**  
-Chunks ab Position 41 werden verworfen (topk_slice).
-
-**Heute im Trace sichtbar:**  
-`pre_ce: active=true, count_out=10, detail="Top-10 nach Distanz → Cross-Encoder-Input"`. Im Trace erscheinen alle 10 Chunks mit rrf_rank.
-
-**Heute im Trace NICHT sichtbar:**  
-- adjusted_distance-Wert pro Chunk  
-- Wie viele Chunks durch den Slice entfernt wurden  
-- Ob MW-Priorisierung (Stage nach CE) schon hier angewendet wurde
-
-**Konsequenz für den Inspector:**  
-TEILWEISE — fehlend: `adjusted_distance` pro Chunk, `pre_ce_dropped_count`
+**Verbleibende Lücken:**  
+- Per-Typ-Counts (wie viele je source_type vor/nach Budget) nicht im Trace  
+- Per-Source-Latenz (ms) nicht gelogged
 
 ---
 
-## Stage 12: Cross-Encoder Scoring
+## Stage 8: cross_encoder
 
-**Was passiert hier (Funktional):**  
-`reranker.predict(pairs)` — alle candidate-Chunks als (query, chunk_text[:500]) Paare in einem Batch. Modell: `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1` (oder via `RERANKER_MODEL` Env-Var). Scores im Bereich ca. -5 bis +5 (mmarco) oder ×10 für BGE-reranker. Keyword/Hybrid-Chunks: Mindest-Score 3.0 (`if ce_score < 3.0: ce_score = 3.0`). Score wird in `chunk["ce_score"]` geschrieben.
+**Was passiert hier:**  
+`reranker.predict(pairs)` — alle Candidates als `(query, chunk_text[:500])` Paare in einem Batch. Modell: `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1` (oder via `RERANKER_MODEL`). Scores im Bereich ca. −5 bis +5 (mmarco) oder ×10 für BGE-reranker (`_CE_SCORE_SCALE`). Keyword/Hybrid-Chunks erhalten Mindest-Score 3.0 (`floor`). Score wird in `chunk["ce_score"]` geschrieben (raw, vor Boosts).
 
-**Quell-Code-Stelle:**  
-app.py:1199–1215 (CE-Scoring Block), app.py:251–264 (`get_reranker`), app.py:252–257 (Modell + Scale)
+**Code-Stelle:** app.py:1401–1455
 
-**Eingabe:**  
-list[(query, chunk_text[:500])] — max 40 Paare
+**kind:** `transformer`
 
-**Ausgabe:**  
-float ce_score pro Chunk (raw, vor Boosts)
+**count-Felder:** `count_in=N`, `count_out=N` (keine Filterung hier)
 
-**Entscheidungen pro Chunk:**  
-Score bestimmt Ranking. Keyword-Chunks: floor(3.0). BGE-Modell: ×10 Skalierung.
+**decisions in `trace_format="full"`:** Ja — ein Eintrag pro Chunk.
 
-**Heute im Trace sichtbar:**  
-`ce_score_raw` pro Chunk im Trace. Beispiel: Chunk `seg_eugh_C-470_21_wuerdigung_7` = 2.215, `mw_personenbezug_ip_adressen` = 2.251. `cross_encoder: count_in=10, count_out=10, detail="10 gescort, CE_CUTOFF=3.0"`.
+**Decisions-Schema:**
+```json
+{
+  "chunk_id": "mw_art4_index",
+  "ce_score_raw": 0.8522,
+  "rank_by_distance": 1
+}
+```
 
-**Heute im Trace NICHT sichtbar:**  
-- CE-Score **nach** Boosts (nur raw sichtbar, kein `ce_score_final`)  
-- Welches Reranker-Modell aktiv ist  
-- CE-Batch-Latenz  
-- Ob Keyword-Floor (3.0) angewendet wurde
+**Live-Trace-Werte:** `count_in=10`, `count_out=10`, `dec=10`
 
-**Konsequenz für den Inspector:**  
-TEILWEISE — ce_score_raw vorhanden, aber fehlend: `ce_score_final` (nach Boosts), `reranker_model`, `keyword_floor_applied`
-
----
-
-## Stage 13: Boosts & Penalties (alle einzeln)
-
-**Was passiert hier (Funktional):**  
-Drei Modifikatoren werden sequenziell auf `chunk["ce_score"]` angewendet:
-
-**13a) Aktualitäts-Boost/Penalty (Recency-Faktor):**  
-`_extract_year(chunk)` aus Metadaten (datum/titel/chunk_id/thema). Dann `ce_score = ce_score / recency_factor`:  
-- Jahr ≥ 2023: ÷0.70 (Boost, Score steigt)  
-- Jahr ≥ 2020: ÷0.85  
-- Jahr ≥ 2018: ÷0.95  
-- Jahr < 2018: ÷1.10 (Penalty)  
-- Kein Jahr: ÷1.0  
-
-**13b) Schlüsselurteil-Boost:**  
-Wenn `get_urteilsname(az)` einen Eintrag in `urteilsnamen.json` findet: `ce_score *= 1.5`. Gilt für alle Urteile mit bekanntem Kurznamen.
-
-**13c) Instanzgerichts-Penalty:**  
-Wenn die Query **kein** Gericht/AZ nennt und der Chunk von BSG/BFH/BAG/BVerwG/OLG/LG/VG/AG stammt: `ce_score /= 1.3`.
-
-**13d) Pre-DSGVO-Filter/Penalty:**  
-Veraltete Leitlinien (Datum < 2018) und Chunks mit aufgehobenen Normen (§ 29 BDSG-alt etc.): Wenn ≥3 aktuelle Chunks vorhanden → veraltete entfernt. Sonst: `ce_score /= 3.0`, `_pre_dsgvo=True`.
-
-**13e) Methodenwissen-Priorisierung:**  
-MW-Chunks mit ce_score > 4.0 (nach Boosts): max 3 an Position 1–3 gesetzt (`mw_top`). Kein numerischer Multiplier, nur Umordnung.
-
-**Quell-Code-Stelle:**  
-app.py:1218–1228 (Recency), app.py:1229–1239 (Schlüsselurteil), app.py:1241–1257 (Instanzgericht), app.py:1259–1281 (Pre-DSGVO), app.py:1294–1308 (MW-Priorisierung)
-
-**Eingabe:**  
-candidates list mit ce_score-Werten
-
-**Ausgabe:**  
-Modifizierte ce_score-Werte, ggf. Umordnung, ggf. entfernte Chunks
-
-**Entscheidungen pro Chunk:**  
-Jeder Chunk kann mehrere Boosts/Penalties erhalten.
-
-**Heute im Trace sichtbar:**  
-`boosts_applied` Liste pro Chunk. Im Trace:  
-- `seg_eugh_C-470_21_wuerdigung_7`: `["aktualitaet_recency0.70", "schluesselurteil_x1.5"]`  
-- `beh_18.01.2023_...`: `["aktualitaet_recency0.70"]`  
-- MW-Chunks und gesetz-Chunks: `[]`  
-Stage-Detail: `"aktualitaet_recency0.70, schluesselurteil_x1.5"`
-
-**Heute im Trace NICHT sichtbar:**  
-- ce_score_final (Score nach allen Boosts) — nur raw sichtbar  
-- Ob Pre-DSGVO-Penalty angewendet wurde (fehlt in boosts_applied wenn entfernt)  
-- Ob Instanzgerichts-Penalty angewendet wurde (kein `instanzgericht_div1.3` in diesem Trace)  
-- Ob MW-Priorisierung durchgeführt wurde (kein Flag)  
-- Jahres-Extraktion: welches Jahr wurde für Recency-Berechnung verwendet
-
-**Konsequenz für den Inspector:**  
-TEILWEISE — fehlend: `ce_score_final`, `year_extracted`, `pre_dsgvo_applied`, `mw_prioritized`
+**Verbleibende Lücken:**  
+- CE-Batch-Latenz (ms) nicht gelogged  
+- Welches Reranker-Modell aktiv ist, steht zwar in `model`-Feld des Stage-Eintrags, aber nicht im Root-Response
 
 ---
 
-## Stage 14: Filter & Cutoff (Dedup, CE-Cutoff)
+## Stage 9: pre_dsgvo_filter
 
-**Was passiert hier (Funktional):**  
-Drei Filter sequenziell:
+**Was passiert hier:**  
+Entfernt veraltete Leitlinien (Datum < 2018) und Chunks mit aufgehobenen Normen (§ 29 BDSG-alt etc.) aus dem Candidate-Pool, wenn mindestens 3 aktuelle Chunks vorhanden sind. Andernfalls: `ce_score /= 3.0` als Penalty + `_pre_dsgvo=True`. In typischen DSGVO-Anfragen greift dieser Filter selten, daher häufig `active=false` und `count_filtered=0`.
 
-**14a) Document-Level Deduplication:**  
-Max 3 Chunks pro Dokument (`MAX_PER_DOC=3`). Dokument-Key aus `_doc_key()`: AZ+Gericht (Urteile), Gesetz-Name, Titel, Thema. Überzählige Chunks: filter_reason="dedup".
+**Code-Stelle:** app.py:1519–1528 (Stage-Eintrag), ~app.py:1480–1519 (Filter-Logik)
 
-**14b) CE-Cutoff:**  
-`ce_score >= CE_CUTOFF (3.0) OR adjusted_distance < DIST_CUTOFF (0.25)` → accepted. Sonst: filter_reason="ce_cutoff". Pflicht-Chunks (aus Stage 9) werden davor eingefügt und sind cutoff-immun.
+**kind:** `filter`
 
-**14c) Min/Max-Dokument-Limit:**  
-Min 3 Dokumente: wenn unter Min → auffüllen aus nächstbesten Candidates. Max 8 Dokumente (`MAX_DOCS`): wenn über Max → niedrigst-scorende Dokumente entfernen.
+**count-Felder:** `count_in`, `count_filtered`, `count_out`
 
-**14d) Source-Type-Diversifizierung:**  
-Wenn keine gesetz_granular/gesetz, keine urteil/urteil_segmentiert, oder keine leitlinie/methodenwissen in selected: Nachladen aus candidates.
+**decisions in `trace_format="full"`:** Ja (wenn gefiltert) — `{"chunk_id": ..., "filtered": true, "reason": "pre_dsgvo"}` für entfernte Chunks.
 
-**Quell-Code-Stelle:**  
-app.py:1320–1337 (Doc-Dedup), app.py:1339–1358 (CE-Cutoff), app.py:1360–1401 (Min/Max + Diversifizierung), app.py:88–92 (CE_CUTOFF, DIST_CUTOFF, MIN_DOCS, MAX_DOCS Konstanten)
+**Live-Trace-Werte:** `active=false`, `count_in=10`, `count_out=10`, `count_filtered=0`, `dec=0`
 
-**Eingabe:**  
-Sortierte candidates nach ce_score + Pflicht-Chunks
-
-**Ausgabe:**  
-selected: list[dict] mit min 3, max 8 Dokumenten
-
-**Entscheidungen pro Chunk:**  
-filter_reason: "dedup" | "ce_cutoff" | "topk_slice" | None
-
-**Heute im Trace sichtbar:**  
-`filter: count_in=10, count_out=9, detail="dedup: 1"`. Ein Chunk hat `filter_reason="dedup"`: `gran_DDG_§_2_Abs.1_S.17`. `filter_reason="ce_cutoff"` kommt nicht vor (alle CE-Scores über 3.0 nach Boosts oder durch Distanz).
-
-**Heute im Trace NICHT sichtbar:**  
-- Ob Diversifizierung nachgeladen hat  
-- Warum ein Chunk ce_cutoff erhält (score und threshold nicht direkt vergleichbar ohne ce_score_final)  
-- adjusted_distance für dist-Cutoff-Entscheidung  
-- Wie viele Chunks durch Min-Auffüllung kamen
-
-**Konsequenz für den Inspector:**  
-TEILWEISE — fehlend: `ce_score_final` für Cutoff-Entscheidung, `dist_at_cutoff`, `diversification_added`
+**Verbleibende Lücken:**  
+- Welche Chunks als „pre_dsgvo" markiert wurden (penalty statt removal) nicht im Trace  
+- Entscheidungsregel (≥3 aktuelle Chunks) nicht im Trace dokumentiert
 
 ---
 
-## Stage 15: EG-Enrichment (`_enrich_with_erwaegungsgruende`)
+## Stage 10: boosts
 
-**Was passiert hier (Funktional):**  
-Für jeden DSGVO-Artikel in den Top-Ergebnissen: Metadaten-Feld `erwaegungsgruende` (kommagetrennte EG-Nummern) auslesen. Die niedrigste EG-Nummer zuerst. Direkte `col.get(ids=[f"dsgvo_eg_{nr}"])` — kein Embedding. Max 2 EGs pro Anfrage. Source="eg_enrichment", distance=0.10, ce_score=5.0 (fest).
+**Was passiert hier:**  
+Drei Modifikatoren werden sequenziell auf `chunk["ce_score"]` angewendet und vollständig gelogged:  
+**a) Aktualitäts-Boost/Penalty (Recency):** Jahr aus Metadaten extrahieren → `ce_score /= recency_factor` (≥2023: ÷0.70 = Boost; ≥2020: ÷0.85; ≥2018: ÷0.95; <2018: ÷1.10 = Penalty).  
+**b) Schlüsselurteil-Boost:** Wenn Urteil in `urteilsnamen.json` → `ce_score *= 1.5`.  
+**c) Instanzgerichts-Penalty:** Wenn Query kein Gericht/AZ nennt und Chunk von BSG/BFH/BAG/BVerwG/OLG/LG/VG/AG stammt: `ce_score /= 1.3`.  
+Nach allen Boosts: Sortierung nach `ce_score` (+ SEGMENT_BOOST als Tie-Breaker).
 
-**Quell-Code-Stelle:**  
-app.py:1575–1629 (`_enrich_with_erwaegungsgruende`), app.py:1404 (Aufruf in `retrieve`)
+**Code-Stelle:** app.py:1555–1581
 
-**Eingabe:**  
-selected list mit gesetz_granular-Chunks die DSGVO-Artikel enthalten
+**kind:** `transformer`
 
-**Ausgabe:**  
-selected + max 2 EG-Chunks (source="eg_enrichment")
+**count-Felder:** `count_in=N`, `count_out=N`
 
-**Entscheidungen pro Chunk:**  
-EG-Nummer aus Metadaten → direkte ID-Suche. Fester ce_score=5.0.
+**decisions in `trace_format="full"`:** Ja — vollständiges Before/After/Delta pro Chunk.
 
-**Heute im Trace sichtbar:**  
-Im Trace erscheint `dsgvo_eg_30` als Chunk mit `source=["per_source"]` — dieser kam direkt über Per-Source, nicht über EG-Enrichment. Kein Chunk mit source="eg_enrichment" in diesem Trace.
+**Decisions-Schema:**
+```json
+{
+  "chunk_id": "seg_eugh_C-247_23_rechtsrahmen_1",
+  "ce_score_before": 1.4742,
+  "ce_score_after": 3.1591,
+  "ce_score_delta": 1.6849,
+  "boosts_applied": [
+    {"name": "aktualitaet_recency", "factor": 1.4286},
+    {"name": "schluesselurteil", "factor": 1.5}
+  ]
+}
+```
 
-**Heute im Trace NICHT sichtbar:**  
-- Ob EG-Enrichment überhaupt ausgeführt wurde  
-- Welche EG-Nummern in DSGVO-Artikel-Metadaten gefunden wurden  
-- Warum kein Enrichment stattfand (keine DSGVO-Artikel in selected?)
+**Live-Trace-Werte:** `count_in=10`, `count_out=10`, `dec=10`
 
-**Konsequenz für den Inspector:**  
-NEIN — fehlend: `eg_enrichment_attempted`, `eg_nrs_candidates`, `eg_nrs_added`
-
----
-
-## Stage 16: Tenor-Enforce (`_ensure_tenor_chunks`)
-
-**Was passiert hier (Funktional):**  
-Feature-Flag: `OPENLEX_TENOR_ENFORCE=true` (Standard). Für jedes `urteil_segmentiert`-Chunk in selected: AZ sammeln, prüfen ob Tenor/Leitsatz bereits vorhanden. Falls nicht: `col.get(where={"$and": [{"aktenzeichen": az}, {"segment": "leitsatz"}]})` → dann "tenor" → dann "entscheidungsgruende". Max 3 Injektions-Slots. Injizierte Chunks: ce_score=best_score×0.90 (leitsatz/tenor) oder ×0.80 (Fallback). Misses werden in JSONL-Log geschrieben (`/opt/openlex-mvp/logs/tenor_enforce_misses.jsonl`).
-
-**Quell-Code-Stelle:**  
-app.py:1427–1545 (`_ensure_tenor_chunks`), app.py:1406–1407 (Aufruf), app.py:1432–1436 (Konstanten)
-
-**Eingabe:**  
-selected list nach EG-Enrichment
-
-**Ausgabe:**  
-(updated_selected, tenor_trace) — tenor_trace: {"injected": [...], "already_present": [...], "misses": [...]}
-
-**Entscheidungen pro Chunk:**  
-Injizierte Chunks: source="tenor_enforce" oder "tenor_enforce_fallback", `_tenor_injected=True`.
-
-**Heute im Trace sichtbar:**  
-`tenor_enforce: injected=[], already_present=[], misses=["C-470/21"]`. Stage-Detail: `"⚠ 1 AZ ohne Tenor verfügbar"`. C-470/21 hat keinen verfügbaren Tenor/Leitsatz in ChromaDB.
-
-**Heute im Trace NICHT sichtbar:**  
-- Welche Segmente für C-470/21 versucht wurden  
-- Ob der entscheidungsgruende-Fallback auch fehlschlug  
-- available_segments aus Tenor-Miss-Log (nur im JSONL)
-
-**Konsequenz für den Inspector:**  
-JA (tenor_enforce vorhanden) — teilweise fehlend: `tenor_tried_segments`, `tenor_miss_available_segments`
+**Verbleibende Lücken:**  
+- Welches Jahr für Recency-Berechnung extrahiert wurde, nicht im Trace  
+- Instanzgerichts-Penalty wird nicht im `boosts_applied`-Array erscheinen wenn es nicht angewendet wurde (korrekt), aber kein explizites `instanzgericht_checked=true`-Flag
 
 ---
 
-## Stage 17: Finale Auswahl
+## Stage 11: mw_priorization
 
-**Was passiert hier (Funktional):**  
-`selected` nach Tenor-Enforce ist der finale Chunk-Pool. Für den LLM-Kontext: `format_context(chunks)` — Chunks werden via `group_chunks_to_docs()` nach Dokument gruppiert, innerhalb Dokument nach ce_score sortiert, Primärquellen vor Methodenwissen. Leitlinien-Deduplizierung via Jaccard-Ähnlichkeit (≥0.80 Titel-Ähnlichkeit → ältere Version entfernt). Ausgabe: nummerierte Quellen `[Quelle 1 – Typ: X – Label]` mit max 3000 Zeichen pro Chunk.
+**Was passiert hier:**  
+MW-Chunks mit `ce_score > 4.0` (nach Boosts) werden an Positionen 1–3 gesetzt (max 3). Kein numerischer Multiplier, nur Umordnung. `active=false` wenn kein MW-Chunk den Schwellenwert überschreitet (typisch für viele Anfragen).
 
-**Quell-Code-Stelle:**  
-app.py:1409–1423 (Trace-Finalisierung in `retrieve`), app.py:1804–1828 (`format_context`), app.py:1765–1801 (`group_chunks_to_docs`), app.py:1714–1762 (`_dedup_leitlinien`)
+**Code-Stelle:** app.py:1586–1605
 
-**Eingabe:**  
-selected list (post Tenor-Enforce)
+**kind:** `transformer`
 
-**Ausgabe:**  
-context str für LLM, final_rank pro Chunk gesetzt
+**count-Felder:** `count_in=N`, `count_out=N`, `count_mw_promoted`
 
-**Entscheidungen pro Chunk:**  
-final_rank > 0 = in Antwort. Docs sortiert: primary (nach best_score) vor MW (nach best_score). Chunks pro Doc: nach ce_score absteigend.
+**decisions in `trace_format="full"`:** Ja (wenn aktiv) — `{"chunk_id": ..., "action": "promoted_to_front"}` für jeden promovierten MW-Chunk.
 
-**Heute im Trace sichtbar:**  
-`final: count_in=9, count_out=9`. Pro Chunk: `final_rank` 1–9. `final_results` Liste im Response enthält alle 9 Chunks mit vollständiger Trace-Info.
+**Live-Trace-Werte:** `active=false`, `count_in=10`, `count_out=10`, `count_mw_promoted=0`, `dec=0`
 
-**Heute im Trace NICHT sichtbar:**  
-- Ob Leitlinien-Dedup stattfand  
-- Welche Formatierungsregel pro Chunk angewendet wurde (segment/volladresse/paragraph)  
-- context-Länge (Zeichen)  
-- Welche Chunks wegen topk_slice gefiltert wurden (kein Chunk mit topk_slice in diesem Trace)
-
-**Konsequenz für den Inspector:**  
-JA (final_rank sichtbar) — teilweise fehlend: `leitlinien_dedup_removed`, `context_length_chars`, `doc_ordering`
+**Verbleibende Lücken:** Keine wesentlichen — der Stage-Eintrag dokumentiert `count_mw_promoted` vollständig.
 
 ---
 
-## Stage 18: LLM-Antwortgenerierung
+## Stage 12: dedup
 
-**Was passiert hier (Funktional):**  
-**System-Prompt:** DSGVO-Assistent, strikte Quellenbindung, juristische Nummerierung (I./1./a)/(1)), keine horizontalen Linien, URTEILSZITATE mit Urteilsname, EDPB-Zitate mit Randnummer, DEFINITIONSREGEL (Art. 4 DSGVO Legaldefinitionen), Verbot veralteter Normen (§ 29 BDSG-alt), TTDSG→TDDDG-Umbenennung. Ca. 1400 Zeichen langer System-Prompt.
+**Was passiert hier:**  
+Document-Level Deduplication: max 3 Chunks pro Dokument (`MAX_PER_DOC=3`). Dokument-Key via `_doc_key()`: AZ+Gericht (Urteile), Gesetz-Name, Titel, Thema. Überzählige Chunks werden entfernt. Der Stage-Eintrag enthält sowohl die gefilterten als auch die behaltenen Chunks in `decisions`.
 
-**Modell-Cascading (Priorität):**  
-1. **Mistral API** — `mistral-medium-latest`, URL: `https://api.mistral.ai/v1/chat/completions`  
-2. **OpenRouter** — Modelle in Reihenfolge: `qwen/qwen3-235b-a22b`, `meta-llama/llama-3.3-70b-instruct`, `google/gemma-3-27b-it`, `mistralai/mistral-small-3.1-24b-instruct`  
-3. **Ollama lokal** — `gemma4:e4b` bevorzugt, fallback auf erstes verfügbares Modell
+**Code-Stelle:** app.py:1632–1668
 
-**Streaming:** SSE via `stream_with_fallback()`, yields (token, provider_display). Gradio `.stream()`.
+**kind:** `filter`
 
-**Token-Limits:** max_tokens=2048, bei Ollama: num_ctx=8192, think=False.  
-**Temperature:** 0.3 (OpenAI-kompatible Provider), Mistral: 0.3, Ollama: default.  
-**History:** Letzte 6 Nachrichten (`history[-6:]`) in messages eingefügt.
+**count-Felder:** `count_in`, `count_filtered`, `count_out`
 
-**Quellen-Attribution:** Validierung nach komplettem Stream via `validate_response()` (NORM_RE + AZ_RE → 3-Stufen: verified/in_db_only/missing). Missing-Referenzen werden inline mit ⚠️-Warnung markiert. Antwort-Footer: `*Modell: X | N Dokumente (M Chunks) | K Referenzen validiert*`.
+**decisions in `trace_format="full"`:** Ja — alle Chunks mit `action="filtered"` oder `action="kept"`.
 
-**Quell-Code-Stelle:**  
-app.py:2459–2523 (`chat_stream`), app.py:1836–1847 (`_build_llm_messages`), app.py:142–174 (SYSTEM_PROMPT), app.py:1872–1935 (OpenRouter + Mistral), app.py:1960–2008 (Ollama), app.py:2015–2034 (PROVIDERS)
+**Decisions-Schema (filtered):**
+```json
+{
+  "chunk_id": "dsgvo_art_11",
+  "action": "filtered",
+  "reason": "dedup_max_per_doc",
+  "doc_key": "DSGVO"
+}
+```
 
-**Eingabe:**  
-context (format_context output), messages (system + history + user), llm_history
+**Live-Trace-Werte:** `count_in=10`, `count_out=8`, `count_filtered=2`, `dec=10`
 
-**Ausgabe:**  
-Streaming tokens → full_response str, validations list, sources_md HTML
-
-**Entscheidungen pro Chunk:**  
-Quellen-Attribution via Nummern [Quelle N] im LLM-Output.
-
-**Heute im Trace sichtbar:**  
-Im Inspector-Trace (API/inspect) **keine** LLM-Stage — der Inspector ruft nur `retrieve()` auf, nicht `chat_stream()`.
-
-**Heute im Trace NICHT sichtbar:**  
-- Welcher Provider verwendet wurde  
-- Anzahl generierter Tokens  
-- LLM-Latenz  
-- Validierungs-Ergebnis (verified/in_db_only/missing counts)  
-- Ob Antwort abgeschnitten wurde (truncation detection)
-
-**Konsequenz für den Inspector:**  
-NEIN — der Inspector schließt die LLM-Stage komplett aus. Fehlend: `llm_provider_used`, `llm_tokens`, `llm_duration_ms`, `validation_counts`
+**Verbleibende Lücken:** Keine — vollständig dokumentiert mit `doc_key` und Reason.
 
 ---
 
-## Summary-Tabelle
+## Stage 13: pflicht_urteilsname_injection
 
-| Stage | Im Code aktiv? | Im Trace vollständig? | Lücken |
-|-------|---------------|----------------------|--------|
-| 1: Query-Eingang & Intent | Ja (kein eigenst. Intent) | Nein | intent_type, search_query_used, history_augmented |
-| 2: Query-Rewrite | Nein (disabled) | Ja (deaktiviert-Zustand) | guard_triggered wenn aktiv |
-| 3: Norm-Validator (Regex) | Ja | Nein | extracted_norms, extracted_az, synonym_expansion |
-| 4: Norm-Hypothesizer (QU) | Nein (module?) | Nein | qu_module_available, qu_norms_found |
-| 5: Query-Embedding | Ja | Nein | embedding_model, embedding_duration_ms, search_query_used |
-| 6: Semantic Top-K | Ja (intern via Per-Source) | Nein (intern) | raw_distances, segment_boost_applied |
-| 7: Per-Source Budget | Ja (aktiv) | Teilweise | per_source_budget_counts, overlap, duration_ms |
-| 8: QU-Injection | Nein (inaktiv) | Nein | qu_module_available, qu_norms_found |
-| 9: Norm-Lookup + Urteilsname | Ja | Nein | norm_lookup_queries, urteilsname_matched |
-| 10: BM25 + RRF | Nein (disabled) | Ja (deaktiviert-Zustand) | bm25_score wenn aktiv |
-| 11: Pre-CE Filter | Ja | Teilweise | adjusted_distance, pre_ce_dropped |
-| 12: Cross-Encoder | Ja | Teilweise | ce_score_final, reranker_model, latency |
-| 13: Boosts & Penalties | Ja | Teilweise | ce_score_final, year_extracted, pre_dsgvo_applied |
-| 14: Filter & Cutoff | Ja | Teilweise | ce_score_final für Cutoff-Entscheidung, dist_at_cutoff |
-| 15: EG-Enrichment | Ja | Nein | eg_enrichment_attempted, eg_nrs_added |
-| 16: Tenor-Enforce | Ja | Ja (tenor_enforce dict) | tenor_tried_segments |
-| 17: Finale Auswahl | Ja | Ja (final_rank) | leitlinien_dedup, context_length |
-| 18: LLM-Generierung | Ja | Nein (außerhalb Scope) | llm_provider, tokens, validation_counts |
+**Was passiert hier:**  
+Paralleler Fork: `_find_pflicht_chunks(question, col)` und `_find_urteil_by_name(question, col)` laden Pflicht-Chunks und Urteilsname-Chunks direkt via `col.get()`. Diese bypassen den CE-Cutoff und werden direkt in `selected` eingefügt (ce_score=10.0 bei Urteilsnamen). `flow_isolated=True` bedeutet: die Continuity-Prüfung überspringt diese Stage — sie speist keinen fortlaufenden Chunk-Fluss, sondern einen parallelen Fork.
+
+**Code-Stelle:** app.py:1676–1700
+
+**kind:** `injector` | `flow_isolated=True`
+
+**count-Felder:** `count_in=0`, `count_injected=N_pflicht`, `count_out=N_pflicht`
+
+**decisions in `trace_format="full"`:** Ja (wenn injected) — `{"chunk_id": ..., "action": "injected", "source": ..., "bypass_ce": true}`.
+
+**Live-Trace-Werte:** `active=false` (kein Pflicht/Urteilsname-Match), `count_in=0`, `count_out=0`, `count_injected=0`, `dec=0`
+
+**Verbleibende Lücken:**  
+- Welche Urteilsnamen aus `urteilsnamen.json` geprüft wurden, nicht im Trace  
+- Warum kein Match stattfand, nicht explizit gelogged
 
 ---
 
-## Vorgeschlagene Trace-Erweiterungen
+## Stage 14: ce_cutoff
 
-| Lücke | Datei | Felder | Aufwand | Risiko |
-|-------|-------|--------|---------|--------|
-| **ce_score_final** fehlt (nur raw sichtbar) | app.py:1218–1281 | Trace-Eintrag nach letztem Boost-Schritt: `ce_score_final` | S | Niedrig — nur dict-Schreiben |
-| **adjusted_distance** pro Chunk | app.py:1184–1197 (Trace-Init) + inspector/main.py:120–136 | `adjusted_distance` in _trace beim Pre-CE-Init; im Inspector aus results auslesen | S | Niedrig |
-| **extracted_norms / extracted_az** im Trace | app.py:870, app.py:939 | Neue Trace-Felder im return-dict: `"norm_extract": {"norms": [...], "az": [...], "synonyms": [...]}` | S | Niedrig |
-| **per_source_budget_counts** | app.py:1120, per_source_retrieval.py | Budget-Counts aus `_ps_result.per_source` in Trace schreiben | S | Niedrig |
-| **embedding_duration_ms + search_query_used** | app.py:834, 826 | `"embedding": {"model": ..., "duration_ms": ..., "search_query": ...}` in rich_trace | S | Niedrig |
-| **EG-Enrichment-Trace** | app.py:1575–1629 | Return-value `_enrich_with_erwaegungsgruende` mit `{"eg_attempted": [...], "eg_added": [...]}` + in rich_trace | M | Niedrig |
-| **QU-Modul-Status** | app.py:39–48, 899–922 | `"qu_status": {"available": bool, "norms_found": [...], "ids_injected": int}` in rich_trace | M | Niedrig |
-| **LLM-Stage im Inspector** | inspector/main.py, app.py:2459 | Zweiter Inspector-Endpoint `/api/full` der auch `chat_stream` aufruft und LLM-Metriken zurückgibt | L | Mittel (LLM-Kosten, Latenz) |
-| **Urteilsname-Match-Trace** | app.py:717–764 | `"urteilsname_hits": [{"az": ..., "name": ..., "chunks_loaded": int}]` in rich_trace | S | Niedrig |
-| **Tenor-Enforce tried_segments** | app.py:1484–1506 | `"tried_segments": ["leitsatz", "tenor"]` in `tenor_trace["misses"]` Eintrag | S | Niedrig |
+**Was passiert hier:**  
+Filtert deduplizierte Candidates nach `ce_score >= CE_CUTOFF (3.0)` ODER `adjusted_distance < DIST_CUTOFF (0.25)`. Chunks die keines der Kriterien erfüllen werden verworfen. Pflicht-Chunks (aus Stage 13) sind immun — sie werden nicht in die `deduped`-Liste einbezogen, sondern separat in `selected` eingefügt. `ce_score_final` im Decisions-Eintrag ist der boosted Score (nach Stage 10), nicht raw.
 
+**Code-Stelle:** app.py:1702–1726
+
+**kind:** `filter`
+
+**count-Felder:** `count_in` (deduped), `count_filtered`, `count_out`
+
+**decisions in `trace_format="full"`:** Ja — `action="kept"` oder `action="filtered"` mit `ce_score_final` und `reason`.
+
+**Decisions-Schema (kept):**
+```json
+{
+  "chunk_id": "seg_eugh_C-247_23_rechtsrahmen_1",
+  "action": "kept",
+  "ce_score_final": 3.1591,
+  "reason": "above_cutoff"
+}
+```
+
+**Live-Trace-Werte:** `count_in=8`, `count_out=8`, `count_filtered=0`, `dec=8`
+
+**Verbleibende Lücken:**  
+- `dist_cutoff_threshold` und `ce_cutoff_threshold` stehen zwar im Stage-Eintrag als Extra-Felder, aber nicht in jedem Decision-Eintrag für Grenzfälle
+
+---
+
+## Stage 15: selected_merge
+
+**Was passiert hier:**  
+Kombiniert Pflicht-Chunks (aus Stage 13, `flow_isolated`) mit den CE-gefilterten Candidates (aus Stage 14) zu `selected`. Keine Filterung, reines Merge. `count_in` = CE-gefilterte Chunks, `count_injected` = Pflicht-Chunks, `count_out` = Summe. Dieser Stage-Eintrag stellt die Continuity nach dem parallelen Fork wieder her.
+
+**Code-Stelle:** app.py:1727–1787
+
+**kind:** `injector`
+
+**count-Felder:** `count_in` (CE-passed), `count_injected` (Pflicht), `count_out`
+
+**decisions in `trace_format="full"`:** Keine (leeres Array / kein `decisions`-Feld im Stage-Eintrag).
+
+**Live-Trace-Werte:** `count_in=8`, `count_out=8`, `count_injected=0`, `dec=0`
+
+**Verbleibende Lücken:** Keine — der Merge-Schritt ist durch die benachbarten Stages vollständig dokumentiert.
+
+---
+
+## Stage 16: min_max_diversification
+
+**Was passiert hier:**  
+Drei Regeln sequenziell:  
+**a) Min-Docs-Auffüllung:** Wenn `len(docs) < MIN_DOCS (3)` → Nachladen aus Candidates bis Minimum erreicht.  
+**b) Max-Docs-Limit:** Wenn `len(docs) > MAX_DOCS (8)` → niedrigst-scorende Dokumente entfernen.  
+**c) Source-Type-Diversifizierung:** Prüft ob gesetz_granular, urteil/urteil_segmentiert, leitlinie/methodenwissen vertreten sind. Falls Gruppe fehlt → ein Chunk nachschieben.  
+`kind` wird dynamisch gesetzt: `"injector"` wenn Chunks hinzugefügt, `"filter"` wenn entfernt, `"transformer"` wenn unverändert.
+
+**Code-Stelle:** app.py:1788–1808
+
+**kind:** `filter` / `injector` / `transformer` (dynamisch)
+
+**count-Felder:** `count_in` (post selected_merge), `count_injected`, `count_filtered`, `count_out`, `min_docs`, `max_docs`
+
+**decisions in `trace_format="full"`:** Keine (leeres `decisions`-Array in dieser Implementierung).
+
+**Live-Trace-Werte:** `count_in=8`, `count_out=6`, `count_filtered=2`, `min_docs=3`, `max_docs=8`, `dec=0`
+
+**Verbleibende Lücken:**  
+- Welche Chunks konkret durch Max-Docs entfernt wurden, nicht in `decisions` gelistet  
+- Ob Diversifizierung nachgeladen hat und welcher Chunk, nicht gelogged
+
+---
+
+## Stage 17: eg_enrichment
+
+**Was passiert hier:**  
+Für jeden DSGVO-Artikel in den selektierten Chunks: Metadaten-Feld `erwaegungsgruende` (kommagetrennte EG-Nummern) auslesen. Direkte `col.get(ids=[f"dsgvo_eg_{nr}"])` — kein Embedding. Max 2 EGs pro Anfrage. `source="eg_enrichment"`, `distance=0.10`, `ce_score=5.0` (fest). EG-Chunks die bereits im Pool sind werden nicht doppelt eingefügt.
+
+**Code-Stelle:** app.py:1809–1832
+
+**kind:** `injector`
+
+**count-Felder:** `count_in`, `count_injected`, `count_out`
+
+**decisions in `trace_format="full"`:** Ja (wenn injected) — `{"chunk_id": ..., "source": "eg_enrichment"}`.
+
+**Decisions-Schema:**
+```json
+{
+  "chunk_id": "",
+  "source": "eg_enrichment"
+}
+```
+
+**Live-Trace-Werte:** `count_in=6`, `count_out=8`, `count_injected=2`, `dec=2`
+
+**Verbleibende Lücken:**  
+- `chunk_id` im Decision-Eintrag ist leer wenn die EG-ID nicht im `id`-Feld des Chunks gesetzt ist — bekannte Gap  
+- Welche EG-Nummern aus den Artikel-Metadaten extrahiert wurden, nicht im Trace
+
+---
+
+## Stage 18: tenor_enforce
+
+**Was passiert hier:**  
+Feature-Flag: `OPENLEX_TENOR_ENFORCE=true` (Standard). Für jedes `urteil_segmentiert`-Chunk in `selected`: AZ sammeln, prüfen ob Tenor/Leitsatz bereits vorhanden. Falls nicht: `col.get(where={"$and": [{"aktenzeichen": az}, {"segment": "leitsatz"}]})` → dann "tenor" → dann "entscheidungsgruende" (Fallback). Max 3 Injektions-Slots. Injizierte Chunks: `ce_score = best_score × 0.90` (leitsatz/tenor) oder `× 0.80` (Fallback). Misses werden in `tenor_enforce_misses.jsonl` gelogged.
+
+**Code-Stelle:** app.py:1832–1865 (Stage-Eintrag), app.py:1427–1545 (`_ensure_tenor_chunks`)
+
+**kind:** `injector`
+
+**count-Felder:** `count_in`, `count_injected`, `count_out`
+
+**decisions in `trace_format="full"`:** Ja — `action="injected"` / `action="already_present"` / `action="miss"` pro AZ.
+
+**Decisions-Schema (injected):**
+```json
+{
+  "action": "injected",
+  "az": "C-247/23",
+  "chunk_id": "seg_eugh_C-247_23_tenor",
+  "segment": "tenor"
+}
+```
+
+**Live-Trace-Werte:** `count_in=8`, `count_out=10`, `count_injected=2`, `dec=2`
+
+**Verbleibende Lücken:**  
+- Welche Segmente für ein `miss`-AZ versucht wurden, fehlt im Decision-Eintrag  
+- `available_segments` aus Tenor-Miss-Log nur im JSONL, nicht im API-Response
+
+---
+
+## Stages außerhalb des `full_trace.stages`-Arrays
+
+### Query-Rewrite (vor Stage 1)
+
+Wenn `OPENLEX_REWRITE_ENABLED=true`: Mistral-Medium-Call zur juristischen Umformulierung. Im Response-Root als `rewrite`-Objekt dokumentiert.
+
+**Live-Trace-Werte:**
+```json
+{
+  "rewrite": {
+    "used": false,
+    "original": "Was ist ein personenbezogenes Datum nach Art. 4 DSGVO?",
+    "rewritten": "Was ist ein personenbezogenes Datum nach Art. 4 DSGVO?",
+    "from_cache": false,
+    "error": null,
+    "duration_ms": 0.0
+  }
+}
+```
+
+**Verbleibende Lücken (wenn aktiv):** `guard_triggered`-Flag (welcher Guard hat ausgelöst), `cache_key`.
+
+### LLM-Generierung (nach Stage 18)
+
+Der `/api/inspect`-Endpoint ruft nur `retrieve()` auf, nicht `chat_stream()`. Die LLM-Stage (Mistral/OpenRouter/Ollama-Cascading, Streaming, Quellen-Attribution via `validate_response()`) ist bewusst nicht Teil des Trace. Geplant für Paket 3.
+
+---
+
+## Consistency-Validator
+
+`_validate_full_trace()` (app.py:1885–1930) prüft nach dem Aufbau aller 18 Stages:
+
+1. `count_out[n] == count_in[n+1]` für alle benachbarten Stages
+2. Überspringt Übergänge bei `flow_boundary=True` (Stage 1: embedding)
+3. Überspringt Übergänge bei `flow_isolated=True` (Stage 13: pflicht_urteilsname_injection) und deren Vorgänger
+
+Ergebnis in `full_trace.consistency`:
+```json
+{
+  "valid": true,
+  "issues": [],
+  "warnings": []
+}
+```
+
+Bei `valid=false` mit `issues` → Dokumentation darf nicht aktualisiert werden (STOP-Bedingung).
+
+---
+
+## Summary-Tabelle: Alle 18 Stages
+
+| # | Stage ID | Label | kind | active | flow flags | decisions in full trace | verbleibende Lücken |
+|---|----------|-------|------|--------|------------|------------------------|---------------------|
+| 1 | `embedding` | Query Embedding | transformer | true | flow_boundary | Nein (kein chunk-level) | vektor-dim, history_augmented |
+| 2 | `semantic` | Semantic Top-40 | injector | true | — | Ja (raw_distance, boost, boosted_distance) | — |
+| 3 | `norm_lookup_injection` | Norm-Lookup Injection | injector | true (wenn Normen) | — | Ja (chunk_id, action, norm) | extracted_norms nicht separiert |
+| 4 | `qu_injection` | QU-Injection | injector | true | — | Ja (wenn injected) | qu_module_available, warum kein match |
+| 5 | `keyword_injection` | Keyword-Injection | injector | true | — | Ja (injected + boosted) | welche Keywords Treffer hatten |
+| 6 | `bm25_rrf` | BM25 + RRF Fusion | injector | false | — | Ja (wenn aktiv) | bm25_score, rrf_score wenn aktiv |
+| 7 | `per_source` | Per-Source Budget | filter | true | — | Ja (kept + filtered/beyond_top40) | per-typ budget counts |
+| 8 | `cross_encoder` | Cross-Encoder | transformer | true | — | Ja (ce_score_raw, rank_by_distance) | ce_batch_latency |
+| 9 | `pre_dsgvo_filter` | Pre-DSGVO Filter | filter | false | — | Ja (wenn filtered) | penalty vs. removal nicht unterschieden |
+| 10 | `boosts` | Boosts & Penalties | transformer | true | — | Ja (before/after/delta/boosts_applied) | year_extracted |
+| 11 | `mw_priorization` | MW-Priorisierung | transformer | false | — | Ja (wenn aktiv) | — |
+| 12 | `dedup` | Doc-Dedup (max 3/Dokument) | filter | true | — | Ja (filtered+kept mit doc_key) | — |
+| 13 | `pflicht_urteilsname_injection` | Pflicht + Urteilsname Injection | injector | false | flow_isolated | Ja (wenn injected) | warum kein match |
+| 14 | `ce_cutoff` | CE-Cutoff Filter | filter | true | — | Ja (kept+filtered mit ce_score_final) | — |
+| 15 | `selected_merge` | Selected-Merge (Pflicht + CE-Passed) | injector | true | — | Nein (kein decisions-Array) | — |
+| 16 | `min_max_diversification` | Min-Docs / Max-Docs / Diversification | filter/injector/transformer | true | — | Nein | welche Chunks entfernt/hinzugefügt |
+| 17 | `eg_enrichment` | EG-Enrichment | injector | true | — | Ja (chunk_id, source) | chunk_id leer-Bug, welche EG-Nummern |
+| 18 | `tenor_enforce` | Tenor-Enforce | injector | true | — | Ja (injected/already_present/miss) | tried_segments bei miss |
+
+---
+
+## Offene Lücken (Stand 2026-05-03)
+
+### Geschlossen durch Paket 1 + Patch 1.1 + 1.1b (12 von 14 originalen Gaps)
+
+- `ce_score_final` nach Boosts → jetzt vollständig in Stage `boosts` (ce_score_before/after/delta) und in `ce_cutoff` decisions
+- `adjusted_distance` pro Chunk → jetzt in Stage `per_source` decisions
+- `extracted_norms` / `extracted_az` → teilweise sichtbar via Stage `norm_lookup_injection` decisions (norm-Feld)
+- `per_source_budget_counts` → Stage `per_source` existiert jetzt explizit
+- `embedding_duration_ms` + `model` → in Stage `embedding` vollständig
+- EG-Enrichment-Trace → Stage `eg_enrichment` mit decisions
+- QU-Injection-Trace → Stage `qu_injection` explizit
+- Norm-Lookup-Trace → Stage `norm_lookup_injection` explizit
+- Doc-Dedup-Trace → Stage `dedup` explizit mit doc_key
+- CE-Cutoff-Trace → Stage `ce_cutoff` explizit mit ce_score_final
+- Pflicht/Urteilsname-Fork → Stage `pflicht_urteilsname_injection` mit `flow_isolated`
+- Consistency-Validator → `full_trace.consistency` mit `valid`, `issues`, `warnings`
+
+### Verbleibende Lücken (Stand 2026-05-03)
+
+1. **LLM-Stage** (Generierung, Streaming, Quellen-Attribution) — geplant Paket 3
+2. **eg_enrichment chunk_id leer**: Wenn `c.get("id")` und `c.get("meta", {}).get("chunk_id", "")` beide leer sind, wird leerer String im Decision-Eintrag gesetzt. Fix: EG-Chunks beim Laden mit `id` aus der ChromaDB-ID belegen.
+3. **min_max_diversification decisions**: Kein `decisions`-Array — es ist nicht nachvollziehbar welche Chunks konkret entfernt oder nachgeschoben wurden.
+4. **year_extracted im boosts-Trace**: Welches Jahr `_extract_year()` für den Recency-Faktor verwendet hat, fehlt im `boosts_applied`-Array.
+5. **qu_module_available / warum QU kein Match**: Stage `qu_injection` liefert zwar count=0, aber nicht ob das Modul fehlt oder die Normen-Extraktion leer war.
+6. **tried_segments bei tenor_enforce miss**: Im `decisions`-Eintrag `action="miss"` fehlt welche Segmente versucht wurden (nur im JSONL-Log).
+7. **per_source per-typ budget counts**: Wie viele Chunks je source_type vor und nach Budget-Anwendung vorhanden waren, ist nicht im Trace.
+
+---
+
+## Audit-Historie
+
+### 2026-04-30/05-01 — Initial-Audit
+
+Erster Trace-Audit via SSH + `return_trace=True` (altes Format). Query: „Wie hat der EuGH zu IP-Adressen entschieden?" 14 Lücken identifiziert. Dokument mit 18 funktionalen Stages (ohne explizite Stage-IDs) erstellt.
+
+Hauptbefunde:
+- Keine expliziten Stage-Objekte mit ID/kind/count
+- `ce_score_final` nur als `ce_score` in Chunk-Metadaten, nicht trace-explizit
+- Norm-Lookup, QU-Injection, Keyword-Injection nur als Seiteneffekte sichtbar
+- EG-Enrichment, Dedup, CE-Cutoff nicht als Trace-Stages dokumentiert
+- Kein Consistency-Validator
+
+### 2026-05-02 — Paket 1: trace_format="full"
+
+Implementierung des `trace_format="full"` Modus: `full_trace["stages"]`-Array mit expliziten Stage-Objekten für alle aktiven Stages. Commit: `a04a03f feat(trace): implement trace_format="full" – per-stage decisions for all active stages`.
+
+Neu hinzugefügt:
+- Stages `embedding`, `semantic`, `per_source`, `cross_encoder`, `boosts`, `eg_enrichment`, `tenor_enforce`
+- Per-Chunk `decisions`-Arrays mit chunk-level Entscheidungsfeldern
+- `count_in`/`count_out`/`count_injected`/`count_filtered` Felder
+
+### 2026-05-03 — Patch 1.1 + 1.1b
+
+Patch 1.1: 8 neue explizite Stages für bisher implizite Pipeline-Schritte. Patch 1.1b: 3 Flow-Gap-Fixes im Consistency-Validator.
+
+Commit 1: `a04a03f` — trace_format=full Basisimplementierung  
+Commit 2: `eb79467 feat(trace): Patch 1.1b — fix 3 flow-gap issues in consistency validator`
+
+Neu hinzugefügt:
+- Stages `norm_lookup_injection`, `qu_injection`, `keyword_injection` (Injektions-Pfade)
+- Stages `pre_dsgvo_filter`, `dedup` (Filter-Schritte)
+- Stages `pflicht_urteilsname_injection` (mit `flow_isolated=True`), `ce_cutoff`, `selected_merge`
+- Stage `min_max_diversification` (Min/Max/Diversifizierung als expliziter Block)
+- Stage `mw_priorization` (bisher undokumentiert)
+- Consistency-Validator `_validate_full_trace()` mit `flow_boundary`/`flow_isolated`-Semantik
+- `full_trace.consistency`: `{valid, issues, warnings}`
+
+Ergebnis: 18 explizite Stages, `consistency.valid=true`, 12 von 14 ursprünglichen Lücken geschlossen.
+
+### Offene Lücken (Stand 2026-05-03)
+
+- LLM-Stage (Generierung, Streaming, Quellen-Attribution) — geplant Paket 3
+- `eg_enrichment` chunk_id leer-Bug — kleiner Fix in `_enrich_with_erwaegungsgruende`
+- `min_max_diversification` ohne `decisions`-Array
+- `year_extracted` im boosts-Trace fehlt
+- `qu_module_available` / Gründe für QU-Nicht-Match fehlen
+- `tried_segments` bei `tenor_enforce miss` fehlt
+- Per-source per-typ budget counts fehlen
