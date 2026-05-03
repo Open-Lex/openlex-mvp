@@ -26,6 +26,8 @@ _format_context    = None
 _build_llm_messages  = None
 _stream_with_fallback = None
 _group_chunks_to_docs = None
+_SYSTEM_PROMPT_TEXT = None
+_MISTRAL_MODEL_NAME = None
 _is_initialized    = False
 _init_error: Optional[str] = None
 
@@ -33,6 +35,7 @@ _init_error: Optional[str] = None
 def _initialize():
     global _retrieve, _get_collection, _format_context, _build_llm_messages
     global _stream_with_fallback, _group_chunks_to_docs, _is_initialized, _init_error
+    global _SYSTEM_PROMPT_TEXT, _MISTRAL_MODEL_NAME
     if _is_initialized:
         return
     try:
@@ -43,6 +46,8 @@ def _initialize():
         _build_llm_messages   = _app._build_llm_messages
         _stream_with_fallback = _app.stream_with_fallback
         _group_chunks_to_docs = _app.group_chunks_to_docs
+        _SYSTEM_PROMPT_TEXT   = _app.SYSTEM_PROMPT
+        _MISTRAL_MODEL_NAME   = getattr(_app, '_MISTRAL_MODEL', 'mistral-medium-latest')
         _is_initialized = True
     except Exception as e:
         _init_error = str(e)
@@ -144,17 +149,22 @@ def _compute_grounding(answer: str, chunks: list[dict]) -> dict:
 
 
 def _run_llm_with_trace(query: str, chunks: list[dict]) -> dict:
-    """Run LLM synchronously (blocking). Returns answer + grounding trace."""
+    """Run LLM synchronously (blocking). Returns answer + grounding + timing trace."""
     t0 = time.time()
+
+    _EMPTY_GROUNDING = {
+        "grounding_score": 0.0, "cited_in_context": [],
+        "cited_not_in_context": [], "cited_nums": [], "total_docs": 0,
+    }
 
     if not _format_context or not _build_llm_messages or not _stream_with_fallback:
         return {
             "answer": "LLM-Funktionen nicht initialisiert.",
-            "provider": "n/a",
-            "approx_tokens": 0,
-            "duration_ms": 0,
-            "error": "not_initialized",
-            "grounding": {"grounding_score": 0.0, "cited_in_context": [], "cited_not_in_context": [], "cited_nums": [], "total_docs": 0},
+            "provider": "n/a", "model": "n/a",
+            "approx_tokens": 0, "duration_ms": 0, "first_token_ms": None,
+            "tokens_per_second": None, "error": "not_initialized",
+            "input_tokens": {"system_prompt": 0, "query": 0, "context": 0, "total": 0},
+            "grounding": _EMPTY_GROUNDING,
         }
 
     try:
@@ -163,46 +173,101 @@ def _run_llm_with_trace(query: str, chunks: list[dict]) -> dict:
     except Exception as e:
         return {
             "answer": f"Kontext-Aufbau fehlgeschlagen: {e}",
-            "provider": "n/a",
+            "provider": "n/a", "model": "n/a",
             "approx_tokens": 0,
             "duration_ms": round((time.time() - t0) * 1000, 1),
+            "first_token_ms": None, "tokens_per_second": None,
             "error": str(e),
-            "grounding": {"grounding_score": 0.0, "cited_in_context": [], "cited_not_in_context": [], "cited_nums": [], "total_docs": 0},
+            "input_tokens": {"system_prompt": 0, "query": 0, "context": 0, "total": 0},
+            "grounding": _EMPTY_GROUNDING,
         }
 
+    # Token-Schätzung für Input-Sektion
+    sys_txt  = _SYSTEM_PROMPT_TEXT or ""
+    sp_tok   = _approx_tokens(sys_txt)
+    q_tok    = _approx_tokens(query)
+    ctx_tok  = _approx_tokens(context)
+
     tokens: list[str] = []
-    provider_used = "unknown"
+    provider_used   = "unknown"
     error_msg: Optional[str] = None
+    t_first_token: Optional[float] = None
 
     try:
         for token, provider in _stream_with_fallback(messages):
+            if t_first_token is None:
+                t_first_token = time.time()
             tokens.append(token)
             provider_used = provider
     except Exception as e:
         error_msg = str(e)
 
-    answer     = "".join(tokens)
+    answer      = "".join(tokens)
     duration_ms = round((time.time() - t0) * 1000, 1)
+    first_ms    = round((t_first_token - t0) * 1000, 1) if t_first_token else None
+    out_tok     = _approx_tokens(answer)
+    tok_per_s   = round(out_tok / (duration_ms / 1000), 1) if duration_ms > 0 else None
 
-    grounding: dict = {
-        "grounding_score": 0.0, "cited_in_context": [], "cited_not_in_context": [],
-        "cited_nums": [], "total_docs": 0,
-    }
+    grounding: dict = _EMPTY_GROUNDING.copy()
     if answer and not error_msg:
         try:
             grounding = _compute_grounding(answer, chunks)
         except Exception:
             pass
 
+    model_name = _MISTRAL_MODEL_NAME or "unknown"
+    # Strip to base model if provider gives full string
+    if "via " in provider_used:
+        model_name = provider_used.split("via")[0].strip()
+
     return {
-        "answer":         answer,
-        "provider":       provider_used,
-        "approx_tokens":  _approx_tokens(answer),
-        "duration_ms":    duration_ms,
-        "error":          error_msg,
-        "grounding":      grounding,
+        "answer":           answer,
+        "provider":         provider_used,
+        "model":            model_name,
+        "approx_tokens":    out_tok,
+        "duration_ms":      duration_ms,
+        "first_token_ms":   first_ms,
+        "tokens_per_second": tok_per_s,
+        "error":            error_msg,
+        "input_tokens": {
+            "system_prompt": sp_tok,
+            "query":         q_tok,
+            "context":       ctx_tok,
+            "total":         sp_tok + q_tok + ctx_tok,
+        },
+        "grounding":        grounding,
     }
 
+
+
+def _build_final_context(results: list[dict]) -> dict:
+    """Build per-chunk context summary for the final_context stage visualization."""
+    context_chunks = []
+    for i, r in enumerate(results, 1):
+        text = r.get("text") or r.get("document", "")
+        meta = r.get("meta", {})
+        approx_tok = _approx_tokens(text)
+        context_chunks.append({
+            "rank":              i,
+            "chunk_id":          r.get("id") or meta.get("chunk_id", ""),
+            "source_type":       meta.get("source_type", ""),
+            "segment":           meta.get("segment", ""),
+            "aktenzeichen":      meta.get("aktenzeichen", ""),
+            "gesetz":            meta.get("gesetz", ""),
+            "titel":             meta.get("titel", ""),
+            "ce_score":          r.get("ce_score"),
+            "approx_tokens":     approx_tok,
+            "doc_preview":       text[:200],
+            "is_tenor_injected": bool(
+                r.get("_tenor_injected") or r.get("source") == "tenor_enforce"
+            ),
+        })
+    total_tok = sum(c["approx_tokens"] for c in context_chunks)
+    return {
+        "chunks":               context_chunks,
+        "total_chunks":         len(context_chunks),
+        "total_context_tokens": total_tok,
+    }
 
 # ═══════════════════════════════════════════════════════════════════════
 # SHARED RETRIEVE RESULT PROCESSOR
@@ -374,9 +439,10 @@ async def full_run(req: FullRunRequest):
     total_ms = (time.time() - t0) * 1000
 
     response = _process_retrieve_result(req.query, req.chunk_search, results, rich_trace, retrieval_ms)
-    response["llm"]          = llm_result
-    response["duration_ms"]  = round(total_ms, 1)
-    response["retrieval_ms"] = round(retrieval_ms, 1)
+    response["llm"]           = llm_result
+    response["final_context"] = _build_final_context(results)
+    response["duration_ms"]   = round(total_ms, 1)
+    response["retrieval_ms"]  = round(retrieval_ms, 1)
     return response
 
 
@@ -552,6 +618,7 @@ def _compute_stages(chunks: list[dict], rewrite_info: dict, tenor_enforce: dict 
         n_injected = len(tenor_enforce.get("injected", []))
         n_misses   = len(tenor_enforce.get("misses", []))
         already    = tenor_enforce.get("already_present", [])
+        te_ran     = bool(n_injected or n_misses or already)
         detail_parts = []
         if n_injected:
             segs = [e["segment"] for e in tenor_enforce.get("injected", [])]
@@ -563,7 +630,7 @@ def _compute_stages(chunks: list[dict], rewrite_info: dict, tenor_enforce: dict 
         stages.append({
             "id": "tenor_enforce",
             "label": "Tenor-Enforce",
-            "active": n_injected > 0 or n_misses > 0,
+            "active": te_ran,
             "count_in": n_final,
             "count_out": n_final + n_injected,
             "detail": " | ".join(detail_parts) if detail_parts else "Kein Urteil in Ergebnissen",
