@@ -1722,20 +1722,25 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
         })
 
         # Stage: selected_merge — combine pflicht + ce_passed into selected
-        _n_selected_from_ce = len(deduped) - len(_ce_dropped)
+        # Use len(_ce_kept) directly: NOT len(deduped)-len(_ce_dropped), which would
+        # overcount pflicht-IDs present in deduped (they are skipped in the CE loop).
+        _n_selected_from_ce = len(_ce_kept)
         _full_trace["stages"].append({
             "id": "selected_merge",
             "label": "Selected-Merge (Pflicht + CE-Passed)",
             "kind": "injector",
+            "flow_boundary": True,  # merges two pipelines: ce_passed + pflicht
             "active": True,
             "count_in": _n_selected_from_ce,
             "count_injected": _n_pflicht,
             "count_out": _n_pflicht + _n_selected_from_ce,
         })
-        # Correct selected count for subsequent stages
+        # _n_post_merge == actual len(selected) at this point
         _n_post_merge = _n_pflicht + _n_selected_from_ce
 
-    # Gruppiere nach Dokument und prüfe Min/Max
+    # Grouped doc view + decision tracking for full trace
+    _n_pre_minmax = len(selected)   # actual selected size before min/max/div
+    _minmax_decisions: list = []    # populated below when _full_trace is not None
     docs = group_chunks_to_docs(selected)
 
     # Falls unter Minimum: Auffüllen mit nächstbesten Candidates
@@ -1745,6 +1750,8 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             if cid not in selected_ids:
                 selected.append(chunk)
                 selected_ids.add(cid)
+                if _full_trace is not None:
+                    _minmax_decisions.append({"chunk_id": cid, "action": "injected", "reason": "min_docs_fill"})
                 docs = group_chunks_to_docs(selected)
                 if len(docs) >= MIN_DOCS:
                     break
@@ -1754,6 +1761,11 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
         docs = docs[:MAX_DOCS]
         # Selected auf die Chunks der behaltenen Docs reduzieren
         kept_keys = {d["key"] for d in docs}
+        if _full_trace is not None:
+            for _c in selected:
+                _c_id = _c.get("id") or _c.get("meta", {}).get("chunk_id", "") or _c["text"][:30]
+                if _doc_key(_c.get("meta", {})) not in kept_keys:
+                    _minmax_decisions.append({"chunk_id": _c_id, "action": "filtered", "reason": "exceeds_max_docs"})
         selected = [c for c in selected if _doc_key(c.get("meta", {})) in kept_keys]
         # Pflicht-Chunks immer behalten
         for c in pflicht:
@@ -1775,34 +1787,40 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                     if cid not in selected_ids:
                         selected.append(chunk)
                         selected_ids.add(cid)
+                        if _full_trace is not None:
+                            _minmax_decisions.append({"chunk_id": cid, "action": "injected", "reason": f"diversification_{group_name}"})
                         print(f"  Diversifizierung: {group_name}-Chunk nachgeschoben")
                         break
 
     # EG-Anreicherung: Passende Erwägungsgründe automatisch nachladen
     if _full_trace is not None:
         _n_after_minmax_div = len(selected)
-        # Compare with _n_post_merge to compute injected/filtered
-        _n_minmax_injected = max(0, _n_after_minmax_div - _n_post_merge)
-        _n_minmax_filtered = max(0, _n_post_merge - _n_after_minmax_div)
+        # Use _n_pre_minmax (ground truth before block) instead of _n_post_merge
+        _n_minmax_injected = max(0, _n_after_minmax_div - _n_pre_minmax)
+        _n_minmax_filtered = max(0, _n_pre_minmax - _n_after_minmax_div)
         _full_trace["stages"].append({
             "id": "min_max_diversification",
             "label": "Min-Docs / Max-Docs / Diversification",
             "kind": "injector" if _n_minmax_injected > 0 else ("filter" if _n_minmax_filtered > 0 else "transformer"),
             "active": True,
-            "count_in": _n_post_merge,
+            "count_in": _n_pre_minmax,
             "count_injected": _n_minmax_injected,
             "count_filtered": _n_minmax_filtered,
             "count_out": _n_after_minmax_div,
             "min_docs": MIN_DOCS,
             "max_docs": MAX_DOCS,
-            "decisions": [],
+            "decisions": _minmax_decisions,
         })
 
     _pre_eg_count = len(selected)
     selected = _enrich_with_erwaegungsgruende(selected, col)
     if _full_trace is not None:
         _eg_injected = [
-            {"chunk_id": c.get("id") or c.get("meta", {}).get("chunk_id", ""), "source": "eg_enrichment"}
+            {
+                "chunk_id": c.get("id") or c.get("meta", {}).get("chunk_id", ""),
+                "action": "injected",
+                "source": "eg_enrichment",
+            }
             for c in selected[_pre_eg_count:]
         ]
         _full_trace["stages"].append({
@@ -1911,6 +1929,23 @@ def _validate_full_trace(trace: dict, results: list) -> dict:
         elif kind == "transformer":
             if ci != co:
                 issues.append(f"{s['id']}: transformer {ci} != {co}")
+        # Decision-count check: only when decisions use the action="injected/filtered" schema.
+        # Stages with other schemas (semantic: raw_distance, per_source: kept-only, boosts: before/after)
+        # are excluded by the has_action_schema gate.
+        decisions = s.get("decisions", [])
+        if decisions:
+            n_inj_dec = sum(1 for d in decisions if d.get("action") == "injected")
+            n_fil_dec = sum(1 for d in decisions if d.get("action") == "filtered")
+            has_action_schema = n_inj_dec > 0 or n_fil_dec > 0
+            if has_action_schema:
+                if kind == "injector" and inj > 0 and n_inj_dec != inj:
+                    issues.append(
+                        f"{s['id']}: count_injected={inj} but {n_inj_dec} 'injected' decisions"
+                    )
+                if kind == "filter" and fil > 0 and n_fil_dec != fil:
+                    issues.append(
+                        f"{s['id']}: count_filtered={fil} but {n_fil_dec} 'filtered' decisions"
+                    )
         # Inter-stage flow check (skipped for query-level / fork stages)
         if i > 0:
             prev = stages[i - 1]
@@ -2118,6 +2153,7 @@ def _enrich_with_erwaegungsgruende(results: list[dict], col) -> list[dict]:
             r = col.get(ids=[chroma_id], include=["documents", "metadatas"])
             if r["ids"]:
                 results.append({
+                    "id": chroma_id,
                     "text": r["documents"][0],
                     "meta": r["metadatas"][0],
                     "distance": 0.10,
