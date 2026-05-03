@@ -360,9 +360,14 @@
     .snode:hover              { border-color: var(--border); background: var(--bg4); }
     .snode.sn-selected        { border-color: var(--gold); background: var(--gold-dim); }
     .snode.sn-active          { border-left: 2px solid var(--gold); }
-    .snode.sn-inactive        { opacity: 0.38; }
+    .snode.sn-inactive        {
+      opacity: 0.28;
+      border-style: dotted;
+      border-color: rgba(201,160,74,0.12);
+    }
+    .snode.sn-inactive:hover  { opacity: 0.45; }
     .snode.sn-error           { border-color: var(--red); }
-    .snode.sn-boundary        { border-style: dashed; }
+    .snode.sn-boundary        { border-left-style: dashed; }
 
     .sn-kind {
       position: absolute;
@@ -416,18 +421,32 @@
       opacity: 0.85 !important;
     }
 
-    .flow-band.lane-dimmed { opacity: 0.18; }
+    .flow-band.lane-dimmed   { opacity: 0.18; }
+    .flow-band.band-inactive { opacity: 0.22; }
 
     /* ── Per-stage indicators ────────────────────────────────── */
     .sn-indic {
       position: absolute;
       bottom: 5px;
-      right: 5px;
-      width: 3px;
+      right: 4px;
+      width: 2px;                    /* subtle by default */
       border-radius: 2px;
       min-height: 4px;
-      pointer-events: none;
+      opacity: 0.45;
+      pointer-events: auto;          /* allow title tooltip on indicator */
+      transition: width 0.15s, opacity 0.15s;
     }
+
+    /* Hover: parent card hovered → indicator becomes prominent */
+    .snode:hover .sn-indic,
+    .snode.sn-selected .sn-indic {
+      width: 4px;
+      opacity: 1.0;
+    }
+
+    /* Hide indicators on inactive stages */
+    .snode.sn-inactive .sn-indic,
+    .snode.sn-inactive .sn-boost-dot { display: none; }
 
     .sn-indic-inject { background: linear-gradient(to top, #3a7a4a, #6abf6a); }
     .sn-indic-filter { background: linear-gradient(to top, #7a3a3a, #c06060); }
@@ -435,14 +454,19 @@
     .sn-boost-dot {
       position: absolute;
       bottom: 6px;
-      right: 6px;
+      right: 5px;
       width: 5px;
       height: 5px;
       border-radius: 50%;
       background: #c9a04a;
       box-shadow: 0 0 4px rgba(201,160,74,0.8);
-      pointer-events: none;
+      pointer-events: auto;
+      opacity: 0.55;
+      transition: opacity 0.15s;
     }
+
+    .snode:hover .sn-boost-dot,
+    .snode.sn-selected .sn-boost-dot { opacity: 1; }
 
     /* ── Tracking-mode stage borders ────────────────────────── */
     .snode.sn-tracked          { border-color: var(--gold) !important; box-shadow: 0 0 5px rgba(201,160,74,0.25); }
@@ -457,13 +481,22 @@
 
     /* ── Detail panel ────────────────────────────────────────── */
     #detail-panel {
-      height: 196px;
+      height: 200px;
       border-top: 0.5px solid var(--border);
       background: var(--bg2);
       display: flex;
       flex-direction: column;
       flex-shrink: 0;
+      transition: height 0.18s ease;
+      overflow: hidden;
     }
+
+    /* Collapsed: mini-bar */
+    #detail-panel.dp-collapsed {
+      height: 30px;
+    }
+
+    #detail-panel.dp-collapsed #detail-body { display: none; }
 
     #detail-hdr {
       display: flex;
@@ -471,13 +504,27 @@
       gap: 12px;
       padding: 4px 14px;
       border-bottom: 0.5px solid var(--border2);
+      flex-shrink: 0;
     }
+
+    /* Collapsed header: no bottom border, hint text style */
+    #detail-panel.dp-collapsed #detail-hdr {
+      border-bottom: none;
+      cursor: pointer;
+    }
+
+    #detail-panel.dp-collapsed #detail-hdr:hover { background: var(--bg3); }
 
     #detail-title {
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
       color: var(--gold);
       flex: 1;
+    }
+
+    #detail-panel.dp-collapsed #detail-title {
+      font-size: 10px;
+      color: var(--text3);
     }
 
     .detail-meta {
@@ -648,15 +695,13 @@
 </div>
 
 <!-- ── Detail panel ────────────────────────────────────────────────────── -->
-<div id="detail-panel">
+<div id="detail-panel" class="dp-collapsed">
   <div id="detail-hdr">
-    <span id="detail-title">— Stage auswählen —</span>
+    <span id="detail-title">Klick auf eine Stage → Decisions</span>
     <div class="detail-meta" id="detail-meta"></div>
     <button id="detail-close" title="Schließen">×</button>
   </div>
-  <div id="detail-body">
-    <div class="detail-empty">Stage in der Lane-Ansicht auswählen.</div>
-  </div>
+  <div id="detail-body"></div>
 </div>
 
 <script>
@@ -859,12 +904,13 @@ function bandWidth(count) {
 }
 
 /** Inline SVG band between two stage cards */
-function flowBandHtml(fromId, toId, count, isXn) {
+function flowBandHtml(fromId, toId, count, isXn, inactive) {
   const w    = bandWidth(count);
   const col  = isXn ? "#e0b87a" : "#c9a04a";
-  const op   = isXn ? 0.70       : 0.60;
+  const op   = isXn ? 0.70 : 0.60;
   const tip  = `${fromId} → ${toId}: ${count} Chunks`;
-  return `<svg class="flow-band" role="img"
+  const cls  = ["flow-band", inactive ? "band-inactive" : ""].filter(Boolean).join(" ");
+  return `<svg class="${cls}" role="img"
     data-from="${esc(fromId)}" data-to="${esc(toId)}" data-count="${count}"
     width="34" height="54" viewBox="0 0 34 54" aria-label="${esc(tip)}">
     <title>${esc(tip)}</title>
@@ -1063,10 +1109,13 @@ function renderLanes() {
 
       // SVG flow band before this stage (except first)
       if (i > 0) {
-        const prevSid   = phase.stages[i - 1];
-        const prevS     = sm[prevSid];
-        const flowCount = prevS && prevS.count_out != null ? prevS.count_out : 0;
-        html += flowBandHtml(prevSid, sid, flowCount, false);
+        const prevSid    = phase.stages[i - 1];
+        const prevS      = sm[prevSid];
+        const flowCount  = prevS && prevS.count_out != null ? prevS.count_out : 0;
+        const prevActive = prevS ? prevS._active !== false : true;
+        const curActive  = s ? s._active !== false : true;
+        const bandInact  = !prevActive || !curActive;
+        html += flowBandHtml(prevSid, sid, flowCount, false, bandInact);
       }
 
       if (!s) {
@@ -1124,7 +1173,8 @@ function renderLanes() {
         <div class="sn-id">${esc(sid)}</div>
         <div class="sn-label">${esc(label)}</div>
         ${countsHtml}
-        ${stageIndicatorHtml(s)}
+        ${active ? stageIndicatorHtml(s) : ""}
+        ${!active ? '<div style="position:absolute;bottom:4px;left:6px;font-size:7px;color:var(--text3);font-family:monospace;letter-spacing:0.05em">INAKTIV</div>' : ""}
       </div>`;
     }
 
@@ -1207,6 +1257,7 @@ function renderSidebar() {
 
 function renderDetail() {
   if (!S.selectedStage) { resetDetail(); return; }
+  expandDetail();
 
   const ft    = S.data && S.data.full_trace;
   const stage = ft && ft.stages && ft.stages.find(s => s.id === S.selectedStage);
@@ -1286,10 +1337,21 @@ function renderDetail() {
   dBody.innerHTML = html;
 }
 
-function resetDetail() {
-  dTitle.textContent = "— Stage auswählen —";
+const detailPanel = document.getElementById("detail-panel");
+
+function collapseDetail() {
+  detailPanel.classList.add("dp-collapsed");
+  dTitle.textContent = "Klick auf eine Stage → Decisions";
   dMeta.innerHTML = "";
-  dBody.innerHTML = `<div class="detail-empty">Stage in der Lane-Ansicht auswählen.</div>`;
+  dBody.innerHTML = "";
+}
+
+function expandDetail() {
+  detailPanel.classList.remove("dp-collapsed");
+}
+
+function resetDetail() {
+  collapseDetail();
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -1302,9 +1364,10 @@ function togglePhase(id) {
 }
 
 function selectStage(sid) {
-  S.selectedStage = (S.selectedStage === sid) ? null : sid;
+  const toggled = (S.selectedStage === sid);
+  S.selectedStage = toggled ? null : sid;
   renderLanes();
-  renderDetail();
+  renderDetail();   // will expand or collapse as appropriate
 }
 
 function selectChunk(cid) {
@@ -1339,6 +1402,17 @@ document.getElementById("detail-close").addEventListener("click", () => {
   S.selectedStage = null;
   renderDetail();
   renderLanes();
+});
+
+// Click on collapsed header → restore last selected stage or just expand hint
+document.getElementById("detail-hdr").addEventListener("click", e => {
+  if (!detailPanel.classList.contains("dp-collapsed")) return;
+  if (e.target.closest("#detail-close")) return;
+  // If a stage was previously selected, re-open it; otherwise just expand empty
+  if (S.selectedStage) {
+    expandDetail();
+    renderDetail();
+  }
 });
 
 // ═══════════════════════════════════════════════════════════════
