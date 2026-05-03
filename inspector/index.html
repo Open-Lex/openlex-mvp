@@ -685,6 +685,97 @@
     }
     .llm-grounding-fill-lg { height:100%; border-radius:2px; transition:width 0.4s; }
 
+
+    /* ── Final-Context stage card ────────────────────────────────────── */
+    .snode.sn-final-ctx {
+      border: 0.5px solid rgba(201,160,74,0.55);
+      background: rgba(201,160,74,0.04);
+      box-shadow: 0 0 8px rgba(201,160,74,0.12);
+      min-width: 130px;
+    }
+    .snode.sn-final-ctx.sn-selected {
+      box-shadow: 0 0 14px rgba(201,160,74,0.30);
+    }
+
+    /* ── LLM detail panel sections ───────────────────────────────────── */
+    .llm-section {
+      margin-bottom: 10px;
+    }
+    .llm-section-hdr {
+      font-size: 9px;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--text3);
+      border-bottom: 0.5px solid var(--border3);
+      padding-bottom: 3px;
+      margin-bottom: 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .llm-kv {
+      display: flex;
+      gap: 0;
+      font-size: 10px;
+      margin-bottom: 3px;
+      align-items: baseline;
+    }
+    .llm-kv-key {
+      color: var(--text3);
+      min-width: 180px;
+      flex-shrink: 0;
+    }
+    .llm-kv-val {
+      color: var(--text2);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .llm-kv-val.llm-ok  { color: var(--green); }
+    .llm-kv-val.llm-err { color: var(--red);   }
+
+    .llm-collapsible-hdr {
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .llm-collapsible-hdr:hover { color: var(--text2); }
+    .llm-collapsible-body {
+      display: none;
+      margin-top: 4px;
+      background: var(--bg);
+      border: 0.5px solid var(--border3);
+      padding: 6px 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      color: var(--text3);
+      white-space: pre-wrap;
+      max-height: 160px;
+      overflow-y: auto;
+    }
+    .llm-collapsible-body.open { display: block; }
+
+    /* ── Final-Context chunk table ───────────────────────────────────── */
+    .fc-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10px;
+    }
+    .fc-table th {
+      font-weight: normal;
+      text-align: left;
+      color: var(--text3);
+      padding: 2px 5px;
+      border-bottom: 0.5px solid var(--border3);
+      white-space: nowrap;
+    }
+    .fc-table td {
+      padding: 2px 5px;
+      color: var(--text2);
+      border-bottom: 0.5px solid var(--border3);
+    }
+    .fc-table tr:hover td { background: var(--bg3); }
+    .fc-tenor-mark { color: #4a9a6a; font-size: 9px; }
+    .fc-total-row td { color: var(--gold); font-weight: bold; border-top: 0.5px solid var(--border); border-bottom: none; }
+
   </style>
 </head>
 <body>
@@ -804,7 +895,7 @@ const PHASES = [
   {
     id: "final",
     label: "Phase D — Final",
-    stages: ["pflicht_urteilsname_injection", "selected_merge", "min_max_diversification", "eg_enrichment", "tenor_enforce", "llm_generation"],
+    stages: ["pflicht_urteilsname_injection", "selected_merge", "min_max_diversification", "eg_enrichment", "tenor_enforce", "final_context", "llm_generation"],
   },
 ];
 
@@ -1095,6 +1186,97 @@ function applyTrackingOverlay() {
 }
 
 // ═══════════════════════════════════════════════════════════════
+// FINAL-CONTEXT STAGE HELPERS (Patch 3.1)
+// ═══════════════════════════════════════════════════════════════
+
+function finalContextStageCardHtml(sid, fc, isSelected) {
+  const noData = !fc;
+  const cls = [
+    "snode sn-final-ctx",
+    isSelected ? "sn-selected" : "",
+    !noData    ? "sn-active"   : "sn-inactive",
+  ].filter(Boolean).join(" ");
+
+  let countsHtml = "";
+  if (noData) {
+    countsHtml = `<div style="font-size:9px;color:var(--text3)">–</div>`;
+  } else {
+    const n   = fc.total_chunks || 0;
+    const tok = fc.total_context_tokens || 0;
+    countsHtml = `<div class="sn-counts">
+      <span class="sc-in">${n}</span>
+      <span class="sc-arr">→</span>
+      <span class="sc-out eq">${tok > 999 ? (tok/1000).toFixed(1)+"k" : tok}</span>
+      <span class="sc-dec">tok</span>
+    </div>`;
+  }
+
+  const title = noData
+    ? "Kein Final-Context — Retrieval-only"
+    : `${(fc.total_chunks||0)} Chunks · ${(fc.total_context_tokens||0)} Kontext-Tokens`;
+
+  return `<div class="${cls}"
+    data-stage="${esc(sid)}"
+    onclick="selectStage('${esc(sid)}')"
+    title="${esc(title)}">
+    <div class="sn-kind">CONTEXT</div>
+    <div class="sn-id">${esc(sid)}</div>
+    <div class="sn-label">Final Context</div>
+    ${countsHtml}
+  </div>`;
+}
+
+function renderFinalContextDetail(fc) {
+  dTitle.textContent = "Final Context — LLM-Input";
+
+  const totalTok = fc.total_context_tokens || 0;
+  const n        = fc.total_chunks || 0;
+  const tenorCnt = (fc.chunks || []).filter(c => c.is_tenor_injected).length;
+  dMeta.innerHTML = [
+    `<span class="llm-gs-pill">${n} Chunks</span>`,
+    `<span class="llm-gs-pill">${totalTok} Kontext-Tokens</span>`,
+    tenorCnt ? `<span class="llm-gs-pill gs-ok">davon ${tenorCnt} Tenor-injiziert</span>` : "",
+  ].filter(Boolean).join("");
+
+  const rows = (fc.chunks || []).map((c, i) => {
+    const label = c.aktenzeichen || c.gesetz || c.chunk_id.slice(0,30);
+    const tenor = c.is_tenor_injected
+      ? `<span class="fc-tenor-mark" title="Tenor-injiziert">⇡</span>` : "–";
+    const ceStr = c.ce_score != null ? (+c.ce_score).toFixed(3) : "–";
+    return `<tr>
+      <td style="font-family:monospace;color:var(--text3)">${c.rank}</td>
+      <td title="${esc(c.chunk_id)}" style="max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(label)}</td>
+      <td>${esc(c.source_type)}</td>
+      <td>${ceStr}</td>
+      <td style="text-align:right">${c.approx_tokens}</td>
+      <td style="text-align:center">${tenor}</td>
+    </tr>`;
+  }).join("");
+
+  dBody.innerHTML = `
+    <table class="fc-table">
+      <thead><tr>
+        <th>#</th>
+        <th>Quelle</th>
+        <th>Typ</th>
+        <th>CE-Score</th>
+        <th style="text-align:right">~Tokens</th>
+        <th style="text-align:center">Tenor</th>
+      </tr></thead>
+      <tbody>
+        ${rows}
+        <tr class="fc-total-row">
+          <td colspan="4">Gesamt</td>
+          <td style="text-align:right">${totalTok}</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  `;
+}
+
+
+// ═══════════════════════════════════════════════════════════════
 // LLM STAGE HELPERS (Paket 3)
 // ═══════════════════════════════════════════════════════════════
 
@@ -1153,38 +1335,126 @@ function renderLlmDetail(llm) {
   const g      = llm.grounding || {};
   const scoreP = Math.round((g.grounding_score != null ? g.grounding_score : 1.0) * 100);
   const halluc = (g.cited_not_in_context || []).length > 0;
-  const barColor = halluc         ? "var(--red)"
-                 : scoreP >= 100  ? "var(--green)"
-                 :                  "var(--yellow)";
+  const barColor = halluc        ? "var(--red)"
+                 : scoreP >= 100 ? "var(--green)"
+                 :                 "var(--yellow)";
+  const itok   = llm.input_tokens || {};
 
   dTitle.textContent = "LLM-Antwort";
   dMeta.innerHTML = [
-    `<span class="llm-gs-pill">Provider: ${esc(llm.provider || "–")}</span>`,
-    `<span class="llm-gs-pill">~${llm.approx_tokens || "?"} Tokens</span>`,
+    `<span class="llm-gs-pill">${esc(llm.model || llm.provider || "–")}</span>`,
+    `<span class="llm-gs-pill">${llm.approx_tokens || "?"} out-tok</span>`,
     `<span class="llm-gs-pill">${llm.duration_ms || "?"}ms</span>`,
     `<span class="llm-gs-pill ${scoreP >= 100 && !halluc ? "gs-ok" : "gs-warn"}">Grounding ${scoreP}%</span>`,
   ].join("");
 
-  let alerts = "";
-  if (halluc) {
-    alerts += `<div style="color:var(--red);font-size:10px;margin-bottom:4px">
-      ⚠ [Quelle ${esc((g.cited_not_in_context || []).join(", "))}] nicht im Kontext (Halluzination?)
-    </div>`;
-  }
-  if ((g.cited_nums || []).length > 0) {
-    alerts += `<div style="color:var(--text3);font-size:10px;margin-bottom:6px">
-      Zitiert: [Quelle ${esc((g.cited_nums || []).join(", "))}] — ${g.total_docs || 0} Quelldokumente
-    </div>`;
-  }
+  // ── Sektion 1: Prompt-Aufbau ──
+  const fcChunks = S.data && S.data.final_context ? S.data.final_context.total_chunks : "?";
+  const spCollId = "sp-coll-" + Date.now();
+  const ansCollId = "ans-coll-" + Date.now();
 
-  dBody.innerHTML = `
-    <div class="llm-grounding-bar-lg">
+  const sec1 = `<div class="llm-section">
+    <div class="llm-section-hdr">Prompt-Aufbau (Input)</div>
+    <div class="llm-kv">
+      <span class="llm-kv-key llm-collapsible-hdr" onclick="toggleCollapsible('${spCollId}')">
+        ▶ System-Prompt
+      </span>
+      <span class="llm-kv-val">${itok.system_prompt || "–"} Tokens</span>
+    </div>
+    <div id="${spCollId}" class="llm-collapsible-body">${esc(S.data && S.data.__sys_prompt ? S.data.__sys_prompt : "(wird nicht übertragen)")}</div>
+    <div class="llm-kv">
+      <span class="llm-kv-key">User-Query</span>
+      <span class="llm-kv-val">${itok.query || "–"} Tokens</span>
+    </div>
+    <div class="llm-kv">
+      <span class="llm-kv-key">Context (${fcChunks} Chunks)</span>
+      <span class="llm-kv-val">${itok.context || "–"} Tokens</span>
+    </div>
+    <div class="llm-kv" style="border-top:0.5px solid var(--border3);margin-top:3px;padding-top:3px">
+      <span class="llm-kv-key" style="color:var(--text2)">Total Input</span>
+      <span class="llm-kv-val" style="color:var(--gold)">${itok.total || "–"} Tokens</span>
+    </div>
+  </div>`;
+
+  // ── Sektion 2: Verarbeitung ──
+  const tps = llm.tokens_per_second != null ? llm.tokens_per_second.toFixed(1) : "–";
+  const ftm = llm.first_token_ms   != null ? llm.first_token_ms   + " ms" : "–";
+  const sec2 = `<div class="llm-section">
+    <div class="llm-section-hdr">Modell &amp; Latenzen</div>
+    <div class="llm-kv">
+      <span class="llm-kv-key">Provider</span>
+      <span class="llm-kv-val">${esc(llm.provider || "–")}</span>
+    </div>
+    <div class="llm-kv">
+      <span class="llm-kv-key">Modell</span>
+      <span class="llm-kv-val">${esc(llm.model || "–")}</span>
+    </div>
+    <div class="llm-kv">
+      <span class="llm-kv-key">First Token</span>
+      <span class="llm-kv-val">${ftm}</span>
+    </div>
+    <div class="llm-kv">
+      <span class="llm-kv-key">Total Generierung</span>
+      <span class="llm-kv-val">${llm.duration_ms || "–"} ms</span>
+    </div>
+    <div class="llm-kv">
+      <span class="llm-kv-key">Tokens/Sekunde</span>
+      <span class="llm-kv-val">${tps}</span>
+    </div>
+  </div>`;
+
+  // ── Sektion 3: Output + Grounding ──
+  let groundingRows = "";
+  for (const num of (g.cited_nums || [])) {
+    const inCtx  = !(g.cited_not_in_context || []).includes(num);
+    const icon   = inCtx ? "✓" : "⚠";
+    const cls2   = inCtx ? "llm-ok" : "llm-err";
+    // Find matching chunk from final_context
+    const fc = S.data && S.data.final_context;
+    let label = `Quelle ${num}`;
+    if (fc && fc.chunks) {
+      const c = fc.chunks.find(x => x.rank === parseInt(num));
+      if (c) label = c.aktenzeichen || c.gesetz || c.chunk_id.slice(0, 30);
+    }
+    groundingRows += `<div class="llm-kv">
+      <span class="llm-kv-key">[Quelle ${num}] → ${esc(label)}</span>
+      <span class="llm-kv-val ${cls2}">${icon} ${inCtx ? "im Kontext" : "NICHT im Kontext"}</span>
+    </div>`;
+  }
+  if (!groundingRows) groundingRows = `<div style="color:var(--text3);font-size:10px">Keine [Quelle]-Zitate in der Antwort.</div>`;
+
+  const sec3 = `<div class="llm-section">
+    <div class="llm-section-hdr">Output &amp; Grounding</div>
+    <div class="llm-kv">
+      <span class="llm-kv-key">Output Tokens</span>
+      <span class="llm-kv-val">${llm.approx_tokens || "–"}</span>
+    </div>
+    <div class="llm-grounding-bar-lg" style="margin:5px 0 8px">
       <div class="llm-grounding-fill-lg" style="width:${scoreP}%;background:${barColor}"></div>
     </div>
-    ${alerts}
-    ${llm.error ? `<div style="color:var(--red);font-size:10px;margin-bottom:6px">LLM-Fehler: ${esc(llm.error)}</div>` : ""}
-    <div class="llm-answer">${esc(llm.answer || "(keine Antwort)")}</div>
-  `;
+    <div style="font-size:10px;color:${halluc ? "var(--red)" : "var(--green)"};margin-bottom:6px">
+      Grounding ${scoreP}% — ${(g.cited_nums||[]).length} Quellen zitiert${halluc ? " ⚠ " + (g.cited_not_in_context||[]).length + " halluziniert" : ""}
+    </div>
+    ${groundingRows}
+    <div class="llm-section-hdr" style="margin-top:8px">Antwort-Text</div>
+    <div class="llm-collapsible-hdr" style="font-size:10px;color:var(--text3);margin-bottom:4px" onclick="toggleCollapsible('${ansCollId}')">
+      ▶ Volltext einblenden (${llm.approx_tokens || "?"} Tokens)
+    </div>
+    <div id="${ansCollId}" class="llm-collapsible-body">${esc(llm.answer || "(keine Antwort)")}</div>
+    ${llm.error ? `<div style="color:var(--red);font-size:10px;margin-top:6px">Fehler: ${esc(llm.error)}</div>` : ""}
+  </div>`;
+
+  dBody.innerHTML = sec1 + sec2 + sec3;
+}
+
+function toggleCollapsible(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.toggle("open");
+  // Update arrow
+  const hdr = el.previousElementSibling;
+  if (hdr && hdr.textContent.startsWith("▶")) hdr.textContent = hdr.textContent.replace("▶", "▼");
+  else if (hdr && hdr.textContent.startsWith("▼")) hdr.textContent = hdr.textContent.replace("▼", "▶");
 }
 
 
@@ -1296,6 +1566,13 @@ function renderLanes() {
         const curActive  = s ? s._active !== false : true;
         const bandInact  = !prevActive || !curActive;
         html += flowBandHtml(prevSid, sid, flowCount, false, bandInact);
+      }
+
+      // Special: Final-Context stage
+      if (sid === "final_context") {
+        const fc = S.data && S.data.final_context;
+        html += finalContextStageCardHtml(sid, fc, isSel);
+        continue;
       }
 
       // Special: LLM-Generation stage — muss VOR !s stehen, da sm["llm_generation"] immer undefined
@@ -1444,6 +1721,20 @@ function renderSidebar() {
 
 function renderDetail() {
   if (!S.selectedStage) { resetDetail(); return; }
+
+  // Special: Final-Context stage
+  if (S.selectedStage === "final_context") {
+    if (S.data && S.data.final_context) {
+      expandDetail();
+      renderFinalContextDetail(S.data.final_context);
+    } else {
+      expandDetail();
+      dTitle.textContent = "Final Context";
+      dMeta.innerHTML = "";
+      dBody.innerHTML = `<div class="detail-empty">Kein Final-Context — Full-Mode aktivieren.</div>`;
+    }
+    return;
+  }
 
   // Special: LLM-Generation stage
   if (S.selectedStage === "llm_generation") {
