@@ -577,6 +577,21 @@
 
 <script>
 // ═══════════════════════════════════════════════════════════════
+// BASE PATH — works under both / and /inspect/
+// ═══════════════════════════════════════════════════════════════
+
+const _BASE = (() => {
+  // Strip trailing filename, keep directory (e.g. "/inspect/" or "/")
+  const p = window.location.pathname.replace(/[^/]*$/, "");
+  return p.endsWith("/") ? p : p + "/";
+})();
+
+function apiUrl(path) {
+  // path like "api/inspect" → "/inspect/api/inspect" or "/api/inspect"
+  return _BASE + path;
+}
+
+// ═══════════════════════════════════════════════════════════════
 // CONSTANTS
 // ═══════════════════════════════════════════════════════════════
 
@@ -711,7 +726,7 @@ async function doInspect() {
   metaMs.textContent = "";
 
   try {
-    const resp = await fetch("/api/inspect", {
+    const resp = await fetch(apiUrl("api/inspect"), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
