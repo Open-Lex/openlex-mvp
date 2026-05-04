@@ -3768,7 +3768,7 @@ if __name__ == "__main__":
     static_dir = os.path.join(os.path.dirname(__file__), "static")
     app.queue(default_concurrency_limit=10).launch(
         server_name="127.0.0.1",
-        server_port=7860,
+        server_port=int(os.environ.get("GRADIO_SERVER_PORT", 7860)),
         share=False,
         show_error=True,
         root_path=os.environ.get("GRADIO_ROOT_PATH", ""),
