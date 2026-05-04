@@ -3657,19 +3657,19 @@ def build_app() -> gr.Blocks:
         # ── Input (fixed at bottom via CSS) ──
         with gr.Row(elem_id="input-row"):
             # Multi-Skill: Dropdown (nur sichtbar wenn > 1 Skill live)
-        _manifest_live = [
-            (v.get('title', k), k)
-            for k, v in (load_skills_manifest().get('skills') or {}).items()
-            if v.get('status') == 'live'
-        ] or [('Datenschutzrecht (DSGVO/BDSG)', 'datenschutz')]
-        skill_selector = gr.Dropdown(
-            choices=_manifest_live,
-            value=_manifest_live[0][1],
-            label='Rechtsgebiet',
-            interactive=True,
-            visible=len(_manifest_live) > 1,
-        )
-        msg_input = gr.Textbox(
+            _manifest_live = [
+                (v.get('title', k), k)
+                for k, v in (load_skills_manifest().get('skills') or {}).items()
+                if v.get('status') == 'live'
+            ] or [('Datenschutzrecht (DSGVO/BDSG)', 'datenschutz')]
+            skill_selector = gr.Dropdown(
+                choices=_manifest_live,
+                value=_manifest_live[0][1],
+                label='Rechtsgebiet',
+                interactive=True,
+                visible=len(_manifest_live) > 1,
+            )
+            msg_input = gr.Textbox(
                 placeholder="Frage eingeben...",
                 label="",
                 lines=1,
@@ -3677,7 +3677,7 @@ def build_app() -> gr.Blocks:
                 elem_id="msg-input",
                 scale=8,
             )
-            submit_btn = gr.Button("\u279c", variant="primary", elem_id="submit-btn", scale=1)
+            submit_btn = gr.Button("➜", variant="primary", elem_id="submit-btn", scale=1)
 
         # ── Hidden ──
         clear_trigger = gr.Button("", visible=False, elem_id="clear-trigger")
