@@ -786,7 +786,8 @@ def retrieve_candidates_only(question: str, top_k: int = 150) -> list[dict]:
 
 def retrieve(question: str, history: list[tuple[str, str]] | None = None,
              _candidates_only: bool = False, _candidates_top_k: int = 150,
-             return_trace: bool = False, trace_format: str = "flat"):
+             return_trace: bool = False, trace_format: str = "flat",
+             skill_id: str = ACTIVE_SKILL):
     """Führt semantische + Norm-basierte + Keyword-Suche + Reranking durch.
 
     Interne Parameter (nicht für externe Aufrufer):
@@ -848,7 +849,7 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
         }
     # ── /Full-Trace Init ──
     model = get_model()
-    col = get_collection()
+    col = get_collection(skill_id)
 
     # FIX 1: Bei kurzen Folgefragen Kontext aus History ergänzen
     search_query = question
