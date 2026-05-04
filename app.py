@@ -2384,9 +2384,12 @@ def format_context(chunks: list[dict]) -> str:
 # ═══════════════════════════════════════════════════════════════════════════
 
 
-def _build_llm_messages(question: str, context: str, history: list[dict]) -> list[dict]:
-    """Baut die Message-Liste für LLM-Aufrufe."""
-    messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+def _build_llm_messages(question: str, context: str, history: list[dict],
+                        skill_id: str = ACTIVE_SKILL) -> list[dict]:
+    """Baut die Message-Liste für LLM-Aufrufe.
+    skill_id wird genutzt um den richtigen System-Prompt zu laden.
+    """
+    messages = [{"role": "system", "content": load_system_prompt(skill_id)}]
     for msg in history[-6:]:
         messages.append(msg)
     messages.append({"role": "user", "content": (
