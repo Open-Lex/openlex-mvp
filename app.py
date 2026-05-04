@@ -233,7 +233,7 @@ SEGMENT_BOOST = {
 # ---------------------------------------------------------------------------
 
 _model: SentenceTransformer | None = None
-_collection: Any = None
+_collection_cache: dict = {}  # Multi-Skill: {skill_id: Collection}
 _db_stats: dict[str, int] | None = None
 
 
@@ -244,12 +244,14 @@ def get_model() -> SentenceTransformer:
     return _model
 
 
-def get_collection():
-    global _collection
-    if _collection is None:
+def get_collection(skill_id: str = ACTIVE_SKILL):
+    """Gibt die ChromaDB-Collection fuer einen Skill zurueck (Dict-Cache)."""
+    global _collection_cache
+    if skill_id not in _collection_cache:
         client = chromadb.PersistentClient(path=CHROMADB_DIR)
-        _collection = client.get_collection(COLLECTION_NAME)
-    return _collection
+        col_name = get_collection_name(skill_id)
+        _collection_cache[skill_id] = client.get_collection(col_name)
+    return _collection_cache[skill_id]
 
 
 _reranker: CrossEncoder | None = None
