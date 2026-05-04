@@ -66,12 +66,14 @@ class InspectRequest(BaseModel):
     query: str
     chunk_search: Optional[str] = None  # AZ, Chunk-ID oder Keyword
     trace_format: Optional[str] = "rich"  # "rich" (default) oder "full"
+    skill_id: Optional[str] = "datenschutz"  # Multi-Skill: Skill-ID
 
 
 class FullRunRequest(BaseModel):
     query: str
     chunk_search: Optional[str] = None
     trace_format: Optional[str] = "full"
+    skill_id: Optional[str] = "datenschutz"  # Multi-Skill: Skill-ID
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -400,6 +402,7 @@ async def inspect_pipeline(req: InspectRequest):
             req.query,
             return_trace=True,
             trace_format=req.trace_format or "rich",
+            skill_id=req.skill_id or "datenschutz",
         )
     except Exception as e:
         raise HTTPException(500, f"retrieve() Fehler: {e}")
