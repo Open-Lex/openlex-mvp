@@ -1,0 +1,12 @@
+{
+  "active_skill": "datenschutz",
+  "skills": {
+    "datenschutz": {
+      "title": "Datenschutzrecht (DSGVO/BDSG)",
+      "collection_name": "openlex_datenschutz",
+      "system_prompt_path": "prompts/datenschutz.md",
+      "status": "live",
+      "owner": "Admin"
+    }
+  }
+}

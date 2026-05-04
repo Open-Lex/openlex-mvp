@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenLex Pipeline Inspector</title>
+  <style>
+    :root {
+      --bg:        #0a0a0a;
+      --bg2:       #111111;
+      --bg3:       #181818;
+      --bg4:       #1f1f1f;
+      --text:      #f5f0e1;
+      --text2:     #d8d3c4;
+      --text3:     #a8a399;
+      --gold:      #c9a04a;
+      --gold-dim:  rgba(201,160,74,0.12);
+      --gold-glow: rgba(201,160,74,0.30);
+      --border:    rgba(201,160,74,0.28);
+      --border2:   rgba(201,160,74,0.14);
+      --border3:   rgba(201,160,74,0.06);
+      --green:     #4a9a6a;
+      --red:       #9a4a4a;
+      --yellow:    #9a8840;
+      --grey:      #383838;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ── Header ─────────────────────────────────────────────── */
+    #header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 18px;
+      border-bottom: 0.5px solid var(--border);
+      background: var(--bg2);
+      flex-shrink: 0;
+    }
+
+    .logo {
+      font-family: 'Times New Roman', Georgia, serif;
+      font-size: 17px;
+      letter-spacing: 0.05em;
+      color: var(--gold);
+    }
+
+    .logo-sub {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      color: var(--text3);
+      margin-left: 8px;
+      letter-spacing: 0;
+    }
+
+    .lamps {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .lamp {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      color: var(--text3);
+      cursor: default;
+    }
+
+    .lamp-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--grey);
+      flex-shrink: 0;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    .lamp.lamp-green  .lamp-dot { background: var(--green);  box-shadow: 0 0 5px var(--green); }
+    .lamp.lamp-yellow .lamp-dot { background: var(--yellow); box-shadow: 0 0 5px var(--yellow); }
+    .lamp.lamp-red    .lamp-dot { background: var(--red);    box-shadow: 0 0 5px var(--red); }
+
+    #meta-ms {
+      font-family: 'JetBrains Mono', 'Fira Mono', monospace;
+      font-size: 10px;
+      color: var(--text3);
+      min-width: 60px;
+      text-align: right;
+    }
+
+    /* ── Query bar ───────────────────────────────────────────── */
+    #query-bar {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 18px;
+      border-bottom: 0.5px solid var(--border2);
+      background: var(--bg2);
+      flex-shrink: 0;
+    }
+
+    #query-input {
+      flex: 1;
+      background: var(--bg3);
+      border: 0.5px solid var(--border);
+      color: var(--text);
+      padding: 5px 10px;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      outline: none;
+    }
+
+    #query-input:focus { border-color: var(--gold); }
+    #query-input::placeholder { color: var(--text3); }
+
+    #chunk-search {
+      width: 200px;
+      background: var(--bg3);
+      border: 0.5px solid var(--border2);
+      color: var(--text);
+      padding: 5px 9px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      outline: none;
+    }
+
+    #chunk-search:focus { border-color: var(--gold); }
+    #chunk-search::placeholder { color: var(--text3); }
+
+    #inspect-btn {
+      background: var(--gold);
+      color: var(--bg);
+      border: none;
+      padding: 5px 16px;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      flex-shrink: 0;
+    }
+
+    #inspect-btn:hover { opacity: 0.8; }
+    #inspect-btn:disabled { opacity: 0.38; cursor: not-allowed; }
+
+    .mode-btns {
+      display: flex;
+      gap: 1px;
+      background: var(--border2);
+      border: 0.5px solid var(--border2);
+      padding: 1px;
+      flex-shrink: 0;
+    }
+
+    .mode-btn {
+      background: transparent;
+      border: none;
+      color: var(--text3);
+      padding: 3px 11px;
+      font-size: 11px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .mode-btn.active {
+      background: var(--gold-dim);
+      color: var(--gold);
+    }
+
+    /* ── Main layout ─────────────────────────────────────────── */
+    #main {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* ── Sidebar ─────────────────────────────────────────────── */
+    #sidebar {
+      width: 272px;
+      flex-shrink: 0;
+      border-right: 0.5px solid var(--border2);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    #sidebar-hdr {
+      padding: 6px 12px;
+      border-bottom: 0.5px solid var(--border2);
+      font-size: 10px;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      background: var(--bg2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #sidebar-count { color: var(--gold); font-family: 'JetBrains Mono', monospace; }
+
+    #chunk-list {
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .chunk-item {
+      padding: 5px 10px 5px 12px;
+      border-bottom: 0.5px solid var(--border3);
+      cursor: pointer;
+      transition: background 0.12s;
+      border-left: 2px solid transparent;
+    }
+
+    .chunk-item:hover   { background: var(--bg3); }
+    .chunk-item.ci-final    { border-left-color: var(--green); }
+    .chunk-item.ci-filtered { opacity: 0.45; }
+    .chunk-item.ci-tracked  { background: rgba(201,160,74,0.06); }
+    .chunk-item.ci-selected { background: var(--gold-dim); border-left-color: var(--gold); }
+
+    .ci-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .ci-az {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: var(--text2);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 160px;
+    }
+
+    .ci-rank {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .ci-rank.filtered { color: var(--red); }
+
+    .ci-seg  { font-size: 10px; color: var(--text3); margin-top: 1px; }
+    .ci-score { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text3); }
+
+    /* ── Lane view ───────────────────────────────────────────── */
+    #lane-view {
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 12px 14px;
+    }
+
+    .rewrite-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      padding: 3px 10px;
+      background: var(--gold-dim);
+      border: 0.5px solid var(--border2);
+      margin-bottom: 10px;
+    }
+
+    .rc-from { color: var(--text3); text-decoration: line-through; }
+    .rc-to   { color: var(--text2); }
+    .rc-tag  { color: var(--text3); font-size: 9px; }
+
+    .phase {
+      margin-bottom: 10px;
+      border: 0.5px solid var(--border2);
+    }
+
+    .phase-hdr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 11px;
+      background: var(--bg2);
+      border-bottom: 0.5px solid var(--border2);
+      cursor: pointer;
+      user-select: none;
+      font-family: 'Times New Roman', Georgia, serif;
+      font-size: 12px;
+      color: var(--gold);
+      letter-spacing: 0.03em;
+    }
+
+    .phase-hdr:hover { background: var(--bg3); }
+    .phase-toggle { font-size: 9px; color: var(--text3); }
+
+    .phase-lanes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      padding: 9px 11px;
+      align-items: flex-start;
+    }
+
+    .phase.collapsed .phase-lanes { display: none; }
+
+    /* ── Stage node ──────────────────────────────────────────── */
+    .snode {
+      border: 0.5px solid var(--border2);
+      background: var(--bg3);
+      padding: 6px 9px;
+      min-width: 116px;
+      max-width: 160px;
+      cursor: pointer;
+      position: relative;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .snode:hover              { border-color: var(--border); background: var(--bg4); }
+    .snode.sn-selected        { border-color: var(--gold); background: var(--gold-dim); }
+    .snode.sn-active          { border-left: 2px solid var(--gold); }
+    .snode.sn-inactive        { opacity: 0.38; }
+    .snode.sn-error           { border-color: var(--red); }
+    .snode.sn-boundary        { border-style: dashed; }
+
+    .sn-kind {
+      position: absolute;
+      top: 3px;
+      right: 5px;
+      font-size: 7px;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .sn-id    { font-family: 'JetBrains Mono', monospace; font-size: 8px; color: var(--text3); margin-bottom: 3px; }
+    .sn-label { font-size: 11px; color: var(--text2); margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    .sn-counts {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+    }
+
+    .sc-in  { color: var(--text3); }
+    .sc-arr { color: var(--border); }
+    .sc-out { color: var(--gold); }
+    .sc-out.up   { color: #5a9a6a; }
+    .sc-out.down { color: #9a6050; }
+    .sc-out.eq   { color: var(--text3); }
+    .sc-dec { color: var(--text3); font-size: 9px; margin-left: 3px; }
+
+    .stage-arrow {
+      display: flex;
+      align-items: center;
+      align-self: center;
+      color: var(--border2);
+      font-size: 13px;
+    }
+
+    /* ── Detail panel ────────────────────────────────────────── */
+    #detail-panel {
+      height: 196px;
+      border-top: 0.5px solid var(--border);
+      background: var(--bg2);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+
+    #detail-hdr {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 4px 14px;
+      border-bottom: 0.5px solid var(--border2);
+    }
+
+    #detail-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--gold);
+      flex: 1;
+    }
+
+    .detail-meta {
+      font-size: 10px;
+      color: var(--text3);
+      display: flex;
+      gap: 10px;
+    }
+
+    .detail-meta span { font-family: 'JetBrains Mono', monospace; color: var(--text2); }
+
+    #detail-close {
+      background: none;
+      border: none;
+      color: var(--text3);
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 1;
+      padding: 0 2px;
+    }
+
+    #detail-close:hover { color: var(--text); }
+
+    #detail-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 6px 14px;
+    }
+
+    .detail-empty {
+      color: var(--text3);
+      font-size: 11px;
+      padding: 16px 0;
+      text-align: center;
+    }
+
+    .dtable {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+    }
+
+    .dtable th {
+      text-align: left;
+      color: var(--text3);
+      padding: 2px 8px;
+      border-bottom: 0.5px solid var(--border2);
+      font-weight: normal;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      position: sticky;
+      top: 0;
+      background: var(--bg2);
+    }
+
+    .dtable td {
+      padding: 2px 8px;
+      border-bottom: 0.5px solid var(--border3);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .dtable tr:hover td { background: var(--bg3); }
+
+    .act-injected { color: #5a9a6a; }
+    .act-filtered { color: #9a6050; }
+    .act-kept     { color: var(--text3); }
+
+    /* ── Scrollbar ───────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
+    ::-webkit-scrollbar-thumb:hover { background: #383838; }
+
+    /* ── Spinner ─────────────────────────────────────────────── */
+    .spinner {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border: 1.5px solid var(--border2);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .err-msg {
+      color: #f87171;
+      font-size: 12px;
+      padding: 8px 12px;
+      border: 0.5px solid #6b1d1d;
+      background: #150707;
+      margin: 8px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ── Consistency badge ───────────────────────────────────── */
+    .consistency-ok   { color: var(--green);  font-size: 10px; }
+    .consistency-warn { color: var(--yellow); font-size: 10px; }
+    .consistency-fail { color: var(--red);    font-size: 10px; }
+
+  </style>
+</head>
+<body>
+
+<!-- ── Header ──────────────────────────────────────────────────────────── -->
+<div id="header">
+  <div>
+    <span class="logo">OpenLex</span>
+    <span class="logo-sub">Pipeline Inspector</span>
+  </div>
+  <div class="lamps">
+    <div class="lamp" id="lamp-trace">
+      <div class="lamp-dot"></div>
+      <span>Trace</span>
+    </div>
+    <div class="lamp" id="lamp-flow">
+      <div class="lamp-dot"></div>
+      <span>Flow</span>
+    </div>
+    <div class="lamp" id="lamp-llm">
+      <div class="lamp-dot"></div>
+      <span>LLM-Grounding</span>
+    </div>
+    <div id="meta-ms"></div>
+  </div>
+</div>
+
+<!-- ── Query bar ───────────────────────────────────────────────────────── -->
+<div id="query-bar">
+  <input id="query-input" type="text"
+    placeholder="Query eingeben — z.B. »Darf mein Chef meine E-Mails lesen?«"
+    autocomplete="off">
+  <input id="chunk-search" type="text"
+    placeholder="Chunk-Suche: AZ, ID, Keyword…"
+    autocomplete="off">
+  <button id="inspect-btn">Inspect</button>
+  <div class="mode-btns" id="mode-btns">
+    <button class="mode-btn active" data-mode="default">Default</button>
+    <button class="mode-btn" data-mode="all">All</button>
+    <button class="mode-btn" data-mode="tracking">Tracking</button>
+  </div>
+</div>
+
+<!-- ── Main ────────────────────────────────────────────────────────────── -->
+<div id="main">
+
+  <!-- Left sidebar -->
+  <div id="sidebar">
+    <div id="sidebar-hdr">
+      <span>Chunks</span>
+      <span id="sidebar-count"></span>
+    </div>
+    <div id="chunk-list">
+      <div class="detail-empty">–</div>
+    </div>
+  </div>
+
+  <!-- Lane view -->
+  <div id="lane-view">
+    <div class="detail-empty" style="margin-top:80px">
+      Query eingeben und <strong style="color:var(--gold)">Inspect</strong> klicken.
+    </div>
+  </div>
+
+</div>
+
+<!-- ── Detail panel ────────────────────────────────────────────────────── -->
+<div id="detail-panel">
+  <div id="detail-hdr">
+    <span id="detail-title">— Stage auswählen —</span>
+    <div class="detail-meta" id="detail-meta"></div>
+    <button id="detail-close" title="Schließen">×</button>
+  </div>
+  <div id="detail-body">
+    <div class="detail-empty">Stage in der Lane-Ansicht auswählen.</div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// BASE PATH — works under both / and /inspect/
+// ═══════════════════════════════════════════════════════════════
+
+const _BASE = (() => {
+  // Strip trailing filename, keep directory (e.g. "/inspect/" or "/")
+  const p = window.location.pathname.replace(/[^/]*$/, "");
+  return p.endsWith("/") ? p : p + "/";
+})();
+
+function apiUrl(path) {
+  // path like "api/inspect" → "/inspect/api/inspect" or "/api/inspect"
+  return _BASE + path;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// CONSTANTS
+// ═══════════════════════════════════════════════════════════════
+
+const PHASES = [
+  {
+    id: "query",
+    label: "Phase A — Query-Verarbeitung",
+    stages: ["embedding", "semantic"],
+  },
+  {
+    id: "retrieval",
+    label: "Phase B — Retrieval",
+    stages: ["norm_lookup_injection", "qu_injection", "keyword_injection", "bm25_rrf", "per_source"],
+  },
+  {
+    id: "ranking",
+    label: "Phase C — Ranking",
+    stages: ["cross_encoder", "pre_dsgvo_filter", "boosts", "mw_priorization", "dedup", "ce_cutoff"],
+  },
+  {
+    id: "final",
+    label: "Phase D — Final",
+    stages: ["pflicht_urteilsname_injection", "selected_merge", "min_max_diversification", "eg_enrichment", "tenor_enforce"],
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════════════
+
+const S = {
+  loading:         false,
+  error:           null,
+  data:            null,
+  mode:            "default",   // default | all | tracking
+  selectedStage:   null,
+  selectedChunk:   null,
+  collapsedPhases: {},
+};
+
+// ═══════════════════════════════════════════════════════════════
+// DOM REFS
+// ═══════════════════════════════════════════════════════════════
+
+const qInput     = document.getElementById("query-input");
+const csInput    = document.getElementById("chunk-search");
+const iBtn       = document.getElementById("inspect-btn");
+const metaMs     = document.getElementById("meta-ms");
+const laneView   = document.getElementById("lane-view");
+const chunkList  = document.getElementById("chunk-list");
+const scCount    = document.getElementById("sidebar-count");
+const dTitle     = document.getElementById("detail-title");
+const dMeta      = document.getElementById("detail-meta");
+const dBody      = document.getElementById("detail-body");
+
+// ═══════════════════════════════════════════════════════════════
+// STATUS LAMPS
+// ═══════════════════════════════════════════════════════════════
+
+function lamp(id, cls, tip) {
+  const el = document.getElementById(id);
+  el.className = "lamp " + (cls || "");
+  el.title = tip || "";
+}
+
+function updateLamps() {
+  const d = S.data;
+  if (!d) {
+    lamp("lamp-trace", "", "Kein Ergebnis");
+    lamp("lamp-flow",  "", "Kein Ergebnis");
+    lamp("lamp-llm",   "", "n/a — Paket 3");
+    return;
+  }
+
+  const ft = d.full_trace;
+
+  // Lamp 1: Trace-Vollständigkeit
+  if (ft && ft.consistency) {
+    const c = ft.consistency;
+    const issues = c.issues || [];
+    if (!c.valid) {
+      lamp("lamp-trace", "lamp-red",
+        "Trace ungültig: " + issues.slice(0,3).join(" | "));
+    } else if (issues.length > 0) {
+      lamp("lamp-trace", "lamp-yellow",
+        "Gültig mit Warnungen: " + issues.slice(0,3).join(" | "));
+    } else {
+      lamp("lamp-trace", "lamp-green", "Trace vollständig & konsistent");
+    }
+  } else {
+    lamp("lamp-trace", "", "Kein full_trace");
+  }
+
+  // Lamp 2: Flow-Konsistenz
+  if (ft && ft.stages && ft.stages.length > 1) {
+    let gapFound = false;
+    const stages = ft.stages;
+    for (let i = 0; i < stages.length - 1; i++) {
+      const cur  = stages[i];
+      const next = stages[i + 1];
+      // Skip if cur OR next is a boundary/isolated stage (merge points, forks, query-level)
+      if (cur.flow_boundary  || cur.flow_isolated)  continue;
+      if (next.flow_boundary || next.flow_isolated) continue;
+      if (cur.count_out !== undefined && next.count_in !== undefined) {
+        if (cur.count_out !== next.count_in) { gapFound = true; break; }
+      }
+    }
+    lamp("lamp-flow",
+      gapFound ? "lamp-red" : "lamp-green",
+      gapFound ? "Flow-Lücke: count_out ≠ count_in zwischen Stages"
+               : "Alle Stage-Übergänge konsistent");
+  } else {
+    lamp("lamp-flow", "", "Kein full_trace");
+  }
+
+  // Lamp 3: LLM-Grounding — n/a until Paket 3
+  lamp("lamp-llm", "", "n/a — verfügbar ab Paket 3");
+}
+
+// ═══════════════════════════════════════════════════════════════
+// API
+// ═══════════════════════════════════════════════════════════════
+
+async function doInspect() {
+  const query = qInput.value.trim();
+  if (!query || S.loading) return;
+
+  S.loading = true;
+  S.error = null;
+  S.selectedStage = null;
+  S.selectedChunk = null;
+  iBtn.disabled = true;
+  iBtn.innerHTML = '<span class="spinner"></span>';
+  metaMs.textContent = "";
+
+  try {
+    const resp = await fetch(apiUrl("api/inspect"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        query,
+        chunk_search: csInput.value.trim() || null,
+        trace_format: "full",
+      }),
+    });
+
+    if (!resp.ok) {
+      const txt = await resp.text();
+      throw new Error("HTTP " + resp.status + ": " + txt.slice(0, 200));
+    }
+
+    S.data = await resp.json();
+    S.error = null;
+    metaMs.textContent = S.data.duration_ms + " ms";
+    render();
+
+  } catch (e) {
+    S.error = e.message;
+    S.data = null;
+    laneView.innerHTML = '<div class="err-msg">' + esc(S.error) + '</div>';
+    updateLamps();
+    chunkList.innerHTML = '<div class="detail-empty">–</div>';
+    scCount.textContent = "";
+    resetDetail();
+
+  } finally {
+    S.loading = false;
+    iBtn.disabled = false;
+    iBtn.textContent = "Inspect";
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════════════════════════════
+
+function render() {
+  updateLamps();
+  renderLanes();
+  renderSidebar();
+  renderDetail();
+}
+
+// Build stage map: stage_id → merged data (full_trace + pipeline_stages)
+function buildStageMap() {
+  const m = {};
+  const ft = S.data && S.data.full_trace;
+  if (ft && ft.stages) {
+    for (const s of ft.stages) m[s.id] = { ...s };
+  }
+  const ps = S.data && S.data.pipeline_stages;
+  if (ps) {
+    for (const s of ps) {
+      if (!m[s.id]) m[s.id] = {};
+      m[s.id]._label   = m[s.id]._label  || s.label  || s.id;
+      m[s.id]._detail  = s.detail;
+      m[s.id]._active  = s.active;
+      if (m[s.id].count_in  === undefined) m[s.id].count_in  = s.count_in;
+      if (m[s.id].count_out === undefined) m[s.id].count_out = s.count_out;
+    }
+  }
+  return m;
+}
+
+function renderLanes() {
+  const sm   = buildStageMap();
+  const rw   = (S.data && S.data.rewrite) || {};
+  let html   = "";
+
+  // Rewrite chip
+  if (rw.used) {
+    html += `<div style="display:flex;align-items:center;gap:7px;margin-bottom:10px">
+      <span style="font-size:10px;color:var(--text3)">Rewrite</span>
+      <span class="rewrite-chip">
+        <span class="rc-from">${esc(rw.original || "")}</span>
+        <span style="color:var(--text3)">→</span>
+        <span class="rc-to">${esc(rw.rewritten || "")}</span>
+        ${rw.from_cache ? '<span class="rc-tag">[cache]</span>' : ""}
+        <span class="rc-tag">${rw.duration_ms != null ? Math.round(rw.duration_ms) + " ms" : ""}</span>
+      </span>`;
+
+    // Consistency summary chip
+    const ft = S.data && S.data.full_trace;
+    if (ft && ft.consistency) {
+      const issues = ft.consistency.issues || [];
+      const cls = !ft.consistency.valid ? "consistency-fail"
+                : issues.length > 0     ? "consistency-warn"
+                :                          "consistency-ok";
+      html += `<span class="${cls}">${ft.consistency.valid ? "✓ consistent" : "✗ issues"}</span>`;
+    }
+
+    html += `</div>`;
+  }
+
+  // Phases
+  for (const phase of PHASES) {
+    const collapsed = !!S.collapsedPhases[phase.id];
+    html += `<div class="phase${collapsed ? " collapsed" : ""}" data-phase-id="${esc(phase.id)}">
+      <div class="phase-hdr" onclick="togglePhase('${esc(phase.id)}')">
+        <span>${esc(phase.label)}</span>
+        <span class="phase-toggle">${collapsed ? "▶" : "▼"}</span>
+      </div>
+      <div class="phase-lanes">`;
+
+    for (let i = 0; i < phase.stages.length; i++) {
+      const sid  = phase.stages[i];
+      const s    = sm[sid];
+      const isSel = S.selectedStage === sid;
+
+      if (i > 0) html += `<div class="stage-arrow">→</div>`;
+
+      if (!s) {
+        html += `<div class="snode sn-inactive" title="Keine Daten">
+          <div class="sn-id">${esc(sid)}</div>
+          <div class="sn-label" style="color:var(--text3)">${esc(sid)}</div>
+          <div style="font-size:9px;color:var(--text3)">–</div>
+        </div>`;
+        continue;
+      }
+
+      const label    = s.label || s._label || sid;
+      const kind     = s.kind  || "";
+      const active   = s._active !== false;
+      const isBound  = !!s.flow_boundary;
+      const isIso    = !!s.flow_isolated;
+      const decCount = (s.decisions || []).length;
+
+      const cin  = s.count_in;
+      const cout = s.count_out;
+
+      let coutCls = "sc-out";
+      if (cin !== undefined && cout !== undefined) {
+        if (cout > cin)       coutCls += " up";
+        else if (cout < cin)  coutCls += " down";
+        else                  coutCls += " eq";
+      }
+
+      const countsHtml = (cin !== undefined || cout !== undefined)
+        ? `<div class="sn-counts">
+            <span class="sc-in">${cin  !== undefined ? cin  : "?"}</span>
+            <span class="sc-arr">→</span>
+            <span class="${coutCls}">${cout !== undefined ? cout : "?"}</span>
+            ${decCount > 0 ? `<span class="sc-dec">(${decCount})</span>` : ""}
+          </div>`
+        : `<div style="font-size:9px;color:var(--text3)">–</div>`;
+
+      const cls = [
+        "snode",
+        isSel     ? "sn-selected" : "",
+        active    ? "sn-active"   : "sn-inactive",
+        isBound   ? "sn-boundary" : "",
+      ].filter(Boolean).join(" ");
+
+      const titleStr = [s._detail, isIso ? "flow_isolated" : "", isBound ? "flow_boundary" : ""].filter(Boolean).join(" | ");
+
+      html += `<div class="${cls}"
+        data-stage="${esc(sid)}"
+        onclick="selectStage('${esc(sid)}')"
+        title="${esc(titleStr)}">
+        <div class="sn-kind">${esc(kind)}</div>
+        <div class="sn-id">${esc(sid)}</div>
+        <div class="sn-label">${esc(label)}</div>
+        ${countsHtml}
+      </div>`;
+    }
+
+    html += `</div></div>`;
+  }
+
+  laneView.innerHTML = html;
+}
+
+function renderSidebar() {
+  if (!S.data) return;
+
+  const chunks    = S.data.chunks || [];
+  const trackedS  = new Set(S.data.tracked_chunks || []);
+  const finalRank = new Map((S.data.final_results || []).map(c => [c.id, c.final_rank]));
+
+  let filtered;
+  if (S.mode === "default") {
+    filtered = chunks
+      .filter(c => c.final_rank > 0)
+      .sort((a, b) => a.final_rank - b.final_rank);
+  } else if (S.mode === "tracking") {
+    filtered = chunks.filter(c => trackedS.has(c.id));
+  } else { // all
+    filtered = [...chunks].sort((a, b) => {
+      const ra = a.final_rank > 0 ? a.final_rank : 999;
+      const rb = b.final_rank > 0 ? b.final_rank : 999;
+      if (ra !== rb) return ra - rb;
+      return (b.ce_score_raw || -99) - (a.ce_score_raw || -99);
+    });
+  }
+
+  scCount.textContent = filtered.length;
+
+  if (filtered.length === 0) {
+    chunkList.innerHTML = `<div class="detail-empty">${
+      S.mode === "tracking" ? "Keine Treffer" : "Keine Chunks"
+    }</div>`;
+    return;
+  }
+
+  let html = "";
+  for (const c of filtered) {
+    const isFinal    = c.final_rank > 0;
+    const isTracked  = trackedS.has(c.id);
+    const isSel      = S.selectedChunk === c.id;
+    const isFiltered = !!c.filter_reason;
+
+    const cls = [
+      "chunk-item",
+      isFinal   ? "ci-final"    : "",
+      isFiltered && !isFinal ? "ci-filtered" : "",
+      isTracked ? "ci-tracked"  : "",
+      isSel     ? "ci-selected" : "",
+    ].filter(Boolean).join(" ");
+
+    const label    = c.aktenzeichen || c.gericht || c.gesetz || c.id.slice(0, 22);
+    const scoreStr = c.ce_score_raw != null ? c.ce_score_raw.toFixed(3) : "–";
+
+    let rankStr = "–";
+    let rankCls = "ci-rank";
+    if (isFinal)        { rankStr = "#" + c.final_rank; }
+    else if (isFiltered){ rankStr = "✗"; rankCls += " filtered"; }
+
+    html += `<div class="${cls}"
+      onclick="selectChunk('${esc(c.id)}')"
+      data-cid="${esc(c.id)}">
+      <div class="ci-top">
+        <span class="ci-az" title="${esc(c.id)}">${esc(label)}</span>
+        <span class="${rankCls}">${rankStr}</span>
+      </div>
+      <div class="ci-seg">${esc(c.segment || c.source_type || "")}</div>
+      <div class="ci-score">CE: ${scoreStr}</div>
+    </div>`;
+  }
+
+  chunkList.innerHTML = html;
+}
+
+function renderDetail() {
+  if (!S.selectedStage) { resetDetail(); return; }
+
+  const ft    = S.data && S.data.full_trace;
+  const stage = ft && ft.stages && ft.stages.find(s => s.id === S.selectedStage);
+  const rich  = S.data && S.data.pipeline_stages &&
+                S.data.pipeline_stages.find(s => s.id === S.selectedStage);
+
+  if (!stage && !rich) {
+    dTitle.textContent = S.selectedStage;
+    dMeta.innerHTML = "";
+    dBody.innerHTML = `<div class="detail-empty">Keine Trace-Daten für diese Stage.</div>`;
+    return;
+  }
+
+  const label = (stage && stage.label) || (rich && rich.label) || S.selectedStage;
+  dTitle.textContent = label;
+
+  // Meta row
+  const metaParts = [];
+  if (stage) {
+    if (stage.kind)         metaParts.push(`kind: <span>${esc(stage.kind)}</span>`);
+    if (stage.count_in  != null) metaParts.push(`in: <span>${stage.count_in}</span>`);
+    if (stage.count_out != null) metaParts.push(`out: <span>${stage.count_out}</span>`);
+    if (stage.count_filtered != null) metaParts.push(`filtered: <span>${stage.count_filtered}</span>`);
+    if (stage.flow_boundary)  metaParts.push(`<span style="color:var(--text3)">flow_boundary</span>`);
+    if (stage.flow_isolated)  metaParts.push(`<span style="color:var(--text3)">flow_isolated</span>`);
+  }
+  if (rich && rich.detail) {
+    metaParts.push(`<span style="font-style:italic;color:var(--text3)">${esc(rich.detail)}</span>`);
+  }
+  dMeta.innerHTML = metaParts.join('<span style="color:var(--border2);margin:0 2px">|</span>');
+
+  // Decisions table
+  const decisions = (stage && stage.decisions) || [];
+  let html = "";
+
+  if (decisions.length === 0) {
+    html = `<div class="detail-empty">Keine Entscheidungen aufgezeichnet.</div>`;
+  } else {
+    html = `<table class="dtable">
+      <thead><tr>
+        <th style="width:200px">chunk_id</th>
+        <th style="width:70px">action</th>
+        <th style="width:120px">source</th>
+        <th>reason</th>
+        <th style="width:60px">score</th>
+      </tr></thead>
+      <tbody>`;
+
+    const show = decisions.slice(0, 300);
+    for (const d of show) {
+      const actCls = d.action === "injected" ? "act-injected"
+                   : d.action === "filtered"  ? "act-filtered"
+                   :                            "act-kept";
+      const cid    = (d.chunk_id || "").slice(0, 32);
+      const src    = d.source || "–";
+      const rsn    = d.reason || d.filter_reason || "–";
+      const sc     = d.score != null ? (+d.score).toFixed(3) : "–";
+
+      html += `<tr>
+        <td style="font-size:9px;color:var(--text3)" title="${esc(d.chunk_id||"")}">${esc(cid)}</td>
+        <td class="${actCls}">${esc(d.action || "–")}</td>
+        <td style="font-size:10px">${esc(src)}</td>
+        <td style="font-size:10px">${esc(rsn)}</td>
+        <td>${sc}</td>
+      </tr>`;
+    }
+
+    if (decisions.length > 300) {
+      html += `<tr><td colspan="5" style="color:var(--text3);text-align:center;font-size:10px">
+        … ${decisions.length - 300} weitere Einträge
+      </td></tr>`;
+    }
+
+    html += `</tbody></table>`;
+  }
+
+  dBody.innerHTML = html;
+}
+
+function resetDetail() {
+  dTitle.textContent = "— Stage auswählen —";
+  dMeta.innerHTML = "";
+  dBody.innerHTML = `<div class="detail-empty">Stage in der Lane-Ansicht auswählen.</div>`;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ACTIONS
+// ═══════════════════════════════════════════════════════════════
+
+function togglePhase(id) {
+  S.collapsedPhases[id] = !S.collapsedPhases[id];
+  renderLanes();
+}
+
+function selectStage(sid) {
+  S.selectedStage = (S.selectedStage === sid) ? null : sid;
+  renderLanes();
+  renderDetail();
+}
+
+function selectChunk(cid) {
+  S.selectedChunk = (S.selectedChunk === cid) ? null : cid;
+  renderSidebar();
+}
+
+function setMode(mode) {
+  S.mode = mode;
+  document.querySelectorAll(".mode-btn").forEach(b => {
+    b.classList.toggle("active", b.dataset.mode === mode);
+  });
+  renderSidebar();
+}
+
+// ═══════════════════════════════════════════════════════════════
+// EVENTS
+// ═══════════════════════════════════════════════════════════════
+
+iBtn.addEventListener("click", doInspect);
+qInput.addEventListener("keydown", e => { if (e.key === "Enter") doInspect(); });
+csInput.addEventListener("keydown", e => { if (e.key === "Enter") doInspect(); });
+
+document.getElementById("mode-btns").addEventListener("click", e => {
+  const b = e.target.closest(".mode-btn");
+  if (b) setMode(b.dataset.mode);
+});
+
+document.getElementById("detail-close").addEventListener("click", () => {
+  S.selectedStage = null;
+  renderDetail();
+  renderLanes();
+});
+
+// ═══════════════════════════════════════════════════════════════
+// UTILS
+// ═══════════════════════════════════════════════════════════════
+
+function esc(s) {
+  if (s == null) return "";
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+</script>
+</body>
+</html>
