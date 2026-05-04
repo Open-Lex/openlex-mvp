@@ -13,8 +13,12 @@ from typing import Optional
 
 logger = logging.getLogger(__name__)
 
-CHROMADB_PATH = "/opt/openlex-mvp/chromadb"
-COLLECTION_NAME = "openlex_datenschutz"
+import os as _os_ps
+CHROMADB_PATH = _os_ps.environ.get(
+    "CHROMADB_DIR",
+    _os_ps.path.join(_os_ps.path.dirname(_os_ps.path.abspath(__file__)), "chromadb")
+)
+COLLECTION_NAME = _os_ps.environ.get("OPENLEX_COLLECTION_NAME", "openlex_datenschutz")
 
 SOURCE_TYPES = [
     "gesetz_granular",
