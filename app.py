@@ -3656,7 +3656,20 @@ def build_app() -> gr.Blocks:
 
         # ── Input (fixed at bottom via CSS) ──
         with gr.Row(elem_id="input-row"):
-            msg_input = gr.Textbox(
+            # Multi-Skill: Dropdown (nur sichtbar wenn > 1 Skill live)
+        _manifest_live = [
+            (v.get('title', k), k)
+            for k, v in (load_skills_manifest().get('skills') or {}).items()
+            if v.get('status') == 'live'
+        ] or [('Datenschutzrecht (DSGVO/BDSG)', 'datenschutz')]
+        skill_selector = gr.Dropdown(
+            choices=_manifest_live,
+            value=_manifest_live[0][1],
+            label='Rechtsgebiet',
+            interactive=True,
+            visible=len(_manifest_live) > 1,
+        )
+        msg_input = gr.Textbox(
                 placeholder="Frage eingeben...",
                 label="",
                 lines=1,
@@ -3671,7 +3684,7 @@ def build_app() -> gr.Blocks:
         copy_store = gr.Textbox(value="", visible=False, elem_id="copy-store")
 
         # ── Event-Handler (Streaming) ──
-        def respond(message, chat_history):
+        def respond(message, chat_history, skill_id=ACTIVE_SKILL):
             if not message.strip():
                 yield chat_history, "", "", WELCOME_HTML
                 return
@@ -3693,7 +3706,7 @@ def build_app() -> gr.Blocks:
             chat_history.append({"role": "assistant", "content": "\u23f3 *OpenLex recherchiert...*"})
             yield chat_history, "", "", ""
 
-            for partial_response, sources_md, chunks in chat_stream(message, history_tuples):
+            for partial_response, sources_md, chunks in chat_stream(message, history_tuples, skill_id=skill_id):
                 full_msg = partial_response
                 if sources_md:
                     clean_src = _SRC_STYLE_RE.sub('', sources_md)
@@ -3703,7 +3716,7 @@ def build_app() -> gr.Blocks:
 
         submit_btn.click(
             respond,
-            inputs=[msg_input, chatbot],
+            inputs=[msg_input, chatbot, skill_selector],
             outputs=[chatbot, copy_store, msg_input, welcome],
             show_progress="hidden",
             concurrency_limit=10,
