@@ -3011,11 +3011,11 @@ def format_db_stats() -> str:
 
 
 # Chat-Funktion (Streaming-Generator)
-def chat_stream(message: str, history: list[list[str]]):
+def chat_stream(message: str, history: list[list[str]], skill_id: str = ACTIVE_SKILL):
     """Generator: Retrieval → LLM-Stream → Validation. Yields (partial_response, sources_md, chunks)."""
 
     # Retrieval (mit History-Kontext für Folgefragen)
-    chunks = retrieve(message, history)
+    chunks = retrieve(message, history, skill_id=skill_id)
     context = format_context(chunks)
     sources_placeholder = format_sources(chunks, [], question=message) + '<p style="color:#888"><em>⏳ Validierung läuft nach Abschluss der Antwort...</em></p>'
 
@@ -3026,7 +3026,7 @@ def chat_stream(message: str, history: list[list[str]]):
         llm_history.append({"role": "assistant", "content": bot_msg})
 
     # LLM-Messages bauen
-    messages = _build_llm_messages(message, context, llm_history)
+    messages = _build_llm_messages(message, context, llm_history, skill_id=skill_id)
 
     # Cascading Provider Stream
     full_response = ""
