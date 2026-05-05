@@ -1245,6 +1245,7 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
             _ps_result = _ps_query(
                 query_text=search_query,
                 embed_fn=_ps_embed_fn,
+                collection=col,
             )
             _ps_merged = _ps_merge(_ps_result)
 

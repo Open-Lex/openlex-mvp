@@ -88,6 +88,7 @@ def per_source_query(
     embed_fn,
     top_k_per_source: Optional[dict] = None,
     source_types: Optional[list] = None,
+    collection=None,
 ) -> PerSourceResults:
     """
     Führt pro Source-Type einen separaten ChromaDB-Call aus.
@@ -97,6 +98,7 @@ def per_source_query(
         embed_fn:          Funktion str → embedding (numpy-array oder list)
         top_k_per_source:  dict {source_type: n}; DEFAULT_TOP_K wenn None
         source_types:      Welche Types abfragen; SOURCE_TYPES wenn None
+        collection:        ChromaDB-Collection (optional); nutzt COLLECTION_NAME wenn None
 
     Returns:
         PerSourceResults mit allen Pro-Source-Ergebnissen
@@ -106,7 +108,7 @@ def per_source_query(
     if source_types is None:
         source_types = SOURCE_TYPES
 
-    col = _get_col()
+    col = collection if collection is not None else _get_col()
 
     # 1. Embedding einmal generieren
     t_emb = time.time()
