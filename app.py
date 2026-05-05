@@ -3776,7 +3776,6 @@ if __name__ == "__main__":
         show_error=True,
         root_path=os.environ.get("GRADIO_ROOT_PATH", ""),
         favicon_path=os.path.join(static_dir, "apple-touch-icon.png"),
-        server_kwargs={"timeout_keep_alive": 75},  # uvicorn WS keepalive
         allowed_paths=[static_dir],
         head=PWA_HEAD,
         css="""
