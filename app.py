@@ -3723,7 +3723,7 @@ def build_app() -> gr.Blocks:
         )
         msg_input.submit(
             respond,
-            inputs=[msg_input, chatbot],
+            inputs=[msg_input, chatbot, skill_selector],
             outputs=[chatbot, copy_store, msg_input, welcome],
             show_progress="hidden",
             concurrency_limit=10,
