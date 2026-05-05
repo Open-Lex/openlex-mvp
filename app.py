@@ -270,10 +270,10 @@ def get_reranker() -> CrossEncoder:
     return _reranker
 
 
-def get_db_stats() -> dict[str, int]:
+def get_db_stats(skill_id: str = ACTIVE_SKILL) -> dict[str, int]:
     global _db_stats
     if _db_stats is None:
-        col = get_collection()
+        col = get_collection(skill_id)
         total = col.count()
         # Sample to estimate type distribution
         sample = col.get(include=["metadatas"], limit=total)
@@ -2645,7 +2645,7 @@ def stream_with_fallback(messages: list[dict]):
 # ═══════════════════════════════════════════════════════════════════════════
 
 
-def validate_response(response: str, chunks: list[dict]) -> list[dict]:
+def validate_response(response: str, chunks: list[dict], skill_id: str = ACTIVE_SKILL) -> list[dict]:
     """Validiert Normreferenzen und Aktenzeichen in der Antwort.
 
     Drei Stufen:
@@ -2653,7 +2653,7 @@ def validate_response(response: str, chunks: list[dict]) -> list[dict]:
       'in_db_only' – in ChromaDB aber NICHT im übergebenen Kontext
       'missing'    – nicht in ChromaDB (Halluzinationsverdacht)
     """
-    col = get_collection()
+    col = get_collection(skill_id)
     model = get_model()
     validations = []
 
@@ -2697,9 +2697,18 @@ def validate_response(response: str, chunks: list[dict]) -> list[dict]:
     ctx_fulltext = _normalize_ref(" ".join(c["text"] for c in chunks))
 
     # FIX 2: Gesetze die NICHT in der Datenschutz-DB sind → "external" statt "missing"
-    _EXTERN_GESETZE = {"BGB", "HGB", "StGB", "ZPO", "GG", "AktG", "GmbHG",
+    # Gesetze die im aktuellen Skill vorhanden sind → nicht als extern markieren
+    _skill_gesetze = set()
+    try:
+        _sm = load_skills_manifest()
+        for law in _sm.get('skills', {}).get(skill_id, {}).get('laws', []):
+            _skill_gesetze.add(law.get('kuerzel', '').upper())
+    except Exception:
+        pass
+    _EXTERN_GESETZE = ({"HGB", "StGB", "ZPO", "AktG", "GmbHG",
                        "InsO", "UWG", "MarkenG", "UrhG", "PatG", "VwGO",
-                       "VwVfG", "SGG", "ArbGG", "BetrVG", "KSchG", "AGG"}
+                       "VwVfG", "SGG", "ArbGG", "BetrVG", "KSchG", "AGG",
+                       "BGB", "GG"} - _skill_gesetze)
 
     def _is_extern_gesetz(ref: str) -> bool:
         """Prüft ob eine Norm aus einem Gesetz stammt das nicht in der DS-DB ist."""
@@ -3061,7 +3070,7 @@ def chat_stream(message: str, history: list[list[str]], skill_id: str = ACTIVE_S
         yield full_response, sources_placeholder, chunks
 
     # Validierung nach komplettem Streaming
-    validations = validate_response(full_response, chunks)
+    validations = validate_response(full_response, chunks, skill_id=skill_id)
 
     # Post-Processing: Normen die NICHT in den Quellen stehen inline markieren
     for v in validations:
