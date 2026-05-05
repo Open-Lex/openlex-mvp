@@ -3566,8 +3566,8 @@ def build_app() -> gr.Blocks:
         for q in EXAMPLES
     )
     WELCOME_HTML = f"""<div id="welcome-screen">
-<h1 class="welcome-title">Datenschutzrecht<br><span class="gold">recherchieren.</span></h1>
-<p class="welcome-sub">Quellenbasierte Antworten zum europäischen Datenschutzrecht.</p>
+<h1 class="welcome-title">Rechtsrecherche<br><span class="gold">mit KI.</span></h1>
+<p class="welcome-sub">Quellenbasierte Antworten — Datenschutz, Sachenrecht, Staatsorganisationsrecht.</p>
 <div class="example-questions">{eq_welcome}</div>
 </div>"""
 
@@ -3656,18 +3656,17 @@ def build_app() -> gr.Blocks:
 
         # ── Input (fixed at bottom via CSS) ──
         with gr.Row(elem_id="input-row"):
-            # Multi-Skill: Dropdown (nur sichtbar wenn > 1 Skill live)
-            _manifest_live = [
-                (v.get('title', k), k)
+            # Dev: alle Skills anzeigen (live + draft)
+            _manifest_all = [
+                (v.get('title', k) + (' [draft]' if v.get('status') == 'draft' else ''), k)
                 for k, v in (load_skills_manifest().get('skills') or {}).items()
-                if v.get('status') == 'live'
             ] or [('Datenschutzrecht (DSGVO/BDSG)', 'datenschutz')]
             skill_selector = gr.Dropdown(
-                choices=_manifest_live,
-                value=_manifest_live[0][1],
+                choices=_manifest_all,
+                value=_manifest_all[0][1],
                 label='Rechtsgebiet',
                 interactive=True,
-                visible=len(_manifest_live) > 1,
+                visible=True,
             )
             msg_input = gr.Textbox(
                 placeholder="Frage eingeben...",
