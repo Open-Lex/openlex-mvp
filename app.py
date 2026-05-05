@@ -3580,7 +3580,7 @@ def build_app() -> gr.Blocks:
 
     HEADER_MENU_HTML = (
         '<div id="ol-header">'
-        '<div class="ol-brand"><span class="ol-open">Open</span><span class="ol-lex">Lex</span></div>'
+        '<div class="ol-brand"><span class="ol-open">Open</span><span class="ol-lex">Lex</span><span style="font-size:0.55rem;font-weight:700;letter-spacing:0.08em;color:#c9a04a;background:rgba(201,160,74,0.15);border:1px solid rgba(201,160,74,0.4);border-radius:10px;padding:2px 7px;margin-left:8px;vertical-align:middle">v2 · dev</span></div>'
         f'<div class="ol-hamburger" onclick="{TOGGLE_MENU}" ontouchend="this.click();event.preventDefault();">\u2630</div>'
         '</div>'
         '<div id="menu-panel" class="menu-closed">'
@@ -3629,7 +3629,7 @@ def build_app() -> gr.Blocks:
     _SRC_STYLE_RE = re.compile(r'<style>.*?</style>', re.DOTALL)
 
     with gr.Blocks(
-        title="OpenLex \u2013 Datenschutzrecht",
+        title="OpenLex v2 – Multi-Skill Dev",
         elem_id="openlex-app",
     ) as app:
 
