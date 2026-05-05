@@ -3579,6 +3579,20 @@ def build_app() -> gr.Blocks:
             "Wann hat ein Widerspruch aufschiebende Wirkung nach \u00a7 80 VwGO?",
             "Was ist der Unterschied zwischen R\u00fccknahme und Widerruf eines VA?",
         ],
+        "grundrechte": [
+            "Wie pr\u00fcft man ein Grundrecht? Erkl\u00e4re das Schema (Schutzbereich-Eingriff-Rechtfertigung).",
+            "Wann ist ein Grundrechtseingriff verh\u00e4ltnism\u00e4\u00dfig?",
+            "Was ist der Schutzbereich von Art. 5 GG (Meinungsfreiheit)?",
+            "Wie funktioniert die Verfassungsbeschwerde und welche Voraussetzungen muss sie erf\u00fcllen?",
+            "Was bedeutet mittelbare Drittwirkung der Grundrechte?",
+        ],
+        "asylrecht": [
+            "Was ist der Unterschied zwischen Asylberechtigung und Fl\u00fcchtlingsschutz nach der GFK?",
+            "Wie l\u00e4uft ein Asylverfahren beim BAMF ab?",
+            "Was regelt die Dublin-III-Verordnung und welche Folgen hat sie f\u00fcr das Verfahren?",
+            "Wann greift subsidi\u00e4rer Schutz nach \u00a7 4 AsylG?",
+            "Welche Klagem\u00f6glichkeiten gibt es gegen einen ablehnenden Asylbescheid?",
+        ],
     }
     _DEFAULT_SKILL_EXAMPLES = [
         "Stelle eine Rechtsfrage zum gew\u00e4hlten Rechtsgebiet.",

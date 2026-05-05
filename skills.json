@@ -213,6 +213,140 @@
           "edited": false
         }
       ]
+    },
+    "grundrechte": {
+      "title": "Grundrechte",
+      "domain": "Verfassungsrecht / Grundrechte",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "Grundrechte des Grundgesetzes (Art. 1-19 GG). Allgemeine Grundrechtslehren, Schutzbereich, Eingriff, Schranken, Verhältnismäßigkeit. Einzelgrundrechte: Menschenwürde, Freiheit, Gleichheit, Meinungsfreiheit, Versammlungsfreiheit, Eigentumsgarantie u.a. Verfassungsbeschwerde.",
+      "collection_name": "openlex_grundrechte",
+      "system_prompt_path": "prompts/grundrechte.md",
+      "status": "draft",
+      "owner": "Admin",
+      "created_at": "2026-05-05T11:49:11.354815+00:00",
+      "updated_at": "2026-05-05T12:07:26.080396+00:00",
+      "laws": [
+        {
+          "id": "a6743d70",
+          "kuerzel": "GG",
+          "title": "Grundgesetz für die Bundesrepublik Deutschland",
+          "paragraph_range": "",
+          "paragraphs": 205,
+          "chunks_added": 205,
+          "added_at": "2026-05-05T12:05:52.586457+00:00"
+        },
+        {
+          "id": "e3ba5110",
+          "kuerzel": "BVERFGG",
+          "title": "Gesetz über das Bundesverfassungsgericht",
+          "paragraph_range": "",
+          "paragraphs": 139,
+          "chunks_added": 139,
+          "added_at": "2026-05-05T12:07:26.080379+00:00"
+        }
+      ],
+      "cases": [],
+      "method_chunks": [
+        {
+          "title": "Allgemeines Grundrechts-Prüfungsschema (Schutzbereich-Eingriff-Schranken)",
+          "category": "Pruefungsschema",
+          "edited": false
+        },
+        {
+          "title": "Verhältnismäßigkeitsgrundsatz im Grundrechtsbereich",
+          "category": "Definition",
+          "edited": false
+        },
+        {
+          "title": "Die wichtigsten Einzelgrundrechte im Überblick (Art. 1–19 GG)",
+          "category": "Definition",
+          "edited": false
+        },
+        {
+          "title": "Verfassungsbeschwerde (Art. 93 Abs. 1 Nr. 4a GG, §§ 90 ff. BVerfGG)",
+          "category": "",
+          "edited": false
+        },
+        {
+          "title": "Drittwirkung der Grundrechte und staatliche Schutzpflichten",
+          "category": "",
+          "edited": false
+        },
+        {
+          "title": "Test",
+          "category": "",
+          "edited": false
+        },
+        {
+          "title": "Verfassungsbeschwerde (Art. 93 Abs. 1 Nr. 4a GG)",
+          "category": "",
+          "edited": false
+        }
+      ]
+    },
+    "asylrecht": {
+      "title": "Migrations- und Asylrecht",
+      "domain": "Öffentliches Recht / Asyl- und Aufenthaltsrecht",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "Asylrecht (AsylG, Art. 16a GG), Aufenthaltsrecht (AufenthG), Flüchtlingsschutz (GFK), subsidiärer Schutz, Abschiebungsverbote. Verwaltungsverfahren und -gerichtsverfahren im Ausländerrecht.",
+      "collection_name": "openlex_asylrecht",
+      "system_prompt_path": "prompts/asylrecht.md",
+      "status": "draft",
+      "owner": "Admin",
+      "created_at": "2026-05-05T11:49:14.125337+00:00",
+      "updated_at": "2026-05-05T12:10:10.468186+00:00",
+      "laws": [
+        {
+          "id": "c9df10f3",
+          "kuerzel": "ASYLVFG_1992",
+          "title": "Asylgesetz",
+          "paragraph_range": "",
+          "paragraphs": 120,
+          "chunks_added": 120,
+          "added_at": "2026-05-05T12:08:34.155070+00:00"
+        },
+        {
+          "id": "28fc0554",
+          "kuerzel": "AUFENTHG_2004",
+          "title": "Gesetz über den Aufenthalt, die Erwerbstätigkeit und die Integration von Ausländern im Bundesgebiet",
+          "paragraph_range": "",
+          "paragraphs": 195,
+          "chunks_added": 195,
+          "added_at": "2026-05-05T12:10:10.468167+00:00"
+        }
+      ],
+      "cases": [],
+      "method_chunks": [
+        {
+          "title": "Asylverfahren im Überblick (§§ 13 ff. AsylG)",
+          "category": "",
+          "edited": false
+        },
+        {
+          "title": "Schutzstatus: Asylberechtigung, Flüchtlingsschutz, subsidiärer Schutz, Abschiebungsverbote",
+          "category": "",
+          "edited": false
+        },
+        {
+          "title": "Dublin-III-Verordnung und Zuständigkeitsbestimmung",
+          "category": "",
+          "edited": false
+        },
+        {
+          "title": "Abschiebung und Aufenthaltsbeendigung (§§ 58 ff. AufenthG)",
+          "category": "",
+          "edited": false
+        },
+        {
+          "title": "Klage vor dem Verwaltungsgericht im Asylrecht (§ 78 AsylG, § 74 AsylG)",
+          "category": "",
+          "edited": false
+        }
+      ]
     }
   }
 }
