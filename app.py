@@ -3766,13 +3766,17 @@ if __name__ == "__main__":
 
     app = build_app()
     static_dir = os.path.join(os.path.dirname(__file__), "static")
-    app.queue(default_concurrency_limit=10).launch(
+    app.queue(
+        default_concurrency_limit=10,
+        status_update_rate=30,
+    ).launch(
         server_name="127.0.0.1",
         server_port=int(os.environ.get("GRADIO_SERVER_PORT", 7860)),
         share=False,
         show_error=True,
         root_path=os.environ.get("GRADIO_ROOT_PATH", ""),
         favicon_path=os.path.join(static_dir, "apple-touch-icon.png"),
+        server_kwargs={"timeout_keep_alive": 75},  # uvicorn WS keepalive
         allowed_paths=[static_dir],
         head=PWA_HEAD,
         css="""
