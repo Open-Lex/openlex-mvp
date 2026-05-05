@@ -7,6 +7,212 @@
       "system_prompt_path": "prompts/datenschutz.md",
       "status": "live",
       "owner": "Admin"
+    },
+    "sachenrecht": {
+      "title": "Sachenrecht (BGB)",
+      "domain": "Zivilrecht / Sachenrecht",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "Sachenrecht nach BGB Buch 3 (§§ 854-1296 BGB). Behandelt Eigentum, Besitz und beschränkte dingliche Rechte. Schwerpunkte: Eigentumserwerb (originär/derivativ), Besitzschutz, Hypothek, Grundschuld, Pfandrecht, Nießbrauch. Methodisch geht es um Trennungs-, Abstraktions- und Spezialitätsprinzip sowie um die strikte Typenzwang-Lehre. Ständige Rechtsprechung: BGH V. Zivilsenat.",
+      "collection_name": "openlex_sachenrecht",
+      "system_prompt_path": "prompts/sachenrecht.md",
+      "status": "draft",
+      "owner": "Admin",
+      "created_at": "2026-05-04T19:23:27.778187+00:00",
+      "updated_at": "2026-05-04T21:23:10.674184+00:00",
+      "laws": [
+        {
+          "id": "4a273834",
+          "kuerzel": "BGB",
+          "title": "Bürgerliches Gesetzbuch",
+          "paragraph_range": "854-1296",
+          "paragraphs": 436,
+          "chunks_added": 436,
+          "added_at": "2026-05-04T19:25:06.280957+00:00"
+        }
+      ],
+      "cases": [],
+      "method_chunks": [
+        {
+          "title": "Pruefungsschema 985 BGB",
+          "category": "Pruefungsschema",
+          "edited": false
+        },
+        {
+          "title": "Prüfungsschema: Originärer Eigentumserwerb an beweglichen Sachen (§§ 946–952 BGB)",
+          "category": "Pruefungsschema",
+          "edited": false
+        },
+        {
+          "title": "Abgrenzung: Derivativer vs. originärer Eigentumserwerb – Trennungs- und Abstraktionsprinzip",
+          "category": "Abgrenzung",
+          "edited": false
+        },
+        {
+          "title": "Definition und Prüfung: Besitzschutz nach §§ 858–864 BGB – Verbotenes Eigenmacht und Besitzkehr",
+          "category": "Definition",
+          "edited": false
+        },
+        {
+          "title": "Subsumtionshilfe: Gutgläubiger Erwerb beweglicher Sachen (§§ 932–936 BGB) – Fallstricke und BGH-Rechtsprechung",
+          "category": "Subsumtion",
+          "edited": false
+        },
+        {
+          "title": "Prüfungsschema: Hypothek (§§ 1113–1190 BGB) – Akzessorietät und Zwangsvollstreckung",
+          "category": "Pruefungsschema",
+          "edited": false
+        },
+        {
+          "title": "Definition und Abgrenzung: Nießbrauch (§§ 1030–1089 BGB) vs. beschränkte persönliche Dienstbarkeit (§ 1090 BGB)",
+          "category": "Abgrenzung",
+          "edited": false
+        },
+        {
+          "title": "Subsumtionshilfe: Pfandrecht an beweglichen Sachen (§§ 1204–1256 BGB) – Entstehung und Verwertung",
+          "category": "Subsumtion",
+          "edited": false
+        },
+        {
+          "title": "Prüfungsschema: Ersitzung (§ 937 BGB) – Voraussetzungen und Fallstricke",
+          "category": "Pruefungsschema",
+          "edited": false
+        },
+        {
+          "title": "Abgrenzung: Typenzwang im Sachenrecht (§§ 854–1296 BGB) vs. Schuldrechtliche Gestaltungsfreiheit",
+          "category": "Abgrenzung",
+          "edited": false
+        },
+        {
+          "title": "Definition und Prüfung: Spezialitätsprinzip im Sachenrecht – Anwendungsfälle und BGH-Rechtsprechung",
+          "category": "Definition",
+          "edited": false
+        }
+      ]
+    },
+    "staatsorganisationsrecht": {
+      "title": "Staatsorganisationsrecht",
+      "domain": "Staatsorganisationsrecht",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "Verfassungsorgane, Demokratieprinzip, Bundesstaatsprinzip, Verfassungsgerichtsbarkeit",
+      "collection_name": "openlex_staatsorganisationsrecht",
+      "system_prompt_path": "prompts/staatsorganisationsrecht.md",
+      "status": "draft",
+      "owner": "Admin",
+      "created_at": "2026-05-05T08:23:42.819869+00:00",
+      "updated_at": "2026-05-05T08:32:53.895690+00:00",
+      "laws": [
+        {
+          "id": "b5579b2f",
+          "kuerzel": "GG",
+          "title": "Grundgesetz für die Bundesrepublik Deutschland",
+          "paragraph_range": null,
+          "paragraphs": 205,
+          "chunks_added": 205,
+          "added_at": "2026-05-05T08:24:35.446328+00:00"
+        }
+      ],
+      "cases": [],
+      "openrewi_imports": [
+        {
+          "book_id": "chiofalo-staatsorganisationsrecht-2022",
+          "chunks_added": 342,
+          "imported_at": "2026-05-05T08:32:53.895672+00:00"
+        }
+      ]
+    },
+    "verwaltungsrecht": {
+      "title": "Allgemeines Verwaltungsrecht",
+      "domain": "Öffentliches Recht / Verwaltungsrecht",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "Allgemeines Verwaltungsrecht nach VwVfG und VwGO. Verwaltungsakt (§ 35 VwVfG), Ermessen, Verhältnismäßigkeit, Widerspruchsverfahren, Verwaltungsklage. Besonderes Verwaltungsrecht: Polizei- und Ordnungsrecht, Baurecht.",
+      "collection_name": "openlex_verwaltungsrecht",
+      "system_prompt_path": "prompts/verwaltungsrecht.md",
+      "status": "draft",
+      "owner": "Admin",
+      "created_at": "2026-05-05T10:49:29.431380+00:00",
+      "updated_at": "2026-05-05T10:57:35.003169+00:00",
+      "laws": [
+        {
+          "id": "2132bd6b",
+          "kuerzel": "VWVFG",
+          "title": "Verwaltungsverfahrensgesetz",
+          "paragraph_range": "",
+          "paragraphs": 122,
+          "chunks_added": 122,
+          "added_at": "2026-05-05T10:50:26.408080+00:00"
+        },
+        {
+          "id": "476037ec",
+          "kuerzel": "VWGO",
+          "title": "Verwaltungsgerichtsordnung",
+          "paragraph_range": "",
+          "paragraphs": 217,
+          "chunks_added": 217,
+          "added_at": "2026-05-05T10:51:15.430084+00:00"
+        },
+        {
+          "id": "6dd8b5c8",
+          "kuerzel": "GEWO",
+          "title": "Gewerbeordnung",
+          "paragraph_range": "",
+          "paragraphs": 171,
+          "chunks_added": 171,
+          "added_at": "2026-05-05T10:52:16.377908+00:00"
+        },
+        {
+          "id": "29b80ebe",
+          "kuerzel": "VWVG",
+          "title": "Verwaltungs-Vollstreckungsgesetz",
+          "paragraph_range": "",
+          "paragraphs": 25,
+          "chunks_added": 25,
+          "added_at": "2026-05-05T10:52:46.311630+00:00"
+        }
+      ],
+      "cases": [],
+      "method_chunks": [
+        {
+          "title": "Prüfungsschema: Verwaltungsakt (§ 35 VwVfG)",
+          "category": "Pruefungsschema",
+          "edited": false
+        },
+        {
+          "title": "Prüfungsschema: Anfechtungsklage (§ 42 Abs. 1 Alt. 1 VwGO)",
+          "category": "Pruefungsschema",
+          "edited": false
+        },
+        {
+          "title": "Ermessen und Verhältnismäßigkeit im Verwaltungsrecht",
+          "category": "Definition",
+          "edited": false
+        },
+        {
+          "title": "Verpflichtungsklage und allgemeine Leistungsklage (§ 42 Abs. 1 Alt. 2 VwGO)",
+          "category": "Pruefungsschema",
+          "edited": false
+        },
+        {
+          "title": "Widerspruchsverfahren (§§ 68–73 VwGO)",
+          "category": "Pruefungsschema",
+          "edited": false
+        },
+        {
+          "title": "Aufschiebende Wirkung und einstweiliger Rechtsschutz (§ 80 VwGO)",
+          "category": "Pruefungsschema",
+          "edited": false
+        },
+        {
+          "title": "Bekanntgabe, Wirksamkeit und Bestandskraft des Verwaltungsakts (§§ 41–43 VwVfG)",
+          "category": "Definition",
+          "edited": false
+        }
+      ]
     }
   }
 }
