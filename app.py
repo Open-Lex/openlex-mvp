@@ -3550,6 +3550,60 @@ def build_app() -> gr.Blocks:
         _git_hash = "unknown"
 
     # ── Beispielfragen ──
+    SKILL_EXAMPLES = {
+        "datenschutz": [
+            "Darf mein Arbeitgeber meine E-Mails lesen?",
+            "Was sind die Voraussetzungen f\u00fcr eine wirksame Einwilligung?",
+            "Wie hat der EuGH den Schadensersatz nach Art. 82 DSGVO ausgelegt?",
+            "Darf ich als Unternehmen Daten in die USA \u00fcbermitteln?",
+            "Ist Video\u00fcberwachung im Laden zur Diebstahlpr\u00e4vention zul\u00e4ssig?",
+        ],
+        "sachenrecht": [
+            "Wie \u00fcbereignet man eine bewegliche Sache nach \u00a7 929 BGB?",
+            "Was ist der Unterschied zwischen Besitz und Eigentum?",
+            "Unter welchen Voraussetzungen kann man gutgl\u00e4ubig Eigentum erwerben?",
+            "Was ist das Abstraktionsprinzip im Sachenrecht?",
+            "Wie funktioniert die Sicherungs\u00fcbereignung?",
+        ],
+        "staatsorganisationsrecht": [
+            "Was ist das Demokratieprinzip und wie ist es im GG verankert?",
+            "Wie funktioniert die Gesetzgebung im Bund?",
+            "Was sind die Rechte von Bundestagsabgeordneten nach dem GG?",
+            "Wie ist die Gewaltenteilung im Grundgesetz geregelt?",
+            "Was ist der Unterschied zwischen Bundesrat und Bundestag?",
+        ],
+        "verwaltungsrecht": [
+            "Was ist ein Verwaltungsakt und wo ist er definiert?",
+            "Wie pr\u00fcft man die Zul\u00e4ssigkeit einer Anfechtungsklage?",
+            "Was sind Ermessensfehler bei Verwaltungsentscheidungen?",
+            "Wann hat ein Widerspruch aufschiebende Wirkung nach \u00a7 80 VwGO?",
+            "Was ist der Unterschied zwischen R\u00fccknahme und Widerruf eines VA?",
+        ],
+    }
+    _DEFAULT_SKILL_EXAMPLES = [
+        "Stelle eine Rechtsfrage zum gew\u00e4hlten Rechtsgebiet.",
+        "Was sind die wichtigsten Normen in diesem Rechtsgebiet?",
+        "Erkl\u00e4re das zentrale Pr\u00fcfungsschema.",
+    ]
+
+    def build_welcome_html(skill_id):
+        examples = SKILL_EXAMPLES.get(skill_id, _DEFAULT_SKILL_EXAMPLES)
+        fjs = (
+            "document.querySelector('#msg-input textarea').value=this.textContent;"
+            "document.querySelector('#msg-input textarea').dispatchEvent(new Event('input',{bubbles:true}));"
+        )
+        eq_parts = []
+        for q in examples:
+            eq_parts.append('<button class="eq" onclick="' + fjs + '">' + q + "</button>")
+        eq = "\n".join(eq_parts)
+        return (
+            '<div id="welcome-screen">'
+            '<h1 class="welcome-title">Rechtsrecherche<br><span class="gold">mit KI.</span></h1>'
+            '<p class="welcome-sub">Quellenbasierte Antworten \u2014 pro Rechtsgebiet.</p>'
+            '<div class="example-questions">' + eq + '</div>'
+            '</div>'
+        )
+
     EXAMPLES = [
         "Darf mein Arbeitgeber meine E-Mails lesen?",
         "Was sind die Voraussetzungen für eine wirksame Einwilligung?",
@@ -3575,11 +3629,10 @@ def build_app() -> gr.Blocks:
         f'<button class="eq" onclick="{FILL_JS}">{q}</button>'
         for q in EXAMPLES
     )
-    WELCOME_HTML = f"""<div id="welcome-screen">
-<h1 class="welcome-title">Rechtsrecherche<br><span class="gold">mit KI.</span></h1>
-<p class="welcome-sub">Quellenbasierte Antworten — pro Rechtsgebiet.</p>
-<div class="example-questions">{eq_welcome}</div>
-</div>"""
+    # Welcome uses skill-specific examples (reloads on skill switch)
+    _welcome_skills = list((load_skills_manifest().get("skills") or {}).keys())
+    _first_skill_id = _welcome_skills[0] if _welcome_skills else "datenschutz"
+    WELCOME_HTML = build_welcome_html(_first_skill_id)
 
     COPY_JS = (
         "var el=document.querySelector('#copy-store textarea');"
@@ -3740,6 +3793,15 @@ def build_app() -> gr.Blocks:
         clear_trigger.click(
             lambda: ([], "", "", WELCOME_HTML),
             outputs=[chatbot, copy_store, msg_input, welcome],
+        )
+
+        # Skill-Wechsel: Beispielfragen im Welcome-Screen aktualisieren
+        skill_selector.change(
+            fn=lambda sid, history: (
+                build_welcome_html(sid) if not history else ""
+            ),
+            inputs=[skill_selector, chatbot],
+            outputs=[welcome],
         )
 
     return app
