@@ -3567,7 +3567,7 @@ def build_app() -> gr.Blocks:
     )
     WELCOME_HTML = f"""<div id="welcome-screen">
 <h1 class="welcome-title">Rechtsrecherche<br><span class="gold">mit KI.</span></h1>
-<p class="welcome-sub">Quellenbasierte Antworten — Datenschutz, Sachenrecht, Staatsorganisationsrecht.</p>
+<p class="welcome-sub">Quellenbasierte Antworten — pro Rechtsgebiet.</p>
 <div class="example-questions">{eq_welcome}</div>
 </div>"""
 
