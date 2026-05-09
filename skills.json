@@ -226,7 +226,7 @@
       "status": "draft",
       "owner": "Admin",
       "created_at": "2026-05-05T11:49:11.354815+00:00",
-      "updated_at": "2026-05-05T12:07:26.080396+00:00",
+      "updated_at": "2026-05-05T14:03:16.705541+00:00",
       "laws": [
         {
           "id": "a6743d70",
@@ -283,6 +283,13 @@
           "title": "Verfassungsbeschwerde (Art. 93 Abs. 1 Nr. 4a GG)",
           "category": "",
           "edited": false
+        }
+      ],
+      "openrewi_imports": [
+        {
+          "book_id": "petras-grundrechte-faelle-2023",
+          "chunks_added": 197,
+          "imported_at": "2026-05-05T14:03:16.705520+00:00"
         }
       ]
     },
