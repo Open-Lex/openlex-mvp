@@ -1,0 +1,61 @@
+{
+  "skill": "strafrecht",
+  "original_queries": [
+    {
+      "id": "O1",
+      "query": "Welche Voraussetzungen gelten für Notwehr nach § 32 StGB?",
+      "expected_terms": ["notwehr", "angriff", "gebotenheit", "verteidigung", "rechtswidrigkeit"],
+      "type": "original"
+    },
+    {
+      "id": "O2",
+      "query": "Was ist der Unterschied zwischen Vorsatz und Fahrlässigkeit im Strafrecht?",
+      "expected_terms": ["vorsatz", "fahrlässigkeit", "dolus", "sorgfaltspflicht", "willentlich"],
+      "type": "original"
+    },
+    {
+      "id": "O3",
+      "query": "Wie prüft man Betrug nach § 263 StGB?",
+      "expected_terms": ["täuschung", "irrtum", "vermögensschaden", "stoffgleichheit", "bereicherung"],
+      "type": "original"
+    },
+    {
+      "id": "O4",
+      "query": "Was sind die Voraussetzungen der Strafverfolgungsverjährung?",
+      "expected_terms": ["verjährung", "verjährungsfrist", "verfolgungsverjährung", "§ 78 stgb", "ablauf"],
+      "type": "original"
+    },
+    {
+      "id": "O5",
+      "query": "Wann liegt ein strafbarer Versuch vor und wie wird er von der Vollendung abgegrenzt?",
+      "expected_terms": ["versuch", "vollendung", "unmittelbares ansetzen", "rücktritt", "§ 22 stgb"],
+      "type": "original"
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1",
+      "type": "off_topic",
+      "query": "Welche Fristen gelten bei der Mietminderung wegen Schimmelbefall?",
+      "expected_terms": ["mietminderung", "§ 536 bgb", "schimmelbefall", "mietmangel"],
+      "expected_behavior": "Top-5 enthält keine Mietrechts-spezifischen Treffer; hit=0 ist korrekt",
+      "fail_signal": "Hit-Methodik zu permissiv: Mietrecht-Terme in Strafrecht-Collection gefunden"
+    },
+    {
+      "id": "A2",
+      "type": "narrow",
+      "query": "BGH 2 StR 195/22 — Voraussetzungen besonders schwerer Fall des Diebstahls",
+      "expected_terms": ["2 str 195/22", "§ 243", "besonders schwerer fall", "diebstahl"],
+      "expected_behavior": "Spezifisches Urteil oder § 243 StGB-Kontext im Top-5",
+      "fail_signal": "Nur generische Treffer ohne § 243 oder Bezug zum Aktenzeichen"
+    },
+    {
+      "id": "A3",
+      "type": "negation",
+      "query": "Strafausschließungsgründe bei § 218 StGB AUSSER medizinischer Indikation",
+      "expected_terms": ["kriminologische indikation", "soziale indikation", "beratungsregelung", "fristenregelung"],
+      "expected_behavior": "Top-3 zeigt nicht-medizinische Ausnahmen (Beratungsregelung, Fristenanzeige)",
+      "fail_signal": "Top-Treffer behandelt primär medizinische Indikation statt kriminologischer/sozialer"
+    }
+  ]
+}
