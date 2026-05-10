@@ -1,0 +1,615 @@
+{
+  "skill": "strafrecht",
+  "via": "shadow-e5",
+  "model": "intfloat/multilingual-e5-large",
+  "n_embeddings": 184704,
+  "aggregate": {
+    "n_queries": 8,
+    "n_normal": 7,
+    "hit_loose_5": 0.857,
+    "hit_strict_5": 0.857,
+    "hit_at_1": 0.857,
+    "hit_at_3": 0.857,
+    "ndcg10_graded_mean": 0.783,
+    "auto_spot_median": 3,
+    "manual_spot_median": 3,
+    "manual_spot_notes": "O1=3,O3=3,A2=3",
+    "nlnet_verdict": "BELASTBAR"
+  },
+  "off_topic_summary": [
+    {
+      "id": "A1",
+      "query": "Welche Fristen gelten bei der Mietminderung wegen Schimmelbefall?",
+      "hit_loose_pass": true,
+      "contamination_ndcg": 0.0
+    }
+  ],
+  "per_query": [
+    {
+      "id": "O1",
+      "query": "Welche Voraussetzungen gelten für Notwehr nach § 32 StGB?",
+      "type": "original",
+      "expected_terms": [
+        "notwehr",
+        "angriff",
+        "gebotenheit",
+        "verteidigung",
+        "rechtswidrigkeit"
+      ],
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.993,
+        "found_terms_per_doc": [
+          [
+            "notwehr",
+            "angriff",
+            "verteidigung"
+          ],
+          [
+            "notwehr",
+            "angriff",
+            "verteidigung"
+          ],
+          [
+            "notwehr",
+            "angriff",
+            "verteidigung"
+          ],
+          [
+            "notwehr",
+            "angriff",
+            "verteidigung"
+          ],
+          [
+            "notwehr",
+            "angriff"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1145,
+          "found_terms": [
+            "notwehr",
+            "angriff",
+            "verteidigung"
+          ],
+          "spot_score": 2,
+          "text_excerpt": "nden gehindert gewesen sei, die Lage richtig zu überblicken.  II.  9          Die Erwägungen, mit denen das Landgericht eine Rechtfertigung des      Angeklagten durch Notwehr (§ 32 StGB) abgelehnt hat, halten einer rechtlichen      Überprüfung nicht stand.  10         1. Eine in einer Notwehrlage ve"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1178,
+          "found_terms": [
+            "notwehr",
+            "angriff",
+            "verteidigung"
+          ],
+          "spot_score": 2,
+          "text_excerpt": "den     rechtsfehlerfrei getroffenen Feststellungen die Voraussetzungen der Notwehr     gegeben sind. Entgegen der Ansicht des Landgerichts war die vom Angeklagten gewählte Verteidigungshandlung insbesondere erforderlich im Sinne des     § 32 Abs. 2 StGB.  5         a) Ob eine Verteidigungshandlung "
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.123,
+          "found_terms": [
+            "notwehr",
+            "angriff",
+            "verteidigung"
+          ],
+          "spot_score": 2,
+          "text_excerpt": "troffenen      Mindestfeststellungen ist dessen rechtliche Wertung nicht zu beanstanden.  17           a) Eine in einer Notwehrlage verübte Tat ist gemäß § 32 Abs. 2 StGB gerechtfertigt, wenn sie zu einer sofortigen und endgültigen Abwehr des Angriffs  -8-  führt und es sich bei ihr um das mildeste "
+        }
+      ],
+      "adversarial_expected_behavior": "",
+      "adversarial_fail_signal": ""
+    },
+    {
+      "id": "O2",
+      "query": "Was ist der Unterschied zwischen Vorsatz und Fahrlässigkeit im Strafrecht?",
+      "type": "original",
+      "expected_terms": [
+        "vorsatz",
+        "fahrlässigkeit",
+        "dolus",
+        "sorgfaltspflicht",
+        "willentlich"
+      ],
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.927,
+        "found_terms_per_doc": [
+          [
+            "vorsatz",
+            "fahrlässigkeit"
+          ],
+          [
+            "vorsatz",
+            "fahrlässigkeit",
+            "sorgfaltspflicht"
+          ],
+          [
+            "vorsatz",
+            "fahrlässigkeit"
+          ],
+          [
+            "vorsatz",
+            "fahrlässigkeit"
+          ],
+          [
+            "fahrlässigkeit"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1308,
+          "found_terms": [
+            "vorsatz",
+            "fahrlässigkeit"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "Begründung zur subjektiven Tatseite einer gefährlichen Körperverletzung zu stellen sind.  8         1. Die Strafkammer hat bereits den für den Grundtatbestand erforderlichen     Körperverletzungsvorsatz der Angeklagten nicht rechtsfehlerfrei festgestellt.  9         a) Bedingter Vorsatz und bewusste"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1313,
+          "found_terms": [
+            "vorsatz",
+            "fahrlässigkeit",
+            "sorgfaltspflicht"
+          ],
+          "spot_score": 2,
+          "text_excerpt": "en. Der bösen Absicht im einen Falle steht das sichere Wissen im anderen gegenüber. Es ist daher erwogen worden, eine allgemeine Vorschrift vorzusehen, wonach zur Strafbarkeit absichtliches Handeln genügt, wenn das Gesetz wissentliches Handeln voraussetzt.Es ist jedoch auf eine solche allgemeine Vor"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1368,
+          "found_terms": [
+            "vorsatz",
+            "fahrlässigkeit"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "die Fahrlässigkeit zum Vorsatz im Verhältnis der schwächeren zur stärkeren Form oder im Verhältnis der Andersartigkeit steht. § 17 Absicht und Wissentlichkeit Das geltende Recht verwendet an zahlreichen Stellen die Begriffe „absichtlich\" und „wissentlich\".Sie werden aber nicht einheitlich gebraucht,"
+        }
+      ],
+      "adversarial_expected_behavior": "",
+      "adversarial_fail_signal": ""
+    },
+    {
+      "id": "O3",
+      "query": "Wie prüft man Betrug nach § 263 StGB?",
+      "type": "original",
+      "expected_terms": [
+        "täuschung",
+        "irrtum",
+        "vermögensschaden",
+        "stoffgleichheit",
+        "bereicherung"
+      ],
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.816,
+        "found_terms_per_doc": [
+          [
+            "irrtum"
+          ],
+          [
+            "irrtum"
+          ],
+          [
+            "vermögensschaden"
+          ],
+          [
+            "vermögensschaden"
+          ],
+          [
+            "vermögensschaden"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1217,
+          "found_terms": [
+            "irrtum"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "s      auch im Verhältnis zu § 263a StGB gilt“ (BT-Drucks. 10/5058 S. 30).  - 16 -  35            2. Die Verurteilung wegen Betruges (§ 263 StGB) durch Erschleichung      einer nicht gerechtfertigten Eigenheimzulage hält rechtlicher Nachprüfung      stand.  36            a) Dem Gesamtzusammenhang de"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1218,
+          "found_terms": [
+            "irrtum"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "t revisionsgerichtlicher Überprüfung nicht stand. Der Generalbundesanwalt hat in seiner Antragsschrift ausgeführt:  \"Eine Strafbarkeit wegen Betruges gemäß § 263 Abs. 1 StGB                setzt voraus, dass eine andere Person über Tatsachen getäuscht  -3-  wird und durch den so hervorgerufenen Irrt"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.126,
+          "found_terms": [
+            "vermögensschaden"
+          ],
+          "spot_score": 1,
+          "text_excerpt": ". Der Schuldspruch wegen Betruges in den Fällen B. I. und II. der Urteilsgründe hält sachlich-rechtlicher Überprüfung nicht stand. Die Urteilsfeststellungen belegen den von der Strafkammer angenommenen Vermögensschaden     der V.    nicht hinreichend.  -5-  8            a) Ein Vermögensschaden im Si"
+        }
+      ],
+      "adversarial_expected_behavior": "",
+      "adversarial_fail_signal": ""
+    },
+    {
+      "id": "O4",
+      "query": "Was sind die Voraussetzungen der Strafverfolgungsverjährung?",
+      "type": "original",
+      "expected_terms": [
+        "verjährung",
+        "verjährungsfrist",
+        "verfolgungsverjährung",
+        "§ 78 stgb",
+        "ablauf"
+      ],
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.918,
+        "found_terms_per_doc": [
+          [
+            "verjährung",
+            "verjährungsfrist"
+          ],
+          [
+            "verjährung",
+            "verjährungsfrist",
+            "verfolgungsverjährung",
+            "ablauf"
+          ],
+          [
+            "verjährung",
+            "verfolgungsverjährung"
+          ],
+          [
+            "verjährung",
+            "verjährungsfrist",
+            "ablauf"
+          ],
+          [
+            "verjährung",
+            "verjährungsfrist",
+            "verfolgungsverjährung",
+            "ablauf"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1197,
+          "found_terms": [
+            "verjährung",
+            "verjährungsfrist"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "(1) Die Verjährung schließt die Ahndung der Tat und die Anordnung von Maßnahmen (§ 11 Abs. 1 Nr. 8) aus. § 76a Absatz 2 bleibt unberührt.  (2) Verbrechen nach § 211 (Mord) verjähren nicht.  (3) Soweit die Verfolgung verjährt, beträgt die Verjährungsfrist   1.  dreißig Jahre bei Taten, die mit lebens"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1232,
+          "found_terms": [
+            "verjährung",
+            "verjährungsfrist",
+            "verfolgungsverjährung",
+            "ablauf"
+          ],
+          "spot_score": 2,
+          "text_excerpt": "Deutscher Bundestag Drucksache 15/5653 15. Wahlperiode 09. 06. 2005  Gesetzentwurf der Bundesregierung  Entwurf eines … Gesetzes zur Änderung des Strafgesetzbuches (… StrRÄndG)  A. Problem und Ziel Die Vorschriften der Verfolgungsverjährung §§ 78 bis 78c StGB stecken den Rahmen ab, innerhalb dessen "
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1236,
+          "found_terms": [
+            "verjährung",
+            "verfolgungsverjährung"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "dies nach dem Ermessen der Verfolgungsbehörde oder des Gerichts oder im Einvernehmen beider zuläßt. SIEBENTER ABSCHNITT Verjährung § 20 Verfolgungsverjährung (1) Die Verfolgung von Ordnungswidrigkeiten verjährt, wenn das Gesetz nichts anderes bestimmt, 1.in drei Jahren bei Taten, die mit Geldbuße im"
+        }
+      ],
+      "adversarial_expected_behavior": "",
+      "adversarial_fail_signal": ""
+    },
+    {
+      "id": "O5",
+      "query": "Wann liegt ein strafbarer Versuch vor und wie wird er von der Vollendung abgegrenzt?",
+      "type": "original",
+      "expected_terms": [
+        "versuch",
+        "vollendung",
+        "unmittelbares ansetzen",
+        "rücktritt",
+        "§ 22 stgb"
+      ],
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.896,
+        "found_terms_per_doc": [
+          [
+            "versuch",
+            "vollendung"
+          ],
+          [
+            "versuch",
+            "vollendung"
+          ],
+          [
+            "versuch",
+            "vollendung",
+            "§ 22 stgb"
+          ],
+          [
+            "versuch",
+            "vollendung"
+          ],
+          [
+            "versuch"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1255,
+          "found_terms": [
+            "versuch",
+            "vollendung"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "(1) Wegen Versuchs wird nicht bestraft, wer freiwillig die weitere Ausführung der Tat aufgibt oder deren Vollendung verhindert. Wird die Tat ohne Zutun des Zurücktretenden nicht vollendet, so wird er straflos, wenn er sich freiwillig und ernsthaft bemüht, die Vollendung zu verhindern.  (2) Sind an d"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1256,
+          "found_terms": [
+            "versuch",
+            "vollendung"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "reiwillig die weitere Vorbereitung der Tat aufgibt und eine von ihm verursachte und erkannte Gefahr, dass andere diese Tat weiter vorbereiten oder sie ausführen, abwendet oder wesentlich mindert oder wenn er freiwillig die Vollendung dieser Tat verhindert.Wird ohne Zutun des Täters die bezeichnete G"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1275,
+          "found_terms": [
+            "versuch",
+            "vollendung",
+            "§ 22 stgb"
+          ],
+          "spot_score": 2,
+          "text_excerpt": "2; LK-StGB/Schünemann/Greco, 13. Aufl., § 30      Rn. 14 ff.; SSW-StGB/Murmann, 5. Aufl., § 30 Rn. 1; vgl. auch BGH, Urteile vom      24. April 1951 – 1 StR 130/51, BGHSt 1, 131, 135, und vom 15. Mai 1992 – 3 StR      419/91, NJW 1992, 2903, 2905).  - 14 -  36          (b) Der Gesetzesbefehl des § 1"
+        }
+      ],
+      "adversarial_expected_behavior": "",
+      "adversarial_fail_signal": ""
+    },
+    {
+      "id": "A1",
+      "query": "Welche Fristen gelten bei der Mietminderung wegen Schimmelbefall?",
+      "type": "off_topic",
+      "expected_terms": [
+        "mietminderung",
+        "§ 536 bgb",
+        "schimmelbefall",
+        "mietmangel"
+      ],
+      "metrics": {
+        "query_type": "off_topic",
+        "hit_loose_pass": true,
+        "hit_strict_pass": true,
+        "hit_at_1_pass": true,
+        "hit_at_3_pass": true,
+        "off_topic_contamination_ndcg": 0.0,
+        "found_terms_per_doc": [
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1779,
+          "found_terms": [],
+          "spot_score": 0,
+          "text_excerpt": "de und zu Rußanhaftungen an      Wänden und Decke führte, kam es im Zimmer des Angeklagten zu \"großflächigen Abplatzungen des Putzes an der Wand\" und \"starken Verrußungen\". In Anbetracht dessen erschließt es sich ohne weiteres, dass die aus der brand-  -7-  bedingten Einwirkung resultierende \"vorübe"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1791,
+          "found_terms": [],
+          "spot_score": 0,
+          "text_excerpt": "StR 743/78,     BGHSt 28, 327, 330 f. und vom 10. April 1990 ‒ 1 StR 9/90, BGHSt 37, 5, 7;     Beschlüsse vom 13. Juni 1991 ‒ 4 StR 105/91, BGHSt 38, 4, 7; vom 19. Juli 2006     – 2 StR 181/06, NStZ 2007, 213; vom 4. April 2017 – 3 StR 112/17 und vom  -4-  18. Juli 2018 – 4 StR 259/18). Eine Beschwe"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1794,
+          "found_terms": [],
+          "spot_score": 0,
+          "text_excerpt": "htungen oder etwa der Nießbrauch. Die Folgen der Tat treffen in solchen Fällen den Mieter, Pächter oder den sonst an der Sache Berechtigten. Dem- entsprechend reicht der Kreis der Antragsberechtigten gemäß § 303c StGB weit über den der Eigentümer hi- naus.  2. Vorgeschlagen wird, die Abfolge der Tat"
+        }
+      ],
+      "adversarial_expected_behavior": "Top-5 enthält keine Mietrechts-spezifischen Treffer; hit=0 ist korrekt",
+      "adversarial_fail_signal": "Hit-Methodik zu permissiv: Mietrecht-Terme in Strafrecht-Collection gefunden"
+    },
+    {
+      "id": "A2",
+      "query": "BGH 2 StR 195/22 — Voraussetzungen besonders schwerer Fall des Diebstahls",
+      "type": "narrow",
+      "expected_terms": [
+        "2 str 195/22",
+        "§ 243",
+        "besonders schwerer fall",
+        "diebstahl"
+      ],
+      "metrics": {
+        "query_type": "narrow",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.931,
+        "found_terms_per_doc": [
+          [
+            "§ 243",
+            "besonders schwerer fall",
+            "diebstahl"
+          ],
+          [
+            "diebstahl"
+          ],
+          [
+            "diebstahl"
+          ],
+          [
+            "diebstahl"
+          ],
+          [
+            "§ 243",
+            "diebstahl"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1155,
+          "found_terms": [
+            "§ 243",
+            "besonders schwerer fall",
+            "diebstahl"
+          ],
+          "spot_score": 2,
+          "text_excerpt": "diebstahl, sondern als besonders schweren Fall des Diebstahls gemäß § 243 Abs. 1 Nr. 3 StGB abgeurteilt hat.  2. Wie der Generalbundesanwalt ausgeführt hat, ist der Schuldspruch auch insoweit abzuändern, als das Landgericht die gemeinschaftliche Bege-  -4-  hungsweise und die Bezeichnung der Taten a"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.117,
+          "found_terms": [
+            "diebstahl"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "t. Es handelt sich bei diesen Beispielen zum Teil um solche, die als Leitbild für besonders schwere Fälle des Diebstahls nicht bezeichnend sind, zum Teil auch um solche, die in der Regel der Fälle keine Mindeststrafe von sechs Monaten rechtfertigen können.Sind sie im einzelnen so gestaltet, daß sie "
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1171,
+          "found_terms": [
+            "diebstahl"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "l. BGH, Beschlüsse vom 8. Juli 2008 -     3 StR 229/08, NStZ-RR 2008, 342, 343; vom 1. Oktober 2008 - 5 StR 445/08,     BGHSt 52, 376, 377 f.; Urteil vom 25. März 2009 - 5 StR 31/09, BGHSt 53, 234,     236; Fischer, StGB, 66. Aufl., § 250 Rn. 18 mwN).  -5-  8          Die Strafkammer hat indes versä"
+        }
+      ],
+      "adversarial_expected_behavior": "Spezifisches Urteil oder § 243 StGB-Kontext im Top-5",
+      "adversarial_fail_signal": "Nur generische Treffer ohne § 243 oder Bezug zum Aktenzeichen"
+    },
+    {
+      "id": "A3",
+      "query": "Strafausschließungsgründe bei § 218 StGB AUSSER medizinischer Indikation",
+      "type": "negation",
+      "expected_terms": [
+        "kriminologische indikation",
+        "soziale indikation",
+        "beratungsregelung",
+        "fristenregelung"
+      ],
+      "metrics": {
+        "query_type": "negation",
+        "hit_loose_5": false,
+        "hit_strict_5": false,
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "ndcg10_graded": 0.0,
+        "found_terms_per_doc": [
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1096,
+          "found_terms": [],
+          "spot_score": 0,
+          "text_excerpt": "konnte sie sich dieser Bedrängnis nicht in zumutbarer Weise entziehen, so kann das Gericht von einer Bestrafung nach § 218 absehen, bei anderen Personen als der Schwangeren jedoch nur, wenn der Abbruch der Schwangerschaft von einem Arzt vorgenommen wurde.§ 218 b Abbruch der Schwangerschaft aus mediz"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1124,
+          "found_terms": [],
+          "spot_score": 0,
+          "text_excerpt": "scheint angesichts der Bedeutung, die der Beratung über die Indikation zukommt, geboten. Die Vorschrift bedroht denjenigen, der bei gegebener Indikation eine Schwangerschaft ohne Beratung abbricht, mit Freiheitsstrafe bis zu einem Jahr oder mit Geldstrafe.Sie ist gegenüber den Strafvorschriften der "
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.114,
+          "found_terms": [],
+          "spot_score": 0,
+          "text_excerpt": ", daß eine kindliche Indikation in eine medizinische übergeht. In dieser Ausnahmesituation ist eine erweiterte medizinische Indikation angezeigt. Der vorliegende Entwurf sieht daher die kindliche Indikation im Zusammenhang mit der medizinischen Indikation.Stellt der Arzt fest, daß das Kind mit hoher"
+        }
+      ],
+      "adversarial_expected_behavior": "Top-3 zeigt nicht-medizinische Ausnahmen (Beratungsregelung, Fristenanzeige)",
+      "adversarial_fail_signal": "Top-Treffer behandelt primär medizinische Indikation statt kriminologischer/sozialer"
+    }
+  ]
+}

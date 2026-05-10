@@ -1,0 +1,50 @@
+{
+  "skill": "sozialrecht",
+  "original_queries": [
+    {
+      "id": "O1", "type": "original",
+      "query": "Welche Voraussetzungen gelten für den Anspruch auf Arbeitslosengeld I nach dem SGB III?",
+      "expected_terms": ["arbeitslosengeld", "§ 137 sgb iii", "anwartschaftszeit", "arbeitslosigkeit", "verfügbarkeit"]
+    },
+    {
+      "id": "O2", "type": "original",
+      "query": "Wann haben Pflegebedürftige Anspruch auf Pflegegeld nach dem SGB XI?",
+      "expected_terms": ["pflegegeld", "sgb xi", "pflegegrad", "häusliche pflege", "§ 37 sgb xi"]
+    },
+    {
+      "id": "O3", "type": "original",
+      "query": "Was regelt die Grundsicherung für Arbeitsuchende nach SGB II (Bürgergeld)?",
+      "expected_terms": ["sgb ii", "bürgergeld", "grundsicherung", "bedarfsgemeinschaft", "hilfebedürftigkeit"]
+    },
+    {
+      "id": "O4", "type": "original",
+      "query": "Welche Leistungen umfasst die gesetzliche Krankenversicherung nach SGB V?",
+      "expected_terms": ["krankenversicherung", "sgb v", "krankengeld", "leistungsanspruch", "versicherter"]
+    },
+    {
+      "id": "O5", "type": "original",
+      "query": "Wann besteht Anspruch auf Erwerbsminderungsrente nach SGB VI?",
+      "expected_terms": ["erwerbsminderungsrente", "sgb vi", "volle erwerbsminderung", "teilweise", "wartezeit"]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1", "type": "off_topic",
+      "query": "Welche Voraussetzungen gelten für die Festsetzungsverjährung im Steuerrecht?",
+      "expected_terms": ["festsetzungsverjährung", "§ 169 ao", "steuer", "abgabenordnung"],
+      "expected_behavior": "Keine Steuerrecht-Treffer in Sozialrecht-Collection"
+    },
+    {
+      "id": "A2", "type": "narrow",
+      "query": "BSG B 14 AS 15/21 R — Anrechnung von Kapitalerträgen auf Bürgergeld-Leistungen",
+      "expected_terms": ["b 14 as 15/21", "sgb ii", "kapitalerträge", "anrechnung", "bürgergeld"],
+      "expected_behavior": "BSG-Entscheidung zu SGB II und Vermögen/Kapitalerträge"
+    },
+    {
+      "id": "A3", "type": "negation",
+      "query": "Voraussetzungen für Pflegegrad 3 AUSSER kognitiver Beeinträchtigung",
+      "expected_terms": ["pflegegrad 3", "körperliche einschränkung", "selbstversorgung", "mobilität"],
+      "expected_behavior": "Physische Pflegegrad-Kriterien, nicht primär kognitive Aspekte"
+    }
+  ]
+}

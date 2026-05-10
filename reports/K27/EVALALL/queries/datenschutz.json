@@ -1,0 +1,50 @@
+{
+  "skill": "datenschutz",
+  "original_queries": [
+    {
+      "id": "O1", "type": "original",
+      "query": "Welche Voraussetzungen gelten für eine wirksame Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO?",
+      "expected_terms": ["einwilligung", "freiwillig", "informiert", "art. 6", "widerruf"]
+    },
+    {
+      "id": "O2", "type": "original",
+      "query": "Wann ist ein Auftragsverarbeitungsvertrag nach Art. 28 DSGVO erforderlich?",
+      "expected_terms": ["auftragsverarbeitung", "art. 28", "weisungsgebunden", "datenschutz", "verantwortlicher"]
+    },
+    {
+      "id": "O3", "type": "original",
+      "query": "Welche Rechte haben Betroffene nach der DSGVO gegenüber Unternehmen?",
+      "expected_terms": ["auskunftsrecht", "löschung", "berichtigung", "widerspruch", "art. 17"]
+    },
+    {
+      "id": "O4", "type": "original",
+      "query": "Ab wann muss ein Datenschutzbeauftragter nach Art. 37 DSGVO bestellt werden?",
+      "expected_terms": ["datenschutzbeauftragter", "art. 37", "bestellungspflicht", "kerntätigkeit", "systematisch"]
+    },
+    {
+      "id": "O5", "type": "original",
+      "query": "Welche Sanktionen drohen Unternehmen bei DSGVO-Verstößen nach Art. 83?",
+      "expected_terms": ["bußgeld", "art. 83", "umsatz", "datenschutzbehörde", "verhältnismäßig"]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1", "type": "off_topic",
+      "query": "Welche Voraussetzungen gelten für den Eigenbedarfskündigungsschutz nach § 574 BGB?",
+      "expected_terms": ["eigenbedarfskündigung", "§ 574 bgb", "härteklausel", "mietvertrag"],
+      "expected_behavior": "Top-5 keine Mietrecht-Treffer in Datenschutz-Collection"
+    },
+    {
+      "id": "A2", "type": "narrow",
+      "query": "EuGH C-311/18 (Schrems II) — Zulässigkeit von Datentransfers in die USA",
+      "expected_terms": ["c-311/18", "schrems", "privacy shield", "standardvertragsklauseln", "usa"],
+      "expected_behavior": "Schrems II oder Privacy Shield Kontext in Top-5"
+    },
+    {
+      "id": "A3", "type": "negation",
+      "query": "Ausnahmen von der Meldepflicht nach Art. 33 DSGVO AUSSER bei geringem Risiko für Betroffene",
+      "expected_terms": ["art. 34 dsgvo", "schwerwiegendes risiko", "benachrichtigungspflicht", "betroffene"],
+      "expected_behavior": "Hohe-Risiko-Pflichten nach Art. 34, nicht nur Art. 33 Ausnahmen"
+    }
+  ]
+}

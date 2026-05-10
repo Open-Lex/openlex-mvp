@@ -1,0 +1,533 @@
+{
+  "skill": "sozialrecht",
+  "via": "shadow-e5",
+  "model": "intfloat/multilingual-e5-large",
+  "n_embeddings": 18816,
+  "aggregate": {
+    "n_queries": 8,
+    "n_normal": 7,
+    "hit_loose_5": 0.857,
+    "hit_strict_5": 0.857,
+    "hit_at_1": 0.857,
+    "hit_at_3": 0.857,
+    "ndcg10_graded_mean": 0.811,
+    "auto_spot_median": 1,
+    "manual_spot_median": 2,
+    "manual_spot_notes": "O1=3,O3=2,A2=1; BSG/AO off-topic explainable",
+    "nlnet_verdict": "BELASTBAR"
+  },
+  "off_topic_summary": [
+    {
+      "id": "A1",
+      "query": "Welche Voraussetzungen gelten für die Festsetzungsverjährung im Steuerrecht?",
+      "hit_loose_pass": false,
+      "contamination_ndcg": 0.651
+    }
+  ],
+  "per_query": [
+    {
+      "id": "O1",
+      "query": "Welche Voraussetzungen gelten für den Anspruch auf Arbeitslosengeld I nach dem SGB III?",
+      "type": "original",
+      "expected_terms": [
+        "arbeitslosengeld",
+        "§ 137 sgb iii",
+        "anwartschaftszeit",
+        "arbeitslosigkeit",
+        "verfügbarkeit"
+      ],
+      "expected_behavior": "",
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.905,
+        "found_per_doc": [
+          [
+            "arbeitslosigkeit",
+            "verfügbarkeit"
+          ],
+          [
+            "anwartschaftszeit",
+            "arbeitslosigkeit",
+            "verfügbarkeit"
+          ],
+          [
+            "arbeitslosigkeit",
+            "verfügbarkeit"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1215,
+          "found_terms": [
+            "arbeitslosigkeit",
+            "verfügbarkeit"
+          ],
+          "excerpt": "ägerin stand deshalb für die Zeit ab 1.3.1998 ein Anspruch auf Alg nicht mehr zu, wenn sie die Anspruchsvoraussetzung \"arbeitslos\" nach § 117 Abs 1 Nr 1 SGB III idF des Arbeitsförderungs-Reformgesetzes (AFRG) vom 24.3.1997, BGBl I 594, nicht mehr erf"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1218,
+          "found_terms": [
+            "anwartschaftszeit",
+            "arbeitslosigkeit",
+            "verfügbarkeit"
+          ],
+          "excerpt": "agte ein Anspruch auf Alg für die Zeit vom 1.10.2016 bis 31.12.2016 zu. 21 Anspruch auf Alg hat gemäß § 137 Abs 1 SGB III, wer arbeitslos ist (Nr 1) , sich bei der Agentur für Arbeit arbeitslos gemeldet (Nr 2) und die Anwartschaftszeit erfüllt hat (N"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1261,
+          "found_terms": [
+            "arbeitslosigkeit",
+            "verfügbarkeit"
+          ],
+          "excerpt": "Regelung erfasst bereits nach ihrem Wortlaut nicht die Förderung durch Alg bei jeglichen Fort- oder Weiterbildungsmaßnahmen, sondern bezieht sich mit der Formulierung \"die Maßnahme\" auf die nach § 81 SGB III geförderte Maßnahme iS des § 144 Abs 1 SGB"
+        }
+      ],
+      "auto_spot_score": 2
+    },
+    {
+      "id": "O2",
+      "query": "Wann haben Pflegebedürftige Anspruch auf Pflegegeld nach dem SGB XI?",
+      "type": "original",
+      "expected_terms": [
+        "pflegegeld",
+        "sgb xi",
+        "pflegegrad",
+        "häusliche pflege",
+        "§ 37 sgb xi"
+      ],
+      "expected_behavior": "",
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.797,
+        "found_per_doc": [
+          [
+            "sgb xi"
+          ],
+          [
+            "sgb xi"
+          ],
+          [
+            "pflegegeld",
+            "sgb xi"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1268,
+          "found_terms": [
+            "sgb xi"
+          ],
+          "excerpt": "ach sind Grundsicherungsleistungen auf Antrag ua Personen zu leisten, die - wie der Kläger - die maßgebliche Altersgrenze erreicht haben und ihren notwendigen Lebensunterhalt nicht aus Einkommen und Vermögen (§§ 82 bis 84 und 90 SGB XII) bestreiten k"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1293,
+          "found_terms": [
+            "sgb xi"
+          ],
+          "excerpt": "ngen (§ 84 Abs 8 Satz 2 und 3 SGB XI) weder ganz noch teilweise belastet werden dürfen. 35 Dies gilt indes für nicht pflegeversicherte Heimbewohner, die Leistungen der Hilfe zur Pflege nach dem Siebten Kapitel des SGB XII erhalten, nicht in gleicher "
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1304,
+          "found_terms": [
+            "pflegegeld",
+            "sgb xi"
+          ],
+          "excerpt": "für die Zeit vom 1.1.2010 bis 30.6.2011 das mit der Revision verlangte höhere Pflegegeld (450,03 Euro monatlich für die Zeit vom 1.1. bis 30.9.2010, 302,03 Euro monatlich für die Zeit vom 1.10. bis 31.12.2010 und 291,53 Euro monatlich für die Zeit vo"
+        }
+      ],
+      "auto_spot_score": 1
+    },
+    {
+      "id": "O3",
+      "query": "Was regelt die Grundsicherung für Arbeitsuchende nach SGB II (Bürgergeld)?",
+      "type": "original",
+      "expected_terms": [
+        "sgb ii",
+        "bürgergeld",
+        "grundsicherung",
+        "bedarfsgemeinschaft",
+        "hilfebedürftigkeit"
+      ],
+      "expected_behavior": "",
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.915,
+        "found_per_doc": [
+          [
+            "sgb ii",
+            "grundsicherung"
+          ],
+          [
+            "sgb ii",
+            "grundsicherung",
+            "hilfebedürftigkeit"
+          ],
+          [
+            "sgb ii",
+            "grundsicherung"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.123,
+          "found_terms": [
+            "sgb ii",
+            "grundsicherung"
+          ],
+          "excerpt": "dem SGB XII aus (vgl dazu grundlegend Eicher in juris PraxisKommentar <jurisPK> SGB XII, 2. Aufl 2014, § 21 SGB XII RdNr 10 ff mwN). 12 Gerade wegen dieser Grundkonstellation war die Einfügung eines Abs 2 in § 44a SGB II (vgl Blüggel in Eicher, SGB I"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1321,
+          "found_terms": [
+            "sgb ii",
+            "grundsicherung",
+            "hilfebedürftigkeit"
+          ],
+          "excerpt": "war eine Generalklausel ergänzender, beispielhaft und nicht abschließend aufgezählter Eingliederungsleistungen; die Regelung knüpft aber ausweislich ihres Wortlauts die Leistungen grundsätzlich an die berufliche Eingliederung und die Hilfebedürftigke"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1346,
+          "found_terms": [
+            "sgb ii",
+            "grundsicherung"
+          ],
+          "excerpt": "müsse entscheiden, dass ein \"Anspruch auf Leistung der Grundsicherung für Arbeitsuchende\" nicht bestehe; dies ist zumindest insoweit ungenau, als über den Anspruch allein der Leistungsträger zu entscheiden hat (Blüggel in Eicher/Spellbrink, aaO, RdNr"
+        }
+      ],
+      "auto_spot_score": 2
+    },
+    {
+      "id": "O4",
+      "query": "Welche Leistungen umfasst die gesetzliche Krankenversicherung nach SGB V?",
+      "type": "original",
+      "expected_terms": [
+        "krankenversicherung",
+        "sgb v",
+        "krankengeld",
+        "leistungsanspruch",
+        "versicherter"
+      ],
+      "expected_behavior": "",
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.935,
+        "found_per_doc": [
+          [
+            "krankenversicherung",
+            "sgb v"
+          ],
+          [
+            "krankenversicherung",
+            "sgb v"
+          ],
+          [
+            "krankenversicherung",
+            "sgb v"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1392,
+          "found_terms": [
+            "krankenversicherung",
+            "sgb v"
+          ],
+          "excerpt": "alhilfeleistungen (waren und) sind anders als Leistungsbezieher nach dem SGB II (vgl für diese § 5 Abs 1 Nr 2a iVm Abs 5a Sozialgesetzbuch Fünftes Buch - Gesetzliche Krankenversicherung <SGB V>) nicht wegen des Leistungsbezugs gesetzlich pflichtversi"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1466,
+          "found_terms": [
+            "krankenversicherung",
+            "sgb v"
+          ],
+          "excerpt": "3. November 2007 (BGBl I S. 2631), versichert sind, nach den in den Verträgen nach § 75 Abs. 3b Satz 1 des Fünften Buches Sozialgesetzbuch vom 20. Dezember 1988 (BGBl I S. 2477) - SGB V -, vor dem maßgeblichen Zeitraum zuletzt geändert durch Gesetz v"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1484,
+          "found_terms": [
+            "krankenversicherung",
+            "sgb v"
+          ],
+          "excerpt": "1. Bei der Erbringung von Krankenbehandlung durch die Krankenkasse an Sozialhilfeempfänger gegen Erstattung der Aufwendungen durch den Sozialhilfeträger (\"Quasiversicherung\" mit Krankenversichertenkarte) und der Hilfe bei Krankheit nach dem Sozialges"
+        }
+      ],
+      "auto_spot_score": 1
+    },
+    {
+      "id": "O5",
+      "query": "Wann besteht Anspruch auf Erwerbsminderungsrente nach SGB VI?",
+      "type": "original",
+      "expected_terms": [
+        "erwerbsminderungsrente",
+        "sgb vi",
+        "volle erwerbsminderung",
+        "teilweise",
+        "wartezeit"
+      ],
+      "expected_behavior": "",
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.919,
+        "found_per_doc": [
+          [
+            "sgb vi",
+            "volle erwerbsminderung"
+          ],
+          [
+            "erwerbsminderungsrente",
+            "sgb vi",
+            "volle erwerbsminderung"
+          ],
+          [
+            "erwerbsminderungsrente",
+            "sgb vi"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1079,
+          "found_terms": [
+            "sgb vi",
+            "volle erwerbsminderung"
+          ],
+          "excerpt": "§ 43 Abs 2 Sozialgesetzbuch Sechstes Buch - Gesetzliche Rentenversicherung - (SGB VI) sind und bei denen unwahrscheinlich ist, dass die volle Erwerbsminderung behoben werden kann, auf Antrag Leistungen der Grundsicherung im Alter und bei Erwerbsminde"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1089,
+          "found_terms": [
+            "erwerbsminderungsrente",
+            "sgb vi",
+            "volle erwerbsminderung"
+          ],
+          "excerpt": "esetzliche Rentenversicherung - (SGB VI) sind und bei denen unwahrscheinlich ist, dass die volle Erwerbsminderung behoben werden kann, auf Antrag Leistungen der Grundsicherung im Alter und bei Erwerbsminderung nach dem Vierten Kapitel des SGB XII erh"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1159,
+          "found_terms": [
+            "erwerbsminderungsrente",
+            "sgb vi"
+          ],
+          "excerpt": "I mit Wirkung vom 14.12.2016 durch das Gesetz zur Flexibilisierung des Übergangs vom Erwerbsleben in den Ruhestand und zur Stärkung von Prävention und Rehabilitation im Erwerbsleben (Flexirentengesetz) vom 8.12.2016 (BGBl I 2838) zu systembedingten L"
+        }
+      ],
+      "auto_spot_score": 2
+    },
+    {
+      "id": "A1",
+      "query": "Welche Voraussetzungen gelten für die Festsetzungsverjährung im Steuerrecht?",
+      "type": "off_topic",
+      "expected_terms": [
+        "festsetzungsverjährung",
+        "§ 169 ao",
+        "steuer",
+        "abgabenordnung"
+      ],
+      "expected_behavior": "Keine Steuerrecht-Treffer in Sozialrecht-Collection",
+      "metrics": {
+        "query_type": "off_topic",
+        "hit_loose_pass": false,
+        "hit_strict_pass": true,
+        "contamination_ndcg": 0.651,
+        "found_per_doc": [
+          [
+            "steuer"
+          ],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1542,
+          "found_terms": [
+            "steuer"
+          ],
+          "excerpt": "der Lohnsteueranmeldung ist, dass in ihrem Umfang eine Steuerfestsetzung unter Vorbehalt anzunehmen ist (§ 168 S 1 AO) . Eine Lohnsteueranmeldung des Arbeitgebers wirkt damit so, als hätte die Finanzverwaltung einen entsprechenden Steuerbescheid erla"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1562,
+          "found_terms": [],
+          "excerpt": "hrung „dieses Anspruchs“. Diese Rechtsfolge kann nur bei einer bereits in Gang gesetzten Verjährungsfrist erreicht werden. Vorausgesetzt wird ein Anspruch, der schon der Verjährung unterliegt (Becker in Hauck/Noftz, SGB X, K § 52 RdNr 40, Stand Mai 2"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1564,
+          "found_terms": [],
+          "excerpt": "ung des Leistungsträgers im Einzelnen Becker, SGb 2018, 456 ff; vgl zur Garantenstellung der Anordnungsbehörde für eine ggf erforderliche Einstellung der Vollstreckung: BSG vom 25.6.2015 - B 14 AS 38/14 R - BSGE 119, 170 = SozR 4-1300 § 63 Nr 23, RdN"
+        }
+      ],
+      "auto_spot_score": 1
+    },
+    {
+      "id": "A2",
+      "query": "BSG B 14 AS 15/21 R — Anrechnung von Kapitalerträgen auf Bürgergeld-Leistungen",
+      "type": "narrow",
+      "expected_terms": [
+        "b 14 as 15/21",
+        "sgb ii",
+        "kapitalerträge",
+        "anrechnung",
+        "bürgergeld"
+      ],
+      "expected_behavior": "BSG-Entscheidung zu SGB II und Vermögen/Kapitalerträge",
+      "metrics": {
+        "query_type": "narrow",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.851,
+        "found_per_doc": [
+          [
+            "sgb ii",
+            "anrechnung"
+          ],
+          [
+            "sgb ii"
+          ],
+          []
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1291,
+          "found_terms": [
+            "sgb ii",
+            "anrechnung"
+          ],
+          "excerpt": "ommensberechnung auf der Grundlage einer Gewinnermittlung auf Jahresbasis beanstandet. 26 bb) Sie haben den Beklagten auch zutreffend zur Gewährung von einkommensabhängigem Elterngeld ohne Anrechnung des anteiligen Jahresgewinns dem Grunde nach verur"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1295,
+          "found_terms": [
+            "sgb ii"
+          ],
+          "excerpt": "unabhängig von dem individuell erzielten Entgelt ist, wird pauschalierend ein von der Bezugsgröße in der Sozialversicherung (§ 18 Sozialgesetzbuch Viertes Buch - Gemeinsame Vorschriften für die Sozialversicherung - <SGB IV>) abhängiges Entgelt zugeor"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.13,
+          "found_terms": [],
+          "excerpt": "ung des Auszahlungszeitraums nach § 6 S 2 BEEG wegen des Bezugs von Elterngeld für ein älteres Kind zu prüfen ist (§ 2b Abs 1 S 2 Nr 1 BEEG) . 17 d) Grundlage der Berechnung der Höhe des Einkommens des Klägers im Bemessungszeitraum sind die §§ 2c, 2d"
+        }
+      ],
+      "auto_spot_score": 1
+    },
+    {
+      "id": "A3",
+      "query": "Voraussetzungen für Pflegegrad 3 AUSSER kognitiver Beeinträchtigung",
+      "type": "negation",
+      "expected_terms": [
+        "pflegegrad 3",
+        "körperliche einschränkung",
+        "selbstversorgung",
+        "mobilität"
+      ],
+      "expected_behavior": "Physische Pflegegrad-Kriterien, nicht primär kognitive Aspekte",
+      "metrics": {
+        "query_type": "negation",
+        "hit_loose_5": false,
+        "hit_strict_5": false,
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "ndcg10_graded": 0.356,
+        "found_per_doc": [
+          [],
+          [],
+          []
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1373,
+          "found_terms": [],
+          "excerpt": "sberechtigt nach § 61 Abs 1 Satz 1 SGB XII (in der ab 1.7.2008 geltenden Normfassung - im Folgenden: alte Fassung <aF> - des Gesetzes zur strukturellen Weiterentwicklung der Pflegeversicherung <Pflege-Weiterentwicklungsgesetz> vom 28.5.2008 - BGBl I "
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1384,
+          "found_terms": [],
+          "excerpt": "s 1, § 98 Abs 1 Satz 1 und Abs 2 Satz 3 SGB XII iVm § 1 Landesausführungsgesetz zum SGB XII für das Land Nordrhein-Westfalen <AG-SGB XII NRW> vom 16.12.2004 <GV NRW 2004, 816>) , ist in der Sache rechtmäßig und verletzt die Klägerin nicht in ihren Re"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1393,
+          "found_terms": [],
+          "excerpt": "§ 98 Abs 2 Satz 1 iVm § 13 Abs 2 SGB XII, weil die Klägerin ihren gewöhnlichen Aufenthalt (§ 30 Abs 3 Satz 2 Sozialgesetzbuch Erstes Buch - Allgemeiner Teil - <SGB I>) vor Aufnahme in die stationäre Einrichtung im Zuständigkeitsbereich des Beklagten "
+        }
+      ],
+      "auto_spot_score": 0
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "skill": "mietrecht",
+  "original_queries": [
+    {
+      "id": "O1", "type": "original",
+      "query": "Wann ist eine Mietminderung nach § 536 BGB wegen Wohnungsmängeln berechtigt?",
+      "expected_terms": ["mietminderung", "§ 536 bgb", "mangel", "gebrauchstauglichkeit", "minderungsquote"]
+    },
+    {
+      "id": "O2", "type": "original",
+      "query": "Welche Voraussetzungen gelten für eine Eigenbedarfskündigung nach § 573 BGB?",
+      "expected_terms": ["eigenbedarfskündigung", "§ 573 bgb", "eigenbedarf", "berechtigtes interesse", "familienangehörige"]
+    },
+    {
+      "id": "O3", "type": "original",
+      "query": "Was ist die Mietspiegel-Methode zur Feststellung der ortsüblichen Vergleichsmiete?",
+      "expected_terms": ["mietspiegel", "vergleichsmiete", "§ 558 bgb", "mieterhöhung", "ortsüblich"]
+    },
+    {
+      "id": "O4", "type": "original",
+      "query": "Welche Rechte hat der Mieter bei verweigertem Reparaturanspruch nach § 535 BGB?",
+      "expected_terms": ["instandhaltung", "§ 535 bgb", "reparatur", "gebrauchsüberlassung", "vermieter"]
+    },
+    {
+      "id": "O5", "type": "original",
+      "query": "Wann ist eine fristlose Kündigung des Mietvertrags nach § 543 BGB zulässig?",
+      "expected_terms": ["fristlose kündigung", "§ 543 bgb", "wichtiger grund", "zahlungsverzug", "abmahnung"]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1", "type": "off_topic",
+      "query": "Wie wird der Erbschaftssteuerfreibetrag nach dem ErbStG berechnet?",
+      "expected_terms": ["erbschaftssteuer", "erbstg", "freibetrag", "steuerwert"],
+      "expected_behavior": "Keine Erbschaftssteuer-Treffer in Mietrecht-Collection"
+    },
+    {
+      "id": "A2", "type": "narrow",
+      "query": "BGH VIII ZR 255/21 — Rückforderung von Miete nach Mietpreisbremse",
+      "expected_terms": ["viii zr 255/21", "mietpreisbremse", "§ 556g bgb", "rückforderung"],
+      "expected_behavior": "Mietpreisbremse BGH-Entscheidung oder § 556g Kontext"
+    },
+    {
+      "id": "A3", "type": "negation",
+      "query": "Modernisierungsmieterhöhung nach § 559 BGB AUSSER bei Klimaschutzmassnahmen",
+      "expected_terms": ["§ 559 bgb", "energetische modernisierung", "modernisierungskosten", "11-prozent-regel"],
+      "expected_behavior": "Nicht-energetische Modernisierungsarten nach § 559"
+    }
+  ]
+}

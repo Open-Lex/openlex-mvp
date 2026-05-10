@@ -1,0 +1,583 @@
+{
+  "skill": "steuerrecht",
+  "via": "shadow-e5",
+  "model": "intfloat/multilingual-e5-large",
+  "n_embeddings": 131622,
+  "aggregate": {
+    "n_queries": 8,
+    "n_normal": 7,
+    "hit_loose_5": 0.857,
+    "hit_strict_5": 0.857,
+    "hit_at_1": 0.714,
+    "hit_at_3": 0.714,
+    "ndcg10_graded_mean": 0.761,
+    "auto_spot_median": 3,
+    "manual_spot_median": 3,
+    "manual_spot_notes": "O1=3,O3=3,A2=3",
+    "nlnet_verdict": "BELASTBAR"
+  },
+  "off_topic_summary": [
+    {
+      "id": "A1",
+      "query": "Welche Rechte hat ein Mieter bei einer Eigenbedarfskündigung des Vermieters?",
+      "hit_loose_pass": false,
+      "contamination_ndcg": 0.387
+    }
+  ],
+  "per_query": [
+    {
+      "id": "O1",
+      "query": "Wann ist eine Betriebsausgabe nach § 4 EStG abzugsfähig?",
+      "type": "original",
+      "expected_terms": [
+        "betriebsausgabe",
+        "betrieblich veranlasst",
+        "§ 4 estg",
+        "abzugsfähig",
+        "gewinnminderung"
+      ],
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.918,
+        "found_terms_per_doc": [
+          [
+            "betriebsausgabe",
+            "betrieblich veranlasst"
+          ],
+          [
+            "betriebsausgabe"
+          ],
+          [
+            "betriebsausgabe"
+          ],
+          [
+            "betriebsausgabe"
+          ],
+          [
+            "betriebsausgabe",
+            "abzugsfähig"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.0996,
+          "found_terms": [
+            "betriebsausgabe",
+            "betrieblich veranlasst"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "Abs. 4 EStG absetzen. Denn es handelt sich um Herstellungskosten des neu errichteten Gebäudes, für die nach § 7 Abs. 1 Satz 1, Abs. 4 EStG lediglich Absetzung für Abnutzung (AfA) in gleichen Jahresbeträgen in Anspruch genommen werden kann.1. Gemäß § 5 Abs.6 EStG sind bei buchführungspflichtigen Gewe"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1028,
+          "found_terms": [
+            "betriebsausgabe"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "s § 4 Abs. 4a EStG ist entsprechend der Ausführungen zur Investitionszulage der bilanzielle Gewinnbegriff nach § 4 Abs. 1 EStG maßgeblich. Nicht abziehbare Betriebsausgaben sind Bestandteil des für die Steuerbilanz maßgeblichen Betriebsvermögensvergleichs.Dass der Gesetzgeber diese Betriebsausgaben "
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.103,
+          "found_terms": [
+            "betriebsausgabe"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "lichtigen kommt hinsichtlich des Zeitpunkts der Verlustberücksichtigung kein Wahlrecht zu (unter c).a) Gemäß § 4 Abs. 3 Satz 4 EStG sind bei Steuerpflichtigen, die als Gewinn den Überschuss der Betriebseinnahmen über die Betriebsausgaben ansetzen (§ 4 Abs.3 Satz 1 EStG), die Anschaffungs- oder Herst"
+        }
+      ],
+      "adversarial_expected_behavior": "",
+      "adversarial_fail_signal": ""
+    },
+    {
+      "id": "O2",
+      "query": "Was ist der Unterschied zwischen beschränkter und unbeschränkter Steuerpflicht?",
+      "type": "original",
+      "expected_terms": [
+        "unbeschränkte steuerpflicht",
+        "beschränkte steuerpflicht",
+        "wohnsitz",
+        "inländische einkünfte",
+        "§ 1 estg"
+      ],
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "ndcg10_graded": 0.547,
+        "found_terms_per_doc": [
+          [],
+          [],
+          [],
+          [
+            "beschränkte steuerpflicht"
+          ],
+          [
+            "beschränkte steuerpflicht",
+            "wohnsitz"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1288,
+          "found_terms": [],
+          "spot_score": 0,
+          "text_excerpt": "(1) Steuerfrei bleibt in den Fällen der unbeschränkten Steuerpflicht (§ 2 Absatz 1 Nummer 1) der Erwerb   1.  des Ehegatten und des Lebenspartners in Höhe von 500 000 Euro;  2.  der Kinder im Sinne der Steuerklasse I Nr. 2 und der Kinder verstorbener Kinder im Sinne der Steuerklasse I Nr. 2 in Höhe "
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1386,
+          "found_terms": [],
+          "spot_score": 0,
+          "text_excerpt": "Anspruchsberechtigt sind unbeschränkt oder beschränkt Steuerpflichtige im Sinne des § 1."
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.139,
+          "found_terms": [],
+          "spot_score": 0,
+          "text_excerpt": "- gen der unbeschränkten Steuerpflicht. Dadurch kann er auch den höheren Freibetrag nach § 16 Absatz 1 ErbStG in Anspruch nehmen, der sich nach seinem persönlichen Ver-  hältnis (Steuerklasse) zum Erblasser oder Schenker ergibt (vgl. Nummer 2 Buchstabe a).  Könnte ein Erwerber den höheren persönlich"
+        }
+      ],
+      "adversarial_expected_behavior": "",
+      "adversarial_fail_signal": ""
+    },
+    {
+      "id": "O3",
+      "query": "Wie wird die Umsatzsteuer bei innergemeinschaftlichen Lieferungen behandelt?",
+      "type": "original",
+      "expected_terms": [
+        "innergemeinschaftliche lieferung",
+        "umsatzsteuer",
+        "steuerfreiheit",
+        "§ 6a ustg",
+        "bestimmungslandprinzip"
+      ],
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.969,
+        "found_terms_per_doc": [
+          [
+            "innergemeinschaftliche lieferung",
+            "umsatzsteuer",
+            "steuerfreiheit",
+            "§ 6a ustg"
+          ],
+          [
+            "innergemeinschaftliche lieferung",
+            "umsatzsteuer",
+            "steuerfreiheit"
+          ],
+          [
+            "innergemeinschaftliche lieferung",
+            "umsatzsteuer"
+          ],
+          [
+            "umsatzsteuer"
+          ],
+          [
+            "innergemeinschaftliche lieferung"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.0954,
+          "found_terms": [
+            "innergemeinschaftliche lieferung",
+            "umsatzsteuer",
+            "steuerfreiheit",
+            "§ 6a ustg"
+          ],
+          "spot_score": 2,
+          "text_excerpt": "rdnung ‑‑FGO‑‑). Der Senat kann aufgrund der vom FG getroffenen Feststellungen nicht entscheiden, ob die Voraussetzungen für die Steuerfreiheit innergemeinschaftlicher Lieferungen vorliegen.1. Innergemeinschaftliche Lieferungen sind gemäß § 4 Nr. 1 Buchst.b UStG unter den Voraussetzungen des § 6a US"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1059,
+          "found_terms": [
+            "innergemeinschaftliche lieferung",
+            "umsatzsteuer",
+            "steuerfreiheit"
+          ],
+          "spot_score": 2,
+          "text_excerpt": "nen die Strafverfahren in Italien eingestellt worden seien, nicht an. II.Die Revision der Klägerin ist unbegründet und war daher zurückzuweisen (§ 126 Abs. 2 FGO). Die Lieferungen der Klägerin sind nicht als innergemeinschaftliche Lieferungen steuerfrei.1.Innergemeinschaftliche Lieferungen sind unte"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1061,
+          "found_terms": [
+            "innergemeinschaftliche lieferung",
+            "umsatzsteuer"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "1. Eine Lieferung von Gegenständen eines im Inland ansässigen Unternehmers an einen in einem Drittland ansässigen Unternehmer, der keine Umsatzsteuer-Identifikationsnummer verwendet, die Gegenstände im Inland abholen lässt und direkt an den letzten Abnehmer in einem anderen Mitgliedstaat weiterliefe"
+        }
+      ],
+      "adversarial_expected_behavior": "",
+      "adversarial_fail_signal": ""
+    },
+    {
+      "id": "O4",
+      "query": "Welche Voraussetzungen gelten für die Anerkennung einer verdeckten Gewinnausschüttung?",
+      "type": "original",
+      "expected_terms": [
+        "verdeckte gewinnausschüttung",
+        "körperschaftsteuer",
+        "fremdvergleich",
+        "gesellschafter",
+        "§ 8 kstg"
+      ],
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.855,
+        "found_terms_per_doc": [
+          [
+            "verdeckte gewinnausschüttung",
+            "gesellschafter"
+          ],
+          [],
+          [
+            "verdeckte gewinnausschüttung",
+            "fremdvergleich"
+          ],
+          [
+            "verdeckte gewinnausschüttung",
+            "gesellschafter"
+          ],
+          [
+            "verdeckte gewinnausschüttung",
+            "gesellschafter"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1218,
+          "found_terms": [
+            "verdeckte gewinnausschüttung",
+            "gesellschafter"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "(1)   1  Soweit gegenüber einer Körperschaft ein Steuerbescheid hinsichtlich der Berücksichtigung einer verdeckten Gewinnausschüttung erlassen, aufgehoben oder geändert wird, kann ein Steuerbescheid oder ein Feststellungsbescheid gegenüber dem Gesellschafter, dem die verdeckte Gewinnausschüttung zuz"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1247,
+          "found_terms": [],
+          "spot_score": 0,
+          "text_excerpt": "NV: Die mit der Abgrenzung zwischen Spende und verdeckter Gewinnausschüttung zusammenhängenden Fragen sind höchstrichterlich geklärt. NV: Die mit der Abgrenzung zwischen Spende und verdeckter Gewinnausschüttung zusammenhängenden Fragen sind höchstrichterlich geklärt. Die Beschwerde ist unzulässig un"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1285,
+          "found_terms": [
+            "verdeckte gewinnausschüttung",
+            "fremdvergleich"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "1. NV: Die Prüfung, ob und in welcher Höhe eine Vergütung wegen fehlender Angemessenheit als verdeckte Gewinnausschüttung zu qualifizieren ist, obliegt als Gesamtwürdigung der für den Fremdvergleich maßgebenden Anhaltspunkte in erste Linie dem FG. Eine verdeckte Gewinnausschüttung ist einer inländis"
+        }
+      ],
+      "adversarial_expected_behavior": "",
+      "adversarial_fail_signal": ""
+    },
+    {
+      "id": "O5",
+      "query": "Wie funktioniert die Festsetzungsverjährung im Steuerrecht nach der AO?",
+      "type": "original",
+      "expected_terms": [
+        "festsetzungsverjährung",
+        "§ 169 ao",
+        "verjährungsfrist",
+        "ablaufhemmung",
+        "festsetzung"
+      ],
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.861,
+        "found_terms_per_doc": [
+          [
+            "festsetzung"
+          ],
+          [
+            "festsetzungsverjährung",
+            "ablaufhemmung",
+            "festsetzung"
+          ],
+          [
+            "festsetzungsverjährung",
+            "festsetzung"
+          ],
+          [
+            "verjährungsfrist",
+            "festsetzung"
+          ],
+          [
+            "ablaufhemmung",
+            "festsetzung"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1018,
+          "found_terms": [
+            "festsetzung"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "nicht verjährt war, wurde der Ablauf der Festsetzungsfrist nach § 171 Abs. 7 AO gehemmt (BFH-Urteile vom 18. Dezember 2014 III R 13/14, BFH/NV 2015, 948; vom 26. Juni 2014 III R 21/13, BFHE 247, 102, BStBl 2015, 886).aa) Nach § 171 Abs. 7 i.V.m. § 169 Abs.2 Satz 2 AO endet die Festsetzungsfrist in F"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1126,
+          "found_terms": [
+            "festsetzungsverjährung",
+            "ablaufhemmung",
+            "festsetzung"
+          ],
+          "spot_score": 2,
+          "text_excerpt": "AO beginnt die Festsetzungsfrist, wenn eine Steuererklärung einzureichen ist, mit Ablauf des Kalenderjahres, in dem die Steuererklärung eingereicht wird; die Festsetzungsfrist beträgt nach § 169 Abs. 2 Satz 2 AO im Fall der Steuerhinterziehung zehn Jahre.Danach begann im Streitfall die Festsetzungsf"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1181,
+          "found_terms": [
+            "festsetzungsverjährung",
+            "festsetzung"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "3a AO nicht ablaufen, bevor über den Rechtsbehelf unanfechtbar entschieden worden ist.Entsprechendes gilt für den Einkommensteuerbescheid 2007, den das FA am 4. März 2009 wirksam erlassen hatte (s. oben unter II.2.b bb (3)) und gegen den der Kläger am 18.März 2009 Einspruch eingelegt hat. Insofern k"
+        }
+      ],
+      "adversarial_expected_behavior": "",
+      "adversarial_fail_signal": ""
+    },
+    {
+      "id": "A1",
+      "query": "Welche Rechte hat ein Mieter bei einer Eigenbedarfskündigung des Vermieters?",
+      "type": "off_topic",
+      "expected_terms": [
+        "eigenbedarfskündigung",
+        "§ 573 bgb",
+        "härteklausel",
+        "widerspruch"
+      ],
+      "metrics": {
+        "query_type": "off_topic",
+        "hit_loose_pass": false,
+        "hit_strict_pass": true,
+        "hit_at_1_pass": true,
+        "hit_at_3_pass": true,
+        "off_topic_contamination_ndcg": 0.387,
+        "found_terms_per_doc": [
+          [],
+          [],
+          [],
+          [],
+          [
+            "eigenbedarfskündigung"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.136,
+          "found_terms": [],
+          "spot_score": 0,
+          "text_excerpt": "ochene ordentliche Kündigung war unwirksam, denn eine Befristung schließt eine ordentliche Kündigung aus. Ein Aufhebungsvertrag zwischen dem Voreigentümer und dem Mieter, in den die Klägerin hätte eintreten können, ist ‑‑wie dargestellt‑‑ nicht anzunehmen.Hätte die Klägerin die alsbaldige Selbstnutz"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1411,
+          "found_terms": [],
+          "spot_score": 0,
+          "text_excerpt": "ngen und durch den kurzfristigen und vorzeitigen Einzug der Kläger im Oktober 2008 bestätigt.Die Eigenbedarfsklausel wurde zwar mit der Großmutter als Veräußerin vereinbart; sie bezieht sich aber ausdrücklich auf deren \"Töchter oder eines der Enkelkinder\".Es ist daher naheliegend und revisionsrechtl"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1481,
+          "found_terms": [],
+          "spot_score": 0,
+          "text_excerpt": "etvertrag den vorformulierten, von den Vertragsparteien durch Ankreuzen zum Regelungsinhalt gemachten Text vor, dass der Vermieter die Räume nach Ablauf der Mietzeit als Wohnung für sich, seine Familienangehörigen oder Angehörige seines Haushalts benötige.Konkretisiert war diese Vertragsklausel durc"
+        }
+      ],
+      "adversarial_expected_behavior": "Top-5 enthält keine Mietrecht-spezifischen Treffer; hit=0 ist korrekt",
+      "adversarial_fail_signal": "Mietrecht-Terme in Steuerrecht-Collection gefunden; Methodik zu permissiv"
+    },
+    {
+      "id": "A2",
+      "query": "BFH IV R 5/20 — Gewinnrealisierung bei teilentgeltlicher Übertragung eines Betriebsvermögens",
+      "type": "narrow",
+      "expected_terms": [
+        "iv r 5/20",
+        "gewinnrealisierung",
+        "teilentgeltliche übertragung",
+        "trennungstheorie"
+      ],
+      "metrics": {
+        "query_type": "narrow",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.847,
+        "found_terms_per_doc": [
+          [
+            "teilentgeltliche übertragung",
+            "trennungstheorie"
+          ],
+          [
+            "gewinnrealisierung"
+          ],
+          [
+            "gewinnrealisierung",
+            "teilentgeltliche übertragung",
+            "trennungstheorie"
+          ],
+          [],
+          [
+            "teilentgeltliche übertragung",
+            "trennungstheorie"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1144,
+          "found_terms": [
+            "teilentgeltliche übertragung",
+            "trennungstheorie"
+          ],
+          "spot_score": 2,
+          "text_excerpt": "chen Übertragung resultierenden Gewinns nach den Grundsätzen der \"strengen Trennungstheorie\". Hinsichtlich der vom Senat gestellten Fragen ist das BMF der Auffassung, der Klägerin sei im Streitfall kein Mischentgelt, sondern ein Teilentgelt gewährt worden.Zu den Auswirkungen auf die Besteuerung des "
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1159,
+          "found_terms": [
+            "gewinnrealisierung"
+          ],
+          "spot_score": 1,
+          "text_excerpt": "zum Sonderbetriebsvermögen II der Gesellschafter der GbR (hier A, C und D) gehören (vgl. z.B. BFH-Urteile vom 04.12.2014 - IV R 28/11, Rz 29; vom 28.05.2020 - IV R 17/17, BFHE 269, 158, Rz 18, und vom 30.03.1999 - VIII R 15/97, BFH/NV 1999, 1468, m.w.N.).Dementsprechend gehörte auch das Anwartschaft"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.116,
+          "found_terms": [
+            "gewinnrealisierung",
+            "teilentgeltliche übertragung",
+            "trennungstheorie"
+          ],
+          "spot_score": 2,
+          "text_excerpt": "wie der entgeltliche Teil‑‑ zur vollen Aufdeckung der stillen Reserven. Es kam daher für die Ermittlung der Höhe des insgesamt aus dem Übertragungsvorgang realisierten Gewinns letztlich nicht darauf an, in welchem Umfang der Buchwert dem entgeltlichen bzw.unentgeltlichen Teil zuzuordnen war (gleiche"
+        }
+      ],
+      "adversarial_expected_behavior": "Spezifisches BFH-Urteil oder Trennungstheorie-Kontext im Top-5",
+      "adversarial_fail_signal": "Nur generische Steuerrecht-Treffer ohne Bezug zum Aktenzeichen oder Trennungstheorie"
+    },
+    {
+      "id": "A3",
+      "query": "Umsatzsteuerbefreiungen für Leistungen im Gesundheitsbereich AUSSER § 4 Nr. 14 UStG",
+      "type": "negation",
+      "expected_terms": [
+        "§ 4 nr. 16 ustg",
+        "§ 4 nr. 18 ustg",
+        "krankenhausbehandlung",
+        "soziale einrichtung"
+      ],
+      "metrics": {
+        "query_type": "negation",
+        "hit_loose_5": false,
+        "hit_strict_5": false,
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "ndcg10_graded": 0.333,
+        "found_terms_per_doc": [
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.0951,
+          "found_terms": [],
+          "spot_score": 0,
+          "text_excerpt": "n Krankenhaus, sind demgegenüber seine Heilbehandlungsleistungen gemäß § 4 Nr. 14 UStG steuerfrei (BFH-Urteil in BFHE 204, 503, BStBl II 2004, 677, unter II.6.; unzutreffend daher Abschn. 4.14.2 Abs. 2 Satz 1 des Umsatzsteuer-Anwendungserlasses ‑‑UStAE‑‑).Dementsprechend sind z.B. die Heilbehandlung"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.0994,
+          "found_terms": [],
+          "spot_score": 0,
+          "text_excerpt": "c  Zur Anpassung an die Entwicklung im Bereich des Gesund- heitswesens soll die Steuerbefreiungsnorm des § 4 Num- mer 14 UStG, welche im Rahmen des Jahressteuergesetzes 2009 umfassend neu gefasst wurde, in § 4 Nummer 14 Buch- stabe c UStG erweitert werden.  Der bisherige Anwendungsbereich des § 4 Nu"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1042,
+          "found_terms": [],
+          "spot_score": 0,
+          "text_excerpt": "führt werden; ...\"III. Zur Anrufung des EuGH1. Die gemäß § 1 UStG, Art. 2 Abs. 1 Buchst. a MwStSystRL steuerbaren Leistungen des Klägers erfüllen den Tatbestand der Steuerbefreiung des § 4 Nr. 14 Buchst. a Satz 1 UStG, Art. 132 Abs. 1 Buchst. c MwStSystRL.Es handelt sich um Heilbehandlungen im Berei"
+        }
+      ],
+      "adversarial_expected_behavior": "Top-Treffer zeigt § 4 Nr. 16 oder Nr. 18 UStG, nicht primär Nr. 14",
+      "adversarial_fail_signal": "Top-3 handelt ausschließlich von § 4 Nr. 14 UStG (Heilbehandlung) — Negation ignoriert"
+    }
+  ]
+}

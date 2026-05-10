@@ -1,0 +1,50 @@
+{
+  "skill": "kaufrecht",
+  "original_queries": [
+    {
+      "id": "O1", "type": "original",
+      "query": "Welche Gewährleistungsrechte hat der Käufer bei einem Sachmangel nach § 437 BGB?",
+      "expected_terms": ["sachmangel", "§ 437 bgb", "nacherfüllung", "rücktritt", "minderung"]
+    },
+    {
+      "id": "O2", "type": "original",
+      "query": "Was ist ein Sachmangel nach § 434 BGB und welche Beschaffenheitsmerkmale gelten?",
+      "expected_terms": ["§ 434 bgb", "sachmangel", "beschaffenheit", "ist-beschaffenheit", "soll-beschaffenheit"]
+    },
+    {
+      "id": "O3", "type": "original",
+      "query": "Wann verjähren Gewährleistungsansprüche beim Kauf beweglicher Sachen?",
+      "expected_terms": ["verjährungsfrist", "§ 438 bgb", "zwei jahre", "kenntnis", "gewährleistung"]
+    },
+    {
+      "id": "O4", "type": "original",
+      "query": "Welche besonderen Verbraucherschutzrechte gelten beim Online-Kauf?",
+      "expected_terms": ["verbraucher", "widerrufsrecht", "§ 312g bgb", "fernabsatz", "14 tage"]
+    },
+    {
+      "id": "O5", "type": "original",
+      "query": "Was ist der Unterschied zwischen Rücktritt und Minderung beim Gewährleistungsrecht?",
+      "expected_terms": ["rücktritt", "minderung", "§ 441 bgb", "kaufpreis", "fristsetzung"]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1", "type": "off_topic",
+      "query": "Welche Anforderungen stellt die DSGVO an die Datenschutz-Folgenabschätzung?",
+      "expected_terms": ["datenschutz-folgenabschätzung", "art. 35 dsgvo", "risiko", "verarbeitungsvorgang"],
+      "expected_behavior": "Keine DSGVO-Treffer in Kaufrecht-Collection"
+    },
+    {
+      "id": "A2", "type": "narrow",
+      "query": "BGH VIII ZR 145/22 — Mangel beim Gebrauchtwagenkauf und Nacherfüllungsort",
+      "expected_terms": ["viii zr 145/22", "gebrauchtwagen", "nacherfüllung", "§ 439 bgb"],
+      "expected_behavior": "Nacherfüllungsort BGH-Kontext oder § 439 BGB"
+    },
+    {
+      "id": "A3", "type": "negation",
+      "query": "Gewährleistungsausschluss beim Kaufvertrag AUSSER bei arglistig verschwiegenem Mangel",
+      "expected_terms": ["§ 444 bgb", "freizeichnung", "haftungsausschluss", "gebrauchter gegenstand"],
+      "expected_behavior": "Freizeichnungsmöglichkeiten ausserhalb der Arglist-Ausnahme"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "skill": "erbrecht",
+  "original_queries": [
+    {
+      "id": "O1", "type": "original",
+      "query": "Wer erbt nach gesetzlicher Erbfolge, wenn kein Testament existiert?",
+      "expected_terms": ["gesetzliche erbfolge", "§ 1924 bgb", "abkömmlinge", "erbordnung", "ehegatte"]
+    },
+    {
+      "id": "O2", "type": "original",
+      "query": "Welche Voraussetzungen gelten für einen wirksamen notariellen Erbvertrag?",
+      "expected_terms": ["erbvertrag", "notarielle beurkundung", "§ 2276 bgb", "bindungswirkung", "widerruf"]
+    },
+    {
+      "id": "O3", "type": "original",
+      "query": "Wann können Erben enterbt werden und was ist der Pflichtteilsanspruch?",
+      "expected_terms": ["pflichtteil", "§ 2303 bgb", "enterbung", "pflichtteilsanspruch", "hälfte"]
+    },
+    {
+      "id": "O4", "type": "original",
+      "query": "Wie kann die Erbschaft ausgeschlagen werden und welche Fristen gelten?",
+      "expected_terms": ["erbausschlagung", "§ 1942 bgb", "ausschlagungsfrist", "sechs wochen", "nachlassgericht"]
+    },
+    {
+      "id": "O5", "type": "original",
+      "query": "Was ist eine Vor- und Nacherbschaft und wann wird sie angeordnet?",
+      "expected_terms": ["vorerbe", "nacherbe", "§ 2100 bgb", "nacherbfolge", "verfügungsbeschränkung"]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1", "type": "off_topic",
+      "query": "Wann darf der Arbeitgeber einem Arbeitnehmer außerordentlich kündigen?",
+      "expected_terms": ["außerordentliche kündigung", "§ 626 bgb", "arbeitnehmer", "wichtiger grund"],
+      "expected_behavior": "Keine Arbeitsrecht-Treffer in Erbrecht-Collection"
+    },
+    {
+      "id": "A2", "type": "narrow",
+      "query": "BGH IV ZR 9/21 — Auslegung eines handschriftlichen Testaments bei Widersprüchen",
+      "expected_terms": ["iv zr 9/21", "testamentsauslegung", "handschriftliches testament", "erblasserwille"],
+      "expected_behavior": "Testamentsauslegung BGH-Kontext"
+    },
+    {
+      "id": "A3", "type": "negation",
+      "query": "Pflichtteilsanspruch AUSSER bei Pflichtteilsentziehung wegen Straftaten",
+      "expected_terms": ["pflichtteilsergänzung", "schenkungen", "§ 2325 bgb", "zehn-jahres-frist"],
+      "expected_behavior": "Pflichtteilsergänzung für Schenkungen, nicht Entziehungsgründe"
+    }
+  ]
+}

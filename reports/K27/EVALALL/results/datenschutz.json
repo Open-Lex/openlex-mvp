@@ -1,0 +1,501 @@
+{
+  "skill": "datenschutz",
+  "via": "live-mxbai",
+  "model": "mixedbread-ai/deepset-mxbai-embed-de-large-v1",
+  "n_embeddings": 18084,
+  "aggregate": {
+    "n_queries": 8,
+    "n_normal": 7,
+    "hit_loose_5": 1.0,
+    "hit_strict_5": 1.0,
+    "hit_at_1": 0.857,
+    "hit_at_3": 0.857,
+    "ndcg10_graded_mean": 0.766,
+    "auto_spot_median": 1,
+    "manual_spot_median": 3,
+    "manual_spot_notes": "O1=3,O3=1,A2=3; median=3 (auto underestimated O3 negation)",
+    "nlnet_verdict": "BELASTBAR"
+  },
+  "off_topic_summary": [
+    {
+      "id": "A1",
+      "query": "Welche Voraussetzungen gelten für den Eigenbedarfskündigungsschutz nach § 574 BG",
+      "hit_loose_pass": true,
+      "contamination_ndcg": 0.289
+    }
+  ],
+  "per_query": [
+    {
+      "id": "O1",
+      "query": "Welche Voraussetzungen gelten für eine wirksame Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO?",
+      "type": "original",
+      "expected_terms": [
+        "einwilligung",
+        "freiwillig",
+        "informiert",
+        "art. 6",
+        "widerruf"
+      ],
+      "expected_behavior": "",
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.933,
+        "found_per_doc": [
+          [
+            "einwilligung",
+            "freiwillig",
+            "widerruf"
+          ],
+          [
+            "einwilligung",
+            "widerruf"
+          ],
+          [
+            "einwilligung"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1215,
+          "found_terms": [
+            "einwilligung",
+            "freiwillig",
+            "widerruf"
+          ],
+          "excerpt": "Art. 7 DSGVO – Bedingungen für die Einwilligung  Beruht die Verarbeitung auf einer Einwilligung, muss der Verantwortliche nachweisen können, dass die betroffene Person in die Verarbeitung ihrer personenbezogenen Daten eingewilligt hat. 1 Erfolgt die "
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1222,
+          "found_terms": [
+            "einwilligung",
+            "widerruf"
+          ],
+          "excerpt": "103. Die DSGVO führt Anforderungen ein, dass Verantwortliche zusätzliche Vorkehrungen treffen müssen, um sicherzustellen, dass sie eine gültige Einwilligung erhalten, diese aufrechterhalten und nachweisen können. In Artikel 7 der DSGVO werden diese z"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1232,
+          "found_terms": [
+            "einwilligung"
+          ],
+          "excerpt": "Die Erteilung einer wirksamen Einwilligung  muss gem. Art. 7 Abs. 1 DS-GVO nachgewiesen  werden können, was eine entsprechende Do- kumentation voraussetzt.     "
+        }
+      ],
+      "auto_spot_score": 2
+    },
+    {
+      "id": "O2",
+      "query": "Wann ist ein Auftragsverarbeitungsvertrag nach Art. 28 DSGVO erforderlich?",
+      "type": "original",
+      "expected_terms": [
+        "auftragsverarbeitung",
+        "art. 28",
+        "weisungsgebunden",
+        "datenschutz",
+        "verantwortlicher"
+      ],
+      "expected_behavior": "",
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.815,
+        "found_per_doc": [
+          [
+            "auftragsverarbeitung",
+            "art. 28"
+          ],
+          [],
+          []
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1131,
+          "found_terms": [
+            "auftragsverarbeitung",
+            "art. 28"
+          ],
+          "excerpt": "Die Auftragsverarbeitung darf nur auf der Grundlage eines bindenden Vertrages  erfolgen. Art. 28 Abs. 3 und Abs. 6 DS-GVO sieht vor, dass auch „ein anderes"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1216,
+          "found_terms": [],
+          "excerpt": "Notwendigkeit oder Möglichkeit des Zugriffs auf  personenbezogene Daten, so handelt es sich im"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1239,
+          "found_terms": [],
+          "excerpt": "Für die Weitergabe von personenbezogenen Daten  an den Auftragsverarbeiter und die Verarbeitung  durch den Auftragsverarbeiter bedarf es regelmäßig  keiner weiteren Rechtsgrundlage im Sinne von Art.  6 bis 10 DS-GVO als derjenigen, auf die der Verant"
+        }
+      ],
+      "auto_spot_score": 1
+    },
+    {
+      "id": "O3",
+      "query": "Welche Rechte haben Betroffene nach der DSGVO gegenüber Unternehmen?",
+      "type": "original",
+      "expected_terms": [
+        "auskunftsrecht",
+        "löschung",
+        "berichtigung",
+        "widerspruch",
+        "art. 17"
+      ],
+      "expected_behavior": "",
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "ndcg10_graded": 0.501,
+        "found_per_doc": [
+          [],
+          [],
+          []
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1414,
+          "found_terms": [],
+          "excerpt": "Art. 80 DSGVO – Vertretung von betroffenen Personen  Die betroffene Person hat das Recht, eine Einrichtung, Organisationen oder Vereinigung ohne Gewinnerzielungsabsicht, die ordnungsgemäß nach dem Recht eines Mitgliedstaats gegründet ist, deren satzu"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1462,
+          "found_terms": [],
+          "excerpt": "reiche Rechte zu, die der Verantwortliche  zu beachten hat (z.B. Informationspflichten  des Verantwortlichen gegenüber den be- troffenen Personen nach Art. 13 und Art. 14"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.15,
+          "found_terms": [],
+          "excerpt": "Art. 77 DSGVO – Recht auf Beschwerde bei einer Aufsichtsbehörde  Jede betroffene Person hat unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs das Recht auf Beschwerde bei einer Aufsichtsbehörde, insbesondere in d"
+        }
+      ],
+      "auto_spot_score": 0
+    },
+    {
+      "id": "O4",
+      "query": "Ab wann muss ein Datenschutzbeauftragter nach Art. 37 DSGVO bestellt werden?",
+      "type": "original",
+      "expected_terms": [
+        "datenschutzbeauftragter",
+        "art. 37",
+        "bestellungspflicht",
+        "kerntätigkeit",
+        "systematisch"
+      ],
+      "expected_behavior": "",
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.723,
+        "found_per_doc": [
+          [
+            "datenschutzbeauftragter"
+          ],
+          [],
+          [
+            "datenschutzbeauftragter",
+            "art. 37",
+            "kerntätigkeit",
+            "systematisch"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1215,
+          "found_terms": [
+            "datenschutzbeauftragter"
+          ],
+          "excerpt": "Art. 38 DSGVO – Stellung des Datenschutzbeauftragten  Der Verantwortliche und der Auftragsverarbeiter stellen sicher, dass der Datenschutzbeauftragte ordnungsgemäß und frühzeitig in alle mit dem Schutz personenbezogener Daten zusammenhängenden Fragen"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1275,
+          "found_terms": [],
+          "excerpt": "Datenschutzbeauftragten-Bestellpflicht nach Artikel 37 Abs. 1 lit. C"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1281,
+          "found_terms": [
+            "datenschutzbeauftragter",
+            "art. 37",
+            "kerntätigkeit",
+            "systematisch"
+          ],
+          "excerpt": "Art. 37 DSGVO – Benennung eines Datenschutzbeauftragten  Der Verantwortliche und der Auftragsverarbeiter benennen auf jeden Fall einen Datenschutzbeauftragten, wenn die Verarbeitung von einer Behörde oder öffentlichen Stelle durchgeführt wird, mit Au"
+        }
+      ],
+      "auto_spot_score": 2
+    },
+    {
+      "id": "O5",
+      "query": "Welche Sanktionen drohen Unternehmen bei DSGVO-Verstößen nach Art. 83?",
+      "type": "original",
+      "expected_terms": [
+        "bußgeld",
+        "art. 83",
+        "umsatz",
+        "datenschutzbehörde",
+        "verhältnismäßig"
+      ],
+      "expected_behavior": "",
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.782,
+        "found_per_doc": [
+          [
+            "art. 83"
+          ],
+          [
+            "art. 83"
+          ],
+          [
+            "art. 83"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1141,
+          "found_terms": [
+            "art. 83"
+          ],
+          "excerpt": "Bei der gemäß Art. 83 DSGVO zu verhängenden Geldbuße handelt es sich insoweit  um eine verwaltungs- und keine strafrechtliche Sanktion. Dies ergibt sich schon aus  dem Kompetenzbereich der EU, da die Mitgliedstaaten keine Strafgewalt an die EU  übert"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1156,
+          "found_terms": [
+            "art. 83"
+          ],
+          "excerpt": "Sowohl im europäischen Datenschutzrecht als auch – soweit ersichtlich – im  gesamten europäischen Sanktionsrecht bewirkt die Einführung des Art. 83 DSGVO  dabei eine Epochenwende. Als Novum verhängen erstmalig Aufsichtsbehörden der"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1182,
+          "found_terms": [
+            "art. 83"
+          ],
+          "excerpt": "Art. 83 DSGVO dem Sinn und Zweck der Vorschrift, den"
+        }
+      ],
+      "auto_spot_score": 1
+    },
+    {
+      "id": "A1",
+      "query": "Welche Voraussetzungen gelten für den Eigenbedarfskündigungsschutz nach § 574 BGB?",
+      "type": "off_topic",
+      "expected_terms": [
+        "eigenbedarfskündigung",
+        "§ 574 bgb",
+        "härteklausel",
+        "mietvertrag"
+      ],
+      "expected_behavior": "Top-5 keine Mietrecht-Treffer in Datenschutz-Collection",
+      "metrics": {
+        "query_type": "off_topic",
+        "hit_loose_pass": true,
+        "hit_strict_pass": true,
+        "contamination_ndcg": 0.289,
+        "found_per_doc": [
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.202,
+          "found_terms": [],
+          "excerpt": "Mietverhältnisses nicht erforderlich.  Fragen nach erheblichen Pflichtverletzungen aus dem vorherigen Mietverhältnis, die eine  Kündigung rechtfertigen, sind begrenzt zulässig. Diese Pflichtverletzungen sind im  Rahmen des angestrebten Mietverhältnis"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.2044,
+          "found_terms": [],
+          "excerpt": "Mietverhältnisses nicht erforderlich.   Fragen nach erheblichen Pflichtverletzungen aus dem vorherigen Mietverhältnis, die  eine Kündigung rechtfertigen, sind begrenzt zulässig. Diese Pflichtverletzungen sind im  Rahmen des angestrebten Mietverhältni"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.2125,
+          "found_terms": [],
+          "excerpt": "(4) Im Fall der Einschränkung nach Absatz 2 gilt § 57 Absatz 7 entsprechend."
+        }
+      ],
+      "auto_spot_score": 0
+    },
+    {
+      "id": "A2",
+      "query": "EuGH C-311/18 (Schrems II) — Zulässigkeit von Datentransfers in die USA",
+      "type": "narrow",
+      "expected_terms": [
+        "c-311/18",
+        "schrems",
+        "privacy shield",
+        "standardvertragsklauseln",
+        "usa"
+      ],
+      "expected_behavior": "Schrems II oder Privacy Shield Kontext in Top-5",
+      "metrics": {
+        "query_type": "narrow",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.763,
+        "found_per_doc": [
+          [
+            "schrems"
+          ],
+          [
+            "schrems"
+          ],
+          [
+            "schrems"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.0974,
+          "found_terms": [
+            "schrems"
+          ],
+          "excerpt": "38  EuGH, Urt. v. 16. Juli 2020, Rs. C‐311/18 (sog. Schrems II).  39  S. Annex I., Section III.6.d und e des Angemessenheitsbeschlusses zum EU‐US DPF, s. Website zum Data  Privacy Framework, abrufbar unter: https://www.dataprivacyframework.gov/s/arti"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.0987,
+          "found_terms": [
+            "schrems"
+          ],
+          "excerpt": "16  EuGH, Urt. v. 16. Juli 2020, Rs. C‐311/18 (sog. Schrems II)."
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1195,
+          "found_terms": [
+            "schrems"
+          ],
+          "excerpt": "14  EuGH, Urt. v. 6. Oktober 2015, Rs. C‐362/14 (sog. Schrems I).  15  Durchführungsbeschluss (EU) 2016/1250 der Kommission vom 12. Juli 2016 gemäß der Richtlinie 95/46/EG  des Europäischen Parlaments und des Rates über die Angemessenheit des vom EU‐"
+        }
+      ],
+      "auto_spot_score": 1
+    },
+    {
+      "id": "A3",
+      "query": "Ausnahmen von der Meldepflicht nach Art. 33 DSGVO AUSSER bei geringem Risiko für Betroffene",
+      "type": "negation",
+      "expected_terms": [
+        "art. 34 dsgvo",
+        "schwerwiegendes risiko",
+        "benachrichtigungspflicht",
+        "betroffene"
+      ],
+      "expected_behavior": "Hohe-Risiko-Pflichten nach Art. 34, nicht nur Art. 33 Ausnahmen",
+      "metrics": {
+        "query_type": "negation",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.842,
+        "found_per_doc": [
+          [
+            "betroffene"
+          ],
+          [
+            "betroffene"
+          ],
+          [
+            "betroffene"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.161,
+          "found_terms": [
+            "betroffene"
+          ],
+          "excerpt": "Art. 49 DSGVO – Ausnahmen für bestimmte Fälle  1 Falls weder ein Angemessenheitsbeschluss nach Artikel 45 Absatz 3 vorliegt noch geeignete Garantien nach Artikel 46 , einschließlich verbindlicher interner Datenschutzvorschriften, bestehen, ist eine Ü"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1649,
+          "found_terms": [
+            "betroffene"
+          ],
+          "excerpt": "Art. 49 DSGVO – Ausnahmen für bestimmte Fälle  1 Liegt kein Angemessenheitsbeschluss vor, so können im Unionsrecht oder im Recht der Mitgliedstaaten aus wichtigen Gründen des öffentlichen Interesses ausdrücklich Beschränkungen der Übermittlung bestim"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1681,
+          "found_terms": [
+            "betroffene"
+          ],
+          "excerpt": "Erwägungsgrund 62 DSGVO – Ausnahmen von der Informationspflicht*  1 Die Pflicht, Informationen zur Verfügung zu stellen, erübrigt sich jedoch, wenn die betroffene Person die Information bereits hat, wenn die Speicherung oder Offenlegung der personenb"
+        }
+      ],
+      "auto_spot_score": 1
+    }
+  ]
+}

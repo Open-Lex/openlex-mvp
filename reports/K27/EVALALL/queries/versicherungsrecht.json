@@ -1,0 +1,50 @@
+{
+  "skill": "versicherungsrecht",
+  "original_queries": [
+    {
+      "id": "O1", "type": "original",
+      "query": "Welche vorvertraglichen Anzeigepflichten hat der Versicherungsnehmer nach § 19 VVG?",
+      "expected_terms": ["anzeigepflicht", "§ 19 vvg", "gefahrerhebliche umstände", "arglistige täuschung", "rücktritt"]
+    },
+    {
+      "id": "O2", "type": "original",
+      "query": "Wann kann der Versicherer die Leistung wegen grober Fahrlässigkeit kürzen?",
+      "expected_terms": ["grobe fahrlässigkeit", "§ 81 vvg", "leistungskürzung", "quotenvorrecht", "verschulden"]
+    },
+    {
+      "id": "O3", "type": "original",
+      "query": "Was gilt bei der Obliegenheitsverletzung nach einem Versicherungsfall?",
+      "expected_terms": ["obliegenheit", "§ 28 vvg", "leistungsfreiheit", "kausalität", "vorsatz"]
+    },
+    {
+      "id": "O4", "type": "original",
+      "query": "Welche Fristen gelten für die Geltendmachung von Versicherungsansprüchen?",
+      "expected_terms": ["verjährungsfrist", "§ 195 bgb", "versicherungsanspruch", "anspruch", "kenntnis"]
+    },
+    {
+      "id": "O5", "type": "original",
+      "query": "Wann greift der Direktanspruch des Geschädigten gegen den Kfz-Haftpflichtversicherer?",
+      "expected_terms": ["direktanspruch", "§ 115 vvg", "kfz-haftpflicht", "geschädigter", "pflichtversicherung"]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1", "type": "off_topic",
+      "query": "Wie wird ein Bebauungsplan nach dem BauGB aufgestellt?",
+      "expected_terms": ["bebauungsplan", "baugb", "abwägungsgebot", "öffentliche auslegung"],
+      "expected_behavior": "Keine Baurecht-Treffer in Versicherungsrecht-Collection"
+    },
+    {
+      "id": "A2", "type": "narrow",
+      "query": "BGH IV ZR 144/21 — Sturmschäden und Auslegung von Allgemeinen Versicherungsbedingungen",
+      "expected_terms": ["iv zr 144/21", "sturmschaden", "avb", "auslegung", "versicherungsbedingungen"],
+      "expected_behavior": "AVB-Auslegung oder Sturmschaden BGH-Kontext"
+    },
+    {
+      "id": "A3", "type": "negation",
+      "query": "Haftpflichtversicherung für Unternehmen AUSSER für Berufshaftpflicht",
+      "expected_terms": ["betriebshaftpflicht", "produkthaftung", "umwelthaftpflicht", "betrieb"],
+      "expected_behavior": "Betriebshaftpflicht und Produkthaftung, nicht Berufshaftpflicht-Spezifika"
+    }
+  ]
+}

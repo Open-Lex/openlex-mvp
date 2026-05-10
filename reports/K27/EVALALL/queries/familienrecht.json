@@ -1,0 +1,50 @@
+{
+  "skill": "familienrecht",
+  "original_queries": [
+    {
+      "id": "O1", "type": "original",
+      "query": "Wie wird der Unterhalt für minderjährige Kinder nach der Düsseldorfer Tabelle berechnet?",
+      "expected_terms": ["unterhalt", "düsseldorfer tabelle", "kindesunterhalt", "selbstbehalt", "einkommen"]
+    },
+    {
+      "id": "O2", "type": "original",
+      "query": "Welche Voraussetzungen gelten für den Zugewinnausgleich bei Scheidung?",
+      "expected_terms": ["zugewinnausgleich", "§ 1378 bgb", "endvermögen", "anfangsvermögen", "scheidung"]
+    },
+    {
+      "id": "O3", "type": "original",
+      "query": "Wann kann das Sorgerecht auf einen Elternteil allein übertragen werden?",
+      "expected_terms": ["sorgerecht", "alleiniges sorgerecht", "§ 1671 bgb", "kindeswohl", "übertragung"]
+    },
+    {
+      "id": "O4", "type": "original",
+      "query": "Was ist beim Versorgungsausgleich bei der Scheidung zu berücksichtigen?",
+      "expected_terms": ["versorgungsausgleich", "rentenanwartschaft", "ehezeitanteil", "§ 1 vausgg", "ausgleichswert"]
+    },
+    {
+      "id": "O5", "type": "original",
+      "query": "Welche Voraussetzungen gelten für nachehelichen Unterhalt nach §§ 1569 ff. BGB?",
+      "expected_terms": ["nachehelicher unterhalt", "§ 1570 bgb", "leistungsfähigkeit", "bedürftigkeit", "erwerbsobliegenheit"]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1", "type": "off_topic",
+      "query": "Unter welchen Voraussetzungen kann eine GmbH in die Insolvenz gehen?",
+      "expected_terms": ["insolvenz", "zahlungsunfähigkeit", "gmbh", "§ 17 inso"],
+      "expected_behavior": "Keine Insolvenzrecht-Treffer in Familienrecht-Collection"
+    },
+    {
+      "id": "A2", "type": "narrow",
+      "query": "BGH XII ZB 127/21 — Berechnung des Kindesunterhalts bei wechselseitiger Betreuung",
+      "expected_terms": ["xii zb 127/21", "kindesunterhalt", "wechselmodell", "betreuungsanteil"],
+      "expected_behavior": "Wechselmodell BGH oder Kindesunterhalt-Berechnung"
+    },
+    {
+      "id": "A3", "type": "negation",
+      "query": "Unterhaltspflichten gegenüber Kindern AUSSER bei volljährigen Kindern in Ausbildung",
+      "expected_terms": ["minderjähriges kind", "barunterhalt", "haushaltsführung", "§ 1601 bgb"],
+      "expected_behavior": "Minderjährigen-Unterhalt, nicht primär Ausbildungsunterhalt für Volljährige"
+    }
+  ]
+}

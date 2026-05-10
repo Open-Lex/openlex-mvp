@@ -1,0 +1,50 @@
+{
+  "skill": "baurecht",
+  "original_queries": [
+    {
+      "id": "O1", "type": "original",
+      "query": "Welche Gewährleistungsfristen gelten beim Werkvertrag nach § 634a BGB für Bauwerke?",
+      "expected_terms": ["gewährleistungsfrist", "§ 634a bgb", "bauwerk", "fünf jahre", "abnahme"]
+    },
+    {
+      "id": "O2", "type": "original",
+      "query": "Wann kann ein Auftraggeber beim Bauvertrag nach § 648 BGB kündigen?",
+      "expected_terms": ["§ 648 bgb", "freie kündigung", "auftraggeber", "vergütungsanspruch", "ersparte aufwendungen"]
+    },
+    {
+      "id": "O3", "type": "original",
+      "query": "Was regelt der Bebauungsplan nach dem BauGB für die Grundstücksnutzung?",
+      "expected_terms": ["bebauungsplan", "§ 8 baugb", "festsetzung", "baunutzungsverordnung", "art der nutzung"]
+    },
+    {
+      "id": "O4", "type": "original",
+      "query": "Welche Haftung trifft den Architekten bei Planungsfehlern nach § 634 BGB?",
+      "expected_terms": ["architektenhaftung", "planungsfehler", "§ 634 bgb", "werkvertrag", "schadensersatz"]
+    },
+    {
+      "id": "O5", "type": "original",
+      "query": "Was sind die Voraussetzungen für die Abnahme eines Bauwerks nach VOB/B?",
+      "expected_terms": ["abnahme", "vob/b", "§ 12 vob", "wesentliche mängel", "abnahmeverweigerung"]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1", "type": "off_topic",
+      "query": "Welche Pflichtteilsrechte haben Abkömmlinge nach dem BGB beim Erbfall?",
+      "expected_terms": ["pflichtteil", "§ 2303 bgb", "abkömmlinge", "erbrecht"],
+      "expected_behavior": "Keine Erbrecht-Treffer in Baurecht-Collection"
+    },
+    {
+      "id": "A2", "type": "narrow",
+      "query": "BGH VII ZR 84/21 — Nachtragsvergütung bei geänderter Leistung nach § 650c BGB",
+      "expected_terms": ["vii zr 84/21", "nachtragsvergütung", "§ 650c bgb", "anordnung", "leistungsänderung"],
+      "expected_behavior": "Nachtragsvergütung BGH-Kontext oder § 650c BGB"
+    },
+    {
+      "id": "A3", "type": "negation",
+      "query": "Schadensersatzansprüche bei Baumängeln AUSSER bei Arglist des Unternehmers",
+      "expected_terms": ["§ 634a abs. 3 bgb", "verjährungsfrist", "regelmäßige verjährung", "mangel"],
+      "expected_behavior": "Regelverjährung bei Baumängeln, nicht Sonderverjährung bei Arglist"
+    }
+  ]
+}

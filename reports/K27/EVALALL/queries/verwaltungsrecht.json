@@ -1,0 +1,50 @@
+{
+  "skill": "verwaltungsrecht",
+  "original_queries": [
+    {
+      "id": "O1", "type": "original",
+      "query": "Was ist ein Verwaltungsakt nach § 35 VwVfG und welche Merkmale hat er?",
+      "expected_terms": ["verwaltungsakt", "§ 35 vwvfg", "hoheitliche maßnahme", "regelung", "außenwirkung"]
+    },
+    {
+      "id": "O2", "type": "original",
+      "query": "Wann ist eine Ermessensentscheidung der Behörde fehlerhaft?",
+      "expected_terms": ["ermessen", "ermessensfehlgebrauch", "ermessensnichtgebrauch", "verhältnismäßigkeit", "ermessensüberschreitung"]
+    },
+    {
+      "id": "O3", "type": "original",
+      "query": "Welche Fristen gelten für Widerspruch und Anfechtungsklage im Verwaltungsrecht?",
+      "expected_terms": ["widerspruch", "anfechtungsklage", "monatsfrist", "§ 74 vwgo", "rechtsbehelf"]
+    },
+    {
+      "id": "O4", "type": "original",
+      "query": "Unter welchen Voraussetzungen kann eine Baugenehmigung erteilt werden?",
+      "expected_terms": ["baugenehmigung", "bauordnungsrecht", "bebauungsplan", "baurecht", "genehmigung"]
+    },
+    {
+      "id": "O5", "type": "original",
+      "query": "Was regelt das Verhältnismäßigkeitsprinzip im Verwaltungsrecht?",
+      "expected_terms": ["verhältnismäßigkeit", "geeignetheit", "erforderlichkeit", "angemessenheit", "übermaßverbot"]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1", "type": "off_topic",
+      "query": "Welche Steuersätze gelten für körperschaftsteuerpflichtige Unternehmen nach dem KStG?",
+      "expected_terms": ["körperschaftsteuer", "kstg", "steuersatz", "gewerbesteuer"],
+      "expected_behavior": "Keine Steuerrecht-Treffer in Verwaltungsrecht-Collection"
+    },
+    {
+      "id": "A2", "type": "narrow",
+      "query": "§ 80 Abs. 5 VwGO — Antrag auf Wiederherstellung der aufschiebenden Wirkung",
+      "expected_terms": ["§ 80 abs. 5 vwgo", "aufschiebende wirkung", "wiederherstellung", "sofortvollzug"],
+      "expected_behavior": "§ 80 VwGO Kontext in Top-3"
+    },
+    {
+      "id": "A3", "type": "negation",
+      "query": "Rücknahme eines Verwaltungsakts nach § 48 VwVfG AUSSER bei Vertrauensschutz des Begünstigten",
+      "expected_terms": ["§ 48 vwvfg", "rücknahme", "unrichtiger va", "jahresfrist"],
+      "expected_behavior": "Rücknahme-Voraussetzungen ohne Fokus auf Vertrauensschutz"
+    }
+  ]
+}

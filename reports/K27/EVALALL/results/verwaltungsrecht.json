@@ -1,0 +1,524 @@
+{
+  "skill": "verwaltungsrecht",
+  "via": "live-mxbai",
+  "model": "mixedbread-ai/deepset-mxbai-embed-de-large-v1",
+  "n_embeddings": 542,
+  "aggregate": {
+    "n_queries": 8,
+    "n_normal": 7,
+    "hit_loose_5": 1.0,
+    "hit_strict_5": 0.714,
+    "hit_at_1": 1.0,
+    "hit_at_3": 1.0,
+    "ndcg10_graded_mean": 0.938,
+    "auto_spot_median": 2,
+    "manual_spot_median": 3,
+    "manual_spot_notes": "O1=3,O2=3,A2=3",
+    "nlnet_verdict": "BELASTBAR"
+  },
+  "off_topic_summary": [
+    {
+      "id": "A1",
+      "query": "Welche Steuersätze gelten für körperschaftsteuerpflichtige Unternehmen nach dem ",
+      "hit_loose_pass": true,
+      "contamination_ndcg": 0.0
+    }
+  ],
+  "per_query": [
+    {
+      "id": "O1",
+      "query": "Was ist ein Verwaltungsakt nach § 35 VwVfG und welche Merkmale hat er?",
+      "type": "original",
+      "expected_terms": [
+        "verwaltungsakt",
+        "§ 35 vwvfg",
+        "hoheitliche maßnahme",
+        "regelung",
+        "außenwirkung"
+      ],
+      "expected_behavior": "",
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.978,
+        "found_per_doc": [
+          [
+            "verwaltungsakt",
+            "hoheitliche maßnahme",
+            "regelung"
+          ],
+          [
+            "verwaltungsakt",
+            "§ 35 vwvfg",
+            "hoheitliche maßnahme",
+            "regelung",
+            "außenwirkung"
+          ],
+          [
+            "verwaltungsakt"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1355,
+          "found_terms": [
+            "verwaltungsakt",
+            "hoheitliche maßnahme",
+            "regelung"
+          ],
+          "excerpt": "§ 35  VwVfG Begriff des Verwaltungsaktes Verwaltungsakt ist jede Verfügung, Entscheidung oder andere hoheitliche Maßnahme, die eine Behörde zur Regelung eines Einzelfalls auf dem Gebiet des öffentlichen Rechts trifft und die auf unmittelbare Rechtswi"
+        },
+        {
+          "rank": 2,
+          "title": "Prüfungsschema: Verwaltungsakt (§ 35 VwVfG)",
+          "distance": 0.1433,
+          "found_terms": [
+            "verwaltungsakt",
+            "§ 35 vwvfg",
+            "hoheitliche maßnahme",
+            "regelung",
+            "außenwirkung"
+          ],
+          "excerpt": "Prüfungsschema: Verwaltungsakt (§ 35 VwVfG)  Prüfung ob ein Verwaltungsakt (VA) vorliegt (§ 35 S. 1 VwVfG):  1. Maßnahme einer Behörde    - Behörde i.S.d. § 1 Abs. 4 VwVfG: jede Stelle, die Aufgaben der öffentlichen Verwaltung wahrnimmt    - Handeln "
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1573,
+          "found_terms": [
+            "verwaltungsakt"
+          ],
+          "excerpt": "§ 37  VwVfG Bestimmtheit und Form des Verwaltungsaktes; Rechtsbehelfsbelehrung (1) Ein Verwaltungsakt muss inhaltlich hinreichend bestimmt sein. (2) Ein Verwaltungsakt kann schriftlich, elektronisch, mündlich oder in anderer Weise erlassen werden. Ei"
+        }
+      ],
+      "auto_spot_score": 3
+    },
+    {
+      "id": "O2",
+      "query": "Wann ist eine Ermessensentscheidung der Behörde fehlerhaft?",
+      "type": "original",
+      "expected_terms": [
+        "ermessen",
+        "ermessensfehlgebrauch",
+        "ermessensnichtgebrauch",
+        "verhältnismäßigkeit",
+        "ermessensüberschreitung"
+      ],
+      "expected_behavior": "",
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 1.0,
+        "found_per_doc": [
+          [
+            "ermessen",
+            "verhältnismäßigkeit",
+            "ermessensüberschreitung"
+          ],
+          [
+            "ermessen"
+          ],
+          [
+            "ermessen"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "Ermessen und Verhältnismäßigkeit im Verwaltungsrecht",
+          "distance": 0.1521,
+          "found_terms": [
+            "ermessen",
+            "verhältnismäßigkeit",
+            "ermessensüberschreitung"
+          ],
+          "excerpt": "Ermessen und Verhältnismäßigkeit im Verwaltungsrecht  I. Ermessen (§ 40 VwVfG)  Ermessen auf Rechtsfolgenseite (darf/kann/ist befugt): Behörde hat Handlungsspielraum Abgrenzung: Unbestimmter Rechtsbegriff auf Tatbestandsseite → volle gerichtliche Kon"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1584,
+          "found_terms": [
+            "ermessen"
+          ],
+          "excerpt": "§ 114  VwGO Soweit die Verwaltungsbehörde ermächtigt ist, nach ihrem Ermessen zu handeln, prüft das Gericht auch, ob der Verwaltungsakt oder die Ablehnung oder Unterlassung des Verwaltungsakts rechtswidrig ist, weil die gesetzlichen Grenzen des Ermes"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1765,
+          "found_terms": [
+            "ermessen"
+          ],
+          "excerpt": "§ 22  VwVfG Beginn des Verfahrens Die Behörde entscheidet nach pflichtgemäßem Ermessen, ob und wann sie ein Verwaltungsverfahren durchführt. Dies gilt nicht, wenn die Behörde auf Grund von Rechtsvorschriften 1. von Amts wegen oder auf Antrag tätig we"
+        }
+      ],
+      "auto_spot_score": 2
+    },
+    {
+      "id": "O3",
+      "query": "Welche Fristen gelten für Widerspruch und Anfechtungsklage im Verwaltungsrecht?",
+      "type": "original",
+      "expected_terms": [
+        "widerspruch",
+        "anfechtungsklage",
+        "monatsfrist",
+        "§ 74 vwgo",
+        "rechtsbehelf"
+      ],
+      "expected_behavior": "",
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.867,
+        "found_per_doc": [
+          [
+            "widerspruch",
+            "anfechtungsklage"
+          ],
+          [
+            "widerspruch"
+          ],
+          [
+            "widerspruch"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1228,
+          "found_terms": [
+            "widerspruch",
+            "anfechtungsklage"
+          ],
+          "excerpt": "§ 74  VwGO (1) Die Anfechtungsklage muß innerhalb eines Monats nach Zustellung des Widerspruchsbescheids erhoben werden. Ist nach § 68 ein Widerspruchsbescheid nicht erforderlich, so muß die Klage innerhalb eines Monats nach Bekanntgabe des Verwaltun"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.136,
+          "found_terms": [
+            "widerspruch"
+          ],
+          "excerpt": "§ 75  VwGO Ist über einen Widerspruch oder über einen Antrag auf Vornahme eines Verwaltungsakts ohne zureichenden Grund in angemessener Frist sachlich nicht entschieden worden, so ist die Klage abweichend von § 68 zulässig. Die Klage kann nicht vor A"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1385,
+          "found_terms": [
+            "widerspruch"
+          ],
+          "excerpt": "§ 70  VwGO (1) Der Widerspruch ist innerhalb eines Monats, nachdem der Verwaltungsakt dem Beschwerten bekanntgegeben worden ist, schriftlich, in elektronischer Form nach § 3a Absatz 2 des Verwaltungsverfahrensgesetzes, schriftformersetzend nach § 3a "
+        }
+      ],
+      "auto_spot_score": 1
+    },
+    {
+      "id": "O4",
+      "query": "Unter welchen Voraussetzungen kann eine Baugenehmigung erteilt werden?",
+      "type": "original",
+      "expected_terms": [
+        "baugenehmigung",
+        "bauordnungsrecht",
+        "bebauungsplan",
+        "baurecht",
+        "genehmigung"
+      ],
+      "expected_behavior": "",
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": false,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.871,
+        "found_per_doc": [
+          [
+            "genehmigung"
+          ],
+          [],
+          [
+            "genehmigung"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1963,
+          "found_terms": [
+            "genehmigung"
+          ],
+          "excerpt": "§ 15  GewO Empfangsbescheinigung, Betrieb ohne Zulassung (1) Die Behörde bescheinigt innerhalb dreier Tage den Empfang der Anzeige. (2) Wird ein Gewerbe, zu dessen Ausübung eine Erlaubnis, Genehmigung, Konzession oder Bewilligung (Zulassung) erforder"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1972,
+          "found_terms": [],
+          "excerpt": "§ 133  GewO Befugnis zur Führung des Baumeistertitels Die Befugnis zur Führung des Meistertitels in Verbindung mit einer anderen Bezeichnung, die auf eine Tätigkeit im Baugewerbe hinweist, insbesondere des Titels Baumeister und Baugewerksmeister, wir"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.204,
+          "found_terms": [
+            "genehmigung"
+          ],
+          "excerpt": "§ 6a  GewO Entscheidungsfrist, Genehmigungsfiktion (1) Hat die Behörde über einen Antrag auf Erlaubnis zur Ausübung eines Gewerbes nach § 34b Absatz 1, 3, 4, § 34c Absatz 1 Satz 1 Nummer 1, 3 und 4 oder § 55 Absatz 2 nicht innerhalb einer Frist von d"
+        }
+      ],
+      "auto_spot_score": 1
+    },
+    {
+      "id": "O5",
+      "query": "Was regelt das Verhältnismäßigkeitsprinzip im Verwaltungsrecht?",
+      "type": "original",
+      "expected_terms": [
+        "verhältnismäßigkeit",
+        "geeignetheit",
+        "erforderlichkeit",
+        "angemessenheit",
+        "übermaßverbot"
+      ],
+      "expected_behavior": "",
+      "metrics": {
+        "query_type": "original",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.933,
+        "found_per_doc": [
+          [
+            "verhältnismäßigkeit",
+            "geeignetheit",
+            "erforderlichkeit",
+            "angemessenheit"
+          ],
+          [],
+          []
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "Ermessen und Verhältnismäßigkeit im Verwaltungsrecht",
+          "distance": 0.1649,
+          "found_terms": [
+            "verhältnismäßigkeit",
+            "geeignetheit",
+            "erforderlichkeit",
+            "angemessenheit"
+          ],
+          "excerpt": "Ermessen und Verhältnismäßigkeit im Verwaltungsrecht  I. Ermessen (§ 40 VwVfG)  Ermessen auf Rechtsfolgenseite (darf/kann/ist befugt): Behörde hat Handlungsspielraum Abgrenzung: Unbestimmter Rechtsbegriff auf Tatbestandsseite → volle gerichtliche Kon"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1948,
+          "found_terms": [],
+          "excerpt": "§ 114  VwGO Soweit die Verwaltungsbehörde ermächtigt ist, nach ihrem Ermessen zu handeln, prüft das Gericht auch, ob der Verwaltungsakt oder die Ablehnung oder Unterlassung des Verwaltungsakts rechtswidrig ist, weil die gesetzlichen Grenzen des Ermes"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1974,
+          "found_terms": [],
+          "excerpt": "§ 22  VwVfG Beginn des Verfahrens Die Behörde entscheidet nach pflichtgemäßem Ermessen, ob und wann sie ein Verwaltungsverfahren durchführt. Dies gilt nicht, wenn die Behörde auf Grund von Rechtsvorschriften 1. von Amts wegen oder auf Antrag tätig we"
+        }
+      ],
+      "auto_spot_score": 2
+    },
+    {
+      "id": "A1",
+      "query": "Welche Steuersätze gelten für körperschaftsteuerpflichtige Unternehmen nach dem KStG?",
+      "type": "off_topic",
+      "expected_terms": [
+        "körperschaftsteuer",
+        "kstg",
+        "steuersatz",
+        "gewerbesteuer"
+      ],
+      "expected_behavior": "Keine Steuerrecht-Treffer in Verwaltungsrecht-Collection",
+      "metrics": {
+        "query_type": "off_topic",
+        "hit_loose_pass": true,
+        "hit_strict_pass": true,
+        "contamination_ndcg": 0.0,
+        "found_per_doc": [
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.2496,
+          "found_terms": [],
+          "excerpt": "§ 190  VwGO (1) Die folgenden Gesetze, die von diesem Gesetz abweichen, bleiben unberührt: 1. Das Lastenausgleichsgesetz vom 14. August 1952 (Bundesgesetzbl. I S. 446) in der Fassung der dazu ergangenen Änderungsgesetze, 2. das Gesetz über die Errich"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.2512,
+          "found_terms": [],
+          "excerpt": "§ 6  GewO Anwendungsbereich (1) Dieses Gesetz ist nicht anzuwenden auf die Fischerei, die Errichtung und Verlegung von Apotheken, die Erziehung von Kindern gegen Entgelt, das Unterrichtswesen, auf die Tätigkeit der Rechtsanwälte und Berufsausübungsge"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.252,
+          "found_terms": [],
+          "excerpt": "§ 161  GewO Übergangsregelung zu § 14 Absatz 4 (1) § 14 Absatz 4 Satz 1 ist, soweit die Mitteilung der Wirtschaftsidentifikationsnummer nach § 139c der Abgabenordnung und des Unterscheidungsmerkmals nach § 139c Absatz 5a der Abgabenordnung betroffen "
+        }
+      ],
+      "auto_spot_score": 0
+    },
+    {
+      "id": "A2",
+      "query": "§ 80 Abs. 5 VwGO — Antrag auf Wiederherstellung der aufschiebenden Wirkung",
+      "type": "narrow",
+      "expected_terms": [
+        "§ 80 abs. 5 vwgo",
+        "aufschiebende wirkung",
+        "wiederherstellung",
+        "sofortvollzug"
+      ],
+      "expected_behavior": "§ 80 VwGO Kontext in Top-3",
+      "metrics": {
+        "query_type": "narrow",
+        "hit_loose_5": true,
+        "hit_strict_5": true,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.961,
+        "found_per_doc": [
+          [
+            "§ 80 abs. 5 vwgo",
+            "aufschiebende wirkung",
+            "wiederherstellung",
+            "sofortvollzug"
+          ],
+          [
+            "wiederherstellung"
+          ],
+          [
+            "aufschiebende wirkung"
+          ]
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "Aufschiebende Wirkung und einstweiliger Rechtsschutz (§ 80 VwGO)",
+          "distance": 0.1231,
+          "found_terms": [
+            "§ 80 abs. 5 vwgo",
+            "aufschiebende wirkung",
+            "wiederherstellung",
+            "sofortvollzug"
+          ],
+          "excerpt": "Aufschiebende Wirkung und einstweiliger Rechtsschutz (§ 80 VwGO)  I. Aufschiebende Wirkung (§ 80 Abs. 1 VwGO)  Grundregel: Widerspruch und Anfechtungsklage haben aufschiebende Wirkung → VA darf bis zur Bestandskraft nicht vollzogen werden  Ausnahmen "
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.1332,
+          "found_terms": [
+            "wiederherstellung"
+          ],
+          "excerpt": "§ 80c  VwGO (1) In Verfahren nach § 48 Absatz 1 Satz 1 Nummer 3 bis 15 und § 50 Absatz 1 Nummer 6 gelten für die Anordnung oder Wiederherstellung der aufschiebenden Wirkung (§§ 80 und 80a) ergänzend die Absätze 2 bis 4. Von Satz 1 ausgenommen sind in"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1357,
+          "found_terms": [
+            "aufschiebende wirkung"
+          ],
+          "excerpt": "§ 80b  VwGO (1) Die aufschiebende Wirkung des Widerspruchs und der Anfechtungsklage endet mit der Unanfechtbarkeit oder, wenn die Anfechtungsklage im ersten Rechtszug abgewiesen worden ist, drei Monate nach Ablauf der gesetzlichen Begründungsfrist de"
+        }
+      ],
+      "auto_spot_score": 3
+    },
+    {
+      "id": "A3",
+      "query": "Rücknahme eines Verwaltungsakts nach § 48 VwVfG AUSSER bei Vertrauensschutz des Begünstigten",
+      "type": "negation",
+      "expected_terms": [
+        "§ 48 vwvfg",
+        "rücknahme",
+        "unrichtiger va",
+        "jahresfrist"
+      ],
+      "expected_behavior": "Rücknahme-Voraussetzungen ohne Fokus auf Vertrauensschutz",
+      "metrics": {
+        "query_type": "negation",
+        "hit_loose_5": true,
+        "hit_strict_5": false,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "ndcg10_graded": 0.956,
+        "found_per_doc": [
+          [
+            "rücknahme"
+          ],
+          [
+            "rücknahme"
+          ],
+          []
+        ]
+      },
+      "spot_check_top3": [
+        {
+          "rank": 1,
+          "title": "?",
+          "distance": 0.1129,
+          "found_terms": [
+            "rücknahme"
+          ],
+          "excerpt": "§ 48  VwVfG Rücknahme eines rechtswidrigen Verwaltungsaktes (1) Ein rechtswidriger Verwaltungsakt kann, auch nachdem er unanfechtbar geworden ist, ganz oder teilweise mit Wirkung für die Zukunft oder für die Vergangenheit zurückgenommen werden. Ein V"
+        },
+        {
+          "rank": 2,
+          "title": "?",
+          "distance": 0.129,
+          "found_terms": [
+            "rücknahme"
+          ],
+          "excerpt": "§ 50  VwVfG Rücknahme und Widerruf im Rechtsbehelfsverfahren § 48 Abs. 1 Satz 2 und Abs. 2 bis 4 sowie § 49 Abs. 2 bis 4 und 6 gelten nicht, wenn ein begünstigender Verwaltungsakt, der von einem Dritten angefochten worden ist, während des Vorverfahre"
+        },
+        {
+          "rank": 3,
+          "title": "?",
+          "distance": 0.1426,
+          "found_terms": [],
+          "excerpt": "§ 49  VwVfG Widerruf eines rechtmäßigen Verwaltungsaktes (1) Ein rechtmäßiger nicht begünstigender Verwaltungsakt kann, auch nachdem er unanfechtbar geworden ist, ganz oder teilweise mit Wirkung für die Zukunft widerrufen werden, außer wenn ein Verwa"
+        }
+      ],
+      "auto_spot_score": 1
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "skill": "verkehrsrecht",
+  "original_queries": [
+    {
+      "id": "O1", "type": "original",
+      "query": "Wie wird der Schadensersatz bei einem Verkehrsunfall nach § 7 StVG berechnet?",
+      "expected_terms": ["§ 7 stvg", "schadensersatz", "haftung", "betrieb", "kraftfahrzeug"]
+    },
+    {
+      "id": "O2", "type": "original",
+      "query": "Wann trifft den Fahrzeugführer ein Mitverschulden nach § 9 StVG?",
+      "expected_terms": ["mitverschulden", "§ 9 stvg", "§ 254 bgb", "mitverursachung", "verschulden"]
+    },
+    {
+      "id": "O3", "type": "original",
+      "query": "Welche Fristen gelten für die Meldung eines Unfallschadens bei der Kfz-Versicherung?",
+      "expected_terms": ["meldepflicht", "obliegenheit", "kfz-versicherung", "unfallmeldung", "ausschlussfrist"]
+    },
+    {
+      "id": "O4", "type": "original",
+      "query": "Wann wird eine Fahrerlaubnis nach dem Fahreignungsregister entzogen?",
+      "expected_terms": ["fahrerlaubnis", "fahreignungsregister", "punktesystem", "entzug", "§ 4 stvg"]
+    },
+    {
+      "id": "O5", "type": "original",
+      "query": "Welche Ansprüche hat ein Unfallgeschädigter auf Nutzungsausfall oder Mietwagenersatz?",
+      "expected_terms": ["nutzungsausfall", "mietwagenkosten", "schadensersatz", "unfallgeschädigter", "wiederbeschaffungswert"]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1", "type": "off_topic",
+      "query": "Was regelt die DSGVO zur Verarbeitung personenbezogener Daten durch Arbeitgeber?",
+      "expected_terms": ["dsgvo", "personenbezogene daten", "arbeitgeber", "beschäftigtendatenschutz"],
+      "expected_behavior": "Keine Datenschutz-Treffer in Verkehrsrecht-Collection"
+    },
+    {
+      "id": "A2", "type": "narrow",
+      "query": "BGH VI ZR 128/21 — Haftung bei Auffahrunfall auf der Autobahn",
+      "expected_terms": ["vi zr 128/21", "auffahrunfall", "autobahn", "haftungsquote"],
+      "expected_behavior": "BGH Auffahrunfall-Kontext oder § 17 StVG Haftungsverteilung"
+    },
+    {
+      "id": "A3", "type": "negation",
+      "query": "Schadensersatz bei Verkehrsunfall AUSSER bei unverschuldeten Fahrzeugschäden",
+      "expected_terms": ["personenschaden", "schmerzensgeld", "§ 253 bgb", "verletzung"],
+      "expected_behavior": "Personenschaden und Schmerzensgeld, nicht reiner Sachschaden"
+    }
+  ]
+}
