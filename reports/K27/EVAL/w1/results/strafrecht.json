@@ -1,0 +1,220 @@
+{
+  "summary": {
+    "skill": "strafrecht",
+    "collection": "shadow_strafrecht",
+    "n_embeddings": 184704,
+    "embedding_model": "intfloat/multilingual-e5-large",
+    "n_queries": 5,
+    "hit_at_5": 1.0,
+    "hit_at_10": 1.0,
+    "ndcg_at_10": 0.9578,
+    "avg_embed_ms": 1914,
+    "avg_retrieval_ms": 13,
+    "date": "2026-05-10"
+  },
+  "queries": [
+    {
+      "query": "Welche Voraussetzungen gelten für Notwehr nach § 32 StGB?",
+      "expected_terms": [
+        "notwehr",
+        "angriff",
+        "gebotenheit",
+        "verteidigung",
+        "rechtswidrigkeit"
+      ],
+      "found_terms_in_top10": [
+        "notwehr",
+        "angriff",
+        "gebotenheit",
+        "verteidigung"
+      ],
+      "hit_at_5": true,
+      "hit_at_10": true,
+      "ndcg_at_10": 1.0,
+      "top3": [
+        {
+          "distance": 0.1145,
+          "source_type": "?",
+          "title": "nden gehindert gewesen sei, die Lage richtig zu überblicken.\n\nII.\n\n9          Di",
+          "id": "?"
+        },
+        {
+          "distance": 0.1178,
+          "source_type": "?",
+          "title": "den\n    rechtsfehlerfrei getroffenen Feststellungen die Voraussetzungen der Notw",
+          "id": "?"
+        },
+        {
+          "distance": 0.123,
+          "source_type": "?",
+          "title": "troffenen\n     Mindestfeststellungen ist dessen rechtliche Wertung nicht zu bean",
+          "id": "?"
+        }
+      ],
+      "embed_ms": 2082,
+      "retrieval_ms": 16
+    },
+    {
+      "query": "Was ist der Unterschied zwischen Vorsatz und Fahrlässigkeit im Strafrecht?",
+      "expected_terms": [
+        "vorsatz",
+        "fahrlässigkeit",
+        "dolus",
+        "sorgfaltspflicht",
+        "willentlich"
+      ],
+      "found_terms_in_top10": [
+        "vorsatz",
+        "fahrlässigkeit",
+        "sorgfaltspflicht"
+      ],
+      "hit_at_5": true,
+      "hit_at_10": true,
+      "ndcg_at_10": 0.9889,
+      "top3": [
+        {
+          "distance": 0.1308,
+          "source_type": "?",
+          "title": "Begründung zur subjektiven Tatseite einer gefährlichen Körperverletzung zu stell",
+          "id": "?"
+        },
+        {
+          "distance": 0.1313,
+          "source_type": "?",
+          "title": "en. Der bösen Absicht im einen Falle steht das sichere Wissen im anderen gegenüb",
+          "id": "?"
+        },
+        {
+          "distance": 0.1368,
+          "source_type": "?",
+          "title": "die Fahrlässigkeit zum Vorsatz im Verhältnis der schwächeren zur stärkeren Form ",
+          "id": "?"
+        }
+      ],
+      "embed_ms": 1943,
+      "retrieval_ms": 13
+    },
+    {
+      "query": "Wie prüft man Betrug nach § 263 StGB?",
+      "expected_terms": [
+        "täuschung",
+        "irrtum",
+        "vermögensschaden",
+        "stoffgleichheit",
+        "bereicherung"
+      ],
+      "found_terms_in_top10": [
+        "täuschung",
+        "irrtum",
+        "vermögensschaden"
+      ],
+      "hit_at_5": true,
+      "hit_at_10": true,
+      "ndcg_at_10": 0.8164,
+      "top3": [
+        {
+          "distance": 0.1217,
+          "source_type": "?",
+          "title": "s\n     auch im Verhältnis zu § 263a StGB gilt“ (BT-Drucks. 10/5058 S. 30).\n\n- 16",
+          "id": "?"
+        },
+        {
+          "distance": 0.1218,
+          "source_type": "?",
+          "title": "t revisionsgerichtlicher Überprüfung nicht stand. Der Generalbundesanwalt hat in",
+          "id": "?"
+        },
+        {
+          "distance": 0.126,
+          "source_type": "?",
+          "title": ". Der Schuldspruch wegen Betruges in den Fällen B. I. und II. der Urteilsgründe ",
+          "id": "?"
+        }
+      ],
+      "embed_ms": 1912,
+      "retrieval_ms": 14
+    },
+    {
+      "query": "Was sind die Voraussetzungen der Strafverfolgungsverjährung?",
+      "expected_terms": [
+        "verjährung",
+        "verjährungsfrist",
+        "verfolgungsverjährung",
+        "§ 78 stgb",
+        "ablauf"
+      ],
+      "found_terms_in_top10": [
+        "verjährung",
+        "verjährungsfrist",
+        "verfolgungsverjährung",
+        "ablauf"
+      ],
+      "hit_at_5": true,
+      "hit_at_10": true,
+      "ndcg_at_10": 0.995,
+      "top3": [
+        {
+          "distance": 0.1197,
+          "source_type": "?",
+          "title": "(1) Die Verjährung schließt die Ahndung der Tat und die Anordnung von Maßnahmen ",
+          "id": "?"
+        },
+        {
+          "distance": 0.1232,
+          "source_type": "?",
+          "title": "Deutscher Bundestag Drucksache 15/5653\n15. Wahlperiode 09. 06. 2005\n\nGesetzentwu",
+          "id": "?"
+        },
+        {
+          "distance": 0.1236,
+          "source_type": "?",
+          "title": "dies nach dem Ermessen der Verfolgungsbehörde oder des Gerichts oder im Einverne",
+          "id": "?"
+        }
+      ],
+      "embed_ms": 1912,
+      "retrieval_ms": 12
+    },
+    {
+      "query": "Wann liegt ein strafbarer Versuch vor und wie wird er von der Vollendung abgegrenzt?",
+      "expected_terms": [
+        "versuch",
+        "vollendung",
+        "unmittelbares ansetzen",
+        "rücktritt",
+        "§ 22 stgb"
+      ],
+      "found_terms_in_top10": [
+        "versuch",
+        "vollendung",
+        "rücktritt",
+        "§ 22 stgb"
+      ],
+      "hit_at_5": true,
+      "hit_at_10": true,
+      "ndcg_at_10": 0.9889,
+      "top3": [
+        {
+          "distance": 0.1255,
+          "source_type": "?",
+          "title": "(1) Wegen Versuchs wird nicht bestraft, wer freiwillig die weitere Ausführung de",
+          "id": "?"
+        },
+        {
+          "distance": 0.1256,
+          "source_type": "?",
+          "title": "reiwillig die weitere Vorbereitung der Tat aufgibt und eine von ihm verursachte ",
+          "id": "?"
+        },
+        {
+          "distance": 0.1275,
+          "source_type": "?",
+          "title": "2; LK-StGB/Schünemann/Greco, 13. Aufl., § 30\n     Rn. 14 ff.; SSW-StGB/Murmann, ",
+          "id": "?"
+        }
+      ],
+      "embed_ms": 1722,
+      "retrieval_ms": 12
+    }
+  ]
+}

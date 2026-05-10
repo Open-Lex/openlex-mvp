@@ -1,0 +1,84 @@
+[
+  {
+    "query": "Welche Voraussetzungen gelten für eine Einwilligung nach Art. 6 DSGVO?",
+    "status": "OK",
+    "latency_ms": 21259,
+    "n_chunks": 5,
+    "hit_at_5": true,
+    "terms_hit": [
+      "einwilligung",
+      "dsgvo",
+      "freiwillig"
+    ],
+    "source_types": [
+      "gesetz_granular",
+      "urteil_segmentiert"
+    ]
+  },
+  {
+    "query": "Darf der Arbeitgeber Mitarbeiter-E-Mails kontrollieren?",
+    "status": "OK",
+    "latency_ms": 6950,
+    "n_chunks": 5,
+    "hit_at_5": true,
+    "terms_hit": [
+      "beschäftigtendatenschutz",
+      "§ 26 bdsg",
+      "arbeitgeber",
+      "überwachung"
+    ],
+    "source_types": [
+      "gesetz_granular",
+      "leitlinie"
+    ]
+  },
+  {
+    "query": "Wann ist ein Auftragsverarbeitungsvertrag nach Art. 28 DSGVO erforderlich?",
+    "status": "OK",
+    "latency_ms": 7924,
+    "n_chunks": 5,
+    "hit_at_5": true,
+    "terms_hit": [
+      "auftragsverarbeitung",
+      "art. 28"
+    ],
+    "source_types": [
+      "gesetz_granular",
+      "leitlinie"
+    ]
+  },
+  {
+    "query": "Schadensersatz bei Datenpanne nach Art. 82 DSGVO?",
+    "status": "OK",
+    "latency_ms": 8799,
+    "n_chunks": 5,
+    "hit_at_5": true,
+    "terms_hit": [
+      "art. 82",
+      "schadensersatz",
+      "immateriell"
+    ],
+    "source_types": [
+      "gesetz_granular",
+      "urteil_segmentiert"
+    ]
+  },
+  {
+    "query": "Ab wann muss ein Datenschutzbeauftragter bestellt werden?",
+    "status": "OK",
+    "latency_ms": 6309,
+    "n_chunks": 5,
+    "hit_at_5": true,
+    "terms_hit": [
+      "datenschutzbeauftragter",
+      "art. 37",
+      "benennung",
+      "pflicht"
+    ],
+    "source_types": [
+      "gesetz_granular",
+      "urteil_segmentiert",
+      "leitlinie"
+    ]
+  }
+]

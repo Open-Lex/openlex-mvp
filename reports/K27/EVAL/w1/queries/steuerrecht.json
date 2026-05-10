@@ -1,0 +1,22 @@
+[
+  {
+    "query": "Wann ist eine Betriebsausgabe nach § 4 EStG abzugsfähig?",
+    "expected_terms": ["betriebsausgabe", "betrieblich veranlasst", "§ 4 estg", "abzugsfähig", "gewinnminderung"]
+  },
+  {
+    "query": "Was ist der Unterschied zwischen beschränkter und unbeschränkter Steuerpflicht?",
+    "expected_terms": ["unbeschränkte steuerpflicht", "beschränkte steuerpflicht", "wohnsitz", "inländische einkünfte", "§ 1 estg"]
+  },
+  {
+    "query": "Wie wird die Umsatzsteuer bei innergemeinschaftlichen Lieferungen behandelt?",
+    "expected_terms": ["innergemeinschaftliche lieferung", "umsatzsteuer", "steuerfreiheit", "§ 6a ustg", "bestimmungslandprinzip"]
+  },
+  {
+    "query": "Welche Voraussetzungen gelten für die Anerkennung einer verdeckten Gewinnausschüttung?",
+    "expected_terms": ["verdeckte gewinnausschüttung", "körperschaftsteuer", "fremdvergleich", "gesellschafter", "§ 8 kstg"]
+  },
+  {
+    "query": "Wie funktioniert die Festsetzungsverjährung im Steuerrecht nach der AO?",
+    "expected_terms": ["festsetzungsverjährung", "§ 169 ao", "verjährungsfrist", "ablaufhemmung", "festsetzung"]
+  }
+]

@@ -1,0 +1,221 @@
+{
+  "summary": {
+    "skill": "steuerrecht",
+    "collection": "shadow_steuerrecht",
+    "n_embeddings": 131622,
+    "embedding_model": "intfloat/multilingual-e5-large",
+    "n_queries": 5,
+    "hit_at_5": 1.0,
+    "hit_at_10": 1.0,
+    "ndcg_at_10": 0.8649,
+    "avg_embed_ms": 2059,
+    "avg_retrieval_ms": 6,
+    "date": "2026-05-10"
+  },
+  "queries": [
+    {
+      "query": "Wann ist eine Betriebsausgabe nach § 4 EStG abzugsfähig?",
+      "expected_terms": [
+        "betriebsausgabe",
+        "betrieblich veranlasst",
+        "§ 4 estg",
+        "abzugsfähig",
+        "gewinnminderung"
+      ],
+      "found_terms_in_top10": [
+        "betriebsausgabe",
+        "betrieblich veranlasst",
+        "abzugsfähig"
+      ],
+      "hit_at_5": true,
+      "hit_at_10": true,
+      "ndcg_at_10": 0.9184,
+      "top3": [
+        {
+          "distance": 0.0996,
+          "source_type": "?",
+          "title": "Abs. 4 EStG absetzen. Denn es handelt sich um Herstellungskosten des neu erricht",
+          "id": "?"
+        },
+        {
+          "distance": 0.1028,
+          "source_type": "?",
+          "title": "s § 4 Abs. 4a EStG ist entsprechend der Ausführungen zur Investitionszulage der ",
+          "id": "?"
+        },
+        {
+          "distance": 0.103,
+          "source_type": "?",
+          "title": "lichtigen kommt hinsichtlich des Zeitpunkts der Verlustberücksichtigung kein Wah",
+          "id": "?"
+        }
+      ],
+      "embed_ms": 2257,
+      "retrieval_ms": 10
+    },
+    {
+      "query": "Was ist der Unterschied zwischen beschränkter und unbeschränkter Steuerpflicht?",
+      "expected_terms": [
+        "unbeschränkte steuerpflicht",
+        "beschränkte steuerpflicht",
+        "wohnsitz",
+        "inländische einkünfte",
+        "§ 1 estg"
+      ],
+      "found_terms_in_top10": [
+        "unbeschränkte steuerpflicht",
+        "beschränkte steuerpflicht",
+        "wohnsitz",
+        "inländische einkünfte"
+      ],
+      "hit_at_5": true,
+      "hit_at_10": true,
+      "ndcg_at_10": 0.5889,
+      "top3": [
+        {
+          "distance": 0.1288,
+          "source_type": "?",
+          "title": "(1) Steuerfrei bleibt in den Fällen der unbeschränkten Steuerpflicht (§ 2 Absatz",
+          "id": "?"
+        },
+        {
+          "distance": 0.1386,
+          "source_type": "?",
+          "title": "Anspruchsberechtigt sind unbeschränkt oder beschränkt Steuerpflichtige im Sinne ",
+          "id": "?"
+        },
+        {
+          "distance": 0.139,
+          "source_type": "?",
+          "title": "-\ngen der unbeschränkten Steuerpflicht. Dadurch kann er\nauch den höheren Freibet",
+          "id": "?"
+        }
+      ],
+      "embed_ms": 1737,
+      "retrieval_ms": 8
+    },
+    {
+      "query": "Wie wird die Umsatzsteuer bei innergemeinschaftlichen Lieferungen behandelt?",
+      "expected_terms": [
+        "innergemeinschaftliche lieferung",
+        "umsatzsteuer",
+        "steuerfreiheit",
+        "§ 6a ustg",
+        "bestimmungslandprinzip"
+      ],
+      "found_terms_in_top10": [
+        "innergemeinschaftliche lieferung",
+        "umsatzsteuer",
+        "steuerfreiheit",
+        "§ 6a ustg"
+      ],
+      "hit_at_5": true,
+      "hit_at_10": true,
+      "ndcg_at_10": 0.9829,
+      "top3": [
+        {
+          "distance": 0.0954,
+          "source_type": "?",
+          "title": "rdnung ‑‑FGO‑‑). Der Senat kann aufgrund der vom FG getroffenen Feststellungen n",
+          "id": "?"
+        },
+        {
+          "distance": 0.1059,
+          "source_type": "?",
+          "title": "nen die Strafverfahren in Italien eingestellt worden seien, nicht an. II.Die Rev",
+          "id": "?"
+        },
+        {
+          "distance": 0.1061,
+          "source_type": "?",
+          "title": "1. Eine Lieferung von Gegenständen eines im Inland ansässigen Unternehmers an ei",
+          "id": "?"
+        }
+      ],
+      "embed_ms": 2015,
+      "retrieval_ms": 6
+    },
+    {
+      "query": "Welche Voraussetzungen gelten für die Anerkennung einer verdeckten Gewinnausschüttung?",
+      "expected_terms": [
+        "verdeckte gewinnausschüttung",
+        "körperschaftsteuer",
+        "fremdvergleich",
+        "gesellschafter",
+        "§ 8 kstg"
+      ],
+      "found_terms_in_top10": [
+        "verdeckte gewinnausschüttung",
+        "körperschaftsteuer",
+        "fremdvergleich",
+        "gesellschafter"
+      ],
+      "hit_at_5": true,
+      "hit_at_10": true,
+      "ndcg_at_10": 0.9196,
+      "top3": [
+        {
+          "distance": 0.1218,
+          "source_type": "?",
+          "title": "(1)   1  Soweit gegenüber einer Körperschaft ein Steuerbescheid hinsichtlich der",
+          "id": "?"
+        },
+        {
+          "distance": 0.1247,
+          "source_type": "?",
+          "title": "NV: Die mit der Abgrenzung zwischen Spende und verdeckter Gewinnausschüttung zus",
+          "id": "?"
+        },
+        {
+          "distance": 0.1285,
+          "source_type": "?",
+          "title": "1. NV: Die Prüfung, ob und in welcher Höhe eine Vergütung wegen fehlender Angeme",
+          "id": "?"
+        }
+      ],
+      "embed_ms": 2101,
+      "retrieval_ms": 4
+    },
+    {
+      "query": "Wie funktioniert die Festsetzungsverjährung im Steuerrecht nach der AO?",
+      "expected_terms": [
+        "festsetzungsverjährung",
+        "§ 169 ao",
+        "verjährungsfrist",
+        "ablaufhemmung",
+        "festsetzung"
+      ],
+      "found_terms_in_top10": [
+        "festsetzungsverjährung",
+        "verjährungsfrist",
+        "ablaufhemmung",
+        "festsetzung"
+      ],
+      "hit_at_5": true,
+      "hit_at_10": true,
+      "ndcg_at_10": 0.9146,
+      "top3": [
+        {
+          "distance": 0.1018,
+          "source_type": "?",
+          "title": "nicht verjährt war, wurde der Ablauf der Festsetzungsfrist nach § 171 Abs. 7 AO ",
+          "id": "?"
+        },
+        {
+          "distance": 0.1126,
+          "source_type": "?",
+          "title": "AO beginnt die Festsetzungsfrist, wenn eine Steuererklärung einzureichen ist, mi",
+          "id": "?"
+        },
+        {
+          "distance": 0.1181,
+          "source_type": "?",
+          "title": "3a AO nicht ablaufen, bevor über den Rechtsbehelf unanfechtbar entschieden worde",
+          "id": "?"
+        }
+      ],
+      "embed_ms": 2184,
+      "retrieval_ms": 3
+    }
+  ]
+}
