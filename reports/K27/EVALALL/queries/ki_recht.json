@@ -1,0 +1,116 @@
+{
+  "skill": "ki_recht",
+  "original_queries": [
+    {
+      "id": "O1",
+      "type": "original",
+      "query": "Was sind die Kernpflichten für Anbieter von Hochrisiko-KI-Systemen nach der EU-KI-Verordnung (AI Act)?",
+      "expected_terms": [
+        "KI-Verordnung",
+        "AI Act",
+        "Hochrisiko",
+        "Anbieter",
+        "Konformitätsbewertung"
+      ]
+    },
+    {
+      "id": "O2",
+      "type": "original",
+      "query": "Wie klassifiziert der EU AI Act Künstliche-Intelligenz-Systeme nach Risikoklassen?",
+      "expected_terms": [
+        "AI Act",
+        "Risikoklassen",
+        "verbotene Praktiken",
+        "Hochrisiko",
+        "minimales Risiko"
+      ]
+    },
+    {
+      "id": "O3",
+      "type": "original",
+      "query": "Was sind verbotene KI-Praktiken nach Art. 5 des EU AI Act?",
+      "expected_terms": [
+        "AI Act",
+        "verboten",
+        "art. 5",
+        "social scoring",
+        "biometrisch",
+        "Unterbewusstsein"
+      ]
+    },
+    {
+      "id": "O4",
+      "type": "original",
+      "query": "Welche Transparenzpflichten und Kennzeichnungspflichten bestehen für KI-Systeme im EU AI Act?",
+      "expected_terms": [
+        "Transparenz",
+        "KI-System",
+        "Kennzeichnung",
+        "Offenlegung",
+        "Deepfake"
+      ]
+    },
+    {
+      "id": "O5",
+      "type": "original",
+      "query": "Wie haftet ein Hersteller für Schäden durch fehlerhafte oder gefährliche KI-Systeme nach EU-Recht?",
+      "expected_terms": [
+        "Haftung",
+        "KI",
+        "Produkthaftung",
+        "AI Liability",
+        "Schadensersatz"
+      ]
+    },
+    {
+      "id": "O6",
+      "type": "original",
+      "query": "Was sind General Purpose AI (GPAI) Modelle nach dem EU AI Act und welche Pflichten gelten für sie?",
+      "expected_terms": [
+        "GPAI",
+        "General Purpose AI",
+        "AI Act",
+        "Allzweck",
+        "systemisches Risiko"
+      ]
+    },
+    {
+      "id": "O7",
+      "type": "original",
+      "query": "Mein Unternehmen entwickelt einen KI-Chatbot für Kunden — welche Pflichten entstehen nach dem EU AI Act?",
+      "expected_terms": [
+        "AI Act",
+        "KI-System",
+        "Transparenz",
+        "Nutzer",
+        "Kennzeichnung"
+      ]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1",
+      "type": "off_topic",
+      "query": "Unter welchen Voraussetzungen kann das Familiengericht das Sorgerecht entziehen?",
+      "expected_terms": [
+        "Sorgerecht",
+        "Familiengericht",
+        "Kindeswohl",
+        "§ 1666 BGB",
+        "Entzug"
+      ]
+    },
+    {
+      "id": "A2",
+      "type": "off_topic",
+      "query": "Was sind die Grundzüge des deutschen Insolvenzrechts für natürliche Personen?",
+      "expected_terms": [
+        "Insolvenz",
+        "Restschuldbefreiung",
+        "InsO",
+        "Verbraucherinsolvenz",
+        "Gläubiger"
+      ]
+    }
+  ]
+}

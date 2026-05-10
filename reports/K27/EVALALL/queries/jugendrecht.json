@@ -1,0 +1,115 @@
+{
+  "skill": "jugendrecht",
+  "original_queries": [
+    {
+      "id": "O1",
+      "type": "original",
+      "query": "Was regelt das Jugendgerichtsgesetz (JGG) für die Strafverfolgung strafrechtlich verantwortlicher Jugendlicher?",
+      "expected_terms": [
+        "JGG",
+        "Jugendlicher",
+        "strafrechtliche Verantwortlichkeit",
+        "Erziehungsgedanke",
+        "14 Jahre"
+      ]
+    },
+    {
+      "id": "O2",
+      "type": "original",
+      "query": "Welche Sanktionsmöglichkeiten sieht das JGG für jugendliche Straftäter vor?",
+      "expected_terms": [
+        "JGG",
+        "Jugendarrest",
+        "Jugendstrafe",
+        "Erziehungsmaßregel",
+        "Zuchtmittel"
+      ]
+    },
+    {
+      "id": "O3",
+      "type": "original",
+      "query": "Was schützt das Jugendschutzgesetz (JuSchG) und welche Altersgrenzen gelten?",
+      "expected_terms": [
+        "JuSchG",
+        "Jugendschutz",
+        "Minderjährige",
+        "Altersgrenze",
+        "Medien"
+      ]
+    },
+    {
+      "id": "O4",
+      "type": "original",
+      "query": "Ab welchem Alter ist ein Jugendlicher nach deutschem Strafrecht strafmündig?",
+      "expected_terms": [
+        "Strafmündigkeit",
+        "14 Jahre",
+        "§ 19 StGB",
+        "JGG",
+        "Jugendlicher"
+      ]
+    },
+    {
+      "id": "O5",
+      "type": "original",
+      "query": "Welche Jugendhilfemaßnahmen kann das Familiengericht nach dem SGB VIII anordnen?",
+      "expected_terms": [
+        "SGB VIII",
+        "Jugendhilfe",
+        "Erziehungshilfe",
+        "Inobhutnahme",
+        "Familiengericht"
+      ]
+    },
+    {
+      "id": "O6",
+      "type": "original",
+      "query": "Wie unterscheidet sich das Jugendstrafrecht vom allgemeinen Strafrecht bei Heranwachsenden?",
+      "expected_terms": [
+        "Heranwachsende",
+        "JGG",
+        "Erziehungsgedanke",
+        "§ 105 JGG",
+        "Diversionsverfahren"
+      ]
+    },
+    {
+      "id": "O7",
+      "type": "original",
+      "query": "Ein 17-jähriger wurde beim Schwarzfahren erwischt — was passiert im Jugendstrafverfahren?",
+      "expected_terms": [
+        "JGG",
+        "Jugendlicher",
+        "Diversionsverfahren",
+        "Jugendstaatsanwalt",
+        "Erziehungsmaßregel"
+      ]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1",
+      "type": "off_topic",
+      "query": "Was sind die Aufgaben eines Testamentsvollstreckers und wie wird er eingesetzt?",
+      "expected_terms": [
+        "Testamentsvollstrecker",
+        "Testament",
+        "Erbrecht",
+        "Nachlass",
+        "§ 2197 BGB"
+      ]
+    },
+    {
+      "id": "A2",
+      "type": "off_topic",
+      "query": "Welche Anforderungen stellt die DSGVO an die Einwilligung zur Datenverarbeitung?",
+      "expected_terms": [
+        "DSGVO",
+        "Einwilligung",
+        "Freiwilligkeit",
+        "Art. 6",
+        "Datenschutz"
+      ]
+    }
+  ]
+}

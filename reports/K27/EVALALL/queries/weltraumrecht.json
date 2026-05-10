@@ -1,0 +1,117 @@
+{
+  "skill": "weltraumrecht",
+  "original_queries": [
+    {
+      "id": "O1",
+      "type": "original",
+      "query": "Was regelt der Weltraumvertrag von 1967 (Outer Space Treaty) zu Grundprinzipien der Weltraumnutzung?",
+      "expected_terms": [
+        "outer space treaty",
+        "weltraum",
+        "WeltraumV",
+        "exploration",
+        "States"
+      ]
+    },
+    {
+      "id": "O2",
+      "type": "original",
+      "query": "Wer haftet nach dem Haftungsübereinkommen für Schäden durch Weltraumobjekte an Dritten?",
+      "expected_terms": [
+        "haftungsübereinkommen",
+        "HaftÜbk",
+        "schaden",
+        "abschussstaat",
+        "liability"
+      ]
+    },
+    {
+      "id": "O3",
+      "type": "original",
+      "query": "Was versteht man unter dem Prinzip des gemeinsamen Erbes der Menschheit im Mondvertrag?",
+      "expected_terms": [
+        "mondvertrag",
+        "MondV",
+        "gemeinsames erbe",
+        "moon",
+        "resources"
+      ]
+    },
+    {
+      "id": "O4",
+      "type": "original",
+      "query": "Welche Registrierungspflichten für Weltraumobjekte sieht das Registrierungsübereinkommen vor?",
+      "expected_terms": [
+        "registrierungsübereinkommen",
+        "RegÜbk",
+        "weltraumobjekt",
+        "register",
+        "UNO"
+      ]
+    },
+    {
+      "id": "O5",
+      "type": "original",
+      "query": "Wie regelt das Rettungsabkommen von 1968 die Rückkehr und Bergung von Astronauten?",
+      "expected_terms": [
+        "RetAbk",
+        "astronauten",
+        "rückkehr",
+        "notlandung",
+        "rescue"
+      ]
+    },
+    {
+      "id": "O6",
+      "type": "original",
+      "query": "Was sagt der Outer Space Treaty zu Nuklearwaffen und militärischen Aktivitäten im Weltraum?",
+      "expected_terms": [
+        "nuklearwaffen",
+        "weltraum",
+        "verboten",
+        "OST",
+        "WeltraumV",
+        "military"
+      ]
+    },
+    {
+      "id": "O7",
+      "type": "original",
+      "query": "Ein deutscher Satellit verursacht Schäden — wie ist die staatliche Haftung nach internationalem Weltraumrecht?",
+      "expected_terms": [
+        "haftung",
+        "HaftÜbk",
+        "abschussstaat",
+        "Schäden",
+        "weltraumobjekt"
+      ]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1",
+      "type": "off_topic",
+      "query": "Welche Voraussetzungen gelten für eine Eigenbedarfskündigung des Vermieters?",
+      "expected_terms": [
+        "eigenbedarf",
+        "kündigung",
+        "mietrecht",
+        "§ 573 BGB",
+        "mieter",
+        "vermieter"
+      ]
+    },
+    {
+      "id": "A2",
+      "type": "off_topic",
+      "query": "Was sind die Tatbestandsvoraussetzungen des Totschlags nach § 212 StGB?",
+      "expected_terms": [
+        "totschlag",
+        "§ 212 StGB",
+        "vorsatz",
+        "tötung",
+        "strafrecht"
+      ]
+    }
+  ]
+}

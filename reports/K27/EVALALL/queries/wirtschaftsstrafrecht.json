@@ -1,0 +1,115 @@
+{
+  "skill": "wirtschaftsstrafrecht",
+  "original_queries": [
+    {
+      "id": "O1",
+      "type": "original",
+      "query": "Was sind die Tatbestandsmerkmale der Untreue nach § 266 StGB?",
+      "expected_terms": [
+        "Untreue",
+        "§ 266 StGB",
+        "Vermögensbetreuungspflicht",
+        "Vermögensnachteil",
+        "Pflichtverletzung"
+      ]
+    },
+    {
+      "id": "O2",
+      "type": "original",
+      "query": "Was regelt das Geldwäschegesetz (GwG) für verpflichtete Unternehmen und Berufsträger?",
+      "expected_terms": [
+        "GwG",
+        "Geldwäsche",
+        "Verpflichtete",
+        "Sorgfaltspflichten",
+        "Verdachtsmeldung"
+      ]
+    },
+    {
+      "id": "O3",
+      "type": "original",
+      "query": "Unter welchen Voraussetzungen kann gegen ein Unternehmen eine Verbandsgeldbuße verhängt werden?",
+      "expected_terms": [
+        "OWiG",
+        "Verbandsgeldbuße",
+        "juristische Person",
+        "Compliance",
+        "§ 30 OWiG"
+      ]
+    },
+    {
+      "id": "O4",
+      "type": "original",
+      "query": "Was sind typische Tatbestände des Wirtschaftsstrafrechts bei Unternehmensinsolvenzen?",
+      "expected_terms": [
+        "Insolvenzstrafrecht",
+        "Bankrott",
+        "§ 283 StGB",
+        "Gläubiger",
+        "Benachteiligung"
+      ]
+    },
+    {
+      "id": "O5",
+      "type": "original",
+      "query": "Was versteht man unter Insiderhandel und wie wird dieser nach dem WpHG bestraft?",
+      "expected_terms": [
+        "Insiderhandel",
+        "Insiderinformation",
+        "WpHG",
+        "Marktmissbrauch",
+        "Börse"
+      ]
+    },
+    {
+      "id": "O6",
+      "type": "original",
+      "query": "Welche Compliance-Maßnahmen müssen Unternehmen zur Korruptionsprävention ergreifen?",
+      "expected_terms": [
+        "Compliance",
+        "Korruption",
+        "§ 299 StGB",
+        "Bestechung",
+        "Antikorruption"
+      ]
+    },
+    {
+      "id": "O7",
+      "type": "original",
+      "query": "Bei uns wurde eine Compliance-Verletzung entdeckt — welche strafrechtlichen Folgen drohen dem Unternehmen?",
+      "expected_terms": [
+        "Compliance",
+        "OWiG",
+        "Verbandsgeldbuße",
+        "Unternehmen",
+        "Sanktion"
+      ]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1",
+      "type": "off_topic",
+      "query": "Wie funktioniert die Grundbucheintragung beim Kauf einer Immobilie?",
+      "expected_terms": [
+        "Grundbuch",
+        "Auflassung",
+        "§ 925 BGB",
+        "Eigentumsübertragung",
+        "Eintragung"
+      ]
+    },
+    {
+      "id": "A2",
+      "type": "off_topic",
+      "query": "Was sind die Voraussetzungen für Asylbewerberleistungen nach dem AsylbLG?",
+      "expected_terms": [
+        "AsylbLG",
+        "Asylbewerber",
+        "Leistungen",
+        "Grundleistungen",
+        "Sozialleistungen"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "skill": "agrarrecht",
+  "original_queries": [
+    {
+      "id": "O1",
+      "type": "original",
+      "query": "Was regelt das Flurbereinigungsgesetz (FlurbG) für die ländliche Bodenordnung?",
+      "expected_terms": [
+        "FlurbG",
+        "Flurbereinigung",
+        "Bodenordnung",
+        "Teilnehmer",
+        "Landwirtschaft"
+      ]
+    },
+    {
+      "id": "O2",
+      "type": "original",
+      "query": "Welche Voraussetzungen und Pflichten gelten für die Umstellung auf ökologischen Landbau?",
+      "expected_terms": [
+        "ökologisch",
+        "Bio",
+        "Umstellung",
+        "EU-Ökoverordnung",
+        "Zertifizierung"
+      ]
+    },
+    {
+      "id": "O3",
+      "type": "original",
+      "query": "Was sind die Anforderungen der Düngeverordnung (DüV) für Landwirte beim Stickstoffeinsatz?",
+      "expected_terms": [
+        "Düngeverordnung",
+        "DüV",
+        "Stickstoff",
+        "Nitrat",
+        "Ausbringung"
+      ]
+    },
+    {
+      "id": "O4",
+      "type": "original",
+      "query": "Wie wird ein Landpachtvertrag rechtlich geregelt und welche Fristen gelten?",
+      "expected_terms": [
+        "Landpacht",
+        "Pachtvertrag",
+        "BGB",
+        "Pachtdauer",
+        "Kündigung"
+      ]
+    },
+    {
+      "id": "O5",
+      "type": "original",
+      "query": "Welche EU-Direktzahlungen und Förderprogramme gibt es für landwirtschaftliche Betriebe?",
+      "expected_terms": [
+        "Direktzahlungen",
+        "EU",
+        "Agrarförderung",
+        "GAP",
+        "Flächenprämie"
+      ]
+    },
+    {
+      "id": "O6",
+      "type": "original",
+      "query": "Welche Zulassungsvoraussetzungen gelten für Pflanzenschutzmittel nach EU-Recht?",
+      "expected_terms": [
+        "Pflanzenschutzmittel",
+        "Zulassung",
+        "EU-Verordnung",
+        "Wirkstoffe",
+        "Genehmigung"
+      ]
+    },
+    {
+      "id": "O7",
+      "type": "original",
+      "query": "Ich möchte auf Bio-Landwirtschaft umstellen — welche Förderungen und Auflagen kommen auf mich zu?",
+      "expected_terms": [
+        "Bio",
+        "ökologisch",
+        "Umstellungsförderung",
+        "EU-Ökoverordnung",
+        "Kontrolle"
+      ]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1",
+      "type": "off_topic",
+      "query": "Was bedeutet das Bankgeheimnis und welche Ausnahmen gibt es bei Auskunftspflichten?",
+      "expected_terms": [
+        "Bankgeheimnis",
+        "Kreditinstitut",
+        "Auskunftspflicht",
+        "Datenschutz",
+        "Steuer"
+      ]
+    },
+    {
+      "id": "A2",
+      "type": "off_topic",
+      "query": "Welche Voraussetzungen müssen für eine Hafenstrafe nach § 293 StGB erfüllt sein?",
+      "expected_terms": [
+        "Vollrausch",
+        "§ 323a StGB",
+        "Rausch",
+        "Straftat",
+        "Schuldfähigkeit"
+      ]
+    }
+  ]
+}

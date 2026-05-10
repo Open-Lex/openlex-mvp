@@ -1,0 +1,115 @@
+{
+  "skill": "sanktionsrecht",
+  "original_queries": [
+    {
+      "id": "O1",
+      "type": "original",
+      "query": "Was regelt das Außenwirtschaftsgesetz (AWG) bezüglich Exportgenehmigungen und Ausfuhrbeschränkungen?",
+      "expected_terms": [
+        "AWG",
+        "Außenwirtschaft",
+        "Ausfuhr",
+        "Genehmigungspflicht",
+        "Exportkontrolle"
+      ]
+    },
+    {
+      "id": "O2",
+      "type": "original",
+      "query": "Welche Pflichten haben Unternehmen, wenn ein Geschäftspartner auf einer EU-Sanktionsliste steht?",
+      "expected_terms": [
+        "Sanktionsliste",
+        "Einfrieren",
+        "Bereitstellungsverbot",
+        "EU-Sanktion",
+        "Compliance"
+      ]
+    },
+    {
+      "id": "O3",
+      "type": "original",
+      "query": "Was sind Dual-Use-Güter und welchen Exportkontrollen unterliegen sie nach EU-Recht?",
+      "expected_terms": [
+        "Dual-Use",
+        "Güter",
+        "EU-Dual-Use-Verordnung",
+        "Genehmigung",
+        "Exportkontrolle"
+      ]
+    },
+    {
+      "id": "O4",
+      "type": "original",
+      "query": "Welche Straf- und Bußgeldrisiken bestehen bei Verstößen gegen EU-Sanktionsregime?",
+      "expected_terms": [
+        "Sanktionsverstoß",
+        "AWG",
+        "Strafverfolgung",
+        "Geldbuße",
+        "Freiheitsstrafe"
+      ]
+    },
+    {
+      "id": "O5",
+      "type": "original",
+      "query": "Wie muss eine Sanktionslistenprüfung für Geschäftspartner im Compliance-Kontext durchgeführt werden?",
+      "expected_terms": [
+        "Sanktionsliste",
+        "Screening",
+        "Compliance",
+        "Know-Your-Customer",
+        "Überprüfung"
+      ]
+    },
+    {
+      "id": "O6",
+      "type": "original",
+      "query": "Was sind die wesentlichen EU-Sanktionsmaßnahmen gegen Russland nach dem Angriff auf die Ukraine?",
+      "expected_terms": [
+        "Russland",
+        "EU-Sanktionen",
+        "Embargo",
+        "Einfrieren",
+        "Verordnung"
+      ]
+    },
+    {
+      "id": "O7",
+      "type": "original",
+      "query": "Mein Geschäftspartner steht auf einer EU-Sanktionsliste — was sind meine rechtlichen Pflichten?",
+      "expected_terms": [
+        "Sanktionsliste",
+        "Bereitstellungsverbot",
+        "Einfrieren",
+        "Meldepflicht",
+        "Behörde"
+      ]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1",
+      "type": "off_topic",
+      "query": "Welche Anforderungen gelten für Mieterhöhungen nach der Mietpreisbremse im BGB?",
+      "expected_terms": [
+        "Mieterhöhung",
+        "Mietpreisbremse",
+        "§ 558 BGB",
+        "Kappungsgrenze",
+        "Vergleichsmiete"
+      ]
+    },
+    {
+      "id": "A2",
+      "type": "off_topic",
+      "query": "Was sind die Rechte eines Arbeitnehmers bei betriebsbedingter Kündigung?",
+      "expected_terms": [
+        "betriebsbedingt",
+        "Kündigung",
+        "KSchG",
+        "Sozialauswahl",
+        "Abfindung"
+      ]
+    }
+  ]
+}

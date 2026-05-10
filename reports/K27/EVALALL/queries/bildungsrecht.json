@@ -1,0 +1,115 @@
+{
+  "skill": "bildungsrecht",
+  "original_queries": [
+    {
+      "id": "O1",
+      "type": "original",
+      "query": "Was regelt das BAföG bezüglich der Förderungsvoraussetzungen und Einkommensgrenzen?",
+      "expected_terms": [
+        "BAföG",
+        "Förderung",
+        "Studium",
+        "Einkommensgrenze",
+        "Fachrichtungswechsel"
+      ]
+    },
+    {
+      "id": "O2",
+      "type": "original",
+      "query": "Unter welchen Voraussetzungen kann ein Schüler von der Schulpflicht befreit werden?",
+      "expected_terms": [
+        "Schulpflicht",
+        "Befreiung",
+        "Schulgesetz",
+        "Heimunterricht",
+        "Ausnahme"
+      ]
+    },
+    {
+      "id": "O3",
+      "type": "original",
+      "query": "Welche Rechte haben Studierende bei der Anfechtung von Prüfungsentscheidungen?",
+      "expected_terms": [
+        "Prüfung",
+        "Anfechtung",
+        "Hochschule",
+        "Prüfungsrecht",
+        "Verwaltungsgericht"
+      ]
+    },
+    {
+      "id": "O4",
+      "type": "original",
+      "query": "Welche Anforderungen stellt das Akkreditierungsrecht an die Qualitätssicherung von Studiengängen?",
+      "expected_terms": [
+        "Akkreditierung",
+        "Studiengang",
+        "Qualitätssicherung",
+        "Hochschule",
+        "Systemakkreditierung"
+      ]
+    },
+    {
+      "id": "O5",
+      "type": "original",
+      "query": "Wie ist die Rechtsstellung privater Schulen als Ersatzschulen nach Art. 7 GG?",
+      "expected_terms": [
+        "Privatschule",
+        "Ersatzschule",
+        "Art. 7 GG",
+        "Genehmigung",
+        "staatliche Gleichwertigkeit"
+      ]
+    },
+    {
+      "id": "O6",
+      "type": "original",
+      "query": "Was regelt das BBiG für Berufsausbildungsverträge und die Rechte der Auszubildenden?",
+      "expected_terms": [
+        "BBiG",
+        "Ausbildungsvertrag",
+        "Berufsausbildung",
+        "Probezeit",
+        "Ausbildungsvergütung"
+      ]
+    },
+    {
+      "id": "O7",
+      "type": "original",
+      "query": "Mein Kind soll von der allgemeinen Schulpflicht befreit werden — was sind die rechtlichen Voraussetzungen?",
+      "expected_terms": [
+        "Schulpflicht",
+        "Befreiung",
+        "Eltern",
+        "Schulgesetz",
+        "Behörde"
+      ]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1",
+      "type": "off_topic",
+      "query": "Was sind die Voraussetzungen für eine verhaltensbedingte Kündigung nach dem KSchG?",
+      "expected_terms": [
+        "Kündigung",
+        "verhaltensbedingt",
+        "KSchG",
+        "Abmahnung",
+        "Interessenabwägung"
+      ]
+    },
+    {
+      "id": "A2",
+      "type": "off_topic",
+      "query": "Wie funktioniert die Umsatzsteuer bei grenzüberschreitenden Lieferungen in der EU?",
+      "expected_terms": [
+        "Umsatzsteuer",
+        "innergemeinschaftlich",
+        "Lieferung",
+        "UStG",
+        "Bestimmungslandprinzip"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "skill": "energierecht",
+  "original_queries": [
+    {
+      "id": "O1",
+      "type": "original",
+      "query": "Was regelt das Energiewirtschaftsgesetz (EnWG) zum Anschluss ans Stromnetz und zur Anschlusspflicht?",
+      "expected_terms": [
+        "EnWG",
+        "Netzanschluss",
+        "Anschlusspflicht",
+        "Netzbetreiber",
+        "Energieversorgung"
+      ]
+    },
+    {
+      "id": "O2",
+      "type": "original",
+      "query": "Unter welchen Voraussetzungen haben Betreiber von Erneuerbare-Energien-Anlagen Anspruch auf EEG-Förderung?",
+      "expected_terms": [
+        "EEG",
+        "Erneuerbare Energien",
+        "Einspeisevergütung",
+        "Anlagenbetreiber",
+        "Marktprämie"
+      ]
+    },
+    {
+      "id": "O3",
+      "type": "original",
+      "query": "Was ist das Entflechtungsgebot (Unbundling) nach dem EnWG für Energieversorgungsunternehmen?",
+      "expected_terms": [
+        "Entflechtung",
+        "Unbundling",
+        "EnWG",
+        "Netzbetreiber",
+        "Vertrieb"
+      ]
+    },
+    {
+      "id": "O4",
+      "type": "original",
+      "query": "Welche Genehmigungen sind für den Bau von Windenergieanlagen nach dem BImSchG erforderlich?",
+      "expected_terms": [
+        "Windenergie",
+        "BImSchG",
+        "Genehmigung",
+        "Immissionsschutz",
+        "Bebauungsplan"
+      ]
+    },
+    {
+      "id": "O5",
+      "type": "original",
+      "query": "Was sind die Aufgaben der Bundesnetzagentur bei der Regulierung des Energiesektors?",
+      "expected_terms": [
+        "Bundesnetzagentur",
+        "Regulierung",
+        "Netzentgelt",
+        "EnWG",
+        "Marktmissbrauch"
+      ]
+    },
+    {
+      "id": "O6",
+      "type": "original",
+      "query": "Wie wird die Netzentgeltregulierung für Strom und Gas durch die Anreizregulierung bestimmt?",
+      "expected_terms": [
+        "Netzentgelt",
+        "Anreizregulierung",
+        "EnWG",
+        "Bundesnetzagentur",
+        "ARegV"
+      ]
+    },
+    {
+      "id": "O7",
+      "type": "original",
+      "query": "Ich möchte eine Photovoltaikanlage betreiben und ins Netz einspeisen — welche rechtlichen Pflichten gelten?",
+      "expected_terms": [
+        "Photovoltaik",
+        "Einspeisung",
+        "EEG",
+        "Netzbetreiber",
+        "Anmeldung"
+      ]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1",
+      "type": "off_topic",
+      "query": "Was sind die Grundlagen des polizeilichen Ermessens und der Gefahrenabwehr im Ordnungsrecht?",
+      "expected_terms": [
+        "Polizei",
+        "Gefahrenabwehr",
+        "Ermessen",
+        "Eingriff",
+        "öffentliche Sicherheit"
+      ]
+    },
+    {
+      "id": "A2",
+      "type": "off_topic",
+      "query": "Unter welchen Voraussetzungen ist eine Hausdurchsuchung nach der StPO zulässig?",
+      "expected_terms": [
+        "Durchsuchung",
+        "StPO",
+        "Richtervorhalt",
+        "§ 102 StPO",
+        "Wohnungsrecht"
+      ]
+    }
+  ]
+}

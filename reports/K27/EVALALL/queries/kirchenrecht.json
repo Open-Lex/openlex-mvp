@@ -1,0 +1,112 @@
+{
+  "skill": "kirchenrecht",
+  "original_queries": [
+    {
+      "id": "O1",
+      "type": "original",
+      "query": "Was ist das kirchliche Selbstbestimmungsrecht nach Art. 140 GG i.V.m. Art. 137 WRV?",
+      "expected_terms": [
+        "kirchliche",
+        "selbstbestimmungsrecht",
+        "art. 140",
+        "WRV",
+        "religionsgemeinschaft"
+      ]
+    },
+    {
+      "id": "O2",
+      "type": "original",
+      "query": "Unter welchen Voraussetzungen darf eine Kirche Mitarbeiter aus Glaubensgründen bevorzugen oder kündigen?",
+      "expected_terms": [
+        "kirchliches arbeitsrecht",
+        "loyalitätspflicht",
+        "tendenzschutz",
+        "kündigung"
+      ]
+    },
+    {
+      "id": "O3",
+      "type": "original",
+      "query": "Welche Rechtsfolgen hat ein Verstoß gegen kirchliche Loyalitätspflichten für das Arbeitsverhältnis?",
+      "expected_terms": [
+        "loyalitätspflicht",
+        "kündigung",
+        "kirchenarbeitsrecht",
+        "ordentliche"
+      ]
+    },
+    {
+      "id": "O4",
+      "type": "original",
+      "query": "Wie bewertet das BVerfG das Spannungsverhältnis zwischen kirchlichem Selbstbestimmungsrecht und staatlichem Arbeitsrecht?",
+      "expected_terms": [
+        "BVerfG",
+        "selbstbestimmungsrecht",
+        "verhältnismäßigkeit",
+        "staatskirchenrecht"
+      ]
+    },
+    {
+      "id": "O5",
+      "type": "original",
+      "query": "Was regelt Art. 137 WRV für die Stellung von Religionsgemeinschaften im deutschen Rechtssystem?",
+      "expected_terms": [
+        "art. 137",
+        "religionsgemeinschaft",
+        "körperschaft",
+        "WRV",
+        "selbstverwaltung"
+      ]
+    },
+    {
+      "id": "O6",
+      "type": "original",
+      "query": "Welche Rechte haben Religionsgemeinschaften bei der Einrichtung von Schulen und Religionsunterricht?",
+      "expected_terms": [
+        "religionsgemeinschaft",
+        "art. 7",
+        "religionsunterricht",
+        "kirchlich",
+        "privatschule"
+      ]
+    },
+    {
+      "id": "O7",
+      "type": "original",
+      "query": "Eine kirchliche Einrichtung hat mich aus Glaubensgründen bei der Einstellung abgelehnt — ist das rechtens?",
+      "expected_terms": [
+        "kirchliches arbeitsrecht",
+        "tendenzschutz",
+        "religionsgemeinschaft",
+        "AGG",
+        "diskriminierung"
+      ]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1",
+      "type": "off_topic",
+      "query": "Wie wird Filesharing über Tauschbörsen strafrechtlich und zivilrechtlich verfolgt?",
+      "expected_terms": [
+        "urheberrecht",
+        "filesharing",
+        "abmahnung",
+        "§ 97 UrhG",
+        "tauschbörse"
+      ]
+    },
+    {
+      "id": "A2",
+      "type": "off_topic",
+      "query": "Welche steuerlichen Abschreibungsmöglichkeiten gibt es für Betriebsgebäude?",
+      "expected_terms": [
+        "abschreibung",
+        "AfA",
+        "gebäude",
+        "einkommensteuer",
+        "§ 7 EStG"
+      ]
+    }
+  ]
+}

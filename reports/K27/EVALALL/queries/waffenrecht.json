@@ -1,0 +1,115 @@
+{
+  "skill": "waffenrecht",
+  "original_queries": [
+    {
+      "id": "O1",
+      "type": "original",
+      "query": "Welche Voraussetzungen gelten für den Erwerb einer waffenrechtlichen Erlaubnis nach dem WaffG?",
+      "expected_terms": [
+        "WaffG",
+        "waffenrechtliche Erlaubnis",
+        "Zuverlässigkeit",
+        "Bedürfnis",
+        "persönliche Eignung"
+      ]
+    },
+    {
+      "id": "O2",
+      "type": "original",
+      "query": "Was regelt das Sprengstoffgesetz (SprengG) für den Umgang mit explosionsgefährlichen Stoffen?",
+      "expected_terms": [
+        "SprengG",
+        "Sprengstoff",
+        "explosionsgefährlich",
+        "Erlaubnis",
+        "Umgang"
+      ]
+    },
+    {
+      "id": "O3",
+      "type": "original",
+      "query": "Unter welchen Voraussetzungen ist das Führen einer Schusswaffe in der Öffentlichkeit erlaubt?",
+      "expected_terms": [
+        "WaffG",
+        "führen",
+        "Schusswaffe",
+        "kleiner Waffenschein",
+        "Erlaubnis"
+      ]
+    },
+    {
+      "id": "O4",
+      "type": "original",
+      "query": "Welche Waffenarten sind nach dem WaffG generell verboten?",
+      "expected_terms": [
+        "WaffG",
+        "verboten",
+        "Anlage 2",
+        "Kriegswaffe",
+        "vollautomatisch"
+      ]
+    },
+    {
+      "id": "O5",
+      "type": "original",
+      "query": "Was sind die waffenrechtlichen Anforderungen für Sportschützen und Jäger?",
+      "expected_terms": [
+        "Sportschütze",
+        "Jagd",
+        "WaffG",
+        "Bedürfnis",
+        "Waffenbesitzkarte"
+      ]
+    },
+    {
+      "id": "O6",
+      "type": "original",
+      "query": "Welche Aufbewahrungspflichten gelten für legale Schusswaffenbesitzer?",
+      "expected_terms": [
+        "Aufbewahrung",
+        "Tresor",
+        "WaffG",
+        "sicher",
+        "Schusswaffe"
+      ]
+    },
+    {
+      "id": "O7",
+      "type": "original",
+      "query": "Ich erbe ein altes Jagdgewehr — welche waffenrechtlichen Pflichten muss ich beachten?",
+      "expected_terms": [
+        "Erbschaft",
+        "Schusswaffe",
+        "WaffG",
+        "Anzeigepflicht",
+        "Waffenbehörde"
+      ]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1",
+      "type": "off_topic",
+      "query": "Was sind die Tatbestandsmerkmale des Betrugs nach § 263 StGB?",
+      "expected_terms": [
+        "Betrug",
+        "§ 263 StGB",
+        "Täuschung",
+        "Irrtum",
+        "Vermögensschaden"
+      ]
+    },
+    {
+      "id": "A2",
+      "type": "off_topic",
+      "query": "Wie berechnet sich der Zugewinnausgleich bei der Ehescheidung?",
+      "expected_terms": [
+        "Zugewinnausgleich",
+        "Scheidung",
+        "Endvermögen",
+        "Anfangsvermögen",
+        "§ 1378 BGB"
+      ]
+    }
+  ]
+}

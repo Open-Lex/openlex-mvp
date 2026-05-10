@@ -1,0 +1,117 @@
+{
+  "skill": "transportrecht",
+  "original_queries": [
+    {
+      "id": "O1",
+      "type": "original",
+      "query": "Was regelt das Luftverkehrsgesetz (LuftVG) für den Betrieb von Luftfahrzeugen und Flugplätzen?",
+      "expected_terms": [
+        "LuftVG",
+        "Luftfahrzeug",
+        "Flugplatz",
+        "Betrieb",
+        "Luftverkehr",
+        "Genehmigung"
+      ]
+    },
+    {
+      "id": "O2",
+      "type": "original",
+      "query": "Welche Haftungsregeln gelten für Frachtführer bei Schäden am Frachtgut nach dem HGB?",
+      "expected_terms": [
+        "HGB",
+        "Frachtführer",
+        "Frachtgut",
+        "Haftung",
+        "Schaden",
+        "Frachtrecht"
+      ]
+    },
+    {
+      "id": "O3",
+      "type": "original",
+      "query": "Was regelt die CMR-Konvention für internationale Straßengütertransporte?",
+      "expected_terms": [
+        "CMR",
+        "Straßengütertransport",
+        "Frachtführer",
+        "international",
+        "Schaden"
+      ]
+    },
+    {
+      "id": "O4",
+      "type": "original",
+      "query": "Wann haben Fluggäste Anspruch auf Entschädigung nach der EU-Fluggastrechteverordnung (EG 261/2004)?",
+      "expected_terms": [
+        "Fluggastrechte",
+        "Entschädigung",
+        "Verspätung",
+        "Annullierung",
+        "EG 261/2004"
+      ]
+    },
+    {
+      "id": "O5",
+      "type": "original",
+      "query": "Welche internationalen Haftungsregeln gelten für die Beförderung auf See (Seerecht)?",
+      "expected_terms": [
+        "Seerecht",
+        "Haftung",
+        "Reederei",
+        "HGB",
+        "maritime"
+      ]
+    },
+    {
+      "id": "O6",
+      "type": "original",
+      "query": "Was sind die Kernregelungen des Eisenbahntransportrechts für Güterbeförderung auf der Schiene?",
+      "expected_terms": [
+        "Eisenbahn",
+        "Frachtvertrag",
+        "Schiene",
+        "CIM",
+        "Güterbeförderung"
+      ]
+    },
+    {
+      "id": "O7",
+      "type": "original",
+      "query": "Mein Spediteur hat Ware beschädigt — welche Schadensersatzansprüche habe ich nach dem HGB?",
+      "expected_terms": [
+        "Spediteur",
+        "Frachtführer",
+        "Schadensersatz",
+        "HGB",
+        "Haftung"
+      ]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1",
+      "type": "off_topic",
+      "query": "Welche Voraussetzungen gelten für die Anerkennung eines ausländischen Schiedsspruchs in Deutschland?",
+      "expected_terms": [
+        "Schiedsspruch",
+        "New Yorker Übereinkommen",
+        "Vollstreckung",
+        "ordre public",
+        "ZPO"
+      ]
+    },
+    {
+      "id": "A2",
+      "type": "off_topic",
+      "query": "Was sind die Anforderungen an die ärztliche Aufklärungspflicht vor einer Operation?",
+      "expected_terms": [
+        "Aufklärungspflicht",
+        "Arzt",
+        "Einwilligung",
+        "Behandlung",
+        "Patientenrechte"
+      ]
+    }
+  ]
+}

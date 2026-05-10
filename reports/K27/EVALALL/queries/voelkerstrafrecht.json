@@ -1,0 +1,116 @@
+{
+  "skill": "voelkerstrafrecht",
+  "original_queries": [
+    {
+      "id": "O1",
+      "type": "original",
+      "query": "Welche Verbrechen fallen unter die Jurisdiktion des Internationalen Strafgerichtshofs (IStGH)?",
+      "expected_terms": [
+        "IStGH",
+        "völkermord",
+        "verbrechen gegen die menschlichkeit",
+        "kriegsverbrechen",
+        "aggression"
+      ]
+    },
+    {
+      "id": "O2",
+      "type": "original",
+      "query": "Was ist Völkermord im Sinne von Art. 6 des Römischen Statuts?",
+      "expected_terms": [
+        "völkermord",
+        "vernichtungsabsicht",
+        "Römer Statut",
+        "art. 6",
+        "gruppe"
+      ]
+    },
+    {
+      "id": "O3",
+      "type": "original",
+      "query": "Was sind Verbrechen gegen die Menschlichkeit nach dem IStGH-Statut?",
+      "expected_terms": [
+        "verbrechen gegen die menschlichkeit",
+        "ausgedehnter",
+        "systematischer",
+        "zivilbevölkerung",
+        "Römer Statut"
+      ]
+    },
+    {
+      "id": "O4",
+      "type": "original",
+      "query": "Wie funktioniert das Komplementaritätsprinzip des IStGH gegenüber nationaler Strafverfolgung?",
+      "expected_terms": [
+        "komplementarität",
+        "IStGH",
+        "nationale strafverfolgung",
+        "zulässigkeit",
+        "unfähig"
+      ]
+    },
+    {
+      "id": "O5",
+      "type": "original",
+      "query": "Welche Kriegsverbrechen können nach dem humanitären Völkerrecht vor dem IStGH angeklagt werden?",
+      "expected_terms": [
+        "kriegsverbrechen",
+        "Genfer",
+        "humanitäres Völkerrecht",
+        "zivilpersonen",
+        "IStGH"
+      ]
+    },
+    {
+      "id": "O6",
+      "type": "original",
+      "query": "Können amtierende Staatsoberhäupter vor dem IStGH angeklagt werden trotz Immunität?",
+      "expected_terms": [
+        "IStGH",
+        "immunität",
+        "staatsoberhaupt",
+        "amtsimmunität",
+        "Römer Statut"
+      ]
+    },
+    {
+      "id": "O7",
+      "type": "original",
+      "query": "Welche Verbrechen können vor dem IStGH verhandelt werden und was sind die Voraussetzungen?",
+      "expected_terms": [
+        "IStGH",
+        "Römer Statut",
+        "Zuständigkeit",
+        "Gerichtsbarkeit",
+        "Verbrechen"
+      ]
+    }
+  ],
+  "adversarial_queries": [
+    {
+      "id": "A1",
+      "type": "off_topic",
+      "query": "Was sind die Voraussetzungen für die Gründung einer GmbH nach deutschem Recht?",
+      "expected_terms": [
+        "GmbH",
+        "stammkapital",
+        "gesellschafter",
+        "Handelsregister",
+        "Satzung",
+        "GmbHG"
+      ]
+    },
+    {
+      "id": "A2",
+      "type": "off_topic",
+      "query": "Wie funktioniert die Erbschaftsteuer bei der Übertragung von Betriebsvermögen?",
+      "expected_terms": [
+        "Erbschaftsteuer",
+        "Betriebsvermögen",
+        "Freibetrag",
+        "ErbStG",
+        "Verschonung"
+      ]
+    }
+  ]
+}
