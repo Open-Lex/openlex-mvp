@@ -354,6 +354,21 @@
           "edited": false
         }
       ]
+    },
+    "patentrecht": {
+      "title": "Patentrecht & gewerblicher Rechtsschutz",
+      "domain": "Gewerblicher Rechtsschutz / Immaterialgüterrecht",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "Patentrecht (PatG), Markenrecht (MarkenG), Designrecht (DesignG), Gebrauchsmusterrecht (GebrMG), Arbeitnehmererfindungsrecht (ArbnErfG), Sortenschutzrecht (SortSchG), Halbleiterschutzrecht (HalblSchG). Gewerblicher Rechtsschutz, IP-Recht, Schutzrechte.",
+      "collection_name": "openlex_patentrecht",
+      "system_prompt_path": "prompts/patentrecht.md",
+      "status": "draft",
+      "owner": "Admin",
+      "laws": [],
+      "cases": [],
+      "method_chunks": []
     }
   }
 }
