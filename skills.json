@@ -412,6 +412,852 @@
       "laws": [],
       "cases": [],
       "method_chunks": []
+    },
+    "kaufrecht": {
+      "title": "Kaufrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "§§ 433 ff. BGB",
+      "collection_name": "openlex_kaufrecht",
+      "system_prompt_path": "prompts/kaufrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 1
+    },
+    "mietrecht": {
+      "title": "Mietrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "§§ 535 ff. BGB",
+      "collection_name": "openlex_mietrecht",
+      "system_prompt_path": "prompts/mietrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 1
+    },
+    "arbeitsrecht": {
+      "title": "Arbeitsrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "KSchG · BetrVG",
+      "collection_name": "openlex_arbeitsrecht",
+      "system_prompt_path": "prompts/arbeitsrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 1
+    },
+    "verkehrsrecht": {
+      "title": "Verkehrsrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "StVG · Unfälle",
+      "collection_name": "openlex_verkehrsrecht",
+      "system_prompt_path": "prompts/verkehrsrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 1
+    },
+    "verbraucherrecht": {
+      "title": "Verbraucherrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "Webseite \"Verbraucher\" → \"Verbraucherrecht\" anpassen",
+      "collection_name": "openlex_verbraucherrecht",
+      "system_prompt_path": "prompts/verbraucherrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 1
+    },
+    "familienrecht": {
+      "title": "Familienrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "Ehe · Scheidung · Kinder",
+      "collection_name": "openlex_familienrecht",
+      "system_prompt_path": "prompts/familienrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 2
+    },
+    "erbrecht": {
+      "title": "Erbrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "Testament · Pflichtteil",
+      "collection_name": "openlex_erbrecht",
+      "system_prompt_path": "prompts/erbrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 2
+    },
+    "sozialrecht": {
+      "title": "Sozialrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "Rente · Bürgergeld · Pflege",
+      "collection_name": "openlex_sozialrecht",
+      "system_prompt_path": "prompts/sozialrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 2
+    },
+    "baurecht": {
+      "title": "Baurecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "Bauvertrag · HOAI",
+      "collection_name": "openlex_baurecht",
+      "system_prompt_path": "prompts/baurecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 2
+    },
+    "nachbarrecht": {
+      "title": "Nachbarrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "Grundstück · WEG",
+      "collection_name": "openlex_nachbarrecht",
+      "system_prompt_path": "prompts/nachbarrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 2
+    },
+    "bildungsrecht": {
+      "title": "Bildungsrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "Schule · BAföG",
+      "collection_name": "openlex_bildungsrecht",
+      "system_prompt_path": "prompts/bildungsrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 2
+    },
+    "versicherungsrecht": {
+      "title": "Versicherungsrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "Haftpflicht · Kfz",
+      "collection_name": "openlex_versicherungsrecht",
+      "system_prompt_path": "prompts/versicherungsrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 2
+    },
+    "reiserecht": {
+      "title": "Reiserecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "Fluggast · Pauschal",
+      "collection_name": "openlex_reiserecht",
+      "system_prompt_path": "prompts/reiserecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 2
+    },
+    "medizinrecht": {
+      "title": "Medizinrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "Arzthaftung · Pflege",
+      "collection_name": "openlex_medizinrecht",
+      "system_prompt_path": "prompts/medizinrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 3
+    },
+    "migrationsrecht": {
+      "title": "Migrationsrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "asylrecht-Collection konsolidiert in migrationsrecht",
+      "collection_name": "openlex_migrationsrecht",
+      "system_prompt_path": "prompts/migrationsrecht.md",
+      "status": "draft",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 3
+    },
+    "strafrecht": {
+      "title": "Strafrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "StGB (Alltag)",
+      "collection_name": "openlex_strafrecht",
+      "system_prompt_path": "prompts/strafrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 3
+    },
+    "steuerrecht": {
+      "title": "Steuerrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "ESt · USt · AO",
+      "collection_name": "openlex_steuerrecht",
+      "system_prompt_path": "prompts/steuerrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 3
+    },
+    "handelsrecht": {
+      "title": "Handelsrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "HGB · Kaufmann",
+      "collection_name": "openlex_handelsrecht",
+      "system_prompt_path": "prompts/handelsrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 3
+    },
+    "gesellschaftsrecht": {
+      "title": "Gesellschaftsrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "GmbH · AG · M&A",
+      "collection_name": "openlex_gesellschaftsrecht",
+      "system_prompt_path": "prompts/gesellschaftsrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 3
+    },
+    "insolvenzrecht": {
+      "title": "Insolvenzrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "InsO · StaRUG",
+      "collection_name": "openlex_insolvenzrecht",
+      "system_prompt_path": "prompts/insolvenzrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 3
+    },
+    "urheberrecht": {
+      "title": "Urheberrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "UrhG · Medien",
+      "collection_name": "openlex_urheberrecht",
+      "system_prompt_path": "prompts/urheberrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 3
+    },
+    "it_recht": {
+      "title": "IT-Recht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "bekommt DSA-Migration aus ki_recht (Backlog M3)",
+      "collection_name": "openlex_it_recht",
+      "system_prompt_path": "prompts/it_recht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 3
+    },
+    "gewerblicher_rechtsschutz": {
+      "title": "Gewerblicher Rechtsschutz",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "Konsolidierung openlex_patentrecht (415) + openlex_markenrecht (187) ",
+      "collection_name": "openlex_gewerblicher_rechtsschutz",
+      "system_prompt_path": "prompts/gewerblicher_rechtsschutz.md",
+      "status": "draft",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 3
+    },
+    "jugendrecht": {
+      "title": "Jugendrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "JGG · SGB VIII",
+      "collection_name": "openlex_jugendrecht",
+      "system_prompt_path": "prompts/jugendrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 3
+    },
+    "umweltrecht": {
+      "title": "Umweltrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "",
+      "collection_name": "openlex_umweltrecht",
+      "system_prompt_path": "prompts/umweltrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "waffenrecht": {
+      "title": "Waffenrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "",
+      "collection_name": "openlex_waffenrecht",
+      "system_prompt_path": "prompts/waffenrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "kartellrecht": {
+      "title": "Kartellrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "",
+      "collection_name": "openlex_kartellrecht",
+      "system_prompt_path": "prompts/kartellrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "energierecht": {
+      "title": "Energierecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "",
+      "collection_name": "openlex_energierecht",
+      "system_prompt_path": "prompts/energierecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "bank_kapitalmarktrecht": {
+      "title": "Bank- & Kapitalmarktrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "",
+      "collection_name": "openlex_bank_kapitalmarktrecht",
+      "system_prompt_path": "prompts/bank_kapitalmarktrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "vergaberecht": {
+      "title": "Vergaberecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "",
+      "collection_name": "openlex_vergaberecht",
+      "system_prompt_path": "prompts/vergaberecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "transportrecht": {
+      "title": "Transportrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "",
+      "collection_name": "openlex_transportrecht",
+      "system_prompt_path": "prompts/transportrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "wirtschaftsstrafrecht": {
+      "title": "Wirtschaftsstrafrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "",
+      "collection_name": "openlex_wirtschaftsstrafrecht",
+      "system_prompt_path": "prompts/wirtschaftsstrafrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "voelkerstrafrecht": {
+      "title": "Völkerstrafrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "",
+      "collection_name": "openlex_voelkerstrafrecht",
+      "system_prompt_path": "prompts/voelkerstrafrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "voelkerrecht": {
+      "title": "Völkerrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "",
+      "collection_name": "openlex_voelkerrecht",
+      "system_prompt_path": "prompts/voelkerrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "sportrecht": {
+      "title": "Sportrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "",
+      "collection_name": "openlex_sportrecht",
+      "system_prompt_path": "prompts/sportrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "weltraumrecht": {
+      "title": "Weltraumrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "",
+      "collection_name": "openlex_weltraumrecht",
+      "system_prompt_path": "prompts/weltraumrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "sanktionsrecht": {
+      "title": "Sanktionsrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "",
+      "collection_name": "openlex_sanktionsrecht",
+      "system_prompt_path": "prompts/sanktionsrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "kirchenrecht": {
+      "title": "Kirchenrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "",
+      "collection_name": "openlex_kirchenrecht",
+      "system_prompt_path": "prompts/kirchenrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "agrarrecht": {
+      "title": "Agrarrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "",
+      "collection_name": "openlex_agrarrecht",
+      "system_prompt_path": "prompts/agrarrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "ipr": {
+      "title": "Internationales Privatrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "JAG-NRW § 11 Abs. 2 Nr. 2: EGBGB IPR-Teil, Rom-I (VO 593/2008), ",
+      "collection_name": "openlex_ipr",
+      "system_prompt_path": "prompts/ipr.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "zivilverfahrensrecht": {
+      "title": "Zivilverfahrensrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "JAG-NRW § 11 Abs. 2 Nr. 5: ZPO Erkenntnisverfahren + ",
+      "collection_name": "openlex_zivilverfahrensrecht",
+      "system_prompt_path": "prompts/zivilverfahrensrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "strafverfahrensrecht": {
+      "title": "Strafverfahrensrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "JAG-NRW § 11 Abs. 2 Nr. 8: StPO. Examensfach. Neu auf Landingpage.",
+      "collection_name": "openlex_strafverfahrensrecht",
+      "system_prompt_path": "prompts/strafverfahrensrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "verfassungsprozessrecht": {
+      "title": "Verfassungsprozessrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "JAG-NRW § 11 Abs. 2 Nr. 10: Verfassungsbeschwerde, Normkontrolle, ",
+      "collection_name": "openlex_verfassungsprozessrecht",
+      "system_prompt_path": "prompts/verfassungsprozessrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "europarecht": {
+      "title": "Europarecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "JAG-NRW § 11 Abs. 2 Nr. 11: Rechtsquellen EU, Grundfreiheiten, ",
+      "collection_name": "openlex_europarecht",
+      "system_prompt_path": "prompts/europarecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "polizei_ordnungsrecht": {
+      "title": "Polizei- & Ordnungsrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "JAG-NRW § 11 Abs. 2 Nr. 13a: Polizei- und Ordnungsrecht NRW + ",
+      "collection_name": "openlex_polizei_ordnungsrecht",
+      "system_prompt_path": "prompts/polizei_ordnungsrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "kommunalrecht": {
+      "title": "Kommunalrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "JAG-NRW § 11 Abs. 2 Nr. 13b: Kommunalrecht im Überblick. ",
+      "collection_name": "openlex_kommunalrecht",
+      "system_prompt_path": "prompts/kommunalrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
+    },
+    "verwaltungsprozessrecht": {
+      "title": "Verwaltungsprozessrecht",
+      "domain": "",
+      "geo_scope": [
+        "DE"
+      ],
+      "description": "JAG-NRW § 11 Abs. 2 Nr. 14: VwGO. Examensfach. Neu auf Landingpage.",
+      "collection_name": "openlex_verwaltungsprozessrecht",
+      "system_prompt_path": "prompts/verwaltungsprozessrecht.md",
+      "status": "pending",
+      "owner": "Admin",
+      "created_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "laws": [],
+      "cases": [],
+      "method_chunks": [],
+      "ring": 4
     }
   }
 }
