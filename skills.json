@@ -800,7 +800,7 @@
       "description": "bekommt DSA-Migration aus ki_recht (Backlog M3)",
       "collection_name": "openlex_it_recht",
       "system_prompt_path": "prompts/it_recht.md",
-      "status": "pending",
+      "status": "draft",
       "owner": "Admin",
       "created_at": "2026-05-13T22:37:24.197693+00:00",
       "updated_at": "2026-05-13T22:37:24.197693+00:00",
