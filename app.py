@@ -3744,6 +3744,20 @@ def build_app() -> gr.Blocks:
             "Wann greift subsidi\u00e4rer Schutz nach \u00a7 4 AsylG?",
             "Welche Klagem\u00f6glichkeiten gibt es gegen einen ablehnenden Asylbescheid?",
         ],
+        "mietrecht": [
+            "\u00a7 558 BGB Mieterhöhung \u2014 welche Voraussetzungen gelten?",
+            "Unter welchen Bedingungen kann der Vermieter wegen Eigenbedarfs k\u00fcndigen?",
+            "Sch\u00f6nheitsreparaturklauseln \u2014 wann sind sie wirksam, wann unwirksam?",
+            "Mietminderung wegen Schimmel: Voraussetzungen und H\u00f6he?",
+            "Betriebskostenabrechnung: Welche Frist gilt f\u00fcr den Vermieter?",
+        ],
+        "nachbarrecht": [
+            "Muss ich L\u00e4rm vom Nachbarn dulden (\u00a7 906 BGB)?",
+            "Wann habe ich einen Anspruch auf Beseitigung \u00fcberh\u00e4ngender \u00c4ste?",
+            "Was gilt bei zu hohen B\u00e4umen oder Str\u00e4uchern an der Grenze?",
+            "Was regelt das Wohnungseigentumsgesetz zur Eigent\u00fcmerversammlung?",
+            "Darf mein Nachbar einen Zaun an der Grundst\u00fccksgrenze errichten?",
+        ],
     }
     _DEFAULT_SKILL_EXAMPLES = [
         "Stelle eine Rechtsfrage zum gew\u00e4hlten Rechtsgebiet.",
