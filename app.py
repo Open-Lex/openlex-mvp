@@ -191,7 +191,7 @@ NORM_RE = re.compile(
     r"|(?:§§?|Paragraph)\s*\d+[a-z]?\s*"
     r"(?:(?:Abs(?:atz)?\.?\s*)\d+\s*)?"
     r"(?:(?:S(?:atz)?\.?\s*\d+|Nr\.?\s*\d+)\s*)?"
-    r"(?:DSGVO|BDSG|TDDDG|TTDSG|TKG|SGB|AO|BetrVG|KUG|GG|StGB|ZPO|BGB)",
+    r"(?:DSGVO|BDSG|TDDDG|TTDSG|TKG|SGB|AO|BetrVG|KUG|GG|StGB|ZPO|BGB|WEG|WoEigG|BImSchG|NachbG|GBO|ErbbauRG|ZVG|BauGB|BNatSchG|WHG|BBodSchG|HGB|GmbHG|AktG|InsO|EGBGB|VVG|UrhG|MarkenG|UWG|AGG|KSchG|HOAI)",
     re.UNICODE,
 )
 
@@ -311,6 +311,71 @@ def get_db_stats(skill_id: str = ACTIVE_SKILL) -> dict[str, int]:
 def extract_norms(text: str) -> list[str]:
     """Extrahiert granulare Normreferenzen aus Text."""
     return list(set(NORM_RE.findall(text)))
+
+
+# Regex zum Kanonisieren von Norm-Strings: "§ 906 Abs. 1 BGB" -> "§ 906 BGB"
+_NORM_CANON_RE = re.compile(
+    r'^(§+|Art\.?|Paragraph)\s*(\d+[a-z]?)\s*'
+    r'(?:Abs(?:atz)?\.?\s*\d+\s*)?'
+    r'(?:S(?:atz)?\.?\s*\d+\s*)?'
+    r'(?:Nr\.?\s*\d+\s*)?'
+    r'\b([A-Z][A-Za-z]+)\b',
+    re.UNICODE,
+)
+
+
+def _norm_to_canonical(norm_str: str) -> str | None:
+    """'§ 906 Abs. 1 BGB' → '§ 906 BGB' (Format wie in ChromaDB norm_1..5)."""
+    m = _NORM_CANON_RE.match(norm_str.strip())
+    if not m:
+        return None
+    prefix = "§" if "§" in m.group(1) else "Art."
+    return f"{prefix} {m.group(2)} {m.group(3).upper()}"
+
+
+def _norm_match_retrieval(col, norms: list[str], limit: int = 8) -> list[dict]:
+    """Findet Leit-Chunks (chunk_index=0) von Urteilen, die eine der
+    gesuchten Normen in norm_1..norm_5 haben.
+
+    Norm_1..5 sind nur auf Leit-Chunks (chunk_index=0) gesetzt — kein
+    zusätzlicher chunk_index-Filter nötig.
+
+    Gibt Chunk-Dicts im Standard-Format zurück (passiert CE-/DIST-Cutoff
+    da adjusted_distance=0.12 < DIST_CUTOFF=0.25).
+    """
+    col_name = getattr(col, 'name', 'unknown') if col else 'None'
+    print(f"[NORM-MATCH] called: col={col_name}, norms={norms}, limit={limit}", flush=True)
+    if not col or not norms:
+        print("[NORM-MATCH] early return: col or norms empty", flush=True)
+        return []
+    found: dict[str, dict] = {}
+    for norm_raw in norms:
+        canon = _norm_to_canonical(norm_raw)
+        if not canon:
+            continue
+        for field in ("norm_1", "norm_2", "norm_3", "norm_4", "norm_5"):
+            try:
+                res = col.get(
+                    where={field: canon},
+                    limit=limit,
+                    include=["documents", "metadatas"],
+                )
+                print(f"[NORM-MATCH]   norm={canon!r} field={field}: {len(res['ids'])} hits", flush=True)
+                for cid, doc, meta in zip(
+                    res["ids"], res["documents"], res["metadatas"]
+                ):
+                    if cid not in found:
+                        found[cid] = {
+                            "id": cid,
+                            "text": doc,
+                            "meta": meta,
+                            "distance": 0.12,
+                            "adjusted_distance": 0.12,
+                            "source": "norm_match",
+                        }
+            except Exception:
+                pass
+    return list(found.values())[:limit]
 
 
 def extract_aktenzeichen(text: str) -> list[str]:
@@ -982,6 +1047,27 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
         })
     _pool_after_norm = len(chunks)
 
+    # b1.5) Norm-Match-Retrieval: Urteil-Leit-Chunks zu expliziten Normen
+    # Deterministisch via norm_1..5 Metadaten (kein Embedding nötig).
+    # Ergebnisse gehen in _pinned_norm_chunks → werden später wie pflicht-Chunks
+    # mit ce_score=10.0 behandelt und bypassen candidates[:40] + CE-Filter.
+    # WICHTIG: _pinned_ids ist von seen_ids unabhängig — Chunks die schon vom
+    # Semantic gefunden wurden, müssen trotzdem gepinnt werden (sie könnten
+    # sonst durch CE-Cutoff oder MAX_DOCS herausfallen).
+    _pinned_norm_chunks: list[dict] = []
+    _pinned_ids: set = set()
+    if norms:
+        for _nm_chunk in _norm_match_retrieval(col, norms, limit=8):
+            _nm_id = _nm_chunk.get("id", "")
+            if _nm_id and _nm_id not in _pinned_ids:
+                _pinned_ids.add(_nm_id)
+                seen_ids.add(_nm_id)  # auch in seen_ids, damit kein Duplikat in chunks
+                _pinned_norm_chunks.append(_nm_chunk)
+
+
+
+    _pool_after_norm_match = len(chunks)
+
     # b2) Query Understanding Light: deterministisches Chunk-Lookup
     # Kein Embedding, kein Roundtrip: col.get() mit bekannten ChromaDB-IDs.
     # Soft Injection: Chunks werden mit adjusted_distance=0.15 eingefügt,
@@ -1324,6 +1410,29 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
                 pass
     # ===== Ende Per-Source Block =====
 
+    # b1.6) Gesetz-Bridge: extrahiere Normen aus gesetz_granular-Chunks im Pool
+    # HIER (nach Per-Source): Per-Source hat gesetz_granular-Chunks bereits eingeflossen.
+    # → findet urteil-leit-chunks für Stichworte-Queries ohne explizite §-Angabe.
+    _gesetz_norms: list[str] = []
+    for _ch in list(chunks):
+        if _ch.get("meta", {}).get("source_type") == "gesetz_granular":
+            _para = _ch["meta"].get("paragraph", "")   # z.B. "§ 906"
+            _abk  = _ch["meta"].get("gesetz_abk", "")  # z.B. "BGB"
+            if _para and _abk:
+                _canon = _norm_to_canonical(f"{_para} {_abk}".strip())
+                if _canon and _canon not in _gesetz_norms:
+                    _gesetz_norms.append(_canon)
+    if _gesetz_norms:
+        print(f"  [GESETZ-BRIDGE] extrahierte Normen: {_gesetz_norms[:5]}", flush=True)
+        for _nm_chunk in _norm_match_retrieval(col, _gesetz_norms[:8], limit=5):
+            _nm_id = _nm_chunk.get("id", "")
+            if _nm_id and _nm_id not in _pinned_ids:
+                _pinned_ids.add(_nm_id)
+                seen_ids.add(_nm_id)
+                _pinned_norm_chunks.append(_nm_chunk)
+    if _pinned_norm_chunks:
+        print(f"  [PINNING] {len(_pinned_norm_chunks)} norm_match-Chunks als Pflicht markiert (b1.5+bridge)", flush=True)
+
     candidates = chunks[:40]
 
     if _full_trace is not None:
@@ -1613,6 +1722,16 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
         if c["id"] not in pflicht_ids:
             pflicht.append(c)
             pflicht_ids.add(c["id"])
+    # Norm-Match-Pinning: als pflicht-Chunks mit höchstem CE-Score (bypassen alle Filter)
+    for _p in _pinned_norm_chunks[:4]:
+        _pid = _p.get("id", "")
+        if _pid and _pid not in pflicht_ids:
+            _p_pflicht = dict(_p)
+            _p_pflicht["ce_score"] = 10.0
+            _p_pflicht["adjusted_distance"] = 0.05
+            _p_pflicht["source"] = "norm_match_pinned"
+            pflicht.append(_p_pflicht)
+            pflicht_ids.add(_pid)
 
     # Document-Level Deduplication: max 3 Chunks pro Dokument
     MAX_PER_DOC = 3
@@ -2194,7 +2313,7 @@ def _doc_key(meta: dict) -> str:
         gericht = meta.get("gericht", "")
         return f"{gericht}|{az}".strip("|")
     # Gesetz + Gesetzname = ein Gesetzesdokument
-    gesetz = meta.get("gesetz", "")
+    gesetz = meta.get("gesetz", "") or meta.get("gesetz_abk", "")
     if gesetz:
         return gesetz
     # Titel als Fallback (z.B. Leitlinien, Methodenwissen)
@@ -2224,7 +2343,7 @@ def _doc_label(doc_chunks: list[dict]) -> str:
             parts.append(f"({datum})" if not name else f"– {datum}")
         return " ".join(p for p in parts if p)
     # Gesetz
-    gesetz = meta.get("gesetz", "")
+    gesetz = meta.get("gesetz", "") or meta.get("gesetz_abk", "")
     if gesetz:
         return gesetz
     # Titel (Leitlinien etc.)
@@ -3037,6 +3156,38 @@ def chat_stream(message: str, history: list[list[str]], skill_id: str = ACTIVE_S
 
     # LLM-Messages bauen
     messages = _build_llm_messages(message, context, llm_history, skill_id=skill_id)
+
+    # DEBUG-LOGGING temporaer
+    try:
+        import datetime as _dt
+        with open("/tmp/mistral_prompt_debug.log", "a", encoding="utf-8") as _lf:
+            NL = chr(10)
+            SEP = "=" * 80
+            _lf.write(NL + SEP + NL)
+            _lf.write("[" + _dt.datetime.now().isoformat() + "] skill=" + skill_id + NL)
+            _lf.write("QUERY: " + message + NL)
+            _lf.write("CHUNKS: " + str(len(chunks)) + NL)
+            _src = {}
+            for _ch in chunks:
+                _st = _ch.get("meta", {}).get("source_type", "?")
+                _src[_st] = _src.get(_st, 0) + 1
+            _lf.write("source_types: " + str(_src) + NL)
+            _lf.write("--- CHUNK-DETAIL (Top 15) ---" + NL)
+            for _i, _ch in enumerate(chunks[:15]):
+                _m = _ch.get("meta", {})
+                _line = ("  [%2d] %-18s AZ=%-25s Gericht=%-5s Datum=%-12s" % (
+                    _i+1, _m.get("source_type","?"), _m.get("aktenzeichen","--"),
+                    _m.get("gericht","--"), _m.get("datum","--")))
+                _txt = _ch.get("text","")[:100].replace(NL, " ")
+                _lf.write(_line + NL + "       " + _txt + NL)
+            _lf.write("--- SYSTEM-PROMPT ---" + NL)
+            _lf.write((messages[0]["content"] if messages else "--") + NL)
+            _lf.write("--- USER-PROMPT ---" + NL)
+            _lu = next((m["content"] for m in reversed(messages) if m["role"] == "user"), "--")
+            _lf.write(_lu[:6000] + ("[TRUNCATED]" if len(_lu) > 6000 else "") + NL)
+    except Exception as _ex:
+        print("[DEBUG-LOG ERR] " + str(_ex))
+    # END DEBUG-LOGGING
 
     # Cascading Provider Stream
     full_response = ""
