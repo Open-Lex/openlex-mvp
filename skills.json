@@ -226,7 +226,7 @@
       "status": "draft",
       "owner": "Admin",
       "created_at": "2026-05-05T11:49:11.354815+00:00",
-      "updated_at": "2026-05-13T16:32:28.776768+00:00",
+      "updated_at": "2026-05-14T16:31:32.229150+00:00",
       "laws": [
         {
           "id": "a6743d70",
@@ -295,6 +295,11 @@
           "book_id": "hahn-grundrechte-lehrbuch-2022",
           "chunks_added": 19,
           "imported_at": "2026-05-13T16:32:28.776748+00:00"
+        },
+        {
+          "book_id": "hahn-grundrechte-lehrbuch-2022",
+          "chunks_added": 19,
+          "imported_at": "2026-05-14T16:31:32.229133+00:00"
         }
       ]
     },
@@ -482,13 +487,13 @@
       "geo_scope": [
         "DE"
       ],
-      "description": "Grundstück · WEG",
+      "description": "BGB §§ 903-924 + 1004, WoEigG-Verweis, landesrechtliche Nachbargesetze. Bestand: 15.331 Chunks (176 GII-Normen + 15.127 BGH/V-Senat-Urteile + 28 Methodenwissen). Mit Rubrum-Filter: V ZA + Freiheitsentziehungs-V-ZB raus, rein-prozessuale Beschlüsse rausgefiltert.",
       "collection_name": "openlex_nachbarrecht",
       "system_prompt_path": "prompts/nachbarrecht.md",
-      "status": "pending",
+      "status": "draft",
       "owner": "Admin",
       "created_at": "2026-05-13T22:37:24.197693+00:00",
-      "updated_at": "2026-05-13T22:37:24.197693+00:00",
+      "updated_at": "2026-05-15T07:49:13.232151+00:00",
       "laws": [],
       "cases": [],
       "method_chunks": [],
