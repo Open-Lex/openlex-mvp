@@ -3758,6 +3758,27 @@ def build_app() -> gr.Blocks:
             "Was regelt das Wohnungseigentumsgesetz zur Eigent\u00fcmerversammlung?",
             "Darf mein Nachbar einen Zaun an der Grundst\u00fccksgrenze errichten?",
         ],
+        "kaufrecht": [
+            "Wann liegt ein Sachmangel beim Kauf vor (§ 434 BGB)?",
+            "Welche Rechte habe ich bei einem mangelhaften Produkt?",
+            "Was ist der Unterschied zwischen Rücktritt und Minderung?",
+            "Wann gilt die Beweislastumkehr beim Verbrauchsgüterkauf?",
+            "Können AGB-Klauseln die Gewährleistung ausschließen?",
+        ],
+        "erbrecht": [
+            "Wer erbt, wenn kein Testament vorhanden ist?",
+            "Was ist der Pflichtteil und wer hat Anspruch darauf?",
+            "Wie kann ich ein Testament anfechten?",
+            "Was muss ich beim Ausschlagen einer Erbschaft beachten?",
+            "Was ist der Unterschied zwischen Testament und Erbvertrag?",
+        ],
+        "versicherungsrecht": [
+            "Wann ist der Versicherer leistungsfrei bei Obliegenheitsverletzung?",
+            "Was bedeutet die vorvertragliche Anzeigepflicht (§ 19 VVG)?",
+            "Kann ich direkt gegen den Kfz-Haftpflichtversicherer klagen?",
+            "Was gilt bei grob fahrlässiger Herbeiführung des Versicherungsfalles?",
+            "Was ist der Unterschied zwischen Schaden- und Summenversicherung?",
+        ],
     }
     _DEFAULT_SKILL_EXAMPLES = [
         "Stelle eine Rechtsfrage zum gew\u00e4hlten Rechtsgebiet.",
