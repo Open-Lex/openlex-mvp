@@ -226,7 +226,7 @@
       "status": "ready",
       "owner": "Admin",
       "created_at": "2026-05-05T11:49:11.354815+00:00",
-      "updated_at": "2026-05-14T16:31:32.229150+00:00",
+      "updated_at": "2026-05-17T16:30:36.592720+00:00",
       "laws": [
         {
           "id": "a6743d70",
@@ -300,6 +300,11 @@
           "book_id": "hahn-grundrechte-lehrbuch-2022",
           "chunks_added": 19,
           "imported_at": "2026-05-14T16:31:32.229133+00:00"
+        },
+        {
+          "book_id": "hahn-grundrechte-lehrbuch-2022",
+          "chunks_added": 19,
+          "imported_at": "2026-05-17T16:30:36.592708+00:00"
         }
       ]
     },
@@ -652,7 +657,7 @@
       "description": "GmbH · AG · M&A",
       "collection_name": "openlex_gesellschaftsrecht",
       "system_prompt_path": "prompts/gesellschaftsrecht.md",
-      "status": "pending",
+      "status": "ready",
       "owner": "Admin",
       "created_at": "2026-05-13T22:37:24.197693+00:00",
       "updated_at": "2026-05-13T22:37:24.197693+00:00",
