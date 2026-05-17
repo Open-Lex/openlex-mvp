@@ -898,7 +898,7 @@
       "description": "",
       "collection_name": "openlex_wirtschaftsstrafrecht",
       "system_prompt_path": "prompts/wirtschaftsstrafrecht.md",
-      "status": "pending",
+      "status": "ready",
       "owner": "Admin",
       "created_at": "2026-05-13T22:37:24.197693+00:00",
       "updated_at": "2026-05-13T22:37:24.197693+00:00",
