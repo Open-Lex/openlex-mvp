@@ -223,7 +223,7 @@
       "description": "Grundrechte des Grundgesetzes (Art. 1-19 GG). Allgemeine Grundrechtslehren, Schutzbereich, Eingriff, Schranken, Verhältnismäßigkeit. Einzelgrundrechte: Menschenwürde, Freiheit, Gleichheit, Meinungsfreiheit, Versammlungsfreiheit, Eigentumsgarantie u.a. Verfassungsbeschwerde.",
       "collection_name": "openlex_grundrechte",
       "system_prompt_path": "prompts/grundrechte.md",
-      "status": "draft",
+      "status": "ready",
       "owner": "Admin",
       "created_at": "2026-05-05T11:49:11.354815+00:00",
       "updated_at": "2026-05-14T16:31:32.229150+00:00",
