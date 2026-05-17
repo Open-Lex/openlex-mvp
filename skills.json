@@ -17,7 +17,7 @@
       "description": "Sachenrecht nach BGB Buch 3 (§§ 854-1296 BGB). Behandelt Eigentum, Besitz und beschränkte dingliche Rechte. Schwerpunkte: Eigentumserwerb (originär/derivativ), Besitzschutz, Hypothek, Grundschuld, Pfandrecht, Nießbrauch. Methodisch geht es um Trennungs-, Abstraktions- und Spezialitätsprinzip sowie um die strikte Typenzwang-Lehre. Ständige Rechtsprechung: BGH V. Zivilsenat.",
       "collection_name": "openlex_sachenrecht",
       "system_prompt_path": "prompts/sachenrecht.md",
-      "status": "draft",
+      "status": "ready",
       "owner": "Admin",
       "created_at": "2026-05-04T19:23:27.778187+00:00",
       "updated_at": "2026-05-04T21:23:10.674184+00:00",
