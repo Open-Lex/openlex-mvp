@@ -688,7 +688,7 @@
       "description": "UrhG · Medien",
       "collection_name": "openlex_urheberrecht",
       "system_prompt_path": "prompts/urheberrecht.md",
-      "status": "pending",
+      "status": "ready",
       "owner": "Admin",
       "created_at": "2026-05-13T22:37:24.197693+00:00",
       "updated_at": "2026-05-13T22:37:24.197693+00:00",
