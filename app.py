@@ -1417,7 +1417,7 @@ def retrieve(question: str, history: list[tuple[str, str]] | None = None,
     for _ch in list(chunks):
         if _ch.get("meta", {}).get("source_type") == "gesetz_granular":
             _para = _ch["meta"].get("paragraph", "")   # z.B. "§ 906"
-            _abk  = _ch["meta"].get("gesetz_abk", "")  # z.B. "BGB"
+            _abk  = _ch["meta"].get("gesetz_abk", "") or _ch["meta"].get("gesetz", "")  # z.B. "BGB"
             if _para and _abk:
                 _canon = _norm_to_canonical(f"{_para} {_abk}".strip())
                 if _canon and _canon not in _gesetz_norms:
