@@ -106,7 +106,8 @@ def load_system_prompt(skill_id: str = "datenschutz") -> str:
     except Exception:
         return (
             "Du bist ein juristischer Assistent. "
-            "Antworte ausschliesslich auf Basis der bereitgestellten Quellen."
+            "Antworte ausschliesslich auf Basis der bereitgestellten Quellen. "
+            "Kennzeichne jede Aussage mit [Quelle X] (z.B. [Quelle 1], [Quelle 2])."
         )
 
 
@@ -2516,7 +2517,8 @@ def _build_llm_messages(question: str, context: str, history: list[dict],
         f"FRAGE: {question}\n\n"
         f"BEREITGESTELLTE QUELLEN:\n\n{context}\n\n"
         f"Beantworte die Frage auf Grundlage der bereitgestellten Quellen. "
-        f"Zitiere dabei exakt mit Fundstelle."
+        f"Kennzeichne jede Aussage mit [Quelle X] (z.B. [Quelle 1], [Quelle 3]). "
+        f"Zitiere dabei exakt mit Fundstelle (Paragraph, Absatz, Aktenzeichen)."
     )})
     return messages
 
