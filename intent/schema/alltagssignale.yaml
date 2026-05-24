@@ -1,0 +1,207 @@
+# schema/alltagssignale.yaml
+# Alltagsbegriffe → Rechtsgebiet: Signale, die in den Systematik-YAMLs fehlen,
+# weil dort juristisches Fachvokabular dominiert. Ergänzung ohne Eingriff in die
+# Taxonomie-Dateien. Format identisch zu den Systematik-YAMLs: jede Gruppe hat
+# "signale" (Liste) + "typische_rechtsgebiete" (Liste gültiger Slugs).
+# Stand: Mai 2026 — erweiterbar
+
+gruppen:
+
+  # ── Verbraucherrecht ──────────────────────────────────────────────────────
+  - signale:
+      # Widerruf / Fernabsatz
+      - Widerruf
+      - widerrufen
+      - Haustür
+      - Haustürgeschäft
+      - Widerrufsrecht
+      - Widerrufsfrist
+      - Haustürvertrag
+      - Fernabsatzvertrag
+      - Onlineshop
+      - online bestellt
+      - Abzahlung
+      - Ratenkauf
+      - Ratenvertrag
+      # Plattform / Marktplatz (B2C-Kontext)
+      - Plattform
+      - Marktplatz
+      - Online-Plattform
+      - Online-Händler
+      - Verkaufsplattform
+      # Lieferprobleme
+      - nicht geliefert
+      - Ware nicht angekommen
+      - Lieferung ausgeblieben
+      - Paket verloren
+      - falsch geliefert
+      - falsche Ware geliefert
+      - Ware beschädigt angekommen
+      # Rückgabe / Rückerstattung verweigert
+      - Rückgabe verweigert
+      - Rückerstattung verweigert
+      - Erstattung verweigert
+      - kein Umtausch
+      - Geld nicht zurück
+      - Kaufpreis nicht zurückerstattet
+      # Abo / Kündigung
+      - Abo
+      - Abonnement
+      - nicht kündbar
+      - Kündigung verweigert
+      - automatisch verlängert
+      - Vertragslaufzeit
+      - Mindestlaufzeit
+      # Irreführende Werbung / Täuschung
+      - falsche Werbung
+      - Werbung irreführend
+      - nicht wie beschrieben
+      - Versprechen nicht eingehalten
+      - anders als angekündigt
+      # Aggressive Vertriebsmethoden
+      - unter Druck gesetzt
+      - überredet
+      - telefonisch aufgedrängt
+      - Vertreter überredet
+    typische_rechtsgebiete: [verbraucherrecht]
+
+  # ── Medizinrecht ─────────────────────────────────────────────────────────
+  - signale:
+      - Arzt
+      - Ärztin
+      - Krankenhaus
+      - Klinik
+      - Operation
+      - Behandlungsfehler
+      - Kunstfehler
+      - Aufklärungspflicht
+      - Narkose
+      - Diagnose falsch
+      - ärztlicher Fehler
+      - medizinischer Fehler
+    typische_rechtsgebiete: [medizinrecht]
+
+  # ── Nachbarrecht ─────────────────────────────────────────────────────────
+  - signale:
+      - Nachbar
+      - Lärm
+      - Ruhestörung
+      - Immission
+      - Grenzabstand
+      - Grundstücksgrenze
+      - Einfriedung
+      - Gartenzaun
+      - Überbau
+      - Ast überragt
+      - Garage Grenze
+      - Baulärm
+    typische_rechtsgebiete: [nachbarrecht]
+
+  # ── IT-Recht ─────────────────────────────────────────────────────────────
+  - signale:
+      - SaaS
+      - Software
+      - Cloud
+      - Softwarelizenz
+      - IT-Vertrag
+      - Softwarevertrag
+      - Datenleck
+      - Datenpanne
+      - Cyberangriff
+      - Hacker
+      - digitale Dienstleistung
+      - Künstliche Intelligenz
+      - KI-System
+    typische_rechtsgebiete: [it_recht]
+
+  # ── Datenschutz ───────────────────────────────────────────────────────────
+  - signale:
+      - Datenschutz
+      - DSGVO
+      - personenbezogene Daten
+      - Datenweitergabe
+      - Datenspeicherung
+      - Daten gelöscht
+      - Daten gespeichert
+      - gespeicherte Daten
+      - Auskunft Daten
+      - keine Auskunft Daten
+      - Datenschutzverletzung
+      - Einwilligung Daten
+      - Datenschutzbehörde
+      - Datenpanne
+      - meine Daten
+    typische_rechtsgebiete: [datenschutz]
+
+  # ── Urheberrecht (Filesharing) ────────────────────────────────────────────
+  - signale:
+      - Filesharing
+      - Tauschbörse
+      - Raubkopie
+      - illegaler Download
+      - Film illegal
+      - Musik illegal
+      - Torrent
+      - Upload Urheberrecht
+      - Urheberrechtsverstoß
+    typische_rechtsgebiete: [urheberrecht]
+
+  # ── Erbrecht (Erbengemeinschaft) ──────────────────────────────────────────
+  - signale:
+      - Erbengemeinschaft
+      - Erbteil
+      - Erbschaft
+      - Nachlass
+      - geerbt
+      - Vermächtnis
+      - Erblasser
+      - testamentarisch
+      - gesetzliche Erbfolge
+      - Erbauseinandersetzung
+      - Geschwister Haus
+      - Geschwister blockieren
+      - Anteil Erbe
+    typische_rechtsgebiete: [erbrecht]
+
+  # ── Arbeitsrecht (Mobbing / Schikane) ─────────────────────────────────────
+  - signale:
+      - Mobbing
+      - Bossing
+      - Schikane
+      - demütigt
+      - schikaniert
+      - Arbeitsklima
+      - belästigt
+      - diskriminiert
+      - Belästigung Arbeit
+    typische_rechtsgebiete: [arbeitsrecht]
+
+  # ── Sozialrecht ───────────────────────────────────────────────────────────
+  - signale:
+      - Pflichtverletzung Jobcenter
+      - Eingliederungsvereinbarung
+      - Sperrzeit
+      - Bürgergeld gekürzt
+      - Sanktion Jobcenter
+      - Mitwirkungspflicht
+    typische_rechtsgebiete: [sozialrecht]
+
+  # ── Mietrecht (Eigenbedarf) ───────────────────────────────────────────────
+  - signale:
+      - Eigenbedarf
+      - Eigenbedarfskündigung
+      - vorgeschoben
+      - jahrelang gewohnt
+      - lange Mietzeit
+    typische_rechtsgebiete: [mietrecht]
+
+  # ── Reiserecht ────────────────────────────────────────────────────────────
+  - signale:
+      - Pauschalreise
+      - Reisemangel
+      - Hotel mangelhaft
+      - Reiseveranstalter
+      - Urlaub kaputt
+      - Flug ausgefallen
+      - Reiserücktritt
+    typische_rechtsgebiete: [reiserecht]

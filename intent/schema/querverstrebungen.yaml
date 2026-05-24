@@ -1,0 +1,730 @@
+# schema/querverstrebungen.yaml
+# Cross-Domain-Verknüpfungen zwischen Rechtsgebieten
+# Quelle: allgemein bekannte Konkurrenz-Lehre, juristische Standardsystematik
+# Stand: Mai 2026
+# Verwendung: Intent-Skill nutzt diese, um bei jedem Treffer in einer Domain
+#             automatisch Hypothesen zu parallelen Anspruchsgrundlagen in
+#             anderen Domains zu generieren.
+#
+# Methodische Grundlage:
+# - Strafrechtliche Tat ≠ zivilrechtlicher Anspruch — beides ist separat zu prüfen
+# - Schutzgesetzverletzung (§ 823 II BGB) verbindet StGB-Tatbestände mit zivilem Schadensersatz
+# - Bei staatlichem Handeln kommt öffentlich-rechtliche Ebene (Amtshaftung, Folgenbeseitigung) hinzu
+
+querverstrebungen:
+
+  # ═══════════════════════════════════════════════════════════════
+  # PERSON: Körper, Leben, Gesundheit
+  # ═══════════════════════════════════════════════════════════════
+
+  koerperverletzung:
+    titel: "Körperverletzung / Gewalt gegen Personen"
+    strafrechtlich:
+      - { norm: "§ 223 StGB", kurz: "Körperverletzung (Grundtatbestand)" }
+      - { norm: "§ 224 StGB", kurz: "Gefährliche Körperverletzung" }
+      - { norm: "§ 225 StGB", kurz: "Misshandlung Schutzbefohlener" }
+      - { norm: "§ 226 StGB", kurz: "Schwere Körperverletzung" }
+      - { norm: "§ 227 StGB", kurz: "Körperverletzung mit Todesfolge" }
+      - { norm: "§ 229 StGB", kurz: "Fahrlässige Körperverletzung" }
+      - { norm: "§ 231 StGB", kurz: "Beteiligung an Schlägerei" }
+      - { norm: "§ 340 StGB", kurz: "Körperverletzung im Amt (bei Polizei/Beamten)" }
+    zivilrechtlich:
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Schadensersatz wegen Körperverletzung (deliktisch)" }
+      - { norm: "§ 823 Abs. 2 BGB", kurz: "Schadensersatz wegen Schutzgesetzverletzung (i.V.m. § 223 StGB)" }
+      - { norm: "§ 253 Abs. 2 BGB", kurz: "Schmerzensgeld" }
+      - { norm: "§ 249 BGB", kurz: "Heilbehandlungskosten (Naturalrestitution)" }
+      - { norm: "§ 842 BGB", kurz: "Umfang Ersatzpflicht bei Körperverletzung" }
+      - { norm: "§ 843 BGB", kurz: "Geldrente bei dauernder Erwerbsminderung" }
+      - { norm: "§ 1004 BGB analog", kurz: "Unterlassung weiterer Übergriffe (Persönlichkeitsrecht)" }
+    oeffentlich_rechtlich:
+      - { norm: "§ 839 BGB i.V.m. Art. 34 GG", kurz: "Amtshaftung bei Polizei-Übergriff" }
+      - { norm: "Art. 2 Abs. 2 GG", kurz: "Recht auf körperliche Unversehrtheit" }
+      - { norm: "OEG", kurz: "Opferentschädigungsgesetz" }
+    weitere_rechtsbereiche:
+      - { gesetz: "GewSchG", kurz: "Gewaltschutzgesetz — Schutzanordnungen, Wohnungsverweisung" }
+      - { gesetz: "SGB VII", kurz: "Gesetzliche Unfallversicherung (Arbeitsunfall)" }
+    signale: ["geschlagen", "verprügelt", "verletzt", "Krankenhaus", "Platzwunde", "Schmerzensgeld", "Schläge", "Misshandlung"]
+    typische_rechtsgebiete: [strafrecht, verkehrsrecht, medizinrecht, familienrecht, arbeitsrecht]
+    sensibilitaet: "hoch — bei häuslicher Gewalt Hilfsangebote (Hilfetelefon Gewalt gegen Frauen 08000 116 016)"
+
+  toetung:
+    titel: "Tötungsdelikte / Tod eines Angehörigen"
+    strafrechtlich:
+      - { norm: "§ 211 StGB", kurz: "Mord" }
+      - { norm: "§ 212 StGB", kurz: "Totschlag" }
+      - { norm: "§ 222 StGB", kurz: "Fahrlässige Tötung" }
+      - { norm: "§ 227 StGB", kurz: "Körperverletzung mit Todesfolge" }
+    zivilrechtlich:
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Schadensersatz bei Tötung (mittelbar)" }
+      - { norm: "§ 844 BGB", kurz: "Ansprüche der Hinterbliebenen (Unterhalt, Beerdigungskosten, Hinterbliebenengeld)" }
+      - { norm: "§ 845 BGB", kurz: "Ersatzansprüche wegen entgangener Dienste" }
+    oeffentlich_rechtlich:
+      - { norm: "OEG", kurz: "Opferentschädigungsgesetz" }
+      - { norm: "§ 839 BGB i.V.m. Art. 34 GG", kurz: "Amtshaftung bei staatlich verursachtem Tod" }
+    weitere_rechtsbereiche:
+      - { gesetz: "BGB Erbrecht §§ 1922 ff.", kurz: "Erbschaftsfolgen" }
+      - { gesetz: "SGB VI", kurz: "Witwen-/Witwerrente, Waisenrente" }
+    signale: ["getötet", "ums Leben gekommen", "verstorben durch", "Tod verursacht", "Hinterbliebene", "Beerdigung"]
+    typische_rechtsgebiete: [strafrecht, erbrecht, sozialrecht, verkehrsrecht]
+    sensibilitaet: "hoch — Trauerprozess respektieren, Hilfsangebote anbieten"
+
+  sexuelle_gewalt:
+    titel: "Sexualdelikte"
+    strafrechtlich:
+      - { norm: "§ 177 StGB", kurz: "Sexueller Übergriff, sexuelle Nötigung, Vergewaltigung" }
+      - { norm: "§ 184i StGB", kurz: "Sexuelle Belästigung" }
+      - { norm: "§ 184j StGB", kurz: "Straftaten aus Gruppen" }
+      - { norm: "§§ 174, 176, 176c, 176d StGB", kurz: "Sexueller Missbrauch (Schutzbefohlene, Kinder)" }
+    zivilrechtlich:
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Schadensersatz wegen Verletzung sexueller Selbstbestimmung" }
+      - { norm: "§ 825 BGB", kurz: "Bestimmung zu sexuellen Handlungen" }
+      - { norm: "§ 253 Abs. 2 BGB", kurz: "Schmerzensgeld" }
+      - { norm: "§ 1004 BGB analog", kurz: "Unterlassung (z.B. weitere Belästigung)" }
+    oeffentlich_rechtlich:
+      - { norm: "OEG", kurz: "Opferentschädigungsgesetz (umfasst psychische Folgen)" }
+    weitere_rechtsbereiche:
+      - { gesetz: "GewSchG", kurz: "Gewaltschutzgesetz" }
+      - { gesetz: "AGG § 3 Abs. 4", kurz: "Sexuelle Belästigung am Arbeitsplatz" }
+    signale: ["sexueller Übergriff", "vergewaltigt", "missbraucht", "sexuell belästigt", "übergriffig", "ungewollt angefasst"]
+    typische_rechtsgebiete: [strafrecht, arbeitsrecht, sozialrecht]
+    sensibilitaet: "sehr hoch — extrem vorsichtig, Hilfsangebote priorisieren (Hilfetelefon Sexueller Missbrauch 0800 22 55 530, Frauennotruf)"
+
+  # ═══════════════════════════════════════════════════════════════
+  # EIGENTUM: Diebstahl, Beschädigung, Vermögen
+  # ═══════════════════════════════════════════════════════════════
+
+  diebstahl_unterschlagung:
+    titel: "Diebstahl, Unterschlagung, Hehlerei"
+    strafrechtlich:
+      - { norm: "§ 242 StGB", kurz: "Diebstahl" }
+      - { norm: "§ 243 StGB", kurz: "Besonders schwerer Diebstahl" }
+      - { norm: "§ 244 StGB", kurz: "Diebstahl mit Waffen, Bandendiebstahl, Wohnungseinbruch" }
+      - { norm: "§ 246 StGB", kurz: "Unterschlagung" }
+      - { norm: "§ 259 StGB", kurz: "Hehlerei" }
+      - { norm: "§ 247 StGB", kurz: "Haus- und Familiendiebstahl" }
+    zivilrechtlich:
+      - { norm: "§ 985 BGB", kurz: "Herausgabeanspruch des Eigentümers (Vindikation)" }
+      - { norm: "§ 1007 BGB", kurz: "Herausgabeanspruch des früheren Besitzers" }
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Schadensersatz wegen Eigentumsverletzung" }
+      - { norm: "§ 823 Abs. 2 BGB i.V.m. § 242 StGB", kurz: "Schutzgesetzverletzung" }
+      - { norm: "§ 812 BGB", kurz: "Bereicherungsrechtliche Herausgabe (Wertersatz § 818 II)" }
+      - { norm: "§ 826 BGB", kurz: "Sittenwidrige Schädigung bei Hehlerei" }
+      - { norm: "§ 861 BGB", kurz: "Besitzschutzanspruch bei verbotener Eigenmacht" }
+      - { norm: "§ 935 BGB", kurz: "Kein gutgläubiger Erwerb bei Abhandenkommen" }
+    weitere_rechtsbereiche:
+      - { gesetz: "VersicherungsR", kurz: "Hausrat-/Diebstahlversicherung" }
+    signale: ["gestohlen", "geklaut", "verschwunden", "weggenommen", "entwendet", "Einbruch", "unterschlagen"]
+    typische_rechtsgebiete: [strafrecht, sachenrecht, versicherungsrecht]
+
+  sachbeschaedigung:
+    titel: "Sachbeschädigung / Eigentumsbeeinträchtigung"
+    strafrechtlich:
+      - { norm: "§ 303 StGB", kurz: "Sachbeschädigung" }
+      - { norm: "§ 303a StGB", kurz: "Datenveränderung" }
+      - { norm: "§ 303b StGB", kurz: "Computersabotage" }
+      - { norm: "§ 304 StGB", kurz: "Gemeinschädliche Sachbeschädigung" }
+      - { norm: "§ 305 StGB", kurz: "Zerstörung von Bauwerken" }
+    zivilrechtlich:
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Schadensersatz wegen Eigentumsverletzung" }
+      - { norm: "§ 823 Abs. 2 BGB i.V.m. § 303 StGB", kurz: "Schutzgesetzverletzung" }
+      - { norm: "§ 249 BGB", kurz: "Reparaturkosten / Wiederherstellung" }
+      - { norm: "§ 251 BGB", kurz: "Wertersatz wenn Reparatur unmöglich" }
+      - { norm: "§ 1004 BGB", kurz: "Unterlassung weiterer Beschädigung" }
+    weitere_rechtsbereiche:
+      - { gesetz: "VersicherungsR", kurz: "Kasko, Haftpflicht, Hausrat" }
+    signale: ["beschädigt", "zerstört", "kaputt gemacht", "zerkratzt", "demoliert", "Graffiti", "Sachschaden"]
+    typische_rechtsgebiete: [strafrecht, versicherungsrecht]
+
+  betrug_taeuschung:
+    titel: "Betrug / Vermögensschädigung durch Täuschung"
+    strafrechtlich:
+      - { norm: "§ 263 StGB", kurz: "Betrug" }
+      - { norm: "§ 263a StGB", kurz: "Computerbetrug" }
+      - { norm: "§ 264 StGB", kurz: "Subventionsbetrug" }
+      - { norm: "§ 264a StGB", kurz: "Kapitalanlagebetrug" }
+      - { norm: "§ 265a StGB", kurz: "Erschleichen von Leistungen" }
+      - { norm: "§ 266 StGB", kurz: "Untreue" }
+      - { norm: "§ 267 StGB", kurz: "Urkundenfälschung" }
+    zivilrechtlich:
+      - { norm: "§ 123 BGB", kurz: "Anfechtung wegen arglistiger Täuschung" }
+      - { norm: "§ 142 BGB", kurz: "Rückwirkung der Anfechtung" }
+      - { norm: "§ 823 Abs. 2 BGB i.V.m. § 263 StGB", kurz: "Schadensersatz aus Schutzgesetzverletzung" }
+      - { norm: "§ 826 BGB", kurz: "Sittenwidrige vorsätzliche Schädigung" }
+      - { norm: "§ 280 BGB i.V.m. § 311 Abs. 2 BGB", kurz: "c.i.c. bei Vertragsanbahnung" }
+      - { norm: "§ 812 BGB", kurz: "Bereicherungsrechtliche Rückforderung" }
+      - { norm: "§ 437 Nr. 2 BGB", kurz: "Rücktritt bei zugesicherter Beschaffenheit" }
+    weitere_rechtsbereiche:
+      - { gesetz: "UWG", kurz: "Unlauterer Wettbewerb (bei B2B-Täuschung)" }
+      - { gesetz: "AO § 370", kurz: "Steuerhinterziehung als spezielle Betrugsform" }
+    signale: ["betrogen", "abgezockt", "übers Ohr gehauen", "getäuscht", "Phishing", "Identitätsdiebstahl", "Anlagebetrug", "Schneeballsystem", "falsche Versprechen", "Kaufvertrag mit Lügen"]
+    typische_rechtsgebiete: [strafrecht, bank_kapitalmarktrecht, it_recht, steuerrecht]
+
+  raub_erpressung:
+    titel: "Raub und Erpressung"
+    strafrechtlich:
+      - { norm: "§ 249 StGB", kurz: "Raub" }
+      - { norm: "§ 250 StGB", kurz: "Schwerer Raub" }
+      - { norm: "§ 252 StGB", kurz: "Räuberischer Diebstahl" }
+      - { norm: "§ 253 StGB", kurz: "Erpressung" }
+      - { norm: "§ 255 StGB", kurz: "Räuberische Erpressung" }
+    zivilrechtlich:
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Schadensersatz Körper + Eigentum" }
+      - { norm: "§ 823 Abs. 2 BGB i.V.m. §§ 249 ff. StGB", kurz: "Schutzgesetzverletzung" }
+      - { norm: "§ 826 BGB", kurz: "Sittenwidrige Schädigung" }
+      - { norm: "§ 253 Abs. 2 BGB", kurz: "Schmerzensgeld bei Gewaltanwendung" }
+      - { norm: "§ 985 BGB", kurz: "Herausgabe der geraubten Sache" }
+      - { norm: "§ 1004 BGB analog", kurz: "Unterlassung weiterer Erpressung" }
+    signale: ["überfallen", "mit Gewalt", "Raubüberfall", "erpresst", "bedroht und Geld verlangt", "Schutzgeld"]
+    typische_rechtsgebiete: [strafrecht, versicherungsrecht]
+
+  geldwaesche_hehlerei:
+    titel: "Geldwäsche und Hehlerei"
+    strafrechtlich:
+      - { norm: "§ 259 StGB", kurz: "Hehlerei" }
+      - { norm: "§ 260 StGB", kurz: "Gewerbsmäßige Hehlerei" }
+      - { norm: "§ 261 StGB", kurz: "Geldwäsche" }
+    zivilrechtlich:
+      - { norm: "§ 985 BGB", kurz: "Herausgabe der hehlerischen Sache" }
+      - { norm: "§ 823 Abs. 2 BGB i.V.m. § 259 StGB", kurz: "Schadensersatz" }
+      - { norm: "§ 826 BGB", kurz: "Sittenwidrige Schädigung" }
+    weitere_rechtsbereiche:
+      - { gesetz: "GwG", kurz: "Geldwäschegesetz (Compliance-Pflichten)" }
+    signale: ["Geldwäsche", "Hehlerei", "geklaute Ware gekauft", "verdächtige Herkunft"]
+    typische_rechtsgebiete: [strafrecht, bank_kapitalmarktrecht]
+
+  # ═══════════════════════════════════════════════════════════════
+  # EHRE / PERSÖNLICHKEIT / DATEN
+  # ═══════════════════════════════════════════════════════════════
+
+  beleidigung_uebleNachrede:
+    titel: "Beleidigung, üble Nachrede, Verleumdung"
+    strafrechtlich:
+      - { norm: "§ 185 StGB", kurz: "Beleidigung" }
+      - { norm: "§ 186 StGB", kurz: "Üble Nachrede" }
+      - { norm: "§ 187 StGB", kurz: "Verleumdung" }
+      - { norm: "§ 188 StGB", kurz: "Gegen Personen des politischen Lebens" }
+      - { norm: "§ 192a StGB", kurz: "Verhetzende Beleidigung" }
+    zivilrechtlich:
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Verletzung allgemeines Persönlichkeitsrecht (APR)" }
+      - { norm: "§ 823 Abs. 2 BGB i.V.m. §§ 185, 186, 187 StGB", kurz: "Schutzgesetzverletzung" }
+      - { norm: "§ 824 BGB", kurz: "Kreditgefährdung (bei wirtschaftlicher Rufschädigung)" }
+      - { norm: "§ 1004 BGB analog", kurz: "Unterlassungs- und Beseitigungsanspruch" }
+      - { norm: "§ 253 Abs. 2 BGB", kurz: "Geldentschädigung (Schmerzensgeld bei schwerer Persönlichkeitsverletzung)" }
+    oeffentlich_rechtlich:
+      - { norm: "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG", kurz: "Allgemeines Persönlichkeitsrecht" }
+      - { norm: "Art. 5 Abs. 1 GG", kurz: "Meinungsfreiheit (Gegenpol bei Abwägung)" }
+    weitere_rechtsbereiche:
+      - { gesetz: "NetzDG", kurz: "Netzwerkdurchsetzungsgesetz (bei Online-Beleidigung)" }
+      - { gesetz: "DSGVO", kurz: "Falsche personenbezogene Daten als DSGVO-Verstoß (Art. 16, 17)" }
+    signale: ["beleidigt", "beschimpft", "verleumdet", "üble Nachrede", "Rufschädigung", "Lügen über mich", "online beleidigt", "verbal angegriffen"]
+    typische_rechtsgebiete: [strafrecht, datenschutz, it_recht]
+
+  stalking_nachstellung:
+    titel: "Stalking / Nachstellung"
+    strafrechtlich:
+      - { norm: "§ 238 StGB", kurz: "Nachstellung (Stalking)" }
+      - { norm: "§ 241 StGB", kurz: "Bedrohung" }
+      - { norm: "§ 240 StGB", kurz: "Nötigung" }
+    zivilrechtlich:
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Verletzung APR + körperliche Unversehrtheit" }
+      - { norm: "§ 823 Abs. 2 BGB i.V.m. § 238 StGB", kurz: "Schutzgesetzverletzung" }
+      - { norm: "§ 1004 BGB analog", kurz: "Unterlassung (Kontaktverbot, Annäherungsverbot)" }
+      - { norm: "§ 253 Abs. 2 BGB", kurz: "Schmerzensgeld bei psychischen Folgen" }
+    weitere_rechtsbereiche:
+      - { gesetz: "GewSchG", kurz: "Gewaltschutzgesetz (Schutzanordnung, Wohnungsverweisung)" }
+    signale: ["gestalkt", "Stalking", "verfolgt", "wird mir nachgestellt", "ständige Nachrichten", "lauert mir auf", "Kontaktverbot"]
+    typische_rechtsgebiete: [strafrecht, familienrecht]
+    sensibilitaet: "hoch — bei akuter Gefahr Hilfe priorisieren"
+
+  privatheit_daten:
+    titel: "Verletzung Privatheit / Datenmissbrauch"
+    strafrechtlich:
+      - { norm: "§ 201 StGB", kurz: "Verletzung Vertraulichkeit des Wortes (heimliches Aufnehmen)" }
+      - { norm: "§ 201a StGB", kurz: "Verletzung höchstpersönlicher Lebensbereich durch Bildaufnahmen" }
+      - { norm: "§ 202a StGB", kurz: "Ausspähen von Daten (Hacking)" }
+      - { norm: "§ 202b StGB", kurz: "Abfangen von Daten" }
+      - { norm: "§ 202d StGB", kurz: "Datenhehlerei" }
+      - { norm: "§ 203 StGB", kurz: "Verletzung Privatgeheimnisse (Schweigepflicht)" }
+      - { norm: "§ 206 StGB", kurz: "Verletzung Post-/Fernmeldegeheimnis" }
+    zivilrechtlich:
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Verletzung APR (informationelle Selbstbestimmung)" }
+      - { norm: "§ 823 Abs. 2 BGB i.V.m. §§ 201, 202a StGB", kurz: "Schutzgesetzverletzung" }
+      - { norm: "§ 1004 BGB analog", kurz: "Löschung, Unterlassung weiterer Verbreitung" }
+      - { norm: "§ 253 Abs. 2 BGB", kurz: "Geldentschädigung bei schwerer APR-Verletzung" }
+    oeffentlich_rechtlich:
+      - { norm: "Art. 2 Abs. 1 i.V.m. Art. 1 Abs. 1 GG", kurz: "Informationelle Selbstbestimmung" }
+      - { norm: "Art. 10 GG", kurz: "Brief-, Post-, Fernmeldegeheimnis" }
+      - { norm: "Art. 13 GG", kurz: "Unverletzlichkeit der Wohnung" }
+    weitere_rechtsbereiche:
+      - { gesetz: "DSGVO", kurz: "Art. 82 DSGVO Schadensersatz, Art. 15-22 Betroffenenrechte" }
+      - { gesetz: "BDSG", kurz: "§ 42 BDSG Strafvorschrift, § 83 Schadensersatz" }
+      - { gesetz: "KUG § 22, 23", kurz: "Recht am eigenen Bild" }
+    signale: ["heimlich aufgenommen", "Foto ohne Erlaubnis", "Hacking", "Daten geklaut", "abgehört", "Schweigepflicht verletzt", "Arzt hat geredet", "Privates verbreitet"]
+    typische_rechtsgebiete: [strafrecht, datenschutz, it_recht, medizinrecht]
+
+  # ═══════════════════════════════════════════════════════════════
+  # FREIHEIT / NÖTIGUNG / DROHUNG
+  # ═══════════════════════════════════════════════════════════════
+
+  freiheitsdelikte:
+    titel: "Freiheitsberaubung, Nötigung, Bedrohung"
+    strafrechtlich:
+      - { norm: "§ 239 StGB", kurz: "Freiheitsberaubung" }
+      - { norm: "§ 239a StGB", kurz: "Erpresserischer Menschenraub" }
+      - { norm: "§ 239b StGB", kurz: "Geiselnahme" }
+      - { norm: "§ 240 StGB", kurz: "Nötigung" }
+      - { norm: "§ 241 StGB", kurz: "Bedrohung" }
+    zivilrechtlich:
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Verletzung der Freiheit (geschütztes Rechtsgut)" }
+      - { norm: "§ 823 Abs. 2 BGB i.V.m. §§ 239 ff. StGB", kurz: "Schutzgesetzverletzung" }
+      - { norm: "§ 1004 BGB analog", kurz: "Unterlassung weiterer Bedrohung" }
+      - { norm: "§ 253 Abs. 2 BGB", kurz: "Schmerzensgeld" }
+    weitere_rechtsbereiche:
+      - { gesetz: "GewSchG", kurz: "Gewaltschutzgesetz" }
+    signale: ["eingesperrt", "festgehalten", "gezwungen", "bedroht", "Drohung", "Geisel", "entführt", "wider Willen festgehalten"]
+    typische_rechtsgebiete: [strafrecht, familienrecht]
+
+  # ═══════════════════════════════════════════════════════════════
+  # VERKEHR
+  # ═══════════════════════════════════════════════════════════════
+
+  verkehrsdelikte:
+    titel: "Verkehrsdelikte"
+    strafrechtlich:
+      - { norm: "§ 315c StGB", kurz: "Gefährdung des Straßenverkehrs" }
+      - { norm: "§ 315b StGB", kurz: "Gefährliche Eingriffe in den Straßenverkehr" }
+      - { norm: "§ 315d StGB", kurz: "Verbotene Kraftfahrzeugrennen (Raserei)" }
+      - { norm: "§ 316 StGB", kurz: "Trunkenheit im Verkehr" }
+      - { norm: "§ 142 StGB", kurz: "Unerlaubtes Entfernen vom Unfallort (Fahrerflucht)" }
+      - { norm: "§ 222 StGB", kurz: "Fahrlässige Tötung (bei tödlichem Unfall)" }
+      - { norm: "§ 229 StGB", kurz: "Fahrlässige Körperverletzung" }
+      - { norm: "§ 323c StGB", kurz: "Unterlassene Hilfeleistung" }
+    zivilrechtlich:
+      - { norm: "§ 7 StVG", kurz: "Halterhaftung (verschuldensunabhängig)" }
+      - { norm: "§ 18 StVG", kurz: "Fahrerhaftung (vermutetes Verschulden)" }
+      - { norm: "§ 17 StVG", kurz: "Schadensverteilung bei beidseitiger Haftung" }
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Schadensersatz aus Delikt" }
+      - { norm: "§ 823 Abs. 2 BGB", kurz: "Schadensersatz wegen Schutzgesetzverletzung (z.B. StVO)" }
+      - { norm: "§ 253 Abs. 2 BGB", kurz: "Schmerzensgeld bei Personenschaden" }
+      - { norm: "§ 249 BGB", kurz: "Reparaturkosten, fiktive Abrechnung" }
+      - { norm: "§ 251 BGB", kurz: "Wertersatz bei Totalschaden" }
+    oeffentlich_rechtlich:
+      - { norm: "§ 24 StVG", kurz: "Ordnungswidrigkeiten" }
+      - { norm: "§ 25 StVG", kurz: "Fahrverbot" }
+      - { norm: "FeV", kurz: "Fahrerlaubnis-Verordnung (Entziehung)" }
+    weitere_rechtsbereiche:
+      - { gesetz: "PflVG", kurz: "Pflichtversicherungsgesetz (Direktanspruch gegen Haftpflicht-Versicherer)" }
+      - { gesetz: "VVG", kurz: "Versicherungsvertragsgesetz" }
+    signale: ["Verkehrsunfall", "Unfall", "Auffahrunfall", "Fahrerflucht", "betrunken gefahren", "Raser", "Promille", "Punkte in Flensburg"]
+    typische_rechtsgebiete: [verkehrsrecht, strafrecht, versicherungsrecht]
+
+  # ═══════════════════════════════════════════════════════════════
+  # ARBEIT
+  # ═══════════════════════════════════════════════════════════════
+
+  arbeitsplatzdelikte:
+    titel: "Straftaten im Arbeitskontext"
+    strafrechtlich:
+      - { norm: "§ 266 StGB", kurz: "Untreue (gegenüber Arbeitgeber)" }
+      - { norm: "§ 266a StGB", kurz: "Vorenthalten von Arbeitsentgelt / Sozialabgaben" }
+      - { norm: "§ 263 StGB", kurz: "Spesenbetrug, Arbeitszeitbetrug" }
+      - { norm: "§ 17 UWG", kurz: "(aufgehoben — jetzt § 23 GeschGehG)" }
+      - { norm: "§ 23 GeschGehG", kurz: "Verrat von Geschäftsgeheimnissen" }
+      - { norm: "§ 185 StGB", kurz: "Beleidigung am Arbeitsplatz" }
+      - { norm: "§§ 223, 240 StGB", kurz: "Körperverletzung, Nötigung (Mobbing)" }
+    zivilrechtlich:
+      - { norm: "§ 280 BGB", kurz: "Pflichtverletzung Arbeitsvertrag (Schadensersatz)" }
+      - { norm: "§ 626 BGB", kurz: "Fristlose Kündigung wegen Pflichtverletzung" }
+      - { norm: "§ 619a BGB", kurz: "Beweislast bei Arbeitnehmerhaftung" }
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Deliktischer Schadensersatz" }
+      - { norm: "§ 7 AGG", kurz: "Diskriminierungsverbot" }
+      - { norm: "§ 15 AGG", kurz: "Entschädigungsanspruch bei Diskriminierung" }
+    oeffentlich_rechtlich:
+      - { norm: "§ 23 ArbSchG", kurz: "Arbeitsschutzpflichten" }
+    weitere_rechtsbereiche:
+      - { gesetz: "SGB VII", kurz: "Gesetzliche Unfallversicherung (Arbeitsunfall)" }
+      - { gesetz: "BetrVG", kurz: "Betriebsverfassungsgesetz" }
+    signale: ["Mobbing", "Diskriminierung am Arbeitsplatz", "fristlose Kündigung wegen Verdacht", "Spesenbetrug", "Arbeitsunfall", "Geschäftsgeheimnis", "Schwarzarbeit"]
+    typische_rechtsgebiete: [arbeitsrecht, strafrecht, sozialrecht]
+
+  # ═══════════════════════════════════════════════════════════════
+  # FAMILIE / KIND
+  # ═══════════════════════════════════════════════════════════════
+
+  haeusliche_gewalt:
+    titel: "Häusliche Gewalt"
+    strafrechtlich:
+      - { norm: "§§ 223, 224, 225 StGB", kurz: "Körperverletzung (auch von Schutzbefohlenen)" }
+      - { norm: "§ 177 StGB", kurz: "Sexualisierte Gewalt in Beziehung" }
+      - { norm: "§ 238 StGB", kurz: "Nachstellung" }
+      - { norm: "§ 240 StGB", kurz: "Nötigung" }
+      - { norm: "§ 241 StGB", kurz: "Bedrohung" }
+    zivilrechtlich:
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Schadensersatz, Schmerzensgeld" }
+      - { norm: "§ 1004 BGB analog", kurz: "Unterlassung" }
+      - { norm: "§ 1361b BGB", kurz: "Überlassung der Ehewohnung bei Getrenntleben" }
+    weitere_rechtsbereiche:
+      - { gesetz: "GewSchG", kurz: "Gewaltschutzgesetz — Schutzanordnung, Wohnungsverweisung" }
+      - { gesetz: "BGB § 1666", kurz: "Kindeswohlgefährdung — gerichtliche Maßnahmen" }
+    signale: ["geschlagen vom Partner", "Beziehungsgewalt", "häusliche Gewalt", "Ehemann schlägt", "Frau schlägt", "in der Familie geschlagen", "Wohnung gegen Willen"]
+    typische_rechtsgebiete: [strafrecht, familienrecht]
+    sensibilitaet: "sehr hoch — Hilfetelefon Gewalt gegen Frauen 08000 116 016, Frauenhauskoordinierung"
+
+  kindesmissbrauch_vernachlaessigung:
+    titel: "Kindesmissbrauch und Vernachlässigung"
+    strafrechtlich:
+      - { norm: "§ 176 StGB", kurz: "Sexueller Missbrauch von Kindern" }
+      - { norm: "§ 225 StGB", kurz: "Misshandlung von Schutzbefohlenen" }
+      - { norm: "§ 171 StGB", kurz: "Verletzung der Fürsorge-/Erziehungspflicht" }
+      - { norm: "§ 170 StGB", kurz: "Verletzung der Unterhaltspflicht" }
+      - { norm: "§ 235 StGB", kurz: "Entziehung Minderjähriger" }
+    zivilrechtlich:
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Schadensersatz, Schmerzensgeld für Kind" }
+      - { norm: "§ 832 BGB", kurz: "Aufsichtspflichtverletzung (Eltern für Kind)" }
+      - { norm: "§ 1666 BGB", kurz: "Maßnahmen bei Kindeswohlgefährdung" }
+      - { norm: "§ 1684 BGB", kurz: "Umgangsrecht (kann eingeschränkt werden)" }
+    weitere_rechtsbereiche:
+      - { gesetz: "SGB VIII", kurz: "Kinder- und Jugendhilfegesetz — Jugendamt" }
+    signale: ["Kind geschlagen", "Kindesmissbrauch", "Kind vernachlässigt", "Jugendamt eingeschaltet", "Kindeswohl gefährdet", "Sorgerechtsentzug"]
+    typische_rechtsgebiete: [strafrecht, familienrecht, jugendrecht, sozialrecht]
+    sensibilitaet: "sehr hoch — Hilfetelefon Sexueller Missbrauch 0800 22 55 530, Nummer gegen Kummer"
+
+  unterhaltspflichtverletzung:
+    titel: "Unterhaltspflichtverletzung"
+    strafrechtlich:
+      - { norm: "§ 170 StGB", kurz: "Verletzung der Unterhaltspflicht" }
+    zivilrechtlich:
+      - { norm: "§ 1601 BGB", kurz: "Unterhaltsverpflichtete" }
+      - { norm: "§ 1612a BGB", kurz: "Mindestunterhalt minderjähriger Kinder" }
+      - { norm: "§ 1361 BGB", kurz: "Trennungsunterhalt" }
+      - { norm: "§ 1570 BGB", kurz: "Betreuungsunterhalt nach Scheidung" }
+    oeffentlich_rechtlich:
+      - { norm: "UVG", kurz: "Unterhaltsvorschussgesetz — staatliche Vorleistung" }
+    weitere_rechtsbereiche:
+      - { gesetz: "FamFG", kurz: "Verfahren in Familiensachen" }
+    signale: ["zahlt keinen Unterhalt", "Unterhaltsrückstand", "Düsseldorfer Tabelle nicht eingehalten", "Vater zahlt nicht"]
+    typische_rechtsgebiete: [familienrecht, strafrecht]
+
+  # ═══════════════════════════════════════════════════════════════
+  # WIRTSCHAFT / GESELLSCHAFT
+  # ═══════════════════════════════════════════════════════════════
+
+  insolvenzdelikte:
+    titel: "Insolvenzstraftaten und zivilrechtliche Folgen"
+    strafrechtlich:
+      - { norm: "§ 283 StGB", kurz: "Bankrott" }
+      - { norm: "§ 283b StGB", kurz: "Verletzung Buchführungspflicht" }
+      - { norm: "§ 283c StGB", kurz: "Gläubigerbegünstigung" }
+      - { norm: "§ 266a StGB", kurz: "Sozialabgaben nicht abgeführt" }
+      - { norm: "§ 15a InsO i.V.m. § 15a Abs. 4 InsO", kurz: "Insolvenzverschleppung" }
+    zivilrechtlich:
+      - { norm: "§ 826 BGB", kurz: "Sittenwidrige Schädigung durch Insolvenzverschleppung" }
+      - { norm: "§ 823 Abs. 2 BGB i.V.m. § 15a InsO", kurz: "Schutzgesetzverletzung" }
+      - { norm: "§ 130 InsO", kurz: "Insolvenzanfechtung kongruente Deckung" }
+      - { norm: "§ 133 InsO", kurz: "Insolvenzanfechtung vorsätzliche Benachteiligung" }
+    weitere_rechtsbereiche:
+      - { gesetz: "InsO", kurz: "Insolvenzordnung — Verfahren, Restschuldbefreiung" }
+    signale: ["Insolvenz verschleppt", "Pleite", "Vermögen beiseite geschafft", "Konkurs", "Gläubiger benachteiligt"]
+    typische_rechtsgebiete: [insolvenzrecht, strafrecht, gesellschaftsrecht]
+
+  korruption_bestechung:
+    titel: "Bestechung und Korruption"
+    strafrechtlich:
+      - { norm: "§ 299 StGB", kurz: "Bestechlichkeit/Bestechung im geschäftlichen Verkehr" }
+      - { norm: "§ 299a, 299b StGB", kurz: "Bestechung im Gesundheitswesen" }
+      - { norm: "§ 331, 332 StGB", kurz: "Vorteilsannahme/Bestechlichkeit Amtsträger" }
+      - { norm: "§ 333, 334 StGB", kurz: "Vorteilsgewährung/Bestechung Amtsträger" }
+    zivilrechtlich:
+      - { norm: "§ 134 BGB", kurz: "Nichtigkeit wegen Gesetzesverstoß" }
+      - { norm: "§ 138 BGB", kurz: "Sittenwidrigkeit" }
+      - { norm: "§ 823 Abs. 2 BGB i.V.m. §§ 299, 332 StGB", kurz: "Schutzgesetzverletzung" }
+      - { norm: "§ 826 BGB", kurz: "Sittenwidrige Schädigung" }
+      - { norm: "§ 280 BGB", kurz: "Pflichtverletzung (Arbeitnehmer ↔ Arbeitgeber)" }
+      - { norm: "§ 626 BGB", kurz: "Fristlose Kündigung" }
+    oeffentlich_rechtlich:
+      - { norm: "§ 97 GWB", kurz: "Auswirkungen auf Vergabeverfahren" }
+    weitere_rechtsbereiche:
+      - { gesetz: "GWB §§ 124, 125", kurz: "Ausschluss von öffentlichen Vergabeverfahren" }
+    signale: ["Bestechung", "Schmiergeld", "Korruption", "Kickback", "Provision unter der Hand", "Vorteil angenommen"]
+    typische_rechtsgebiete: [strafrecht, wirtschaftsstrafrecht, vergaberecht, arbeitsrecht]
+
+  # ═══════════════════════════════════════════════════════════════
+  # UMWELT / GEMEINGEFAHR
+  # ═══════════════════════════════════════════════════════════════
+
+  umweltdelikte:
+    titel: "Umweltstraftaten"
+    strafrechtlich:
+      - { norm: "§ 324 StGB", kurz: "Gewässerverunreinigung" }
+      - { norm: "§ 324a StGB", kurz: "Bodenverunreinigung" }
+      - { norm: "§ 325 StGB", kurz: "Luftverunreinigung" }
+      - { norm: "§ 326 StGB", kurz: "Unerlaubter Umgang mit Abfällen" }
+    zivilrechtlich:
+      - { norm: "§ 906 BGB", kurz: "Zuführungen durch Nachbargrundstück" }
+      - { norm: "§ 1004 BGB", kurz: "Unterlassung, Beseitigung" }
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Schadensersatz bei Eigentumsverletzung" }
+      - { norm: "§ 823 Abs. 2 BGB i.V.m. § 324 StGB", kurz: "Schutzgesetzverletzung" }
+      - { norm: "§ 906 Abs. 2 S. 2 BGB", kurz: "Ausgleichsanspruch (verschuldensunabhängig)" }
+    oeffentlich_rechtlich:
+      - { norm: "BImSchG", kurz: "Bundes-Immissionsschutzgesetz" }
+      - { norm: "WHG", kurz: "Wasserhaushaltsgesetz" }
+      - { norm: "BBodSchG", kurz: "Bundes-Bodenschutzgesetz" }
+      - { norm: "§ 16 BImSchG", kurz: "Genehmigungspflicht" }
+    weitere_rechtsbereiche:
+      - { gesetz: "USchadG", kurz: "Umweltschadensgesetz" }
+    signale: ["Gewässer verschmutzt", "Öl ins Wasser", "Boden verseucht", "Müll illegal entsorgt", "Lärm aus Industrie"]
+    typische_rechtsgebiete: [umweltrecht, strafrecht, nachbarrecht]
+
+  brandstiftung_gemeingefahr:
+    titel: "Brandstiftung und gemeingefährliche Delikte"
+    strafrechtlich:
+      - { norm: "§ 306 StGB", kurz: "Brandstiftung" }
+      - { norm: "§ 306a StGB", kurz: "Schwere Brandstiftung" }
+      - { norm: "§ 306d StGB", kurz: "Fahrlässige Brandstiftung" }
+    zivilrechtlich:
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Schadensersatz wegen Eigentumsverletzung" }
+      - { norm: "§ 823 Abs. 2 BGB i.V.m. § 306 StGB", kurz: "Schutzgesetzverletzung" }
+      - { norm: "§ 826 BGB", kurz: "Bei vorsätzlicher Brandstiftung" }
+    weitere_rechtsbereiche:
+      - { gesetz: "VVG", kurz: "Versicherungsvertragsgesetz (Gebäudeversicherung)" }
+    signale: ["Feuer gelegt", "Brand gelegt", "Brandstiftung", "abgebrannt"]
+    typische_rechtsgebiete: [strafrecht, versicherungsrecht]
+
+  # ═══════════════════════════════════════════════════════════════
+  # IT / DIGITAL
+  # ═══════════════════════════════════════════════════════════════
+
+  it_straftaten:
+    titel: "Cybercrime / IT-Straftaten"
+    strafrechtlich:
+      - { norm: "§ 202a StGB", kurz: "Ausspähen von Daten (Hacking)" }
+      - { norm: "§ 202b StGB", kurz: "Abfangen von Daten" }
+      - { norm: "§ 202c StGB", kurz: "Vorbereiten von Hacking" }
+      - { norm: "§ 202d StGB", kurz: "Datenhehlerei" }
+      - { norm: "§ 263a StGB", kurz: "Computerbetrug" }
+      - { norm: "§ 269 StGB", kurz: "Fälschung beweiserheblicher Daten" }
+      - { norm: "§ 303a StGB", kurz: "Datenveränderung" }
+      - { norm: "§ 303b StGB", kurz: "Computersabotage" }
+    zivilrechtlich:
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Eigentums-/Datenverletzung" }
+      - { norm: "§ 823 Abs. 2 BGB i.V.m. §§ 202a, 263a, 303a StGB", kurz: "Schutzgesetzverletzung" }
+      - { norm: "§ 1004 BGB analog", kurz: "Unterlassung, Löschung" }
+      - { norm: "§ 826 BGB", kurz: "Sittenwidrige Schädigung" }
+    oeffentlich_rechtlich:
+      - { norm: "DSGVO Art. 82", kurz: "Schadensersatzanspruch bei DSGVO-Verstoß" }
+      - { norm: "DSGVO Art. 33", kurz: "Meldepflicht Datenschutzverletzung" }
+    weitere_rechtsbereiche:
+      - { gesetz: "BSIG", kurz: "BSI-Gesetz (kritische Infrastrukturen)" }
+      - { gesetz: "TMG / DDG", kurz: "Telemedien- bzw. Digitale-Dienste-Gesetz" }
+    signale: ["gehackt", "Phishing", "Trojaner", "Ransomware", "Daten geklaut", "Account übernommen", "Cyberangriff"]
+    typische_rechtsgebiete: [it_recht, strafrecht, datenschutz]
+
+  # ═══════════════════════════════════════════════════════════════
+  # STAAT / AMTSTRÄGER
+  # ═══════════════════════════════════════════════════════════════
+
+  amtspflichtverletzung:
+    titel: "Amtspflichtverletzung und staatliches Fehlverhalten"
+    strafrechtlich:
+      - { norm: "§ 339 StGB", kurz: "Rechtsbeugung" }
+      - { norm: "§ 340 StGB", kurz: "Körperverletzung im Amt" }
+      - { norm: "§ 343 StGB", kurz: "Aussageerpressung" }
+      - { norm: "§ 344 StGB", kurz: "Verfolgung Unschuldiger" }
+      - { norm: "§ 348 StGB", kurz: "Falschbeurkundung im Amt" }
+      - { norm: "§ 353b StGB", kurz: "Verletzung Dienstgeheimnis" }
+    zivilrechtlich:
+      - { norm: "§ 839 BGB", kurz: "Haftung bei Amtspflichtverletzung" }
+      - { norm: "§ 839 BGB i.V.m. Art. 34 GG", kurz: "Staatshaftung (haftet Land/Bund statt Beamter)" }
+    oeffentlich_rechtlich:
+      - { norm: "Art. 34 GG", kurz: "Übergeleitete Haftung auf den Staat" }
+      - { norm: "Allgemeiner Folgenbeseitigungsanspruch", kurz: "Wiederherstellung des ursprünglichen Zustands" }
+    weitere_rechtsbereiche:
+      - { gesetz: "StrEG", kurz: "Strafrechtsentschädigungsgesetz (bei Freispruch nach U-Haft)" }
+    signale: ["Polizei hat geschlagen", "Beamter hat", "Amtsmissbrauch", "Behördenfehler", "rechtswidriger Bescheid", "ungerechte Polizeikontrolle"]
+    typische_rechtsgebiete: [verwaltungsrecht, staatsorganisationsrecht, strafrecht]
+
+  # ═══════════════════════════════════════════════════════════════
+  # SPEZIALFÄLLE: Mehrebenen-Konstellationen
+  # ═══════════════════════════════════════════════════════════════
+
+  vertragsbruch_mit_betrugsabsicht:
+    titel: "Vertragsbruch mit Betrugsabsicht (Eingehungsbetrug)"
+    hinweis: "Reiner Vertragsbruch ist nicht strafbar — aber Eingehung mit Täuschungsabsicht über Erfüllungswillen ist Betrug"
+    strafrechtlich:
+      - { norm: "§ 263 StGB", kurz: "Betrug (Eingehungsbetrug bei fehlender Erfüllungsabsicht)" }
+    zivilrechtlich:
+      - { norm: "§ 280 BGB", kurz: "Schadensersatz wegen Pflichtverletzung" }
+      - { norm: "§ 281 BGB", kurz: "Schadensersatz statt Leistung" }
+      - { norm: "§ 323 BGB", kurz: "Rücktritt vom Vertrag" }
+      - { norm: "§ 123 BGB", kurz: "Anfechtung wegen Täuschung" }
+      - { norm: "§ 826 BGB", kurz: "Sittenwidrige Schädigung" }
+    signale: ["nie vorhatten zu zahlen", "Eingehungsbetrug", "Vertrag gemacht und nicht geliefert"]
+    typische_rechtsgebiete: [strafrecht, kaufrecht, wirtschaftsstrafrecht]
+
+  produktmangel_gesundheitsschaden:
+    titel: "Fehlerhafte Produkte mit Gesundheitsschaden"
+    hinweis: "Kombination Vertrag / Produkthaftung / Delikt / ggf. Strafrecht"
+    strafrechtlich:
+      - { norm: "§ 229 StGB", kurz: "Fahrlässige Körperverletzung" }
+      - { norm: "§ 222 StGB", kurz: "Fahrlässige Tötung" }
+    zivilrechtlich:
+      - { norm: "§ 437 BGB", kurz: "Mangelrechte des Käufers" }
+      - { norm: "§ 280 BGB", kurz: "Schadensersatz wegen mangelhafter Leistung" }
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Deliktische Produkthaftung" }
+      - { norm: "§ 1 ProdHaftG", kurz: "Verschuldensunabhängige Haftung des Herstellers" }
+      - { norm: "§ 8 ProdHaftG", kurz: "Schmerzensgeld bei Personenschaden" }
+    weitere_rechtsbereiche:
+      - { gesetz: "ProdSG", kurz: "Produktsicherheitsgesetz" }
+      - { gesetz: "MDR", kurz: "Medizinprodukteverordnung" }
+    signale: ["Produkt war gefährlich", "verletzt durch Produkt", "Maschine kaputt + verletzt", "Lebensmittelvergiftung"]
+    typische_rechtsgebiete: [kaufrecht, medizinrecht, strafrecht]
+
+  verbraucherkauf:
+    titel: "Verbraucherkauf (B2C) — Privatperson kauft von Unternehmer"
+    hinweis: |
+      Verbraucherrecht (§§ 312 ff., 355 ff. BGB) ist IMMER parallel zum Kaufrecht
+      anwendbar, wenn der Käufer Verbraucher i.S.d. § 13 BGB (Privatperson, nicht
+      gewerblich handelnd) und der Verkäufer Unternehmer i.S.d. § 14 BGB ist.
+      Gilt NICHT bei B2B (beide Unternehmer) oder C2C (Privatverkauf).
+    zivilrechtlich:
+      - { norm: "§ 13 BGB", kurz: "Verbraucherbegriff (natürliche Person außerhalb gewerblicher Tätigkeit)" }
+      - { norm: "§ 14 BGB", kurz: "Unternehmerbegriff" }
+      - { norm: "§ 312 BGB", kurz: "Anwendungsbereich Verbraucherverträge" }
+      - { norm: "§ 312g BGB", kurz: "Widerrufsrecht bei Fernabsatz und Haustürgeschäften" }
+      - { norm: "§ 355 BGB", kurz: "Widerrufsrecht bei Verbraucherverträgen (14-Tage-Frist)" }
+      - { norm: "§ 474 BGB", kurz: "Verbrauchsgüterkauf (besondere Käuferrechte)" }
+      - { norm: "§ 476 BGB", kurz: "Beweislastumkehr — Mangel wird vermutet (1 Jahr)" }
+      - { norm: "§ 477 BGB", kurz: "Sondervorschriften für Verbrauchsgüterkauf" }
+      - { norm: "§ 433 BGB", kurz: "Kaufvertrag — Hauptpflichten" }
+      - { norm: "§ 437 BGB", kurz: "Rechte des Käufers bei Mängeln (Nacherfüllung, Rücktritt, Minderung, SE)" }
+    signale:
+      - online bestellt
+      - online gekauft
+      - im Internet bestellt
+      - beim Händler gekauft
+      - Händler
+      - Shop
+      - Onlineshop
+      - Plattform
+      - Marktplatz
+      - nicht geliefert
+      - falsche Ware
+      - Rückgabe verweigert
+      - Rückerstattung verweigert
+      - Reklamation abgelehnt
+      - Gewährleistung verweigert
+      - Widerruf
+      - widerrufen
+      - Haustürgeschäft
+      - Fernabsatz
+      - Abo kündigen
+      - Abonnement kündigen
+      - automatisch verlängert
+      - unter Druck gesetzt zum Kauf
+    typische_rechtsgebiete: [kaufrecht, verbraucherrecht]
+
+  diskriminierung_arbeitsplatz:
+    titel: "Diskriminierung am Arbeitsplatz"
+    strafrechtlich:
+      - { norm: "§ 185 StGB", kurz: "Beleidigung (bei diskriminierender Äußerung)" }
+      - { norm: "§ 130 StGB", kurz: "Volksverhetzung (in schweren Fällen)" }
+      - { norm: "§ 192a StGB", kurz: "Verhetzende Beleidigung" }
+    zivilrechtlich:
+      - { norm: "§ 7 AGG", kurz: "Benachteiligungsverbot" }
+      - { norm: "§ 15 AGG", kurz: "Entschädigung und Schadensersatz" }
+      - { norm: "§ 22 AGG", kurz: "Beweislast" }
+      - { norm: "§ 823 Abs. 1 BGB", kurz: "Allgemeines Persönlichkeitsrecht" }
+      - { norm: "§ 280 BGB", kurz: "Pflichtverletzung Arbeitsvertrag (Schutzpflichten)" }
+    oeffentlich_rechtlich:
+      - { norm: "Art. 3 GG", kurz: "Gleichheitsgrundsatz" }
+    signale: ["Diskriminierung", "Mobbing", "wegen Herkunft", "wegen Geschlecht", "rassistisch behandelt", "ungerechte Behandlung"]
+    typische_rechtsgebiete: [arbeitsrecht, strafrecht]
+
+konkurrenz_und_doppelrelevanz:
+  titel: "Hinweise zu Konkurrenzen"
+  prinzipien:
+    schutzgesetz_brueckenfunktion:
+      titel: "§ 823 Abs. 2 BGB als Brücke zwischen Straf- und Zivilrecht"
+      beschreibung: |
+        Jeder StGB-Tatbestand, der dem Schutz eines Individuums dient, ist
+        ein Schutzgesetz iSd § 823 Abs. 2 BGB. Damit löst praktisch jede
+        gegen ein Individuum gerichtete Straftat AUTOMATISCH einen
+        zivilrechtlichen Schadensersatzanspruch aus.
+      beispiele:
+        - "Körperverletzung § 223 StGB → § 823 II BGB + § 223 StGB"
+        - "Sachbeschädigung § 303 StGB → § 823 II BGB + § 303 StGB"
+        - "Betrug § 263 StGB → § 823 II BGB + § 263 StGB"
+      einschraenkung: "Reine Staatsschutz-Delikte (Hochverrat, Landesverrat) sind keine Schutzgesetze."
+
+    persoenlichkeitsrecht_brueckenfunktion:
+      titel: "Allgemeines Persönlichkeitsrecht (APR) als zivilrechtliches Pendant"
+      beschreibung: |
+        Das APR (§ 823 Abs. 1 BGB i.V.m. Art. 2 Abs. 1, Art. 1 Abs. 1 GG)
+        bildet die zivilrechtliche Auffangposition für viele Persönlich-
+        keitsverletzungen, die auch strafrechtlich relevant sein können.
+      beispiele:
+        - "Beleidigung § 185 StGB → APR-Verletzung § 823 I BGB"
+        - "Heimliche Aufnahme § 201a StGB → APR (informationelle Selbstbestimmung)"
+        - "Stalking § 238 StGB → APR + Freiheit"
+
+    amtshaftung_brueckenfunktion:
+      titel: "§ 839 BGB i.V.m. Art. 34 GG bei staatlichem Handeln"
+      beschreibung: |
+        Bei rechtswidrigem Handeln von Amtsträgern haftet der Staat
+        (nicht der Beamte persönlich). Häufig kombiniert mit straf-
+        rechtlichen Tatbeständen (§§ 339, 340, 343 StGB).
+      beispiele:
+        - "Polizeigewalt § 340 StGB → § 839 BGB i.V.m. Art. 34 GG"
+        - "Rechtsbeugung § 339 StGB → Amtshaftung"
+
+    sittenwidrigkeit_brueckenfunktion:
+      titel: "§ 826 BGB als deliktischer Auffangtatbestand"
+      beschreibung: |
+        § 826 BGB greift bei sittenwidriger vorsätzlicher Schädigung —
+        oft parallel zu Vorsatzdelikten des StGB anwendbar.
+      beispiele:
+        - "Betrug § 263 StGB → § 826 BGB"
+        - "Erpressung § 253 StGB → § 826 BGB"
+        - "Insolvenzverschleppung § 15a InsO → § 826 BGB"
+
+verwendung_im_intent_skill:
+  signal_matching: |
+    Bei JEDEM Signal-Treffer in strafrecht_systematik.yaml automatisch
+    die entsprechende Querverstrebung aus dieser YAML abrufen. Beispiel:
+    User sagt "geschlagen" → strafrechtlich § 223 StGB → automatisch
+    parallele Hypothese: zivilrechtlich § 823 BGB + Schmerzensgeld.
+    
+  routing_logik: |
+    Bei Querverstrebungs-Treffer in vermutete_rechtsgebiete-Liste MEHRERE
+    Skills aufnehmen, nicht nur das primäre. Beispiel:
+    Körperverletzung → ["strafrecht", "verkehrsrecht" wenn Unfall,
+    "arbeitsrecht" wenn am Arbeitsplatz]
+    
+  begehr_klarung: |
+    Bei doppelt relevanten Konstellationen GEZIELT nachfragen, was der
+    Nutzer eigentlich will:
+    - Strafanzeige? → Strafrecht-Pfad
+    - Schadensersatz/Schmerzensgeld? → Zivilrecht-Pfad  
+    - Beides? → Beide Pfade parallel
+    - Unterlassung weiterer Übergriffe? → § 1004 BGB analog
+    - Schutz (z.B. Wohnung)? → GewSchG
+    
+  hypothesen_test_template: |
+    "Habe ich richtig verstanden: Es geht Ihnen darum, dass [Sachverhalt].
+    Wollen Sie:
+    a) eine Strafanzeige erstatten,
+    b) Schadensersatz oder Schmerzensgeld einklagen,
+    c) erreichen, dass [die Person] das in Zukunft unterlässt,
+    oder mehreres davon?"
+    
+  sensibilitaet_handling: |
+    Bei Konstellationen mit Flag "hoch" oder "sehr hoch":
+    - Hilfsangebote unaufgefordert anzeigen
+    - Empathisch formulieren
+    - Nicht direkt zu Norm-Diskussion springen
+    - Bei akuter Gefahr: 110 / Hilfetelefon priorisieren
+    
+  multi_skill_handoff: |
+    Im Übergabe-JSON unter vermutete_rechtsgebiete ALLE relevanten
+    Skills aufnehmen. Skill-Orchestrator entscheidet später, ob
+    parallel oder sequentiell beantwortet wird.

@@ -543,6 +543,22 @@ class IntentEngine:
         # Konstellations-Fallback in dieser Runde schon das Routing setzt.
         state.vermutete_rechtsgebiete = self._skill_kandidaten(match, state.llm_rechtsgebiete)
 
+        # B2C-Kopplungsregel: kaufrecht → verbraucherrecht immer zusammen, außer B2B.
+        # Juristisch: Verbraucherrecht ist eine Schutzschicht auf dem Kaufrecht;
+        # greift immer wenn Privatperson (§ 13 BGB) ↔ Unternehmer (§ 14 BGB).
+        _skills_now = {rg.skill for rg in state.vermutete_rechtsgebiete}
+        if "kaufrecht" in _skills_now and "verbraucherrecht" not in _skills_now:
+            _corpus_lc = corpus.lower()
+            _b2b_buyer = ("als unternehmer", "als gewerblich", "für mein unternehmen",
+                          "für meine firma", "mein betrieb ", "mein unternehmen ",
+                          "geschäftlich bestellt", "gewerblich tätig",
+                          "für unsere firma", "für unseren betrieb")
+            if not any(s in _corpus_lc for s in _b2b_buyer):
+                state.llm_rechtsgebiete["verbraucherrecht"] = max(
+                    state.llm_rechtsgebiete.get("verbraucherrecht", 0.0), 0.7)
+                state.vermutete_rechtsgebiete = self._skill_kandidaten(
+                    match, state.llm_rechtsgebiete)
+
         # Rechtssystem aktualisieren + Sachverhalts-Tiefe mergen
         if state.vermutete_rechtsgebiete:
             state.rechtssystem = config.rechtssystem_fuer_skill(
