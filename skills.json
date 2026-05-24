@@ -136,7 +136,7 @@
       "status": "ready",
       "owner": "Admin",
       "created_at": "2026-05-05T10:49:29.431380+00:00",
-      "updated_at": "2026-05-17T16:35:37.303188+00:00",
+      "updated_at": "2026-05-23T16:37:04.266145+00:00",
       "laws": [
         {
           "id": "2132bd6b",
@@ -218,6 +218,36 @@
           "book_id": "eisentraut-verwaltungsrecht-2020",
           "chunks_added": 346,
           "imported_at": "2026-05-17T16:35:37.303169+00:00"
+        },
+        {
+          "book_id": "eisentraut-verwaltungsrecht-2020",
+          "chunks_added": 346,
+          "imported_at": "2026-05-18T16:37:27.830239+00:00"
+        },
+        {
+          "book_id": "eisentraut-verwaltungsrecht-2020",
+          "chunks_added": 346,
+          "imported_at": "2026-05-19T16:37:25.227123+00:00"
+        },
+        {
+          "book_id": "eisentraut-verwaltungsrecht-2020",
+          "chunks_added": 346,
+          "imported_at": "2026-05-20T16:37:06.339062+00:00"
+        },
+        {
+          "book_id": "eisentraut-verwaltungsrecht-2020",
+          "chunks_added": 346,
+          "imported_at": "2026-05-21T16:37:06.848406+00:00"
+        },
+        {
+          "book_id": "eisentraut-verwaltungsrecht-2020",
+          "chunks_added": 346,
+          "imported_at": "2026-05-22T16:37:10.514790+00:00"
+        },
+        {
+          "book_id": "eisentraut-verwaltungsrecht-2020",
+          "chunks_added": 346,
+          "imported_at": "2026-05-23T16:37:04.266127+00:00"
         }
       ]
     },
@@ -233,7 +263,7 @@
       "status": "ready",
       "owner": "Admin",
       "created_at": "2026-05-05T11:49:11.354815+00:00",
-      "updated_at": "2026-05-17T16:30:36.592720+00:00",
+      "updated_at": "2026-05-23T16:33:57.254430+00:00",
       "laws": [
         {
           "id": "a6743d70",
@@ -312,6 +342,66 @@
           "book_id": "hahn-grundrechte-lehrbuch-2022",
           "chunks_added": 19,
           "imported_at": "2026-05-17T16:30:36.592708+00:00"
+        },
+        {
+          "book_id": "hahn-grundrechte-lehrbuch-2022",
+          "chunks_added": 19,
+          "imported_at": "2026-05-18T16:31:14.883730+00:00"
+        },
+        {
+          "book_id": "petras-grundrechte-faelle-2023",
+          "chunks_added": 197,
+          "imported_at": "2026-05-18T16:34:10.326758+00:00"
+        },
+        {
+          "book_id": "hahn-grundrechte-lehrbuch-2022",
+          "chunks_added": 19,
+          "imported_at": "2026-05-19T16:31:16.097536+00:00"
+        },
+        {
+          "book_id": "petras-grundrechte-faelle-2023",
+          "chunks_added": 197,
+          "imported_at": "2026-05-19T16:34:09.194037+00:00"
+        },
+        {
+          "book_id": "hahn-grundrechte-lehrbuch-2022",
+          "chunks_added": 19,
+          "imported_at": "2026-05-20T16:31:15.270298+00:00"
+        },
+        {
+          "book_id": "petras-grundrechte-faelle-2023",
+          "chunks_added": 197,
+          "imported_at": "2026-05-20T16:34:03.153600+00:00"
+        },
+        {
+          "book_id": "hahn-grundrechte-lehrbuch-2022",
+          "chunks_added": 19,
+          "imported_at": "2026-05-21T16:31:14.924788+00:00"
+        },
+        {
+          "book_id": "petras-grundrechte-faelle-2023",
+          "chunks_added": 197,
+          "imported_at": "2026-05-21T16:34:06.098269+00:00"
+        },
+        {
+          "book_id": "hahn-grundrechte-lehrbuch-2022",
+          "chunks_added": 19,
+          "imported_at": "2026-05-22T16:31:14.748429+00:00"
+        },
+        {
+          "book_id": "petras-grundrechte-faelle-2023",
+          "chunks_added": 197,
+          "imported_at": "2026-05-22T16:34:08.038723+00:00"
+        },
+        {
+          "book_id": "hahn-grundrechte-lehrbuch-2022",
+          "chunks_added": 19,
+          "imported_at": "2026-05-23T16:31:15.358956+00:00"
+        },
+        {
+          "book_id": "petras-grundrechte-faelle-2023",
+          "chunks_added": 197,
+          "imported_at": "2026-05-23T16:33:57.254404+00:00"
         }
       ]
     },

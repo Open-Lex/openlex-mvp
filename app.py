@@ -3976,20 +3976,22 @@ def build_app() -> gr.Blocks:
                 chat_history[-1]["content"] = full_msg
                 yield chat_history, partial_response, "", ""
 
+        _reenable_input = lambda: gr.update(interactive=True, value="")
+
         submit_btn.click(
             respond,
             inputs=[msg_input, chatbot, skill_selector],
             outputs=[chatbot, copy_store, msg_input, welcome],
             show_progress="hidden",
             concurrency_limit=10,
-        )
+        ).then(_reenable_input, outputs=[msg_input])
         msg_input.submit(
             respond,
             inputs=[msg_input, chatbot, skill_selector],
             outputs=[chatbot, copy_store, msg_input, welcome],
             show_progress="hidden",
             concurrency_limit=10,
-        )
+        ).then(_reenable_input, outputs=[msg_input])
         clear_trigger.click(
             lambda: ([], "", "", WELCOME_HTML),
             outputs=[chatbot, copy_store, msg_input, welcome],

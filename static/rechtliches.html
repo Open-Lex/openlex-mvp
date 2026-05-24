@@ -54,7 +54,7 @@
 <a href="https://open-lex.cloud" class="back-link">&larr; Zurück zu OpenLex</a>
 
 <div class="page-title">Open<span>Lex</span> – Rechtliches</div>
-<div class="page-meta">Stand: April 2026</div>
+<div class="page-meta">Stand: Mai 2026</div>
 
 <div class="toc">
   <div class="toc-title">Inhalt</div>
@@ -289,8 +289,38 @@ Deutschland</p>
 <li><strong>Keine Datenübermittlung an Dritte</strong></li>
 </ul>
 
-<h3>6.3 Keine Speicherung von Anfragen</h3>
-<p>Ihre Fragen und die generierten Antworten werden <strong>nicht dauerhaft gespeichert</strong>. Es gibt keine Nutzerkonten, keine Anfrage-Historie und kein Logging von Konversationsinhalten. Nach dem Schließen des Browserfensters sind die Daten unwiederbringlich verloren.</p>
+<h3>6.3 Keine Speicherung von Anfragen (Hauptanwendung)</h3>
+<p>In der regulären KI-Anwendung werden Ihre Fragen und die generierten Antworten <strong>nicht dauerhaft gespeichert</strong>. Es gibt keine Nutzerkonten, keine Anfrage-Historie und kein Logging von Konversationsinhalten. Nach dem Schließen des Browserfensters sind die Daten unwiederbringlich verloren.</p>
+<p>Für die Beta-Funktion unter <code>/beta/</code> gelten abweichende Regelungen (siehe Abschnitt 6.4).</p>
+
+<h3>6.4 Beta-Funktion (app.open-lex.cloud/beta/) – Sitzungsdaten</h3>
+<p>Die Beta-Funktion führt ein <strong>KI-gestütztes Erstgespräch</strong>, das den Sachverhalt Schritt für Schritt erfasst und an den passenden Rechtsbereichs-Skill weiterleitet. Dafür ist eine temporäre Sitzungsspeicherung technisch erforderlich.</p>
+<p><strong>Gespeicherte Daten je Sitzung:</strong></p>
+<ul>
+  <li>Technische Sitzungs-ID (UUID, kein Personenbezug für sich genommen)</li>
+  <li>Gesprächsverlauf (Ihre Nachrichten und die Antworten des Systems)</li>
+  <li>Extrahierte Sachverhalts-Felder: Beteiligte (Wer/Von wem), Anliegen (Was), Sachverhalt (Woraus)</li>
+  <li>Erkanntes Rechtsgebiet und Sprachstil (Laie / Jurist)</li>
+</ul>
+<p><strong>Speicherort:</strong> Ausschließlich auf unserem Server (kein Export an Dritte).</p>
+<p><strong>Speicherdauer:</strong> Maximal 24 Stunden; danach automatische Löschung. Eine frühere manuelle Löschung ist jederzeit möglich (siehe unten).</p>
+<p><strong>Recht auf sofortige Löschung (Art. 17 DSGVO):</strong> Über den Button <strong>„Daten löschen"</strong> in der Beta-Oberfläche können Sie Ihre Sitzungsdaten sofort und vollständig löschen. Die Löschung ist unwiderruflich und erfolgt ohne Angabe von Gründen.</p>
+<p><strong>LLM-Verarbeitung:</strong> Die Gesprächsdaten werden — wie in Abschnitt 6.2 beschrieben — zur Absichtserkennung und Frageformulierung an Mistral AI (primär) bzw. den lokalen Ollama-Fallback übermittelt.</p>
+<p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bereitstellung des mehrstufigen Mandantengesprächs; technisch notwendig für die Sitzungskontinuität).</p>
+
+<h3>6.5 Anonyme Nutzungsstatistik (Beta)</h3>
+<p>Zur Qualitätssicherung der Beta-Funktion werden <strong>anonyme Nutzungsereignisse</strong> protokolliert.</p>
+<p><strong>Erfasste Daten:</strong></p>
+<ul>
+  <li>Ereignistyp (z. B. Sitzungsstart, Gesprächsrunde, Weiterleitung an Rechtsgebiet)</li>
+  <li>SHA-256-Hash der Sitzungs-ID (nur erste 12 Zeichen) — kein Rückschluss auf Ihre Person möglich</li>
+  <li>Anzahl der Gesprächsrunden bis zur Weiterleitung</li>
+  <li>Erkanntes Rechtsgebiet (z. B. <code>mietrecht</code>) und Konfidenzwert</li>
+  <li><strong>Kein Nutzertext, keine Anfrageinhalte, keine IP-Adresse</strong></li>
+</ul>
+<p><strong>Speicherformat:</strong> Append-only JSONL-Datei auf unserem Server; keine Übermittlung an Dritte.</p>
+<p><strong>Zweck:</strong> Aggregierte Auswertung der Treffsicherheit und Konversationsqualität (z. B. durchschnittliche Runden bis zur Weiterleitung, Verteilung der Rechtsgebiete). Die Daten ermöglichen zu keinem Zeitpunkt die Identifizierung einzelner Personen.</p>
+<p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Qualitätssicherung und Weiterentwicklung des Dienstes).</p>
 
 <h2>7. Modell-Downloads</h2>
 <p>Die für die lokale Verarbeitung eingesetzten KI-Modelle (Embedding-Modell und Cross-Encoder, siehe Abschnitt 6.1) werden einmalig bei Ersteinrichtung des Servers von <strong>Hugging Face, Inc.</strong> (USA) heruntergeladen und anschließend dauerhaft lokal gespeichert. Bei diesem Download werden <strong>keine Nutzerdaten</strong> an Hugging Face übermittelt – es handelt sich ausschließlich um den Bezug von Modelldateien (vergleichbar mit dem Download einer Software). Im laufenden Betrieb findet keine Kommunikation mit Hugging Face statt.</p>
@@ -313,7 +343,8 @@ Deutschland</p>
 <li><strong>Widerspruchsrecht</strong> (Art. 21 DSGVO)</li>
 <li><strong>Beschwerderecht bei einer Aufsichtsbehörde</strong> (Art. 77 DSGVO)</li>
 </ul>
-<p>Da wir für die KI-Anwendung keine Nutzerkonten führen und keine Anfragen speichern, ist eine nachträgliche Zuordnung von Daten zu einzelnen Personen dort in der Regel nicht möglich.</p>
+<p>Da wir für die reguläre KI-Anwendung keine Nutzerkonten führen und keine Anfragen speichern, ist eine nachträgliche Zuordnung von Daten zu einzelnen Personen dort in der Regel nicht möglich.</p>
+<p>Für die <strong>Beta-Funktion</strong> (/beta/) können Sie Ihre Sitzungsdaten jederzeit über den Button <strong>„Daten löschen"</strong> in der Oberfläche sofort und vollständig löschen (Art. 17 DSGVO). Eine Geltendmachung per E-Mail ist ebenfalls möglich.</p>
 <p>Für die E-Mail-Adresse (Projekt-Updates) und Feedback-Nachrichten können Sie Ihre Rechte jederzeit per E-Mail an <a href="mailto:contact@open-lex.cloud">contact@open-lex.cloud</a> geltend machen.</p>
 
 <h2>11. Datensicherheit</h2>
