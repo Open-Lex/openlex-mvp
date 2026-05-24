@@ -216,76 +216,94 @@ class Coach:
                          + "\n".join(konst_lines))
 
         # ── Sachverhaltstiefe je Rechtssystem ────────────────────────────────
+        # DESIGN: Nur das PFLICHT-Feld blockiert genug_infos. Optionale Felder werden
+        # NUR dann erfragt, wenn konkrete Hinweise aus dem Sachverhalt vorliegen —
+        # KEINE systematische Checkliste!
         if state is not None and state.vermutete_rechtsgebiete:
             _top_skill = state.vermutete_rechtsgebiete[0].skill
             _rs = config.rechtssystem_fuer_skill(_top_skill)
             _tiefe_bekannt = getattr(state, 'sachverhalts_tiefe', {}) or {}
 
+            # Pflicht: blockiert Handoff bis bekannt. Optional: nur bei konkreten Hinweisen.
             if _rs == "StR":
-                _felder = [
-                    ("tatbestand_obj",
-                     "Tathandlung, Taterfolg, Kausalität — was ist konkret passiert?"),
+                _pflicht = [
                     ("tatbestand_subj",
-                     "Vorsatz oder Fahrlässigkeit? Wusste die Person, was sie tat, und wollte sie es?"),
+                     "Vorsatz oder Fahrlässigkeit? War das Absicht oder eher ein Versehen/Unachtsamkeit?"),
+                ]
+                _optional = [
+                    ("tatbestand_obj",
+                     "genaue Tathandlung/Erfolg — oft schon in woraus enthalten"),
                     ("rechtfertigungsgrund",
-                     "Notwehr (§32 StGB), Notstand (§34 StGB), Einwilligung, Nothilfe — relevant?"),
+                     "Notwehr/Notstand/Einwilligung — NUR wenn Nutzer das andeutet"),
                     ("schuldfaktor",
-                     "Schuldmindernde/-ausschließende Umstände (§20 Schuldunfähigkeit, "
-                     "§17 Verbotsirrtum, §35 entschuldigender Notstand)?"),
+                     "Schuldminderung/-ausschluss — NUR wenn konkrete Hinweise (psychische Erkrankung, Alkohol, Irrtum)"),
                 ]
             elif _rs == "ÖR":
-                _felder = [
+                _pflicht = [
                     ("bescheid_art",
-                     "Art des Verwaltungsakts oder behördliche Maßnahme (Bescheid, Verbot, "
-                     "Genehmigung, Allgemeinverfügung)?"),
+                     "Art des Verwaltungsakts / der behördlichen Maßnahme (Bescheid, Verbot, Genehmigung)?"),
                     ("betroffene_grundrechte_interessen",
-                     "Welche Grundrechte (Art. GG) oder privaten Interessen sind beeinträchtigt?"),
+                     "Welche Grundrechte (Art. GG) oder privaten Interessen beeinträchtigt?"),
+                ]
+                _optional = [
                     ("oeffentliches_interesse",
-                     "Welches öffentliche Interesse / welcher Regelungszweck steht auf der "
-                     "Gegenseite?"),
+                     "Zweck der Behörde / öffentliches Interesse — NUR wenn relevant"),
                     ("verhaeltnismaessigkeit",
-                     "Gibt es mildere Mittel? Ist die Maßnahme geeignet, erforderlich und "
-                     "angemessen (praktische Konkordanz)?"),
+                     "Verhältnismäßigkeit/mildere Mittel — NUR wenn diskutiert"),
                 ]
             elif _rs == "ZR":
-                _felder = [
+                _pflicht = []   # ZR: keine extra Pflicht-Tiefe
+                _optional = [
                     ("fristen_verjährung",
-                     "Gibt es bekannte Fristen oder droht Verjährung (§ 195 ff. BGB)?"),
+                     "Fristen/Verjährung — NUR wenn konkret relevant"),
                     ("bisherige_schritte",
-                     "Was wurde bisher unternommen (Mahnungen, Briefe, anwaltliche Schritte)?"),
+                     "bisherige Schritte (Mahnungen etc.) — NUR wenn vom Nutzer erwähnt"),
                     ("beweismittel",
-                     "Verträge, Fotos, Zeugen, Schriftverkehr — welche Beweise gibt es?"),
+                     "Beweismittel — NUR wenn konkret angesprochen"),
                 ]
             else:
-                _felder = []
+                _pflicht, _optional = [], []
 
-            if _felder:
-                _bereits = [(fid, _tiefe_bekannt[fid]) for fid, _ in _felder
-                            if _tiefe_bekannt.get(fid)]
-                _offen = [(fid, fbez) for fid, fbez in _felder
-                          if not _tiefe_bekannt.get(fid)]
+            if _pflicht or _optional:
                 _tiefe_lines = ["SACHVERHALTSTIEFE (" + _rs + "):"]
+                # Bereits bekannte Felder
+                _alle_felder = _pflicht + _optional
+                _bereits = [(fid, _tiefe_bekannt[fid]) for fid, _ in _alle_felder
+                            if _tiefe_bekannt.get(fid)]
                 if _bereits:
-                    _tiefe_lines.append("Bereits bekannt (NICHT erneut erfragen):")
+                    _tiefe_lines.append("Bereits bekannt — KEINESFALLS erneut fragen:")
                     _tiefe_lines.extend(
                         "  " + fid + ": " + str(_tiefe_bekannt[fid])
                         for fid, _ in _bereits)
-                if _offen:
+                # Offene Pflicht-Felder
+                _pflicht_offen = [(fid, fbez) for fid, fbez in _pflicht
+                                  if not _tiefe_bekannt.get(fid)]
+                if _pflicht_offen:
                     _tiefe_lines.append(
-                        "Noch nicht bekannt — GENAU EIN Feld pro Turn, der Reihe nach, "
-                        "in naechste_frage konkret und fallbezogen erfragen:")
-                    for _i, (_fid, _fbez) in enumerate(_offen):
-                        _marker = "NAECHSTES:" if _i == 0 else "  dann:"
-                        _tiefe_lines.append("  " + _marker + " " + _fid + " — " + _fbez)
-                    _tiefe_lines.append(
-                        "Extrahiere Nutzer-Antworten in rechtssystem_tiefe{}. "
-                        "Solange offene Tiefe-Felder existieren: genug_infos=false "
-                        "SOFERN nicht Sprachstil profi oder Nutzer weicht wiederholt aus.".format(
-                            " (für " + _rs + ")"))
+                        "PFLICHT-Feld (genug_infos=false solange unbekannt) — "
+                        "JETZT als naechste_frage konkret und fallbezogen erfragen:")
+                    _fid0, _fbez0 = _pflicht_offen[0]
+                    _tiefe_lines.append("  → " + _fid0 + ": " + _fbez0)
+                    if len(_pflicht_offen) > 1:
+                        _tiefe_lines.append("  (danach: "
+                            + ", ".join(f[0] for f in _pflicht_offen[1:]) + ")")
                 else:
+                    if _rs != "ZR":
+                        _tiefe_lines.append(
+                            "Alle Pflicht-Felder bekannt → genug_infos=true erlaubt, "
+                            "wenn Sachverhalt insgesamt klar.")
+                # Optionale Felder — nur als Hinweis, kein systematisches Abfragen
+                _opt_offen = [(fid, fbez) for fid, fbez in _optional
+                              if not _tiefe_bekannt.get(fid)]
+                if _opt_offen:
                     _tiefe_lines.append(
-                        "Alle Tiefe-Felder bekannt — genug_infos darf true sein wenn "
-                        "Sachverhalt insgesamt klar.")
+                        "Optional (NUR erfragen wenn konkrete Hinweise im Sachverhalt — "
+                        "KEINE systematische Liste abarbeiten!):")
+                    for _fid, _fbez in _opt_offen:
+                        _tiefe_lines.append("  " + _fid + ": " + _fbez)
+                _tiefe_lines.append(
+                    "Extrahiere Nutzer-Antworten in rechtssystem_tiefe. "
+                    "Halte naechste_frage fallbezogen und konkret — nicht generisch.")
                 parts.append("\n".join(_tiefe_lines))
 
         return "\n\n".join(parts) if parts else None

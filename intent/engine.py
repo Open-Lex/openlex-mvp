@@ -675,20 +675,13 @@ class IntentEngine:
             return None
         rs = config.rechtssystem_fuer_skill(state.vermutete_rechtsgebiete[0].skill)
         tiefe = getattr(state, 'sachverhalts_tiefe', {}) or {}
+        # Nur Pflicht-Felder im statischen Fallback — Optional-Felder werden nie
+        # systematisch als statischer Fallback eingesetzt.
         if rs == "StR":
             _felder = [
-                ("tatbestand_obj",
-                 "Können Sie mir noch kurz schildern, was genau passiert ist — "
-                 "welche Handlung und was hat das ausgelöst oder verursacht?"),
                 ("tatbestand_subj",
                  "War das Ihrer Einschätzung nach Absicht — oder eher Unachtsamkeit "
                  "bzw. ein Versehen?"),
-                ("rechtfertigungsgrund",
-                 "Gab es einen Anlass, der das Verhalten möglicherweise rechtfertigen "
-                 "könnte, zum Beispiel Notwehr oder eine vorherige Einwilligung?"),
-                ("schuldfaktor",
-                 "Gab es besondere Umstände, die die Schuldfähigkeit berühren könnten "
-                 "— z.B. psychische Erkrankung, Alkohol- oder Drogeneinfluss?"),
             ]
         elif rs == "ÖR":
             _felder = [
@@ -698,12 +691,6 @@ class IntentEngine:
                 ("betroffene_grundrechte_interessen",
                  "Welche Ihrer Rechte oder Interessen sind durch die behördliche "
                  "Maßnahme konkret beeinträchtigt?"),
-                ("oeffentliches_interesse",
-                 "Wissen Sie, was die Behörde mit der Maßnahme bezweckt — "
-                 "welches öffentliche Anliegen steckt dahinter?"),
-                ("verhaeltnismaessigkeit",
-                 "Hätte es aus Ihrer Sicht eine weniger einschneidende Möglichkeit "
-                 "gegeben, dasselbe Ziel zu erreichen?"),
             ]
         else:
             return None
