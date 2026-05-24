@@ -680,8 +680,9 @@ class IntentEngine:
         if rs == "StR":
             _felder = [
                 ("tatbestand_subj",
-                 "War das Ihrer Einschätzung nach Absicht — oder eher Unachtsamkeit "
-                 "bzw. ein Versehen?"),
+                 "Gibt es Anzeichen dafür, dass der andere nicht mit Absicht gehandelt hat — "
+                 "also nicht wusste, was er tat, oder es gar nicht so wollte? "
+                 "Oder spricht alles für ein bewusstes Vorgehen?"),
             ]
         elif rs == "ÖR":
             _felder = [

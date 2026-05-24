@@ -228,7 +228,9 @@ class Coach:
             if _rs == "StR":
                 _pflicht = [
                     ("tatbestand_subj",
-                     "Vorsatz oder Fahrlässigkeit? War das Absicht oder eher ein Versehen/Unachtsamkeit?"),
+                     "Gibt es Anzeichen dafür, dass der andere NICHT vorsätzlich gehandelt hat "
+                     "(Vorsatz = Wissen und Wollen der Tat)? — z.B. offensichtliches Versehen, "
+                     "Unfall, Irrtum, psychische Ausnahmesituation?"),
                 ]
                 _optional = [
                     ("tatbestand_obj",
