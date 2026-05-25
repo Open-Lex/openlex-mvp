@@ -3003,6 +3003,7 @@ def format_sources(chunks: list[dict], validations: list[dict],
 .src-panel .chunk-text{font-size:12px;line-height:1.5;padding:6px 0;white-space:pre-wrap;word-break:break-word;color:#8a8a8f}
 .src-panel .val-box{padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.03);margin:6px 0;border:1px solid #2a2a30;color:#e0e0e0;font-size:13px}
 .src-panel .val-box small{color:#6b6b70}
+.src-panel .val-detail,.message .val-detail{margin:4px 0 4px 8px;font-size:12px;color:#b0b0b8}
 .src-panel .sub-chunk{margin:4px 0 4px 12px;padding:4px 6px;border-left:2px solid #2a2a30}
 </style>"""
 
@@ -3098,24 +3099,24 @@ def format_sources(chunks: list[dict], validations: list[dict],
 
         db_only = [v for v in validations if v["level"] == "in_db_only"]
         if db_only:
-            html += '<details><summary>⚠️ Zitiert, aber nicht in Quellen</summary><ul>'
+            html += '<div class="val-detail"><b>⚠️ Zitiert, aber nicht in Quellen</b><ul>'
             for v in db_only[:6]:
                 html += f'<li>{v["reference"]}</li>'
-            html += '</ul></details>'
+            html += '</ul></div>'
 
         external = [v for v in validations if v["level"] == "external"]
         if external:
-            html += '<details><summary>📘 Ergänzende Normen (nicht in Datenschutz-DB)</summary><ul>'
+            html += '<div class="val-detail"><b>📘 Ergänzende Normen (nicht in Datenschutz-DB)</b><ul>'
             for v in external[:6]:
                 html += f'<li>{v["reference"]}</li>'
-            html += '</ul></details>'
+            html += '</ul></div>'
 
         missing = [v for v in validations if v["level"] == "missing"]
         if missing:
-            html += '<details><summary>⚠️ Halluzinationsverdacht</summary><ul>'
+            html += '<div class="val-detail"><b>⚠️ Halluzinationsverdacht</b><ul>'
             for v in missing[:6]:
                 html += f'<li>{v["reference"]}</li>'
-            html += '</ul></details>'
+            html += '</ul></div>'
 
     html += '</div>'
     return html
@@ -4302,7 +4303,8 @@ if __name__ == "__main__":
                                 border-top: 1px solid var(--border) !important; padding-top: 4px; margin-top: 4px; }
         .src-panel mark { background: rgba(212,168,67,0.25) !important; color: var(--gold) !important;
                           padding: 0 2px; border-radius: 2px; }
-        .src-panel .val-box { padding: 8px 12px !important; border-radius: 8px !important;
+        .val-detail { margin: 4px 0 4px 8px !important; font-size: 12px !important; color: var(--dim) !important; }
+                .src-panel .val-box { padding: 8px 12px !important; border-radius: 8px !important;
                               background: rgba(255,255,255,0.03) !important; border: 1px solid var(--border) !important; }
         .src-panel h4 { color: var(--dim) !important; font-size: 0.8rem !important; }
         .src-panel .sub-chunk { border-left: 2px solid var(--border); }
