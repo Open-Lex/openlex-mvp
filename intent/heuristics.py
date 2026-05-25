@@ -54,7 +54,18 @@ _DEFLECT_RE = re.compile(
     r"|\bkeine\s+weiteren\s+(?:infos?|informationen|angaben|details?)\b"
     r"|\bnichts?\s+(?:mehr|weiteres?)\s+(?:dazu|zu\s+sagen|zu\s+berichten)\b"
     r"|\bdas\s+war(?:s)?\s+(?:auch\s+)?(?:alles|schon)\b"  # "das wars alles"
-    r"|\bweiß?\s+(?:ich\s+)?(?:leider\s+)?(?:auch\s+)?nicht\s+mehr\b",
+    r"|\bweiß?\s+(?:ich\s+)?(?:leider\s+)?(?:auch\s+)?nicht\s+mehr\b"
+    # Imperativ-Verweigerungen: Nutzer will keine Fragen beantworten, sondern
+    # dass das System selbst nachschlägt — ist faktisch Erschöpfung der Kooperation
+    r"|\bsuch\s+(?:es|das|selbst|mal|doch|es\s+selbst|du)\b"   # "such es", "such selbst"
+    r"|\bsuch(?:en\s+sie)?\s+(?:es|das)\b"
+    r"|\bfind(?:e|en\s+sie)?\s+(?:es|das|selbst|raus|heraus)\b"  # "finde es", "finden Sie raus"
+    r"|\braus(?:finden|suchen)?\b"                               # "raus", "rausfinden"
+    r"|\bherausfinden\b"
+    r"|\bdo\s+(?:it\s+)?yourself\b|\blook\s+it\s+up\b"         # EN fallback
+    r"|\bkümmer\s+(?:dich|sich)\s+drum\b"
+    r"|\bdas\s+ist\s+deine\s+aufgabe\b|\bdas\s+musst\s+du\b"
+    r"|\bsollst\s+du\s+(?:mir\s+)?sagen\b|\bsag\s+du\s+mir\b",  # "sollst du mir sagen"
     re.IGNORECASE,
 )
 
