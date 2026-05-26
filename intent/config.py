@@ -113,7 +113,7 @@ _OER_SKILLS: frozenset = frozenset({
     "steuerrecht", "grundrechte", "staatsorganisationsrecht",
     "verwaltungsprozessrecht", "umweltrecht", "polizei_ordnungsrecht",
     "kommunalrecht", "vergaberecht", "energierecht",
-    "verfassungsprozessrecht", "europarecht", "voelkerrecht",
+    "verfassungsprozessrecht", "voelkerrecht",
     "bildungsrecht",
 })
 
