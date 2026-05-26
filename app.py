@@ -3973,9 +3973,12 @@ def build_app() -> gr.Blocks:
 
             for partial_response, sources_md, chunks in chat_stream(message, history_tuples, skill_id=skill_id):
                 full_msg = partial_response
-                if sources_md:
+                _streaming = bool(sources_md and "⏳" in sources_md)
+                if sources_md and not _streaming:
                     clean_src = _SRC_STYLE_RE.sub('', sources_md)
-                    full_msg += '\n\n<details class="src-collapse"><summary>\U0001f4da Quellen anzeigen</summary>\n\n' + clean_src + '\n\n</details>'
+                    full_msg += '\n\n<details class="src-collapse"><summary>📚 Quellen anzeigen</summary>\n\n' + clean_src + '\n\n</details>'
+                elif _streaming:
+                    full_msg += '\n\n---\n📚 *Quellen werden geladen...*'
                 chat_history[-1]["content"] = full_msg
                 yield chat_history, partial_response, "", ""
 
