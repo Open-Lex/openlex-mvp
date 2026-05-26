@@ -245,13 +245,24 @@ def get_model() -> SentenceTransformer:
     return _model
 
 
+class SkillNotAvailableError(RuntimeError):
+    """Wird geworfen, wenn fuer einen Skill noch keine ChromaDB-Collection vorhanden ist."""
+
+
 def get_collection(skill_id: str = ACTIVE_SKILL):
-    """Gibt die ChromaDB-Collection fuer einen Skill zurueck (Dict-Cache)."""
+    """Gibt die ChromaDB-Collection fuer einen Skill zurueck (Dict-Cache).
+    Wirft SkillNotAvailableError, wenn die Collection noch nicht existiert."""
     global _collection_cache
     if skill_id not in _collection_cache:
         client = chromadb.PersistentClient(path=CHROMADB_DIR)
         col_name = get_collection_name(skill_id)
-        _collection_cache[skill_id] = client.get_collection(col_name)
+        try:
+            _collection_cache[skill_id] = client.get_collection(col_name)
+        except Exception:
+            raise SkillNotAvailableError(
+                f"Skill '{skill_id}' hat noch keine Wissensgrundlage (Collection '{col_name}' "
+                f"nicht gefunden). Bitte waehlen Sie ein anderes Rechtsgebiet."
+            )
     return _collection_cache[skill_id]
 
 
@@ -3147,7 +3158,17 @@ def chat_stream(message: str, history: list[list[str]], skill_id: str = ACTIVE_S
     """Generator: Retrieval → LLM-Stream → Validation. Yields (partial_response, sources_md, chunks)."""
 
     # Retrieval (mit History-Kontext für Folgefragen)
-    chunks = retrieve(message, history, skill_id=skill_id)
+    # Ghost-Skill-Guard: Wirft SkillNotAvailableError, wenn Collection fehlt.
+    try:
+        chunks = retrieve(message, history, skill_id=skill_id)
+    except SkillNotAvailableError as _e:
+        _msg = (
+            "⚠️ **Dieser Skill steht noch nicht zur Verf\u00fcgung.**\n\n"
+            + str(_e)
+            + "\n\n*Tipp: Versuchen Sie es mit einem anderen verf\u00fcgbaren Rechtsgebiet.*"
+        )
+        yield _msg, "", []
+        return
     context = format_context(chunks)
     sources_placeholder = format_sources(chunks, [], question=message) + '<p style="color:#888"><em>⏳ Validierung läuft nach Abschluss der Antwort...</em></p>'
 

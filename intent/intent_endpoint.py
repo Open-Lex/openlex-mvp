@@ -263,6 +263,9 @@ async def route_stream(session_id: str, skill: str | None = None) -> StreamingRe
     if not state.vermutete_rechtsgebiete:
         raise HTTPException(status_code=400, detail="Kein Rechtsgebiet erkannt — Handoff erforderlich")
 
+    # Ghost-Skills: haben (noch) keinen ChromaDB-Bestand → automatisch skippen
+    _GHOST_SKILLS: set[str] = {"ipr", "europarecht", "polizei_ordnungsrecht", "kommunalrecht"}
+
     target = None
     if skill:
         for k in state.vermutete_rechtsgebiete:
@@ -271,7 +274,13 @@ async def route_stream(session_id: str, skill: str | None = None) -> StreamingRe
         if target is None:
             raise HTTPException(status_code=400, detail=f"Skill '{skill}' nicht im Ranking")
     else:
-        target = state.vermutete_rechtsgebiete[0]
+        # Top-Skill wählen; Ghost-Skills überspringen (kein ChromaDB-Bestand)
+        for k in state.vermutete_rechtsgebiete:
+            if k.skill not in _GHOST_SKILLS:
+                target = k
+                break
+        if target is None:
+            target = state.vermutete_rechtsgebiete[0]  # Fallback: erstes (auch Ghost)
 
     other = [k.skill for k in state.vermutete_rechtsgebiete if k.skill != target.skill]
     query = _build_skill_query(state)
