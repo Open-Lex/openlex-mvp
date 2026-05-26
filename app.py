@@ -3977,8 +3977,6 @@ def build_app() -> gr.Blocks:
                 if sources_md and not _streaming:
                     clean_src = _SRC_STYLE_RE.sub('', sources_md)
                     full_msg += '\n\n<details class="src-collapse"><summary>📚 Quellen anzeigen</summary>\n\n' + clean_src + '\n\n</details>'
-                elif _streaming:
-                    full_msg += '\n\n---\n📚 *Quellen werden geladen...*'
                 chat_history[-1]["content"] = full_msg
                 yield chat_history, partial_response, "", ""
 
