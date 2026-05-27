@@ -27,6 +27,7 @@ SKILLS = [
     "staatsorganisationsrecht", "grundrechte", "ipr", "zivilverfahrensrecht",
     "strafverfahrensrecht", "verfassungsprozessrecht", "europarecht",
     "polizei_ordnungsrecht", "kommunalrecht", "verwaltungsprozessrecht",
+    "bgb_at",
 ]
 
 

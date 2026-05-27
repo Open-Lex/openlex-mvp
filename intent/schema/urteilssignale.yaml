@@ -1,0 +1,370 @@
+# Bekannte Urteilsnamen, Leitfälle und Gerichts-Kürzel
+# Quelle: allgemein bekannte Judikatur (Repetitorien, freie Bildungsressourcen)
+#
+# namen:   Erkennungs-Stichworte (case-insensitive, Substring-Match)
+# skills:  Ziel-Slugs aus skills_master.yaml (erster Eintrag = primärer Skill)
+# gericht: Kürzel des Gerichts (optional)
+# kurzinfo: kurze Beschreibung (optional, nur für Kontext)
+
+leitfaelle:
+
+  # ── EU-Recht / EuGH ──────────────────────────────────────────────────────
+  - namen: ["Van Gend en Loos", "van gend en loos", "van gend"]
+    skills: [europarecht]
+    gericht: EuGH
+    kurzinfo: "Unmittelbare Wirkung des Unionsrechts"
+
+  - namen: ["Costa", "Costa ENEL", "Costa/ENEL", "Costa gegen ENEL"]
+    skills: [europarecht]
+    gericht: EuGH
+    kurzinfo: "Vorrang des Unionsrechts"
+
+  - namen: ["Francovich", "Bonifaci", "Francovich und Bonifaci"]
+    skills: [europarecht]
+    gericht: EuGH
+    kurzinfo: "Staatshaftung für Richtlinienverletzung"
+
+  - namen: ["Cassis de Dijon", "Cassis-de-Dijon", "Cassis"]
+    skills: [europarecht]
+    gericht: EuGH
+    kurzinfo: "Warenverkehrsfreiheit, gegenseitige Anerkennung"
+
+  - namen: ["Bosman", "Bosman-Urteil"]
+    skills: [europarecht, sportrecht]
+    gericht: EuGH
+    kurzinfo: "Freizügigkeit für Berufsfußballer"
+
+  - namen: ["Omega", "Omega Spielhallen", "Omega-Spielhallen"]
+    skills: [europarecht, grundrechte]
+    gericht: EuGH
+    kurzinfo: "Grundrechte als Schranke der Grundfreiheiten"
+
+  - namen: ["Alcan", "Alcan Deutschland"]
+    skills: [europarecht, verwaltungsrecht]
+    gericht: EuGH
+    kurzinfo: "Vertrauensschutz bei EU-Beihilferückforderung"
+
+  - namen: ["Mangold", "Mangold-Urteil"]
+    skills: [europarecht, arbeitsrecht]
+    gericht: EuGH
+    kurzinfo: "Altersdiskriminierung, allgemeiner Grundsatz des Unionsrechts"
+
+  - namen: ["Åkerberg Fransson", "Akerberg Fransson"]
+    skills: [europarecht, strafrecht]
+    gericht: EuGH
+    kurzinfo: "Ne bis in idem, Charta der Grundrechte"
+
+  - namen: ["Keck", "Keck und Mithouard"]
+    skills: [europarecht]
+    gericht: EuGH
+    kurzinfo: "Verkaufsmodalitäten, Warenverkehrsfreiheit"
+
+  - namen: ["Plaumann", "Plaumann-Formel"]
+    skills: [europarecht, verwaltungsrecht]
+    gericht: EuGH
+    kurzinfo: "Nichtigkeitsklage, individuelle Betroffenheit"
+
+  # ── Datenschutz / IT / EuGH ───────────────────────────────────────────────
+  - namen: ["Schrems", "Schrems I", "Schrems II", "Schrems gegen Facebook",
+            "Schrems/Facebook", "Facebook/Schrems", "Max Schrems"]
+    skills: [datenschutz, it_recht]
+    gericht: EuGH
+    kurzinfo: "Datentransfer in die USA, Safe Harbor / Privacy Shield"
+
+  - namen: ["Safe Harbor", "Safe-Harbor-Urteil"]
+    skills: [datenschutz]
+    gericht: EuGH
+    kurzinfo: "Ungültigerklärung des Safe-Harbor-Abkommens"
+
+  - namen: ["Privacy Shield", "Privacy-Shield-Urteil"]
+    skills: [datenschutz]
+    gericht: EuGH
+    kurzinfo: "Ungültigerklärung des Privacy-Shield-Abkommens"
+
+  - namen: ["Google Spain", "Google Spanien", "Google vs. AEPD"]
+    skills: [datenschutz, it_recht]
+    gericht: EuGH
+    kurzinfo: "Recht auf Vergessen (Recht auf Vergessenwerden)"
+
+  - namen: ["Planet49", "Planet 49"]
+    skills: [datenschutz, it_recht]
+    gericht: EuGH
+    kurzinfo: "Cookie-Einwilligung, vorab angekreuzte Checkbox"
+
+  # ── Grundrechte / BVerfG ──────────────────────────────────────────────────
+  - namen: ["Lüth", "Lüth-Urteil", "Lüthurteil", "Erich Lüth"]
+    skills: [grundrechte]
+    gericht: BVerfG
+    kurzinfo: "Ausstrahlungswirkung der Grundrechte in das Privatrecht"
+
+  - namen: ["Spiegel-Urteil", "Spiegelurteil", "Spiegel BVerfG"]
+    skills: [grundrechte]
+    gericht: BVerfG
+    kurzinfo: "Pressefreiheit, Spiegel-Affäre"
+
+  - namen: ["Apothekerurteil", "Apotheker-Urteil", "Apotheken-Urteil"]
+    skills: [grundrechte, verwaltungsrecht]
+    gericht: BVerfG
+    kurzinfo: "Berufsfreiheit, Drei-Stufen-Theorie"
+
+  - namen: ["Volkszählung", "Volkszählungsurteil", "Mikrozensus"]
+    skills: [grundrechte, datenschutz]
+    gericht: BVerfG
+    kurzinfo: "Recht auf informationelle Selbstbestimmung"
+
+  - namen: ["Elfes", "Elfes-Urteil", "Elfesurteil"]
+    skills: [grundrechte]
+    gericht: BVerfG
+    kurzinfo: "Allgemeines Freiheitsrecht, Art. 2 Abs. 1 GG"
+
+  - namen: ["Mephisto", "Mephisto-Urteil"]
+    skills: [grundrechte, urheberrecht]
+    gericht: BVerfG
+    kurzinfo: "Kunstfreiheit vs. Persönlichkeitsrecht"
+
+  - namen: ["Solange", "Solange I", "Solange II", "Solange-Beschluss"]
+    skills: [grundrechte, europarecht]
+    gericht: BVerfG
+    kurzinfo: "Grundrechtsschutz gegenüber EU-Recht"
+
+  - namen: ["Lissabon-Urteil", "Lissabonurteil", "Lissabon BVerfG"]
+    skills: [grundrechte, europarecht]
+    gericht: BVerfG
+    kurzinfo: "Verfassungsidentität, Integrationsverantwortung"
+
+  - namen: ["Nürburgring", "Nürburgring BVerfG"]
+    skills: [grundrechte, wirtschaftsstrafrecht]
+    gericht: BVerfG
+
+  - namen: ["Kalkar", "Kalkar-Beschluss", "Schneller Brüter"]
+    skills: [grundrechte, verwaltungsrecht]
+    gericht: BVerfG
+    kurzinfo: "Parlamentsvorbehalt, wesentliche Entscheidungen"
+
+  - namen: ["Reiten im Walde", "Walde reiten", "Reiten Wald"]
+    skills: [grundrechte]
+    gericht: BVerfG
+    kurzinfo: "Allgemeines Freiheitsrecht, Art. 2 Abs. 1 GG"
+
+  - namen: ["Herrenreiterfall", "Herrenreiter", "Herrenreiter BGH"]
+    skills: [grundrechte]
+    gericht: BGH
+    kurzinfo: "Allgemeines Persönlichkeitsrecht, Geldentschädigung"
+
+  - namen: ["Marlene Dietrich", "Marlene-Dietrich-Urteil"]
+    skills: [grundrechte, urheberrecht]
+    gericht: BGH
+    kurzinfo: "Postmortales Persönlichkeitsrecht, Vermarktungsrechte"
+
+  # ── Sachenrecht / BGH ─────────────────────────────────────────────────────
+  - namen: ["Parkettstäbefall", "Parkettfall", "Parkettstäbe"]
+    skills: [sachenrecht]
+    gericht: BGH
+    kurzinfo: "§ 950 BGB Verarbeitung, Eigentumserwerb"
+
+  - namen: ["Linoleumrollenfall", "Linoleum-Rollenfall", "Linoleumrolle"]
+    skills: [sachenrecht]
+    gericht: RG
+    kurzinfo: "Besitzschutz, § 823 BGB"
+
+  - namen: ["Baumfrüchtefall", "Baumfrüchte"]
+    skills: [sachenrecht, nachbarrecht]
+    gericht: BGH
+
+  # ── Schuldrecht / Kaufrecht / BGH ─────────────────────────────────────────
+  - namen: ["Schrottimmobilien", "Schrottimmobilienfall"]
+    skills: [bank_kapitalmarktrecht, kaufrecht]
+    gericht: BGH
+    kurzinfo: "Sittenwidrigkeit, § 138 BGB, kreditfinanzierter Immobilienkauf"
+
+  - namen: ["Autokran", "Autokran-Urteil"]
+    skills: [gesellschaftsrecht]
+    gericht: BGH
+    kurzinfo: "Existenzvernichtungshaftung, Durchgriffshaftung GmbH"
+
+  - namen: ["Bremer Vulkan", "Bremer-Vulkan"]
+    skills: [gesellschaftsrecht]
+    gericht: BGH
+    kurzinfo: "Konzernhaftung, existenzvernichtender Eingriff"
+
+  # ── Arbeitsrecht / BAG / EuGH ────────────────────────────────────────────
+  - namen: ["Schultz-Hoff"]
+    skills: [arbeitsrecht]
+    gericht: EuGH
+    kurzinfo: "Urlaubsübertragung bei Langzeiterkrankung"
+
+  - namen: ["KHS AG", "KHS gegen Schulte"]
+    skills: [arbeitsrecht]
+    gericht: EuGH
+    kurzinfo: "Verfall von Urlaubsansprüchen, Hinweispflicht"
+
+  # ── Strafrecht / BGH ──────────────────────────────────────────────────────
+  - namen: ["Lederspray", "Ledersprayfall", "Lederspray BGH"]
+    skills: [strafrecht, wirtschaftsstrafrecht]
+    gericht: BGH
+    kurzinfo: "Produkthaftung, fahrlässige Körperverletzung, Kausalität"
+
+  - namen: ["Sirius", "Sirius-Fall"]
+    skills: [strafrecht]
+    gericht: BGH
+    kurzinfo: "Mittelbare Täterschaft, Werkzeug in Irrtum"
+
+  - namen: ["Weichensteller", "Weichensteller-Fall"]
+    skills: [strafrecht]
+    gericht: BGH
+    kurzinfo: "Abgrenzung Täterschaft/Beihilfe, subjektive Theorie"
+
+  - namen: ["Katzenkönig", "Katzenkönig-Fall"]
+    skills: [strafrecht]
+    gericht: BGH
+    kurzinfo: "Mittäterschaft, Aberglaube, Irrtum über Handlungsherrschaft"
+
+  - namen: ["Rose-Rosahl"]
+    skills: [strafrecht]
+    gericht: PrOAT
+    kurzinfo: "error in persona / aberratio ictus"
+
+  - namen: ["Wittig", "Wittig-Fall"]
+    skills: [strafrecht]
+    gericht: BGH
+    kurzinfo: "Garantenpflicht, unterlassene Hilfeleistung"
+
+  - namen: ["Organ-Urteil", "Organentnahme", "Herzentnahme"]
+    skills: [strafrecht, medizinrecht]
+    gericht: BGH
+
+  # ── Urheberrecht ──────────────────────────────────────────────────────────
+  - namen: ["Metall auf Metall", "Metall-auf-Metall"]
+    skills: [urheberrecht]
+    gericht: BGH
+    kurzinfo: "Sampling, Tonträgerhersteller-Schutz"
+
+  - namen: ["Sommer unseres Lebens", "Sommer-unseres-Lebens"]
+    skills: [urheberrecht, it_recht]
+    gericht: BGH
+    kurzinfo: "WLAN-Haftung, Störerhaftung"
+
+  # ── Verwaltungsrecht / öffentliches Recht ────────────────────────────────
+  - namen: ["Brunner", "Brunner-Urteil", "Brunner BVerfG"]
+    skills: [europarecht, grundrechte]
+    gericht: BVerfG
+    kurzinfo: "Maastricht-Urteil, Integrationsgrenze"
+
+  - namen: ["Maastricht-Urteil", "Maastrichturteil"]
+    skills: [europarecht, grundrechte]
+    gericht: BVerfG
+
+  - namen: ["Altrip"]
+    skills: [verwaltungsrecht, umweltrecht]
+    gericht: EuGH
+    kurzinfo: "UVP, Verbandsklage, subjektive Rechtsverletzung"
+
+
+  # ── BGB Allgemeiner Teil ──────────────────────────────────────────────────────
+  - namen: ["Trierer Weinversteigerung", "Weinversteigerung Trier", "Trierer Weinversteigerungs-Fall", "RGZ 133, 388"]
+    skills: [bgb_at]
+    gericht: RG
+    kurzinfo: "Erklärungsbewusstsein, Willenserklärung ohne Erklärungswillen, § 119 BGB"
+
+  - namen: ["Haakjöringsköd", "Haakjoeringskoed", "Haakjörings", "RGZ 99, 147", "falsa demonstratio non nocet"]
+    skills: [bgb_at]
+    gericht: RG
+    kurzinfo: "falsa demonstratio non nocet, § 133 BGB"
+
+  - namen: ["Bürgschaft Sittenwidrigkeit", "Bürgschaft sittenwidrig", "BGHZ 125, 206", "Angehörigenbürgschaft"]
+    skills: [bgb_at, bank_kapitalmarktrecht]
+    gericht: BGH
+    kurzinfo: "Sittenwidrigkeit Bürgschaft naher Angehöriger, § 138 BGB"
+
+  - namen: ["Hyazinthenfall", "Hyazinthen-Fall", "Hyazinthen Fall", "BGH NJW 1979, 1886"]
+    skills: [bgb_at]
+    gericht: BGH
+    kurzinfo: "Erklärungsbewusstsein, konkludente Willenserklärung, § 119 BGB"
+
+  - namen: ["Arglistige Täuschung Haus", "arglistige Täuschung Häuserkauf", "BGH NJW 1995, 2361"]
+    skills: [bgb_at, kaufrecht]
+    gericht: BGH
+    kurzinfo: "§ 123 BGB, Anfechtung wegen arglistiger Täuschung beim Grundstückskauf"
+
+  - namen: ["Schrottimmobilien", "Schrottimmobilienfall", "BGHZ 159, 94", "Haustürwiderruf Bankfinanzierung"]
+    skills: [bgb_at, bank_kapitalmarktrecht]
+    gericht: BGH
+    kurzinfo: "Sittenwidrigkeit, § 138 BGB, kreditfinanzierter Immobilienkauf"
+
+  - namen: ["Hamburger Schulfall", "Hamburger Schul-Fall", "BGH NJW 1962, 32"]
+    skills: [bgb_at]
+    gericht: BGH
+    kurzinfo: "Stellvertretung, Handeln unter fremdem Namen, § 164 BGB"
+
+  - namen: ["Blankounterschrift", "Blanko-Unterschrift", "Anscheinsvollmacht Blankounterschrift", "BGH NJW 1986, 2944"]
+    skills: [bgb_at, bank_kapitalmarktrecht]
+    gericht: BGH
+    kurzinfo: "Anscheinsvollmacht, § 172 BGB"
+
+  - namen: ["Insichgeschäft", "In-sich-Geschäft", "Selbstkontrahieren", "BGH NJW 1971, 1355"]
+    skills: [bgb_at]
+    gericht: BGH
+    kurzinfo: "§ 181 BGB, Verbot des Selbstkontrahierens"
+
+  - namen: ["Verwirkung Kreditkündigung", "Treu und Glauben Verwirkung Kredit", "BGH NJW 2002, 3165"]
+    skills: [bgb_at, bank_kapitalmarktrecht]
+    gericht: BGH
+    kurzinfo: "§ 242 BGB, Verwirkung, Treu und Glauben"
+
+  - namen: ["Münzautomat", "Münzautomatenfall", "BGH NJW 1951, 643", "Eingriffskondiktion Automat"]
+    skills: [bgb_at]
+    gericht: BGH
+    kurzinfo: "Eingriffskondiktion, § 812 BGB"
+
+  - namen: ["Dreiecksverhältnis Leistungskondiktion", "Leistungskondiktion Dreieck", "BGH NJW 1966, 1451"]
+    skills: [bgb_at]
+    gericht: BGH
+    kurzinfo: "Leistungskondiktion im Dreiecksverhältnis, § 812 BGB"
+
+# ── Gerichts-Kürzel → primärer Skill ─────────────────────────────────────────
+# Wird verwendet, wenn kein Named-Case, aber ein Gerichtskürzel + Frageformulierung
+# erkannt wird. primary_skill = null bedeutet: LLM soll Skill bestimmen.
+
+court_aliases:
+  - kürzel: EuGH
+    vollname: Europäischer Gerichtshof
+    primary_skill: europarecht
+  - kürzel: EuG
+    vollname: Europäisches Gericht (Gericht erster Instanz der EU)
+    primary_skill: europarecht
+  - kürzel: EGMR
+    vollname: Europäischer Gerichtshof für Menschenrechte
+    primary_skill: grundrechte
+  - kürzel: BVerfG
+    vollname: Bundesverfassungsgericht
+    primary_skill: grundrechte
+  - kürzel: BGH
+    vollname: Bundesgerichtshof
+    primary_skill: null
+  - kürzel: BAG
+    vollname: Bundesarbeitsgericht
+    primary_skill: arbeitsrecht
+  - kürzel: BSG
+    vollname: Bundessozialgericht
+    primary_skill: sozialrecht
+  - kürzel: BFH
+    vollname: Bundesfinanzhof
+    primary_skill: steuerrecht
+  - kürzel: BVerwG
+    vollname: Bundesverwaltungsgericht
+    primary_skill: verwaltungsrecht
+  - kürzel: OLG
+    vollname: Oberlandesgericht
+    primary_skill: null
+  - kürzel: LAG
+    vollname: Landesarbeitsgericht
+    primary_skill: arbeitsrecht
+  - kürzel: VG
+    vollname: Verwaltungsgericht
+    primary_skill: verwaltungsrecht
+  - kürzel: LSG
+    vollname: Landessozialgericht
+    primary_skill: sozialrecht
+  - kürzel: FG
+    vollname: Finanzgericht
+    primary_skill: steuerrecht
