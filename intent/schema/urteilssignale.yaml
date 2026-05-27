@@ -261,10 +261,9 @@ leitfaelle:
 
 
   # ── BGB Allgemeiner Teil ──────────────────────────────────────────────────────
-  - namen: ["Trierer Weinversteigerung", "Weinversteigerung Trier", "Trierer Weinversteigerungs-Fall", "RGZ 133, 388"]
+  - namen: ["Trierer Weinversteigerung", "Weinversteigerung Trier", "Trierer Weinversteigerungs-Fall", "Erklärungsbewusstsein Armheben"]
     skills: [bgb_at]
-    gericht: RG
-    kurzinfo: "Erklärungsbewusstsein, Willenserklärung ohne Erklärungswillen, § 119 BGB"
+    kurzinfo: "Lehrbuchfall: Erklärungsbewusstsein, Willenserklärung ohne Rechtsbindungswillen, § 119 BGB, Fahrlässigkeitslösung BGH"
 
   - namen: ["Haakjöringsköd", "Haakjoeringskoed", "Haakjörings", "RGZ 99, 147", "falsa demonstratio non nocet"]
     skills: [bgb_at]
