@@ -65,6 +65,34 @@ gruppen:
       - Vertreter überredet
     typische_rechtsgebiete: [verbraucherrecht]
 
+  # ── Grenzüberschreitender Verbraucherkauf (CE-Kennzeichnung, App-Stores, EU-Ausland) ─
+  # WICHTIG: Diese Signale IMMER zu verbraucherrecht/kaufrecht routen, NICHT europarecht.
+  # europarecht nur bei zwischenstaatlichen Konflikten oder Grundfreiheitsverletzungen.
+  - signale:
+      - CE-Kennzeichnung
+      - CE-Zeichen
+      - CE-Konformität
+      - Konformitätserklärung
+      - App Store
+      - Apple Marketplace
+      - Google Play
+      - Amazon Marketplace
+      - eBay-Kauf
+      - aus dem Ausland bestellt
+      - aus EU-Ausland
+      - grenzüberschreitend gekauft
+      - ausländischer Händler
+      - Händler aus Polen
+      - Händler aus Irland
+      - Händler aus Tschechien
+      - Händler aus China
+      - Import
+      - Importware
+      - importiertes Produkt
+      - Zollgebühren
+      - aus Drittland
+    typische_rechtsgebiete: [verbraucherrecht, kaufrecht]
+
   # ── Medizinrecht ─────────────────────────────────────────────────────────
   - signale:
       - Arzt

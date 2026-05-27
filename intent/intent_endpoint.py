@@ -34,6 +34,24 @@ from models import (
 )
 from orchestrator import Orchestrator
 
+# Menschenlesbare Labels für Wrong-Collection-Guard-Hinweise
+_SKILL_LABELS: dict[str, str] = {
+    "strafrecht": "Strafrecht", "grundrechte": "Grundrechte / Verfassungsrecht",
+    "verbraucherrecht": "Verbraucherrecht", "kaufrecht": "Kaufrecht",
+    "mietrecht": "Mietrecht", "arbeitsrecht": "Arbeitsrecht",
+    "familienrecht": "Familienrecht", "erbrecht": "Erbrecht",
+    "verwaltungsrecht": "Verwaltungsrecht", "gesellschaftsrecht": "Gesellschaftsrecht",
+    "insolvenzrecht": "Insolvenzrecht", "datenschutz": "Datenschutz",
+    "it_recht": "IT-Recht", "europarecht": "Europarecht",
+    "staatsorganisationsrecht": "Staatsorganisationsrecht",
+    "verfassungsprozessrecht": "Verfassungsprozessrecht",
+    "wirtschaftsstrafrecht": "Wirtschaftsstrafrecht",
+    "sozialrecht": "Sozialrecht", "steuerrecht": "Steuerrecht",
+    "umweltrecht": "Umweltrecht", "baurecht": "Baurecht",
+}
+# Unterhalb dieser Confidence wird ein Routing-Hinweis angezeigt
+_LOW_CONF_ROUTING_THRESHOLD = 0.32
+
 app = FastAPI(title="OpenLex Intent-Skill", version="intent-handoff/1.0")
 
 # Singletons (einmalig beim Start)
@@ -273,6 +291,12 @@ async def route_stream(session_id: str, skill: str | None = None) -> StreamingRe
                 target = k; break
         if target is None:
             raise HTTPException(status_code=400, detail=f"Skill '{skill}' nicht im Ranking")
+        # Explizit angeforderter Skill ist ein Ghost → Fallback auf besten verfügbaren Skill
+        if target.skill in _GHOST_SKILLS:
+            fallback = next((k for k in state.vermutete_rechtsgebiete if k.skill not in _GHOST_SKILLS), None)
+            if fallback:
+                target = fallback
+            # else: kein Fallback → Ghost direkt nutzen (SkillNotAvailableError greift auf app-Seite)
     else:
         # Top-Skill wählen; Ghost-Skills überspringen (kein ChromaDB-Bestand)
         for k in state.vermutete_rechtsgebiete:
@@ -288,6 +312,21 @@ async def route_stream(session_id: str, skill: str | None = None) -> StreamingRe
     async def generate():
         # Meta-Event: Skill-ID + secondary (damit das Frontend den Titel kennt)
         yield f"data: {json.dumps({'meta': {'skill_id': target.skill, 'confidence': target.confidence, 'secondary': other}})}\n\n"
+
+        # Wrong-Collection-Guard: Routing-Hinweis bei niedriger Confidence
+        # Verhindert stumme Fehlrouting-Erfahrungen und zeigt alternative Rechtsgebiete an.
+        if target.confidence < _LOW_CONF_ROUTING_THRESHOLD and other:
+            _skill_label = _SKILL_LABELS.get(target.skill, target.skill)
+            _alt_label   = _SKILL_LABELS.get(other[0], other[0])
+            _warning = (
+                f"⚠️ *Hinweis: Diese Anfrage wurde mit geringer Sicherheit "
+                f"dem Rechtsgebiet **{_skill_label}** zugeordnet "
+                f"({target.confidence:.0%} Konfidenz). "
+                f"Alternativ könnte **{_alt_label}** relevant sein. "
+                f"Bitte prüfen Sie die Antwort kritisch.*\n\n"
+            )
+            yield f"data: {json.dumps({'t': _warning})}\n\n"
+            await asyncio.sleep(0)
 
         loop = asyncio.get_running_loop()
         queue: asyncio.Queue = asyncio.Queue()

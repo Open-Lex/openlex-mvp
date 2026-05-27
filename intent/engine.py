@@ -105,8 +105,32 @@ class SchemaLibrary:
         self._build_signal_index()
         self.known_gesetze = self._build_known_gesetze()
 
+        # Urteilssignale-Index aufbauen:
+        # 1. Handkuratierte Leitfälle (urteilssignale.yaml)
+        # 2. Auto-generierte EuGH-Fälle von Wikipedia + BGH-Senat-Map (urteilssignale_auto.yaml)
+        _urteil_curated = self._load("urteilssignale.yaml")
+        _urteil_auto = self._load_optional("urteilssignale_auto.yaml")
+        _all_leitfaelle = (
+            _urteil_curated.get("leitfaelle", []) +
+            _urteil_auto.get("leitfaelle", [])
+        )
+        _court_aliases = (
+            _urteil_curated.get("court_aliases", []) or
+            _urteil_auto.get("court_aliases", [])
+        )
+        _bgh_map = _urteil_auto.get("bgh_senat_skill_map", {}) or {}
+        heuristics.build_urteil_index(_all_leitfaelle, _court_aliases, _bgh_map)
+
     def _load(self, name: str) -> dict:
         with (self.schema_dir / name).open(encoding="utf-8") as fh:
+            return yaml.safe_load(fh) or {}
+
+    def _load_optional(self, name: str) -> dict:
+        """Wie _load, aber gibt {} zurück wenn Datei nicht existiert."""
+        path = self.schema_dir / name
+        if not path.exists():
+            return {}
+        with path.open(encoding="utf-8") as fh:
             return yaml.safe_load(fh) or {}
 
     def _build_signal_index(self) -> None:
@@ -438,6 +462,42 @@ class IntentEngine:
         prev_filled = {s for s in self.lib.pflicht_ids if store.filled(s)}
         prev_signale = set(state.signale)
 
+        # ── Pre-LLM: Fuzzy-Urteil-Bestätigung ausstehend? ───────────────────────
+        # Wenn der letzte Turn eine "Meinten Sie X?"-Frage stellte, jetzt auswerten.
+        if state.pending_urteil_confirm:
+            if heuristics.is_confirm_yes(user_text):
+                _hit = state.pending_urteil_confirm
+                state.pending_urteil_confirm = None
+                _u_skills    = _hit.get("skills") or []
+                _u_canonical = _hit.get("canonical", "Urteilsanfrage")
+                _u_gericht   = _hit.get("gericht", "")
+                _u_info      = _hit.get("kurzinfo", "")
+                store.update("wer", "Anfragender", state.turns)
+                store.update("was", "Inhalt/Aussage des Urteils", state.turns)
+                store.update("von_wem", _u_gericht or "Gericht", state.turns)
+                store.update("woraus",
+                             f"{_u_canonical}"
+                             + (f" ({_u_info})" if _u_info else "")
+                             + " / Rechtsprechungsanfrage",
+                             state.turns)
+                _empty_match = MatchResult()
+                for _sk in _u_skills:
+                    if _sk in self.lib.valid_slugs:
+                        state.llm_rechtsgebiete[_sk] = max(
+                            state.llm_rechtsgebiete.get(_sk, 0.0), 0.9)
+                state.vermutete_rechtsgebiete = self._skill_kandidaten(
+                    _empty_match, state.llm_rechtsgebiete)
+                state.sprachstil = heuristics.resolve(user_text, "unklar")
+                state.no_progress = 0
+                state.messages.append({"role": "assistant",
+                                        "content": f"[Urteilsanfrage bestätigt: {_u_canonical}]"})
+                return self._handoff(state, _empty_match, [], vollstaendig=True,
+                                     debug={"urteilsanfrage": _u_canonical,
+                                            "fuzzy_confirmed": True})
+            elif heuristics.is_confirm_no(user_text):
+                # Nutzer hat verneint → pending löschen, normaler Flow
+                state.pending_urteil_confirm = None
+
         # ── Layer 2: Weichenstellungs-Frage prüfen ───────────────────────────────
         _anker_active = bool(getattr(state, 'pending_anker', None))
         if (state.turns >= 2
@@ -457,6 +517,87 @@ class IntentEngine:
                 state.messages.append({"role": "assistant", "content": _frage})
                 return MessageResponse(session_id=state.session_id, modus="frage",
                                        frage=_frage, turns=state.turns)
+
+        # ── Pre-LLM: Urteilsanfrage-Shortcut ────────────────────────────────────
+        # Bekannte Fallnamen (Van Gend en Loos, Schrems, Lüth …) und Gerichtskürzel
+        # + Frageformulierung → sofortiger Handoff, kein Slot-Filling.
+        _urteil_hit = heuristics.detect_urteilsanfrage(user_text)
+        if _urteil_hit and not state.pending_weiche:
+            _u_skills = _urteil_hit.get("skills") or []
+            _u_canonical = _urteil_hit.get("canonical", "Urteilsanfrage")
+            _u_gericht = _urteil_hit.get("gericht", "")
+            _u_info = _urteil_hit.get("kurzinfo", "")
+
+            # Slots vorbelegen
+            store.update("wer", "Anfragender", state.turns)
+            store.update("was", "Inhalt/Aussage des Urteils", state.turns)
+            store.update("von_wem", _u_gericht or "Gericht", state.turns)
+            store.update("woraus",
+                         f"{_u_canonical}"
+                         + (f" ({_u_info})" if _u_info else "")
+                         + " / Rechtsprechungsanfrage",
+                         state.turns)
+
+            # Skill-Ranking direkt setzen (gültige Slugs, Ghost-Schutz im Router)
+            _empty_match = MatchResult()
+            for _sk in _u_skills:
+                if _sk in self.lib.valid_slugs:
+                    state.llm_rechtsgebiete[_sk] = max(
+                        state.llm_rechtsgebiete.get(_sk, 0.0), 0.9)
+            state.vermutete_rechtsgebiete = self._skill_kandidaten(
+                _empty_match, state.llm_rechtsgebiete)
+            state.sprachstil = heuristics.resolve(user_text, "unklar")
+            state.no_progress = 0
+            state.messages.append({"role": "assistant",
+                                    "content": f"[Urteilsanfrage erkannt: {_u_canonical}]"})
+            return self._handoff(state, _empty_match, [],
+                                 vollstaendig=True, debug={"urteilsanfrage": _u_canonical})
+
+        # ── Fuzzy-Fallback: Urteilsname mit Tippfehlern / Auslassungen? ──────────
+        # Nur wenn exakte Erkennung fehlschlug UND keine offene Weiche.
+        if not _urteil_hit and not state.pending_weiche:
+            _urteil_fuzzy = heuristics.detect_urteilsanfrage_fuzzy(user_text)
+            if _urteil_fuzzy:
+                _fu_skills    = _urteil_fuzzy.get("skills") or []
+                _fu_canonical = _urteil_fuzzy.get("canonical", "Urteilsanfrage")
+                _fu_gericht   = _urteil_fuzzy.get("gericht", "")
+                _fu_info      = _urteil_fuzzy.get("kurzinfo", "")
+                if _urteil_fuzzy["match_type"] == "fuzzy_direct":
+                    # Hohe Übereinstimmung → direkt Handoff wie bei exaktem Treffer
+                    store.update("wer", "Anfragender", state.turns)
+                    store.update("was", "Inhalt/Aussage des Urteils", state.turns)
+                    store.update("von_wem", _fu_gericht or "Gericht", state.turns)
+                    store.update("woraus",
+                                 f"{_fu_canonical}"
+                                 + (f" ({_fu_info})" if _fu_info else "")
+                                 + " / Rechtsprechungsanfrage",
+                                 state.turns)
+                    _empty_match2 = MatchResult()
+                    for _sk in _fu_skills:
+                        if _sk in self.lib.valid_slugs:
+                            state.llm_rechtsgebiete[_sk] = max(
+                                state.llm_rechtsgebiete.get(_sk, 0.0), 0.9)
+                    state.vermutete_rechtsgebiete = self._skill_kandidaten(
+                        _empty_match2, state.llm_rechtsgebiete)
+                    state.sprachstil = heuristics.resolve(user_text, "unklar")
+                    state.no_progress = 0
+                    state.messages.append({"role": "assistant",
+                                            "content": f"[Urteilsanfrage (fuzzy): {_fu_canonical}]"})
+                    return self._handoff(state, _empty_match2, [], vollstaendig=True,
+                                         debug={"urteilsanfrage": _fu_canonical,
+                                                "fuzzy_score": _urteil_fuzzy.get("fuzzy_score")})
+                elif _urteil_fuzzy["match_type"] == "fuzzy_confirm":
+                    # Mittlere Übereinstimmung → Rückfrage "Meinten Sie X?"
+                    _fu_frage = (f'Meinten Sie: **{_fu_canonical}**'
+                                 + (f' ({_fu_info})' if _fu_info else '')
+                                 + '?')
+                    state.pending_urteil_confirm = _urteil_fuzzy
+                    state.messages.append({"role": "assistant", "content": _fu_frage})
+                    return MessageResponse(
+                        session_id=state.session_id, modus="frage",
+                        frage=_fu_frage, turns=state.turns,
+                        debug={"fuzzy_confirm": _fu_canonical,
+                               "fuzzy_score": _urteil_fuzzy.get("fuzzy_score")})
 
         # Kombinierter Call: Extraktion + (LLM-geführte) nächste Frage.
         extraction: Extraction = self.llm.extract(state.messages, user_text, state)
@@ -581,6 +722,41 @@ class IntentEngine:
                  or state.no_progress >= config.MAX_NO_PROGRESS)
         debug = {"matched_terms": match.matched_terms, "signal_score": match.signal_score,
                  "no_progress": state.no_progress, "genug_infos": extraction.genug_infos}
+
+        # ── Confidence-Schwelle: Klarstellungsfrage bei stark ambiguem Routing ──────
+        # Feuert nur wenn: (1) erster Turn, (2) Top-Confidence < 0.35,
+        # (3) Top-2-Skills aus fundamental verschiedenen Rechtssystemen,
+        # (4) LLM hat keine Folgefrage gestellt UND kein genug_infos.
+        # Verhindert Fehlrouting bei sehr kurzen/mehrdeutigen Erstanfragen.
+        _top2_rg = state.vermutete_rechtsgebiete[:2]
+        if (not force
+                and state.turns == 1
+                and len(_top2_rg) >= 2
+                and not extraction.genug_infos
+                and not extraction.naechste_frage
+                and not state.begehr_geklaert):
+            _tc0 = _top2_rg[0].confidence
+            _tc1 = _top2_rg[1].confidence
+            _rs0 = config.rechtssystem_fuer_skill(_top2_rg[0].skill)
+            _rs1 = config.rechtssystem_fuer_skill(_top2_rg[1].skill)
+            # Nur bei fundamental verschiedenen Rechtssystemen UND nahe beieinander
+            if (_tc0 < 0.35 and _tc1 >= _tc0 * 0.75 and _rs0 != _rs1):
+                _rs_labels = {
+                    "StR": "eine strafrechtliche Situation (Strafanzeige, Verteidigung gegen Vorwürfe)",
+                    "ZR": "ein zivilrechtliches Problem (Vertragsrecht, Schadensersatz, Eigentum)",
+                    "ÖR": "ein öffentlich-rechtliches Thema (Behörde, Genehmigung, Sozialrecht)",
+                }
+                _l0 = _rs_labels.get(_rs0, _top2_rg[0].skill)
+                _l1 = _rs_labels.get(_rs1, _top2_rg[1].skill)
+                _klaerfrage = (
+                    f"Um Sie richtig beraten zu können — geht es um {_l0}, "
+                    f"oder um {_l1}? "
+                    f"Oder möchten Sie beides kurz beleuchten?"
+                )
+                state.messages.append({"role": "assistant", "content": _klaerfrage})
+                return MessageResponse(session_id=state.session_id, modus="frage",
+                                       frage=_klaerfrage, turns=state.turns,
+                                       debug={**debug, "confidence_schwelle": True})
 
         # Begehr-Klärung bei Sensibilität (einmalig, vor dem Handoff).
         # Greift auch bei Single-Skill-Fällen (z.B. KV mit nur strafrecht), damit

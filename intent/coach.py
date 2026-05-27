@@ -46,6 +46,7 @@ _EXTRACTION_SYSTEM = (
     "online bestellt/gekauft, Händler, Shop, Plattform, Marktplatz, nicht geliefert, "
     "falsche Ware, Rückgabe/Rückerstattung verweigert, AGB-Problem, Abo, "
     "automatisch verlängert, telefonisch aufgedrängt, Haustürgeschäft.\n"
+    "  ROUTING-REGEL GRENZÜBERSCHREITEND: Grenzüberschreitender Verbraucherkauf (CE-Kennzeichnung, App Store, Google Play, Amazon Marketplace, Apple Store, iPhone aus Irland, aus EU-Ausland bestellt) bedeutet: primärer Skill = verbraucherrecht (ggf. kaufrecht/ProdHaftG). europarecht NUR bei zwischenstaatlichen Konflikten (Staat vs. Staat/EU-Organe) oder Grundfreiheitsverletzungen durch Mitgliedstaaten — NIEMALS für normale B2C-Käufe aus dem EU-Ausland.\n"
     "- vermutete_normen: 3–6 einschlägige deutsche Normen als Strings, passend zum "
     "Sachverhalt. Liste die ZENTRALEN Normen je Facette (z.B. Kaufmangel: "
     "\"§ 437 BGB\", \"§ 434 BGB\", \"§ 439 BGB\"; Abmahnung-Arbeit: \"§ 626 BGB\", "

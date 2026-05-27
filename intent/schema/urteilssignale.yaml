@@ -324,6 +324,156 @@ leitfaelle:
 # Wird verwendet, wenn kein Named-Case, aber ein Gerichtskürzel + Frageformulierung
 # erkannt wird. primary_skill = null bedeutet: LLM soll Skill bestimmen.
 
+
+  # ── Strafrecht / Grundrechte — Bekannte Fälle ─────────────────────────────
+  - namen: ["Gäfgen", "Magnus Gäfgen", "Gäfgen gegen Deutschland",
+            "Jakob von Metzler", "von Metzler", "Metzler Fall",
+            "Daschner", "Daschner-Fall", "Frankfurter Entführungsfall",
+            "Entführungsfall Metzler", "Folterandrohung"]
+    skills: [strafrecht, grundrechte]
+    gericht: BGH
+    kurzinfo: "Absolutes Folterverbot Art. 1 GG / Art. 3 EMRK; Beweiserhebungsverbot; Daschner-Urteil LG Frankfurt"
+
+  - namen: ["Caroline", "Caroline von Monaco", "Caroline von Hannover",
+            "Caroline Hannover", "Hannover gegen Deutschland",
+            "Pressefreiheit Prominente", "Paparazzi"]
+    skills: [grundrechte]
+    gericht: EGMR
+    kurzinfo: "Persönlichkeitsrecht vs. Pressefreiheit, Art. 8 EMRK, allgemeines Persönlichkeitsrecht"
+
+  - namen: ["Soraya", "Soraya-Urteil", "Soraya BGB",
+            "Schadensersatz Persönlichkeitsverletzung", "BGHZ 35, 363"]
+    skills: [grundrechte]
+    gericht: BGH
+    kurzinfo: "Geldentschädigung bei Verletzung des allgemeinen Persönlichkeitsrechts, Art. 1+2 GG"
+
+  - namen: ["Brokdorf", "Brokdorf-Urteil", "BVerfGE 69, 315",
+            "Versammlungsfreiheit Demonstration", "Aufzug Brokdorf"]
+    skills: [grundrechte]
+    gericht: BVerfG
+    kurzinfo: "Versammlungsfreiheit Art. 8 GG; Gefahrenabwehr bei Großdemonstrationen"
+
+  - namen: ["Lebach", "Lebach-Urteil", "Lebach I", "Lebach II",
+            "BVerfGE 35, 202", "Resozialisierung Fernsehen",
+            "TV-Dokumentation Straftäter"]
+    skills: [grundrechte, strafrecht]
+    gericht: BVerfG
+    kurzinfo: "Persönlichkeitsrecht vs. Rundfunkfreiheit; Resozialisierungsinteresse des Straftäters"
+
+  - namen: ["Blinkfüer", "Blinkfüer-Urteil", "BVerfGE 25, 256",
+            "Boykott Rundfunkprogramm", "Wirtschaftsboykott Presse"]
+    skills: [grundrechte]
+    gericht: BVerfG
+    kurzinfo: "Pressefreiheit Art. 5 GG vs. wirtschaftlicher Boykott; mittelbare Drittwirkung"
+
+  - namen: ["Eppler", "Eppler-Urteil", "BGH NJW 1980, 2810",
+            "Recht auf eigene Äußerungen", "Wortlautklage"]
+    skills: [grundrechte]
+    gericht: BGH
+    kurzinfo: "Allgemeines Persönlichkeitsrecht; Recht, eigene Aussagen nicht verfälscht zu sehen"
+
+  - namen: ["Schleyer", "Schleyer-Entführung BVerfG", "BVerfGE 46, 160",
+            "staatliche Schutzpflicht Leben"]
+    skills: [grundrechte]
+    gericht: BVerfG
+    kurzinfo: "Schutzpflicht des Staates aus Art. 2 Abs. 2 GG; kein subjektiver Anspruch auf bestimmte Maßnahmen"
+
+  - namen: ["Klass", "Klass-Urteil", "BVerfGE 30, 1",
+            "Telekommunikationsüberwachung G10", "Abhörgesetz"]
+    skills: [grundrechte, strafverfahrensrecht]
+    gericht: BVerfG
+    kurzinfo: "Verfassungsmäßigkeit heimlicher Telefonüberwachung; Art. 10 GG Fernmeldegeheimnis"
+
+  - namen: ["NPD-Verbot", "NPD-Verbotsverfahren", "BVerfGE 2, 1",
+            "SRP-Urteil", "Parteiverbot", "KPD-Verbot"]
+    skills: [verfassungsprozessrecht, staatsorganisationsrecht]
+    gericht: BVerfG
+    kurzinfo: "Parteiverbotsverfahren Art. 21 Abs. 2 GG; § 13 Nr. 2 BVerfGG"
+
+  - namen: ["Badewannenfall", "Badewanne BGH", "BGHSt 6, 147",
+            "mittelbare Täterschaft doloses Werkzeug", "doloses Werkzeug"]
+    skills: [strafrecht]
+    gericht: BGH
+    kurzinfo: "Mittäterschaft / mittelbare Täterschaft; doloses Werkzeug; Tatherrschaft § 25 StGB"
+
+  - namen: ["Weinfälschungsfall", "Weinfälschung BGH", "BGHSt 37, 106",
+            "Weinpanscherei", "Glykol-Wein"]
+    skills: [wirtschaftsstrafrecht, strafrecht]
+    gericht: BGH
+    kurzinfo: "Lebensmittelbetrug, § 263 StGB; Produkthaftung"
+
+  - namen: ["Siemens-Korruption", "Siemens Schmiergeld", "Siemens AG Korruption",
+            "Korruptionsfall Siemens"]
+    skills: [wirtschaftsstrafrecht, gesellschaftsrecht]
+    gericht: BGH
+    kurzinfo: "Untreue § 266 StGB; Schmiergeld; Schwarze Kassen; Compliance-Pflichten"
+
+  - namen: ["Kreil", "Kreil-Urteil", "Tanja Kreil", "EuGH C-285/98",
+            "Frauen Bundeswehr", "Gleichbehandlung Bundeswehr"]
+    skills: [grundrechte, europarecht]
+    gericht: EuGH
+    kurzinfo: "Gleichbehandlung von Frauen im Militärdienst; Art. 12a GG a.F.; RL 76/207/EWG"
+
+  - namen: ["Hühnerpestfall", "Hühnerpest", "BGH NJW 1968, 2238",
+            "Produzentenhaftung", "Verkehrssicherungspflicht Produkt"]
+    skills: [kaufrecht, sachenrecht]
+    gericht: BGH
+    kurzinfo: "Produzentenhaftung § 823 BGB; Verkehrssicherungspflichten des Herstellers"
+
+  - namen: ["Pariser Tageblatt", "Pariser Tageblatt Fall",
+            "Täter-hinter-dem-Täter", "Täter hinter dem Täter BGH"]
+    skills: [strafrecht]
+    gericht: BGH
+    kurzinfo: "Mittelbare Täterschaft mit verantwortlichem Werkzeug; § 25 Abs. 1 StGB"
+
+  - namen: ["Contergan", "Contergan-Urteil", "Thalidomid",
+            "Grünenthal Contergan"]
+    skills: [strafrecht, medizinrecht]
+    gericht: BGH
+    kurzinfo: "Fahrlässige Körperverletzung durch Arzneimittel; Kausalität bei Massenschäden"
+
+  - namen: ["Altersheim-Urteil", "Altersheim BVerwG", "Pflegeheim Klage",
+            "Pflegeheim Genehmigung"]
+    skills: [verwaltungsrecht, sozialrecht]
+    gericht: BVerwG
+    kurzinfo: "Zulassung von Pflegeeinrichtungen; Grundrecht auf Berufsfreiheit Art. 12 GG"
+
+  - namen: ["Carolabrücke", "Brücke BVerwG", "Verkehrssicherungspflicht Brücke",
+            "öffentliche Straße Verkehrssicherung"]
+    skills: [verwaltungsrecht]
+    gericht: BVerwG
+    kurzinfo: "Verkehrssicherungspflicht für öffentliche Straßen; Amtshaftung § 839 BGB"
+
+  - namen: ["Nachtarbeit-Urteil", "Nachtarbeit BVerfG", "BVerfGE 85, 191",
+            "Nachtarbeitsverbot Gleichheit"]
+    skills: [arbeitsrecht, grundrechte]
+    gericht: BVerfG
+    kurzinfo: "Nachtarbeitsverbot für Frauen verfassungswidrig; Art. 3 GG Gleichbehandlung"
+
+  - namen: ["Mutzenbacher", "Mutzenbacher-Urteil", "BVerfGE 83, 130",
+            "Kunstfreiheit Pornographie", "Jugendschutz Kunstfreiheit"]
+    skills: [grundrechte]
+    gericht: BVerfG
+    kurzinfo: "Kunstfreiheit Art. 5 Abs. 3 GG vs. Jugendschutz; Indizierung jugendgefährdender Schriften"
+
+  - namen: ["Kriegsdienstverweigerung", "KDV-Urteil", "BVerfGE 12, 45",
+            "Gewissensfreiheit Art. 4 GG", "Wehrpflicht Gewissen"]
+    skills: [grundrechte, staatsorganisationsrecht]
+    gericht: BVerfG
+    kurzinfo: "Verweigerung des Kriegsdienstes aus Gewissensgründen; Art. 4 Abs. 3 GG"
+
+  - namen: ["Klimaschutzbeschluss", "Klimaurteil BVerfG", "BVerfGE 157, 30",
+            "Klimaschutzgesetz", "CO2-Budget", "Klimabeschluss 2021"]
+    skills: [grundrechte, umweltrecht, verfassungsprozessrecht]
+    gericht: BVerfG
+    kurzinfo: "Generationengerechtigkeit; Klimaschutzgesetz teilweise verfassungswidrig; Art. 2 GG Zukunftsverantwortung"
+
+  - namen: ["Europäische Menschenrechtskonvention EGMR Auslieferung",
+            "Soering", "Soering-Urteil", "Soering gegen UK"]
+    skills: [grundrechte, strafrecht, voelkerrecht]
+    gericht: EGMR
+    kurzinfo: "Auslieferungsverbot bei Folter-/Todesstrafe-Risiko; Art. 3 EMRK"
+
 court_aliases:
   - kürzel: EuGH
     vollname: Europäischer Gerichtshof
