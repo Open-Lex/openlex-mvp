@@ -136,7 +136,7 @@
       "status": "ready",
       "owner": "Admin",
       "created_at": "2026-05-05T10:49:29.431380+00:00",
-      "updated_at": "2026-05-23T16:37:04.266145+00:00",
+      "updated_at": "2026-05-27T16:36:59.152946+00:00",
       "laws": [
         {
           "id": "2132bd6b",
@@ -248,6 +248,26 @@
           "book_id": "eisentraut-verwaltungsrecht-2020",
           "chunks_added": 346,
           "imported_at": "2026-05-23T16:37:04.266127+00:00"
+        },
+        {
+          "book_id": "eisentraut-verwaltungsrecht-2020",
+          "chunks_added": 346,
+          "imported_at": "2026-05-24T16:40:26.088995+00:00"
+        },
+        {
+          "book_id": "eisentraut-verwaltungsrecht-2020",
+          "chunks_added": 346,
+          "imported_at": "2026-05-25T16:37:05.343411+00:00"
+        },
+        {
+          "book_id": "eisentraut-verwaltungsrecht-2020",
+          "chunks_added": 346,
+          "imported_at": "2026-05-26T16:37:13.529412+00:00"
+        },
+        {
+          "book_id": "eisentraut-verwaltungsrecht-2020",
+          "chunks_added": 346,
+          "imported_at": "2026-05-27T16:36:59.152921+00:00"
         }
       ]
     },
@@ -263,7 +283,7 @@
       "status": "ready",
       "owner": "Admin",
       "created_at": "2026-05-05T11:49:11.354815+00:00",
-      "updated_at": "2026-05-23T16:33:57.254430+00:00",
+      "updated_at": "2026-05-27T16:33:54.868984+00:00",
       "laws": [
         {
           "id": "a6743d70",
@@ -402,6 +422,46 @@
           "book_id": "petras-grundrechte-faelle-2023",
           "chunks_added": 197,
           "imported_at": "2026-05-23T16:33:57.254404+00:00"
+        },
+        {
+          "book_id": "hahn-grundrechte-lehrbuch-2022",
+          "chunks_added": 19,
+          "imported_at": "2026-05-24T16:31:27.380315+00:00"
+        },
+        {
+          "book_id": "petras-grundrechte-faelle-2023",
+          "chunks_added": 197,
+          "imported_at": "2026-05-24T16:35:45.148451+00:00"
+        },
+        {
+          "book_id": "hahn-grundrechte-lehrbuch-2022",
+          "chunks_added": 19,
+          "imported_at": "2026-05-25T16:31:14.973661+00:00"
+        },
+        {
+          "book_id": "petras-grundrechte-faelle-2023",
+          "chunks_added": 197,
+          "imported_at": "2026-05-25T16:33:58.276391+00:00"
+        },
+        {
+          "book_id": "hahn-grundrechte-lehrbuch-2022",
+          "chunks_added": 19,
+          "imported_at": "2026-05-26T16:31:10.703345+00:00"
+        },
+        {
+          "book_id": "petras-grundrechte-faelle-2023",
+          "chunks_added": 197,
+          "imported_at": "2026-05-26T16:34:06.533856+00:00"
+        },
+        {
+          "book_id": "hahn-grundrechte-lehrbuch-2022",
+          "chunks_added": 19,
+          "imported_at": "2026-05-27T16:31:12.781804+00:00"
+        },
+        {
+          "book_id": "petras-grundrechte-faelle-2023",
+          "chunks_added": 197,
+          "imported_at": "2026-05-27T16:33:54.868961+00:00"
         }
       ]
     },

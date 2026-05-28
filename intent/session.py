@@ -46,6 +46,7 @@ class SessionState:
     last_handoff: Optional[dict] = None  # letztes Handoff-JSON (für Orchestrator-Query)
     rechtssystem: Optional[str] = None          # "ZR" | "StR" | "ÖR"
     sachverhalts_tiefe: dict = field(default_factory=dict)  # akkumulierte Tiefenfelder
+    pending_urteil_confirm: Optional[dict] = None  # Fuzzy-Urteilstreffer, wartet auf Bestätigung
 
     @classmethod
     def new(cls) -> "SessionState":
@@ -96,6 +97,7 @@ class SessionState:
             "vermutete_rechtsgebiete": [k.model_dump() for k in self.vermutete_rechtsgebiete],
             "rechtssystem": self.rechtssystem,
             "sachverhalts_tiefe": self.sachverhalts_tiefe,
+            "pending_urteil_confirm": self.pending_urteil_confirm,
         }
 
     @classmethod
@@ -123,6 +125,7 @@ class SessionState:
         st.pending_weiche = d.get("pending_weiche")
         st.rechtssystem = d.get("rechtssystem")
         st.sachverhalts_tiefe = d.get("sachverhalts_tiefe", {})
+        st.pending_urteil_confirm = d.get("pending_urteil_confirm")
         return st
 
 
