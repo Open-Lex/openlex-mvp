@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "skill": "polizei_ordnungsrecht",
+    "question": "Eine bereits begonnene Demonstration eskaliert: Teile der Menge greifen Polizisten an. Die Polizei will die Versammlung auflösen. Welche Norm des Versammlungsgesetzes erlaubt die Auflösung einer Versammlung, und welche Voraussetzungen müssen vorliegen?",
+    "expected_norms": [
+      "§ 13",
+      "§ 15"
+    ],
+    "expected_keywords": [
+      "Auflösung",
+      "öffentliche Sicherheit",
+      "Versammlungsgesetz"
+    ],
+    "category": "Auflösung einer Versammlung"
+  },
+  {
+    "id": 2,
+    "skill": "polizei_ordnungsrecht",
+    "question": "Ein Unternehmen betreibt seit Jahren eine Spielhalle, ohne jemals die nach der Gewerbeordnung erforderliche Erlaubnis beantragt zu haben. Die Ordnungsbehörde will den Betrieb sofort untersagen. Auf welche Norm der Gewerbeordnung stützt sich die Untersagung eines erlaubnispflichtig betriebenen Gewerbes ohne Erlaubnis?",
+    "expected_norms": [
+      "§ 15"
+    ],
+    "expected_keywords": [
+      "Erlaubnis",
+      "Untersagung",
+      "Gewerbeordnung"
+    ],
+    "category": "GewO Betrieb ohne Erlaubnis"
+  },
+  {
+    "id": 3,
+    "skill": "polizei_ordnungsrecht",
+    "question": "Die zuständige Behörde will eine für den kommenden Samstag angemeldete Demonstration von 10.000 Personen verbieten, weil Geheimdiensterkenntnisse auf geplante gewalttätige Ausschreitungen hinweisen. Welche Norm des Versammlungsgesetzes erlaubt ein Verbot, und welche Voraussetzungen müssen vorliegen?",
+    "expected_norms": [
+      "§ 15"
+    ],
+    "expected_keywords": [
+      "Verbot",
+      "unmittelbare Gefahr",
+      "öffentliche Sicherheit"
+    ],
+    "category": "Versammlungsverbot"
+  },
+  {
+    "id": 4,
+    "skill": "polizei_ordnungsrecht",
+    "question": "Die Ordnungsbehörde will einem Gastwirt die Gaststättenerlaubnis nach wiederholten schwerwiegenden Verstößen entziehen und außerdem sein gesamtes Gewerbe dauerhaft untersagen, weil er als unzuverlässig gilt. Welche Norm der Gewerbeordnung erlaubt eine vollständige Gewerbeuntersagung, und was sind die Voraussetzungen?",
+    "expected_norms": [
+      "§ 35"
+    ],
+    "expected_keywords": [
+      "Gewerbeuntersagung",
+      "Unzuverlässigkeit",
+      "Gewerbeordnung"
+    ],
+    "category": "Gewerbeuntersagung"
+  },
+  {
+    "id": 5,
+    "skill": "polizei_ordnungsrecht",
+    "question": "Die Verkehrsbehörde verhängt gegen ein Logistikunternehmen eine Geldbuße von 500.000 Euro wegen eines schwerwiegenden Verstoßes gegen Lenk- und Ruhezeiten. Das Unternehmen hält die Geldbuße für unverhältnismäßig hoch. Welche Kriterien legt das OWiG für die Bemessung von Geldbußen fest?",
+    "expected_norms": [
+      "§ 17"
+    ],
+    "expected_keywords": [
+      "Geldbuße",
+      "Bemessung",
+      "OWiG"
+    ],
+    "category": "Geldbuße OWiG"
+  }
+]

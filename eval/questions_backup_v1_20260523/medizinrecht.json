@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "skill": "medizinrecht",
+    "question": "Ein Patient erleidet eine Gesundheitsschädigung durch die Einnahme eines Arzneimittels. Welche Rechtsvorschrift regelt die Schadensersatzpflicht in diesem Fall?",
+    "expected_norms": [
+      "§ 84"
+    ],
+    "expected_keywords": [
+      "Schadensersatz",
+      "Gesundheitsschädigung",
+      "Arzneimittel"
+    ],
+    "min_sources": 1,
+    "category": "Haftung"
+  },
+  {
+    "id": 2,
+    "skill": "medizinrecht",
+    "question": "Was ist der Zweck des Arzneimittelgesetzes?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Arzneimittelgesetz",
+      "Sicherheit",
+      "Versorgung"
+    ],
+    "min_sources": 1,
+    "category": "Arzneimittelrecht"
+  },
+  {
+    "id": 3,
+    "skill": "medizinrecht",
+    "question": "Ein Arzneimittelhersteller bringt ein Produkt auf den Markt, das nicht den Anforderungen des Arzneimittelgesetzes entspricht. Welche Rechtsfolgen kann dies haben?",
+    "expected_norms": [
+      "AMG"
+    ],
+    "expected_keywords": [
+      "Arzneimittelhersteller",
+      "Rechtsfolgen",
+      "Sicherheit"
+    ],
+    "min_sources": 2,
+    "category": "Arzneimittelrecht"
+  },
+  {
+    "id": 4,
+    "skill": "medizinrecht",
+    "question": "Ein Patient erleidet eine Verletzung seiner Gesundheit durch eine medizinische Behandlung. Welche Anforderungen müssen an die Schadensersatzpflicht gestellt werden?",
+    "expected_norms": [
+      "§ 823"
+    ],
+    "expected_keywords": [
+      "Schadensersatz",
+      "Gesundheit",
+      "medizinische Behandlung"
+    ],
+    "min_sources": 1,
+    "category": "Haftung"
+  },
+  {
+    "id": 5,
+    "skill": "medizinrecht",
+    "question": "Was versteht man unter dem Begriff 'Stoff' im Sinne des Arzneimittelgesetzes?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Stoff",
+      "Arzneimittelgesetz",
+      "chemische Elemente"
+    ],
+    "min_sources": 1,
+    "category": "Arzneimittelrecht"
+  },
+  {
+    "id": 6,
+    "skill": "medizinrecht",
+    "question": "Ein Arzt verschreibt ein Arzneimittel, das nicht zugelassen ist. Welche Rechtsvorschriften sind in diesem Fall relevant?",
+    "expected_norms": [
+      "§ 1 AMG",
+      "§ 823 BGB"
+    ],
+    "expected_keywords": [
+      "Arzneimittel",
+      "Zulassung",
+      "Haftung"
+    ],
+    "min_sources": 2,
+    "category": "Arzneimittelrecht"
+  },
+  {
+    "id": 7,
+    "skill": "medizinrecht",
+    "question": "Ein Patient erleidet eine Verletzung seiner Gesundheit durch eine medizinische Behandlung. Welche Anforderungen müssen an die Schadensersatzpflicht gestellt werden?",
+    "expected_norms": [
+      "§ 823 BGB"
+    ],
+    "expected_keywords": [
+      "Schadensersatz",
+      "Gesundheit",
+      "medizinische Behandlung"
+    ],
+    "min_sources": 1,
+    "category": "Haftung"
+  },
+  {
+    "id": 8,
+    "skill": "medizinrecht",
+    "question": "Was sind die Anforderungen an die Qualität von Arzneimitteln?",
+    "expected_norms": [
+      "§ 1 AMG"
+    ],
+    "expected_keywords": [
+      "Arzneimittel",
+      "Qualität",
+      "Sicherheit"
+    ],
+    "min_sources": 1,
+    "category": "Arzneimittelrecht"
+  },
+  {
+    "id": 9,
+    "skill": "medizinrecht",
+    "question": "Ein Arzneimittelhersteller verletzt die Anforderungen des Arzneimittelgesetzes. Welche Rechtsfolgen kann dies haben?",
+    "expected_norms": [
+      "§ 3 AMG",
+      "§ 823 BGB"
+    ],
+    "expected_keywords": [
+      "Arzneimittelhersteller",
+      "Rechtsfolgen",
+      "Sicherheit"
+    ],
+    "min_sources": 2,
+    "category": "Arzneimittelrecht"
+  },
+  {
+    "id": 10,
+    "skill": "medizinrecht",
+    "question": "Ein Patient erleidet eine Gesundheitsschädigung durch die Einnahme eines Arzneimittels. Wer ist in diesem Fall für die Schadensersatzpflicht verantwortlich?",
+    "expected_norms": [
+      "§ 823 BGB"
+    ],
+    "expected_keywords": [
+      "Schadensersatz",
+      "Gesundheitsschädigung",
+      "Arzneimittel"
+    ],
+    "min_sources": 1,
+    "category": "Haftung"
+  }
+]

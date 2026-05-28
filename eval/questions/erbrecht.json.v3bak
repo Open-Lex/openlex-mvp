@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "skill": "erbrecht",
+    "question": "Mein Großvater ist verstorben. Er hatte keine Kinder. Wer erbt nach der gesetzlichen Erbfolge und in welcher Reihenfolge?",
+    "expected_norms": [
+      "§ 1924",
+      "§ 1925",
+      "§ 1926",
+      "§ 1930"
+    ],
+    "expected_keywords": [
+      "Großeltern",
+      "Abkömmlinge",
+      "Ordnung"
+    ],
+    "category": "Gesetzliche Erbfolge"
+  },
+  {
+    "id": 2,
+    "skill": "erbrecht",
+    "question": "Ein Kind wurde bereits gezeugt, ist aber noch nicht geboren, als der Erblasser stirbt. Kann dieses ungeborene Kind erben?",
+    "expected_norms": [
+      "§ 1923"
+    ],
+    "expected_keywords": [
+      "Erbfähigkeit",
+      "Erbfall",
+      "Erblasser"
+    ],
+    "category": "Erbfähigkeit"
+  },
+  {
+    "id": 3,
+    "skill": "erbrecht",
+    "question": "Nach dem Tod eines Erblassers werden die Vermögenswerte auf mehrere Personen übertragen. Was ist das rechtliche Konzept hinter dieser Übertragung?",
+    "expected_norms": [
+      "§ 1922"
+    ],
+    "expected_keywords": [
+      "Gesamtrechtsnachfolge",
+      "Erbschaft",
+      "Erben"
+    ],
+    "category": "Vermögensübergang"
+  },
+  {
+    "id": 4,
+    "skill": "erbrecht",
+    "question": "Ein Erblasser hinterlässt drei Kinder. Wie wird sein Vermögen nach gesetzlicher Erbfolge unter den Kindern aufgeteilt?",
+    "expected_norms": [
+      "§ 1924"
+    ],
+    "expected_keywords": [
+      "Erbteil",
+      "gleichen Teilen",
+      "Erblassers"
+    ],
+    "category": "Gesetzliche Erbfolge"
+  },
+  {
+    "id": 5,
+    "skill": "erbrecht",
+    "question": "Der Erblasser hinterlässt einen überlebenden Ehegatte und zwei Kinder (erste Ordnung). Welcher Erbteil entfällt auf den Ehegatten?",
+    "expected_norms": [
+      "§ 1931"
+    ],
+    "expected_keywords": [
+      "Ehegatte",
+      "Erbteil",
+      "Abkömmlinge"
+    ],
+    "category": "Ehegattenerbrecht"
+  }
+]

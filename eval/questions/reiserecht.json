@@ -1,0 +1,233 @@
+[
+  {
+    "id": 1,
+    "skill": "reiserecht",
+    "question": "Ich habe eine Pauschalreise bestehend aus Flug und Hotel gebucht. Der Flug kostet 300 Euro und das Hotel 200 Euro. Sind dies Reiseleistungen im Sinne des Reiserechts?",
+    "expected_norms": [
+      "§ 651a"
+    ],
+    "expected_keywords": [
+      "Reiseleistungen",
+      "Pauschalreise",
+      "Reiseveranstalter"
+    ],
+    "category": "Pauschalreise Definition"
+  },
+  {
+    "id": 2,
+    "skill": "reiserecht",
+    "question": "Mein Hinflug hatte 12 Stunden Verspätung, sodass ich mein gebuchtes Hotel erst einen Tag später erreichte. Ich hatte eine Pauschalreise gebucht. Welche Ansprüche habe ich auf Ausgleichszahlung nach der EU-Fluggastrechte-Verordnung und auf Minderung gegen den Reiseveranstalter?",
+    "expected_norms": [
+      "Art. 7"
+    ],
+    "expected_keywords": [
+      "Flugverspätung",
+      "Pauschalreise",
+      "Reiseveranstalter",
+      "Ausgleich"
+    ],
+    "category": "Mängelrechte"
+  },
+  {
+    "id": 3,
+    "skill": "reiserecht",
+    "question": "Ich möchte 10 Tage vor meinem geplanten Reisebeginn meine Pauschalreise stornieren. Kann der Reiseveranstalter von mir eine Gebühr verlangen?",
+    "expected_norms": [
+      "§ 651h"
+    ],
+    "expected_keywords": [
+      "Kündigung",
+      "Reiseveranstalter",
+      "Reisenden"
+    ],
+    "category": "Rücktritt"
+  },
+  {
+    "id": 4,
+    "skill": "reiserecht",
+    "question": "Nach meiner Pauschalreise stelle ich fest, dass das gebuchte Hotel nicht den vereinbarten Standards entsprach. Wie lange habe ich Zeit, um meine Ansprüche geltend zu machen?",
+    "expected_norms": [
+      "§ 651j"
+    ],
+    "expected_keywords": [
+      "Reisenden",
+      "Pauschalreise",
+      "Verjährungsfrist"
+    ],
+    "category": "Verjährung"
+  },
+  {
+    "id": 5,
+    "skill": "reiserecht",
+    "question": "Der Reiseveranstalter möchte den Reisepreis 15 Tage vor Reisebeginn um 150 Euro erhöhen. Sind die Voraussetzungen für eine wirksame Preiserhöhung erfüllt?",
+    "expected_norms": [
+      "§ 651f"
+    ],
+    "expected_keywords": [
+      "Reisepreis",
+      "Reiseveranstalter",
+      "Preiserhöhung"
+    ],
+    "category": "Preisänderung"
+  },
+  {
+    "id": 6,
+    "skill": "reiserecht",
+    "question": "Ein Flug hat sich um 4 Stunden verspätet. Hat der Passagier Anspruch auf Ausgleichszahlung nach der Fluggastrechteverordnung?",
+    "expected_norms": [
+      "Art. 7 VO 261/2004",
+      "Art. 5 VO 261/2004"
+    ],
+    "expected_keywords": [
+      "Verspätung",
+      "Ausgleichsleistung",
+      "drei Stunden",
+      "Sturgeon",
+      "Ankunftszeit"
+    ],
+    "category": "Fluggastrechte Verspätung"
+  },
+  {
+    "id": 7,
+    "skill": "reiserecht",
+    "question": "Eine Airline annulliert einen Flug wegen eines technischen Defekts am Triebwerk und beruft sich auf einen außergewöhnlichen Umstand. Ist das berechtigt?",
+    "expected_norms": [
+      "Art. 5 Abs. 3 VO 261/2004"
+    ],
+    "expected_keywords": [
+      "außergewöhnlicher Umstand",
+      "technischer Defekt",
+      "Wartung",
+      "Wallentin-Hermann"
+    ],
+    "category": "Außergewöhnlicher Umstand"
+  },
+  {
+    "id": 8,
+    "skill": "reiserecht",
+    "question": "Wegen des Vulkanausbruchs auf Island war ein Passagier 6 Tage gestrandet. Die Airline verweigerte Unterkunft und Verpflegung. Was steht dem Passagier zu?",
+    "expected_norms": [
+      "Art. 9 VO 261/2004"
+    ],
+    "expected_keywords": [
+      "Betreuungsleistungen",
+      "Unterkunft",
+      "Verpflegung",
+      "McDonagh",
+      "Vulkanasche"
+    ],
+    "category": "Betreuungspflichten höhere Gewalt"
+  },
+  {
+    "id": 9,
+    "skill": "reiserecht",
+    "question": "Ein Reiseveranstalter bucht ein anderes als das vereinbarte Hotel. Was kann der Reisende verlangen?",
+    "expected_norms": [
+      "§ 651i BGB",
+      "§ 651m BGB"
+    ],
+    "expected_keywords": [
+      "Reisemangel",
+      "Minderung",
+      "vereinbartes Hotel",
+      "Abhilfe"
+    ],
+    "category": "Reisemangel Unterkunft"
+  },
+  {
+    "id": 10,
+    "skill": "reiserecht",
+    "question": "Während des Urlaubs verursacht eine Baustelle neben dem Hotel erheblichen Lärm. Der Reiseveranstalter wusste davon. Welche Ansprüche hat der Reisende?",
+    "expected_norms": [
+      "§ 651i BGB",
+      "§ 651n BGB"
+    ],
+    "expected_keywords": [
+      "Reisemangel",
+      "Baulärm",
+      "Minderung",
+      "Informationspflicht"
+    ],
+    "category": "Reisemangel Lärm"
+  },
+  {
+    "id": 11,
+    "skill": "reiserecht",
+    "question": "Ein Flug hat sich um 4 Stunden verspätet. Hat der Passagier Anspruch auf Ausgleichszahlung nach der Fluggastrechteverordnung?",
+    "expected_norms": [
+      "Art. 7 VO 261/2004",
+      "Art. 5 VO 261/2004"
+    ],
+    "expected_keywords": [
+      "Verspätung",
+      "Ausgleichsleistung",
+      "drei Stunden",
+      "Sturgeon",
+      "Ankunftszeit"
+    ],
+    "category": "Fluggastrechte Verspätung"
+  },
+  {
+    "id": 12,
+    "skill": "reiserecht",
+    "question": "Eine Airline annulliert einen Flug wegen eines technischen Defekts am Triebwerk und beruft sich auf einen außergewöhnlichen Umstand. Ist das berechtigt?",
+    "expected_norms": [
+      "Art. 5 Abs. 3 VO 261/2004"
+    ],
+    "expected_keywords": [
+      "außergewöhnlicher Umstand",
+      "technischer Defekt",
+      "Wartung",
+      "Wallentin-Hermann"
+    ],
+    "category": "Außergewöhnlicher Umstand"
+  },
+  {
+    "id": 13,
+    "skill": "reiserecht",
+    "question": "Wegen des Vulkanausbruchs auf Island war ein Passagier 6 Tage gestrandet. Die Airline verweigerte Unterkunft und Verpflegung. Was steht dem Passagier zu?",
+    "expected_norms": [
+      "Art. 9 VO 261/2004"
+    ],
+    "expected_keywords": [
+      "Betreuungsleistungen",
+      "Unterkunft",
+      "Verpflegung",
+      "McDonagh",
+      "Vulkanasche"
+    ],
+    "category": "Betreuungspflichten höhere Gewalt"
+  },
+  {
+    "id": 14,
+    "skill": "reiserecht",
+    "question": "Ein Reiseveranstalter bucht ein anderes als das vereinbarte Hotel. Was kann der Reisende verlangen?",
+    "expected_norms": [
+      "§ 651i BGB",
+      "§ 651m BGB"
+    ],
+    "expected_keywords": [
+      "Reisemangel",
+      "Minderung",
+      "vereinbartes Hotel",
+      "Abhilfe"
+    ],
+    "category": "Reisemangel Unterkunft"
+  },
+  {
+    "id": 15,
+    "skill": "reiserecht",
+    "question": "Während des Urlaubs verursacht eine Baustelle neben dem Hotel erheblichen Lärm. Der Reiseveranstalter wusste davon. Welche Ansprüche hat der Reisende?",
+    "expected_norms": [
+      "§ 651i BGB",
+      "§ 651n BGB"
+    ],
+    "expected_keywords": [
+      "Reisemangel",
+      "Baulärm",
+      "Minderung",
+      "Informationspflicht"
+    ],
+    "category": "Reisemangel Lärm"
+  }
+]

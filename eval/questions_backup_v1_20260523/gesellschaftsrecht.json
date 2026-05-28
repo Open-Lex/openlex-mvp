@@ -1,0 +1,157 @@
+[
+  {
+    "id": 1,
+    "skill": "gesellschaftsrecht",
+    "question": "Welche Anforderungen müssen bei der Gründung einer GmbH erfüllt werden, um den Gesellschaftsvertrag wirksam zu machen?",
+    "expected_norms": [
+      "§ 2 GmbHG",
+      "§ 3 GmbHG"
+    ],
+    "expected_keywords": [
+      "Gesellschaftsvertrag",
+      "notarielle Form",
+      "Gründung"
+    ],
+    "min_sources": 2,
+    "category": "GmbH-Gründung"
+  },
+  {
+    "id": 2,
+    "skill": "gesellschaftsrecht",
+    "question": "Wie viele Gesellschafter sind erforderlich, um eine GmbH zu gründen?",
+    "expected_norms": [
+      "§ 1 GmbHG"
+    ],
+    "expected_keywords": [
+      "Gesellschafter",
+      "Gründung",
+      "Mindestanzahl"
+    ],
+    "min_sources": 1,
+    "category": "GmbH-Gründung"
+  },
+  {
+    "id": 3,
+    "skill": "gesellschaftsrecht",
+    "question": "Was sind die wesentlichen Inhalte, die ein Gesellschaftsvertrag einer GmbH enthalten muss?",
+    "expected_norms": [
+      "§ 3 Abs. 1 GmbHG",
+      "§ 3 GmbHG"
+    ],
+    "expected_keywords": [
+      "Gesellschaftsvertrag",
+      "Inhalt",
+      "Pflichtangaben"
+    ],
+    "min_sources": 1,
+    "category": "GmbH-Vertrag"
+  },
+  {
+    "id": 4,
+    "skill": "gesellschaftsrecht",
+    "question": "Kann eine GmbH zu jedem beliebigen Zweck gegründet werden?",
+    "expected_norms": [
+      "§ 1 GmbHG"
+    ],
+    "expected_keywords": [
+      "GmbH-Zweck",
+      "Gründung",
+      "Zulässigkeit"
+    ],
+    "min_sources": 1,
+    "category": "GmbH-Gründung"
+  },
+  {
+    "id": 5,
+    "skill": "gesellschaftsrecht",
+    "question": "Was ist das Mindestkapital, das für die Gründung einer GmbH erforderlich ist?",
+    "expected_norms": [
+      "§ 5 Abs. 1 GmbHG",
+      "§ 5 GmbHG"
+    ],
+    "expected_keywords": [
+      "Stammkapital",
+      "Mindestkapital",
+      "GmbH-Gründung"
+    ],
+    "min_sources": 1,
+    "category": "GmbH-Gründung"
+  },
+  {
+    "id": 6,
+    "skill": "gesellschaftsrecht",
+    "question": "Wie viele Geschäftsführer kann eine GmbH in einem vereinfachten Verfahren haben?",
+    "expected_norms": [
+      "§ 2 GmbHG"
+    ],
+    "expected_keywords": [
+      "Geschäftsführer",
+      "vereinfachtes Verfahren",
+      "GmbH-Gründung"
+    ],
+    "min_sources": 1,
+    "category": "GmbH-Gründung"
+  },
+  {
+    "id": 7,
+    "skill": "gesellschaftsrecht",
+    "question": "Muss der Gesellschaftsvertrag einer GmbH notariell beurkundet werden?",
+    "expected_norms": [
+      "§ 2 GmbHG"
+    ],
+    "expected_keywords": [
+      "Gesellschaftsvertrag",
+      "notarielle Form",
+      "Beurkundung"
+    ],
+    "min_sources": 1,
+    "category": "GmbH-Vertrag"
+  },
+  {
+    "id": 8,
+    "skill": "gesellschaftsrecht",
+    "question": "Kann eine GmbH mit weniger als drei Gesellschaftern gegründet werden?",
+    "expected_norms": [
+      "§ 1 GmbHG"
+    ],
+    "expected_keywords": [
+      "Gesellschafter",
+      "Mindestanzahl",
+      "GmbH-Gründung"
+    ],
+    "min_sources": 1,
+    "category": "GmbH-Gründung"
+  },
+  {
+    "id": 9,
+    "skill": "gesellschaftsrecht",
+    "question": "Was sind die Folgen, wenn der Gesellschaftsvertrag einer GmbH nicht den gesetzlichen Anforderungen entspricht?",
+    "expected_norms": [
+      "§ 2 GmbHG",
+      "§ 3 GmbHG"
+    ],
+    "expected_keywords": [
+      "Gesellschaftsvertrag",
+      "Nichtigkeit",
+      "Rechtsfolgen"
+    ],
+    "min_sources": 2,
+    "category": "GmbH-Vertrag"
+  },
+  {
+    "id": 10,
+    "skill": "gesellschaftsrecht",
+    "question": "Wie kann eine GmbH ihre Satzung ändern, wenn dies nicht im Gesellschaftsvertrag geregelt ist?",
+    "expected_norms": [
+      "§ 2 GmbHG",
+      "§ 3 GmbHG"
+    ],
+    "expected_keywords": [
+      "Satzungsänderung",
+      "Gesellschaftsvertrag",
+      "Änderung"
+    ],
+    "min_sources": 2,
+    "category": "GmbH-Vertrag"
+  }
+]

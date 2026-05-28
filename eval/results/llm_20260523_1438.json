@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "sozialrecht",
+    "n_questions": 5,
+    "avg_score": 80.3,
+    "hallucination_rate": 0.0,
+    "worst_score": 64.5,
+    "best_score": 87.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Mein Kind nimmt an einer Ausbildung teil, die seinen Fähigkeiten entspricht. Wir können die Kosten aber nicht selbst tragen. Welche Rechte habe ich nach dem Sozialgesetzbuch und welche Normen regeln das?",
+        "category": "Ausbildungsförderung",
+        "score": 80.9,
+        "answer_excerpt": "# Rechte zur Ausbildungsförderung nach dem SGB\n\nNach dem Sozialgesetzbuch haben Sie einen **Rechtsanspruch auf individuelle Förderung** der Ausbildung Ihres Kindes.\n\n## Rechtliche Grundlage\n\n**§ 3 SGB",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 33.7
+      },
+      {
+        "id": 2,
+        "question": "Ich bin versichert und habe einen Arbeitsunfall erlitten. Welche wirtschaftliche Sicherung steht mir nach dem SGB zu, und welche Norm regelt meine Ansprüche?",
+        "category": "Sozialversicherung",
+        "score": 64.5,
+        "answer_excerpt": "# Wirtschaftliche Sicherung nach Arbeitsunfall\n\n## Regelungsgrundlagen\n\nIhre Ansprüche aus der gesetzlichen Unfallversicherung werden primär durch das **Siebte Buch des SGB (SGB VII)** geregelt [Quell",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 18.9
+      },
+      {
+        "id": 3,
+        "question": "Ich bin körperlich behindert und möchte nach langer Krankheit wieder ins Berufsleben zurückkehren. Welche Leistungen zur Teilhabe am Arbeitsleben stehen mir nach dem SGB IX zu und welche Träger sind zuständig?",
+        "category": "Rehabilitation und Teilhabe",
+        "score": 87.5,
+        "answer_excerpt": "# Leistungen zur Teilhabe am Arbeitsleben nach SGB IX\n\n## Verfügbare Leistungen\n\nNach dem SGB IX stehen Ihnen folgende Leistungen zur Teilhabe am Arbeitsleben zur Verfügung [Quelle 1]:\n\n- **Leistungen",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 21.1
+      },
+      {
+        "id": 4,
+        "question": "Ich kann meine Miete nicht bezahlen und suche nach Unterstützung. Welche Rechte habe ich nach dem Sozialgesetzbuch?",
+        "category": "Wohnungshilfe",
+        "score": 80.9,
+        "answer_excerpt": "# Ihre Rechte zur Mietunterstützung nach dem SGB\n\n## Grundsätzliches Recht auf Hilfe\n\nNach **§ 9 SGB I** [Quelle 1, 3] haben Sie ein Recht auf persönliche und wirtschaftliche Hilfe, wenn Sie nicht in ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.9
+      },
+      {
+        "id": 5,
+        "question": "Ich bin arbeitslos und weiß nicht, an welche Stelle ich mich wenden soll. Welche Stelle ist zuständig für Beratung über meine Rechte, und welche Norm garantiert mir diese Beratung?",
+        "category": "Beratung und Information",
+        "score": 87.5,
+        "answer_excerpt": "# Zuständige Stelle und rechtliche Grundlage\n\n## Zuständige Stelle\n\nAls arbeitslose Person sind Sie primär bei der **Agentur für Arbeit** oder den **Dienststellen der Bundesagentur für Arbeit** zustän",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 15.8
+      }
+    ],
+    "duration_s": 103.9
+  }
+]

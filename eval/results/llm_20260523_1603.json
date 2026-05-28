@@ -1,0 +1,119 @@
+[
+  {
+    "skill": "voelkerrecht",
+    "n_questions": 5,
+    "avg_score": 67.2,
+    "hallucination_rate": 0.0,
+    "worst_score": 47.6,
+    "best_score": 84.5,
+    "questions": [
+      {
+        "id": null,
+        "question": "Die Gemeinsame Außen- und Sicherheitspolitik der EU ist in Art. 24 EUV geregelt. Welche Rolle spielen der Rat und der Europäische Rat bei der Beschlussfassung in der GASP, und welche Besonderheiten gelten gegenüber anderen EU-Politikbereichen?",
+        "category": "",
+        "score": 47.6,
+        "answer_excerpt": "# Rolle von Rat und Europäischem Rat in der GASP\n\n## Aufgabenverteilung\n\nNach Art. 15 EUV gibt der **Europäische Rat** der Union \"die für ihre Entwicklung erforderlichen Impulse und legt die allgemein",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 27.0
+      },
+      {
+        "id": null,
+        "question": "Im Rahmen der Schengener Vereinbarungen haben sich mehrere europäische Staaten zum schrittweisen Abbau von Grenzkontrollen verpflichtet. Welche Rechte und Pflichten ergeben sich aus dem Schengener Übereinkommen für die Vertragsstaaten?",
+        "category": "",
+        "score": 54.2,
+        "answer_excerpt": "# Rechte und Pflichten aus dem Schengener Übereinkommen\n\n## Hauptpflichten der Vertragsstaaten\n\nDas Schengener Übereinkommen (SDÜ) verpflichtet die Vertragsstaaten zum **schrittweisen Abbau von Grenzk",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 15.5
+      },
+      {
+        "id": null,
+        "question": "Die Charta der Grundrechte der Europäischen Union wurde proklamiert. Nach Art. 51 der Charta gilt sie für die Mitgliedstaaten bei der Durchführung des Unionsrechts. In welchen Konstellationen sind die Mitgliedstaaten an die Grundrechte der Charta gebunden, und wie grenzt sich der Anwendungsbereich von dem der EMRK ab?",
+        "category": "",
+        "score": 79.2,
+        "answer_excerpt": "# Bindung der Mitgliedstaaten an die Charta der Grundrechte\n\n## Anwendungskonstellationen\n\nNach Art. 51 der Charta (in [Quelle 6] teilweise erkennbar) sind Mitgliedstaaten an die Grundrechte der Chart",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 16.0
+      },
+      {
+        "id": null,
+        "question": "Nach Art. 34 EUV koordinieren die Mitgliedstaaten ihr Vorgehen in internationalen Organisationen und auf internationalen Konferenzen. Welche Pflichten haben die Mitgliedstaaten im UN-Sicherheitsrat gegenüber den anderen EU-Staaten, und welche Rolle spielt die Union bei der Zusammenarbeit mit den Vereinten Nationen?",
+        "category": "",
+        "score": 70.7,
+        "answer_excerpt": "# Pflichten der EU-Mitgliedstaaten im UN-Sicherheitsrat\n\n## Relevante rechtliche Grundlagen\n\nBasierend auf den bereitgestellten Quellen lassen sich folgende Pflichten ableiten:\n\n### Allgemeine Koopera",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 15.4
+      },
+      {
+        "id": null,
+        "question": "Das Protokoll Nr. 30 zum Vertrag von Lissabon regelt die Anwendung der Charta der Grundrechte der Europäischen Union. Welche Bedeutung hat Art. 51 der Charta für die Bindungswirkung gegenüber den Mitgliedstaaten, und welche Ausnahmen sieht das Protokoll für bestimmte Länder vor?",
+        "category": "",
+        "score": 84.5,
+        "answer_excerpt": "# Anwendung der Charta der Grundrechte - Art. 51 und Protokoll Nr. 30\n\nBasierend auf den bereitgestellten Quellen kann ich leider keine direkte Information zu **Art. 51 der Charta** oder zum **Protoko",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 19.9
+      }
+    ],
+    "duration_s": 95.3
+  }
+]

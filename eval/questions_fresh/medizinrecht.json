@@ -1,0 +1,74 @@
+[
+  {
+    "question": "Der Patient P konsultiert seinen Hausarzt Dr. H wegen Rückenschmerzen. Dr. H diagnostiziert einen Bandscheibenvorfall und empfiehlt eine Operation. Er erwähnt nur flüchtig mögliche Komplikationen wie Nervenschädigungen, geht aber nicht auf die Wahrscheinlichkeit ein und erläutert keine Alternativen. P willigt ein und erleidet postoperativ genau diese Nervenschädigung. Ist Dr. H schadensersatzpflichtig nach § 823 BGB i.V.m. der fehlerhaften Aufklärung nach § 630e BGB?",
+    "expected_norms": [
+      "§ 823 BGB",
+      "§ 630e BGB"
+    ],
+    "expected_keywords": [
+      "Aufklärungspflicht",
+      "Informed Consent",
+      "Kausalität",
+      "Behandlungsfehler",
+      "wesentliche Risiken"
+    ]
+  },
+  {
+    "question": "Die Pharmafirma F bringt ein neues Medikament gegen Diabetes auf den Markt, das gemäß § 25 AMG genehmigt wurde. Nach drei Monaten werden gehäuft schwerwiegende Nebenwirkungen bekannt. F hatte diese in den Studien gegenüber dem BfArM nicht vollständig offenbart. Welche strafrechtlichen und verwaltungsrechtlichen Konsequenzen drohen unter Berücksichtigung von § 96 AMG?",
+    "expected_norms": [
+      "§ 25 AMG",
+      "§ 96 AMG"
+    ],
+    "expected_keywords": [
+      "Arzneimittelgenehmigung",
+      "Pharmakovigilanz",
+      "Verkehrsfähigkeit",
+      "Ordnungswidrigkeit",
+      "Strafbarkeit"
+    ]
+  },
+  {
+    "question": "Die 16-jährige Patientin P lehnt eine von ihrem Arzt Dr. A empfohlene Bluttransfusion ab, weil sie Zeugin Jehovas ist. Dr. A führt die Transfusion trotzdem durch und begründet dies mit der medizinischen Notwendigkeit und fehlender Geschäftsfähigkeit der Minderjährigen. Hat Dr. A gegen die Einwilligungsanforderungen des § 630d BGB verstoßen?",
+    "expected_norms": [
+      "§ 630d BGB",
+      "§ 630e BGB"
+    ],
+    "expected_keywords": [
+      "Patientenselbstbestimmung",
+      "Religionsfreiheit",
+      "Einwilligungsfähigkeit",
+      "Minderjährige",
+      "Rechtfertigung"
+    ]
+  },
+  {
+    "question": "Der Chirurg Ch. führt eine Kniearthroskopie durch. Während der Operation stellt sich heraus, dass zusätzlich ein Meniskusriss vorliegt, den die Vordiagnostik übersehen hat. Ch. behebt diesen Schaden gleich mit, ohne den Patienten vorher zu befragen. Der Patient erleidet keine zusätzlichen Komplikationen und ist am Ende zufrieden. Kann der Patient Schadensersatz wegen fehlender Aufklärung und Einwilligung gemäß § 630d, § 630e BGB fordern?",
+    "expected_norms": [
+      "§ 630d BGB",
+      "§ 630e BGB",
+      "§ 823 BGB"
+    ],
+    "expected_keywords": [
+      "Aufklärungspflicht",
+      "mutmaßliche Einwilligung",
+      "Eingriffserweiterung",
+      "konkrete Gefährdung",
+      "Schadensersatz"
+    ]
+  },
+  {
+    "question": "Der Zahnarzt Z behandelt einen Patienten wegen einer Zahnwurzelentzündung. Nach eingehender Aufklärung und schriftlicher Einwilligung führt Z die Wurzelbehandlung durch. Die Behandlung misslingt und der Zahn muss später gezogen werden. Z hatte aber alle Standard-Techniken korrekt angewendet und konnte den Misserfolg nicht vermeiden. Haftet Z dem Patienten nach § 630h BGB für Schadensersatz?",
+    "expected_norms": [
+      "§ 630h BGB",
+      "§ 823 BGB"
+    ],
+    "expected_keywords": [
+      "Behandlungsfehler",
+      "Kausalität",
+      "Sorgfaltspflicht",
+      "Beweislast",
+      "Arzthaftung",
+      "Therapieversuch"
+    ]
+  }
+]

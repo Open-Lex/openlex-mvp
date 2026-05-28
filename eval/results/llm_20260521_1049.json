@@ -1,0 +1,120 @@
+[
+  {
+    "skill": "grundrechte",
+    "n_questions": 5,
+    "avg_score": 81.2,
+    "hallucination_rate": 0.0,
+    "worst_score": 78.9,
+    "best_score": 87.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Polizist nimmt einem Demonstranten das Megafon ab, um eine Störung der öffentlichen Ordnung zu verhindern. Verletzt dies das Grundrecht auf Meinungsfreiheit?",
+        "category": "Meinungsfreiheit",
+        "score": 79.2,
+        "answer_excerpt": "# Rechtliche Bewertung der Megafon-Abnahme\n\n## Betroffene Grundrechte\n\nDie Abnahme des Megafons betrifft grundsätzlich das **Grundrecht auf Meinungsfreiheit gemäß Art. 5 Abs. 1 GG** [Quelle 3]. Danach",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 21.1
+      },
+      {
+        "id": 2,
+        "question": "Ein Arbeitnehmer wird wegen seines Alters nicht zu einem Vorstellungsgespräch eingeladen. Ist dies ein Verstoß gegen das Grundgesetz oder einfaches Recht?",
+        "category": "Gleichbehandlung",
+        "score": 81.2,
+        "answer_excerpt": "# Antwort\n\nDie bereitgestellten Quellen enthalten **keine direkte Antwort** auf Ihre Frage zur Altersdiskriminierung bei Bewerbungsverfahren. Die Quellen behandeln ausschließlich verfahrensrechtliche ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 12.2
+      },
+      {
+        "id": 3,
+        "question": "Ein Ehepaar möchte ein Kind adoptieren, aber die Behörde lehnt dies ab wegen abweichender Lebensführung. Welche Grundrechte könnten verletzt sein?",
+        "category": "Gleichbehandlung",
+        "score": 87.5,
+        "answer_excerpt": "# Mögliche Grundrechtsverletzungen bei Ablehnung einer Adoption\n\nBei der Ablehnung einer Adoption wegen \"abweichender Lebensführung\" könnten folgende Grundrechte verletzt sein:\n\n## 1. Artikel 6 Abs. 1",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 14.8
+      },
+      {
+        "id": 4,
+        "question": "Ein Student wird von der Universität wegen seiner politischen Ansichten exmatrikuliert. Ist dies ein Verstoß gegen die Meinungsfreiheit?",
+        "category": "Meinungsfreiheit",
+        "score": 79.2,
+        "answer_excerpt": "# Rechtliche Bewertung der Exmatrikulation wegen politischer Ansichten\n\n## Grundsätzlicher Verstoß gegen die Meinungsfreiheit\n\nEine Exmatrikulation **allein** aufgrund politischer Ansichten stellt gru",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 13.6
+      },
+      {
+        "id": 5,
+        "question": "Ein Unternehmen verlangt von Mitarbeitern, ihre privaten Social-Media-Profile offenzulegen. Verletzt dies das Recht auf informationelle Selbstbestimmung?",
+        "category": "Datenschutz",
+        "score": 78.9,
+        "answer_excerpt": "# Rechtliche Bewertung zur Offenlegung privater Social-Media-Profile\n\n## Grundsätzliche Rechtslage\n\nDie Forderung eines Unternehmens, private Social-Media-Profile offenzulegen, **berührt das Recht auf",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.2
+      }
+    ],
+    "duration_s": 80.3
+  }
+]

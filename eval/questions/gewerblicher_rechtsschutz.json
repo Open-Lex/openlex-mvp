@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "skill": "gewerblicher_rechtsschutz",
+    "question": "Mein Unternehmen hat ein neues Verfahren zur Herstellung eines Arzneimittels entwickelt. Welche grundlegenden Anforderungen muss dieses Verfahren erfüllen, um als patentierbare Erfindung anerkannt zu werden?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Erfindung",
+      "Verfahren",
+      "Anwendung"
+    ],
+    "category": "Patentfähigkeit"
+  },
+  {
+    "id": 2,
+    "skill": "gewerblicher_rechtsschutz",
+    "question": "Unser Forschungsteam hat eine isolierte Gensequenz entwickelt, die für die Krebsbehandlung einsetzbar ist. Können wir hierfür ein Patent anmelden, und wenn ja, was müssen wir in der Anmeldung konkret beschreiben?",
+    "expected_norms": [
+      "§ 1a"
+    ],
+    "expected_keywords": [
+      "Anmeldung",
+      "Patent",
+      "Material"
+    ],
+    "category": "Biotechnologie"
+  },
+  {
+    "id": 3,
+    "skill": "gewerblicher_rechtsschutz",
+    "question": "Mit welchen Schutzmechanismen kann der Patentinhaber gemäß § 9 Patentgesetz andere daran hindern, seine patentierte Erfindung zu nutzen?",
+    "expected_norms": [
+      "§ 9"
+    ],
+    "expected_keywords": [
+      "Patentinhaber",
+      "Erfindung",
+      "Gegenstand"
+    ],
+    "category": "Patentschutz"
+  },
+  {
+    "id": 4,
+    "skill": "gewerblicher_rechtsschutz",
+    "question": "Unser Konkurrent hat eine Erfindung zum Patentieren angemeldet, die wir selbst entwickelt haben. Welche Regelung bestimmt, wer das Recht auf das Patent erhält, wenn mehrere die Erfindung unabhängig voneinander gemacht haben?",
+    "expected_norms": [
+      "§ 6"
+    ],
+    "expected_keywords": [
+      "Erfindung",
+      "Patent",
+      "Stand"
+    ],
+    "category": "Patentrecht"
+  },
+  {
+    "id": 5,
+    "skill": "gewerblicher_rechtsschutz",
+    "question": "Darf ein Dritter, der ein Patent verletzt, nach erfolgreicher Klage die Erfindung selbst anmelden und dabei die Priorität des früheren Patents in Anspruch nehmen?",
+    "expected_norms": [
+      "§ 7",
+      "§ 21"
+    ],
+    "expected_keywords": [
+      "Patent",
+      "Anmeldung",
+      "Grund"
+    ],
+    "category": "Einspruchsverfahren"
+  }
+]

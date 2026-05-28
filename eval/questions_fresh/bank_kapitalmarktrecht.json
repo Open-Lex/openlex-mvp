@@ -1,0 +1,71 @@
+[
+  {
+    "question": "Die Bank AG vergibt an einen Unternehmer ein Darlehen in Höhe von 500.000 EUR mit einer Laufzeit von 5 Jahren. Die Bank verlangt als Voraussetzung für die Kreditvergabe, dass der Darlehensnehmer seine gesamten Bankgeschäfte ausschließlich bei der Bank AG durchführt und keine Konten bei Konkurrenzbanken unterhält. Ist diese Kopplungsbedingung rechtmäßig und welche Norm schützt den Darlehensnehmer vor solchen Praktiken?",
+    "expected_norms": [
+      "§ 19a KWG",
+      "§ 655 BGB"
+    ],
+    "expected_keywords": [
+      "Koppelung",
+      "Geschäftsbedingungen",
+      "Unlautere Geschäftspraktiken",
+      "Widerrufsrecht"
+    ]
+  },
+  {
+    "question": "Ein Finanzunternehmen bewirbt auf seiner Website Wertpapiere mit der Aussage: 'Garantierte Rendite von 12% pro Jahr - absolut sicher und ohne Risiko.' Das Unternehmen ist nicht als Wertpapierdienstleistungsunternehmen registriert. Ein Anleger kauft für 50.000 EUR diese Wertpapiere und erleidet später Verluste. Welche Normen sind verletzt und welche Konsequenzen ergeben sich?",
+    "expected_norms": [
+      "§ 32 KWG",
+      "§ 4 WpHG",
+      "§ 4 Abs. 1 WpPG"
+    ],
+    "expected_keywords": [
+      "Erlaubnispflicht",
+      "Wertpapierdienstleistungsunternehmen",
+      "Irreführung",
+      "Prospektpflicht"
+    ]
+  },
+  {
+    "question": "Die BaFin erhebt gegen die XYZ-Bank AG den Verdacht der Geldwäsche und leitet ein Ermittlungsverfahren ein. Die Bank weigert sich, auf Anforderung der BaFin umfangreiche Geschäftsunterlagen und Kundendaten bereitzustellen, weil sie Geschäftsgeheimnisse schützen möchte. Welche Informationspflichten treffen die Bank gegenüber der BaFin und auf welcher Rechtsgrundlage beruhen diese?",
+    "expected_norms": [
+      "§ 6 KWG",
+      "§ 44 KWG",
+      "§ 23 KWG"
+    ],
+    "expected_keywords": [
+      "Auskunftspflicht",
+      "Aufsichtsbehörde",
+      "Geschäftsgeheimnis",
+      "Informationszugang"
+    ]
+  },
+  {
+    "question": "Ein Wertpapierkreditinstitut gewährt einem Privatanleger einen Wertpapier-Darlehensvertrag (Repo-Geschäft) ohne eine vorherige schriftliche Vereinbarung über die Grundzüge der Dienstleistung zu treffen. Der Anleger möchte das Geschäft anfechten und beruft sich auf Formvorschriften. Welche Anforderungen gelten für solche Verträge nach Wertpapierhandelsgesetz und welche Sanktionen drohen dem Institut?",
+    "expected_norms": [
+      "§ 2 Abs. 4 WpHG",
+      "§ 37 WpHG",
+      "§ 8 KWG"
+    ],
+    "expected_keywords": [
+      "Informationspflicht",
+      "Schriftform",
+      "Vereinbarung",
+      "Ordnungswidrig"
+    ]
+  },
+  {
+    "question": "Die Börse München soll ein neues Marktsegment für klein- und mittelständische Unternehmen (regulierter Markt) errichten. Dabei stellt sich die Frage, welche Zulassungsvoraussetzungen für Unternehmen gelten, die dort ihre Wertpapiere notieren lassen wollen, und wer die Zulassung kontrolliert. Welche Norm regelt die Anforderungen an die Zulassung zum regulierten Markt und welche Behörde ist zuständig?",
+    "expected_norms": [
+      "§ 36 BörsG",
+      "§ 30 WpZulV",
+      "§ 2 BörsG"
+    ],
+    "expected_keywords": [
+      "Zulassungsvoraussetzungen",
+      "Prospektpflicht",
+      "Börse",
+      "Regulierter Markt"
+    ]
+  }
+]

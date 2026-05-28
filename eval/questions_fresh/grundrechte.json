@@ -1,0 +1,83 @@
+[
+  {
+    "question": "Die Stadt München erlässt eine Verordnung, wonach Demonstrationen in der Innenstadt nur noch mit vorheriger behördlicher Genehmigung stattfinden dürfen. Eine Umweltschutzgruppe möchte spontan gegen ein Bauprojekt protestieren und wird von der Polizei zerstreut. Ist die Verordnung mit Art. 8 Abs. 1 GG (Versammlungsfreiheit) vereinbar? Prüfen Sie insbesondere die Verhältnismäßigkeit.",
+    "expected_norms": [
+      "Art. 8 Abs. 1 GG",
+      "Art. 8 Abs. 2 GG",
+      "BVerfG-Rechtsprechung zu Spontanversammlungen"
+    ],
+    "expected_keywords": [
+      "Schutzbereich",
+      "Anwendbarkeit",
+      "Verhältnismäßigkeit",
+      "Geeignetheit",
+      "Erforderlichkeit",
+      "Angemessenheit",
+      "Spontanversammlung"
+    ]
+  },
+  {
+    "question": "Ein Arbeitgeber verbietet seiner christlichen Mitarbeiterin, ein Kreuz um den Hals zu tragen. Er begründet dies mit Neutralitätsvorgaben für den Kundenkontakt. Die Arbeitnehmerin beruft sich auf Art. 4 Abs. 1 und 2 GG. Ist das Verbot verfassungsgemäß? Analysieren Sie den Schutzbereich und die Verhältnismäßigkeit des Eingriffs.",
+    "expected_norms": [
+      "Art. 4 Abs. 1 GG",
+      "Art. 4 Abs. 2 GG",
+      "Art. 12 Abs. 1 GG"
+    ],
+    "expected_keywords": [
+      "Glaubensfreiheit",
+      "Gewissensfreiheit",
+      "Bekenntnis",
+      "Schranken-Schranken",
+      "Verhältnismäßigkeit",
+      "Kollidierende Grundrechte"
+    ]
+  },
+  {
+    "question": "Das Bundesamt für Verfassungsschutz überwacht eine Bürgerbewegung durch V-Leute (verdeckte Ermittler) und wertet ihre Telefone aus. Die Bewegung klagt auf Verletzung von Art. 10 GG (Briefgeheimnis, Post- und Fernmeldegeheimnis). Welche Voraussetzungen muss eine Beschränkung dieses Grundrechts nach Art. 10 Abs. 2 GG erfüllen? Reicht die bloße Verdächtigung aus?",
+    "expected_norms": [
+      "Art. 10 Abs. 1 GG",
+      "Art. 10 Abs. 2 GG"
+    ],
+    "expected_keywords": [
+      "Schutzbereich",
+      "qualifizierter Gesetzesvorbehalt",
+      "Gesetzesvorbehalt",
+      "richterliche Anordnung",
+      "Parlamentarisches Kontrollgremium",
+      "Verhältnismäßigkeit"
+    ]
+  },
+  {
+    "question": "Eine Privatschule mit christlicher Prägung lehnt die Aufnahme eines atheistischen Schülers ab. Der Schüler beruf sich auf Art. 7 Abs. 1 GG (Recht auf Schulbildung). Die Schule argumentiert mit ihrer Religionsfreiheit nach Art. 4 GG und Privatautonomie. Wie ist die Kollision zwischen den Grundrechten zu lösen? Hat der Schüler einen Anspruch auf Aufnahme?",
+    "expected_norms": [
+      "Art. 7 Abs. 1 GG",
+      "Art. 4 Abs. 1 GG",
+      "Art. 2 Abs. 1 GG"
+    ],
+    "expected_keywords": [
+      "Schutzbereich",
+      "Drittschutzfunktion",
+      "Privatautonomie",
+      "Abwägung",
+      "praktische Konkordanz",
+      "Verhältnismäßigkeit"
+    ]
+  },
+  {
+    "question": "Ein Bundesgesetz verpflichtet alle Bürger, sich kostenlos zur Blutspende zur Verfügung zu stellen. Verweigerer müssen 500 Euro Bußgeld zahlen. Ein Bürger klagt, dass dies seine Menschenwürde (Art. 1 Abs. 1 GG) und sein Recht auf körperliche Unversehrtheit (Art. 2 Abs. 2 Satz 1 GG) verletzt. Prüfen Sie, ob das Gesetz mit dem Grundgesetz vereinbar ist.",
+    "expected_norms": [
+      "Art. 1 Abs. 1 GG",
+      "Art. 2 Abs. 2 Satz 1 GG",
+      "Art. 19 Abs. 2 GG"
+    ],
+    "expected_keywords": [
+      "Menschenwürde",
+      "Menschenwürdekern",
+      "körperliche Integrität",
+      "Schranken-Schranken",
+      "absolute Rechte",
+      "Verhältnismäßigkeit",
+      "Übermaßverbot"
+    ]
+  }
+]

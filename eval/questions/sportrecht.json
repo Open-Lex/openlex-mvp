@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "skill": "sportrecht",
+    "question": "Ein Sportverein möchte seine Satzung ändern. Welche Stimmenmehrheit ist gemäß § 33 erforderlich, und welche besonderen Regeln gelten, wenn der Verein auf Verleihung beruht?",
+    "expected_norms": [
+      "§ 33"
+    ],
+    "expected_keywords": [
+      "Satzungsänderung",
+      "Mitgliederversammlung",
+      "drei Vierteilen",
+      "Mehrheit"
+    ],
+    "category": "Vereinsorganisation"
+  },
+  {
+    "id": 2,
+    "skill": "sportrecht",
+    "question": "Der Vorstand eines Sportvereins soll durch die Mitgliederversammlung bestellt werden. Nach welcher Norm erfolgt diese Bestellung, und welche Widerrufsmöglichkeiten gibt es?",
+    "expected_norms": [
+      "§ 27"
+    ],
+    "expected_keywords": [
+      "Vorstand",
+      "Mitgliederversammlung",
+      "Bestellung",
+      "Widerruf"
+    ],
+    "category": "Vorstandsverfassung"
+  },
+  {
+    "id": 3,
+    "skill": "sportrecht",
+    "question": "Ein Sportverein verursacht durch seinen Vorstand Schaden bei einem Dritten. Für welchen Schaden haftet der Verein gemäß § 31, und wer trägt die Beweislast bei grober Fahrlässigkeit nach § 31a?",
+    "expected_norms": [
+      "§ 31",
+      "§ 31a"
+    ],
+    "expected_keywords": [
+      "Haftung",
+      "Vorstand",
+      "Verein",
+      "Beweislast"
+    ],
+    "category": "Haftungsrecht"
+  },
+  {
+    "id": 4,
+    "skill": "sportrecht",
+    "question": "Ein Sportverein ohne wirtschaftlichen Geschäftsbetrieb möchte Rechtsfähigkeit erlangen. Welche Norm regelt dies, und was sind die Voraussetzungen gemäß § 21?",
+    "expected_norms": [
+      "§ 21"
+    ],
+    "expected_keywords": [
+      "rechtsfähig",
+      "Eintragung",
+      "Amtsgericht",
+      "Vereinsregister"
+    ],
+    "category": "Vereinsgründung"
+  },
+  {
+    "id": 5,
+    "skill": "sportrecht",
+    "question": "Der zehnte Teil der Mitglieder eines Sportvereins verlangt schriftlich die Berufung der Mitgliederversammlung. Welche Norm regelt diesen Fall, und welche Rolle spielt das Amtsgericht gemäß § 37?",
+    "expected_norms": [
+      "§ 37"
+    ],
+    "expected_keywords": [
+      "Mitgliederversammlung",
+      "Berufung",
+      "Gericht",
+      "Verein"
+    ],
+    "category": "Mitgliederrechte"
+  }
+]

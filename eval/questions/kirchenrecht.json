@@ -1,0 +1,163 @@
+[
+  {
+    "id": 1,
+    "skill": "kirchenrecht",
+    "question": "Eine evangelische Landeskirche möchte einen Pfarrer, der sich wiederverheiratet hat, aus dem Dienst entlassen. Auf welcher verfassungsrechtlichen Grundlage kann die Kirche solche Loyalitätspflichten von ihren Amtsträgern verlangen?",
+    "expected_norms": [
+      "Art. 137",
+      "Art. 140"
+    ],
+    "expected_keywords": [
+      "Religionsgemeinschaft",
+      "Selbstbestimmungsrecht",
+      "Kirchliche"
+    ],
+    "category": "Kirchliches Selbstbestimmungsrecht und Arbeitsrecht"
+  },
+  {
+    "id": 2,
+    "skill": "kirchenrecht",
+    "question": "Die Zeugen Jehovas beantragen in einem Bundesland den Status einer Körperschaft des öffentlichen Rechts, um Kirchensteuern erheben zu dürfen. Welche verfassungsrechtliche Vorschrift regelt diesen Status und welche Rechte sind damit verbunden?",
+    "expected_norms": [
+      "Art. 137",
+      "Art. 140"
+    ],
+    "expected_keywords": [
+      "Religionsgemeinschaften",
+      "Staat",
+      "Rechte"
+    ],
+    "category": "Körperschaftsstatus und Kirchensteuerrecht"
+  },
+  {
+    "id": 3,
+    "skill": "kirchenrecht",
+    "question": "An einer staatlichen Schule soll ein Kruzifix in jedem Klassenzimmer aufgehängt werden. Welche Verfassungsnormen und welches Prinzip sprechen gegen diese Maßnahme?",
+    "expected_norms": [
+      "Art. 4",
+      "Art. 140",
+      "Art. 137"
+    ],
+    "expected_keywords": [
+      "Religionsfreiheit",
+      "Neutralität",
+      "Staat"
+    ],
+    "category": "Staatliche Neutralität in Religionssachen"
+  },
+  {
+    "id": 4,
+    "skill": "kirchenrecht",
+    "question": "Ein katholischer Arzt in einem kirchlichen Krankenhaus wird gekündigt, weil er sich wiederverheirat hat. Welche Verfassungsnorm gewährleistet der Kirche das Recht, solche Anforderungen an ihre Arbeitnehmer zu stellen?",
+    "expected_norms": [
+      "Art. 137",
+      "Art. 140"
+    ],
+    "expected_keywords": [
+      "Kirchliche",
+      "Selbstbestimmungsrecht",
+      "Anforderungen"
+    ],
+    "category": "Kirchliches Arbeitsrecht und Loyalitätspflichten"
+  },
+  {
+    "id": 5,
+    "skill": "kirchenrecht",
+    "question": "In einer Bundeswehr-Kaserne soll religiöse Seelsorge angeboten werden. Auf welcher Verfassungsnorm basiert die Garantie für diese Militärseelsorge, und unter welcher Bedingung darf sie angeboten werden?",
+    "expected_norms": [
+      "Art. 141",
+      "Art. 140"
+    ],
+    "expected_keywords": [
+      "Seelsorge",
+      "Militärseelsorge",
+      "Einrichtungen"
+    ],
+    "category": "Militär- und Anstaltsseelsorge"
+  },
+  {
+    "id": 6,
+    "skill": "kirchenrecht",
+    "question": "Bayern schreibt vor, dass in jedem Schulzimmer ein Kruzifix hängen muss. Ist das mit dem Grundgesetz vereinbar?",
+    "expected_norms": [
+      "Art. 4 GG",
+      "Art. 7 GG"
+    ],
+    "expected_keywords": [
+      "Kruzifix",
+      "negative Religionsfreiheit",
+      "Neutralitätspflicht",
+      "staatlich angeordnet",
+      "BVerfG"
+    ],
+    "category": "Kruzifix in Schulen"
+  },
+  {
+    "id": 7,
+    "skill": "kirchenrecht",
+    "question": "Ein Chefarzt eines konfessionellen Krankenhauses heiratet nach Scheidung erneut. Das Krankenhaus kündigt. Ist die Kündigung wirksam?",
+    "expected_norms": [
+      "Art. 4 GG",
+      "Art. 140 GG"
+    ],
+    "expected_keywords": [
+      "kirchliches Arbeitsrecht",
+      "Wiederheirat",
+      "Loyalitätspflicht",
+      "konfessionell",
+      "IR/JQ",
+      "EuGH"
+    ],
+    "category": "Kirchliches Arbeitsrecht Wiederheirat"
+  },
+  {
+    "id": 8,
+    "skill": "kirchenrecht",
+    "question": "Eine Mitarbeiterin einer Caritas tritt aus der Kirche aus. Darf die Caritas ihr deswegen kündigen?",
+    "expected_norms": [
+      "Art. 137 WRV",
+      "Art. 140 GG"
+    ],
+    "expected_keywords": [
+      "Kirchenaustritt",
+      "kirchliches Selbstbestimmungsrecht",
+      "Kündigung",
+      "Dritter Weg"
+    ],
+    "category": "Kirchenaustritt Kündigung"
+  },
+  {
+    "id": 9,
+    "skill": "kirchenrecht",
+    "question": "Jemand tritt formlos aus der Kirche aus (ohne Amtsgericht). Muss er trotzdem Kirchensteuer zahlen?",
+    "expected_norms": [
+      "Art. 137 WRV",
+      "Art. 140 GG"
+    ],
+    "expected_keywords": [
+      "Kirchensteuer",
+      "Kirchenaustritt",
+      "Formerfordernis",
+      "Amtsgericht",
+      "Verhältnismäßigkeit"
+    ],
+    "category": "Kirchensteuer / Austrittsformerfordernis"
+  },
+  {
+    "id": 10,
+    "skill": "kirchenrecht",
+    "question": "Dürfen staatliche Gerichte prüfen, ob eine kirchliche Einrichtung ihre Loyalitätsanforderungen konsistent anwendet?",
+    "expected_norms": [
+      "Art. 140 GG",
+      "Art. 137 Abs. 3 WRV"
+    ],
+    "expected_keywords": [
+      "Selbstbestimmungsrecht",
+      "Konsistenz",
+      "Willkür",
+      "gerichtliche Kontrolle",
+      "Loyalitätsobliegenheit"
+    ],
+    "category": "Kirchliches Selbstbestimmungsrecht"
+  }
+]

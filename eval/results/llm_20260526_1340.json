@@ -1,0 +1,129 @@
+[
+  {
+    "skill": "ipr",
+    "n_questions": 5,
+    "avg_score": 74.7,
+    "hallucination_rate": 20.0,
+    "worst_score": 66.2,
+    "best_score": 84.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein deutsches Unternehmen schließt in London einen Kaufvertrag mit einem englischen Lieferanten ohne Rechtswahl. Welches Recht ist nach der Rom I-Verordnung anwendbar?",
+        "category": "Vertragsstatut",
+        "score": 76.8,
+        "answer_excerpt": "# Anwendbares Recht nach Rom I-Verordnung bei fehlender Rechtswahl\n\nNach der Rom I-Verordnung (VO 593/2008) ist bei einem Kaufvertrag ohne Rechtswahl eine gesetzliche Anknüpfung erforderlich [Quelle 1",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 21.5
+      },
+      {
+        "id": 2,
+        "question": "Ein in Frankreich lebender Deutscher erleidet in Spanien einen Verkehrsunfall. Welches Recht gilt für seinen Schadensersatzanspruch nach der Rom II-Verordnung?",
+        "category": "Deliktsstatut",
+        "score": 75.8,
+        "answer_excerpt": "# Anwendbares Recht nach Rom II-VO für Verkehrsunfallschaden\n\nBasierend auf den bereitgestellten Quellen kann die Frage nicht vollständig beantwortet werden, da die relevante Rom II-Verordnung (VO 864",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.7
+      },
+      {
+        "id": 3,
+        "question": "Ein deutsches Gericht soll auf einen Erbfall ausländisches Recht anwenden. Das Ergebnis verstößt jedoch gegen den deutschen ordre public. Nach welcher Norm kann die Anwendung verweigert werden?",
+        "category": "Ordre public",
+        "score": 66.2,
+        "answer_excerpt": "# Anwendung der Ordre-Public-Klausel bei ausländischem Erbrecht\n\n## Relevante Norm\n\nDie Anwendung ausländischen Erbrechts kann nach **Art. 6 EGBGB** verweigert werden, wenn sie zu einem Ergebnis führt",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": true,
+          "hallucination_examples": [
+            "Art. 6 EGBGB als relevante Norm für Ordre-Public-Klausel bei Erbfällen - dies wird in den Quellen nicht erwähnt und ist nicht korrekt. Die Quellen enthalten keine spezifische Regelung zu einer Ordre-Public-Klausel im EGBGB für Erbfälle.",
+            "Art. 25 EGBGB als zentrale Kollisionsnorm für Erbfälle - dies wird in den Quellen nicht bestätigt. Quelle 1 erwähnt Art. 21 EuErbVO als relevant für das Erbstatut, nicht Art. 25 EGBGB."
+          ],
+          "completeness": 3,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 19.9
+      },
+      {
+        "id": 4,
+        "question": "Zwei Parteien aus verschiedenen EU-Ländern streiten über die Wirksamkeit einer Rechtswahlklausel in ihrem Dienstleistungsvertrag. Was erlaubt Art. 3 Rom I-VO, und welche Grenzen bestehen?",
+        "category": "Rechtswahl",
+        "score": 70.1,
+        "answer_excerpt": "# Antwort zur Rom I-VO Art. 3 - Rechtswahlklauseln\n\nLeider können basierend auf den bereitgestellten Quellen keine zuverlässigen Aussagen zu Art. 3 Rom I-VO gemacht werden. Die Quellen enthalten:\n\n- *",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 2,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.2
+      },
+      {
+        "id": 5,
+        "question": "Ein polnischer Staatsangehöriger stirbt mit letztem Wohnsitz in Berlin. Welches Erbstatut gilt nach der EuErbVO, und kann er durch Testament deutsches Recht wählen?",
+        "category": "Erbstatut",
+        "score": 84.5,
+        "answer_excerpt": "# Anwendbares Erbstatut nach EuErbVO und Testierfreiheit\n\nLeider enthalten die bereitgestellten Quellen keine direkten Informationen zur **Europäischen Erbrechtsverordnung (EuErbVO)** oder zur Rechtsw",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.2
+      }
+    ],
+    "duration_s": 73.0
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "question": "Die Geschäftsführerin einer GmbH unterzeichnet im Namen der Gesellschaft einen Liefervertrag über 500.000 Euro, obwohl die Gesellschafterversammlung ihr per Beschluss die Vertragskompetenz für Verträge über 100.000 Euro entzogen hat. Der Lieferant war von dieser internen Beschränkung nicht kenntlich. Ist der Vertrag wirksam gegenüber der GmbH? Prüfen Sie unter Berücksichtigung von § 37 Abs. 1 GmbHG.",
+    "expected_norms": [
+      "§ 37 Abs. 1 GmbHG",
+      "§ 35 Abs. 1 GmbHG"
+    ],
+    "expected_keywords": [
+      "Geschäftsführerbefugnis",
+      "innere Beschränkung",
+      "Außenwirkung",
+      "Vertrauensprinzip"
+    ]
+  },
+  {
+    "question": "Der Geschäftsführer einer GmbH mit 100.000 Euro Stammkapital gewährt der GmbH trotz bekannter Überschuldung einen Darlehensvertrag über 50.000 Euro zu einem Zinssatz von 2 % p.a., während am Markt 6 % üblich sind. Die GmbH gerät daraufhin in Konkurs. Haftet der Geschäftsführer gegenüber der Konkursmasse nach § 43 Abs. 2 GmbHG?",
+    "expected_norms": [
+      "§ 43 Abs. 2 GmbHG",
+      "§ 92 Abs. 2 AktG (analog)"
+    ],
+    "expected_keywords": [
+      "Geschäftsführerhaftung",
+      "Pflichtwidrigkeit",
+      "Kausalität",
+      "Überschuldung"
+    ]
+  },
+  {
+    "question": "Die Gesellschafterversammlung einer AG fasst in der Jahreshauptversammlung einen Beschluss, nach dem der Vorstand ohne weiteren Beschluss Kredite bis zu 10 Millionen Euro aufnehmen darf. Drei Monate später beschließt eine außerordentliche Gesellschafterversammlung, dass der Vorstand zukünftig nur noch bis zu 2 Millionen Euro Kredite aufnehmen darf. Muss der Vorstand den alten Beschluss befolgen oder ist er durch den neuen Beschluss aufgelöst? Prüfen Sie unter § 119 Abs. 3 AktG.",
+    "expected_norms": [
+      "§ 119 Abs. 3 AktG",
+      "§ 120 Abs. 3 AktG"
+    ],
+    "expected_keywords": [
+      "Ermächtigungsbeschluss",
+      "Abberufung",
+      "Anwendbarkeit",
+      "neuer Beschluss"
+    ]
+  },
+  {
+    "question": "Die Gesellschafterversammlung einer GmbH mit drei Gesellschaftern (A: 50 %, B: 30 %, C: 20 %) beschließt mit 70 % der Stimmen die Erhöhung des Stammkapitals um 40.000 Euro und gewährt dabei nur A und B ein Bezugsrecht, nicht aber C. C beruft sich auf § 53 Abs. 3 GmbHG. Ist der Beschluss wirksam?",
+    "expected_norms": [
+      "§ 53 Abs. 3 GmbHG",
+      "§ 60 GmbHG"
+    ],
+    "expected_keywords": [
+      "Kapitalerhöhung",
+      "Bezugsrecht",
+      "Ungleichbehandlung",
+      "Anfechtbarkeit"
+    ]
+  },
+  {
+    "question": "Der Geschäftsführer einer GmbH eröffnet eigenmächtig ein Darlehen an den Gesellschafter und vereinbart dabei eine Rückzahlung ohne Zinsen, obwohl das Gesellschafterkapital der GmbH auf einen kritischen Stand gesunken ist. Nach zwei Jahren wird die GmbH zahlungsunfähig. Der Insolvenzverwalter verlangt Schadensersatz vom Geschäftsführer. Wem gegenüber haftet der Geschäftsführer nach § 43 Abs. 2 GmbHG, und unter welchen Voraussetzungen?",
+    "expected_norms": [
+      "§ 43 Abs. 2 GmbHG",
+      "§ 266 StGB (Überverbrauch)"
+    ],
+    "expected_keywords": [
+      "Gläubigerschadensersatz",
+      "Kausalzusammenhang",
+      "Verschulden",
+      "Insolvenz"
+    ]
+  }
+]

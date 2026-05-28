@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "skill": "baurecht",
+    "question": "Was sind die vertragstypischen Pflichten beim Werkvertrag?",
+    "expected_norms": [
+      "§ 631"
+    ],
+    "expected_keywords": [
+      "Werkvertrag",
+      "Pflichten",
+      "Unternehmer"
+    ],
+    "min_sources": 1,
+    "category": "Werkvertragsrecht"
+  },
+  {
+    "id": 2,
+    "skill": "baurecht",
+    "question": "Wie wird die Höhe der Vergütung beim Werkvertrag bestimmt, wenn keine Taxe existiert?",
+    "expected_norms": [
+      "§ 632"
+    ],
+    "expected_keywords": [
+      "Vergütung",
+      "Taxe",
+      "Übliche Vergütung"
+    ],
+    "min_sources": 1,
+    "category": "Vergütungsrecht"
+  },
+  {
+    "id": 3,
+    "skill": "baurecht",
+    "question": "Kann der Unternehmer eine Abschlagszahlung vom Besteller verlangen, wenn die erbrachten Leistungen nicht vertragsgemäß sind?",
+    "expected_norms": [
+      "§ 632a"
+    ],
+    "expected_keywords": [
+      "Abschlagszahlung",
+      "Vertragsgemäß",
+      "Leistungen"
+    ],
+    "min_sources": 1,
+    "category": "Zahlungsrecht"
+  },
+  {
+    "id": 4,
+    "skill": "baurecht",
+    "question": "Was passiert, wenn der Besteller die Zahlung eines angemessenen Teils des Abschlags verweigert?",
+    "expected_norms": [
+      "§ 632a"
+    ],
+    "expected_keywords": [
+      "Abschlagszahlung",
+      "Verweigerung",
+      "Angemessener Teil"
+    ],
+    "min_sources": 1,
+    "category": "Zahlungsrecht"
+  },
+  {
+    "id": 5,
+    "skill": "baurecht",
+    "question": "Gilt eine Vergütung als stillschweigend vereinbart, wenn die Herstellung des Werkes den Umständen nach nur gegen eine Vergütung zu erwarten ist?",
+    "expected_norms": [
+      "§ 632"
+    ],
+    "expected_keywords": [
+      "Vergütung",
+      "Stillschweigend",
+      "Vereinbart"
+    ],
+    "min_sources": 1,
+    "category": "Vergütungsrecht"
+  },
+  {
+    "id": 6,
+    "skill": "baurecht",
+    "question": "Wie wird die Höhe der Vergütung bestimmt, wenn eine Taxe existiert?",
+    "expected_norms": [
+      "§ 632 BGB"
+    ],
+    "expected_keywords": [
+      "Vergütung",
+      "Taxe",
+      "Bestimmung"
+    ],
+    "min_sources": 1,
+    "category": "Vergütungsrecht"
+  },
+  {
+    "id": 7,
+    "skill": "baurecht",
+    "question": "Kann der Unternehmer eine Abschlagszahlung verlangen, wenn die erbrachten Leistungen nicht nach dem Vertrag geschuldet sind?",
+    "expected_norms": [
+      "§ 632a BGB"
+    ],
+    "expected_keywords": [
+      "Abschlagszahlung",
+      "Vertrag",
+      "Leistungen"
+    ],
+    "min_sources": 1,
+    "category": "Zahlungsrecht"
+  },
+  {
+    "id": 8,
+    "skill": "baurecht",
+    "question": "Was sind die Rechte des Bestellers, wenn der Unternehmer die vertragsgemäßen Leistungen nicht erbringt?",
+    "expected_norms": [
+      "§ 631 BGB",
+      "§ 632a BGB"
+    ],
+    "expected_keywords": [
+      "Rechte",
+      "Besteller",
+      "Vertragsgemäß"
+    ],
+    "min_sources": 2,
+    "category": "Werkvertragsrecht"
+  },
+  {
+    "id": 9,
+    "skill": "baurecht",
+    "question": "Wie wird die Vergütung beim Werkvertrag berechnet, wenn keine Vereinbarung über die Höhe der Vergütung getroffen wurde?",
+    "expected_norms": [
+      "§ 632 BGB"
+    ],
+    "expected_keywords": [
+      "Vergütung",
+      "Berechnung",
+      "Werkvertrag"
+    ],
+    "min_sources": 1,
+    "category": "Vergütungsrecht"
+  },
+  {
+    "id": 10,
+    "skill": "baurecht",
+    "question": "Kann der Besteller die Zahlung der Vergütung verweigern, wenn der Unternehmer die vertragsgemäßen Leistungen nicht erbringt?",
+    "expected_norms": [
+      "§ 631 BGB",
+      "§ 632 BGB"
+    ],
+    "expected_keywords": [
+      "Zahlung",
+      "Vergütung",
+      "Verweigerung"
+    ],
+    "min_sources": 2,
+    "category": "Zahlungsrecht"
+  }
+]

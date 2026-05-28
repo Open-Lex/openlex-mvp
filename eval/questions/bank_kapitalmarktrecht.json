@@ -1,0 +1,27 @@
+[
+  {
+    "question": "Eine natürliche Person wird nach einem unmittelbar geltenden Rechtsakt der EU als unzuverlässig eingestuft. Welche Folgen hat dies für ihre Tätigkeit bei einem Wertpapierdienstleistungsunternehmen nach dem WpHG?",
+    "expected_norms": ["§ 2a"],
+    "expected_keywords": ["unzuverlässig", "Wertpapierdienstleistungsunternehmen", "Anlageberatung", "BaFin"]
+  },
+  {
+    "question": "Die BaFin hat Verdacht auf Marktmissbrauch bei einem Börsenmakler. Welche Befugnisse hat die BaFin zur Informationsgewinnung gegenüber Börsen und Unternehmen nach dem WpHG?",
+    "expected_norms": ["§ 8"],
+    "expected_keywords": ["BaFin", "Marktmissbrauch", "Informationsverlangen", "Befugnisse"]
+  },
+  {
+    "question": "Ein Wertpapierdienstleistungsunternehmen möchte nachträglich Deutschland als Herkunftsstaat wählen, obwohl es bereits einen anderen EU-Staat gewählt hat. Ist dies möglich und welche Voraussetzungen gelten?",
+    "expected_norms": ["§ 4"],
+    "expected_keywords": ["Herkunftsstaat", "Wertpapierdienstleistungsunternehmen", "Mitgliedstaat", "Wahl"]
+  },
+  {
+    "question": "Ein Unternehmen erbringt Wertpapierdienstleistungen ausschließlich für sein Mutterunternehmen innerhalb des Konzerns. Benötigt es eine Erlaubnis der BaFin nach dem WpHG?",
+    "expected_norms": ["§ 2"],
+    "expected_keywords": ["Wertpapierdienstleistungsunternehmen", "Mutterunternehmen", "Konzern", "Erlaubnispflicht"]
+  },
+  {
+    "question": "Eine Bank gibt einem Verbraucher einen Kredit ohne ausreichende Bonitätsprüfung. Der Verbraucher kann den Kredit nicht zurückzahlen. Welche Pflichten hat die Bank bei der Vergabe von Verbraucherkrediten?",
+    "expected_norms": ["§ 505a", "§ 505b"],
+    "expected_keywords": ["Bonitätsprüfung", "Verbraucherkredit", "Kreditwürdigkeitsprüfung", "Kreditgeber"]
+  }
+]

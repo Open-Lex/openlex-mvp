@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "skill": "wirtschaftsstrafrecht",
+    "question": "Ein Softwareentwickler manipuliert absichtlich ein Bankensystem, indem er fehlerhafte Programmcodes einbaut. Dadurch werden unberechtigt Geldtransfers auf sein Konto durchgeführt. Welche Norm ist einschlägig und welche Freiheitsstrafe droht maximal?",
+    "expected_norms": [
+      "§ 263a"
+    ],
+    "expected_keywords": [
+      "Freiheitsstrafe",
+      "Jahren",
+      "Angeklagten"
+    ],
+    "category": "Betrugsdelikte im digitalen Raum"
+  },
+  {
+    "id": 2,
+    "skill": "wirtschaftsstrafrecht",
+    "question": "Ein Geschäftsführer einer GmbH stellt bei der Kreditvergabe falsche Bilanzen vor, um bessere Kreditbedingungen zu erhalten. Der Kreditgeber gründet seine Entscheidung wesentlich auf diese Unterlagen. Welche Strafvorschrift ist relevant und bis zu welcher Strafe droht?",
+    "expected_norms": [
+      "§ 265b"
+    ],
+    "expected_keywords": [
+      "Geldstrafe",
+      "Unternehmen",
+      "Jahren"
+    ],
+    "category": "Kreditdelikte"
+  },
+  {
+    "id": 3,
+    "skill": "wirtschaftsstrafrecht",
+    "question": "Ein Unternehmer, der überschuldet ist, versteckt systematisch Vermögensbestände und führt seine Handelsbücher derart, dass seine finanzielle Lage völlig unklar wird. Kurz darauf wird über sein Vermögen das Insolvenzverfahren eröffnet. Nach welcher Vorschrift ist dieses Verhalten strafbar?",
+    "expected_norms": [
+      "§ 283"
+    ],
+    "expected_keywords": [
+      "Freiheitsstrafe",
+      "Sinne",
+      "Vermögens"
+    ],
+    "category": "Insolvenzdelikte"
+  },
+  {
+    "id": 4,
+    "skill": "wirtschaftsstrafrecht",
+    "question": "Bei einer Subventionsantragstellung macht ein Unternehmer gegenüber der Bewilligungsbehörde unrichtige Angaben zu seinen wirtschaftlichen Verhältnissen, um eine höhere Subvention zu erhalten. Welche Strafnorm wird verletzt und wie hoch ist die maximale Freiheitsstrafe im Regelfall?",
+    "expected_norms": [
+      "§ 264"
+    ],
+    "expected_keywords": [
+      "Freiheitsstrafe",
+      "Unternehmen",
+      "Jahren"
+    ],
+    "category": "Subventionsdelikte"
+  },
+  {
+    "id": 5,
+    "skill": "wirtschaftsstrafrecht",
+    "question": "Ein Sportler wird von einem Wettmaklunternehmen bestochen, das Ergebnis eines Bundesligaspiels zugunsten des Gegners zu beeinflussen, damit Wetten auf dieses Spiel hohe Gewinne bringen. Welche Strafvorschrift ist einschlägig und welche maximale Strafe kann verhängt werden?",
+    "expected_norms": [
+      "§ 265c"
+    ],
+    "expected_keywords": [
+      "Geldstrafe",
+      "Jahren",
+      "Freiheitsstrafe"
+    ],
+    "category": "Sportwettdelikte"
+  }
+]

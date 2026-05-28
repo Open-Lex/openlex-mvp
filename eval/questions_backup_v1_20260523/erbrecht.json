@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "skill": "erbrecht",
+    "question": "Wer kann Erbe werden und unter welchen Umständen?",
+    "expected_norms": [
+      "§ 192"
+    ],
+    "expected_keywords": [
+      "Erbfähigkeit",
+      "Erbe",
+      "Erbfall"
+    ],
+    "min_sources": 1,
+    "category": "Erbfähigkeit"
+  },
+  {
+    "id": 2,
+    "skill": "erbrecht",
+    "question": "Wie wird das Vermögen eines Verstorbenen auf die Erben übertragen?",
+    "expected_norms": [
+      "§ 1922"
+    ],
+    "expected_keywords": [
+      "Gesamtrechtsnachfolge",
+      "Erbschaft",
+      "Vermögen"
+    ],
+    "min_sources": 1,
+    "category": "Gesamtrechtsnachfolge"
+  },
+  {
+    "id": 3,
+    "skill": "erbrecht",
+    "question": "Wer sind die gesetzlichen Erben erster Ordnung und wie wirken sie auf die Erbfolge?",
+    "expected_norms": [
+      "§ 1924"
+    ],
+    "expected_keywords": [
+      "Gesetzliche Erben",
+      "Abkömmlinge",
+      "Erbfolge"
+    ],
+    "min_sources": 1,
+    "category": "Gesetzliche Erben"
+  },
+  {
+    "id": 4,
+    "skill": "erbrecht",
+    "question": "Kann ein noch nicht geborenes Kind Erbe werden?",
+    "expected_norms": [
+      "§ 1923"
+    ],
+    "expected_keywords": [
+      "Kind",
+      "Erbfall",
+      "gezeugt"
+    ],
+    "min_sources": 1,
+    "category": "Erbfähigkeit"
+  },
+  {
+    "id": 5,
+    "skill": "erbrecht",
+    "question": "Wie wird der Anteil eines Miterben bei der Erbteilung berechnet?",
+    "expected_norms": [
+      "§ 1922"
+    ],
+    "expected_keywords": [
+      "Erbteil",
+      "Miterben",
+      "Erbteilung"
+    ],
+    "min_sources": 1,
+    "category": "Erbteilung"
+  },
+  {
+    "id": 6,
+    "skill": "erbrecht",
+    "question": "Wer wird bei der Erbfolge ausgeschlossen, wenn ein Abkömmling zur Zeit des Erbfalls lebt?",
+    "expected_norms": [
+      "§ 1924 BGB"
+    ],
+    "expected_keywords": [
+      "Gesetzliche Erben",
+      "Abkömmlinge",
+      "Erbfolge"
+    ],
+    "min_sources": 1,
+    "category": "Gesetzliche Erben"
+  },
+  {
+    "id": 7,
+    "skill": "erbrecht",
+    "question": "Wie wirkt sich der Tod eines Abkömmlings vor dem Erbfall auf die Erbfolge aus?",
+    "expected_norms": [
+      "§ 1924 BGB"
+    ],
+    "expected_keywords": [
+      "Gesetzliche Erben",
+      "Abkömmlinge",
+      "Erbfolge"
+    ],
+    "min_sources": 1,
+    "category": "Gesetzliche Erben"
+  },
+  {
+    "id": 8,
+    "skill": "erbrecht",
+    "question": "Kann ein Erbe das Erbe ablehnen und welche Folgen hat dies?",
+    "expected_norms": [
+      "§ 1922 BGB"
+    ],
+    "expected_keywords": [
+      "Erbe",
+      "Ablehnung",
+      "Folgen"
+    ],
+    "min_sources": 1,
+    "category": "Erbe"
+  },
+  {
+    "id": 9,
+    "skill": "erbrecht",
+    "question": "Wie werden die Rechte der Miterben bei der Erbteilung geschützt?",
+    "expected_norms": [
+      "§ 1922 BGB"
+    ],
+    "expected_keywords": [
+      "Miterben",
+      "Erbteilung",
+      "Rechte"
+    ],
+    "min_sources": 1,
+    "category": "Erbteilung"
+  },
+  {
+    "id": 10,
+    "skill": "erbrecht",
+    "question": "Welche Rolle spielt die Zeugung bei der Bestimmung der Erbfähigkeit?",
+    "expected_norms": [
+      "§ 1923 BGB"
+    ],
+    "expected_keywords": [
+      "Erbfähigkeit",
+      "Gezeugt",
+      "Lebenszeit"
+    ],
+    "min_sources": 1,
+    "category": "Erbfähigkeit"
+  }
+]

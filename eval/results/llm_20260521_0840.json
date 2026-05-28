@@ -1,0 +1,125 @@
+[
+  {
+    "skill": "staatsorganisationsrecht",
+    "n_questions": 5,
+    "avg_score": 66.1,
+    "hallucination_rate": 0.0,
+    "worst_score": 51.1,
+    "best_score": 80.9,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Was ist die Grundlage für die Verfassunggebende Gewalt in Deutschland?",
+        "category": "Verfassungsgrundsätze",
+        "score": 51.1,
+        "answer_excerpt": "# Grundlage der Verfassunggebenden Gewalt in Deutschland\n\nDie Grundlage der verfassunggebenden Gewalt in Deutschland liegt beim **Volk** als dem ursprünglichen Träger aller Staatsgewalt.\n\n## Demokrati",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 22.0
+      },
+      {
+        "id": 2,
+        "question": "Welche Rolle spielt der Parlamentarische Rat in der Geschichte der Bundesrepublik Deutschland?",
+        "category": "Geschichte des Grundgesetzes",
+        "score": 80.9,
+        "answer_excerpt": "# Die Rolle des Parlamentarischen Rates\n\nDer **Parlamentarische Rat** spielte eine **zentrale und verfassungsgebende Rolle** bei der Gründung der Bundesrepublik Deutschland.\n\n## Hauptaufgaben und Bede",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.6
+      },
+      {
+        "id": 3,
+        "question": "Wie werden die Menschenrechte im Grundgesetz verankert?",
+        "category": "Menschenrechte",
+        "score": 65.2,
+        "answer_excerpt": "# Verankerung der Menschenrechte im Grundgesetz\n\nDie Menschenrechte werden im Grundgesetz auf mehreren Ebenen systematisch verankert:\n\n## 1. Ausdrückliches Bekenntnis zu Menschenrechten\n\n**Art. 1 Abs.",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.9
+      },
+      {
+        "id": 4,
+        "question": "Was ist die Bedeutung der Würde des Menschen im Grundgesetz?",
+        "category": "Menschenwürde",
+        "score": 70.8,
+        "answer_excerpt": "# Bedeutung der Würde des Menschen im Grundgesetz\n\n## Zentrale verfassungsrechtliche Stellung\n\nDie Menschenwürde nimmt gemäß **Art. 1 Abs. 1 GG** die herausragendste Stellung im Grundgesetz ein: \"Die ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.3
+      },
+      {
+        "id": 5,
+        "question": "Wie werden die Grundrechte im Grundgesetz definiert?",
+        "category": "Grundrechte",
+        "score": 62.5,
+        "answer_excerpt": "# Definition der Grundrechte im Grundgesetz\n\n## Systematische Verortung\n\nDie Grundrechte sind im **ersten Abschnitt des Grundgesetzes in den Artikeln 1 bis 19 GG** verankert [Quelle 2]. Sie bilden ein",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 13.7
+      }
+    ],
+    "duration_s": 73.0
+  }
+]

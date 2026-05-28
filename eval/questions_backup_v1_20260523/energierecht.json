@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "skill": "energierecht",
+    "question": "Welche Ziele verfolgt das Energiewirtschaftsgesetz (EnWG) bei der Versorgung der Allgemeinheit mit Elektrizität, Gas und Wasserstoff?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "sichere",
+      "preisgünstige",
+      "umweltverträgliche"
+    ],
+    "min_sources": 1,
+    "category": "Zweck des EnWG"
+  },
+  {
+    "id": 2,
+    "skill": "energierecht",
+    "question": "Wie bildet sich der Preis für Elektrizität am Großhandelsmarkt?",
+    "expected_norms": [
+      "§ 1a"
+    ],
+    "expected_keywords": [
+      "Wettbewerb",
+      "Markt",
+      "Preisbildung"
+    ],
+    "min_sources": 1,
+    "category": "Strommarkt"
+  },
+  {
+    "id": 3,
+    "skill": "energierecht",
+    "question": "Welche Aufgaben haben Energieversorgungsunternehmen im Rahmen des EnWG?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Versorgung",
+      "Verpflichtung",
+      "Energieversorgungsunternehmen"
+    ],
+    "min_sources": 1,
+    "category": "Aufgaben der Energieversorgungsunternehmen"
+  },
+  {
+    "id": 4,
+    "skill": "energierecht",
+    "question": "Welche Rolle spielt das Bilanzkreis- und Ausgleichsenergiesystem im Strommarkt?",
+    "expected_norms": [
+      "§ 1a"
+    ],
+    "expected_keywords": [
+      "Bilanzkreis",
+      "Ausgleichsenergie",
+      "Strommarkt"
+    ],
+    "min_sources": 1,
+    "category": "Strommarkt"
+  },
+  {
+    "id": 5,
+    "skill": "energierecht",
+    "question": "Welche Verpflichtungen haben Energieversorgungsunternehmen im Hinblick auf den Umweltschutz?",
+    "expected_norms": [
+      "§ 1",
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Umweltschutz",
+      "Verpflichtung",
+      "Energieversorgungsunternehmen"
+    ],
+    "min_sources": 2,
+    "category": "Umweltschutz"
+  },
+  {
+    "id": 6,
+    "skill": "energierecht",
+    "question": "Wie werden die Preise für Elektrizität am Großhandelsmarkt regulatorisch behandelt?",
+    "expected_norms": [
+      "§ 1a EnWG"
+    ],
+    "expected_keywords": [
+      "Preisbildung",
+      "Regulierung",
+      "Großhandelsmarkt"
+    ],
+    "min_sources": 1,
+    "category": "Strommarkt"
+  },
+  {
+    "id": 7,
+    "skill": "energierecht",
+    "question": "Welche Ziele verfolgt das EnWG bei der Förderung der erneuerbaren Energien?",
+    "expected_norms": [
+      "§ 1 EnWG",
+      "§ 2 EnWG"
+    ],
+    "expected_keywords": [
+      "Erneuerbare Energien",
+      "Förderung",
+      "Ziele"
+    ],
+    "min_sources": 2,
+    "category": "Erneuerbare Energien"
+  },
+  {
+    "id": 8,
+    "skill": "energierecht",
+    "question": "Wie werden die Verpflichtungen der Energieversorgungsunternehmen im Hinblick auf die Kraft-Wärme-Kopplung geregelt?",
+    "expected_norms": [
+      "§ 2 EnWG"
+    ],
+    "expected_keywords": [
+      "Kraft-Wärme-Kopplung",
+      "Verpflichtung",
+      "Energieversorgungsunternehmen"
+    ],
+    "min_sources": 1,
+    "category": "Kraft-Wärme-Kopplung"
+  },
+  {
+    "id": 9,
+    "skill": "energierecht",
+    "question": "Welche Rolle spielt die Effizienz in der Energieversorgung im Rahmen des EnWG?",
+    "expected_norms": [
+      "§ 1 EnWG"
+    ],
+    "expected_keywords": [
+      "Effizienz",
+      "Energieversorgung",
+      "Ziele"
+    ],
+    "min_sources": 1,
+    "category": "Effizienz"
+  },
+  {
+    "id": 10,
+    "skill": "energierecht",
+    "question": "Wie werden die Preise für Gas und Wasserstoff im Rahmen des EnWG geregelt?",
+    "expected_norms": [
+      "§ 1 EnWG",
+      "§ 1a EnWG"
+    ],
+    "expected_keywords": [
+      "Preisbildung",
+      "Gas",
+      "Wasserstoff"
+    ],
+    "min_sources": 2,
+    "category": "Gas- und Wasserstoffmarkt"
+  }
+]

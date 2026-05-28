@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "skill": "strafrecht",
+    "question": "Ein Mann wird in seiner Wohnung von einem bewaffneten Einbrecher angegriffen. Er schlägt den Einbrecher mit einem Stuhl nieder und verletzt ihn dabei erheblich. Kann er sich auf Notwehr berufen, und welche Voraussetzungen müssen nach dem StGB dafür vorliegen?",
+    "expected_norms": [
+      "§ 32"
+    ],
+    "expected_keywords": [
+      "Notwehr",
+      "Angriff",
+      "Verteidigung"
+    ],
+    "category": "Notwehr und Rechtfertigung"
+  },
+  {
+    "id": 2,
+    "skill": "strafrecht",
+    "question": "Eine Person wird wegen einer Körperverletzung angeklagt. Während des Verfahrens wird das Strafgesetz geändert und eine mildere Strafe vorgesehen. Welches Gesetz wird auf die Tat angewendet?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Strafe",
+      "Tat",
+      "Gesetz"
+    ],
+    "category": "Rückwirkung von Strafgesetzen"
+  },
+  {
+    "id": 3,
+    "skill": "strafrecht",
+    "question": "Ein deutscher Segler wird auf einem deutschen Segelschiff verdächtigt, eine Straftat begangen zu haben. Das Schiff befindet sich auf hoher See in internationalen Gewässern. Kann das deutsche Strafrecht angewandt werden?",
+    "expected_norms": [
+      "§ 4"
+    ],
+    "expected_keywords": [
+      "Taten",
+      "Strafrecht",
+      "Geltung"
+    ],
+    "category": "Räumliche Geltung des Strafrechts"
+  },
+  {
+    "id": 4,
+    "skill": "strafrecht",
+    "question": "Ein Pfleger in einem Altenheim unterlässt es, einen pflegebedürftigen Patienten vor Schaden zu bewahren, obwohl dies in seinen Aufgaben liegt. Kann eine Strafbarkeit durch Unterlassen bejaht werden?",
+    "expected_norms": [
+      "§ 13"
+    ],
+    "expected_keywords": [
+      "Aufgaben",
+      "Unterlassen",
+      "Pfleger"
+    ],
+    "category": "Begehen durch Unterlassen"
+  },
+  {
+    "id": 5,
+    "skill": "strafrecht",
+    "question": "Ein Autofahrer übersieht an einer Kreuzung ein rotes Ampelsignal und fährt in einen Fußgänger. Der Fußgänger erleidet einen Beinbruch. Kann der Fahrer wegen fahrlässiger Körperverletzung bestraft werden, und welche Voraussetzungen sind dabei zu prüfen?",
+    "expected_norms": [
+      "§ 229"
+    ],
+    "expected_keywords": [
+      "fahrlässig",
+      "Sorgfalt",
+      "Körperverletzung"
+    ],
+    "category": "Fahrlässige Körperverletzung"
+  }
+]

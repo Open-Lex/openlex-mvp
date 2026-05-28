@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "verbraucherrecht",
+    "n_questions": 5,
+    "avg_score": 76.6,
+    "hallucination_rate": 0.0,
+    "worst_score": 57.5,
+    "best_score": 86.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Verbraucher kauft ein Produkt online, das nicht den beschriebenen Eigenschaften entspricht. Welche Rechte hat der Verbraucher in diesem Fall?",
+        "category": "Kaufverträge",
+        "score": 86.5,
+        "answer_excerpt": "# Verbraucherrechte bei nicht beschriebenen Produkteigenschaften\n\n## Widerrufsrecht\n\nDer Verbraucher hat beim Online-Kauf ein **Widerrufsrecht** [Quelle 6, 7]. Nach **§ 312g BGB** steht dem Verbrauche",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 21.4
+      },
+      {
+        "id": 2,
+        "question": "Eine Firma verwendet Allgemeine Geschäftsbedingungen, die zum Nachteil des Verbrauchers sind. Ist dies zulässig?",
+        "category": "AGB-Recht",
+        "score": 81.9,
+        "answer_excerpt": "# Zulässigkeit von Allgemeinen Geschäftsbedingungen zum Nachteil des Verbrauchers\n\nNein, die Verwendung von zum Nachteil des Verbrauchers gerichteten Allgemeinen Geschäftsbedingungen (AGB) ist nicht o",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.2
+      },
+      {
+        "id": 3,
+        "question": "Ein Verbraucher schließt einen Vertrag über ein Abo-Modell online ab und möchte diesen widerrufen. Welche Rechte hat er nach BGB?",
+        "category": "Vertragsrecht",
+        "score": 57.5,
+        "answer_excerpt": "# Widerrufsrechte bei Online-Abo-Verträgen nach BGB\n\n## Bestehendes Widerrufsrecht\n\nEin Verbraucher, der einen Online-Abo-Vertrag abschließt, hat grundsätzlich ein **Widerrufsrecht nach § 312g BGB**. ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.4
+      },
+      {
+        "id": 4,
+        "question": "Ein Verbraucher möchte einen Vertrag widerrufen, den er online abgeschlossen hat. Innerhalb welcher Frist muss er dies tun?",
+        "category": "Widerrufsrecht",
+        "score": 77.0,
+        "answer_excerpt": "# Widerrufsfrist für Online-Verträge\n\nFür einen online abgeschlossenen Vertrag (Fernabsatzvertrag) beträgt die **Widerrufsfrist grundsätzlich 14 Tage** [Quelle 4].\n\n## Beginn der Frist\n\nNach § 355 BGB",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 6.3
+      },
+      {
+        "id": 5,
+        "question": "Eine Firma bietet eine Garantie für ein Produkt an, die nicht den gesetzlichen Anforderungen entspricht. Welche Rechte hat der Verbraucher in diesem Fall?",
+        "category": "Produkthaftung",
+        "score": 79.9,
+        "answer_excerpt": "# Verbraucherrechte bei nicht-konformer Garantie\n\n## Gesetzliche Schutzvorschriften\n\nDer Verbraucher genießt umfassenden Schutz, wenn eine angebotene Garantie nicht den gesetzlichen Anforderungen ents",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.3
+      }
+    ],
+    "duration_s": 60.1
+  }
+]

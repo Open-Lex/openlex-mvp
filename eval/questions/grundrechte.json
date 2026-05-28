@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "skill": "grundrechte",
+    "question": "Ein Journalist möchte einen kritischen Artikel über Regierungshandeln veröffentlichen. Die Behörde untersagt die Veröffentlichung unter Berufung auf öffentliche Sicherheit. Verletzt dieses Verbot das Grundrecht auf Pressefreiheit nach Art. 5 GG, und unter welchen Voraussetzungen darf der Staat in die Pressefreiheit eingreifen?",
+    "expected_norms": [
+      "Art. 5 GG"
+    ],
+    "expected_keywords": [
+      "Pressefreiheit",
+      "Zensurverbot",
+      "Schranken"
+    ],
+    "category": "Grundrechte und ihre Schranken"
+  },
+  {
+    "id": 2,
+    "skill": "grundrechte",
+    "question": "Ein Gesetz verbietet einer Person, ihren erlernten Beruf auszuüben, ohne dass ein sachlicher Grund vorliegt. Kann sich die Person auf ein Grundrecht berufen und ist dieses Verbot rechtmäßig?",
+    "expected_norms": [
+      "Art. 12"
+    ],
+    "expected_keywords": [
+      "Berufsfreiheit",
+      "Verhältnismäßigkeit",
+      "Eingriff"
+    ],
+    "category": "Berufsfreiheit"
+  },
+  {
+    "id": 3,
+    "skill": "grundrechte",
+    "question": "Ein Staat möchte die Freizügigkeit eines Bürgers beschränken, um Seuchengefahr zu bekämpfen. Auf welcher Rechtsgrundlage ist dies möglich und welche Voraussetzungen müssen erfüllt sein?",
+    "expected_norms": [
+      "Art. 11"
+    ],
+    "expected_keywords": [
+      "Freizügigkeit",
+      "Gesetzesvorbehalt",
+      "Verhältnismäßigkeit"
+    ],
+    "category": "Bewegungsfreiheit und ihre Grenzen"
+  },
+  {
+    "id": 4,
+    "skill": "grundrechte",
+    "question": "Eine Regelung soll tief in die körperliche Unversehrtheit einer Person eingreifen. Nach welcher Norm ist dies nur unter bestimmten Bedingungen zulässig und welche Garantie schützt den Kerngehalt dieses Grundrechts?",
+    "expected_norms": [
+      "Art. 2"
+    ],
+    "expected_keywords": [
+      "körperliche Unversehrtheit",
+      "Wesensgehalt",
+      "Verhältnismäßigkeit"
+    ],
+    "category": "Schutzbereich und Wesensgehaltsgarantie"
+  },
+  {
+    "id": 5,
+    "skill": "grundrechte",
+    "question": "Ein Gesetz beschränkt das Recht auf freie Entfaltung der Persönlichkeit mit dem Ziel, andere Rechte zu schützen. Welche Norm regelt diese Schranke und welche Voraussetzung muss das einschränkende Gesetz erfüllen?",
+    "expected_norms": [
+      "Art. 2"
+    ],
+    "expected_keywords": [
+      "Persönlichkeit",
+      "Schranken",
+      "Verhältnismäßigkeit"
+    ],
+    "category": "Zitiergebot und Gesetzesvorbehalt"
+  }
+]

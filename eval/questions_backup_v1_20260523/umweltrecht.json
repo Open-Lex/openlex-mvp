@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "skill": "umweltrecht",
+    "question": "Was ist der Zweck des Bundes-Immissionsschutzgesetzes?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Umweltschutz",
+      "Immissionen",
+      "Gesundheitsschutz"
+    ],
+    "min_sources": 1,
+    "category": "Zweck des Gesetzes"
+  },
+  {
+    "id": 2,
+    "skill": "umweltrecht",
+    "question": "Welche Anlagen fallen unter den Geltungsbereich des Bundes-Immissionsschutzgesetzes?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Anlagen",
+      "Errichtung",
+      "Betrieb"
+    ],
+    "min_sources": 1,
+    "category": "Geltungsbereich"
+  },
+  {
+    "id": 3,
+    "skill": "umweltrecht",
+    "question": "Was sind schädliche Umwelteinwirkungen im Sinne des Bundes-Immissionsschutzgesetzes?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Immissionen",
+      "Gefahren",
+      "Nachteile"
+    ],
+    "min_sources": 1,
+    "category": "Begriffsbestimmungen"
+  },
+  {
+    "id": 4,
+    "skill": "umweltrecht",
+    "question": "Wie werden Immissionen definiert und welche Auswirkungen können sie haben?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Immissionen",
+      "Gefahren",
+      "Umweltschutz"
+    ],
+    "min_sources": 1,
+    "category": "Immissionen"
+  },
+  {
+    "id": 5,
+    "skill": "umweltrecht",
+    "question": "Welche Rechte und Pflichten haben die Betreiber von Anlagen im Hinblick auf den Umweltschutz?",
+    "expected_norms": [
+      "§ 2",
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Anlagen",
+      "Umweltschutz",
+      "Pflichten"
+    ],
+    "min_sources": 2,
+    "category": "Anlagenbetrieb"
+  },
+  {
+    "id": 6,
+    "skill": "umweltrecht",
+    "question": "Wie werden die Auswirkungen von Immissionen auf die Umwelt und die Gesundheit der Menschen bewertet?",
+    "expected_norms": [
+      "§ 1 BImSchG",
+      "§ 3 BImSchG"
+    ],
+    "expected_keywords": [
+      "Immissionen",
+      "Umweltschutz",
+      "Gesundheitsschutz"
+    ],
+    "min_sources": 2,
+    "category": "Umweltbewertung"
+  },
+  {
+    "id": 7,
+    "skill": "umweltrecht",
+    "question": "Welche Rolle spielt die Bundesregierung bei der Umsetzung des Bundes-Immissionsschutzgesetzes?",
+    "expected_norms": [
+      "§ 2 BImSchG"
+    ],
+    "expected_keywords": [
+      "Bundesregierung",
+      "Umweltschutz",
+      "Gesetzgebung"
+    ],
+    "min_sources": 1,
+    "category": "Gesetzgebung"
+  },
+  {
+    "id": 8,
+    "skill": "umweltrecht",
+    "question": "Wie werden die Grenzwerte für Immissionen festgelegt und welche Auswirkungen haben sie auf die Anlagenbetreiber?",
+    "expected_norms": [
+      "§ 3 BImSchG"
+    ],
+    "expected_keywords": [
+      "Grenzwerte",
+      "Immissionen",
+      "Anlagenbetrieb"
+    ],
+    "min_sources": 1,
+    "category": "Grenzwerte"
+  },
+  {
+    "id": 9,
+    "skill": "umweltrecht",
+    "question": "Welche Rechtsmittel stehen den Betroffenen zur Verfügung, wenn sie durch Immissionen geschädigt werden?",
+    "expected_norms": [
+      "§ 1 BImSchG",
+      "§ 3 BImSchG"
+    ],
+    "expected_keywords": [
+      "Rechtsmittel",
+      "Immissionen",
+      "Schadensersatz"
+    ],
+    "min_sources": 2,
+    "category": "Rechtsmittel"
+  },
+  {
+    "id": 10,
+    "skill": "umweltrecht",
+    "question": "Wie werden die Auswirkungen von Immissionen auf die Umwelt und die Gesundheit der Menschen im Rahmen der Umweltverträglichkeitsprüfung bewertet?",
+    "expected_norms": [
+      "§ 1 BImSchG",
+      "§ 3 BImSchG"
+    ],
+    "expected_keywords": [
+      "Umweltverträglichkeitsprüfung",
+      "Immissionen",
+      "Umweltschutz"
+    ],
+    "min_sources": 2,
+    "category": "Umweltverträglichkeitsprüfung"
+  }
+]

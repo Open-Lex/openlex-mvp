@@ -1,0 +1,73 @@
+[
+  {
+    "question": "Der Unternehmer U betreibt ein Einzelhandelsgeschäft und verkauft Waren an Privatpersonen. Im Januar 2024 macht er einen Umsatz von 15.000 € (netto). Er hat sich bislang nicht zur Umsatzsteuer angemeldet und führt keine Aufzeichnungen über seine Einnahmen. Das Finanzamt fordert ihn zur Abgabe einer Umsatzsteuererklärung auf. Welche Pflichten treffen U nach §§ 90, 149 AO und welche Folgen drohen bei Nichterfüllung?",
+    "expected_norms": [
+      "§ 90 AO",
+      "§ 149 AO",
+      "§ 162 AO"
+    ],
+    "expected_keywords": [
+      "Registrierungspflicht",
+      "Aufzeichnungspflicht",
+      "Ordnungswidrigkeit",
+      "Verwirkung der Steuererstattung"
+    ]
+  },
+  {
+    "question": "Die Freiberuflerin F (Steuerberaterin) erzielt in 2023 Betriebseinkünfte von 80.000 €. Sie hat eine Berufsausbildungsversicherung (400 €/Jahr) und zahlt Beiträge zur privaten Altersvorsorge (3.000 €/Jahr) sowie zur freiwilligen Krankenversicherung (250 €/Monat). Wie sind diese Aufwendungen nach § 4 Abs. 4 EStG und § 10 EStG einzuordnen und wie wirken sie sich auf ihre Einkommensteuer aus?",
+    "expected_norms": [
+      "§ 4 Abs. 4 EStG",
+      "§ 10 EStG",
+      "§ 10a EStG"
+    ],
+    "expected_keywords": [
+      "Betriebsausgaben",
+      "Sonderausgaben",
+      "Basisabsicherung",
+      "Versorgungsaufwendungen"
+    ]
+  },
+  {
+    "question": "Der Arbeitnehmer A erhält von seinem Arbeitgeber zusätzlich zum Gehalt einen Sachvorteil: einen Rabatt von 15 % auf den Einkauf von Waren aus dem Betriebssortiment im Wert von insgesamt 2.000 € im Laufe eines Jahres. Ist dieser Sachvorteil steuerpflichtig? Beurteilen Sie dies nach § 8 Abs. 2 und § 8 Abs. 3 EStG.",
+    "expected_norms": [
+      "§ 8 Abs. 2 EStG",
+      "§ 8 Abs. 3 EStG",
+      "§ 1 Abs. 1 EStG"
+    ],
+    "expected_keywords": [
+      "Lohnsteuer",
+      "Betriebliche Altersversorgung",
+      "Steuerfreie Sachbezüge",
+      "Pauschalierung"
+    ]
+  },
+  {
+    "question": "Das Einzelhandelsunternehmen E liefert Waren an den Großhändler G nach Frankreich. Die Ware wird nach Deutschland gekauft und nach Frankreich transportiert. E stellt eine Rechnung mit 0 % Umsatzsteuer aus und verweist auf die innergemeinschaftliche Lieferung. G reicht die Rechnung bei seinem Finanzamt ein und verlangt Vorsteuerabzug. Ist diese Behandlung nach § 4 Nr. 1 UStG zu Recht erfolgt? Welche Voraussetzungen müssen erfüllt sein?",
+    "expected_norms": [
+      "§ 4 Nr. 1 UStG",
+      "§ 6a UStG",
+      "§ 17 Abs. 2 UStG"
+    ],
+    "expected_keywords": [
+      "Innergemeinschaftliche Lieferung",
+      "Lieferschwelle",
+      "Bestimmungsland",
+      "Dokumentation"
+    ]
+  },
+  {
+    "question": "Der selbstständige Handwerker H hat eine Steuerschuld von 5.000 € für 2022, die er bis heute nicht bezahlt hat. Das Finanzamt leitet ein Zwangsvollstreckungsverfahren ein und erlässt eine Verwarnungsverfügung. H argumentiert, dass die Veranlagung fehlerhaft war. Kann H diese Schuld im laufenden Verfahren geltend machen, oder sind andere Wege eröffnet? Prüfen Sie nach §§ 220, 322, 323 AO.",
+    "expected_norms": [
+      "§ 220 AO",
+      "§ 322 AO",
+      "§ 323 AO",
+      "§ 164 AO"
+    ],
+    "expected_keywords": [
+      "Einspruch",
+      "Basisschutzrecht",
+      "Festsetzungsfrist",
+      "Rechtsbehelfsverfahren"
+    ]
+  }
+]

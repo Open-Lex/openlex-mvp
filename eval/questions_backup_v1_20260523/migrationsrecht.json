@@ -1,0 +1,157 @@
+[
+  {
+    "id": 1,
+    "skill": "migrationsrecht",
+    "question": "Ein Ausländer beantragt Asyl in Deutschland, weil er in seinem Heimatland wegen seiner politischen Überzeugung verfolgt wird. Welche Rechtsstellung genießt er, wenn sein Antrag anerkannt wird?",
+    "expected_norms": [
+      "Art. 16a"
+    ],
+    "expected_keywords": [
+      "Asyl",
+      "Verfolgung",
+      "Rechtsstellung"
+    ],
+    "min_sources": 2,
+    "category": "Asylrecht"
+  },
+  {
+    "id": 2,
+    "skill": "migrationsrecht",
+    "question": "Ein Asylberechtigter hat Anspruch auf eine günstigere Rechtsstellung als die im Abkommen über die Rechtsstellung der Flüchtlinge vorgesehen. Welche Vorschriften bleiben unberührt?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Asylberechtigter",
+      "Rechtsstellung",
+      "Flüchtlinge"
+    ],
+    "min_sources": 2,
+    "category": "Rechtsstellung"
+  },
+  {
+    "id": 3,
+    "skill": "migrationsrecht",
+    "question": "Ein Ausländer beantragt internationalen Schutz nach der Richtlinie 2011/95/EU. Welche Voraussetzungen muss er erfüllen, um als Flüchtling anerkannt zu werden?",
+    "expected_norms": [
+      "Richtlinie"
+    ],
+    "expected_keywords": [
+      "Schutz",
+      "Flüchtling",
+      "Richtlinie"
+    ],
+    "min_sources": 2,
+    "category": "Flüchtlingsrecht"
+  },
+  {
+    "id": 4,
+    "skill": "migrationsrecht",
+    "question": "Ein Asylbewerber wird in Deutschland als Flüchtling anerkannt. Welche Rechte und Pflichten hat er in Deutschland?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Asylbewerber",
+      "Flüchtling",
+      "Pflichten"
+    ],
+    "min_sources": 2,
+    "category": "Rechte und Pflichten"
+  },
+  {
+    "id": 5,
+    "skill": "migrationsrecht",
+    "question": "Ein Ausländer wird in Deutschland nicht als Flüchtling anerkannt, aber hat Anspruch auf subsidiären Schutz. Welche Rechtsstellung hat er in Deutschland?",
+    "expected_norms": [
+      "AsylG"
+    ],
+    "expected_keywords": [
+      "subsidiär",
+      "Rechtsstellung",
+      "Flüchtling"
+    ],
+    "min_sources": 2,
+    "category": "Subsidiärer Schutz"
+  },
+  {
+    "id": 6,
+    "skill": "migrationsrecht",
+    "question": "Ein Asylbewerber wird in Deutschland als Flüchtling anerkannt, aber hat keine gültigen Identitätsdokumente. Welche Auswirkungen hat dies auf seine Rechtsstellung in Deutschland?",
+    "expected_norms": [
+      "§ 2 AsylG",
+      "Abkommen über die Rechtsstellung der Flüchtlinge"
+    ],
+    "expected_keywords": [
+      "Asylbewerber",
+      "Flüchtling",
+      "Identitätsdokumente"
+    ],
+    "min_sources": 2,
+    "category": "Identitätsdokumente"
+  },
+  {
+    "id": 7,
+    "skill": "migrationsrecht",
+    "question": "Ein Ausländer beantragt Asyl in Deutschland, weil er in seinem Heimatland wegen seiner Zugehörigkeit zu einer bestimmten sozialen Gruppe verfolgt wird. Welche Voraussetzungen muss er erfüllen, um als Flüchtling anerkannt zu werden?",
+    "expected_norms": [
+      "§ 3 AsylG",
+      "Abkommen über die Rechtsstellung der Flüchtlinge"
+    ],
+    "expected_keywords": [
+      "Asyl",
+      "soziale Gruppe",
+      "Flüchtling"
+    ],
+    "min_sources": 2,
+    "category": "Soziale Gruppe"
+  },
+  {
+    "id": 8,
+    "skill": "migrationsrecht",
+    "question": "Ein Asylbewerber wird in Deutschland als Flüchtling anerkannt, aber hat noch keine Aufenthaltserlaubnis. Welche Auswirkungen hat dies auf seine Rechtsstellung in Deutschland?",
+    "expected_norms": [
+      "§ 2 AsylG",
+      "Aufenthaltsgesetz"
+    ],
+    "expected_keywords": [
+      "Asylbewerber",
+      "Flüchtling",
+      "Aufenthaltserlaubnis"
+    ],
+    "min_sources": 2,
+    "category": "Aufenthaltserlaubnis"
+  },
+  {
+    "id": 9,
+    "skill": "migrationsrecht",
+    "question": "Ein Ausländer beantragt Asyl in Deutschland, weil er in seinem Heimatland wegen seiner Religion verfolgt wird. Welche Rechtsstellung hat er in Deutschland, wenn sein Antrag abgelehnt wird?",
+    "expected_norms": [
+      "§ 1 AsylG",
+      "Abkommen über die Rechtsstellung der Flüchtlinge"
+    ],
+    "expected_keywords": [
+      "Asyl",
+      "Religion",
+      "Rechtsstellung"
+    ],
+    "min_sources": 2,
+    "category": "Religion"
+  },
+  {
+    "id": 10,
+    "skill": "migrationsrecht",
+    "question": "Ein Asylbewerber wird in Deutschland als Flüchtling anerkannt, aber hat noch keine Arbeitserlaubnis. Welche Auswirkungen hat dies auf seine Rechtsstellung in Deutschland?",
+    "expected_norms": [
+      "§ 2 AsylG",
+      "Arbeitserlaubnis"
+    ],
+    "expected_keywords": [
+      "Asylbewerber",
+      "Flüchtling",
+      "Arbeitserlaubnis"
+    ],
+    "min_sources": 2,
+    "category": "Arbeitserlaubnis"
+  }
+]

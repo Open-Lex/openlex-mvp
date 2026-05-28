@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "verfassungsprozessrecht",
+    "n_questions": 5,
+    "avg_score": 78.7,
+    "hallucination_rate": 0.0,
+    "worst_score": 60.5,
+    "best_score": 87.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Richter des Bundesverfassungsgerichts möchte sein Amt vorzeitig beenden. Welche Voraussetzungen und Verfahrensschritte gelten gemäß den gesetzlichen Bestimmungen?",
+        "category": "Richterrecht",
+        "score": 87.5,
+        "answer_excerpt": "# Vorzeitige Beendigung des Richteramts beim Bundesverfassungsgericht\n\n## Freiwilliger Rücktritt\n\nEin Richter des Bundesverfassungsgerichts kann **jederzeit sein Amt vorzeitig beenden**, indem er sein",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 18.3
+      },
+      {
+        "id": 2,
+        "question": "Der Bundestag muss einen Richter für das Bundesverfassungsgericht wählen. Welche Anforderungen müssen der Kandidat erfüllen und welche Wahlvoraussetzungen gelten?",
+        "category": "Richterwahlverfahren",
+        "score": 87.5,
+        "answer_excerpt": "# Anforderungen und Wahlvoraussetzungen für Richter des Bundesverfassungsgerichts\n\n## Persönliche Anforderungen des Kandidaten\n\nNach § 3 Abs. 1 BVerfGG [Quelle 1] muss der Kandidat folgende Voraussetz",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.1
+      },
+      {
+        "id": 3,
+        "question": "Das Bundesverfassungsgericht entscheidet in verschiedenen Arten von Verfahren. Welche Zuständigkeitsverteilung besteht zwischen den beiden Senaten des Gerichts?",
+        "category": "Gerichtsorganisation",
+        "score": 76.7,
+        "answer_excerpt": "# Zuständigkeitsverteilung zwischen den beiden Senaten des BVerfG\n\nDas Bundesverfassungsgericht ist gemäß [Quelle 3] in zwei Senate mit je acht Richtern unterteilt. Die Zuständigkeitsverteilung regelt",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.3
+      },
+      {
+        "id": 4,
+        "question": "Ein Richter des Bundesverfassungsgerichts hat das 68. Lebensjahr vollendet. Wie lange darf er noch im Amt tätig sein und welche Regelung gilt für seinen Nachfolger?",
+        "category": "Richterrecht",
+        "score": 81.2,
+        "answer_excerpt": "# Amtszeit und Nachfolgeregelung für Bundesverfassungsrichter\n\n## Dauer der Amtstätigkeit\n\nEin Richter des Bundesverfassungsgerichts, der das 68. Lebensjahr vollendet hat, darf bis zum **Ende des Mona",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 8.1
+      },
+      {
+        "id": 5,
+        "question": "Der Wahlausschuss des Bundestages soll Richter für das Bundesverfassungsgericht vorschlagen. Wie wird dieser Ausschuss zusammengesetzt und welche Verpflichtungen haben seine Mitglieder?",
+        "category": "Richterwahlverfahren",
+        "score": 60.5,
+        "answer_excerpt": "# Zusammensetzung und Verpflichtungen des Wahlausschusses\n\n## Zusammensetzung\n\nDie bereitgestellten Quellen enthalten leider keine vollständigen Informationen zur genauen Zusammensetzung des Wahlaussc",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.9
+      }
+    ],
+    "duration_s": 54.2
+  }
+]

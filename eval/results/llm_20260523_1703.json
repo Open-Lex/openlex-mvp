@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "vergaberecht",
+    "n_questions": 5,
+    "avg_score": 79.7,
+    "hallucination_rate": 0.0,
+    "worst_score": 54.5,
+    "best_score": 89.5,
+    "questions": [
+      {
+        "id": null,
+        "question": "Ein öffentlicher Auftraggeber plant, einen IT-Dienstleistungsauftrag zu vergeben. Ab welchem Auftragswert muss er ein europaweites Vergabeverfahren durchführen und welche Grundsätze gelten für die öffentliche Vergabe?",
+        "category": "",
+        "score": 85.5,
+        "answer_excerpt": "# Europaweites Vergabeverfahren für IT-Dienstleistungen\n\n## Schwellenwert\n\nDie bereitgestellten Quellen enthalten **keine expliziten Angaben zu Auftragswerten oder Schwellwerten**, ab denen ein europa",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.5
+      },
+      {
+        "id": null,
+        "question": "Ein Auftraggeber möchte einen bestehenden öffentlichen Auftrag während der Laufzeit wesentlich ändern. Unter welchen Voraussetzungen ist eine wesentliche Auftragsänderung zulässig ohne neue Ausschreibung?",
+        "category": "",
+        "score": 86.5,
+        "answer_excerpt": "# Wesentliche Auftragsänderungen ohne Neuausschreibung\n\n## Rechtliche Grundlage\n\nNach **§ 132 GWB** [Quelle 1] erfordern wesentliche Änderungen eines öffentlichen Auftrags während der Vertragslaufzeit",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.2
+      },
+      {
+        "id": null,
+        "question": "Eine Kommune will Reinigungsleistungen direkt an eine kommunale GmbH vergeben, ohne Ausschreibung (Inhouse-Vergabe). Unter welchen Voraussetzungen ist eine solche Inhouse-Vergabe ohne Wettbewerb zulässig?",
+        "category": "",
+        "score": 54.5,
+        "answer_excerpt": "# Inhouse-Vergabe ohne Ausschreibung\n\nDie bereitgestellten Quellen enthalten leider keine expliziten Regelungen zur Inhouse-Vergabe. Jedoch lässt sich aus der Grundnorm folgendes ableiten:\n\n## Allgeme",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.9
+      },
+      {
+        "id": null,
+        "question": "Ein öffentlicher Auftraggeber schreibt einen Bauauftrag aus und vergibt ihn an das wirtschaftlichste statt günstigste Angebot. Nach welchen Kriterien darf er das wirtschaftlichste Angebot bestimmen?",
+        "category": "",
+        "score": 89.5,
+        "answer_excerpt": "# Kriterien zur Bestimmung des wirtschaftlichsten Angebots\n\nEin öffentlicher Auftraggeber darf ein Bauauftrag nach dem **besten Preis-Leistungs-Verhältnis** vergeben. Dies ist in [Quelle 2] § 127 GWB ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 6.2
+      },
+      {
+        "id": null,
+        "question": "Ein Bieter hat in einem Vergabeverfahren falsche Angaben ueber seine Eignung gemacht. Kann der oeffentliche Auftraggeber ihn gemaess § 124 GWB vom Vergabeverfahren ausschliessen, und welche Voraussetzungen muessen dafuer vorliegen?",
+        "category": "",
+        "score": 82.5,
+        "answer_excerpt": "# Ausschluss wegen falscher Eignungsangaben nach § 124 GWB\n\n## Direkter Ausschluss nach § 124 GWB\n\nFalsche Angaben über die Eignung fallen **nicht direkt unter § 124 GWB** (fakultative Ausschlussgründ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.3
+      }
+    ],
+    "duration_s": 52.7
+  }
+]

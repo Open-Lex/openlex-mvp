@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "verbraucherschutzrecht",
+    "n_questions": 5,
+    "avg_score": 75.0,
+    "hallucination_rate": 0.0,
+    "worst_score": 60.9,
+    "best_score": 88.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Unternehmer ruft die 16-jährige Maria an, um mit ihr einen Vertrag über den Kauf eines Smartphones für 800 Euro zu schließen. Der Unternehmer offenbart zu Beginn des Gesprächs weder seine Identität noch den geschäftlichen Zweck des Anrufs. Verstößt dieser Unternehmer gegen die Pflichten bei Verbraucherverträgen nach deutschem Recht? Begründen Sie anhand des geltenden BGB und erläutern Sie, welche Informationen der Anrufer zu Beginn des Gesprächs offenlegen muss.",
+        "category": "Verbraucherschutzrecht - Allgemeine Pflichten bei Verbraucherverträgen",
+        "score": 88.5,
+        "answer_excerpt": "# Verstoß gegen Informationspflichten bei Verbraucherverträgen\n\n## Rechtliche Grundlage\n\nJa, der Unternehmer verstößt gegen die gesetzlichen Pflichten. Die einschlägige Norm ist **§ 312a Abs. 1 BGB** ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.4
+      },
+      {
+        "id": 2,
+        "question": "Ein Käufer erwirbt ein Kraftfahrzeug mit einer unzulässigen Abschalteinrichtung im Sinne des Art. 5 VO (EG) Nr. 715/2007. Der Fahrzeughersteller hatte das Fahrzeug mit EG-Typgenehmigung in Verkehr gebracht. Der Käufer erleidet einen Differenzschaden in Höhe von 10.000 Euro und verlangt Schadensersatz. Nach Klageerhebung bietet der Hersteller dem Käufer ein kostenloses Software-Update an, das die Abschalteinrichtung entfernt. Der Käufer lehnt das Update ab und behauptet, es stelle keinen tauglichen Vorteil dar. (1) Unter welchen Voraussetzungen haftet der Fahrzeughersteller deliktisch? (2) Kann die EG-Typgenehmigung als Einwand gegen den Schadensersatzanspruch geltend gemacht werden? (3) Wie wird der Differenzschaden unter Berücksichtigung der Schadensminderungspflicht und Vorteilsausgleichung behandelt?",
+        "category": "Verbraucherschutzrecht / Produkthaftung",
+        "score": 73.7,
+        "answer_excerpt": "# Schadensersatz bei unzulässiger Abschalteinrichtung\n\n## (1) Voraussetzungen der deliktischen Haftung\n\nDer Fahrzeughersteller haftet gemäß **§ 823 Abs. 2 BGB i.V.m. § 6 Abs. 1, § 27 Abs. 1 EG-FGV** [",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.71,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.1
+      },
+      {
+        "id": 3,
+        "question": "Ein Möbelhersteller ruft einen Privathaushalt an, um ihm Möbel für die private Wohneinrichtung zu verkaufen. Bei diesem Anruf offenbart der Anrufer weder seine Identität noch den geschäftlichen Zweck des Anrufs. Anschließend wird ein Kaufvertrag geschlossen und der Verbraucher erklärt später seinen Widerruf. Bestimmen Sie, ob die Pflichten des Unternehmers aus § 312a BGB erfüllt wurden und welche Konsequenzen sich aus dem Widerruf gemäß §§ 358, 360 BGB ergeben.",
+        "category": "verbraucherschutzrecht",
+        "score": 87.5,
+        "answer_excerpt": "# Analyse: Pflichtsverletzung und Widerrufsfolgen\n\n## Verletzung von § 312a BGB\n\nDer Möbelhersteller hat die Pflichten aus **§ 312a Abs. 1 BGB** **nicht erfüllt** [Quelle 1]. Gemäß dieser Vorschrift m",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.1
+      },
+      {
+        "id": 4,
+        "question": "Ein Anbieter von Online-Mediendiensten speichert die IP-Adresse eines Nutzers, der von seinem deutschen Wohnort aus eine Internetseite des Anbieters aufruft und dort durch eine Veröffentlichung in seiner Persönlichkeit beeinträchtigt wird. Die Veröffentlichung richtet sich überwiegend an inländische Adressaten. Qualifizieren Sie die gespeicherte IP-Adresse datenschutzrechtlich und begründen Sie, ob die deutschen Gerichte zur Entscheidung über eine Klage wegen dieser Persönlichkeitsbeeinträchtigung international zuständig sind.",
+        "category": "verbraucherschutzrecht",
+        "score": 60.9,
+        "answer_excerpt": "# Datenschutzrechtliche Qualifizierung und internationale Gerichtsbarkeit\n\n## Datenschutzrechtliche Qualifizierung der IP-Adresse\n\nDie gespeicherte IP-Adresse stellt ein **personenbezogenes Datum** da",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.2,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.3
+      },
+      {
+        "id": 5,
+        "question": "Ein Krankenversicherer möchte von einem Pflegeheim Kopien der Pflegedokumentation eines Heimbewohners erhalten, um seine Leistungsansprüche zu prüfen. Der Heimbewohner ist geschäftsunfähig und wird von einem gesetzlichen Betreuer vertreten. Dieser erklärt schriftlich seine Einwilligung zur Herausgabe der Pflegedokumentation. Kann der Krankenversicherer auf Basis von übergegangenem Recht einen Anspruch auf Herausgabe von Kopien der Pflegedokumentation gegen Kostenerstattung geltend machen und welche Rechtsgrundlagen sind anwendbar?",
+        "category": "Verbraucherschutzrecht - Krankenversicherung und Datenschutz",
+        "score": 64.2,
+        "answer_excerpt": "# Anspruch des Krankenversicherers auf Pflegedokumentation\n\n## Rechtsgrundlage und Voraussetzungen\n\nJa, der Krankenversicherer kann auf Basis von übergegangenem Recht einen Anspruch auf Herausgabe von",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.33,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.7
+      }
+    ],
+    "duration_s": 59.2
+  }
+]

@@ -1,0 +1,119 @@
+[
+  {
+    "skill": "versicherungsrecht",
+    "n_questions": 5,
+    "avg_score": 50.1,
+    "hallucination_rate": 0.0,
+    "worst_score": 39.2,
+    "best_score": 74.2,
+    "questions": [
+      {
+        "id": null,
+        "question": "Ein Versicherungsnehmer schliesst eine Kfz-Haftpflichtversicherung ab. Beim Antrag verschweigt er einen frueheren Unfall, den der Versicherer abfragte. Welche Rechte hat der Versicherer bei einer vorvertraglichen Anzeigepflichtverletzung?",
+        "category": "",
+        "score": 49.2,
+        "answer_excerpt": "# Rechte des Versicherers bei Anzeigepflichtverletzung in der Kfz-Haftpflicht\n\n## Anzeigepflicht des Versicherungsnehmers\n\nDer Versicherungsnehmer ist nach **§ 19 Abs. 1 VVG** verpflichtet, dem Versic",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 29.7
+      },
+      {
+        "id": null,
+        "question": "Ein Hausbesitzer hat eine Feuerversicherung. Durch Fahrlassigkeit des Versicherungsnehmers bricht ein Brand aus, der das Haus zerstoert. Welche Leistung kann der Versicherungsnehmer vom Versicherer verlangen, und mindert Fahrlassigkeit den Anspruch?",
+        "category": "",
+        "score": 39.2,
+        "answer_excerpt": "# Leistung bei fahrlässig herbeigeführtem Brandschaden\n\n## Leistungspflicht des Versicherers\n\nGrundsätzlich ist der Versicherer zur Leistung bei einem Brandschaden verpflichtet. Bei einer Feuerversich",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.25,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 16.1
+      },
+      {
+        "id": null,
+        "question": "Ein Versicherungsnehmer zahlt seine Versicherungspramie nicht fristgerecht. Der Versicherer hat ihn gemahnt. Was sind die rechtlichen Folgen bei Verzug mit der Folgeprämie, insbesondere fuer den Versicherungsschutz?",
+        "category": "",
+        "score": 74.2,
+        "answer_excerpt": "# Rechtliche Folgen bei Verzug mit der Folgeprämie\n\n## Mahnung und Zahlungsfrist\n\nBei nicht rechtzeitiger Zahlung einer Folgeprämie muss der Versicherer dem Versicherungsnehmer zunächst eine Mahnung e",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 15.3
+      },
+      {
+        "id": null,
+        "question": "Ein Versicherter hat bei einem Autounfall Ansprueche gegen einen Unfallverursacher. Der Kaskoversicherer erstattet den Schaden. Geht der Schadensersatzanspruch gegen den Unfallverursacher auf den Versicherer ueber?",
+        "category": "",
+        "score": 40.2,
+        "answer_excerpt": "# Übergang von Schadensersatzansprüchen bei Kaskoversicherung\n\nJa, der Schadensersatzanspruch gegen den Unfallverursacher geht auf den Kaskoversicherer über.\n\n## Rechtliche Grundlage\n\nNach **§ 86 Absa",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.25,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 14.4
+      },
+      {
+        "id": null,
+        "question": "Ein Versicherungsnehmer kuendigt seine Lebensversicherung vor Ablauf. Welchen Betrag kann er verlangen, und wie berechnet sich der Rueckkaufswert einer Lebensversicherung?",
+        "category": "",
+        "score": 47.5,
+        "answer_excerpt": "# Rückkaufswert bei Kündigung einer Lebensversicherung\n\n## Gesetzliche Regelung\n\nBei Kündigung einer Lebensversicherung vor Ablauf hat der Versicherer dem Versicherungsnehmer einen **Rückkaufswert** z",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.25,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 19.2
+      }
+    ],
+    "duration_s": 96.2
+  }
+]

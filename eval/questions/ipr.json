@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "skill": "ipr",
+    "question": "Ein deutsches Unternehmen schließt mit einem britischen Partner in London einen Kaufvertrag über Industriemaschinen. Eine Rechtswahlklausel fehlt. Welches Recht ist auf diesen Kaufvertrag anzuwenden, und welcher konkrete Artikel der Rom I-Verordnung bestimmt das objektiv anwendbare Recht bei Kaufverträgen?",
+    "expected_norms": [
+      "Artikel 4"
+    ],
+    "expected_keywords": [
+      "Rom I",
+      "Kaufvertrag",
+      "charakteristische Leistung"
+    ],
+    "category": "Vertragsstatut"
+  },
+  {
+    "id": 2,
+    "skill": "ipr",
+    "question": "Ein in Frankreich lebender Deutscher erleidet bei einem Verkehrsunfall in Spanien einen Schaden durch einen spanischen Fahrer. Welches Recht ist auf seinen Schadensersatzanspruch anzuwenden, und welcher konkrete Artikel der Rom II-Verordnung bestimmt das Deliktsstatut?",
+    "expected_norms": [
+      "Artikel 4"
+    ],
+    "expected_keywords": [
+      "Rom II",
+      "Delikt",
+      "Schadensort"
+    ],
+    "category": "Deliktsstatut"
+  },
+  {
+    "id": 3,
+    "skill": "ipr",
+    "question": "Ein iranisches Gericht spricht einem geschiedenen Mann das alleinige Sorgerecht für das gemeinsame Kind zu, obwohl die Mutter in Deutschland lebt. Das deutsche Familiengericht soll die ausländische Entscheidung anerkennen. Kann es die Anerkennung wegen Unvereinbarkeit mit deutschen Grundwerten verweigern, und welche Norm des EGBGB ist einschlägig?",
+    "expected_norms": [
+      "Art. 21 EGBGB"
+    ],
+    "expected_keywords": [
+      "ordre public",
+      "Anerkennung",
+      "Grundordnung"
+    ],
+    "category": "Ordre Public"
+  },
+  {
+    "id": 4,
+    "skill": "ipr",
+    "question": "Zwei Parteien aus verschiedenen EU-Ländern streiten über die Wirksamkeit einer Rechtswahlklausel in ihrem Dienstleistungsvertrag. Was erlaubt Art. 3 Rom I-VO, und welche Grenzen bestehen?",
+    "expected_norms": [
+      "Art. 3"
+    ],
+    "expected_keywords": [
+      "Rechtswahl",
+      "Parteiautonomie",
+      "Vertrag"
+    ],
+    "category": "Rechtswahl"
+  },
+  {
+    "id": 5,
+    "skill": "ipr",
+    "question": "Ein deutscher Staatsangehöriger lebt seit 20 Jahren in Spanien und stirbt ohne Testament. Seine Erben sind unsicher, ob spanisches oder deutsches Erbrecht gilt. Welcher Artikel der EuErbVO bestimmt das anwendbare Erbstatut, und hätte der Erblasser eine Rechtswahl treffen können?",
+    "expected_norms": [
+      "21 EuErbVO",
+      "22 EuErbVO"
+    ],
+    "expected_keywords": [
+      "Erbstatut",
+      "Aufenthalt",
+      "Rechtswahl"
+    ],
+    "category": "Erbstatut EuErbVO"
+  }
+]

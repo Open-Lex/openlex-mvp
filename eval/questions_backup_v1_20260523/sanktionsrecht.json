@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "skill": "sanktionsrecht",
+    "question": "Ein deutsches Unternehmen möchte Waren an ein iranisches Unternehmen liefern. Welche Vorschriften müssen sie beachten, um keine rechtlichen Konsequenzen zu riskieren?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Außenwirtschaft",
+      "Beschränkung",
+      "Verordnung"
+    ],
+    "min_sources": 2,
+    "category": "Außenwirtschaftsrecht"
+  },
+  {
+    "id": 2,
+    "skill": "sanktionsrecht",
+    "question": "Eine ausländische Firma hat eine Zweigniederlassung in Deutschland. Wie wird diese Zweigniederlassung rechtlich behandelt?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Zweigniederlassung",
+      "Rechtlich selbständig",
+      "Inländische Niederlassung"
+    ],
+    "min_sources": 1,
+    "category": "Zweigniederlassungen"
+  },
+  {
+    "id": 3,
+    "skill": "sanktionsrecht",
+    "question": "Ein deutsches Unternehmen hat eine Betriebsstätte in einem Land, das unter einem Embargo der EU steht. Welche Konsequenzen kann das Unternehmen erwarten, wenn es dennoch Geschäfte mit diesem Land tätigt?",
+    "expected_norms": [
+      "AWG"
+    ],
+    "expected_keywords": [
+      "Embargo",
+      "Sanktionen",
+      "EU"
+    ],
+    "min_sources": 2,
+    "category": "Wirtschaftssanktionen"
+  },
+  {
+    "id": 4,
+    "skill": "sanktionsrecht",
+    "question": "Eine Person möchte Gold aus dem Ausland nach Deutschland importieren. Welche Vorschriften muss sie beachten, um die Einfuhr genehmigt zu bekommen?",
+    "expected_norms": [
+      "AWG"
+    ],
+    "expected_keywords": [
+      "Einfuhr",
+      "Genehmigung",
+      "Ausfuhr"
+    ],
+    "min_sources": 2,
+    "category": "Gold- und Devisenhandel"
+  },
+  {
+    "id": 5,
+    "skill": "sanktionsrecht",
+    "question": "Ein Unternehmen hat eine Niederlassung in Deutschland und möchte Waren an ein Unternehmen in einem Land liefern, das unter einem US-Embargo steht. Welche rechtlichen Risiken bestehen für das Unternehmen, wenn es dennoch die Lieferung durchführt?",
+    "expected_norms": [
+      "AWG"
+    ],
+    "expected_keywords": [
+      "Embargo",
+      "Sanktionen",
+      "Risiken"
+    ],
+    "min_sources": 2,
+    "category": "Internationale Sanktionen"
+  }
+]

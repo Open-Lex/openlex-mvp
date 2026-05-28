@@ -1,0 +1,141 @@
+[
+  {
+    "id": 1,
+    "question": "Welche Ziele und Grundsätze verfolgt die Charta der Vereinten Nationen, und welche Bedeutung haben das Gewaltverbot und das Selbstbestimmungsrecht der Völker?",
+    "category": "UN-Charta Grundsätze",
+    "expected_norms": [
+      "Charta"
+    ],
+    "expected_keywords": [
+      "Gewaltverbot",
+      "Selbstbestimmungsrecht",
+      "UN-Charta"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Welche Rolle spielt der UN-Sicherheitsrat bei der Wahrung des Weltfriedens, und unter welchen Voraussetzungen kann er Zwangsmaßnahmen beschließen?",
+    "category": "UN-Sicherheitsrat",
+    "expected_norms": [
+      "Charta"
+    ],
+    "expected_keywords": [
+      "Sicherheitsrat",
+      "Frieden",
+      "Charta"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Welche Zuständigkeit hat der Internationale Gerichtshof (IGH) bei Streitigkeiten zwischen Staaten, und wie wird sein Urteil vollstreckt?",
+    "category": "Internationaler Gerichtshof",
+    "expected_norms": [
+      "IGH"
+    ],
+    "expected_keywords": [
+      "Gerichtshof",
+      "IGH",
+      "Zuständigkeit"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Welche Rechte garantiert die Europäische Menschenrechtskonvention (EMRK), und wie kann ein Bürger Beschwerde beim EGMR einlegen?",
+    "category": "EMRK",
+    "expected_norms": [
+      "EMRK"
+    ],
+    "expected_keywords": [
+      "Gerichtshof",
+      "Beschwerde",
+      "EMRK"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Welche Verfahrensgarantien enthält Artikel 6 EMRK für ein faires Verfahren?",
+    "category": "Faires Verfahren EMRK",
+    "expected_norms": [
+      "Artikel 6"
+    ],
+    "expected_keywords": [
+      "Verfahren",
+      "EMRK",
+      "Recht"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Was bedeutet das absolute Folterverbot im Völkerrecht, und wie ist es in der EMRK und der UN-Charta verankert?",
+    "category": "Folterverbot",
+    "expected_norms": [
+      "Artikel 3",
+      "Artikel 1"
+    ],
+    "expected_keywords": [
+      "Folterverbot",
+      "unmenschliche Behandlung",
+      "absolutes Recht",
+      "EMRK"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Unter welchen Voraussetzungen kann die UN-Generalversammlung in Angelegenheiten der internationalen Sicherheit tätig werden?",
+    "category": "UN-Generalversammlung",
+    "expected_norms": [
+      "Artikel 10",
+      "Artikel 11"
+    ],
+    "expected_keywords": [
+      "Generalversammlung",
+      "Empfehlungen",
+      "internationaler Friede",
+      "Sicherheit"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Welche Voraussetzungen müssen erfüllt sein, damit ein Staat Mitglied der Vereinten Nationen werden kann?",
+    "category": "UN-Mitgliedschaft",
+    "expected_norms": [
+      "Artikel 4",
+      "Artikel 5"
+    ],
+    "expected_keywords": [
+      "Mitgliedschaft",
+      "friedliebend",
+      "Sicherheitsrat",
+      "Aufnahme"
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Wie schützt die EMRK die Meinungsfreiheit, und unter welchen Umständen darf der Staat die Meinungsfreiheit einschränken?",
+    "category": "Meinungsfreiheit EMRK",
+    "expected_norms": [
+      "Artikel 10"
+    ],
+    "expected_keywords": [
+      "Meinungsfreiheit",
+      "Einschränkung",
+      "notwendig in einer demokratischen Gesellschaft",
+      "EMRK"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Welche Rolle spielt der IGH bei der Auslegung der UN-Charta, und wie bindet seine Rechtsprechung die Mitgliedstaaten?",
+    "category": "IGH-Rechtsprechung",
+    "expected_norms": [
+      "Artikel 92",
+      "Artikel 38"
+    ],
+    "expected_keywords": [
+      "Internationaler Gerichtshof",
+      "Auslegung",
+      "Bindungswirkung",
+      "UN-Charta"
+    ]
+  }
+]

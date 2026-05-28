@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "kaufrecht",
+    "n_questions": 5,
+    "avg_score": 85.1,
+    "hallucination_rate": 0.0,
+    "worst_score": 79.5,
+    "best_score": 88.5,
+    "questions": [
+      {
+        "id": null,
+        "question": "Welche Gewährleistungsrechte stehen einem Käufer nach § 437 BGB zu, wenn ein gebrauchtes Auto nach der Übergabe einen Motordefekt aufweist, der bereits bei Übergabe vorhanden war?",
+        "category": "",
+        "score": 88.5,
+        "answer_excerpt": "# Gewährleistungsrechte bei Motordefekt nach § 437 BGB\n\nNach § 437 BGB stehen einem Käufer bei einem Motordefekt, der bereits bei Übergabe vorhanden war, folgende Gewährleistungsrechte zu [Quelle 3]:\n",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.9
+      },
+      {
+        "id": null,
+        "question": "Ein Käufer verlangt Nacherfüllung wegen eines Mangels. Wann darf ein Verkäufer die Nacherfüllung nach § 439 Abs. 4 BGB wegen Unverhältnismäßigkeit verweigern, und welche Alternativen bestehen für den Käufer?",
+        "category": "",
+        "score": 87.5,
+        "answer_excerpt": "# Verweigerung der Nacherfüllung wegen Unverhältnismäßigkeit nach § 439 Abs. 4 BGB\n\n## Voraussetzungen für die Verweigerung\n\nDie bereitgestellten Quellen enthalten leider nur Teile des § 439 Abs. 4 BG",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 6.8
+      },
+      {
+        "id": null,
+        "question": "Ein Verbraucher kauft ein Smartphone. Kurz nach Kauf zeigt sich ein Defekt. Welche Beweislastumkehr gilt gemäß § 477 BGB beim Verbrauchsgüterkauf, und welche Voraussetzungen müssen erfüllt sein?",
+        "category": "",
+        "score": 87.5,
+        "answer_excerpt": "# Beweislastumkehr beim Verbrauchsgüterkauf (§ 477 BGB)\n\n## Rechtliche Regelung\n\nGemäß **§ 477 Abs. 1 BGB** gilt beim Verbrauchsgüterkauf eine Beweislastumkehr zugunsten des Verbrauchers [Quelle 1]:\n\n",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.0
+      },
+      {
+        "id": null,
+        "question": "Ein Autohersteller gewährt beim Neuwagenkauf eine fünfjährige Garantie auf alle Mängel. Der Käufer beansprucht die Garantie. Welche Unterschiede bestehen zwischen der gesetzlichen Gewährleistung und einer Garantie?",
+        "category": "",
+        "score": 82.5,
+        "answer_excerpt": "# Unterschiede zwischen gesetzlicher Gewährleistung und Garantie\n\n## Rechtliche Grundlagen\n\nNach [Quelle 1] § 443 BGB ist eine Garantie eine **freiwillige, zusätzliche Verpflichtung** des Verkäufers, ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.4
+      },
+      {
+        "id": null,
+        "question": "Ein Käufer erwirbt ein Einfamilienhaus und entdeckt zwei Jahre nach dem Kauf einen versteckten Mangel. Welche Verjährungsfrist gilt nach § 438 BGB für Mängelansprüche bei Bauwerken, und ab wann beginnt diese Frist zu laufen?",
+        "category": "",
+        "score": 79.5,
+        "answer_excerpt": "# Verjährungsfrist für Mängelansprüche bei Bauwerken\n\n## Verjährungsfrist\n\nNach **§ 438 Abs. 1 Nr. 2 BGB** beträgt die Verjährungsfrist für Mängelansprüche bei einem Bauwerk **5 Jahre** [Quelle 1]. Di",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.2
+      }
+    ],
+    "duration_s": 51.8
+  }
+]

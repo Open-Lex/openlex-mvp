@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "skill": "kommunalrecht",
+    "question": "Der Stadtrat einer NRW-Gemeinde möchte eine Satzung über die Erhebung von Elternbeiträgen für Kindertagesstätten erlassen. Welche Voraussetzungen muss die Gemeinde bei der Satzungsgebung beachten, und welche Grenzen setzt die Gemeindeordnung?",
+    "expected_norms": [
+      "Art. 28"
+    ],
+    "expected_keywords": [
+      "Selbstverwaltung",
+      "Satzung",
+      "Ermächtigung"
+    ],
+    "category": "Satzungsrecht"
+  },
+  {
+    "id": 2,
+    "skill": "kommunalrecht",
+    "question": "Eine Gemeinde will eine benachbarte kleinere Gemeinde eingemeindern. Die betroffene Gemeinde ist dagegen. Welche Rechte hat die einzugemeindende Gemeinde, und wie schützt Art. 28 GG die kommunale Selbstverwaltung?",
+    "expected_norms": [
+      "Art. 28"
+    ],
+    "expected_keywords": [
+      "Selbstverwaltungsgarantie",
+      "Eingemeindung",
+      "Anhörung"
+    ],
+    "category": "Selbstverwaltungsgarantie"
+  },
+  {
+    "id": 3,
+    "skill": "kommunalrecht",
+    "question": "Die Baubehörde hat einer Firma eine Baugenehmigung erteilt, die sich später als rechtswidrig herausstellt. Die Gemeinde möchte die Genehmigung zurücknehmen. Unter welchen Voraussetzungen ist die Rücknahme eines rechtswidrigen Verwaltungsakts zulässig, und welche Norm des VwVfG ist maßgeblich?",
+    "expected_norms": [
+      "§ 48"
+    ],
+    "expected_keywords": [
+      "Rücknahme",
+      "Verwaltungsakt",
+      "Vertrauensschutz"
+    ],
+    "category": "Rücknahme Verwaltungsakt"
+  },
+  {
+    "id": 4,
+    "skill": "kommunalrecht",
+    "question": "Eine Gemeinde hat einem Veranstalter eine Genehmigung für einen Markt erteilt. Nun haben sich die Verhältnisse so geändert, dass das öffentliche Interesse den Widerruf erfordert. Unter welchen Voraussetzungen kann ein rechtmäßig erlassener Verwaltungsakt nach dem VwVfG widerrufen werden?",
+    "expected_norms": [
+      "§ 49"
+    ],
+    "expected_keywords": [
+      "Widerruf",
+      "Verwaltungsakt",
+      "öffentliches Interesse"
+    ],
+    "category": "Widerruf Verwaltungsakt"
+  },
+  {
+    "id": 5,
+    "skill": "kommunalrecht",
+    "question": "Die Bezirksregierung beanstandet einen Beschluss des Gemeinderats einer NRW-Gemeinde als rechtswidrig. Welche Aufsichtsmittel stehen der Kommunalaufsicht zur Verfügung, und was unterscheidet Rechtsaufsicht von Fachaufsicht?",
+    "expected_norms": [
+      "Art. 28"
+    ],
+    "expected_keywords": [
+      "Kommunalaufsicht",
+      "Aufsicht",
+      "Beanstandung"
+    ],
+    "category": "Kommunalaufsicht"
+  }
+]

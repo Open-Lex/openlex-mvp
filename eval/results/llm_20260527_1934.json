@@ -1,0 +1,129 @@
+[
+  {
+    "skill": "urheberrecht",
+    "n_questions": 5,
+    "avg_score": 89.9,
+    "hallucination_rate": 0.0,
+    "worst_score": 82.6,
+    "best_score": 95.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ich habe zusammen mit einem Kollegen ein Computerprogramm entwickelt, und wir können unsere Anteile nicht einzeln verwerten. Welche Rechtsposition haben wir beiden?",
+        "category": "Urheberverhältnisse",
+        "score": 95.8,
+        "answer_excerpt": "# Rechtsposition bei gemeinsamer Softwareentwicklung\n\n## Miturheber-Status\n\nSie und Ihr Kollege sind **Miturheber** des Computerprogramms. Dies ergibt sich aus **§ 8 Abs. 1 UrhG** [Quelle 3, Quelle 12",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 18.4
+      },
+      {
+        "id": 2,
+        "question": "Ich habe einen Roman übersetzt und dabei kreativ Kulturbesonderheiten berücksichtigt. Kann meine Übersetzung als eigenständiges Werk geschützt werden?",
+        "category": "Bearbeitungen und Sammelwerke",
+        "score": 95.8,
+        "answer_excerpt": "# Urheberrechtlicher Schutz Ihrer Übersetzung\n\nJa, Ihre kreative Übersetzung kann als eigenständiges Werk geschützt werden.\n\n## Rechtliche Grundlage\n\nNach **§ 3 des Urheberrechtsgesetzes (UrhG)** [Que",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.0
+      },
+      {
+        "id": 3,
+        "question": "Welche Werktypen werden nach dem Urheberrechtsgesetz geschützt – kann ich beispielsweise auch ein Computerprogramm oder einen Tanzfilm schützen lassen?",
+        "category": "Schutzgegenstände",
+        "score": 84.3,
+        "answer_excerpt": "# Schutz von Computerprogrammen und Tanzfilmen nach deutschem Urheberrecht\n\nJa, sowohl Computerprogramme als auch Tanzfilme werden nach dem deutschen Urheberrechtsgesetz geschützt.\n\n## Computerprogram",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 6.4
+      },
+      {
+        "id": 4,
+        "question": "Mein Verlag möchte mein Buch ins Internet stellen, damit es jederzeit abrufbar ist. Welches Recht des Urhebers ist hier relevant?",
+        "category": "Verwertungsrechte",
+        "score": 91.2,
+        "answer_excerpt": "# Relevante Urheberrechte bei Online-Verfügbarmachung\n\nFür die geplante Online-Verfügbarmachung des Buches sind folgende Urheberrechte relevant:\n\n## 1. **Recht der öffentlichen Zugänglichmachung (§ 19",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.2
+      },
+      {
+        "id": 5,
+        "question": "Ich habe eine Datenbank mit systematisch geordneten Musikstücken aufgebaut. Kann ich die Anordnung und Auswahl dieser Sammlung urheberrechtlich schützen lassen?",
+        "category": "Bearbeitungen und Sammelwerke",
+        "score": 82.6,
+        "answer_excerpt": "# Urheberrechtlicher Schutz einer Musikdatenbank\n\nJa, Ihre Musikdatenbank kann urheberrechtlich geschützt werden – allerdings auf zwei verschiedenen Ebenen:\n\n## 1. Schutz als Sammelwerk (§ 4 Abs. 1 Ur",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.2
+      }
+    ],
+    "duration_s": 50.7
+  }
+]

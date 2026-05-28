@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "skill": "arbeitsrecht",
+    "question": "Ein Arbeitnehmer möchte sein Arbeitsverhältnis beenden. Welche Kündigungsfrist muss er mindestens einhalten, und zu welchen Zeitpunkten ist eine Kündigung möglich?",
+    "expected_norms": ["§ 622"],
+    "expected_keywords": ["Arbeitnehmer", "Kündigung", "Kalendermonats"],
+    "category": "Kündigung"
+  },
+  {
+    "id": 2,
+    "skill": "arbeitsrecht",
+    "question": "Unter welchen Voraussetzungen kann ein Arbeitgeber einen Arbeitnehmer fristlos kündigen, und innerhalb welcher Frist muss dies erfolgen?",
+    "expected_norms": ["§ 626"],
+    "expected_keywords": ["wichtigem Grund", "Kündigung", "Zeitpunkt"],
+    "category": "Fristlose Kündigung"
+  },
+  {
+    "id": 3,
+    "skill": "arbeitsrecht",
+    "question": "Welche wesentlichen Merkmale definieren einen Arbeitsvertrag gegenüber anderen Dienstverträgen?",
+    "expected_norms": ["§ 611a"],
+    "expected_keywords": ["Arbeitsvertrag", "weisungsgebundener", "Arbeitnehmer"],
+    "category": "Arbeitsvertrag"
+  },
+  {
+    "id": 4,
+    "skill": "arbeitsrecht",
+    "question": "Darf ein Arbeitgeber einen Arbeitnehmer benachteiligen, weil dieser seine Rechte ausübt? Welche Norm schützt den Arbeitnehmer dagegen?",
+    "expected_norms": ["§ 612a"],
+    "expected_keywords": ["Maßregelungsverbot", "Arbeitgeber", "Arbeitnehmer"],
+    "category": "Schutzbestimmungen"
+  },
+  {
+    "id": 5,
+    "skill": "arbeitsrecht",
+    "question": "Kann ein Arbeitgeber nach § 106 GewO (Direktionsrecht) einen Arbeitnehmer verpflichten, für dienstliche Zwecke die AGB eines Softwareanbieters (z.B. Microsoft, Adobe) zu akzeptieren, und welche Konsequenzen hat dies für die persönliche Haftung des Arbeitnehmers nach den Grundsätzen der beschränkten Arbeitnehmerhaftung (§ 619a BGB)?",
+    "expected_norms": ["§ 106", "§ 619a"],
+    "expected_keywords": ["Direktionsrecht", "billigem Ermessen", "Haftung"],
+    "category": "Direktionsrecht"
+  }
+]

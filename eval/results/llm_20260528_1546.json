@@ -1,0 +1,156 @@
+[
+  {
+    "skill": "europarecht",
+    "n_questions": 6,
+    "avg_score": 71.3,
+    "hallucination_rate": 0.0,
+    "worst_score": 60.8,
+    "best_score": 85.8,
+    "questions": [
+      {
+        "id": null,
+        "question": "Was ist das ordentliche Gesetzgebungsverfahren der EU (Art. 294 AEUV) und welche Rolle spielen Parlament und Rat?",
+        "category": "",
+        "score": 82.0,
+        "answer_excerpt": "# Das ordentliche Gesetzgebungsverfahren der EU (Art. 294 AEUV)\n\nLeider enthalten die bereitgestellten Quellen keine spezifische Information zu Art. 294 AEUV oder dem ordentlichen Gesetzgebungsverfahr",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 2,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 14.8
+      },
+      {
+        "id": null,
+        "question": "Was versteht man unter dem Grundsatz des Vorrangs des EU-Rechts? Welche Folgen hat er für nationales Recht?",
+        "category": "",
+        "score": 60.8,
+        "answer_excerpt": "# Der Grundsatz des Vorrangs des EU-Rechts\n\n## Definition\n\nDer Vorrang des EU-Rechts besagt, dass das Recht der Europäischen Union Vorrang vor nationalem Recht hat. [Quelle 3] etabliert diesen Grundsa",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.3
+      },
+      {
+        "id": null,
+        "question": "Was ist der Unterschied zwischen einer EU-Verordnung und einer EU-Richtlinie in Bezug auf Geltung und Umsetzungspflicht?",
+        "category": "",
+        "score": 71.0,
+        "answer_excerpt": "# Unterschied zwischen EU-Verordnung und EU-Richtlinie\n\n## Geltung\n\n**EU-Verordnungen** gelten unmittelbar und flächendeckend in allen Mitgliedstaaten. Sie entfalten Rechtswirkung ohne nationale Umset",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.7
+      },
+      {
+        "id": null,
+        "question": "Ein Mitgliedstaat möchte den Import eines EU-weit zugelassenen Produkts einschränken. Ist das mit Art. 34 AEUV (Warenverkehrsfreiheit) vereinbar?",
+        "category": "",
+        "score": 85.8,
+        "answer_excerpt": "# Einfuhrbeschränkung eines EU-zugelassenen Produkts nach Art. 34 AEUV\n\n## Grundsätzliche Unvereinbarkeit\n\nEin Mitgliedstaat kann die Einfuhr eines EU-weit zugelassenen Produkts **grundsätzlich nicht ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.7
+      },
+      {
+        "id": null,
+        "question": "Was ist der Digital Single Market und welche Rechtsbereiche umfassen DSA, DMA und AI Act für einen einheitlichen europäischen Digitalmarkt?",
+        "category": "",
+        "score": 66.0,
+        "answer_excerpt": "# Digital Single Market und europäische Digitalregulierung\n\nDer **Digital Single Market** basiert auf [Quelle 4] dem Binnenmarkt gemäß Art. 26 AEUV, der „einen Raum ohne Binnengrenzen, in dem der frei",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 5,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "eugh_urteil",
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.0
+      },
+      {
+        "id": null,
+        "question": "Eine EU-Verordnung wie die DSGVO ist direkt anwendbar. Dennoch erlassen Mitgliedstaaten ergänzende nationale Datenschutzgesetze. Ist das zulässig?",
+        "category": "",
+        "score": 62.0,
+        "answer_excerpt": "# Zulässigkeit ergänzender nationaler Datenschutzgesetze neben der DSGVO\n\nJa, ergänzende nationale Datenschutzgesetze sind zulässig, obwohl die DSGVO [Quelle 2] als EU-Verordnung direkt anwendbar ist.",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "eugh_urteil",
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.2
+      }
+    ],
+    "duration_s": 64.3
+  }
+]

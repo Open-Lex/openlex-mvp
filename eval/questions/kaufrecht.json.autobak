@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "skill": "kaufrecht",
+    "question": "Ein Kraftfahrzeughändler verkauft einem Käufer einen Pkw als Neuwagen. Zum Zeitpunkt des Verkaufs wird das betreffende Modell jedoch nicht mehr unverändert hergestellt. Kann der Käufer argumentieren, dass das Fahrzeug nicht mehr 'fabrikneu' ist, obwohl es als Neuwagen verkauft wurde?",
+    "expected_norms": [
+      "§ 459"
+    ],
+    "expected_keywords": [
+      "fabrikneu",
+      "Käufer",
+      "Neuwagen"
+    ],
+    "category": "Gewährleistung beim Neuwagenkauf"
+  },
+  {
+    "id": 2,
+    "skill": "kaufrecht",
+    "question": "Ein Leasinggeber mietet ein Fahrzeug mit Kilometerabrechnung an einen Leasingnehmer. Nach Vertragsablauf gibt dieser das Fahrzeug in nicht vertragsgerechtem Zustand zurück. Nach welcher Verjährungsfrist kann der Leasinggeber seinen Anspruch auf Minderwertausgleich geltend machen?",
+    "expected_norms": [
+      "§ 535",
+      "§ 196"
+    ],
+    "expected_keywords": [
+      "Leasinggeber",
+      "Fahrzeug",
+      "Kilometerabrechnung"
+    ],
+    "category": "Leasingvertrag und Verjährung"
+  },
+  {
+    "id": 3,
+    "skill": "kaufrecht",
+    "question": "Ein Verkäufer und ein Käufer schließen einen Unternehmenskaufvertrag ab und vereinbaren darin ein Vertragsstrafeversprechen mit Unterwerfungsklausel. Wie muss die Risikoabgrenzung bei einem solchen verschuldensabhängig ausgestalteten Vertragsstrafeversprechen erfolgen?",
+    "expected_norms": [
+      "§ 433"
+    ],
+    "expected_keywords": [
+      "Verkäufer",
+      "Käufer",
+      "Kaufvertrag"
+    ],
+    "category": "Vertragsstrafe im Unternehmenskauf"
+  },
+  {
+    "id": 4,
+    "skill": "kaufrecht",
+    "question": "Ein Käufer erwirbt gebrauchte Wärmetauscher von einem Verkäufer. Später behauptet der Käufer, dass eine stillschweigende Eigenschaftszusicherung vorliegen sollte. Unter welchen Bedingungen kann eine solche Zusicherung beim Kauf gebrauchter Waren angenommen werden?",
+    "expected_norms": [
+      "§ 459"
+    ],
+    "expected_keywords": [
+      "Recht",
+      "Käufer",
+      "Verkäufer"
+    ],
+    "category": "Eigenschaftszusicherung bei gebrauchten Waren"
+  },
+  {
+    "id": 5,
+    "skill": "kaufrecht",
+    "question": "Ein Käufer und ein Verkäufer vereinbaren in einem Möbelkaufvertrag eine Klausel, wonach der Käufer drei Wochen an seinen Auftrag gebunden ist und dieser schriftlicher Bestätigung bedarf, wobei Bestätigung gilt als erteilt, wenn der Verkäufer nicht binnen drei Wochen ablehnt. Ist diese Klausel wirksam?",
+    "expected_norms": [
+      "§ 10"
+    ],
+    "expected_keywords": [
+      "Käufer",
+      "Verkäufer",
+      "Klausel"
+    ],
+    "category": "Allgemeine Geschäftsbedingungen beim Kaufvertrag"
+  }
+]

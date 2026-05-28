@@ -1,0 +1,122 @@
+[
+  {
+    "skill": "reiserecht",
+    "n_questions": 5,
+    "avg_score": 79.0,
+    "hallucination_rate": 0.0,
+    "worst_score": 62.5,
+    "best_score": 89.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ich habe eine Pauschalreise bestehend aus Flug und Hotel gebucht. Der Flug kostet 300 Euro und das Hotel 200 Euro. Sind dies Reiseleistungen im Sinne des Reiserechts?",
+        "category": "Pauschalreise Definition",
+        "score": 89.5,
+        "answer_excerpt": "# Sind Flug und Hotel Reiseleistungen?\n\nJa, Flug und Hotel sind Reiseleistungen im Sinne des Reiserechts.\n\n## Rechtliche Grundlage\n\nNach § 651a Abs. 2 BGB ist eine **Pauschalreise eine Gesamtheit von ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 31.9
+      },
+      {
+        "id": 2,
+        "question": "Mein Hinflug hatte 12 Stunden Verspätung, sodass ich mein gebuchtes Hotel erst einen Tag später erreichte. Ich hatte eine Pauschalreise gebucht. Welche Ansprüche habe ich auf Ausgleichszahlung nach der EU-Fluggastrechte-Verordnung und auf Minderung gegen den Reiseveranstalter?",
+        "category": "Mängelrechte",
+        "score": 62.5,
+        "answer_excerpt": "# Ansprüche bei 12-stündiger Flugverspätung bei Pauschalreise\n\n## EU-Fluggastrechte-Verordnung (VO (EG) Nr. 261/2004)\n\nBei einer **12-stündigen Verspätung** haben Sie grundsätzlich Anspruch auf eine *",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 30.0
+      },
+      {
+        "id": 3,
+        "question": "Ich möchte 10 Tage vor meinem geplanten Reisebeginn meine Pauschalreise stornieren. Kann der Reiseveranstalter von mir eine Gebühr verlangen?",
+        "category": "Rücktritt",
+        "score": 72.7,
+        "answer_excerpt": "# Stornierungsgebühren bei Pauschalreisen - 10 Tage vor Reisebeginn\n\nJa, der Reiseveranstalter kann von Ihnen eine Gebühr verlangen, wenn Sie 10 Tage vor Reisebeginn stornieren.\n\n## Rechtliche Grundla",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 21.3
+      },
+      {
+        "id": 4,
+        "question": "Nach meiner Pauschalreise stelle ich fest, dass das gebuchte Hotel nicht den vereinbarten Standards entsprach. Wie lange habe ich Zeit, um meine Ansprüche geltend zu machen?",
+        "category": "Verjährung",
+        "score": 89.5,
+        "answer_excerpt": "# Verjährungsfrist für Ansprüche bei Reisemängeln\n\nNach deutschem Recht haben Sie eine **Verjährungsfrist von zwei Jahren** für Ihre Ansprüche bei Reisemängeln. [Quelle 2]\n\n## Beginn der Verjährungsfr",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 20.2
+      },
+      {
+        "id": 5,
+        "question": "Der Reiseveranstalter möchte den Reisepreis 15 Tage vor Reisebeginn um 150 Euro erhöhen. Sind die Voraussetzungen für eine wirksame Preiserhöhung erfüllt?",
+        "category": "Preisänderung",
+        "score": 80.9,
+        "answer_excerpt": "# Wirksame Preiserhöhung 15 Tage vor Reisebeginn?\n\nNein, die Voraussetzungen für eine wirksame Preiserhöhung sind **nicht erfüllt**.\n\n## Erforderliche Voraussetzungen nach § 651f BGB\n\nNach [Quelle 1] ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 18.1
+      }
+    ],
+    "duration_s": 123.0
+  }
+]

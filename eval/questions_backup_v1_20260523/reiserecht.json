@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "skill": "reiserecht",
+    "question": "Was sind die vertragstypischen Pflichten beim Pauschalreisevertrag?",
+    "expected_norms": [
+      "§ 651a"
+    ],
+    "expected_keywords": [
+      "Pauschalreisevertrag",
+      "Reiseveranstalter",
+      "Reisepreis"
+    ],
+    "min_sources": 1,
+    "category": "Pauschalreiseverträge"
+  },
+  {
+    "id": 2,
+    "skill": "reiserecht",
+    "question": "Wie unterscheidet sich eine Pauschalreise von der Vermittlung von Reiseleistungen?",
+    "expected_norms": [
+      "§ 651"
+    ],
+    "expected_keywords": [
+      "Pauschalreise",
+      "Vermittlung",
+      "Reiseleistungen"
+    ],
+    "min_sources": 1,
+    "category": "Abgrenzung zur Vermittlung"
+  },
+  {
+    "id": 3,
+    "skill": "reiserecht",
+    "question": "Was ist die Pflicht des Reiseveranstalters bei Absage der Reise?",
+    "expected_norms": [
+      "§ 651"
+    ],
+    "expected_keywords": [
+      "Reiseveranstalter",
+      "Absage",
+      "Rückzahlung"
+    ],
+    "min_sources": 1,
+    "category": "Reiseabsage"
+  },
+  {
+    "id": 4,
+    "skill": "reiserecht",
+    "question": "Kann ein Reisender den Reisevertrag vor Beginn der Reise kündigen?",
+    "expected_norms": [
+      "§ 651"
+    ],
+    "expected_keywords": [
+      "Reisevertrag",
+      "Kündigung",
+      "Rücktritt"
+    ],
+    "min_sources": 1,
+    "category": "Reisekündigung"
+  },
+  {
+    "id": 5,
+    "skill": "reiserecht",
+    "question": "Was sind die Rechte des Reisenden bei Mängeln der Reiseleistungen?",
+    "expected_norms": [
+      "§ 651"
+    ],
+    "expected_keywords": [
+      "Reisender",
+      "Mängel",
+      "Reiseleistungen"
+    ],
+    "min_sources": 1,
+    "category": "Reisemängel"
+  },
+  {
+    "id": 6,
+    "skill": "reiserecht",
+    "question": "Wie wird die Haftung des Reiseveranstalters bei Schäden des Reisenden geregelt?",
+    "expected_norms": [
+      "§ 651a BGB"
+    ],
+    "expected_keywords": [
+      "Haftung",
+      "Reiseveranstalter",
+      "Schäden"
+    ],
+    "min_sources": 1,
+    "category": "Haftung"
+  },
+  {
+    "id": 7,
+    "skill": "reiserecht",
+    "question": "Kann ein Reisender den Reisevertrag auf eine andere Person übertragen?",
+    "expected_norms": [
+      "§ 651a BGB"
+    ],
+    "expected_keywords": [
+      "Reisevertrag",
+      "Übertragung",
+      "Ersatzperson"
+    ],
+    "min_sources": 1,
+    "category": "Reiseübertragung"
+  },
+  {
+    "id": 8,
+    "skill": "reiserecht",
+    "question": "Was sind die Informationspflichten des Reiseveranstalters gegenüber dem Reisenden?",
+    "expected_norms": [
+      "§ 651a BGB"
+    ],
+    "expected_keywords": [
+      "Informationspflichten",
+      "Reiseveranstalter",
+      "Reisender"
+    ],
+    "min_sources": 1,
+    "category": "Informationspflichten"
+  },
+  {
+    "id": 9,
+    "skill": "reiserecht",
+    "question": "Wie wird die Preiserhöhung bei Pauschalreiseverträgen geregelt?",
+    "expected_norms": [
+      "§ 651a BGB"
+    ],
+    "expected_keywords": [
+      "Preiserhöhung",
+      "Pauschalreisevertrag",
+      "Reisepreis"
+    ],
+    "min_sources": 1,
+    "category": "Preiserhöhung"
+  },
+  {
+    "id": 10,
+    "skill": "reiserecht",
+    "question": "Was sind die Rechte des Reisenden bei einer Insolvenz des Reiseveranstalters?",
+    "expected_norms": [
+      "§ 651a BGB"
+    ],
+    "expected_keywords": [
+      "Insolvenz",
+      "Reiseveranstalter",
+      "Reisender"
+    ],
+    "min_sources": 1,
+    "category": "Insolvenz"
+  }
+]

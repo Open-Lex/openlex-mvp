@@ -1,0 +1,126 @@
+[
+  {
+    "skill": "steuerrecht",
+    "n_questions": 5,
+    "avg_score": 91.8,
+    "hallucination_rate": 0.0,
+    "worst_score": 82.9,
+    "best_score": 95.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Finanzamt muss entscheiden, ob es eine Maßnahme durchführt. Welche gesetzliche Grundlage regelt, wie das Finanzamt sein Ermessen ausüben darf?",
+        "category": "Allgemeine Verfahrensvorschriften",
+        "score": 82.9,
+        "answer_excerpt": "# Gesetzliche Grundlagen für die Ermessensausübung des Finanzamts\n\n## Primäre Regelungen\n\nDie Ermessensausübung des Finanzamts wird hauptsächlich durch die **Abgabenordnung (AO)** geregelt:\n\n### § 86 ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 15.8
+      },
+      {
+        "id": 2,
+        "question": "Welche Behördenarten werden nach der Abgabenordnung als Finanzbehörden definiert und welche Normen regeln dies?",
+        "category": "Behördliche Zuständigkeit",
+        "score": 95.8,
+        "answer_excerpt": "# Finanzbehörden nach der Abgabenordnung\n\n## Definition und Normen\n\nNach **§ 6 AO** werden Finanzbehörden definiert als die in dieser Norm genannten Behörden des Bundes und der Länder [Quelle 1].\n\n## ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.7
+      },
+      {
+        "id": 3,
+        "question": "Eine Kapitalgesellschaft hat ihren satzungsmäßigen Sitz in der Schweiz, aber ihre tatsächliche Geschäftsleitung in Deutschland. Unterliegt sie der deutschen Körperschaftsteuer, und welche gesetzliche Norm regelt die unbeschränkte Steuerpflicht von Körperschaften?",
+        "category": "Steuerliche Begriffsbestimmungen",
+        "score": 89.5,
+        "answer_excerpt": "# Unbeschränkte Körperschaftsteuerpflicht bei Geschäftsleitung in Deutschland\n\n## Anwendbare Norm\n\nDie unbeschränkte Steuerpflicht von Körperschaften ist in **§ 1 Abs. 1 Nr. 1 des Körperschaftsteuerge",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.6
+      },
+      {
+        "id": 4,
+        "question": "Welche Abgaben zählen nach § 3 der Abgabenordnung zu den steuerlichen Nebenleistungen, und wie werden Zinsen und Säumniszuschläge eingeordnet?",
+        "category": "Steuerschuldrecht",
+        "score": 95.8,
+        "answer_excerpt": "# Steuerliche Nebenleistungen nach § 3 AO\n\n## Definition und Umfang\n\nNach § 3 Abs. 4 AO (nicht vollständig in den Quellen zitiert, aber referenziert) gehören zu den **steuerlichen Nebenleistungen** in",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.3
+      },
+      {
+        "id": 5,
+        "question": "Ein Bürger fragt, ob die Vorschriften der Abgabenordnung auch für Gewerbesteuer und Grundsteuer gelten, wenn deren Verwaltung den Gemeinden übertragen wurde. Wie regelt die AO ihren Anwendungsbereich?",
+        "category": "Anwendungsbereich der Abgabenordnung",
+        "score": 94.8,
+        "answer_excerpt": "# Anwendungsbereich der Abgabenordnung für Gewerbesteuer und Grundsteuer\n\n## Allgemeine Anwendungsbereichsregel\n\nNach **§ 1 Abs. 1 AO** [Quelle 4] gilt die Abgabenordnung grundsätzlich nur für Steuern",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.5
+      }
+    ],
+    "duration_s": 50.4
+  }
+]

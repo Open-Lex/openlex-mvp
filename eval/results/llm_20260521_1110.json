@@ -1,0 +1,120 @@
+[
+  {
+    "skill": "ki_recht",
+    "n_questions": 5,
+    "avg_score": 81.8,
+    "hallucination_rate": 0.0,
+    "worst_score": 72.7,
+    "best_score": 90.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Welche Anforderungen müssen Anbieter von KI-Systemen in der EU erfüllen, um ein hohes Schutzniveau in Bezug auf Gesundheit und Sicherheit zu gewährleisten?",
+        "category": "Anbieterpflichten",
+        "score": 79.2,
+        "answer_excerpt": "# Anforderungen für KI-System-Anbieter zur Gewährleistung von Gesundheit und Sicherheit\n\nAnbieter von KI-Systemen in der EU müssen folgende Anforderungen erfüllen:\n\n## Grundlegende Pflichten für Hochr",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 21.3
+      },
+      {
+        "id": 2,
+        "question": "Wie definieren sich KI-Systeme im Rahmen der EU-Verordnung und welche Eigenschaften müssen sie aufweisen?",
+        "category": "Begriffsbestimmungen",
+        "score": 90.5,
+        "answer_excerpt": "# Definition von KI-Systemen nach der EU-Verordnung\n\n## Rechtliche Definition\n\nGemäß **Artikel 3 Nr. 1** der EU-KI-Verordnung wird ein **KI-System** definiert als [Quelle 5]:\n\nEin **\"maschinengestützt",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 13.3
+      },
+      {
+        "id": 3,
+        "question": "Welche Rechte und Freiheiten müssen bei der Entwicklung und dem Einsatz von KI-Systemen in der EU geschützt werden?",
+        "category": "Grundrechte",
+        "score": 87.5,
+        "answer_excerpt": "# Zu schützende Rechte und Freiheiten bei KI-Systemen in der EU\n\nBei der Entwicklung und dem Einsatz von KI-Systemen in der EU müssen gemäß der KI-Verordnung folgende Rechte und Freiheiten geschützt w",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.1
+      },
+      {
+        "id": 4,
+        "question": "Wer gilt als Anbieter von KI-Systemen im Sinne der EU-Verordnung und welche Pflichten haben sie?",
+        "category": "Anbieterpflichten",
+        "score": 72.7,
+        "answer_excerpt": "# Anbieter von KI-Systemen und ihre Pflichten\n\n## Definition des Anbieters\n\nAls **Anbieter** gelten gemäß der EU-KI-Verordnung primär jene Akteure, die **KI-Systeme in der Union in Verkehr bringen ode",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 11.3
+      },
+      {
+        "id": 5,
+        "question": "Wie werden KI-Modelle mit allgemeinem Verwendungszweck in der EU-Verordnung behandelt und welche Anforderungen müssen sie erfüllen?",
+        "category": "KI-Modelle",
+        "score": 79.2,
+        "answer_excerpt": "# Behandlung von KI-Modellen mit allgemeinem Verwendungszweck in der EU-Verordnung\n\n## Grundlegende Pflichten\n\nKI-Modelle mit allgemeinem Verwendungszweck unterliegen spezifischen Anforderungen gemäß ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 11.6
+      }
+    ],
+    "duration_s": 71.1
+  }
+]

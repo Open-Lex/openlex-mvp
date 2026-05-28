@@ -1,0 +1,73 @@
+[
+  {
+    "question": "Der Bundestag beschließt ein Gesetz zur Änderung des Mindestlohns. Die Fraktion der Grünen reicht daraufhin beim Bundesverfassungsgericht Beschwerde ein und argumentiert, dass das Gesetz ohne ihre Beteiligung beschlossen wurde, obwohl sie mit 80 Abgeordneten im Bundestag vertreten sind. Ist diese Beschwerde begründet? Prüfen Sie unter Berücksichtigung von Art. 38 GG und Art. 76 GG.",
+    "expected_norms": [
+      "Art. 38 GG",
+      "Art. 76 GG",
+      "Art. 42 GG"
+    ],
+    "expected_keywords": [
+      "Mitgliedsrechte des Bundestags",
+      "Initiativrecht",
+      "Geschäftsordnung",
+      "Kontrollrechte der Fraktion"
+    ]
+  },
+  {
+    "question": "Ein Gesetz zur Erhöhung der Grunderwerbsteuer wird vom Bundestag mit großer Mehrheit beschlossen. Der Bundesrat lehnt das Gesetz ab. Der Bundestag fasst daraufhin in einer zweiten Abstimmung mit exakt zwei Dritteln seiner Stimmen einen Beschluss zur Überwindung der Ablehnung des Bundesrates. Ist das Verfahren rechtmäßig? Prüfen Sie nach Art. 77 Abs. 3 und Abs. 4 GG.",
+    "expected_norms": [
+      "Art. 77 Abs. 3 GG",
+      "Art. 77 Abs. 4 GG",
+      "Art. 50 GG"
+    ],
+    "expected_keywords": [
+      "Einspruchsrecht des Bundesrates",
+      "Einigungsverfahren",
+      "Zustimmungsgesetze",
+      "Abstimmungserfordernisse"
+    ]
+  },
+  {
+    "question": "Das Bundeskanzleramt erlässt eine Richtlinie für die Behörden zur Auslegung eines erst kürzlich verabschiedeten Zuwanderungsgesetzes. Ein Bundesland argumentiert, dass dies eine unzulässige Rechtsetzung ohne parlamentarisches Verfahren darstellt. Ist diese Kritik berechtigt? Erörtern Sie unter Bezugnahme auf Art. 20 Abs. 2, Art. 20 Abs. 3 GG und das Demokratieprinzip.",
+    "expected_norms": [
+      "Art. 20 Abs. 2 GG",
+      "Art. 20 Abs. 3 GG",
+      "Art. 76 GG"
+    ],
+    "expected_keywords": [
+      "Gewaltenteilung",
+      "Gesetzesvorbehalt",
+      "Delegationsfähigkeit",
+      "Ermessensspielraum der Exekutive"
+    ]
+  },
+  {
+    "question": "Der Bundestag beschließt auf Initiative des Bundesministers für Justiz ein Gesetz mit dem Ziel, eine Bundesbehörde aufzulösen und deren Aufgaben auf die Länder zu übertragen. Das Gesetz wird mit den erforderlichen Mehrheiten verabschiedet. Ein Land rügt dies als Eingriff in seine Kompetenzen. Welche verfassungsrechtlichen Grenzen für die Gesetzgebungskompetenz des Bundes sind zu beachten? (Art. 70, 73, 74 GG)",
+    "expected_norms": [
+      "Art. 70 GG",
+      "Art. 73 GG",
+      "Art. 74 GG",
+      "Art. 72 GG"
+    ],
+    "expected_keywords": [
+      "Kompetenzverteilung",
+      "ausschließliche Gesetzgebung",
+      "konkurrierende Gesetzgebung",
+      "Bundesgesetz"
+    ]
+  },
+  {
+    "question": "Ein Abgeordneter des Bundestags wird wegen Verdachts der Bestechung in einem laufenden Ermittlungsverfahren verhaftet. Die Staatsanwaltschaft beantragt beim Bundestag die Aufhebung seiner Immunität. Der Bundestag lehnt dies ab, worauf die Staatsanwaltschaft Beschwerde einreicht. Kann die Staatsanwaltschaft diesen Beschluss anfechtbar machen? Prüfen Sie nach Art. 46 Abs. 2 GG und Art. 38 GG.",
+    "expected_norms": [
+      "Art. 46 Abs. 2 GG",
+      "Art. 38 GG",
+      "Art. 48 GG"
+    ],
+    "expected_keywords": [
+      "Indemnität",
+      "Immunität",
+      "Aufhebungsbeschluss",
+      "parlamentarisches Selbstschutzrecht"
+    ]
+  }
+]

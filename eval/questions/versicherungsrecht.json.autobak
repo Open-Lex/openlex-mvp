@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "skill": "versicherungsrecht",
+    "question": "Ein Versicherungsvertrag wurde am 15. Dezember 2007 abgeschlossen. Bis wann muss das alte Gesetz über den Versicherungsvertrag auf diesen Altvertrag angewendet werden, und welche Ausnahmen gibt es?",
+    "expected_norms": [
+      "§ 12"
+    ],
+    "expected_keywords": [
+      "Altverträge",
+      "Dezember",
+      "Gesetzes"
+    ],
+    "category": "Übergangsregelungen"
+  },
+  {
+    "id": 2,
+    "skill": "versicherungsrecht",
+    "question": "Mein Versicherungsvertrag ist ein Altvertrag aus 2007. Der Versicherer möchte seine Allgemeinen Versicherungsbedingungen ändern. Bis wann kann der Versicherer diese Änderungen mit Wirkung zum 1. Januar 2009 vornehmen und wie muss er vorgehen?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Versicherungsvertrag",
+      "Versicherer",
+      "Januar"
+    ],
+    "category": "Änderung von Versicherungsbedingungen"
+  },
+  {
+    "id": 3,
+    "skill": "versicherungsrecht",
+    "question": "Bei welchen Altverträgen aus der Zeit vor 2008 ist § 153 des Versicherungsvertragsgesetzes anzuwenden, und unter welchen Bedingungen?",
+    "expected_norms": [
+      "§ 153"
+    ],
+    "expected_keywords": [
+      "Versicherungsvertragsgesetzes",
+      "Altverträge",
+      "Unternehmen"
+    ],
+    "category": "Überschussbeteiligung"
+  },
+  {
+    "id": 4,
+    "skill": "versicherungsrecht",
+    "question": "Ein Gläubiger eines Grundpfandrechts hat Rechte gegenüber dem Versicherer nach altem Recht. Bis zu welchem Zeitpunkt können diese Grundpfandrechte beim Versicherer angemeldet werden?",
+    "expected_norms": [
+      "§ 99"
+    ],
+    "expected_keywords": [
+      "Versicherer",
+      "Zeitpunkt",
+      "Dezember"
+    ],
+    "category": "Grundpfandrechte"
+  },
+  {
+    "id": 5,
+    "skill": "versicherungsrecht",
+    "question": "Ich bin Versicherungsnehmer einer Krankenversicherung mit einem Altvertrag. Wann kann der Versicherer neue Allgemeine Versicherungsbedingungen für meinen Altvertrag gemäß §§ 192 bis 208 des Versicherungsvertragsgesetzes ab 1. Januar 2008 anwenden?",
+    "expected_norms": [
+      "§ 12"
+    ],
+    "expected_keywords": [
+      "Versicherungsnehmer",
+      "Versicherungsvertragsgesetzes",
+      "Fassung"
+    ],
+    "category": "Krankenversicherung Altverträge"
+  }
+]

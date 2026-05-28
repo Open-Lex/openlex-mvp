@@ -1,0 +1,157 @@
+[
+  {
+    "id": 1,
+    "skill": "kaufrecht",
+    "question": "Ein Käufer hat ein Auto gekauft, das sich als mangelhaft herausstellt. Welche Rechte hat der Käufer gegenüber dem Verkäufer?",
+    "expected_norms": [
+      "§ 437"
+    ],
+    "expected_keywords": [
+      "Mangel",
+      "Nacherfüllung",
+      "Mängelrecht"
+    ],
+    "min_sources": 2,
+    "category": "Mangelhaftung"
+  },
+  {
+    "id": 2,
+    "skill": "kaufrecht",
+    "question": "Ein Verkäufer hat ein Produkt angeboten, das nicht den vereinbarten Eigenschaften entspricht. Welche Ansprüche kann der Käufer geltend machen?",
+    "expected_norms": [
+      "§ 437"
+    ],
+    "expected_keywords": [
+      "Mangel",
+      "Käufer",
+      "Recht"
+    ],
+    "min_sources": 2,
+    "category": "Kaufvertrag"
+  },
+  {
+    "id": 3,
+    "skill": "kaufrecht",
+    "question": "Ein Käufer hat ein Produkt gekauft, das sich als nicht vertragsgemäß herausstellt. Welche Fristen gelten für die Geltendmachung von Ansprüchen?",
+    "expected_norms": [
+      "§ 437"
+    ],
+    "expected_keywords": [
+      "Verjährung",
+      "Frist",
+      "Gewährleistung"
+    ],
+    "min_sources": 2,
+    "category": "Gewährleistung"
+  },
+  {
+    "id": 4,
+    "skill": "kaufrecht",
+    "question": "Ein Verkäufer hat ein Produkt angeboten, das unter einem bestimmten Markennamen verkauft wird. Welche Rechte hat der Käufer, wenn das Produkt nicht den Erwartungen entspricht?",
+    "expected_norms": [
+      "§ 437"
+    ],
+    "expected_keywords": [
+      "Mangel",
+      "Beschaffenheit",
+      "Käufer"
+    ],
+    "min_sources": 2,
+    "category": "Markenrecht"
+  },
+  {
+    "id": 5,
+    "skill": "kaufrecht",
+    "question": "Ein Käufer hat ein Produkt gekauft, das sich als mangelhaft herausstellt. Welche Möglichkeiten hat der Käufer, um den Mangel zu beseitigen?",
+    "expected_norms": [
+      "§ 439"
+    ],
+    "expected_keywords": [
+      "Nacherfüllung",
+      "Ersatz",
+      "Mangel"
+    ],
+    "min_sources": 2,
+    "category": "Mangelbeseitigung"
+  },
+  {
+    "id": 6,
+    "skill": "kaufrecht",
+    "question": "Ein Verkäufer hat ein Produkt angeboten, das unter bestimmten Bedingungen gekauft werden kann. Welche Rechte hat der Käufer, wenn die Bedingungen nicht erfüllt sind?",
+    "expected_norms": [
+      "§ 434 BGB",
+      "§ 437 BGB"
+    ],
+    "expected_keywords": [
+      "Kaufbedingungen",
+      "Kaufrecht",
+      "Vertrag"
+    ],
+    "min_sources": 2,
+    "category": "Kaufbedingungen"
+  },
+  {
+    "id": 7,
+    "skill": "kaufrecht",
+    "question": "Ein Käufer hat ein Produkt gekauft, das nicht den vereinbarten Eigenschaften entspricht. Welche Ansprüche kann der Käufer geltend machen, wenn der Verkäufer den Mangel nicht beseitigt?",
+    "expected_norms": [
+      "§ 437 BGB",
+      "§ 440 BGB"
+    ],
+    "expected_keywords": [
+      "Mangelhaftung",
+      "Kaufrecht",
+      "Gewährleistung"
+    ],
+    "min_sources": 2,
+    "category": "Mangelhaftung"
+  },
+  {
+    "id": 8,
+    "skill": "kaufrecht",
+    "question": "Ein Verkäufer hat ein Produkt angeboten, das unter bestimmten Garantiebedingungen verkauft wird. Welche Rechte hat der Käufer, wenn die Garantie nicht eingehalten wird?",
+    "expected_norms": [
+      "§ 443 BGB",
+      "§ 444 BGB"
+    ],
+    "expected_keywords": [
+      "Garantie",
+      "Kaufrecht",
+      "Gewährleistung"
+    ],
+    "min_sources": 2,
+    "category": "Garantie"
+  },
+  {
+    "id": 9,
+    "skill": "kaufrecht",
+    "question": "Ein Käufer hat ein Produkt gekauft, das sich als mangelhaft herausstellt. Welche Fristen gelten für die Geltendmachung von Ansprüchen gegen den Verkäufer?",
+    "expected_norms": [
+      "§ 438 BGB",
+      "§ 439 BGB"
+    ],
+    "expected_keywords": [
+      "Verjährung",
+      "Gewährleistung",
+      "Fristen"
+    ],
+    "min_sources": 2,
+    "category": "Gewährleistung"
+  },
+  {
+    "id": 10,
+    "skill": "kaufrecht",
+    "question": "Ein Verkäufer hat ein Produkt angeboten, das unter bestimmten Bedingungen gekauft werden kann. Welche Rechte hat der Käufer, wenn die Bedingungen nicht erfüllt sind und der Verkäufer den Mangel nicht beseitigt?",
+    "expected_norms": [
+      "§ 434 BGB",
+      "§ 437 BGB"
+    ],
+    "expected_keywords": [
+      "Kaufbedingungen",
+      "Kaufrecht",
+      "Vertrag"
+    ],
+    "min_sources": 2,
+    "category": "Kaufbedingungen"
+  }
+]

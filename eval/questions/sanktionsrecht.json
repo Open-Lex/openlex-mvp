@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "skill": "sanktionsrecht",
+    "question": "Ein deutsches Unternehmen wird auf die konsolidierte Sanktionsliste des UN-Sicherheitsrates aufgenommen. Welche vorläufigen Beschränkungen gelten unmittelbar und bis wann?",
+    "expected_norms": [
+      "§ 5a"
+    ],
+    "expected_keywords": [
+      "Verfügungen",
+      "wirtschaftliche Ressourcen",
+      "Sanktionsmaßnahmen"
+    ],
+    "category": "Vorläufige Sanktionsmaßnahmen"
+  },
+  {
+    "id": 2,
+    "skill": "sanktionsrecht",
+    "question": "Unter welchen Voraussetzungen kann das Bundesministerium für Wirtschaft und Energie durch Verwaltungsakt einzelne Personen in ihren Verfügungsrechten über Gelder beschränken und wie wird dies wirksam?",
+    "expected_norms": [
+      "§ 6"
+    ],
+    "expected_keywords": [
+      "Verwaltungsakt",
+      "Gelder",
+      "Bundesanzeiger"
+    ],
+    "category": "Einzeleingriffe im Sanktionsrecht"
+  },
+  {
+    "id": 3,
+    "skill": "sanktionsrecht",
+    "question": "Ein unter Geschäftsverbot stehendes Unternehmen hat ein verbundenes Unternehmen im Inland. Wann und unter welchen Bedingungen kann dieses unter Treuhandverwaltung gestellt werden?",
+    "expected_norms": [
+      "§ 6a",
+      "§ 15"
+    ],
+    "expected_keywords": [
+      "Treuhandverwaltung",
+      "Unternehmen",
+      "Gefahr"
+    ],
+    "category": "Treuhandverwaltung bei Sanktionen"
+  },
+  {
+    "id": 4,
+    "skill": "sanktionsrecht",
+    "question": "Welche Anforderungen muss eine Person erfüllen, um zum Anteilspfleger bestellt zu werden, und welche Befugnisse hat der Anteilspfleger nicht?",
+    "expected_norms": [
+      "§ 6b",
+      "§ 6c"
+    ],
+    "expected_keywords": [
+      "Anteilspfleger",
+      "Gesellschafter",
+      "Veräußerung"
+    ],
+    "category": "Anteilspfleger im Sanktionsrecht"
+  },
+  {
+    "id": 5,
+    "skill": "sanktionsrecht",
+    "question": "Nach welcher Rechtsgrundlage können durch Rechtsverordnung wirtschaftliche Sanktionsmaßnahmen zur Umsetzung von EU-Beschlüssen im Außenwirtschaftsverkehr angeordnet werden, und welche Grundsätze gelten dabei?",
+    "expected_norms": [
+      "§ 4"
+    ],
+    "expected_keywords": [
+      "Rechtsverordnung",
+      "Europäischen Union",
+      "Beschränkungen"
+    ],
+    "category": "Rechtsgrundlagen für Sanktionen"
+  },
+  {
+    "id": 6,
+    "skill": "sanktionsrecht",
+    "question": "Die EU setzt UN-Sanktionen um und friert Gelder ein, ohne den Betroffenen anzuhören. Ist das mit EU-Grundrechten vereinbar?",
+    "expected_norms": [
+      "Art. 47 GRCh",
+      "Art. 41 GRCh"
+    ],
+    "expected_keywords": [
+      "Kadi",
+      "Sanktionsliste",
+      "rechtliches Gehör",
+      "effektiver Rechtsschutz",
+      "UN-Sicherheitsrat"
+    ],
+    "category": "Kadi I / Grundrechtsschutz"
+  },
+  {
+    "id": 7,
+    "skill": "sanktionsrecht",
+    "question": "Nach Kadi I wird eine Person erneut gelistet, diesmal mit einer kurzen Begründung. Reicht das aus?",
+    "expected_norms": [
+      "Art. 47 GRCh"
+    ],
+    "expected_keywords": [
+      "Kadi II",
+      "Begründungspflicht",
+      "Beweislast",
+      "inhaltliche Prüfung",
+      "Widerlegung"
+    ],
+    "category": "Kadi II / Begründungspflicht"
+  },
+  {
+    "id": 8,
+    "skill": "sanktionsrecht",
+    "question": "Rosneft klagt gegen EU-Sanktionen im Energiesektor wegen der Krim-Annexion. Hat der EuGH Zuständigkeit, und sind die Sanktionen rechtmäßig?",
+    "expected_norms": [
+      "Art. 215 AEUV",
+      "Art. 29 EUV"
+    ],
+    "expected_keywords": [
+      "Rosneft",
+      "Russland-Sanktionen",
+      "Verhältnismäßigkeit",
+      "GASP",
+      "Art. 215 AEUV"
+    ],
+    "category": "Russland-Sanktionen / Rosneft"
+  },
+  {
+    "id": 9,
+    "skill": "sanktionsrecht",
+    "question": "Die Bank Melli Iran wird gelistet. Was muss der Rat begründen, damit die Listung rechtmäßig ist?",
+    "expected_norms": [
+      "Art. 215 AEUV",
+      "Art. 41 GRCh"
+    ],
+    "expected_keywords": [
+      "Begründungspflicht",
+      "Iran-Sanktionen",
+      "individuelle Zurechnung",
+      "Bank Melli",
+      "konkrete Gründe"
+    ],
+    "category": "Iran-Sanktionen / Begründung"
+  },
+  {
+    "id": 10,
+    "skill": "sanktionsrecht",
+    "question": "Kann sich ein Staat auf völkerrechtliche UN-Verpflichtungen berufen, um EU-Grundrechte bei Sanktionen außer Kraft zu setzen?",
+    "expected_norms": [
+      "Art. 6 EUV",
+      "Art. 47 GRCh"
+    ],
+    "expected_keywords": [
+      "UN-Charta",
+      "EU-Grundrechte",
+      "Kadi-Doktrin",
+      "Vorrang",
+      "Verhältnis"
+    ],
+    "category": "Verhältnis EU-Recht / UN-Recht"
+  }
+]

@@ -1,0 +1,121 @@
+[
+  {
+    "skill": "voelkerrecht",
+    "n_questions": 5,
+    "avg_score": 52.8,
+    "hallucination_rate": 0.0,
+    "worst_score": 40.9,
+    "best_score": 62.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Welche Rechte haben Verwundete im Felde gemäß dem Genfer Abkommen I?",
+        "category": "Kriegsrecht",
+        "score": 52.9,
+        "answer_excerpt": "# Rechte Verwundeter im Felde gemäß Genfer Abkommen I\n\nLeider enthalten die bereitgestellten Quellen **keine konkreten Inhalte** zum Genfer Abkommen I von 1949. [Quelle 1] verweist zwar auf das \"Genfe",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 20.7
+      },
+      {
+        "id": 2,
+        "question": "Was sind die Ziele und Grundsätze der Charta der Vereinten Nationen?",
+        "category": "Völkerrecht",
+        "score": 62.5,
+        "answer_excerpt": "# Ziele und Grundsätze der UN-Charta\n\n## Ziele (Artikel 1)\n\nDie Charta der Vereinten Nationen, unterzeichnet am 26. Juni 1945 in San Francisco, definiert in **Artikel 1** folgende Hauptziele [Quelle 1",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.6
+      },
+      {
+        "id": 3,
+        "question": "Wie werden die Rechte der Europäischen Union und ihre Mitgliedstaaten im Vertrag über die Europäische Union geregelt?",
+        "category": "Europarecht",
+        "score": 47.6,
+        "answer_excerpt": "# Regelung der Zuständigkeiten zwischen EU und Mitgliedstaaten\n\nDie Rechte der Europäischen Union und ihrer Mitgliedstaaten werden im Vertrag über die Europäische Union nach einem klaren Kompetenzvert",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 14.9
+      },
+      {
+        "id": 4,
+        "question": "Welche Pflichten haben Staaten gemäß dem Völkerrecht bei der Behandlung von Kriegsgefangenen?",
+        "category": "Kriegsrecht",
+        "score": 59.9,
+        "answer_excerpt": "# Antwort zur Behandlung von Kriegsgefangenen\n\nLeider enthalten die bereitgestellten Quellen **keine Informationen** zu den völkerrechtlichen Pflichten von Staaten bei der Behandlung von Kriegsgefange",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 10,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.0
+      },
+      {
+        "id": 5,
+        "question": "Wie werden Menschenrechte im Rahmen der Europäischen Union geschützt?",
+        "category": "Menschenrechte",
+        "score": 40.9,
+        "answer_excerpt": "# Menschenrechtsschutz in der Europäischen Union\n\nDer Menschenrechtsschutz in der EU basiert auf mehreren rechtlichen Säulen:\n\n## 1. Charta der Grundrechte\n\nDie **Charta der Grundrechte der Europäisch",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 11.9
+      }
+    ],
+    "duration_s": 71.6
+  }
+]

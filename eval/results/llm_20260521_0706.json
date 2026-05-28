@@ -1,0 +1,118 @@
+[
+  {
+    "skill": "erbrecht",
+    "n_questions": 5,
+    "avg_score": 78.7,
+    "hallucination_rate": 0.0,
+    "worst_score": 74.7,
+    "best_score": 81.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Wer kann Erbe werden und unter welchen Umständen?",
+        "category": "Erbfähigkeit",
+        "score": 79.2,
+        "answer_excerpt": "# Wer kann Erbe werden und unter welchen Umständen?\n\n## Grundvoraussetzung der Erbfähigkeit\n\nNach **§ 1923 BGB** kann grundsätzlich **nur Erbe werden, wer zur Zeit des Erbfalls lebt** [Quelle 1]. Eine",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 21.6
+      },
+      {
+        "id": 2,
+        "question": "Wie wird das Vermögen eines Verstorbenen auf die Erben übertragen?",
+        "category": "Gesamtrechtsnachfolge",
+        "score": 81.2,
+        "answer_excerpt": "# Vermögensübertragung auf Erben\n\nDie Übertragung des Vermögens eines Verstorbenen erfolgt nach dem Prinzip der **Gesamtrechtsnachfolge** gemäß **§ 1922 BGB** [Quelle 1]:\n\n## Automatischer Vermögensüb",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 16.0
+      },
+      {
+        "id": 3,
+        "question": "Wer sind die gesetzlichen Erben erster Ordnung und wie wirken sie auf die Erbfolge?",
+        "category": "Gesetzliche Erben",
+        "score": 79.2,
+        "answer_excerpt": "# Gesetzliche Erben erster Ordnung\n\n## Definition\n\nGemäß **§ 1924 Abs. 1 BGB** sind **gesetzliche Erben der ersten Ordnung die Abkömmlinge des Erblassers** [Quelle 1]. Dazu gehören Kinder, Enkel, Uren",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 14.8
+      },
+      {
+        "id": 4,
+        "question": "Kann ein noch nicht geborenes Kind Erbe werden?",
+        "category": "Erbfähigkeit",
+        "score": 74.7,
+        "answer_excerpt": "# Kann ein noch nicht geborenes Kind Erbe werden?\n\n**Ja, ein noch nicht geborenes Kind kann unter bestimmten Voraussetzungen Erbe werden.**\n\n## Rechtliche Grundlage\n\nNach **§ 1923 Abs. 1 BGB** kann gr",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 12.0
+      },
+      {
+        "id": 5,
+        "question": "Wie wird der Anteil eines Miterben bei der Erbteilung berechnet?",
+        "category": "Erbteilung",
+        "score": 79.2,
+        "answer_excerpt": "# Berechnung des Anteils eines Miterben bei der Erbteilung\n\nDie Berechnung des Erbanteils eines Miterben erfolgt nach folgenden Grundsätzen:\n\n## Grundprinzip der Erbteilung\n\nNach **§ 1922 Abs. 1 BGB**",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 15.3
+      }
+    ],
+    "duration_s": 81.3
+  }
+]

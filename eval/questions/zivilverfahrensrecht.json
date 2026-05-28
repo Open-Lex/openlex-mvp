@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "skill": "zivilverfahrensrecht",
+    "question": "Mein Mandant möchte gegen einen Beklagten klagen, der seinen Wohnsitz in München hat. Nach welcher Norm bestimmt sich der allgemeine Gerichtsstand und welche Bedeutung hat der Wohnsitz dabei?",
+    "expected_norms": [
+      "§ 12",
+      "§ 13"
+    ],
+    "expected_keywords": [
+      "allgemeiner Gerichtsstand",
+      "Wohnsitz",
+      "Klagen"
+    ],
+    "category": "Gerichtsbarkeit und Gerichtsstand"
+  },
+  {
+    "id": 2,
+    "skill": "zivilverfahrensrecht",
+    "question": "Bei der Wertberechnung für eine Klage mit mehreren Ansprüchen: Wie werden diese nach den Vorschriften zusammengerechnet und gibt es Ausnahmen?",
+    "expected_norms": [
+      "§ 4",
+      "§ 5"
+    ],
+    "expected_keywords": [
+      "Wertberechnung",
+      "Nebenforderungen",
+      "Ansprüche"
+    ],
+    "category": "Wertberechnung"
+  },
+  {
+    "id": 3,
+    "skill": "zivilverfahrensrecht",
+    "question": "Ein Gericht hat die Unzuständigkeit eines anderen Gerichts rechtskräftig ausgesprochen. Welche Bindungswirkung hat diese Entscheidung für später anhängig gemachte Verfahren?",
+    "expected_norms": [
+      "§ 11"
+    ],
+    "expected_keywords": [
+      "Unzuständigkeit",
+      "Gericht",
+      "Zuständigkeit"
+    ],
+    "category": "Gerichtsstandsrechtliche Wirkungen"
+  },
+  {
+    "id": 4,
+    "skill": "zivilverfahrensrecht",
+    "question": "Wie wird nach den Vorschriften der Zivilprozessordnung der Wert einer Klage zum Zeitpunkt der Einreichung bestimmt, und welche Faktoren bleiben unberücksichtigt?",
+    "expected_norms": [
+      "§ 3",
+      "§ 4"
+    ],
+    "expected_keywords": [
+      "Wertberechnung",
+      "Klage",
+      "Betrag"
+    ],
+    "category": "Wertfestsetzung"
+  },
+  {
+    "id": 5,
+    "skill": "zivilverfahrensrecht",
+    "question": "Welche Zuständigkeitsregel gilt für eine Person, die keinen Wohnsitz im Inland hat, sich aber an einem bekannten Ort aufhält?",
+    "expected_norms": [
+      "§ 16"
+    ],
+    "expected_keywords": [
+      "allgemeiner Gerichtsstand",
+      "Wohnsitz",
+      "Personen"
+    ],
+    "category": "Besondere Gerichtsstände"
+  }
+]

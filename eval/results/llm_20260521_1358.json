@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "kaufrecht",
+    "n_questions": 5,
+    "avg_score": 80.2,
+    "hallucination_rate": 0.0,
+    "worst_score": 62.5,
+    "best_score": 89.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Käufer hat ein Auto gekauft, das sich als mangelhaft herausstellt. Welche Rechte hat der Käufer gegenüber dem Verkäufer?",
+        "category": "Mangelhaftung",
+        "score": 89.5,
+        "answer_excerpt": "# Rechte des Käufers bei mangelhaftem Autokauf\n\n## Gesetzliche Mängelrechte\n\nNach § 433 BGB ist der Verkäufer verpflichtet, die Sache frei von Sach- und Rechtsmängeln zu verschaffen [Quelle 5]. Bei Vo",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.0
+      },
+      {
+        "id": 2,
+        "question": "Ein Verkäufer hat ein Produkt angeboten, das nicht den vereinbarten Eigenschaften entspricht. Welche Ansprüche kann der Käufer geltend machen?",
+        "category": "Kaufvertrag",
+        "score": 88.5,
+        "answer_excerpt": "# Ansprüche des Käufers bei Mängeln\n\nWenn ein Produkt nicht den vereinbarten Eigenschaften entspricht, liegt ein Mangel vor. Der Käufer hat gemäß **§ 437 BGB** folgende Ansprüche [Quelle 1]:\n\n## 1. Na",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.8
+      },
+      {
+        "id": 3,
+        "question": "Ein Käufer hat ein Produkt gekauft, das sich als nicht vertragsgemäß herausstellt. Welche Fristen gelten für die Geltendmachung von Ansprüchen?",
+        "category": "Gewährleistung",
+        "score": 73.1,
+        "answer_excerpt": "# Fristen für Ansprüche bei nicht vertragsgemäßen Produkten\n\n## Geltendmachung von Mängelrechten\n\nNach [Quelle 2] hat ein Käufer bei Mängeln gemäß **§ 437 BGB** folgende Rechte:\n- Nacherfüllung (§ 439",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.7
+      },
+      {
+        "id": 4,
+        "question": "Ein Verkäufer hat ein Produkt angeboten, das unter einem bestimmten Markennamen verkauft wird. Welche Rechte hat der Käufer, wenn das Produkt nicht den Erwartungen entspricht?",
+        "category": "Markenrecht",
+        "score": 62.5,
+        "answer_excerpt": "# Rechte des Käufers bei Nichterfüllung der Erwartungen\n\nWenn ein Produkt nicht den Erwartungen entspricht, hat der Käufer gemäß deutschem Kaufrecht umfangreiche Ansprüche, sofern es sich um einen **M",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.7
+      },
+      {
+        "id": 5,
+        "question": "Ein Käufer hat ein Produkt gekauft, das sich als mangelhaft herausstellt. Welche Möglichkeiten hat der Käufer, um den Mangel zu beseitigen?",
+        "category": "Mangelbeseitigung",
+        "score": 87.5,
+        "answer_excerpt": "# Möglichkeiten des Käufers bei mangelhaften Produkten\n\nNach deutschem Kaufrecht hat der Käufer mehrere Optionen zur Beseitigung von Mängeln:\n\n## 1. Nacherfüllung (§ 437 Nr. 1, § 439 BGB)\n\nDies ist di",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.6
+      }
+    ],
+    "duration_s": 52.2
+  }
+]

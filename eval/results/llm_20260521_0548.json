@@ -1,0 +1,53 @@
+[
+  {
+    "skill": "gewerblicher_rechtsschutz",
+    "n_questions": 5,
+    "avg_score": 0.0,
+    "hallucination_rate": 0.0,
+    "worst_score": 0,
+    "best_score": 0,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Kann ein Patent für eine Erfindung erteilt werden, die gegen die öffentliche Ordnung oder die guten Sitten verstößt?",
+        "category": "Patentverfahren",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 9.1
+      },
+      {
+        "id": 2,
+        "question": "Welche Anforderungen müssen Erfindungen erfüllen, um patentierbar zu sein?",
+        "category": "Patentanforderungen",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.4
+      },
+      {
+        "id": 3,
+        "question": "Kann der menschliche Körper oder ein Teil davon patentiert werden?",
+        "category": "Biopatentrecht",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.3
+      },
+      {
+        "id": 4,
+        "question": "Was sind die Folgen, wenn eine Erfindung gegen die öffentliche Ordnung oder die guten Sitten verstößt?",
+        "category": "Patentverfahren",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.4
+      },
+      {
+        "id": 5,
+        "question": "Wie werden Patente für Erfindungen im Bereich der Biotechnologie erteilt?",
+        "category": "Biopatentrecht",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.4
+      }
+    ],
+    "duration_s": 10.6
+  }
+]

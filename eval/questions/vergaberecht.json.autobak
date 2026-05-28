@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "skill": "vergaberecht",
+    "question": "Ein Unternehmen hat sich mit seinen direkten Mitbewerbern auf dem Markt geeinigt, dass jedes Unternehmen nur in einem bestimmten geografischen Gebiet tätig wird. Verstößt diese Vereinbarung gegen das Gesetz gegen Wettbewerbsbeschränkungen?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Unternehmen",
+      "Wettbewerb",
+      "Vereinbarungen"
+    ],
+    "category": "Wettbewerbsbeschränkende Vereinbarungen"
+  },
+  {
+    "id": 2,
+    "skill": "vergaberecht",
+    "question": "Eine Wirtschafts- und Berufsvereinigung möchte Wettbewerbsregeln für ihren Bereich aufstellen und bei der Kartellbehörde eine Anerkennung beantragen. Welche Informationen müssen dem Antrag auf Anerkennung beigelegt werden?",
+    "expected_norms": [
+      "§ 24"
+    ],
+    "expected_keywords": [
+      "Kartellbehörde",
+      "Wettbewerbsregeln",
+      "Anerkennung"
+    ],
+    "category": "Wettbewerbsregeln und Anerkennung"
+  },
+  {
+    "id": 3,
+    "skill": "vergaberecht",
+    "question": "Ein großes Einzelhandelsunternehmen mit überlegener Marktmacht fordert von seinen kleineren Wettbewerbern, ihre Lieferanten zu offenbaren, andernfalls droht es mit wirtschaftlichen Nachteilen. Ist dieses Verhalten zulässig?",
+    "expected_norms": [
+      "§ 19",
+      "§ 20"
+    ],
+    "expected_keywords": [
+      "Unternehmen",
+      "Wettbewerb",
+      "Wettbewerbsbeschränkungen"
+    ],
+    "category": "Missbrauch von Marktmacht"
+  },
+  {
+    "id": 4,
+    "skill": "vergaberecht",
+    "question": "Nach Feststellung einer Anerkennung von Wettbewerbsregeln durch die Kartellbehörde stellt sich heraus, dass die Regeln gegen das Verbot des § 1 verstoßen und nicht freigestellt sind. Welche Maßnahme kann die Kartellbehörde ergreifen?",
+    "expected_norms": [
+      "§ 26"
+    ],
+    "expected_keywords": [
+      "Kartellbehörde",
+      "Wettbewerbsregeln",
+      "Gesetz"
+    ],
+    "category": "Rücknahme und Widerruf von Anerkennungen"
+  },
+  {
+    "id": 5,
+    "skill": "vergaberecht",
+    "question": "Ein marktbeherrschendes Wasserversorgungsunternehmen schließt mit anderen Wasserversorgungsunternehmen einen Vertrag ab, wonach diese sich verpflichten, in bestimmten Gebieten keine öffentliche Wasserversorgung durchzuführen. Unter welchen Bedingungen ist dieser Vertrag nach dem Gesetz zulässig?",
+    "expected_norms": [
+      "§ 31"
+    ],
+    "expected_keywords": [
+      "Unternehmen",
+      "Wettbewerb",
+      "Vereinbarungen"
+    ],
+    "category": "Spezialregeln für Wasserwirtschaft"
+  }
+]

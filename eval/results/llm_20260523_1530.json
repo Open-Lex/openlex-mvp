@@ -1,0 +1,124 @@
+[
+  {
+    "skill": "umweltrecht",
+    "n_questions": 5,
+    "avg_score": 85.1,
+    "hallucination_rate": 0.0,
+    "worst_score": 74.7,
+    "best_score": 95.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Unternehmen möchte eine neue Produktionsstätte errichten, die erhebliche Luftverunreinigungen verursachen kann. Welche Genehmigung ist nach § 4 BImSchG erforderlich und welche Genehmigungsvoraussetzungen müssen nach § 6 BImSchG erfüllt sein?",
+        "category": "Genehmigungspflicht",
+        "score": 88.5,
+        "answer_excerpt": "# Genehmigung nach § 4 BImSchG und Voraussetzungen nach § 6 BImSchG\n\n## Genehmigungspflicht nach § 4 BImSchG\n\nNach § 4 BImSchG bedarf die Errichtung und der Betrieb von Anlagen einer **Genehmigung**, ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 27.3
+      },
+      {
+        "id": 2,
+        "question": "Ein Betreiber einer genehmigten Industrieanlage plant, seine Produktion erheblich zu erweitern. Ab wann ist eine Änderung nach § 16 BImSchG als \"wesentlich\" einzustufen und bedarf einer erneuten Genehmigung?",
+        "category": "Änderungsanzeige",
+        "score": 85.8,
+        "answer_excerpt": "# Wesentliche Änderung nach § 16 BImSchG\n\n## Kriterien für eine wesentliche Änderung\n\nNach § 16 Abs. 1 BImSchG bedarf eine Änderung der Genehmigung, wenn zwei Voraussetzungen erfüllt sind [Quelle 2]:\n",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 13.4
+      },
+      {
+        "id": 3,
+        "question": "Welche Pflichten hat der Betreiber einer genehmigungsbedürftigen Anlage gemäß BImSchG, um schädliche Umwelteinwirkungen zu vermeiden und die Anlagensicherheit zu gewährleisten?",
+        "category": "Betreiberpflichten",
+        "score": 80.9,
+        "answer_excerpt": "# Pflichten des Betreibers genehmigungsbedürftiger Anlagen nach BImSchG\n\n## Hauptpflichten zur Vermeidung schädlicher Umwelteinwirkungen\n\nNach **§ 5 BImSchG** müssen genehmigungsbedürftige Anlagen so ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.5
+      },
+      {
+        "id": 4,
+        "question": "Unter welchen Bedingungen kann eine Genehmigung für eine genehmigungsbedürftige Anlage erteilt werden? Welche Norm enthält die entsprechenden Genehmigungsvoraussetzungen?",
+        "category": "Genehmigungsvoraussetzungen",
+        "score": 74.7,
+        "answer_excerpt": "# Genehmigungsvoraussetzungen für genehmigungsbedürftige Anlagen\n\n## Relevante Norm\n\nDie Genehmigungsvoraussetzungen sind in **§ 6 Genehmigungsvoraussetzungen** geregelt [Quelle 4].\n\n## Genehmigungsbe",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_norm"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 10.8
+      },
+      {
+        "id": 5,
+        "question": "Welche Anforderungen an den Betrieb genehmigungsbedürftiger Anlagen können durch Rechtsverordnungen nach § 7 BImSchG festgelegt werden, und welche Regelungsbereiche umfasst diese Verordnungsermächtigung?",
+        "category": "Normgebung",
+        "score": 95.8,
+        "answer_excerpt": "# Anforderungen nach § 7 BImSchG\n\n## Regelungsgegenstand\n\nNach § 7 BImSchG wird die Bundesregierung ermächtigt, durch Rechtsverordnung mit Zustimmung des Bundesrates vorzuschreiben, dass **die Erricht",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.4
+      }
+    ],
+    "duration_s": 83.0
+  }
+]

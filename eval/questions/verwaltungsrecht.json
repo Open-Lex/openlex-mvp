@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "skill": "verwaltungsrecht",
+    "question": "Ein Unternehmer möchte wissen, welche Behörde für die Bearbeitung seines Antrags zuständig ist. Sein Betrieb hat die Hauptverwaltung in Berlin und eine Betriebsstätte in München. Welche Behörde ist örtlich zuständig und nach welcher Norm richtet sich dies?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Behörde",
+      "Betriebsstätten",
+      "Tätigkeit"
+    ],
+    "category": "Zuständigkeit"
+  },
+  {
+    "id": 2,
+    "skill": "verwaltungsrecht",
+    "question": "Die Finanzamtsbehörde A benötigt von der Ordnungsamtsbehörde B Informationen, um ihre Aufgaben durchzuführen. Auf Grund welcher Norm kann Behörde A diese Hilfe ersuchen und welche Voraussetzungen müssen erfüllt sein?",
+    "expected_norms": [
+      "§ 4",
+      "§ 5"
+    ],
+    "expected_keywords": [
+      "Behörde",
+      "Amtshilfe",
+      "Ersuchen"
+    ],
+    "category": "Amtshilfe"
+  },
+  {
+    "id": 3,
+    "skill": "verwaltungsrecht",
+    "question": "Wann darf eine ersuchte Behörde die Leistung von Amtshilfe nach dem VwVfG verweigern? Nennen Sie die gesetzlichen Voraussetzungen für die Verweigerung der Amtshilfe gemäß § 5 VwVfG.",
+    "expected_norms": [
+      "§ 5 VwVfG",
+      "§ 4 VwVfG"
+    ],
+    "expected_keywords": [
+      "Amtshilfe",
+      "ersuchte Behörde",
+      "Verweigerung",
+      "VwVfG"
+    ],
+    "category": "Amtshilfe"
+  },
+  {
+    "id": 4,
+    "skill": "verwaltungsrecht",
+    "question": "Ein Bürger möchte einen Antrag elektronisch bei einer Behörde einreichen. Welche Form der elektronischen Kommunikation ist nach § 3a VwVfG zulässig und unter welchen Voraussetzungen ersetzt die elektronische Form die Schriftform?",
+    "expected_norms": [
+      "§ 3a VwVfG"
+    ],
+    "expected_keywords": [
+      "elektronische Kommunikation",
+      "Schriftform",
+      "Verwaltungsverfahren",
+      "Behörde"
+    ],
+    "category": "Elektronische Kommunikation"
+  },
+  {
+    "id": 5,
+    "skill": "verwaltungsrecht",
+    "question": "Eine deutsche Behörde erhält ein Amtshilfeersuchen von einer Behörde aus Frankreich bezüglich eines EU-Verwaltungsverfahrens. Nach welcher Norm muss die deutsche Behörde prüfen, ob und unter welchen Bedingungen sie Hilfe leisten muss?",
+    "expected_norms": [
+      "§ 8a"
+    ],
+    "expected_keywords": [
+      "Behörde",
+      "Europäischen",
+      "Durchführung"
+    ],
+    "category": "Europäische Verwaltungszusammenarbeit"
+  }
+]

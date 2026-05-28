@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "question": "Ein Finanzbeamter gibt steuerliche Informationen eines Bürgers an dessen Arbeitgeber weiter. Welche steuerrechtlichen Konsequenzen drohen ihm?",
+    "category": "Steuergeheimnis",
+    "expected_norms": [
+      "Steuergeheimnis"
+    ],
+    "expected_keywords": [
+      "Steuergeheimnis",
+      "Amtsträger",
+      "Verletzung"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Wann ist ein Steueranspruch verjährt, und was passiert, wenn das Finanzamt einen Steuerbescheid nach Ablauf der Festsetzungsfrist erlässt?",
+    "category": "Festsetzungsverjährung",
+    "expected_norms": [
+      "§ 169"
+    ],
+    "expected_keywords": [
+      "Verjährung",
+      "Finanzamt",
+      "Frist"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Ein Steuerpflichtiger hat in seiner Einkommensteuererklärung Einnahmen verschwiegen. Welche steuerstrafrechtlichen Folgen drohen ihm nach der Abgabenordnung?",
+    "category": "Steuerhinterziehung",
+    "expected_norms": [
+      "Steuerhinterziehung"
+    ],
+    "expected_keywords": [
+      "Steuerhinterziehung",
+      "Strafe",
+      "Abgabenordnung"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Das Finanzamt prüft ein Unternehmen im Rahmen einer Betriebsprüfung. Welche Mitwirkungspflichten hat der Steuerpflichtige bei einer Außenprüfung?",
+    "category": "Außenprüfung",
+    "expected_norms": [
+      "§ 200"
+    ],
+    "expected_keywords": [
+      "Außenprüfung",
+      "Mitwirkung",
+      "Betriebsprüfung"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Ein Steuerpflichtiger erhält einen Steuerbescheid und ist der Meinung, dass das Finanzamt zu viel Steuer festgesetzt hat. Welche Rechtsmittel stehen ihm zur Verfügung?",
+    "category": "Einspruchsverfahren",
+    "expected_norms": [
+      "Einspruch"
+    ],
+    "expected_keywords": [
+      "Einspruch",
+      "Steuerbescheid",
+      "Rechtsmittel"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Ein Arbeitnehmer erhält von seinem Arbeitgeber einen Dienstwagen auch zur privaten Nutzung. Wie ist dieser geldwerte Vorteil lohnsteuerlich zu behandeln?",
+    "category": "Lohnsteuer",
+    "expected_norms": [
+      "§ 19 EStG",
+      "§ 8 EStG"
+    ],
+    "expected_keywords": [
+      "geldwerter Vorteil",
+      "Sachbezug",
+      "Lohnsteuer",
+      "Einkommensteuer"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Welche Unterlagen muss ein Gewerbetreibender aufbewahren, und wie lange dauert die steuerliche Aufbewahrungspflicht?",
+    "category": "Aufbewahrungspflicht",
+    "expected_norms": [
+      "§ 147",
+      "§ 140"
+    ],
+    "expected_keywords": [
+      "Aufbewahrungspflicht",
+      "Buchführung",
+      "Handelsbücher",
+      "Aufbewahrungsfrist"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Welche Behörden sind für die Verwaltung und Erhebung von Steuern in Deutschland zuständig, und wie ist die Abgabenordnung aufgebaut?",
+    "category": "Finanzbehörden",
+    "expected_norms": [
+      "§ 1",
+      "§ 6"
+    ],
+    "expected_keywords": [
+      "Finanzbehörden",
+      "Steuerverwaltung",
+      "Abgabenordnung",
+      "Finanzamt"
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Was versteht man unter dem Verhältnismäßigkeitsgrundsatz im Steuerrecht, und wo findet er in der Abgabenordnung Anwendung?",
+    "category": "Grundsätze Steuerrecht",
+    "expected_norms": [
+      "§ 85",
+      "§ 88"
+    ],
+    "expected_keywords": [
+      "Verhältnismäßigkeit",
+      "Ermessen",
+      "Steuerpflicht",
+      "Finanzbehörde"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Ein Unternehmen bestreitet einen Steuerbescheid vor dem Finanzgericht. Wie läuft das finanzgerichtliche Verfahren ab?",
+    "category": "Finanzgerichtsverfahren",
+    "expected_norms": [
+      "§ 40",
+      "§ 47"
+    ],
+    "expected_keywords": [
+      "Finanzgericht",
+      "Klage",
+      "Finanzgerichtsordnung",
+      "Klagefrist"
+    ]
+  }
+]

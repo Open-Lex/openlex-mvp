@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "skill": "urheberrecht",
+    "question": "Ein Autor veröffentlicht ein Buch, das eine Übersetzung eines anderen Werkes enthält. Welche Rechte hat der Übersetzer?",
+    "expected_norms": [
+      "Urheberrecht"
+    ],
+    "expected_keywords": [
+      "Übersetzung",
+      "Bearbeitung",
+      "Urheberrecht"
+    ],
+    "min_sources": 1,
+    "category": "Urheberrecht an Bearbeitungen"
+  },
+  {
+    "id": 2,
+    "skill": "urheberrecht",
+    "question": "Ein Unternehmen verwendet ein Computerprogramm, das von einem anderen Unternehmen entwickelt wurde. Welche Rechte hat der Entwickler?",
+    "expected_norms": [
+      "UrhG"
+    ],
+    "expected_keywords": [
+      "Computerprogramm",
+      "Urheberrecht",
+      "Schutz"
+    ],
+    "min_sources": 1,
+    "category": "Urheberrecht an Computerprogrammen"
+  },
+  {
+    "id": 3,
+    "skill": "urheberrecht",
+    "question": "Ein Künstler erstellt ein Gemälde, das auf einem Foto basiert. Welche Rechte hat der Fotograf?",
+    "expected_norms": [
+      "Urheberrecht"
+    ],
+    "expected_keywords": [
+      "Bearbeitung",
+      "Urheberrecht",
+      "Kunstwerk"
+    ],
+    "min_sources": 2,
+    "category": "Urheberrecht an Kunstwerken"
+  },
+  {
+    "id": 4,
+    "skill": "urheberrecht",
+    "question": "Ein Musiker komponiert ein Lied, das auf einem anderen Lied basiert. Welche Rechte hat der ursprüngliche Komponist?",
+    "expected_norms": [
+      "§ 24"
+    ],
+    "expected_keywords": [
+      "Bearbeitung",
+      "Werk",
+      "Urheber"
+    ],
+    "min_sources": 2,
+    "category": "Urheberrecht an Musikwerken"
+  },
+  {
+    "id": 5,
+    "skill": "urheberrecht",
+    "question": "Ein Autor veröffentlicht ein Buch, das eine Übersetzung eines anderen Werkes enthält, ohne die erforderliche Erlaubnis eingeholt zu haben. Welche Rechte des Originalautors werden verletzt?",
+    "expected_norms": [
+      "UrhG"
+    ],
+    "expected_keywords": [
+      "Erlaubnis",
+      "Urheberrecht",
+      "Übersetzung"
+    ],
+    "min_sources": 1,
+    "category": "Urheberrecht an Marken"
+  },
+  {
+    "id": 6,
+    "skill": "urheberrecht",
+    "question": "Ein Autor veröffentlicht ein Buch, das auf einem anderen Buch basiert. Welche Rechte hat der ursprüngliche Autor?",
+    "expected_norms": [
+      "§ 3 Urheberrechtsgesetz"
+    ],
+    "expected_keywords": [
+      "Bearbeitung",
+      "Urheberrecht",
+      "Literaturwerk"
+    ],
+    "min_sources": 1,
+    "category": "Urheberrecht an Literaturwerken"
+  },
+  {
+    "id": 7,
+    "skill": "urheberrecht",
+    "question": "Ein Künstler erstellt ein Kunstwerk, das auf einem anderen Kunstwerk basiert. Welche Rechte hat der ursprüngliche Künstler?",
+    "expected_norms": [
+      "§ 2 Urheberrechtsgesetz",
+      "§ 3 Urheberrechtsgesetz"
+    ],
+    "expected_keywords": [
+      "Bearbeitung",
+      "Urheberrecht",
+      "Kunstwerk"
+    ],
+    "min_sources": 2,
+    "category": "Urheberrecht an Kunstwerken"
+  },
+  {
+    "id": 8,
+    "skill": "urheberrecht",
+    "question": "Ein Unternehmen verwendet ein Computerprogramm, das von einem anderen Unternehmen entwickelt wurde, ohne die erforderliche Erlaubnis. Welche Rechte hat der Entwickler?",
+    "expected_norms": [
+      "§ 2 Urheberrechtsgesetz"
+    ],
+    "expected_keywords": [
+      "Urheberrecht",
+      "Schutz",
+      "Computerprogramm"
+    ],
+    "min_sources": 1,
+    "category": "Urheberrecht an Computerprogrammen"
+  },
+  {
+    "id": 9,
+    "skill": "urheberrecht",
+    "question": "Ein Autor veröffentlicht ein Buch, das eine Übersetzung eines anderen Werkes enthält, ohne die erforderliche Erlaubnis. Welche Rechte hat der ursprüngliche Autor?",
+    "expected_norms": [
+      "§ 3 Urheberrechtsgesetz"
+    ],
+    "expected_keywords": [
+      "Übersetzung",
+      "Bearbeitung",
+      "Urheberrecht"
+    ],
+    "min_sources": 1,
+    "category": "Urheberrecht an Bearbeitungen"
+  },
+  {
+    "id": 10,
+    "skill": "urheberrecht",
+    "question": "Ein Künstler erstellt ein Kunstwerk, das auf einem anderen Kunstwerk basiert, ohne die erforderliche Erlaubnis. Welche Rechte hat der ursprüngliche Künstler?",
+    "expected_norms": [
+      "§ 2 Urheberrechtsgesetz",
+      "§ 3 Urheberrechtsgesetz"
+    ],
+    "expected_keywords": [
+      "Bearbeitung",
+      "Urheberrecht",
+      "Kunstwerk"
+    ],
+    "min_sources": 2,
+    "category": "Urheberrecht an Kunstwerken"
+  }
+]

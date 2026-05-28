@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "verbraucherrecht",
+    "n_questions": 5,
+    "avg_score": 71.2,
+    "hallucination_rate": 0.0,
+    "worst_score": 47.5,
+    "best_score": 87.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Verbraucher kauft ein Produkt online, das nicht den beschriebenen Eigenschaften entspricht. Welche Rechte hat der Verbraucher in diesem Fall?",
+        "category": "Kaufverträge",
+        "score": 63.0,
+        "answer_excerpt": "# Rechte des Verbrauchers bei nicht vertragsgemäßer Ware\n\nWenn ein Verbraucher online ein Produkt kauft, das nicht den beschriebenen Eigenschaften entspricht, stehen ihm mehrere Rechte zu:\n\n## 1. Wide",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 25.1
+      },
+      {
+        "id": 2,
+        "question": "Eine Firma verwendet Allgemeine Geschäftsbedingungen, die zum Nachteil des Verbrauchers sind. Ist dies zulässig?",
+        "category": "AGB-Recht",
+        "score": 82.9,
+        "answer_excerpt": "# Zulässigkeit nachteiliger AGB gegenüber Verbrauchern\n\n**Nein, die Verwendung von Allgemeinen Geschäftsbedingungen (AGB) zum Nachteil des Verbrauchers ist grundsätzlich **nicht zulässig**.\n\n## Rechtl",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.8
+      },
+      {
+        "id": 3,
+        "question": "Ein Verbraucher schließt einen Vertrag über ein Abo-Modell online ab und möchte diesen widerrufen. Welche Rechte hat er nach BGB?",
+        "category": "Vertragsrecht",
+        "score": 75.0,
+        "answer_excerpt": "# Widerrufsrecht bei Online-Abo-Verträgen\n\n## Grundsätzliches Widerrufsrecht\n\nBei einem online abgeschlossenen Abo-Vertrag handelt es sich um einen **Fernabsatzvertrag**. Nach **§ 312g Abs. 1 BGB** st",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 14.8
+      },
+      {
+        "id": 4,
+        "question": "Ein Verbraucher möchte einen Vertrag widerrufen, den er online abgeschlossen hat. Innerhalb welcher Frist muss er dies tun?",
+        "category": "Widerrufsrecht",
+        "score": 87.5,
+        "answer_excerpt": "# Widerrufsfrist bei Online-Verträgen\n\nBei einem online abgeschlossenen Vertrag handelt es sich um einen **Fernabsatzvertrag**, für den grundsätzlich ein Widerrufsrecht besteht.\n\n## Widerrufsfrist\n\nGe",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 15.2
+      },
+      {
+        "id": 5,
+        "question": "Eine Firma bietet eine Garantie für ein Produkt an, die nicht den gesetzlichen Anforderungen entspricht. Welche Rechte hat der Verbraucher in diesem Fall?",
+        "category": "Produkthaftung",
+        "score": 47.5,
+        "answer_excerpt": "# Verbraucherrechte bei mangelhafter Garantie\n\nWenn eine Firma eine Garantie anbietet, die nicht den gesetzlichen Anforderungen entspricht, stehen dem Verbraucher verschiedene Rechte zu:\n\n## Gesetzlic",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.25,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 13.7
+      }
+    ],
+    "duration_s": 82.0
+  }
+]

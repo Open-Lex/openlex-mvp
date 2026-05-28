@@ -1,0 +1,125 @@
+[
+  {
+    "skill": "verwaltungsrecht",
+    "n_questions": 5,
+    "avg_score": 75.7,
+    "hallucination_rate": 20.0,
+    "worst_score": 55.9,
+    "best_score": 87.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Welche Behörden unterliegen dem Anwendungsbereich des Verwaltungsverfahrensgesetzes (VwVfG)?",
+        "category": "Anwendungsbereich",
+        "score": 55.9,
+        "answer_excerpt": "# Anwendungsbereich des Verwaltungsverfahrensgesetzes\n\nDas VwVfG gilt gemäß **§ 1 Abs. 1 VwVfG** für die öffentlich-rechtliche Verwaltungstätigkeit folgender Behörden:\n\n## 1. Bundesbehörden und bundes",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 25.6
+      },
+      {
+        "id": 2,
+        "question": "Gibt es Ausnahmen vom Anwendungsbereich des VwVfG und wenn ja, welche sind diese?",
+        "category": "Ausnahmen",
+        "score": 87.5,
+        "answer_excerpt": "# Ausnahmen vom Anwendungsbereich des VwVfG\n\nJa, es gibt mehrere Ausnahmen vom Anwendungsbereich des Verwaltungsverfahrensgesetzes, die in **§ 2 VwVfG** geregelt sind:\n\n## Hauptausnahmen nach § 2 VwVf",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 14.8
+      },
+      {
+        "id": 3,
+        "question": "Wie ist die örtliche Zuständigkeit von Behörden im Rahmen des VwVfG geregelt?",
+        "category": "Örtliche Zuständigkeit",
+        "score": 87.5,
+        "answer_excerpt": "# Örtliche Zuständigkeit von Behörden nach VwVfG\n\nDie örtliche Zuständigkeit von Behörden ist in **§ 3 VwVfG** geregelt [Quelle 1]. Diese Vorschrift enthält verschiedene Anknüpfungspunkte:\n\n## Zentral",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.5
+      },
+      {
+        "id": 4,
+        "question": "Was regelt § 3a VwVfG bezüglich der elektronischen Kommunikation?",
+        "category": "Elektronische Kommunikation",
+        "score": 66.5,
+        "answer_excerpt": "# § 3a VwVfG zur elektronischen Kommunikation\n\n§ 3a VwVfG regelt die grundlegenden Voraussetzungen für die elektronische Kommunikation im Verwaltungsverfahren:\n\n## Kernregelungen\n\n**Absatz 1 - Zulässi",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": true,
+          "hallucination_examples": [
+            "Die Aussage 'Die Signierung mit Pseudonym ist unter bestimmten Voraussetzungen möglich' ist falsch. Laut Quelle 1 ist die Signierung mit einem Pseudonym 'nicht zulässig'."
+          ],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 13.1
+      },
+      {
+        "id": 5,
+        "question": "In welchen Fällen besteht eine Amtshilfepflicht zwischen Behörden gemäß § 4 VwVfG?",
+        "category": "Amtshilfe",
+        "score": 80.9,
+        "answer_excerpt": "# Amtshilfepflicht gemäß § 4 VwVfG\n\n## Grundsatz der Amtshilfepflicht\n\nGemäß **§ 4 Abs. 1 VwVfG** besteht eine grundsätzliche Amtshilfepflicht: **Jede Behörde leistet anderen Behörden auf Ersuchen erg",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.1
+      }
+    ],
+    "duration_s": 78.6
+  }
+]

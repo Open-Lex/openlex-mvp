@@ -1,0 +1,75 @@
+[
+  {
+    "question": "A verkauft sein Fahrrad an B. A händigt B das Fahrrad aus und B zahlt den Kaufpreis. Später stellt sich heraus, dass das Fahrrad gestohlen war und dem C gehört. Kann C sein Eigentum an dem Fahrrad zurückfordern, oder hat B durch die Auslieferung und Zahlung Eigentum erworben? Prüfen Sie den Eigentumserwerb des B unter Berücksichtigung von § 929 BGB.",
+    "expected_norms": [
+      "§ 929 BGB",
+      "§ 932 BGB"
+    ],
+    "expected_keywords": [
+      "Übereignung",
+      "gutgläubiger Erwerb",
+      "Nichtberechtigter",
+      "Rechtsscheintatbestand"
+    ]
+  },
+  {
+    "question": "Der Grundstückseigentümer E lässt durch einen Handwerker H auf seinem Grundstück eine neue Garage errichten. H beschafft hierzu Materialien auf Kredit von Lieferant L. Der Kaufpreis für die Materialien bleibt unbezahlt. Kann L mittels einer Grundschuld gemäß § 1191 BGB ins Grundbuch eintragen lassen, um seine Forderung gegen E zu sichern? Welche Voraussetzungen müssen erfüllt sein?",
+    "expected_norms": [
+      "§ 1191 BGB",
+      "§ 1192 BGB",
+      "§ 873 BGB"
+    ],
+    "expected_keywords": [
+      "Grundschuld",
+      "Bestellung",
+      "Eintragung",
+      "Forderung",
+      "Sicherungsmittel"
+    ]
+  },
+  {
+    "question": "M bestellt ein iPhone bei Online-Händler O und bezahlt per Vorkasse. Das Paket wird von der Versand-GmbH V an die angegebene Adresse zugestellt, wo M es in Empfang nimmt. Wann geht das Eigentum an dem iPhone gemäß § 930 BGB auf M über? Prüfen Sie, ob bereits die Zahlung oder erst die Übergabe zum Eigentumserwerb führt.",
+    "expected_norms": [
+      "§ 930 BGB",
+      "§ 929 BGB",
+      "§ 931 BGB"
+    ],
+    "expected_keywords": [
+      "Übereignung",
+      "Zahlung",
+      "Übergabe",
+      "gutgläubiger Erwerb",
+      "Eigentumsvorbehalt"
+    ]
+  },
+  {
+    "question": "K kauft ein Auto vom Autohändler H. Die Kaufurkunde wird unterzeichnet, aber K nimmt das Auto nicht in Besitz – es bleibt in der Werkstatt des H zur Wartung. K zahlt den Kaufpreis vollständig. Hat K Eigentum am Auto erworben nach § 930 BGB, obwohl H das Auto noch physisch kontrolliert? Welche Rolle spielt der mittelbaren Besitz?",
+    "expected_norms": [
+      "§ 930 BGB",
+      "§ 868 BGB",
+      "§ 870 BGB"
+    ],
+    "expected_keywords": [
+      "Übereignung",
+      "mittelbarer Besitz",
+      "unmittelbarer Besitz",
+      "Besitzmittler",
+      "Besitzkonstitut"
+    ]
+  },
+  {
+    "question": "Makler M verpfändet ein Grundstück, das ihm vom Eigentümer E nur zur Vermarktung anvertraut wurde, als Sicherheit für sein privates Darlehen bei Bank B. M trägt eine Grundschuld ins Grundbuch ein. E erfährt dies erst später. Kann B die Grundschuld gemäß § 1192 BGB beanspruchen, oder hat M nicht das Recht gehabt, eine Grundschuld zu bestellen? Prüfen Sie die Sachfähigkeit und Handlungsfähigkeit nach BGB.",
+    "expected_norms": [
+      "§ 1192 BGB",
+      "§ 873 BGB",
+      "§ 185 BGB"
+    ],
+    "expected_keywords": [
+      "Grundschuld",
+      "Verfügungsbefugnis",
+      "Handlungsfähigkeit",
+      "Vollmacht",
+      "redlicher Erwerb"
+    ]
+  }
+]

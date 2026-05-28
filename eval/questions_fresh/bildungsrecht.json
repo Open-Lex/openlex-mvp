@@ -1,0 +1,83 @@
+[
+  {
+    "question": "Die 14-jährige Schülerin Maria möchte die Schule abbrechen und eine Ausbildung beginnen. Ihre Eltern unterstützen dies. Das Schulamt der Stadt verweigert die Entlassung aus der Schulpflicht. Welche rechtlichen Grundlagen regeln die Schulpflicht in Deutschland und unter welchen Voraussetzungen kann Maria aus der Schulpflicht entlassen werden? Prüfen Sie insbesondere die Anwendbarkeit von Art. 7 Abs. 1 GG und der Schulgesetze der Länder.",
+    "expected_norms": [
+      "Art. 7 Abs. 1 GG",
+      "§ 37 NRW SchulG (beispielhaft)",
+      "§ 72 BayEUG (beispielhaft)"
+    ],
+    "expected_keywords": [
+      "Schulpflicht",
+      "Vollzeitschulpflicht",
+      "Berufsschulpflicht",
+      "Entlassung aus der Schulpflicht",
+      "Elternrecht",
+      "Bundesländerkompetenz"
+    ]
+  },
+  {
+    "question": "Der Student Tim hat seinen Bachelor-Abschluss mit Note 2,8 gemacht und möchte sich für einen zulassungsbeschränkten Masterstudiengang in Medizin einschreiben. Die Universität lehnt seine Bewerbung mit der Begründung ab, dass die Quote für Bachelor-Absolventen ausgeschöpft sei. Welche Anforderungen ergeben sich aus dem Hochschulrahmengesetz (HRG) und den Landesgesetzen für die Zulassung zu Masterstudiengängen, und ist die Ablehnung rechtmäßig?",
+    "expected_norms": [
+      "§ 8 HRG",
+      "§ 3 und § 4 HZV oder entsprechende Landesregelungen"
+    ],
+    "expected_keywords": [
+      "Hochschulzulassung",
+      "Masterstudium",
+      "Zulassungskriterien",
+      "Quote",
+      "Bachelor-Absolventen",
+      "Ermessen",
+      "Hochschulfreiheit"
+    ]
+  },
+  {
+    "question": "Die 23-jährige Lisa erhält BAföG als Studentin der Rechtswissenschaft. Nach dem dritten Semester beschließt sie, ihr Studienfach zu wechseln. Das BAföG-Amt teilt ihr mit, dass die Förderung ab dem nächsten Monat eingestellt wird. Auf welcher Grundlage kann das BAföG verweigert werden, gelten Besonderheiten für einen Studiengangwechsel, und wie beurteilt sich die Fristwahrung gemäß § 7 Abs. 2 BAföG?",
+    "expected_norms": [
+      "§ 7 Abs. 2 BAföG",
+      "§ 15 BAföG",
+      "§ 48 BAföG"
+    ],
+    "expected_keywords": [
+      "BAföG",
+      "Fachrichtungswechsel",
+      "Leistungsnachweis",
+      "Förderungsfähigkeit",
+      "Anspruchsvoraussetzungen",
+      "Studieneignung"
+    ]
+  },
+  {
+    "question": "Die 19-jährige Anna stammt aus Syrien und besitzt seit zwei Jahren eine gültige Aufenthaltserlaubnis. Sie möchte sich an einer deutschen Universität immatrikulieren. Die Universität weist sie darauf hin, dass als Gebührenrahmen § 11 Hochschulzulassungsverordnung (HZV) des Landes anwendbar sein könnte. Welchen rechtlichen Status hat Anna bei der Hochschulzulassung, gelten für sie andere Maßstäbe als für deutsche Staatsangehörige, und welche Gebühren können verlangt werden?",
+    "expected_norms": [
+      "Art. 12 Abs. 1 GG",
+      "§ 11 HZV oder entsprechende Landesregelungen",
+      "§ 2 HRG"
+    ],
+    "expected_keywords": [
+      "Hochschulzugang",
+      "Ausländer",
+      "Gleichbehandlung",
+      "Zulassungsvoraussetzungen",
+      "Studiengebühren",
+      "Aufenthaltserlaubnis"
+    ]
+  },
+  {
+    "question": "Der 18-jährige Max hat die Schule mit dem Abitur abgeschlossen. Er möchte Architektur studieren und bewirbt sich an mehreren Universitäten. Die Universität München teilt ihm mit, dass sein Platz vom Numerus Clausus abhängt und eine Warteliste existiert. Erklären Sie die Rechtsgrundlagen der Zulassungsbeschränkung nach § 8 HRG, die Auswahl- und Verteilungsverfahren nach § 3 und § 4 HZV sowie die Rolle von § 6 Abs. 1 HZV bei der Wartezeit.",
+    "expected_norms": [
+      "§ 8 HRG",
+      "§ 3 HZV",
+      "§ 4 HZV",
+      "§ 6 Abs. 1 HZV"
+    ],
+    "expected_keywords": [
+      "Numerus Clausus",
+      "Zulassungsbeschränkung",
+      "Auswahlverfahren",
+      "Abiturdurchschnitt",
+      "Wartezeitquote",
+      "Ortspräferenz"
+    ]
+  }
+]

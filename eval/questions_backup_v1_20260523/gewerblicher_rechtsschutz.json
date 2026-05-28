@@ -1,0 +1,153 @@
+[
+  {
+    "id": 1,
+    "skill": "gewerblicher_rechtsschutz",
+    "question": "Kann ein Patent für eine Erfindung erteilt werden, die gegen die öffentliche Ordnung oder die guten Sitten verstößt?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Patent",
+      "öffentlich",
+      "Sitten"
+    ],
+    "min_sources": 1,
+    "category": "Patentverfahren"
+  },
+  {
+    "id": 2,
+    "skill": "gewerblicher_rechtsschutz",
+    "question": "Welche Anforderungen müssen Erfindungen erfüllen, um patentierbar zu sein?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Neuheit",
+      "Erfinderische Tätigkeit",
+      "Gewerbliche Anwendbarkeit"
+    ],
+    "min_sources": 1,
+    "category": "Patentanforderungen"
+  },
+  {
+    "id": 3,
+    "skill": "gewerblicher_rechtsschutz",
+    "question": "Kann der menschliche Körper oder ein Teil davon patentiert werden?",
+    "expected_norms": [
+      "§ 1a"
+    ],
+    "expected_keywords": [
+      "menschlich",
+      "biologisch",
+      "Patentier"
+    ],
+    "min_sources": 1,
+    "category": "Biopatentrecht"
+  },
+  {
+    "id": 4,
+    "skill": "gewerblicher_rechtsschutz",
+    "question": "Was sind die Folgen, wenn eine Erfindung gegen die öffentliche Ordnung oder die guten Sitten verstößt?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Patentan",
+      "öffentlich",
+      "Sitten"
+    ],
+    "min_sources": 1,
+    "category": "Patentverfahren"
+  },
+  {
+    "id": 5,
+    "skill": "gewerblicher_rechtsschutz",
+    "question": "Wie werden Patente für Erfindungen im Bereich der Biotechnologie erteilt?",
+    "expected_norms": [
+      "§ 1a",
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Biotechnologie",
+      "patentier",
+      "biologisch"
+    ],
+    "min_sources": 1,
+    "category": "Biopatentrecht"
+  },
+  {
+    "id": 6,
+    "skill": "gewerblicher_rechtsschutz",
+    "question": "Kann eine Erfindung, die ein Erzeugnis aus biologischem Material enthält, patentiert werden?",
+    "expected_norms": [
+      "§ 1 Patentgesetz"
+    ],
+    "expected_keywords": [
+      "Biologisches Material",
+      "Patentierbarkeit",
+      "Erzeugnis"
+    ],
+    "min_sources": 1,
+    "category": "Patentanforderungen"
+  },
+  {
+    "id": 7,
+    "skill": "gewerblicher_rechtsschutz",
+    "question": "Was sind die Anforderungen an die Neuheit einer Erfindung, um patentierbar zu sein?",
+    "expected_norms": [
+      "§ 1 Patentgesetz"
+    ],
+    "expected_keywords": [
+      "Neuheit",
+      "Patentierbarkeit",
+      "Erfinderische Tätigkeit"
+    ],
+    "min_sources": 1,
+    "category": "Patentanforderungen"
+  },
+  {
+    "id": 8,
+    "skill": "gewerblicher_rechtsschutz",
+    "question": "Kann eine Erfindung, die gegen die öffentliche Ordnung oder die guten Sitten verstößt, durch Gesetz oder Verwaltungsvorschrift verboten werden?",
+    "expected_norms": [
+      "§ 2 Patentgesetz"
+    ],
+    "expected_keywords": [
+      "Patentverweigerung",
+      "Öffentliches Recht",
+      "Gute Sitten"
+    ],
+    "min_sources": 1,
+    "category": "Patentverfahren"
+  },
+  {
+    "id": 9,
+    "skill": "gewerblicher_rechtsschutz",
+    "question": "Wie werden Patente für Erfindungen im Bereich der Technik erteilt?",
+    "expected_norms": [
+      "§ 1 Patentgesetz"
+    ],
+    "expected_keywords": [
+      "Technik",
+      "Patentierbarkeit",
+      "Erfinderische Tätigkeit"
+    ],
+    "min_sources": 1,
+    "category": "Patentanforderungen"
+  },
+  {
+    "id": 10,
+    "skill": "gewerblicher_rechtsschutz",
+    "question": "Kann der menschliche Körper oder ein Teil davon als Erfindung angesehen werden?",
+    "expected_norms": [
+      "§ 1a Patentgesetz"
+    ],
+    "expected_keywords": [
+      "Menschlicher Körper",
+      "Biologisches Material",
+      "Patentierbarkeit"
+    ],
+    "min_sources": 1,
+    "category": "Biopatentrecht"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "skill": "ki_recht",
+    "question": "Welche Anforderungen müssen Anbieter von KI-Systemen in der EU erfüllen, um ein hohes Schutzniveau in Bezug auf Gesundheit und Sicherheit zu gewährleisten?",
+    "expected_norms": [
+      "KI"
+    ],
+    "expected_keywords": [
+      "KI-System",
+      "Gesundheit",
+      "Sicherheit"
+    ],
+    "min_sources": 2,
+    "category": "Anbieterpflichten"
+  },
+  {
+    "id": 2,
+    "skill": "ki_recht",
+    "question": "Wie definieren sich KI-Systeme im Rahmen der EU-Verordnung und welche Eigenschaften müssen sie aufweisen?",
+    "expected_norms": [
+      "KI"
+    ],
+    "expected_keywords": [
+      "KI-System",
+      "Anpassung",
+      "Autonomie"
+    ],
+    "min_sources": 1,
+    "category": "Begriffsbestimmungen"
+  },
+  {
+    "id": 3,
+    "skill": "ki_recht",
+    "question": "Welche Rechte und Freiheiten müssen bei der Entwicklung und dem Einsatz von KI-Systemen in der EU geschützt werden?",
+    "expected_norms": [
+      "KI"
+    ],
+    "expected_keywords": [
+      "Grundrechte",
+      "Demokratie",
+      "Rechtsstaatlichkeit"
+    ],
+    "min_sources": 2,
+    "category": "Grundrechte"
+  },
+  {
+    "id": 4,
+    "skill": "ki_recht",
+    "question": "Wer gilt als Anbieter von KI-Systemen im Sinne der EU-Verordnung und welche Pflichten haben sie?",
+    "expected_norms": [
+      "KI"
+    ],
+    "expected_keywords": [
+      "Anbieter",
+      "KI-System",
+      "Markt"
+    ],
+    "min_sources": 1,
+    "category": "Anbieterpflichten"
+  },
+  {
+    "id": 5,
+    "skill": "ki_recht",
+    "question": "Wie werden KI-Modelle mit allgemeinem Verwendungszweck in der EU-Verordnung behandelt und welche Anforderungen müssen sie erfüllen?",
+    "expected_norms": [
+      "KI"
+    ],
+    "expected_keywords": [
+      "KI-Modell",
+      "Verwendungszweck",
+      "Allgemein"
+    ],
+    "min_sources": 2,
+    "category": "KI-Modelle"
+  }
+]

@@ -1,0 +1,61 @@
+[
+  {
+    "skill": "datenschutz",
+    "timestamp": "2026-05-18T20:38:43.680060",
+    "collection_count": 18261,
+    "type_inventory": {
+      "gesetz_granular": 1167,
+      "urteil_segmentiert": 4304,
+      "methodenwissen": 79,
+      "leitlinie": 12360,
+      "gesetz": 1,
+      "erwaegungsgrund": 173,
+      "gesetz_norm": 117,
+      "urteil": 49,
+      "eu_verordnung": 1,
+      "eu_richtlinie": 2,
+      "eugh_urteil": 8
+    },
+    "expected_types": [
+      "gesetz_granular",
+      "urteil_segmentiert",
+      "erwaegungsgrund"
+    ],
+    "missing_expected_types": [],
+    "query_coverage": {
+      "coverage_rate": 0.0,
+      "n_queries": 5,
+      "n_covered": 0,
+      "details": [
+        {
+          "question": "Darf ein Unternehmen KI-Tools wie ChatGPT für die Verarbeitung personenbezogener",
+          "error": "Collection expecting embedding with dimension of 1024, got 384",
+          "covered": false
+        },
+        {
+          "question": "Welche Rechte hat eine betroffene Person bei automatisierten Einzelentscheidunge",
+          "error": "Collection expecting embedding with dimension of 1024, got 384",
+          "covered": false
+        },
+        {
+          "question": "Wann ist eine Datenschutz-Folgenabschätzung bei Videoüberwachung erforderlich un",
+          "error": "Collection expecting embedding with dimension of 1024, got 384",
+          "covered": false
+        },
+        {
+          "question": "Dürfen Onlineshops Kunden zur Erstellung eines Kundenkontos verpflichten oder mu",
+          "error": "Collection expecting embedding with dimension of 1024, got 384",
+          "covered": false
+        },
+        {
+          "question": "Wie ist die Haftung bei gemeinsamer Verantwortlichkeit nach Art. 26 DSGVO gerege",
+          "error": "Collection expecting embedding with dimension of 1024, got 384",
+          "covered": false
+        }
+      ]
+    },
+    "l1_score": 50.0,
+    "issues": [],
+    "duration_s": 3.6
+  }
+]

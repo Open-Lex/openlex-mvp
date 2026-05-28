@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "question": "Ein Bundesministerium möchte IT-Beratungsleistungen beschaffen. Welche Vergabegrundsätze muss es einhalten und welches Verfahren ist anwendbar?",
+    "category": "Vergabeverfahren",
+    "expected_norms": [
+      "§ 97"
+    ],
+    "expected_keywords": [
+      "Wettbewerb",
+      "Transparenz",
+      "Gleichbehandlung"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Ein Bieter wird vom Vergabeverfahren ausgeschlossen, weil er keine Nachweise zur Eignung eingereicht hat. Welche Rechtsschutzmöglichkeiten hat der Bieter?",
+    "category": "Bieterrechtsschutz",
+    "expected_norms": [
+      "§ 160"
+    ],
+    "expected_keywords": [
+      "Vergabekammer",
+      "Antrag",
+      "Bieter"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Eine Gemeinde vergibt einen Bauauftrag ohne Ausschreibung direkt an ein befreundetes Unternehmen. Welche vergaberechtlichen Vorschriften werden verletzt?",
+    "category": "Direktvergabe",
+    "expected_norms": [
+      "§ 14"
+    ],
+    "expected_keywords": [
+      "Wettbewerb",
+      "Transparenz",
+      "Ausschreibung"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Welche Anforderungen gelten an die Eignung von Bietern bei der Vergabe öffentlicher Aufträge nach dem GWB?",
+    "category": "Eignungsprüfung",
+    "expected_norms": [
+      "§ 122"
+    ],
+    "expected_keywords": [
+      "Eignung",
+      "Fachkunde",
+      "Leistungsfähigkeit"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Ein öffentlicher Auftraggeber möchte besonders umweltfreundliche Produkte beschaffen. Darf er dies bei der Vergabe berücksichtigen?",
+    "category": "Nachhaltige Vergabe",
+    "expected_norms": [
+      "GWB"
+    ],
+    "expected_keywords": [
+      "Zuschlag",
+      "Wirtschaftlichkeit",
+      "Angebot"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Welche Grundsätze gelten bei der öffentlichen Auftragsvergabe nach dem GWB, und wie ist das Transparenzgebot ausgestaltet?",
+    "category": "Vergabegrundsätze",
+    "expected_norms": [
+      "§ 97 GWB"
+    ],
+    "expected_keywords": [
+      "Wettbewerb",
+      "Transparenz",
+      "Gleichbehandlung",
+      "Diskriminierungsverbot"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Ein Bieter erfährt, dass der Auftraggeber die Bekanntmachung fehlerhaft durchgeführt hat. Wie kann er vorgehen, und welche Fristen gelten?",
+    "category": "Rügeverfahren",
+    "expected_norms": [
+      "§ 160 GWB",
+      "§ 161 GWB"
+    ],
+    "expected_keywords": [
+      "Rüge",
+      "Vergabekammer",
+      "Nachprüfungsverfahren",
+      "Frist"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Wann darf ein öffentlicher Auftraggeber ein Verhandlungsverfahren ohne Teilnahmewettbewerb durchführen?",
+    "category": "Verhandlungsverfahren",
+    "expected_norms": [
+      "§ 119 GWB",
+      "§ 116 GWB",
+      "VgV"
+    ],
+    "expected_keywords": [
+      "Verhandlungsverfahren",
+      "Ausnahme",
+      "besondere Umstände",
+      "Vergabeverfahren"
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Ein Unternehmen möchte als Bietergemeinschaft an einer EU-weiten Ausschreibung teilnehmen. Was ist rechtlich zu beachten?",
+    "category": "Bietergemeinschaft",
+    "expected_norms": [
+      "§ 97 GWB",
+      "§ 153 GWB"
+    ],
+    "expected_keywords": [
+      "Bietergemeinschaft",
+      "Ausschreibung",
+      "Eignung",
+      "Haftung"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Welche Pflichten hat ein öffentlicher Auftraggeber bei der Bekanntmachung eines Vergabeverfahrens oberhalb der EU-Schwellenwerte?",
+    "category": "Bekanntmachung",
+    "expected_norms": [
+      "§ 97 GWB",
+      "§ 135 GWB"
+    ],
+    "expected_keywords": [
+      "Bekanntmachung",
+      "EU-Schwellenwert",
+      "Veröffentlichung",
+      "Vergabe"
+    ]
+  }
+]

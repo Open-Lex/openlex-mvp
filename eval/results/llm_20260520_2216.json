@@ -1,0 +1,124 @@
+[
+  {
+    "skill": "bildungsrecht",
+    "n_questions": 5,
+    "avg_score": 91.6,
+    "hallucination_rate": 0.0,
+    "worst_score": 90.5,
+    "best_score": 95.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Welche Arten von Hochschulen fallen unter den Anwendungsbereich des Hochschulrahmengesetzes?",
+        "category": "Hochschulrecht",
+        "score": 90.5,
+        "answer_excerpt": "# Arten von Hochschulen unter dem Hochschulrahmengesetz\n\nNach **§ 1 Hochschulrahmengesetz (HRG)** fallen folgende Hochschularten unter den Anwendungsbereich des Gesetzes [Quelle 1, Quelle 2]:\n\n## Staa",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 19.2
+      },
+      {
+        "id": 2,
+        "question": "Wie lange nach Errichtung des Bundesaufsichtsamtes für Flugsicherung finden Wahlen zur Personalvertretung statt?",
+        "category": "Luftverkehrsrecht",
+        "score": 90.5,
+        "answer_excerpt": "Gemäß § 2 Abs. 1 BAFG finden **spätestens sechs Monate nach Errichtung des Bundesaufsichtsamtes für Flugsicherung** Wahlen zur Personalvertretung statt [Quelle 1].\n\nDie Regelung sieht zudem eine Überg",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 6.4
+      },
+      {
+        "id": 3,
+        "question": "Was ist die Rolle des Bundesaufsichtsamtes für Flugsicherung als nationale Aufsichtsbehörde?",
+        "category": "Luftverkehrsrecht",
+        "score": 95.8,
+        "answer_excerpt": "# Rolle des Bundesaufsichtsamtes für Flugsicherung als nationale Aufsichtsbehörde\n\nDas **Bundesaufsichtsamt für Flugsicherung** wurde gemäß § 1 des Gesetzes über die Errichtung des Bundesaufsichtsamte",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.6
+      },
+      {
+        "id": 4,
+        "question": "Welche Einrichtungen des Bildungswesens fallen unter den Anwendungsbereich des Hochschulrahmengesetzes?",
+        "category": "Hochschulrecht",
+        "score": 90.5,
+        "answer_excerpt": "# Einrichtungen des Bildungswesens unter dem Hochschulrahmengesetz\n\nGemäß **§ 1 Hochschulrahmengesetz (HRG)** fallen folgende Einrichtungen des Bildungswesens unter den Anwendungsbereich [Quelle 1, Qu",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.4
+      },
+      {
+        "id": 5,
+        "question": "Wie werden die Aufgaben der Personalvertretung bei dem Bundesaufsichtsamt für Flugsicherung bis zur Konstituierung des Personalrates wahrgenommen?",
+        "category": "Luftverkehrsrecht",
+        "score": 90.5,
+        "answer_excerpt": "# Wahrnehmung der Personalvertretungsaufgaben beim Bundesaufsichtsamt für Flugsicherung\n\nGemäß **§ 2 Abs. 1 BAFG** (Gesetz über die Errichtung des Bundesaufsichtsamtes für Flugsicherung) ist die Überg",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.6
+      }
+    ],
+    "duration_s": 60.7
+  }
+]

@@ -1,0 +1,118 @@
+[
+  {
+    "skill": "transportrecht",
+    "n_questions": 5,
+    "avg_score": 76.7,
+    "hallucination_rate": 0.0,
+    "worst_score": 72.7,
+    "best_score": 81.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Was sind die Voraussetzungen, damit ein Gewerbebetrieb als Handelsgewerbe im Sinne des Handelsgesetzbuchs gilt?",
+        "category": "Handelsgesetzbuch",
+        "score": 74.7,
+        "answer_excerpt": "# Voraussetzungen für ein Handelsgewerbe nach HGB\n\nNach dem Handelsgesetzbuch gibt es zwei wesentliche Voraussetzungen, damit ein Gewerbebetrieb als Handelsgewerbe gilt:\n\n## 1. Gewerbebetrieb nach § 1",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 17.0
+      },
+      {
+        "id": 2,
+        "question": "In welchen Fällen kann ein land- oder forstwirtschaftliches Unternehmen als Handelsgewerbe im Sinne des Handelsgesetzbuchs angesehen werden?",
+        "category": "Land- und Forstwirtschaft",
+        "score": 80.2,
+        "answer_excerpt": "# Handelsgewerbe bei land- und forstwirtschaftlichen Unternehmen\n\nNach dem Handelsgesetzbuch können land- oder forstwirtschaftliche Unternehmen unter bestimmten Voraussetzungen als Handelsgewerbe ange",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 7.4
+      },
+      {
+        "id": 3,
+        "question": "Was sind die Auswirkungen einer Eintragung in das Handelsregister auf ein gewerbliches Unternehmen?",
+        "category": "Handelsregister",
+        "score": 72.7,
+        "answer_excerpt": "# Auswirkungen einer Handelsregistereintragung\n\nDie Eintragung in das Handelsregister hat mehrere bedeutende rechtliche Folgen für ein gewerbliches Unternehmen:\n\n## Umklassifizierung zur Handelsgewerb",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 10.0
+      },
+      {
+        "id": 4,
+        "question": "Wie wird ein Kaufmann im Sinne des Handelsgesetzbuchs definiert?",
+        "category": "Kaufmann",
+        "score": 81.2,
+        "answer_excerpt": "# Definition eines Kaufmanns nach dem Handelsgesetzbuch\n\nNach **§ 1 HGB** wird ein Kaufmann wie folgt definiert [Quelle 1]:\n\n## Primäre Definition\n**§ 1 Abs. 1 HGB**: „Kaufmann im Sinne dieses Gesetzb",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 8.4
+      },
+      {
+        "id": 5,
+        "question": "Was sind die Voraussetzungen, damit ein Unternehmen als Handelsgewerbe im Sinne des Handelsgesetzbuchs gilt, wenn es nach Art oder Umfang keinen in kaufmännischer Weise eingerichteten Geschäftsbetrieb erfordert?",
+        "category": "Handelsgesetzbuch",
+        "score": 74.7,
+        "answer_excerpt": "# Voraussetzungen für Handelsgewerbe ohne kaufmännischen Geschäftsbetrieb\n\nGemäß § 1 Abs. 2 HGB ist Handelsgewerbe grundsätzlich jeder Gewerbebetrieb, **es sei denn, das Unternehmen erfordert nach Art",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 8.6
+      }
+    ],
+    "duration_s": 53.0
+  }
+]

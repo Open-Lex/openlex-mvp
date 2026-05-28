@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "skill": "wirtschaftsstrafrecht",
+    "question": "Ein Unternehmen hat falsche Angaben über seine Finanzlage gemacht, um eine Subvention zu erhalten. Welche Strafe droht dem Unternehmen?",
+    "expected_norms": [
+      "§ 264 StGB"
+    ],
+    "expected_keywords": [
+      "Subventionsbetrug",
+      "Falschangaben",
+      "Finanzlage"
+    ],
+    "min_sources": 1,
+    "category": "Subventionsbetrug"
+  },
+  {
+    "id": 2,
+    "skill": "wirtschaftsstrafrecht",
+    "question": "Ein Anlageberater hat Kunden falsche Informationen über eine Kapitalanlage gegeben, um sie zu einer Investition zu bewegen. Welche Strafe droht dem Anlageberater?",
+    "expected_norms": [
+      "§ 264a StGB"
+    ],
+    "expected_keywords": [
+      "Kapitalanlagebetrug",
+      "Falschangaben",
+      "Anlageberater"
+    ],
+    "min_sources": 1,
+    "category": "Kapitalanlagebetrug"
+  },
+  {
+    "id": 3,
+    "skill": "wirtschaftsstrafrecht",
+    "question": "Ein Hacker hat in ein Computersystem eingedrungen und Daten verändert, um sich selbst zu bereichern. Welche Strafe droht dem Hacker?",
+    "expected_norms": [
+      "§ 263a StGB"
+    ],
+    "expected_keywords": [
+      "Computerbetrug",
+      "Hacker",
+      "Datenveränderung"
+    ],
+    "min_sources": 1,
+    "category": "Computerbetrug"
+  },
+  {
+    "id": 4,
+    "skill": "wirtschaftsstrafrecht",
+    "question": "Ein Unternehmen hat Subventionen erhalten, obwohl es die Voraussetzungen nicht erfüllt. Welche Strafe droht dem Unternehmen?",
+    "expected_norms": [
+      "§ 264 StGB"
+    ],
+    "expected_keywords": [
+      "Subventionsbetrug",
+      "Falschangaben",
+      "Subventionen"
+    ],
+    "min_sources": 1,
+    "category": "Subventionsbetrug"
+  },
+  {
+    "id": 5,
+    "skill": "wirtschaftsstrafrecht",
+    "question": "Ein Anlageberater hat Kunden nicht über die Risiken einer Kapitalanlage informiert. Welche Strafe droht dem Anlageberater?",
+    "expected_norms": [
+      "§ 264a StGB"
+    ],
+    "expected_keywords": [
+      "Kapitalanlagebetrug",
+      "Falschangaben",
+      "Risiken"
+    ],
+    "min_sources": 1,
+    "category": "Kapitalanlagebetrug"
+  },
+  {
+    "id": 6,
+    "skill": "wirtschaftsstrafrecht",
+    "question": "Ein Unternehmen hat Daten verändert, um seine Finanzlage zu verschleiern. Welche Strafe droht dem Unternehmen?",
+    "expected_norms": [
+      "§ 263a StGB"
+    ],
+    "expected_keywords": [
+      "Computerbetrug",
+      "Datenveränderung",
+      "Finanzlage"
+    ],
+    "min_sources": 1,
+    "category": "Computerbetrug"
+  },
+  {
+    "id": 7,
+    "skill": "wirtschaftsstrafrecht",
+    "question": "Ein Anlageberater hat Kunden eine Kapitalanlage empfohlen, obwohl er wusste, dass sie nicht rentabel war. Welche Strafe droht dem Anlageberater?",
+    "expected_norms": [
+      "§ 264a StGB"
+    ],
+    "expected_keywords": [
+      "Kapitalanlagebetrug",
+      "Falschangaben",
+      "Anlageberater"
+    ],
+    "min_sources": 1,
+    "category": "Kapitalanlagebetrug"
+  },
+  {
+    "id": 8,
+    "skill": "wirtschaftsstrafrecht",
+    "question": "Ein Unternehmen hat Subventionen erhalten, ohne die erforderlichen Nachweise zu erbringen. Welche Strafe droht dem Unternehmen?",
+    "expected_norms": [
+      "§ 264 StGB"
+    ],
+    "expected_keywords": [
+      "Subventionsbetrug",
+      "Falschangaben",
+      "Subventionen"
+    ],
+    "min_sources": 1,
+    "category": "Subventionsbetrug"
+  },
+  {
+    "id": 9,
+    "skill": "wirtschaftsstrafrecht",
+    "question": "Ein Hacker hat in ein Computersystem eingedrungen und Daten gestohlen, um sie zu verkaufen. Welche Strafe droht dem Hacker?",
+    "expected_norms": [
+      "§ 263a StGB"
+    ],
+    "expected_keywords": [
+      "Computerbetrug",
+      "Hacker",
+      "Datenstahl"
+    ],
+    "min_sources": 1,
+    "category": "Computerbetrug"
+  },
+  {
+    "id": 10,
+    "skill": "wirtschaftsstrafrecht",
+    "question": "Ein Anlageberater hat Kunden eine Kapitalanlage empfohlen, ohne sie über die Risiken zu informieren. Welche Strafe droht dem Anlageberater?",
+    "expected_norms": [
+      "§ 264a StGB"
+    ],
+    "expected_keywords": [
+      "Kapitalanlagebetrug",
+      "Falschangaben",
+      "Risiken"
+    ],
+    "min_sources": 1,
+    "category": "Kapitalanlagebetrug"
+  }
+]

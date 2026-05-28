@@ -1,0 +1,124 @@
+[
+  {
+    "skill": "verbraucherschutzrecht",
+    "n_questions": 5,
+    "avg_score": 86.7,
+    "hallucination_rate": 0.0,
+    "worst_score": 75.0,
+    "best_score": 95.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Unternehmer ruft die 16-jährige Maria an, um mit ihr einen Vertrag über den Kauf eines Smartphones für 800 Euro zu schließen. Der Unternehmer offenbart zu Beginn des Gesprächs weder seine Identität noch den geschäftlichen Zweck des Anrufs. Verstößt dieser Unternehmer gegen die Pflichten bei Verbraucherverträgen nach deutschem Recht? Begründen Sie anhand des geltenden BGB und erläutern Sie, welche Informationen der Anrufer zu Beginn des Gesprächs offenlegen muss.",
+        "category": "Verbraucherschutzrecht - Allgemeine Pflichten bei Verbraucherverträgen",
+        "score": 87.5,
+        "answer_excerpt": "# Rechtsverletzung bei Telefonmarketing ohne Identitätsoffenbarung\n\nJa, der Unternehmer verstößt gegen die Pflichten bei Verbraucherverträgen nach deutschem Recht.\n\n## Gesetzliche Grundlage: § 312a Ab",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 18.9
+      },
+      {
+        "id": 2,
+        "question": "Ein Verbraucher kauft über einen Online-Shop ein Smartphone. Nach der Lieferung möchte er den Vertrag widerrufen. Welche Widerrufsfrist gilt nach § 312d BGB für Fernabsatzverträge, und welche Informationspflichten muss der Unternehmer erfüllen?",
+        "category": "Verbraucherschutzrecht / Produkthaftung",
+        "score": 87.5,
+        "answer_excerpt": "## Widerrufsfrist und Informationspflichten bei Fernabsatzverträgen\n\n### Widerrufsfrist\n\nFür Fernabsatzverträge wie den Online-Kauf eines Smartphones gilt eine **Widerrufsfrist von 14 Tagen** [Quelle ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.2
+      },
+      {
+        "id": 3,
+        "question": "Ein Möbelhersteller ruft einen Privathaushalt an, um ihm Möbel für die private Wohneinrichtung zu verkaufen. Bei diesem Anruf offenbart der Anrufer weder seine Identität noch den geschäftlichen Zweck des Anrufs. Anschließend wird ein Kaufvertrag geschlossen und der Verbraucher erklärt später seinen Widerruf. Bestimmen Sie, ob die Pflichten des Unternehmers aus § 312a BGB erfüllt wurden und welche Konsequenzen sich aus dem Widerruf gemäß §§ 358, 360 BGB ergeben.",
+        "category": "verbraucherschutzrecht",
+        "score": 75.0,
+        "answer_excerpt": "# Bewertung der Erfüllung von § 312a BGB und Widerrufsfolgen\n\n## Verletzung der Informationspflichten nach § 312a Abs. 1 BGB\n\nDer Möbelhersteller hat seine Pflichten aus § 312a BGB **nicht erfüllt**. ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.2
+      },
+      {
+        "id": 4,
+        "question": "Ein Anbieter eines Online-Mediendienstes speichert dynamische IP-Adressen seiner Nutzer. Stellen dynamische IP-Adressen personenbezogene Daten im Sinne der DSGVO dar, und auf welche Rechtsgrundlage kann die Speicherung gestützt werden?",
+        "category": "verbraucherschutzrecht",
+        "score": 95.8,
+        "answer_excerpt": "# Dynamische IP-Adressen als personenbezogene Daten und Rechtsgrundlagen\n\n## Status als personenbezogene Daten\n\nJa, dynamische IP-Adressen stellen personenbezogene Daten im Sinne der DSGVO dar. Dies i",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.4
+      },
+      {
+        "id": 5,
+        "question": "Ein Verbraucher schließt telefonisch einen Dienstleistungsvertrag mit einem Unternehmen ab. Welche besonderen Pflichten treffen den Unternehmer bei außerhalb von Geschäftsräumen geschlossenen Verträgen und welche Verbraucherrechte bestehen?",
+        "category": "Verbraucherschutzrecht - Krankenversicherung und Datenschutz",
+        "score": 87.5,
+        "answer_excerpt": "# Pflichten des Unternehmers und Verbraucherrechte bei telefonisch abgeschlossenem Dienstleistungsvertrag\n\n## Unternehmerpflichten\n\nBei einem telefonisch abgeschlossenen Vertrag handelt es sich um ein",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.6
+      }
+    ],
+    "duration_s": 55.6
+  }
+]

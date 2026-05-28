@@ -1,0 +1,125 @@
+[
+  {
+    "skill": "migrationsrecht",
+    "n_questions": 5,
+    "avg_score": 81.7,
+    "hallucination_rate": 0.0,
+    "worst_score": 76.5,
+    "best_score": 87.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Mein Mandant befindet sich außerhalb seines Herkunftslandes und behauptet, wegen seiner politischen Überzeugung verfolgt zu werden. Welche Norm regelt, unter welchen Voraussetzungen ihm die Flüchtlingseigenschaft zuerkannt wird?",
+        "category": "Flüchtlingsstatus",
+        "score": 80.9,
+        "answer_excerpt": "# Zuerkennung der Flüchtlingseigenschaft bei politischer Verfolgung\n\nDie relevante Norm ist **§ 3 AsylVfG 1992** [Quelle 10].\n\n## Voraussetzungen für die Flüchtlingseigenschaft\n\nNach § 3 Abs. 1 AsylVf",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 20.9
+      },
+      {
+        "id": 2,
+        "question": "Ein Ausländer wird wegen Verletzung von Menschenrechten in seinem Herkunftsland gefährdet. Unter welcher Norm kann ihm subsidiärer Schutz gewährt werden, und welche schwerwiegenden Gründe führen zu einem Ausschluss?",
+        "category": "Subsidiärer Schutz",
+        "score": 84.0,
+        "answer_excerpt": "# Subsidiärer Schutz und Ausschlussvoraussetzungen\n\n## Rechtsgrundlage für subsidiären Schutz\n\nSubsidiärer Schutz wird gemäß **§ 4 AsylG** (Asylgesetz) gewährt. Ein Ausländer ist subsidiär Schutzberec",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.3
+      },
+      {
+        "id": 3,
+        "question": "Welche Behörde ist in Deutschland für die Entscheidung über Asylanträge zuständig, und welche gesetzliche Grundlage regelt die Aufgaben des Bundesamts für Migration und Flüchtlinge nach dem AsylG?",
+        "category": "Verfahrenszuständigkeit",
+        "score": 79.5,
+        "answer_excerpt": "# Zuständigkeit für Asylanträge in Deutschland\n\n## Zuständige Behörde\n\nDas **Bundesamt für Migration und Flüchtlinge** ist in Deutschland für die Entscheidung über Asylanträge zuständig. [Quelle 2, § ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 6.3
+      },
+      {
+        "id": 4,
+        "question": "Ein Ausländer wird wegen Sexualdelikt gemäß Strafgesetzbuch verurteilt. Muss das Gericht das Bundesamt darüber unterrichten und wenn ja, unter welcher Norm?",
+        "category": "Datenaustausch und Strafverfahren",
+        "score": 76.5,
+        "answer_excerpt": "# Unterrichtungspflicht bei Sexialdelikt gegen Ausländer\n\nJa, das Gericht hat eine Unterrichtungspflicht gegenüber dem Bundesamt.\n\n## Rechtliche Grundlage\n\nDie maßgebliche Norm ist **§ 87 Abs. 2 Aufen",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.6
+      },
+      {
+        "id": 5,
+        "question": "Ein anerkannter Flüchtling reist freiwillig in sein Herkunftsland zurück. Unter welchen Voraussetzungen kann nach § 73 AsylG die Flüchtlingsanerkennung widerrufen werden, und welche Rechtsfolgen hat der Widerruf?",
+        "category": "Widerruf und Rücknahme",
+        "score": 87.5,
+        "answer_excerpt": "# Widerruf der Flüchtlingsanerkennung nach § 73 AsylG bei freiwilliger Rückkehr\n\n## Voraussetzungen für den Widerruf\n\nNach § 73 Abs. 1 AsylG ist die Zuerkennung der Flüchtlingseigenschaft zu widerrufe",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.0
+      }
+    ],
+    "duration_s": 58.6
+  }
+]

@@ -1,0 +1,125 @@
+[
+  {
+    "skill": "verkehrsrecht",
+    "n_questions": 5,
+    "avg_score": 87.8,
+    "hallucination_rate": 0.0,
+    "worst_score": 79.9,
+    "best_score": 96.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Mein Kraftfahrzeug wurde von der Behörde zur Teilnahme am öffentlichen Straßenverkehr gemäß § 1 Absatz 1 zugelassen. Muss ich trotzdem noch weitere Genehmigungen einholen, wenn ich eine autonome Fahrfunktion betreiben möchte?",
+        "category": "autonomes Fahren",
+        "score": 82.9,
+        "answer_excerpt": "# Zusätzliche Genehmigungen für autonome Fahrfunktionen\n\nJa, die bloße Zulassung gemäß § 1 Absatz 1 ist nicht ausreichend. Für den Betrieb einer autonomen Fahrfunktion benötigen Sie weitere Genehmigun",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 23.5
+      },
+      {
+        "id": 2,
+        "question": "Ich bin Halter eines Kraftfahrzeugs mit autonomer Fahrfunktion. Welche Daten muss ich speichern und dem Kraftfahrt-Bundesamt zur Verfügung stellen nach § 1g Absatz 1 und 2?",
+        "category": "Datenverwaltung autonome Fahrzeuge",
+        "score": 86.5,
+        "answer_excerpt": "# Speicherpflichten für autonome Fahrzeuge nach § 1g StVG\n\nNach **§ 1g Absatz 1 des Straßenverkehrsgesetzes (StVG)** müssen Sie als Halter eines Kraftfahrzeugs mit autonomer Fahrfunktion folgende Date",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.8
+      },
+      {
+        "id": 3,
+        "question": "Was sind meine Aufgaben als Technische Aufsicht eines Kraftfahrzeugs mit autonomer Fahrfunktion gemäß § 1f Absatz 2?",
+        "category": "Betrieb autonomer Fahrzeuge",
+        "score": 92.8,
+        "answer_excerpt": "# Aufgaben der Technischen Aufsicht gemäß § 1f Absatz 2 StVG\n\nIhre Frage bezieht sich auf § 1f Absatz 2 StVG. Basierend auf den bereitgestellten Quellen kann ich jedoch nur folgende Informationen zu §",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.3
+      },
+      {
+        "id": 4,
+        "question": "Ich möchte eine hoch- oder vollautomatisierte Fahrfunktion gemäß § 1a Absatz 1 in meinem Fahrzeug aktivieren. Unter welchen Voraussetzungen ist dies zulässig?",
+        "category": "automatisiertes Fahren",
+        "score": 96.8,
+        "answer_excerpt": "# Voraussetzungen für die Aktivierung hoch- oder vollautomatisierter Fahrfunktionen nach § 1a Abs. 1 StVG\n\nGemäß **§ 1a Abs. 1 StVG** ist der Betrieb eines Kraftfahrzeugs mittels hoch- oder vollautoma",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.4
+      },
+      {
+        "id": 5,
+        "question": "Wer darf eine Fahrerlaubnis zum Führen von Kraftfahrzeugen nach § 2 Absatz 1 erhalten und was muss ich nachweisen?",
+        "category": "Fahrerlaubnisse",
+        "score": 79.9,
+        "answer_excerpt": "# Anforderungen für eine Fahrerlaubnis nach § 2 StVG\n\n## Wer darf eine Fahrerlaubnis erhalten?\n\nNach § 2 Absatz 1 StVG bedarf jede Person, die auf öffentlichen Straßen ein Kraftfahzeug führt, einer Er",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.5
+      }
+    ],
+    "duration_s": 71.1
+  }
+]

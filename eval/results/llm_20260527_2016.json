@@ -1,0 +1,129 @@
+[
+  {
+    "skill": "grundrechte",
+    "n_questions": 5,
+    "avg_score": 89.6,
+    "hallucination_rate": 0.0,
+    "worst_score": 70.8,
+    "best_score": 99.0,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Journalist möchte einen kritischen Artikel über Regierungshandeln veröffentlichen. Die Behörde untersagt die Veröffentlichung unter Berufung auf öffentliche Sicherheit. Verletzt dieses Verbot das Grundrecht auf Pressefreiheit nach Art. 5 GG, und unter welchen Voraussetzungen darf der Staat in die Pressefreiheit eingreifen?",
+        "category": "Grundrechte und ihre Schranken",
+        "score": 70.8,
+        "answer_excerpt": "# Pressefreiheit und behördliches Veröffentlichungsverbot\n\n## Schutzbereich der Pressefreiheit\n\nDas behördliche Verbot verletzt prima facie das Grundrecht auf Pressefreiheit nach **Art. 5 Abs. 1 Satz ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 19.0
+      },
+      {
+        "id": 2,
+        "question": "Ein Gesetz verbietet einer Person, ihren erlernten Beruf auszuüben, ohne dass ein sachlicher Grund vorliegt. Kann sich die Person auf ein Grundrecht berufen und ist dieses Verbot rechtmäßig?",
+        "category": "Berufsfreiheit",
+        "score": 91.2,
+        "answer_excerpt": "# Berufsausübungsverbot und Grundrechtsschutz\n\n## Anwendbares Grundrecht\n\nDie Person kann sich auf **Art. 12 Abs. 1 GG** berufen [Quelle 1]. Diese Norm garantiert das Recht, \"Beruf, Arbeitsplatz und A",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.4
+      },
+      {
+        "id": 3,
+        "question": "Ein Staat möchte die Freizügigkeit eines Bürgers beschränken, um Seuchengefahr zu bekämpfen. Auf welcher Rechtsgrundlage ist dies möglich und welche Voraussetzungen müssen erfüllt sein?",
+        "category": "Bewegungsfreiheit und ihre Grenzen",
+        "score": 89.2,
+        "answer_excerpt": "# Rechtsgrundlage und Voraussetzungen für Beschränkungen der Freizügigkeit bei Seuchengefahr\n\n## Rechtsgrundlage\n\nDie Beschränkung der Freizügigkeit zur Bekämpfung von Seuchengefahr ist in **Art. 11 A",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.6
+      },
+      {
+        "id": 4,
+        "question": "Eine Regelung soll tief in die körperliche Unversehrtheit einer Person eingreifen. Nach welcher Norm ist dies nur unter bestimmten Bedingungen zulässig und welche Garantie schützt den Kerngehalt dieses Grundrechts?",
+        "category": "Schutzbereich und Wesensgehaltsgarantie",
+        "score": 99.0,
+        "answer_excerpt": "# Rechtliche Regelung von Eingriffen in die körperliche Unversehrtheit\n\n## Maßgebliche Norm: Art. 2 Abs. 2 GG\n\nEingriffe in die körperliche Unversehrtheit sind nach **Art. 2 Abs. 2 Satz 2 GG** nur \"au",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.1
+      },
+      {
+        "id": 5,
+        "question": "Ein Gesetz beschränkt das Recht auf freie Entfaltung der Persönlichkeit mit dem Ziel, andere Rechte zu schützen. Welche Norm regelt diese Schranke und welche Voraussetzung muss das einschränkende Gesetz erfüllen?",
+        "category": "Zitiergebot und Gesetzesvorbehalt",
+        "score": 97.8,
+        "answer_excerpt": "# Regelung der Schranke für die freie Entfaltung der Persönlichkeit\n\n## Anwendbare Norm\n\nDas Recht auf freie Entfaltung der Persönlichkeit wird durch **Art. 2 Abs. 1 GG** geregelt [Quelle 2]. Die Norm",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.6
+      }
+    ],
+    "duration_s": 52.2
+  }
+]

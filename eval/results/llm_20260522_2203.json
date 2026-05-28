@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "vergaberecht",
+    "n_questions": 5,
+    "avg_score": 80.1,
+    "hallucination_rate": 0.0,
+    "worst_score": 64.5,
+    "best_score": 87.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Bundesministerium möchte IT-Beratungsleistungen beschaffen. Welche Vergabegrundsätze muss es einhalten und welches Verfahren ist anwendbar?",
+        "category": "Vergabeverfahren",
+        "score": 87.5,
+        "answer_excerpt": "# Vergabegrundsätze und Verfahren für IT-Beratungsleistungen\n\n## Anzuwendende Vergabegrundsätze\n\nDas Bundesministerium muss sich nach dem **Gesetz gegen Wettbewerbsbeschränkungen (GWB)** richten. Nach",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 22.4
+      },
+      {
+        "id": 2,
+        "question": "Ein Bieter wird vom Vergabeverfahren ausgeschlossen, weil er keine Nachweise zur Eignung eingereicht hat. Welche Rechtsschutzmöglichkeiten hat der Bieter?",
+        "category": "Bieterrechtsschutz",
+        "score": 79.9,
+        "answer_excerpt": "# Rechtsschutzmöglichkeiten bei Ausschluss wegen fehlender Eignung\n\nDer Bieter verfügt über mehrere Rechtsschutzmöglichkeiten:\n\n## 1. Nachforderung von Unterlagen\n\nDer öffentliche Auftraggeber muss gr",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.2
+      },
+      {
+        "id": 3,
+        "question": "Eine Gemeinde vergibt einen Bauauftrag ohne Ausschreibung direkt an ein befreundetes Unternehmen. Welche vergaberechtlichen Vorschriften werden verletzt?",
+        "category": "Direktvergabe",
+        "score": 87.5,
+        "answer_excerpt": "# Vergaberechtliche Verstöße bei direkter Vergabe ohne Ausschreibung\n\nEine Gemeinde, die einen Bauauftrag direkt an ein befreundetes Unternehmen vergibt, verletzt grundlegende vergaberechtliche Vorsch",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.2
+      },
+      {
+        "id": 4,
+        "question": "Welche Anforderungen gelten an die Eignung von Bietern bei der Vergabe öffentlicher Aufträge nach dem GWB?",
+        "category": "Eignungsprüfung",
+        "score": 80.9,
+        "answer_excerpt": "# Anforderungen an die Eignung von Bietern nach dem GWB\n\n## Grundanforderung\n\nNach § 122 GWB werden öffentliche Aufträge an **fachkundige und leistungsfähige (geeignete) Unternehmen** vergeben, die ni",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.1
+      },
+      {
+        "id": 5,
+        "question": "Ein öffentlicher Auftraggeber möchte besonders umweltfreundliche Produkte beschaffen. Darf er dies bei der Vergabe berücksichtigen?",
+        "category": "Nachhaltige Vergabe",
+        "score": 64.5,
+        "answer_excerpt": "# Berücksichtigung von Umweltfreundlichkeit bei öffentlichen Aufträgen\n\nJa, ein öffentlicher Auftraggeber darf Umweltfreundlichkeit bei der Vergabe berücksichtigen.\n\n## Rechtliche Grundlage\n\n**Zuschla",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.2
+      }
+    ],
+    "duration_s": 65.5
+  }
+]

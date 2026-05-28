@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "verwaltungsprozessrecht",
+    "n_questions": 5,
+    "avg_score": 86.9,
+    "hallucination_rate": 0.0,
+    "worst_score": 82.9,
+    "best_score": 89.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ich bin Richter auf Probe und wurde gerade ernannt. Kann ich sofort als Einzelrichter über einen Rechtsstreit entscheiden, oder gibt es da Einschränkungen?",
+        "category": "Richterliche Besetzung und Einzelrichterverfügung",
+        "score": 82.9,
+        "answer_excerpt": "# Einschränkungen für Richter auf Probe als Einzelrichter\n\nNein, Sie können **nicht sofort** als Einzelrichter entscheiden.\n\n## Rechtliche Regelung\n\nNach **§ 6 Abs. 1 VwGO** gilt eine wichtige Einschr",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 19.9
+      },
+      {
+        "id": 2,
+        "question": "Wie ist das Oberverwaltungsgericht organisiert und wie entscheiden dessen Senate normalerweise?",
+        "category": "Gerichtsaufbau und Spruchkörper",
+        "score": 89.5,
+        "answer_excerpt": "# Organisation und Entscheidungsbesetzung des Oberverwaltungsgerichts\n\n## Organisationsstruktur\n\nDas Oberverwaltungsgericht ist gemäß [Quelle 1, § 9 Abs. 1 VwGO] organisiert durch:\n- Den Präsidenten\n-",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 6.4
+      },
+      {
+        "id": 3,
+        "question": "Der Senat möchte von einer früheren Entscheidung eines anderen Senats abweichen. Welche Rolle spielt dabei der Große Senat beim Bundesverwaltungsgericht?",
+        "category": "Divergenzverfahren und Rechtseinheit",
+        "score": 89.5,
+        "answer_excerpt": "# Rolle des Großen Senats beim Abweichen von früheren Senatsentscheidungen\n\n## Rechtliche Regelung\n\nNach **§ 11 Abs. 2 VwGO** entscheidet der Große Senat beim Bundesverwaltungsgericht, **wenn ein Sena",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 6.6
+      },
+      {
+        "id": 4,
+        "question": "Welche grundsätzliche Anforderung muss erfüllt sein, damit ein ehrenamtlicher Richter sein Amt ausüben darf, und wer ist vom Amt ausgeschlossen?",
+        "category": "Ehrenamtliche Richter und deren Zulassung",
+        "score": 89.5,
+        "answer_excerpt": "# Anforderungen und Ausschlussgründe für ehrenamtliche Richter\n\n## Grundsätzliche Anforderungen\n\nNach § 20 VwGO muss ein ehrenamtlicher Richter folgende Bedingungen erfüllen:\n\n- **Deutscher sein** (zw",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 6.9
+      },
+      {
+        "id": 5,
+        "question": "Unter welchen Bedingungen kann ein Einzelrichter bei der Kammer des Verwaltungsgerichts den Rechtsstreit zurück auf die Kammer übertragen?",
+        "category": "Rückübertragung vom Einzelrichter auf die Kammer",
+        "score": 82.9,
+        "answer_excerpt": "# Rückübertragung vom Einzelrichter zur Kammer\n\nNach der Verwaltungsgerichtsordnung (VwGO) regelt **§ 6 VwGO** die Übertragung auf einen Einzelrichter. Eine explizite Regelung zur Rückübertragung von ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.2
+      }
+    ],
+    "duration_s": 49.4
+  }
+]

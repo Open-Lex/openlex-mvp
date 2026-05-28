@@ -1,0 +1,78 @@
+[
+  {
+    "question": "Die A-GmbH verklagt die B-GmbH auf Zahlung von 45.000 Euro Kaufpreisrest vor dem Landgericht München I. Die B-GmbH hat ihren Sitz in Berlin. A-GmbH hat ihren Sitz in München. Ist das Landgericht München I sachlich und örtlich zuständig? Prüfen Sie die Zuständigkeit nach den §§ 17, 29 und 38 ZPO.",
+    "expected_norms": [
+      "§ 17 ZPO",
+      "§ 29 ZPO",
+      "§ 38 ZPO"
+    ],
+    "expected_keywords": [
+      "sachliche Zuständigkeit",
+      "örtliche Zuständigkeit",
+      "Gerichtsbarkeit",
+      "Erfüllungsort",
+      "Streitwert"
+    ]
+  },
+  {
+    "question": "Der Mieter M verklagt seinen Vermieter V auf Schadensersatz wegen fehlerhafter Reparaturen. M beantragt vor dem Amtsgericht die Beweisaufnahme durch Sachverständigenbeweis gemäß § 358 ZPO. Der Vermieter erhebt Einrede, dass die Beweiserhebung unzulässig sei. Unter welchen Voraussetzungen ist der Sachverständigenbeweis zulässig und wie wird er geregelt?",
+    "expected_norms": [
+      "§ 358 ZPO",
+      "§ 406 ZPO",
+      "§ 407 ZPO"
+    ],
+    "expected_keywords": [
+      "Sachverständigenbeweis",
+      "Beweisverfahren",
+      "Sachverständiger",
+      "Beweiswürdigung",
+      "Zulässigkeit"
+    ]
+  },
+  {
+    "question": "Der Kläger K verklagt den Beklagten B vor dem Landgericht auf Schmerzensgeld. In der ersten Instanz unterliegt K völlig. K legt fristgerecht Berufung ein. Welche Änderungen der Tatsachenfeststellungen aus erster Instanz kann das Berufungsgericht gemäß § 529 ZPO vornehmen, und welche Grenzen gelten hierbei?",
+    "expected_norms": [
+      "§ 529 ZPO",
+      "§ 530 ZPO"
+    ],
+    "expected_keywords": [
+      "Berufung",
+      "neue Tatsachen",
+      "neue Beweise",
+      "Revisionsgrund",
+      "Überprüfungsbefugnis",
+      "Bindungswirkung"
+    ]
+  },
+  {
+    "question": "Der Kläger K reicht seine Klage gegen den Beklagten B beim Amtsgericht ein. Die Klage enthält keine klare Darstellung des Klagegrundes und es ist unklar, welche Leistung genau verlangt wird. Das Gericht könnte die Klage gemäß § 274 Abs. 1 ZPO als unzulässig verwerfen. Erläutern Sie die Anforderungen an die Klageerhebung nach § 253 ZPO und den Unterschied zwischen formellen Mängeln und der Frage der Zulässigkeit.",
+    "expected_norms": [
+      "§ 253 ZPO",
+      "§ 274 Abs. 1 ZPO"
+    ],
+    "expected_keywords": [
+      "Klageerhebung",
+      "Parteiangaben",
+      "Streitgegenstand",
+      "Unzulässigkeit",
+      "Klagebefugnis",
+      "materiell-rechtlicher Anspruch"
+    ]
+  },
+  {
+    "question": "Die Partei K will vor Gericht Zeugen hören lassen, benötigt aber vorher eine beglaubigte Kopie eines Vertrages als Beweismittel. Nach § 415 ZPO kann das Gericht dabei behilflich sein. Welche Arten von Beweismitteln kennt die ZPO und welche formalen Anforderungen müssen bei deren Einführung erfüllt werden?",
+    "expected_norms": [
+      "§ 415 ZPO",
+      "§ 355 ZPO",
+      "§ 357 ZPO"
+    ],
+    "expected_keywords": [
+      "Beweismittel",
+      "Urkunde",
+      "Zeugenbeweis",
+      "Augenschein",
+      "Beweisangebot",
+      "Beweisführung"
+    ]
+  }
+]

@@ -1,0 +1,159 @@
+[
+  {
+    "id": 1,
+    "skill": "verbraucherrecht",
+    "question": "Ein Verbraucher kauft ein Produkt online, das nicht den beschriebenen Eigenschaften entspricht. Welche Rechte hat der Verbraucher in diesem Fall?",
+    "expected_norms": [
+      "Widerrufsrecht"
+    ],
+    "expected_keywords": [
+      "Widerrufsrecht",
+      "Verbraucher",
+      "Fernabsatz"
+    ],
+    "min_sources": 2,
+    "category": "Kaufverträge"
+  },
+  {
+    "id": 2,
+    "skill": "verbraucherrecht",
+    "question": "Eine Firma verwendet Allgemeine Geschäftsbedingungen, die zum Nachteil des Verbrauchers sind. Ist dies zulässig?",
+    "expected_norms": [
+      "§ 305",
+      "§ 307"
+    ],
+    "expected_keywords": [
+      "AGB",
+      "Verbraucherschutz",
+      "Transparenz"
+    ],
+    "min_sources": 2,
+    "category": "AGB-Recht"
+  },
+  {
+    "id": 3,
+    "skill": "verbraucherrecht",
+    "question": "Ein Verbraucher schließt einen Vertrag über ein Abo-Modell online ab und möchte diesen widerrufen. Welche Rechte hat er nach BGB?",
+    "expected_norms": [
+      "Widerrufsrecht"
+    ],
+    "expected_keywords": [
+      "Widerrufsrecht",
+      "Fernabsatz",
+      "Verbraucher",
+      "Widerrufsfrist"
+    ],
+    "min_sources": 2,
+    "category": "Vertragsrecht"
+  },
+  {
+    "id": 4,
+    "skill": "verbraucherrecht",
+    "question": "Ein Verbraucher möchte einen Vertrag widerrufen, den er online abgeschlossen hat. Innerhalb welcher Frist muss er dies tun?",
+    "expected_norms": [
+      "Widerrufsrecht"
+    ],
+    "expected_keywords": [
+      "Verbraucher",
+      "Widerrufsrecht",
+      "Online-Verträge"
+    ],
+    "min_sources": 2,
+    "category": "Widerrufsrecht"
+  },
+  {
+    "id": 5,
+    "skill": "verbraucherrecht",
+    "question": "Eine Firma bietet eine Garantie für ein Produkt an, die nicht den gesetzlichen Anforderungen entspricht. Welche Rechte hat der Verbraucher in diesem Fall?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Garantie",
+      "Verbraucher",
+      "Werbung"
+    ],
+    "min_sources": 2,
+    "category": "Produkthaftung"
+  },
+  {
+    "id": 6,
+    "skill": "verbraucherrecht",
+    "question": "Ein Unternehmer verwendet eine unzulässige Klausel in seinen Allgemeinen Geschäftsbedingungen. Welche Konsequenzen hat dies für den Unternehmer?",
+    "expected_norms": [
+      "§ 307 BGB",
+      "§ 308 BGB"
+    ],
+    "expected_keywords": [
+      "Allgemeine Geschäftsbedingungen",
+      "Verbraucherschutz",
+      "Klausel"
+    ],
+    "min_sources": 2,
+    "category": "AGB-Recht"
+  },
+  {
+    "id": 7,
+    "skill": "verbraucherrecht",
+    "question": "Ein Verbraucher kauft ein Produkt, das nicht den EU-Richtlinien entspricht. Welche Rechte hat der Verbraucher in diesem Fall?",
+    "expected_norms": [
+      "§ 434 BGB",
+      "RL 1999/44/EG"
+    ],
+    "expected_keywords": [
+      "Verbraucher",
+      "Kaufvertrag",
+      "EU-Richtlinien"
+    ],
+    "min_sources": 2,
+    "category": "EU-Recht"
+  },
+  {
+    "id": 8,
+    "skill": "verbraucherrecht",
+    "question": "Eine Firma bietet eine unzulässige Werbung an, die den Verbraucher täuscht. Welche Konsequenzen hat dies für die Firma?",
+    "expected_norms": [
+      "§ 5 UWG",
+      "§ 3 UWG"
+    ],
+    "expected_keywords": [
+      "Werbung",
+      "Verbraucherschutz",
+      "Täuschung"
+    ],
+    "min_sources": 2,
+    "category": "Wettbewerbsrecht"
+  },
+  {
+    "id": 9,
+    "skill": "verbraucherrecht",
+    "question": "Ein Unternehmer bietet einen Vertrag an, der nicht den Anforderungen des Verbraucherinformationsgesetzes entspricht. Welche Konsequenzen hat dies für den Unternehmer?",
+    "expected_norms": [
+      "§ 312 BGB",
+      "§ 312a BGB"
+    ],
+    "expected_keywords": [
+      "Unternehmer",
+      "Verbraucherinformationsgesetz",
+      "Vertragsrecht"
+    ],
+    "min_sources": 2,
+    "category": "Vertragsrecht"
+  },
+  {
+    "id": 10,
+    "skill": "verbraucherrecht",
+    "question": "Ein Verbraucher möchte einen Vertrag kündigen, den er online abgeschlossen hat. Innerhalb welcher Frist muss er dies tun?",
+    "expected_norms": [
+      "§ 355 BGB",
+      "§ 356 BGB"
+    ],
+    "expected_keywords": [
+      "Verbraucher",
+      "Kündigung",
+      "Online-Verträge"
+    ],
+    "min_sources": 2,
+    "category": "Kündigungsrecht"
+  }
+]

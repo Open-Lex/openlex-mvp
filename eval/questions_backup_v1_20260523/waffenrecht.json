@@ -1,0 +1,160 @@
+[
+  {
+    "id": 1,
+    "skill": "waffenrecht",
+    "question": "Darf ein 17-jähriger Schüler im Rahmen eines Praktikums mit Waffen umgehen, wenn er unter Aufsicht eines weisungsbefugten Waffenberechtigten steht?",
+    "expected_norms": [
+      "§ 2 Abs. 1",
+      "§ 3 Abs. 1"
+    ],
+    "expected_keywords": [
+      "Erlaubnis",
+      "Jugendlich",
+      "Ausnahme"
+    ],
+    "min_sources": 2,
+    "category": "Umgang mit Waffen durch Minderjährige"
+  },
+  {
+    "id": 2,
+    "skill": "waffenrecht",
+    "question": "Was sind die Voraussetzungen für den Erwerb einer Waffe, die in der Anlage 2 (Waffenliste) Abschnitt 2 zum Waffengesetz genannt ist?",
+    "expected_norms": [
+      "WaffG"
+    ],
+    "expected_keywords": [
+      "Erlaubnis",
+      "Voraussetzungen",
+      "Antragsteller"
+    ],
+    "min_sources": 2,
+    "category": "Waffenbesitz"
+  },
+  {
+    "id": 3,
+    "skill": "waffenrecht",
+    "question": "Ist es erlaubt, mit Waffen umzugehen, die ihrem Wesen nach dazu bestimmt sind, Menschen zu verletzen oder zu töten?",
+    "expected_norms": [
+      "§ 1 Abs. 2",
+      "§ 2 Abs. 1"
+    ],
+    "expected_keywords": [
+      "Waffe",
+      "Erlaubnis",
+      "verboten"
+    ],
+    "min_sources": 2,
+    "category": "Waffentypen"
+  },
+  {
+    "id": 4,
+    "skill": "waffenrecht",
+    "question": "Darf ein Jugendlicher, der das 16. Lebensjahr vollendet hat, an einem Schießkurs teilnehmen, wenn er unter Aufsicht eines weisungsbefugten Waffenberechtigten steht?",
+    "expected_norms": [
+      "§ 2 Abs. 1",
+      "§ 3 Abs. 1"
+    ],
+    "expected_keywords": [
+      "Jugendliche",
+      "Schießkurs",
+      "Aufsicht"
+    ],
+    "min_sources": 2,
+    "category": "Umgang mit Waffen durch Jugendliche"
+  },
+  {
+    "id": 5,
+    "skill": "waffenrecht",
+    "question": "Was sind die Folgen, wenn jemand ohne Erlaubnis mit Waffen oder Munition umgeht, die in der Anlage 2 (Waffenliste) Abschnitt 2 zum Waffengesetz genannt sind?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Erlaubnis",
+      "Strafe",
+      "Waffenliste"
+    ],
+    "min_sources": 2,
+    "category": "Strafen und Sanktionen"
+  },
+  {
+    "id": 6,
+    "skill": "waffenrecht",
+    "question": "Ist es erlaubt, Waffen oder Munition in einem öffentlichen Gebäude zu tragen, wenn man eine Erlaubnis besitzt?",
+    "expected_norms": [
+      "§ 2 Abs. 2 WaffG",
+      "§ 42 WaffG"
+    ],
+    "expected_keywords": [
+      "Waffenbesitz",
+      "Öffentliche Orte",
+      "Erlaubnis"
+    ],
+    "min_sources": 2,
+    "category": "Waffentragen"
+  },
+  {
+    "id": 7,
+    "skill": "waffenrecht",
+    "question": "Was sind die Anforderungen an die Aufbewahrung von Waffen und Munition, um die öffentliche Sicherheit und Ordnung zu gewährleisten?",
+    "expected_norms": [
+      "§ 36 WaffG",
+      "§ 43 WaffG"
+    ],
+    "expected_keywords": [
+      "Waffenaufbewahrung",
+      "Sicherheit",
+      "Ordnung"
+    ],
+    "min_sources": 2,
+    "category": "Waffenaufbewahrung"
+  },
+  {
+    "id": 8,
+    "skill": "waffenrecht",
+    "question": "Darf ein Ausländer, der in Deutschland lebt, eine Waffe erwerben und besitzen, wenn er eine Erlaubnis besitzt?",
+    "expected_norms": [
+      "§ 2 Abs. 2 WaffG",
+      "§ 28 WaffG"
+    ],
+    "expected_keywords": [
+      "Waffenbesitz",
+      "Ausländer",
+      "Erlaubnis"
+    ],
+    "min_sources": 2,
+    "category": "Waffenbesitz durch Ausländer"
+  },
+  {
+    "id": 9,
+    "skill": "waffenrecht",
+    "question": "Was sind die Voraussetzungen für die Erteilung einer Waffenbesitzkarte, die für den Erwerb und Besitz von Waffen erforderlich ist?",
+    "expected_norms": [
+      "§ 4 WaffG",
+      "§ 10 WaffG"
+    ],
+    "expected_keywords": [
+      "Waffenbesitzkarte",
+      "Voraussetzungen",
+      "Erlaubnis"
+    ],
+    "min_sources": 2,
+    "category": "Waffenbesitzkarte"
+  },
+  {
+    "id": 10,
+    "skill": "waffenrecht",
+    "question": "Ist es erlaubt, Waffen oder Munition in einem privaten Gebäude zu lagern, wenn man eine Erlaubnis besitzt?",
+    "expected_norms": [
+      "§ 2 Abs. 2 WaffG",
+      "§ 43 WaffG"
+    ],
+    "expected_keywords": [
+      "Waffenaufbewahrung",
+      "Privateigentum",
+      "Erlaubnis"
+    ],
+    "min_sources": 2,
+    "category": "Waffenaufbewahrung"
+  }
+]

@@ -1,0 +1,126 @@
+[
+  {
+    "skill": "urheberrecht",
+    "n_questions": 5,
+    "avg_score": 88.3,
+    "hallucination_rate": 0.0,
+    "worst_score": 80.9,
+    "best_score": 95.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Autor veröffentlicht ein Buch, das eine Übersetzung eines anderen Werkes enthält. Welche Rechte hat der Übersetzer?",
+        "category": "Urheberrecht an Bearbeitungen",
+        "score": 87.5,
+        "answer_excerpt": "# Rechte des Übersetzers\n\nDer Übersetzer hat als Urheber der Übersetzung erhebliche Schutzrechte:\n\n## Schutz als eigenständiges Werk\n\nNach [Quelle 3] werden **Übersetzungen, die persönliche geistige S",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 20.4
+      },
+      {
+        "id": 2,
+        "question": "Ein Unternehmen verwendet ein Computerprogramm, das von einem anderen Unternehmen entwickelt wurde. Welche Rechte hat der Entwickler?",
+        "category": "Urheberrecht an Computerprogrammen",
+        "score": 90.2,
+        "answer_excerpt": "# Rechte des Computerprogramm-Entwicklers\n\nDie Rechte des Entwicklers hängen davon ab, unter welchen Umständen das Programm geschaffen wurde:\n\n## 1. Arbeitnehmer-Situation\n\nWurde das Computerprogramm ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.9
+      },
+      {
+        "id": 3,
+        "question": "Ein Künstler erstellt ein Gemälde, das auf einem Foto basiert. Welche Rechte hat der Fotograf?",
+        "category": "Urheberrecht an Kunstwerken",
+        "score": 87.2,
+        "answer_excerpt": "# Urheberrechte des Fotografen bei künstlerischer Bearbeitung\n\nDer Fotograf hat grundsätzlich **starke Rechte**, wenn ein Künstler sein Foto als Grundlage für ein Gemälde nutzt.\n\n## Schutz des Fotos\n\n",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.6
+      },
+      {
+        "id": 4,
+        "question": "Ein Musiker komponiert ein Lied, das auf einem anderen Lied basiert. Welche Rechte hat der ursprüngliche Komponist?",
+        "category": "Urheberrecht an Musikwerken",
+        "score": 95.8,
+        "answer_excerpt": "# Rechte des ursprünglichen Komponisten bei Nutzung seines Liedes\n\nDer ursprüngliche Komponist hat als Urheber des Werkes grundlegende Schutzrechte [Quelle 1].\n\n## Urheberpersönlichkeitsrechte\n\nDer ur",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.9
+      },
+      {
+        "id": 5,
+        "question": "Ein Autor veröffentlicht ein Buch, das eine Übersetzung eines anderen Werkes enthält, ohne die erforderliche Erlaubnis eingeholt zu haben. Welche Rechte des Originalautors werden verletzt?",
+        "category": "Urheberrecht an Marken",
+        "score": 80.9,
+        "answer_excerpt": "# Verletzung von Urheberrechten bei unbefugter Veröffentlichung einer Übersetzung\n\nBei der unbefugten Veröffentlichung einer Übersetzung werden mehrere Rechte des Originalautors verletzt:\n\n## 1. **Bea",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.9
+      }
+    ],
+    "duration_s": 70.3
+  }
+]

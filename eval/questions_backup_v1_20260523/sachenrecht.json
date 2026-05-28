@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "skill": "sachenrecht",
+    "question": "Wie wird der Besitz einer Sache erworben?",
+    "expected_norms": [
+      "§ 854"
+    ],
+    "expected_keywords": [
+      "Besitz",
+      "tatsächliche Gewalt",
+      "Erlangung"
+    ],
+    "min_sources": 1,
+    "category": "Besitzerwerb"
+  },
+  {
+    "id": 2,
+    "skill": "sachenrecht",
+    "question": "Wer ist Besitzer einer Sache, wenn jemand die tatsächliche Gewalt über die Sache für einen anderen ausübt?",
+    "expected_norms": [
+      "§ 855 BGB"
+    ],
+    "expected_keywords": [
+      "Besitzdiener",
+      "tatsächliche Gewalt",
+      "Weisungen"
+    ],
+    "min_sources": 1,
+    "category": "Besitzdiener"
+  },
+  {
+    "id": 3,
+    "skill": "sachenrecht",
+    "question": "Wie wird der Besitz einer Sache beendet?",
+    "expected_norms": [
+      "§ 856"
+    ],
+    "expected_keywords": [
+      "Besitz",
+      "tatsächliche Gewalt",
+      "Aufgabe"
+    ],
+    "min_sources": 1,
+    "category": "Besitzbeendigung"
+  },
+  {
+    "id": 4,
+    "skill": "sachenrecht",
+    "question": "Was sind die Voraussetzungen für den Eigentumsherausgabeanspruch nach § 985 BGB?",
+    "expected_norms": [
+      "§ 985 BGB"
+    ],
+    "expected_keywords": [
+      "Eigentumsherausgabe",
+      "Recht zum Besitz",
+      "Eigentümer"
+    ],
+    "min_sources": 2,
+    "category": "Eigentumsherausgabe"
+  },
+  {
+    "id": 5,
+    "skill": "sachenrecht",
+    "question": "Kann der Besitz einer Sache durch eine vorübergehende Verhinderung in der Ausübung der Gewalt beendet werden?",
+    "expected_norms": [
+      "§ 856"
+    ],
+    "expected_keywords": [
+      "Besitz",
+      "tatsächliche Gewalt",
+      "Verhinderung"
+    ],
+    "min_sources": 1,
+    "category": "Besitzbeendigung"
+  },
+  {
+    "id": 6,
+    "skill": "sachenrecht",
+    "question": "Was ist der Unterschied zwischen einem Besitzer und einem Besitzdiener?",
+    "expected_norms": [
+      "§ 854 BGB",
+      "§ 855 BGB"
+    ],
+    "expected_keywords": [
+      "Besitzer",
+      "Besitzdiener",
+      "tatsächliche Gewalt"
+    ],
+    "min_sources": 2,
+    "category": "Besitzer und Besitzdiener"
+  },
+  {
+    "id": 7,
+    "skill": "sachenrecht",
+    "question": "Wie kann der Besitz einer Sache durch Einigung zwischen dem bisherigen Besitzer und dem Erwerber erworben werden?",
+    "expected_norms": [
+      "§ 854 BGB"
+    ],
+    "expected_keywords": [
+      "Besitz",
+      "Einigung",
+      "Erwerber"
+    ],
+    "min_sources": 1,
+    "category": "Besitzerwerb"
+  },
+  {
+    "id": 8,
+    "skill": "sachenrecht",
+    "question": "Was sind die Folgen, wenn der Besitzer die tatsächliche Gewalt über die Sache aufgibt?",
+    "expected_norms": [
+      "§ 856 BGB"
+    ],
+    "expected_keywords": [
+      "Besitz",
+      "tatsächliche Gewalt",
+      "Aufgabe"
+    ],
+    "min_sources": 1,
+    "category": "Besitzbeendigung"
+  },
+  {
+    "id": 9,
+    "skill": "sachenrecht",
+    "question": "Kann der Eigentümer einer Sache den Besitz von einem Dritten herausverlangen, wenn dieser die Sache ohne Recht besitzt?",
+    "expected_norms": [
+      "§ 985 BGB",
+      "Urteil — V ZR 99/21"
+    ],
+    "expected_keywords": [
+      "Eigentumsherausgabe",
+      "Recht zum Besitz",
+      "Eigentümer"
+    ],
+    "min_sources": 2,
+    "category": "Eigentumsherausgabe"
+  },
+  {
+    "id": 10,
+    "skill": "sachenrecht",
+    "question": "Was sind die Voraussetzungen, damit jemand als Besitzdiener einer Sache gilt?",
+    "expected_norms": [
+      "§ 855 BGB"
+    ],
+    "expected_keywords": [
+      "Besitzdiener",
+      "tatsächliche Gewalt",
+      "Weisungen"
+    ],
+    "min_sources": 1,
+    "category": "Besitzdiener"
+  }
+]

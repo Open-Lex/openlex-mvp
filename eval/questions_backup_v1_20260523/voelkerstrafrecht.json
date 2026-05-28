@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "skill": "voelkerstrafrecht",
+    "question": "Ein deutscher Staatsbürger begeht im Ausland eine Kriegsverbrechen. Ist das Völkerstrafgesetzbuch anwendbar, wenn die Tat keinen Bezug zum Inland aufweist?",
+    "expected_norms": [
+      "§ 1 VStGB"
+    ],
+    "expected_keywords": [
+      "Völkerstrafgesetzbuch",
+      "Kriegsverbrechen",
+      "Anwendungsbereich"
+    ],
+    "min_sources": 1,
+    "category": "Anwendungsbereich"
+  },
+  {
+    "id": 2,
+    "skill": "voelkerstrafrecht",
+    "question": "Ein Soldat begeht eine Tat nach § 8 VStGB auf Befehl seines Vorgesetzten. Handelt er ohne Schuld, wenn er die Rechtswidrigkeit des Befehls nicht erkennt?",
+    "expected_norms": [
+      "§ 3 VStGB"
+    ],
+    "expected_keywords": [
+      "Handeln auf Befehl",
+      "Schuld",
+      "Rechtswidrigkeit"
+    ],
+    "min_sources": 1,
+    "category": "Schuld und Rechtswidrigkeit"
+  },
+  {
+    "id": 3,
+    "skill": "voelkerstrafrecht",
+    "question": "Ein Ausländer begeht im Inland eine Tat nach § 13 VStGB. Ist das allgemeine Strafrecht anwendbar, wenn das Völkerstrafgesetzbuch keine besonderen Bestimmungen trifft?",
+    "expected_norms": [
+      "§ 2 VStGB"
+    ],
+    "expected_keywords": [
+      "Allgemeines Strafrecht",
+      "Anwendung",
+      "Völkerstrafgesetzbuch"
+    ],
+    "min_sources": 1,
+    "category": "Anwendung des allgemeinen Rechts"
+  },
+  {
+    "id": 4,
+    "skill": "voelkerstrafrecht",
+    "question": "Ein deutscher Staatsbürger begeht im Ausland eine Tat nach § 6 VStGB. Ist das Völkerstrafgesetzbuch anwendbar, wenn die Tat keinen Bezug zum Inland aufweist und das Recht des Tatorts nicht anwendbar ist?",
+    "expected_norms": [
+      "§ 1 VStGB"
+    ],
+    "expected_keywords": [
+      "Völkerstrafgesetzbuch",
+      "Anwendungsbereich",
+      "Tatort"
+    ],
+    "min_sources": 1,
+    "category": "Anwendungsbereich"
+  },
+  {
+    "id": 5,
+    "skill": "voelkerstrafrecht",
+    "question": "Ein Militärführer gibt einen Befehl, der zu einer Tat nach § 9 VStGB führt. Ist der Befehl rechtswidrig, wenn der Militärführer die Rechtswidrigkeit kennt, aber den Befehl dennoch gibt?",
+    "expected_norms": [
+      "§ 3 VStGB"
+    ],
+    "expected_keywords": [
+      "Befehl",
+      "Rechtswidrigkeit",
+      "Militärführer"
+    ],
+    "min_sources": 1,
+    "category": "Schuld und Rechtswidrigkeit"
+  }
+]

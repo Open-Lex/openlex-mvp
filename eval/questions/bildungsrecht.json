@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "skill": "bildungsrecht",
+    "question": "An einer Universität soll ein neuer Studiengang mit einer Regelstudienzeit von 5 Jahren eingeführt werden. Welche rechtliche Grundlage regelt die maximale Regelstudienzeit und welche Ausnahmen sind vorgesehen?",
+    "expected_norms": [
+      "§ 11"
+    ],
+    "expected_keywords": [
+      "Regelstudienzeit",
+      "Studiengänge",
+      "Hochschulen"
+    ],
+    "category": "Studienstruktur"
+  },
+  {
+    "id": 2,
+    "skill": "bildungsrecht",
+    "question": "Eine Hochschule möchte ihre Prüfungsordnung ändern und dabei die Regelstudienzeit erhöhen. Wie regelt das Recht die Genehmigung solcher Änderungen?",
+    "expected_norms": [
+      "§ 16"
+    ],
+    "expected_keywords": [
+      "Abschluß",
+      "Regelstudienzeit",
+      "Prüfungsordnungen"
+    ],
+    "category": "Prüfungsrecht"
+  },
+  {
+    "id": 3,
+    "skill": "bildungsrecht",
+    "question": "Welche Aufgaben haben Hochschulen nach dem Hochschulrahmengesetz im Bereich Lehre und Forschung zu erfüllen?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Lehre",
+      "Hochschulen",
+      "Aufgaben"
+    ],
+    "category": "Hochschulaufgaben"
+  },
+  {
+    "id": 4,
+    "skill": "bildungsrecht",
+    "question": "Welche Hochschulen fallen unter den Anwendungsbereich des Hochschulrahmengesetzes und wie werden staatlich anerkannte Hochschulen behandelt?",
+    "expected_norms": [
+      "§ 1",
+      "§ 70"
+    ],
+    "expected_keywords": [
+      "Hochschulen",
+      "Landesrecht",
+      "Hochschulrahmengesetz"
+    ],
+    "category": "Geltungsbereich"
+  },
+  {
+    "id": 5,
+    "skill": "bildungsrecht",
+    "question": "Ein Student möchte sein Studium absolvieren und fragt, wofür die Regelstudienzeit maßgebend ist und welche Elemente sie einschließt. Wie ist die rechtliche Situation?",
+    "expected_norms": [
+      "§ 10"
+    ],
+    "expected_keywords": [
+      "Studiums",
+      "Regelstudienzeit",
+      "Studiengänge"
+    ],
+    "category": "Studienorganisation"
+  },
+  {
+    "id": 6,
+    "skill": "bildungsrecht",
+    "question": "Ein Studienbewerber wird wegen des NC abgewiesen, obwohl Studienplätze frei wären. Welche Grundrechte sind berührt und was fordert das BVerfG?",
+    "expected_norms": [
+      "Art. 12 GG",
+      "Art. 3 GG"
+    ],
+    "expected_keywords": [
+      "Numerus Clausus",
+      "Teilhaberecht",
+      "Kapazität",
+      "Zulassungsbeschränkung",
+      "Hochschule"
+    ],
+    "category": "Hochschulzulassung NC"
+  },
+  {
+    "id": 7,
+    "skill": "bildungsrecht",
+    "question": "Eine muslimische Lehrerin möchte im Unterricht Kopftuch tragen. Der Schulträger verbietet es. Bedarf das Verbot einer gesetzlichen Grundlage?",
+    "expected_norms": [
+      "Art. 4 GG",
+      "Art. 7 GG"
+    ],
+    "expected_keywords": [
+      "Kopftuch",
+      "Religionsfreiheit",
+      "Lehrerin",
+      "Gesetzesgrundlage",
+      "Ludin",
+      "Neutralitätspflicht"
+    ],
+    "category": "Kopftuch Lehrerin"
+  },
+  {
+    "id": 8,
+    "skill": "bildungsrecht",
+    "question": "Ein pauschales landesrechtliches Kopftuchverbot für Lehrerinnen gilt ohne Nachweis einer konkreten Gefährdung. Ist das verfassungskonform?",
+    "expected_norms": [
+      "Art. 4 GG",
+      "Art. 3 Abs. 3 GG"
+    ],
+    "expected_keywords": [
+      "pauschales Verbot",
+      "konkrete Gefährdung",
+      "Verhältnismäßigkeit",
+      "Schulfrieden",
+      "2015"
+    ],
+    "category": "Kopftuch Plenarentscheidung 2015"
+  },
+  {
+    "id": 9,
+    "skill": "bildungsrecht",
+    "question": "Eltern wollen ihre Kinder aus religiösen Gründen zu Hause unterrichten. Gilt die staatliche Schulpflicht trotzdem?",
+    "expected_norms": [
+      "Art. 7 GG",
+      "Art. 6 Abs. 2 GG"
+    ],
+    "expected_keywords": [
+      "Schulpflicht",
+      "Homeschooling",
+      "Elternrecht",
+      "staatlicher Bildungsauftrag",
+      "Integration"
+    ],
+    "category": "Schulpflicht Homeschooling"
+  },
+  {
+    "id": 10,
+    "skill": "bildungsrecht",
+    "question": "Ausländische Studierende mit bestimmten Aufenthaltstiteln werden vom BAföG ausgeschlossen. Ist das verfassungsgemäß?",
+    "expected_norms": [
+      "Art. 3 GG"
+    ],
+    "expected_keywords": [
+      "BAföG",
+      "Gleichheitssatz",
+      "Aufenthaltstitel",
+      "Ausländer",
+      "Differenzierung"
+    ],
+    "category": "BAföG Gleichbehandlung"
+  }
+]

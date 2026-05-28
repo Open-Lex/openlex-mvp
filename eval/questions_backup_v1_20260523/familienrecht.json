@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "skill": "familienrecht",
+    "question": "Ein Ehepaar lebt in getrennten Haushalten und hat zwei minderjährige Kinder. Welches Gericht ist zuständig für die Entscheidung über das Umgangsrecht?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Umgang",
+      "getrennt",
+      "Kind"
+    ],
+    "min_sources": 2,
+    "category": "Sorge- und Umgangsrecht"
+  },
+  {
+    "id": 2,
+    "skill": "familienrecht",
+    "question": "Ein Gericht hat sich in einem Verfahren über die Scheidung einer Ehe für unzuständig erklärt und die Sache an ein anderes Gericht verwiesen. Was sind die Rechtsgrundlagen für diese Entscheidung?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Unzuständigkeit",
+      "Verweisung",
+      "Scheidung"
+    ],
+    "min_sources": 1,
+    "category": "Gerichtsverfahren"
+  },
+  {
+    "id": 3,
+    "skill": "familienrecht",
+    "question": "Ein Elternteil beantragt die Übertragung des alleinigen Sorgerechts für das Kind. Welche Voraussetzungen müssen erfüllt sein, damit das Gericht diesem Antrag stattgibt?",
+    "expected_norms": [
+      "§ 1671"
+    ],
+    "expected_keywords": [
+      "Sorgerecht",
+      "Elterliche Verantwortung",
+      "Kindeswohl"
+    ],
+    "min_sources": 2,
+    "category": "Sorge- und Umgangsrecht"
+  },
+  {
+    "id": 4,
+    "skill": "familienrecht",
+    "question": "Ein Ehepaar hat sich auf eine Scheidung geeinigt und möchte nun die Scheidung einreichen. Welches Gericht ist für die Entscheidung über die Scheidung zuständig?",
+    "expected_norms": [
+      "§ 1",
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Scheidung",
+      "Gerichtsbarkeit",
+      "Zuständigkeit"
+    ],
+    "min_sources": 2,
+    "category": "Scheidungsrecht"
+  },
+  {
+    "id": 5,
+    "skill": "familienrecht",
+    "question": "Ein Kind wird von einem Elternteil misshandelt. Welche rechtlichen Schritte kann der andere Elternteil unternehmen, um das Kind zu schützen?",
+    "expected_norms": [
+      "§ 1666"
+    ],
+    "expected_keywords": [
+      "Kindeswohl",
+      "Misshandlung",
+      "Schutzmaßnahmen"
+    ],
+    "min_sources": 2,
+    "category": "Kinderschutz"
+  },
+  {
+    "id": 6,
+    "skill": "familienrecht",
+    "question": "Ein Ehepaar hat eine Vereinbarung über die elterliche Sorge getroffen. Welche Rechtsgrundlagen regeln die elterliche Sorge und wie kann diese Vereinbarung geändert werden?",
+    "expected_norms": [
+      "§ 1671 BGB",
+      "§ 1680 BGB"
+    ],
+    "expected_keywords": [
+      "Elterliche Sorge",
+      "Vereinbarung",
+      "Änderung"
+    ],
+    "min_sources": 2,
+    "category": "Sorge- und Umgangsrecht"
+  },
+  {
+    "id": 7,
+    "skill": "familienrecht",
+    "question": "Ein Gericht muss entscheiden, ob ein Elternteil das alleinige Sorgerecht für das Kind erhalten soll. Welche Kriterien muss das Gericht bei seiner Entscheidung berücksichtigen?",
+    "expected_norms": [
+      "§ 1671 BGB",
+      "§ 1680 BGB"
+    ],
+    "expected_keywords": [
+      "Sorgerecht",
+      "Kindeswohl",
+      "Elterliche Verantwortung"
+    ],
+    "min_sources": 2,
+    "category": "Sorge- und Umgangsrecht"
+  },
+  {
+    "id": 8,
+    "skill": "familienrecht",
+    "question": "Ein Ehepaar hat sich auf eine Trennung geeinigt und möchte nun die Trennung formalisieren. Welche rechtlichen Schritte müssen sie unternehmen?",
+    "expected_norms": [
+      "§ 1 FamFG",
+      "§ 2 FamFG"
+    ],
+    "expected_keywords": [
+      "Trennung",
+      "Gerichtsbarkeit",
+      "Zuständigkeit"
+    ],
+    "min_sources": 2,
+    "category": "Trennungsrecht"
+  },
+  {
+    "id": 9,
+    "skill": "familienrecht",
+    "question": "Ein Elternteil beantragt die Übertragung des Aufenthaltsbestimmungsrechts für das Kind. Welche Voraussetzungen müssen erfüllt sein, damit das Gericht diesem Antrag stattgibt?",
+    "expected_norms": [
+      "§ 1671 BGB",
+      "§ 1680 BGB"
+    ],
+    "expected_keywords": [
+      "Aufenthaltsbestimmungsrecht",
+      "Elterliche Verantwortung",
+      "Kindeswohl"
+    ],
+    "min_sources": 2,
+    "category": "Sorge- und Umgangsrecht"
+  },
+  {
+    "id": 10,
+    "skill": "familienrecht",
+    "question": "Ein Gericht muss entscheiden, ob ein Ehepaar geschieden werden kann. Welche Voraussetzungen müssen erfüllt sein, damit das Gericht die Scheidung ausspricht?",
+    "expected_norms": [
+      "§ 1564 BGB",
+      "§ 1565 BGB"
+    ],
+    "expected_keywords": [
+      "Scheidung",
+      "Trennung",
+      "Ehe"
+    ],
+    "min_sources": 2,
+    "category": "Scheidungsrecht"
+  }
+]

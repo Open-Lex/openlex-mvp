@@ -1,0 +1,124 @@
+[
+  {
+    "skill": "voelkerrecht",
+    "n_questions": 5,
+    "avg_score": 81.4,
+    "hallucination_rate": 0.0,
+    "worst_score": 58.5,
+    "best_score": 95.8,
+    "questions": [
+      {
+        "id": null,
+        "question": "Nach Artikel 24 der Charta der Vereinten Nationen übertragen die Mitgliedstaaten dem Sicherheitsrat die Hauptverantwortung für die Wahrung des Weltfriedens und der internationalen Sicherheit. Welche Befugnisse und Handlungsmöglichkeiten hat der Sicherheitsrat bei der Friedenssicherung?",
+        "category": "",
+        "score": 82.5,
+        "answer_excerpt": "# Befugnisse und Handlungsmöglichkeiten des Sicherheitsrats\n\nNach **Artikel 24 UN-Charta** trägt der Sicherheitsrat die exklusive Hauptverantwortung für die Wahrung des Weltfriedens und der internatio",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 21.7
+      },
+      {
+        "id": null,
+        "question": "Im Rahmen der Schengener Vereinbarungen haben sich mehrere europäische Staaten zum schrittweisen Abbau von Grenzkontrollen verpflichtet. Welche Rechte und Pflichten ergeben sich aus dem Schengener Übereinkommen für die Vertragsstaaten?",
+        "category": "",
+        "score": 87.5,
+        "answer_excerpt": "# Rechte und Pflichten aus dem Schengener Übereinkommen\n\n## Hauptrechtliche Grundlagen\n\nDas Schengener Durchführungsübereinkommen (SDÜ) vom 19. Juni 1990 regelt die Rechte und Pflichten der Vertragsst",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.9
+      },
+      {
+        "id": null,
+        "question": "Nach Art. 51 der Charta der Vereinten Nationen bleibt das naturgegebene Recht zur individuellen oder kollektiven Selbstverteidigung unberührt, wenn ein bewaffneter Angriff erfolgt. Welche Voraussetzungen müssen nach Art. 51 UN-Charta für die rechtmäßige Ausübung des Selbstverteidigungsrechts erfüllt sein, und welche Grenzen setzt das Völkerrecht?",
+        "category": "",
+        "score": 82.5,
+        "answer_excerpt": "# Voraussetzungen und Grenzen des Selbstverteidigungsrechts nach Art. 51 UN-Charta\n\n## Voraussetzungen für rechtmäßige Selbstverteidigung\n\nNach [Quelle 2] und [Quelle 3] müssen folgende Voraussetzunge",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.7
+      },
+      {
+        "id": null,
+        "question": "Nach Artikel 34 EMRK können natürliche Personen, nichtstaatliche Organisationen oder Personengruppen Individualbeschwerde beim Europäischen Gerichtshof für Menschenrechte erheben. Welche Voraussetzungen müssen für eine zulässige Individualbeschwerde erfüllt sein?",
+        "category": "",
+        "score": 58.5,
+        "answer_excerpt": "# Voraussetzungen für eine zulässige Individualbeschwerde nach Art. 34 EMRK\n\n## Materiell: Rechtsverletzung durch Hohe Vertragspartei\n\nNach [Quelle 1] muss der Beschwerdeführer behaupten, durch eine H",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.1
+      },
+      {
+        "id": null,
+        "question": "Das Gewaltverbot nach Art. 2 Ziff. 4 der Charta der Vereinten Nationen verbietet Staaten die Anwendung von Gewalt gegen die territoriale Unversehrtheit oder politische Unabhängigkeit anderer Staaten. Welche Ausnahmen lässt die UN-Charta zu, und welche Rolle spielt dabei Art. 51?",
+        "category": "",
+        "score": 95.8,
+        "answer_excerpt": "# Ausnahmen vom Gewaltverbot nach Art. 2 Abs. 4 UN-Charta\n\nDie UN-Charta kennt zwei hauptsächliche Ausnahmen vom Gewaltverbot:\n\n## 1. Selbstverteidigungsrecht (Art. 51 UN-Charta)\n\n**Art. 51** ist die ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "literatur_lehrbuch",
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.4
+      }
+    ],
+    "duration_s": 71.4
+  }
+]

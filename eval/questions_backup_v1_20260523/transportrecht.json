@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "skill": "transportrecht",
+    "question": "Was sind die Voraussetzungen, damit ein Gewerbebetrieb als Handelsgewerbe im Sinne des Handelsgesetzbuchs gilt?",
+    "expected_norms": [
+      "HGB"
+    ],
+    "expected_keywords": [
+      "Gewerbebetrieb",
+      "Handelsgewerbe",
+      "Voraussetzung"
+    ],
+    "min_sources": 2,
+    "category": "Handelsgesetzbuch"
+  },
+  {
+    "id": 2,
+    "skill": "transportrecht",
+    "question": "In welchen Fällen kann ein land- oder forstwirtschaftliches Unternehmen als Handelsgewerbe im Sinne des Handelsgesetzbuchs angesehen werden?",
+    "expected_norms": [
+      "HGB"
+    ],
+    "expected_keywords": [
+      "Betrieb",
+      "Forstwirtschaft",
+      "Ausnahme"
+    ],
+    "min_sources": 2,
+    "category": "Land- und Forstwirtschaft"
+  },
+  {
+    "id": 3,
+    "skill": "transportrecht",
+    "question": "Was sind die Auswirkungen einer Eintragung in das Handelsregister auf ein gewerbliches Unternehmen?",
+    "expected_norms": [
+      "HGB"
+    ],
+    "expected_keywords": [
+      "Handelsregister",
+      "Eintragung",
+      "Unternehmen"
+    ],
+    "min_sources": 2,
+    "category": "Handelsregister"
+  },
+  {
+    "id": 4,
+    "skill": "transportrecht",
+    "question": "Wie wird ein Kaufmann im Sinne des Handelsgesetzbuchs definiert?",
+    "expected_norms": [
+      "HGB"
+    ],
+    "expected_keywords": [
+      "Kaufmann",
+      "Handelsgewerbe",
+      "Gewerbebetrieb"
+    ],
+    "min_sources": 1,
+    "category": "Kaufmann"
+  },
+  {
+    "id": 5,
+    "skill": "transportrecht",
+    "question": "Was sind die Voraussetzungen, damit ein Unternehmen als Handelsgewerbe im Sinne des Handelsgesetzbuchs gilt, wenn es nach Art oder Umfang keinen in kaufmännischer Weise eingerichteten Geschäftsbetrieb erfordert?",
+    "expected_norms": [
+      "HGB"
+    ],
+    "expected_keywords": [
+      "Handelsgewerbe",
+      "Eintragung",
+      "Umfang"
+    ],
+    "min_sources": 2,
+    "category": "Handelsgesetzbuch"
+  },
+  {
+    "id": 6,
+    "skill": "transportrecht",
+    "question": "In welchen Fällen kann ein Unternehmen, das nach Art oder Umfang keinen in kaufmännischer Weise eingerichteten Geschäftsbetrieb erfordert, als Handelsgewerbe im Sinne des Handelsgesetzbuchs angesehen werden?",
+    "expected_norms": [
+      "§ 2 Handelsgesetzbuch",
+      "§ 1 Handelsgesetzbuch"
+    ],
+    "expected_keywords": [
+      "Handelsgewerbe",
+      "Gewerbebetrieb",
+      "Kaufmann"
+    ],
+    "min_sources": 2,
+    "category": "Handelsgesetzbuch"
+  },
+  {
+    "id": 7,
+    "skill": "transportrecht",
+    "question": "Was sind die Auswirkungen einer Löschung der Eintragung in das Handelsregister auf ein land- oder forstwirtschaftliches Unternehmen?",
+    "expected_norms": [
+      "§ 3 Handelsgesetzbuch",
+      "§ 2 Handelsgesetzbuch"
+    ],
+    "expected_keywords": [
+      "Landwirtschaft",
+      "Forstwirtschaft",
+      "Handelsgewerbe"
+    ],
+    "min_sources": 2,
+    "category": "Land- und Forstwirtschaft"
+  },
+  {
+    "id": 8,
+    "skill": "transportrecht",
+    "question": "Wie wird ein Handelsgewerbe im Sinne des Handelsgesetzbuchs definiert, wenn es sich um ein land- oder forstwirtschaftliches Unternehmen handelt?",
+    "expected_norms": [
+      "§ 3 Handelsgesetzbuch",
+      "§ 2 Handelsgesetzbuch"
+    ],
+    "expected_keywords": [
+      "Landwirtschaft",
+      "Forstwirtschaft",
+      "Handelsgewerbe"
+    ],
+    "min_sources": 2,
+    "category": "Land- und Forstwirtschaft"
+  },
+  {
+    "id": 9,
+    "skill": "transportrecht",
+    "question": "Was sind die Voraussetzungen, damit ein Unternehmen als Kaufmann im Sinne des Handelsgesetzbuchs gilt?",
+    "expected_norms": [
+      "§ 1 Handelsgesetzbuch"
+    ],
+    "expected_keywords": [
+      "Kaufmann",
+      "Handelsgewerbe",
+      "Gewerbebetrieb"
+    ],
+    "min_sources": 1,
+    "category": "Kaufmann"
+  },
+  {
+    "id": 10,
+    "skill": "transportrecht",
+    "question": "In welchen Fällen kann ein Unternehmen, das nach Art oder Umfang einen in kaufmännischer Weise eingerichteten Geschäftsbetrieb erfordert, als Handelsgewerbe im Sinne des Handelsgesetzbuchs angesehen werden?",
+    "expected_norms": [
+      "§ 1 Handelsgesetzbuch",
+      "§ 2 Handelsgesetzbuch"
+    ],
+    "expected_keywords": [
+      "Handelsgewerbe",
+      "Gewerbebetrieb",
+      "Kaufmann"
+    ],
+    "min_sources": 2,
+    "category": "Handelsgesetzbuch"
+  }
+]

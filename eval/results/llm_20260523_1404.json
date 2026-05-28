@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "familienrecht",
+    "n_questions": 5,
+    "avg_score": 75.7,
+    "hallucination_rate": 0.0,
+    "worst_score": 57.5,
+    "best_score": 89.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Mein Ex-Partner und ich streiten um das Sorgerecht für unser gemeinsames Kind. Er hat beim Amtsgericht einen Antrag auf alleinige elterliche Sorge gestellt. Unter welchen Voraussetzungen kann einem Elternteil nach § 1671 BGB das alleinige Sorgerecht übertragen werden?",
+        "category": "Gerichtsbarkeit und Zuständigkeit",
+        "score": 63.0,
+        "answer_excerpt": "# Voraussetzungen für alleiniges Sorgerecht nach § 1671 BGB\n\nDie bereitgestellten Quellen enthalten keine explizite Darstellung des § 1671 BGB mit seinen Voraussetzungen. Allerdings lassen sich releva",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.4
+      },
+      {
+        "id": 2,
+        "question": "Meine 15-jährige Tochter soll in einem Sorgerechtsverfahren eigene Verfahrensrechte geltend machen. Ist sie nach dem FamFG verfahrensfähig und kann sie eigenständig Anträge stellen oder sich durch einen Anwalt vertreten lassen?",
+        "category": "Prozessfähigkeit",
+        "score": 57.5,
+        "answer_excerpt": "# Verfahrensfähigkeit und Prozessführung einer 15-Jährigen im Sorgerechtsverfahren\n\n## Allgemeine Verfahrensfähigkeit\n\nNach § 9 Abs. 1 Nr. 3 FamFG sind beschränkt Geschäftsfähige, die das 14. Lebensja",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.5
+      },
+      {
+        "id": 3,
+        "question": "Das Gericht verhandelt über die Unterhaltsregelung für meine Kinder. Meine neue Partnerin möchte als Beistand im Termin neben mir sitzen. Wer darf als Beistand auftreten?",
+        "category": "Vertretung und Beistand",
+        "score": 89.5,
+        "answer_excerpt": "# Wer darf als Beistand im Unterhaltsverfahren auftreten?\n\nNach **§ 12 FamFG** können Sie im Gerichtstermin mit Beiständen erscheinen. Die Regelung definiert zwei Kategorien zulässiger Beiständer:\n\n##",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.2
+      },
+      {
+        "id": 4,
+        "question": "Ich bin als Großmutter sehr besorgt um mein Enkelkind und möchte in dem laufenden Familienverfahren meinen Sorgerechtsstatus berücksichtigt haben. Kann das Gericht mich von Amts wegen zum Verfahren hinzuziehen?",
+        "category": "Beteiligung im Verfahren",
+        "score": 80.9,
+        "answer_excerpt": "# Hinzuziehung von Großeltern in Familienverfahren\n\nBasierend auf den bereitgestellten Quellen kann das Gericht Sie als Großmutter unter bestimmten Bedingungen hinzuziehen:\n\n## Rechtliche Grundlage\n\nN",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 20.0
+      },
+      {
+        "id": 5,
+        "question": "Das Gericht hat mich aufgefordert, ein Gutachten einzureichen, verbietet mir aber die Einsicht in die Akten. Habe ich einen Anspruch auf Akteneinsicht als Beteiligter?",
+        "category": "Verfahrensrechte",
+        "score": 87.5,
+        "answer_excerpt": "# Anspruch auf Akteneinsicht als Beteiligter\n\nJa, Sie haben grundsätzlich einen Anspruch auf Akteneinsicht als Beteiligter, allerdings unter Vorbehalt.\n\n## Gesetzliche Regelung\n\nNach **§ 13 Abs. 1 Fam",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 18.0
+      }
+    ],
+    "duration_s": 84.6
+  }
+]

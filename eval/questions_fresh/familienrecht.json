@@ -1,0 +1,77 @@
+[
+  {
+    "question": "Der 45-jährige Matthias und die 42-jährige Sandra waren 15 Jahre verheiratet. Während der Ehe erwarb Matthias ein Einfamilienhaus im Wert von 400.000 € (finanziert durch Erbschaft) und gründete ein erfolgreiches Softwareunternehmen, das heute 600.000 € wert ist. Sandra arbeitete Teilzeit als Lehrerin und verdiente monatlich 2.500 €. Nach der Scheidung verlangt Sandra Zugewinnausgleich nach § 1378 BGB. Welche Vermögenswerte unterliegen der Zugewinnberechnung und welche sind ausgenommen?",
+    "expected_norms": [
+      "§ 1378 BGB",
+      "§ 1375 BGB",
+      "§ 1384 BGB"
+    ],
+    "expected_keywords": [
+      "Zugewinn",
+      "Anfangsvermögen",
+      "Endvermögen",
+      "Erbschaft",
+      "Ausgleichsforderung"
+    ]
+  },
+  {
+    "question": "Die Eheleute Thomas und Petra lassen sich scheiden. Sie haben zwei Kinder (8 und 11 Jahre alt). Thomas verdient als Ingenieur 5.500 € brutto monatlich, Petra ist arbeitslos und erhält Hartz IV. Thomas möchte das alleinige Sorgerecht für beide Kinder. Petra wendet sich gegen die Sorgerechtsänderung und beruft sich auf § 1666 BGB. Unter welchen Voraussetzungen kann das Sorgerecht des betreuenden Elternteils entzogen werden und welche Rolle spielt das Kindeswohl?",
+    "expected_norms": [
+      "§ 1666 BGB",
+      "§ 1671 BGB",
+      "§ 1687 BGB"
+    ],
+    "expected_keywords": [
+      "Kindeswohl",
+      "Sorgerecht",
+      "Gefährdung",
+      "Entziehung",
+      "elterliche Sorge"
+    ]
+  },
+  {
+    "question": "Der 38-jährige Klaus verdient 4.800 € netto monatlich und ist Vater zweier Kinder (6 und 10 Jahre) aus seiner Ehe mit Jasmin. Nach der Scheidung hat Jasmin die elterliche Sorge; Klaus zahlt Kindesunterhalt nach der Düsseldorfer Tabelle. Nun verliert Klaus seinen Job und verdient nur noch 2.500 € netto. Wie wirkt sich die Einkommensänderung auf seine Unterhaltsverpflichtung nach § 1610 BGB aus und welches Verfahren ist einzuleiten?",
+    "expected_norms": [
+      "§ 1610 BGB",
+      "§ 1613 BGB",
+      "§ 1608 BGB"
+    ],
+    "expected_keywords": [
+      "Unterhaltsänderung",
+      "wesentliche Änderung",
+      "Geschäftsgrundlage",
+      "Mangelfall",
+      "Düsseldorfer Tabelle"
+    ]
+  },
+  {
+    "question": "Melanie und Frank waren 20 Jahre verheiratet und lassen sich nun scheiden. Sie haben ein Kind (14 Jahre), das bei Melanie lebt. Frank verdient 6.000 € netto, Melanie 3.000 € netto. Melanie verlangt Ehegattenunterhalt gemäß § 1569 BGB und begründet dies mit Betreuung des noch schulpflichtigen Kindes. Frank argumentiert, dass Melanie arbeiten könne und daher keinen Anspruch habe. Unter welchen Voraussetzungen besteht ein Unterhaltsanspruch wegen Betreuung eines Kindes?",
+    "expected_norms": [
+      "§ 1569 BGB",
+      "§ 1570 BGB",
+      "§ 1571 BGB"
+    ],
+    "expected_keywords": [
+      "Ehegattenunterhalt",
+      "Betreuung",
+      "Zumutbarkeit",
+      "Billigkeitsprinzip",
+      "Lebensstandardard"
+    ]
+  },
+  {
+    "question": "Die unverheirateten Eltern Laura und Daniel haben ein gemeinsames Kind (3 Jahre). Die Sorge war bislang allein bei Laura. Nun möchte Daniel die gemeinsame elterliche Sorge nach § 1626a BGB erlangen. Laura lehnt ab, weil sie das Kind vor Daniels neuer Partnerin schützen möchte. Daniel hat regelmäßig Umgang. Wie kann Daniel die gemeinsame Sorge erreichen und welche Rolle spielt das Kindeswohl gemäß § 1671 BGB im Verfahren?",
+    "expected_norms": [
+      "§ 1626a BGB",
+      "§ 1671 BGB",
+      "§ 1697a BGB"
+    ],
+    "expected_keywords": [
+      "gemeinsame Sorge",
+      "unverheiratete Eltern",
+      "Kindeswohl",
+      "Sorgerechtsvereinbarung",
+      "Antrag"
+    ]
+  }
+]

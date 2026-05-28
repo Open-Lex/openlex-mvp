@@ -1,0 +1,71 @@
+[
+  {
+    "question": "Soldaten der Armee eines Staates bombardieren während eines bewaffneten Konflikts ein Krankenhaus, das sich in unmittelbarer Nähe zu einer Militäranlage befindet. Sie wissen, dass das Krankenhaus Hunderte von Zivilpersonen beherbergt. Der militärische Vorteil, der durch die Bombardierung erwartet wird, ist marginal. Liegt ein Kriegsverbrechen gemäß Art. 8 Abs. 2 lit. b IStGH-Statut vor?",
+    "expected_norms": [
+      "Art. 8 Abs. 2 lit. b IStGH-Statut",
+      "Art. 8 Abs. 2 lit. e IStGH-Statut"
+    ],
+    "expected_keywords": [
+      "Verhältnismäßigkeit",
+      "Direktangriff auf Zivilpersonen",
+      "militärischer Vorteil",
+      "unterschiedslose Angriffe"
+    ]
+  },
+  {
+    "question": "Ein Regierungschef befiehlt seinen Sicherheitskräften systematisch, Angehörige einer ethnischen Minderheit zu verhaften, zu foltern und zu ermorden. Tausende Menschen werden getötet. Kann dies als Verbrechen gegen die Menschlichkeit nach Art. 7 IStGH-Statut qualifiziert werden? Welche Voraussetzungen müssen erfüllt sein?",
+    "expected_norms": [
+      "Art. 7 IStGH-Statut",
+      "Art. 7 Abs. 1 lit. a und k IStGH-Statut"
+    ],
+    "expected_keywords": [
+      "umfassender oder systematischer Angriff",
+      "Zivilbevölkerung",
+      "Mord",
+      "Verfolgung",
+      "Vorsatz"
+    ]
+  },
+  {
+    "question": "Ein Befehlshaber eines bewaffneten Konflikts unternimmt nichts, obwohl er konkrete Informationen hat, dass seine untergeordneten Soldaten regelmäßig Kriegsverbrechen begehen. Er ignoriert die Berichte und ergreift keine Maßnahmen zur Verhinderung oder Bestrafung. Kann er sich selbst als Kriegsverbrecher verantworten lassen? Auf welche Norm stützt sich dies?",
+    "expected_norms": [
+      "Art. 28 IStGH-Statut",
+      "Art. 8 IStGH-Statut"
+    ],
+    "expected_keywords": [
+      "Verantwortung des Befehlshabers",
+      "Unterordnete",
+      "effective control",
+      "Fahrlässigkeit",
+      "Strafbarkeit durch Unterlassen"
+    ]
+  },
+  {
+    "question": "Ein Politiker wird angeklagt, die Deportation von Tausenden Zivilpersonen angeordnet zu haben. Die Deportationen sind mit Morden, Vergewaltigungen und Plünderungen verbunden. Die Anklage wirft ihm vor, Verbrechen gegen die Menschlichkeit begangen zu haben. Welche Tatbestandsmerkmale nach Art. 7 IStGH-Statut müssen erfüllt sein, und inwieweit ist die Kausalität zwischen Befehl und konkreten Taten relevant?",
+    "expected_norms": [
+      "Art. 7 Abs. 1 lit. d IStGH-Statut",
+      "Art. 25 Abs. 3 lit. a IStGH-Statut"
+    ],
+    "expected_keywords": [
+      "Deportation als Verbrechen gegen die Menschlichkeit",
+      "Befehlshaber-Haftung",
+      "Anstiftung",
+      "umfassender Angriff",
+      "Vorsatz"
+    ]
+  },
+  {
+    "question": "Ein Kommandant einer bewaffneten Gruppe in einem nichtinternationalen bewaffneten Konflikt befiehlt seinen Kämpfern, Schulen und Moscheen als Militärstützpunkte zu nutzen und dort Waffen zu lagern. Dadurch werden diese Orte zu legitimen Angriffszielen. Mehrere Schulen werden bombardiert, es gibt viele zivile Opfer. Handelt es sich um ein Kriegsverbrechen gemäß Art. 8 IStGH-Statut, und gelten hier andere Maßstäbe als bei internationalen Konflikten?",
+    "expected_norms": [
+      "Art. 8 Abs. 2 lit. e IStGH-Statut",
+      "Art. 8 Abs. 2 lit. b IStGH-Statut"
+    ],
+    "expected_keywords": [
+      "nichtinternationaler bewaffneter Konflikt",
+      "Schutz von Kindern",
+      "Schulen als Schutzräume",
+      "unterschiedslose Angriffe",
+      "Anwendungsbereich"
+    ]
+  }
+]

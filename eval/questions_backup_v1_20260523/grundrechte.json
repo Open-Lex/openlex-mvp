@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "question": "Ein Polizist nimmt einem Demonstranten das Megafon ab, um eine Störung der öffentlichen Ordnung zu verhindern. Verletzt dies das Grundrecht auf Meinungsfreiheit?",
+    "category": "Meinungsfreiheit",
+    "expected_norms": [
+      "Meinungsfreiheit"
+    ],
+    "expected_keywords": [
+      "Meinungsfreiheit",
+      "Grundrecht",
+      "Ordnung"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Ein Arbeitnehmer wird wegen seines Alters nicht zu einem Vorstellungsgespräch eingeladen. Ist dies ein Verstoß gegen das Grundgesetz oder einfaches Recht?",
+    "category": "Gleichbehandlung",
+    "expected_norms": [
+      "AGG"
+    ],
+    "expected_keywords": [
+      "Diskriminierung",
+      "Alter",
+      "Recht"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Ein Ehepaar möchte ein Kind adoptieren, aber die Behörde lehnt dies ab wegen abweichender Lebensführung. Welche Grundrechte könnten verletzt sein?",
+    "category": "Gleichbehandlung",
+    "expected_norms": [
+      "Art. 6"
+    ],
+    "expected_keywords": [
+      "Lebensführung",
+      "Adoption",
+      "Grundrecht"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Ein Student wird von der Universität wegen seiner politischen Ansichten exmatrikuliert. Ist dies ein Verstoß gegen die Meinungsfreiheit?",
+    "category": "Meinungsfreiheit",
+    "expected_norms": [
+      "Art. 5"
+    ],
+    "expected_keywords": [
+      "Meinungsfreiheit",
+      "Grundrecht",
+      "Exmatrikulation"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Ein Unternehmen verlangt von Mitarbeitern, ihre privaten Social-Media-Profile offenzulegen. Verletzt dies das Recht auf informationelle Selbstbestimmung?",
+    "category": "Datenschutz",
+    "expected_norms": [
+      "Art. 2",
+      "Art. 1"
+    ],
+    "expected_keywords": [
+      "Selbstbestimmung",
+      "informationell",
+      "Recht"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Ein Beamter wird wegen seiner sexuellen Orientierung schlechter benotet als Kollegen. Verletzt dies das Diskriminierungsverbot des Grundgesetzes?",
+    "category": "Gleichbehandlung",
+    "expected_norms": [
+      "Art. 3",
+      "AGG"
+    ],
+    "expected_keywords": [
+      "Diskriminierungsverbot",
+      "Gleichheitssatz",
+      "sexuelle Orientierung",
+      "Differenzierung"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Eine Behörde veröffentlicht ohne Einwilligung personenbezogene Daten von Bürgern im Internet. Welche Grundrechte werden verletzt?",
+    "category": "Datenschutz",
+    "expected_norms": [
+      "Art. 2",
+      "Art. 1",
+      "Art. 10"
+    ],
+    "expected_keywords": [
+      "informationelle Selbstbestimmung",
+      "Persönlichkeitsrecht",
+      "Datenschutz",
+      "Eingriff"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Die Polizei löst eine Demonstration mit Wasserwerfern auf, obwohl die Versammlung friedlich ist. Welche Grundrechte der Demonstranten werden verletzt?",
+    "category": "Versammlungsfreiheit",
+    "expected_norms": [
+      "Art. 8",
+      "Art. 5",
+      "Art. 19"
+    ],
+    "expected_keywords": [
+      "Versammlungsfreiheit",
+      "friedlich",
+      "Verhältnismäßigkeit",
+      "Grundrechtseingriff"
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Ein Arbeitnehmer wird wegen seines Glaubens bei der Beförderung übergangen. Verletzt dies Art. 3 GG und einfachgesetzliche Vorschriften?",
+    "category": "Gleichbehandlung",
+    "expected_norms": [
+      "Art. 3",
+      "AGG",
+      "Art. 4"
+    ],
+    "expected_keywords": [
+      "Diskriminierung",
+      "Gleichbehandlung",
+      "Religion",
+      "Allgemeines Gleichbehandlungsgesetz"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Ein Universitätsprofessor wird abgemahnt, weil er in einem Blog seine Forschungsmeinung veröffentlicht hat. Schützt die Wissenschaftsfreiheit diese Meinungsäußerung?",
+    "category": "Wissenschaftsfreiheit",
+    "expected_norms": [
+      "Art. 5",
+      "Art. 3"
+    ],
+    "expected_keywords": [
+      "Wissenschaftsfreiheit",
+      "Meinungsfreiheit",
+      "Forschung",
+      "Grundrecht"
+    ]
+  }
+]

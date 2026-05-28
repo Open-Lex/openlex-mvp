@@ -1,0 +1,128 @@
+[
+  {
+    "skill": "datenschutz",
+    "n_questions": 5,
+    "avg_score": 90.2,
+    "hallucination_rate": 0.0,
+    "worst_score": 78.5,
+    "best_score": 98.0,
+    "questions": [
+      {
+        "id": null,
+        "question": "Ein Online-Shop moechte personenbezogene Daten seiner Kunden fuer Werbezwecke verwenden. Auf welche Rechtsgrundlage kann er sich stuetzen, und wann reicht die berechtigte Interesse-Abwaegung als Erlaubnisgrundlage?",
+        "category": "",
+        "score": 98.0,
+        "answer_excerpt": "# Rechtsgrundlagen für Werbung mit Kundendaten\n\n## Verfügbare Rechtsgrundlagen\n\nEin Online-Shop kann sich für Werbung mit Kundendaten auf zwei Rechtsgrundlagen stützen:\n\n1. **Einwilligung der betroffe",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "erwaegungsgrund",
+            "gesetz_granular",
+            "leitlinie",
+            "urteil_segmentiert"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.0
+      },
+      {
+        "id": null,
+        "question": "Eine Privatperson moechte von einem Online-Dienst alle ueber sie gespeicherten Daten loeschen lassen. Unter welchen Voraussetzungen besteht ein Recht auf Loeschung, und welche Ausnahmen gibt es?",
+        "category": "",
+        "score": 89.8,
+        "answer_excerpt": "# Recht auf Löschung nach der DSGVO\n\n## Voraussetzungen für das Löschungsrecht\n\nNach **Art. 17 DSGVO** hat eine Privatperson das Recht, von einem Online-Dienst die Löschung ihrer Daten zu verlangen, w",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "leitlinie"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.1
+      },
+      {
+        "id": null,
+        "question": "Ein Unternehmen erhebt beim Vertragsschluss Kundendaten, informiert die Kunden aber nicht ueber die Datenschutzpraktiken. Welche Informationen muss es mitteilen und welche Folgen hat ein Verstoss gegen die Informationspflichten?",
+        "category": "",
+        "score": 96.0,
+        "answer_excerpt": "# Informationspflichten bei Datenerhebung und Folgen von Verstößen\n\n## Erforderliche Informationen\n\nBei der Erhebung von Kundendaten beim Vertragsschluss muss das Unternehmen gemäß **Art. 13 DSGVO** f",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen",
+            "urteil_segmentiert"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.6
+      },
+      {
+        "id": null,
+        "question": "Eine Aufsichtsbehoerde stellt fest, dass ein Unternehmen schwerwiegend gegen die DSGVO verstossen hat. Welche Massnahmen kann die Behoerde ergreifen und wie hoch koennen Bussgeldstrafen nach der DSGVO sein?",
+        "category": "",
+        "score": 78.5,
+        "answer_excerpt": "# Massnahmen und Bussgelder bei DSGVO-Verstössen\n\n## Verfügbare Massnahmen der Aufsichtsbehörde\n\nDie Datenschutzaufsichtsbehörden verfügen über einen **umfassenden Katalog von Untersuchungs- und Abhil",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "leitlinie"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.1
+      },
+      {
+        "id": null,
+        "question": "Ein Arbeitnehmer moechte wissen, welche personenbezogenen Daten sein Arbeitgeber von ihm verarbeitet. Welche Rechte haben Beschaeftigte gegenueber ihrem Arbeitgeber in Bezug auf die Verarbeitung ihrer Daten?",
+        "category": "",
+        "score": 88.5,
+        "answer_excerpt": "# Rechte von Beschäftigten bezüglich ihrer Daten beim Arbeitgeber\n\n## Auskunftsrecht\n\nDer Arbeitnehmer hat das **Auskunftsrecht nach Art. 15 DS-GVO**. [Quelle 2] Die betroffene Person kann konkret Aus",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "leitlinie"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.2
+      }
+    ],
+    "duration_s": 51.6
+  }
+]

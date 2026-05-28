@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "skill": "bgb_at",
+    "question": "K kauft auf einer Weinversteigerung versehentlich eine Kiste Wein, weil er seinem Bekannten zugewinkt hat. Der Auktionator deutete das Winken als Gebot. Liegt eine wirksame Willenserklärung vor, und kann K das Rechtsgeschäft anfechten? Welche Anfechtungsfrist gilt?",
+    "expected_norms": [
+      "§ 119 BGB",
+      "§ 121 BGB"
+    ],
+    "expected_keywords": [
+      "Erklärungsirrtum",
+      "Willenserklärung",
+      "Anfechtung",
+      "unverzüglich"
+    ],
+    "category": "Anfechtung / Erklärungsirrtum"
+  },
+  {
+    "id": 2,
+    "skill": "bgb_at",
+    "question": "V lässt sich beim Kauf eines Grundstücks von seinem Sohn S vertreten. S kauft das Grundstück gleichzeitig selbst als Käufer und als Vertreter seines Vaters als Verkäufer. Ist der Kaufvertrag wirksam? Welche Norm ist einschlägig, und gibt es Ausnahmen?",
+    "expected_norms": [
+      "§ 181 BGB"
+    ],
+    "expected_keywords": [
+      "Insichgeschäft",
+      "Stellvertretung",
+      "Vollmacht",
+      "Ausnahme"
+    ],
+    "category": "Stellvertretung / Insichgeschäft"
+  },
+  {
+    "id": 3,
+    "skill": "bgb_at",
+    "question": "Eine 80-jährige demente Frau unterschreibt einen Kreditvertrag über 50.000 Euro, bei dem die Zinsen weit über dem Marktdurchschnitt liegen. Ihre Kinder möchten den Vertrag rückgängig machen. Welche Nichtigkeitsgründe kommen in Betracht, und welche Normen greifen ein?",
+    "expected_norms": [
+      "§ 104 BGB",
+      "§ 138 BGB"
+    ],
+    "expected_keywords": [
+      "Geschäftsunfähigkeit",
+      "Sittenwidrigkeit",
+      "Wucher",
+      "Nichtigkeit"
+    ],
+    "category": "Geschäftsunfähigkeit / Sittenwidrigkeit"
+  },
+  {
+    "id": 4,
+    "skill": "bgb_at",
+    "question": "Gläubiger G wartet 4 Jahre lang, ohne seinen fälligen Kaufpreisanspruch gegen S geltend zu machen. S beruft sich auf Verjährung. Ist der Anspruch verjährt? Welche Verjährungsfrist gilt, wann beginnt sie, und welche Wirkung hat die Verjährungseinrede?",
+    "expected_norms": [
+      "§ 195 BGB",
+      "§ 199 BGB",
+      "§ 214 BGB"
+    ],
+    "expected_keywords": [
+      "Regelverjährung",
+      "Verjährungsbeginn",
+      "Kenntnis",
+      "Einrede"
+    ],
+    "category": "Verjährung"
+  },
+  {
+    "id": 5,
+    "skill": "bgb_at",
+    "question": "Ein Mobilfunkanbieter verwendet in seinen AGB eine Klausel, die Kunden verpflichtet, Preiserhöhungen von bis zu 10% jährlich ohne Kündigungsrecht hinzunehmen. Ist diese Klausel wirksam? Welche AGB-rechtlichen Normen sind anwendbar?",
+    "expected_norms": [
+      "§ 305 BGB",
+      "§ 307 BGB",
+      "§ 308 BGB"
+    ],
+    "expected_keywords": [
+      "AGB",
+      "Inhaltskontrolle",
+      "unangemessene Benachteiligung",
+      "Klauselverbot"
+    ],
+    "category": "AGB-Recht"
+  }
+]

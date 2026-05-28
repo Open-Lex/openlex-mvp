@@ -1,0 +1,129 @@
+[
+  {
+    "skill": "waffenrecht",
+    "n_questions": 5,
+    "avg_score": 92.3,
+    "hallucination_rate": 0.0,
+    "worst_score": 89.0,
+    "best_score": 98.0,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Herr Meyer möchte eine Schusswaffe erwerben und besitzen. Welche grundlegenden Voraussetzungen muss er nach § 4 Abs. 1 erfüllen, um eine Erlaubnis zu erhalten?",
+        "category": "Erlaubnisvoraussetzungen",
+        "score": 91.2,
+        "answer_excerpt": "# Voraussetzungen für Schussaffenerwerb nach § 4 Abs. 1 WaffG\n\nNach § 4 Abs. 1 WaffG [Quelle 3, 5] muss Herr Meyer folgende **grundlegende Voraussetzungen** erfüllen:\n\n## 1. **Volljährigkeit**\nHerr Me",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 21.4
+      },
+      {
+        "id": 2,
+        "question": "Frau Schmidt hat eine rechtskräftige Verurteilung zu einer Freiheitsstrafe von 18 Monaten wegen einer vorsätzlichen Straftat erhalten. Kann ihr nach § 5 Abs. 2 eine waffenrechtliche Erlaubnis zum Erwerb von Waffen erteilt werden, und wenn ja, ab wann?",
+        "category": "Zuverlässigkeitsprüfung",
+        "score": 93.8,
+        "answer_excerpt": "# Waffenrechtliche Erlaubnis nach § 5 Abs. 2 WaffG\n\nNein, Frau Schmidt kann **nicht** sofort eine waffenrechtliche Erlaubnis erhalten. Allerdings ist eine spätere Erteilung möglich.\n\n## Rechtliche Sit",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.3
+      },
+      {
+        "id": 3,
+        "question": "Ein 19-jähriger Sportschütze möchte eine Schusswaffe mit einem Kaliber von 5,6 mm lfB erwerben und besitzen. Benötigt er nach § 14 Abs. 1 eine Erlaubnis, oder gibt es eine Ausnahme?",
+        "category": "Sportschützen",
+        "score": 98.0,
+        "answer_excerpt": "# Rechtliche Beurteilung\n\nDer 19-jährige Sportschütze benötigt grundsätzlich **keine Erlaubnis nach § 14 Abs. 1 WaffG** für den Erwerb und Besitz einer Schusswaffe mit 5,6 mm lfB, da eine **Ausnahme**",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.7
+      },
+      {
+        "id": 4,
+        "question": "Welche Informationen muss die zuständige Behörde nach § 5 Absatz 5 bei einer Zuverlässigkeitsprüfung einholen, und von welchen Stellen?",
+        "category": "Behördliche Prüfverfahren",
+        "score": 89.0,
+        "answer_excerpt": "# Informationen zur Zuverlässigkeitsprüfung nach § 5 Abs. 5 WaffG\n\nLeider enthalten die bereitgestellten Quellen keine explizite Auflistung der Informationen, die die zuständige Behörde nach **§ 5 Abs",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.1
+      },
+      {
+        "id": 5,
+        "question": "Unter welchen Voraussetzungen kann nach § 2 Abs. 1 der Umgang mit Waffen oder Munition durch eine Person ausgeübt werden?",
+        "category": "Grundprinzipien",
+        "score": 89.5,
+        "answer_excerpt": "# Voraussetzungen für den Umgang mit Waffen nach § 2 Abs. 1 WaffG\n\nNach § 2 Abs. 1 des Waffengesetzes (WaffG) können nur **Personen, die das 18. Lebensjahr vollendet haben**, Umgang mit Waffen oder Mu",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.2
+      }
+    ],
+    "duration_s": 65.2
+  }
+]

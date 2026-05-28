@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "skill": "sozialrecht",
+    "question": "Welche Aufgaben hat das Sozialgesetzbuch gemäß § 1 SGB I?",
+    "expected_norms": [
+      "§ 1 SGB I"
+    ],
+    "expected_keywords": [
+      "soziale Gerechtigkeit",
+      "soziale Sicherheit",
+      "Sozialleistungen"
+    ],
+    "min_sources": 1,
+    "category": "Sozialgesetzbuch"
+  },
+  {
+    "id": 2,
+    "skill": "sozialrecht",
+    "question": "Was sind soziale Rechte im Sinne des § 2 SGB I?",
+    "expected_norms": [
+      "§ 2 SGB I"
+    ],
+    "expected_keywords": [
+      "soziale Rechte",
+      "Ansprüche",
+      "Voraussetzungen"
+    ],
+    "min_sources": 1,
+    "category": "Soziale Rechte"
+  },
+  {
+    "id": 3,
+    "skill": "sozialrecht",
+    "question": "Wer hat Anspruch auf individuelle Förderung seiner Ausbildung gemäß § 3 SGB I?",
+    "expected_norms": [
+      "§ 3 SGB I"
+    ],
+    "expected_keywords": [
+      "Ausbildung",
+      "individuelle Förderung",
+      "Mittel"
+    ],
+    "min_sources": 1,
+    "category": "Bildungs- und Arbeitsförderung"
+  },
+  {
+    "id": 4,
+    "skill": "sozialrecht",
+    "question": "Was ist das Ziel des Sozialgesetzbuchs?",
+    "expected_norms": [
+      "§ 1 SGB I"
+    ],
+    "expected_keywords": [
+      "soziale Gerechtigkeit",
+      "soziale Sicherheit",
+      "Sozialleistungen"
+    ],
+    "min_sources": 1,
+    "category": "Sozialgesetzbuch"
+  },
+  {
+    "id": 5,
+    "skill": "sozialrecht",
+    "question": "Wie werden soziale Rechte im Sozialgesetzbuch definiert?",
+    "expected_norms": [
+      "§ 2 SGB I"
+    ],
+    "expected_keywords": [
+      "soziale Rechte",
+      "Ansprüche",
+      "Voraussetzungen"
+    ],
+    "min_sources": 1,
+    "category": "Soziale Rechte"
+  },
+  {
+    "id": 6,
+    "skill": "sozialrecht",
+    "question": "Was ist die Bedeutung der individuellen Förderung von Ausbildung?",
+    "expected_norms": [
+      "§ 3 SGB I"
+    ],
+    "expected_keywords": [
+      "Ausbildung",
+      "individuelle Förderung",
+      "Mittel"
+    ],
+    "min_sources": 1,
+    "category": "Bildungs- und Arbeitsförderung"
+  },
+  {
+    "id": 7,
+    "skill": "sozialrecht",
+    "question": "Wie werden Sozialleistungen im Sozialgesetzbuch gestaltet?",
+    "expected_norms": [
+      "§ 1 SGB I"
+    ],
+    "expected_keywords": [
+      "Sozialleistungen",
+      "soziale Gerechtigkeit",
+      "soziale Sicherheit"
+    ],
+    "min_sources": 1,
+    "category": "Sozialgesetzbuch"
+  },
+  {
+    "id": 8,
+    "skill": "sozialrecht",
+    "question": "Was sind die Voraussetzungen für die Inanspruchnahme sozialer Rechte?",
+    "expected_norms": [
+      "§ 2 SGB I"
+    ],
+    "expected_keywords": [
+      "soziale Rechte",
+      "Ansprüche",
+      "Voraussetzungen"
+    ],
+    "min_sources": 1,
+    "category": "Soziale Rechte"
+  },
+  {
+    "id": 9,
+    "skill": "sozialrecht",
+    "question": "Wie wird die Bildungs- und Arbeitsförderung im Sozialgesetzbuch geregelt?",
+    "expected_norms": [
+      "§ 3 SGB I"
+    ],
+    "expected_keywords": [
+      "Bildungs- und Arbeitsförderung",
+      "Ausbildung",
+      "Mittel"
+    ],
+    "min_sources": 1,
+    "category": "Bildungs- und Arbeitsförderung"
+  },
+  {
+    "id": 10,
+    "skill": "sozialrecht",
+    "question": "Was ist die Rolle des Sozialgesetzbuchs bei der Verwirklichung sozialer Gerechtigkeit?",
+    "expected_norms": [
+      "§ 1 SGB I"
+    ],
+    "expected_keywords": [
+      "soziale Gerechtigkeit",
+      "soziale Sicherheit",
+      "Sozialleistungen"
+    ],
+    "min_sources": 1,
+    "category": "Sozialgesetzbuch"
+  }
+]

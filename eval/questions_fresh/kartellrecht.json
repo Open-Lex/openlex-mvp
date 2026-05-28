@@ -1,0 +1,66 @@
+[
+  {
+    "question": "Die Automobilhersteller A und B vereinbaren in regelmäßigen Treffen ihrer Geschäftsführer, ihre Verkaufspreise für Ersatzteile nicht unter eine bestimmte Preisschwelle zu senken. Diese Absprache wird über mehrere Jahre hinweg eingehalten. Verstößt diese Vereinbarung gegen das Kartellverbot nach § 1 GWB, und welche Rechtsfolgen drohen?",
+    "expected_norms": [
+      "§ 1 GWB",
+      "§ 81 GWB"
+    ],
+    "expected_keywords": [
+      "Kartellabsprache",
+      "Wettbewerbsbeschränkung",
+      "Preisabsprache",
+      "Ordnungswidrigkeit"
+    ]
+  },
+  {
+    "question": "Das Pharmaunternehmen X besitzt eine Marktposition von 75 % im Markt für ein bestimmtes Antibiotikum. Es verweigert anderen Anbietern wiederholt, ihnen diesen Wirkstoff zu angemessenen Bedingungen zu liefern, obwohl es technisch dazu in der Lage ist. Könnte dies einen Missbrauch gemäß § 19 GWB darstellen, und nach welchen Kriterien wird das beurteilt?",
+    "expected_norms": [
+      "§ 19 GWB",
+      "§ 19a GWB"
+    ],
+    "expected_keywords": [
+      "marktbeherrschende Stellung",
+      "Missbrauch",
+      "Verweigerung",
+      "objektive Rechtfertigung"
+    ]
+  },
+  {
+    "question": "Der Technologiekonzern P plant die Übernahme seines direkten Konkurrenten Q. Der aggregierte Umsatz beider Unternehmen beträgt in Deutschland 450 Millionen Euro. Ist diese Fusion meldepflichtig, und an welche Behörde erfolgt die Meldung gemäß dem Fusionskontrollrecht?",
+    "expected_norms": [
+      "§ 37 GWB",
+      "§ 35 GWB"
+    ],
+    "expected_keywords": [
+      "Meldepflicht",
+      "Schwellenwerte",
+      "Gesamtumsatz",
+      "Bundeskartellamt"
+    ]
+  },
+  {
+    "question": "Drei Anbieter von Paketdienstleistungen stimmen ab, dass jeder von ihnen seine Serviceleistungen nur in einem bestimmten regionalen Gebiet anbietet und die anderen Regionen meiden wird. Dies soll kostensparend sein und zu stabilen Marktanteilen führen. Handelt es sich um eine vertikale oder horizontale Absprache nach § 1 GWB, und welche praktische Bedeutung hat diese Einordnung?",
+    "expected_norms": [
+      "§ 1 GWB",
+      "§ 2 GWB"
+    ],
+    "expected_keywords": [
+      "horizontale Vereinbarung",
+      "Marktaufteilung",
+      "Wettbewerbsbeschränkung",
+      "Grundform"
+    ]
+  },
+  {
+    "question": "Ein großer Einzelhandelskette mit erheblicher Nachfragemacht fordert ihre Lieferanten systematisch auf, ihnen Rabatte zu gewähren, die sie anderen Einzelhandelsketten nicht anbieten. Die Lieferanten haben faktisch keine Alternative, da sie ohne diese Kette am Markt nicht bestehen können. Könnte ein Missbrauch relativer Marktmacht nach § 19a GWB vorliegen, und welche Voraussetzungen müssen erfüllt sein?",
+    "expected_norms": [
+      "§ 19a GWB"
+    ],
+    "expected_keywords": [
+      "relative Marktmacht",
+      "Abhängigkeit",
+      "Nachfragemacht",
+      "unangemessene Geschäftsbedingungen"
+    ]
+  }
+]

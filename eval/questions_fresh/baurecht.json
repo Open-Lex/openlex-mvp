@@ -1,0 +1,73 @@
+[
+  {
+    "question": "Der Eigentümer eines Grundstücks in einem Wohngebiet möchte ein Mehrfamilienhaus mit 8 Wohneinheiten errichten. Der geltende Bebauungsplan sieht für dieses Gebiet eine maximale Grundflächenzahl (GRZ) von 0,4 und eine Geschossflächenzahl (GFZ) von 1,2 vor. Das geplante Gebäude würde eine GRZ von 0,45 und eine GFZ von 1,3 erreichen. Kann der Eigentümer die Baugenehmigung erhalten, oder verstößt das Vorhaben gegen zwingende Festsetzungen des Bebauungsplans?",
+    "expected_norms": [
+      "§ 30 Abs. 1 BauGB",
+      "§ 16 Abs. 2 BauNVO"
+    ],
+    "expected_keywords": [
+      "Einhaltung Bebauungsplan",
+      "Grundflächenzahl",
+      "Geschossflächenzahl",
+      "Abweichung",
+      "Befreiung"
+    ]
+  },
+  {
+    "question": "Ein Bauherr reicht einen Bauantrag für die Errichtung eines Wohngebäudes ein. Die zuständige Baubehörde teilt ihm mit, dass das Vorhaben außerhalb eines geltenden Bebauungsplans liegt. Das Grundstück befindet sich im Außenbereich einer kleinen Gemeinde. Nach welcher Norm wird die Zulässigkeit des Vorhabens beurteilt, und welche wesentlichen Anforderungen muss der Bauherr erfüllen?",
+    "expected_norms": [
+      "§ 35 BauGB",
+      "§ 30 BauGB"
+    ],
+    "expected_keywords": [
+      "Außenbereich",
+      "privilegierte Vorhaben",
+      "Erschließung",
+      "städtebaulich sinnvoll",
+      "Privilegierungsklauseln"
+    ]
+  },
+  {
+    "question": "Eine Gemeinde hat einen Bebauungsplan aufgestellt, der für ein bestimmtes Wohngebiet Einzelhausbebauung mit maximal zwei Geschossen vorsieht. Ein Investor möchte auf einem Grundstück in diesem Gebiet ein dreigeschossiges Apartmentgebäude errichten. Die Gemeinde lehnt dies ab. Welche Voraussetzungen müssten erfüllt sein, damit der Investor trotzdem eine Baugenehmigung erhalten könnte, und auf welche Norm stützt sich dies?",
+    "expected_norms": [
+      "§ 31 BauGB",
+      "§ 70 LBO (Landesbauordnung)"
+    ],
+    "expected_keywords": [
+      "Befreiung von Festsetzungen",
+      "öffentliche Belange",
+      "Nachbarinteressen",
+      "Ausnahmeverfahren",
+      "Abweichung"
+    ]
+  },
+  {
+    "question": "Ein bestehendes Wohngebäude wird durch einen Brand zerstört. Der Eigentümer möchte es auf der gleichen Fläche wiedererrichten, wobei das neue Gebäude aufgrund moderner Baustandards 15% größer werden soll. Das Grundstück liegt in einem Gebiet mit verbindlichem Bebauungsplan, der die ursprüngliche Größe festsetzt. Ist eine Baugenehmigung möglich, und unter welcher rechtlichen Grundlage?",
+    "expected_norms": [
+      "§ 34 BauGB",
+      "§ 30 BauGB"
+    ],
+    "expected_keywords": [
+      "Wiedererrichtung",
+      "Wiederaufbau",
+      "wesentliche Änderung",
+      "Bebauungsplan-Bindung",
+      "baurechtliche Zulässigkeit"
+    ]
+  },
+  {
+    "question": "Eine Gemeinde plant die Aufstellung eines Bebauungsplans für ein neues Wohngebiet. Bei der Beteiligung der Öffentlichkeit nach § 3 BauGB trägt ein Bürger vor, dass das geplante Vorhaben seine Belange beeinträchtigt. Die Gemeinde ignoriert diesen Einwand und beschließt den Bebauungsplan unverändert. Welche Rechtfolgen kann dies haben, und welches Verfahren steht dem Bürger offen?",
+    "expected_norms": [
+      "§ 3 BauGB",
+      "§ 4 BauGB",
+      "§ 215 BauGB"
+    ],
+    "expected_keywords": [
+      "Öffentlichkeitsbeteiligung",
+      "Abwägung",
+      "Anfechtung",
+      "Klagebefugnis",
+      "Verfahrensfehler"
+    ]
+  }
+]

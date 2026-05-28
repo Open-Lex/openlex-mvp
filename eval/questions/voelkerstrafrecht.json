@@ -1,0 +1,157 @@
+[
+  {
+    "id": 1,
+    "skill": "voelkerstrafrecht",
+    "question": "Ein Soldat tötet während eines internationalen bewaffneten Konflikts absichtlich eine Zivilperson, die nicht an den Kampfhandlungen beteiligt ist. Welche Norm des Völkerstrafgesetzbuches ist einschlägig, und welche Tatbestandsmerkmale müssen erfüllt sein?",
+    "expected_norms": [
+      "§ 11"
+    ],
+    "expected_keywords": [
+      "bewaffneten Konflikt",
+      "Tatbestand",
+      "Zivilperson"
+    ],
+    "category": "Kriegsverbrechen"
+  },
+  {
+    "id": 2,
+    "skill": "voelkerstrafrecht",
+    "question": "Ein Militärbefehlshaber begeht eine Tat nach den §§ 6 bis 12 des Völkerstrafgesetzbuchs im Ausland, ohne dass ein Bezug zum Inland besteht. Nach welcher Vorschrift ist diese Tat dennoch strafbar?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Anwendungsbereich",
+      "Tatbestand",
+      "VStGB",
+      "Strafbarkeit"
+    ],
+    "category": "Anwendungsbereich"
+  },
+  {
+    "id": 3,
+    "skill": "voelkerstrafrecht",
+    "question": "Ein Untergebener begeht während eines bewaffneten Konflikts ein Kriegsverbrechen. Sein Vorgesetzter unterlässt es, unverzüglich die zuständige Behörde zu benachrichtigen. Welche Bestimmung wird verletzt und welche Freiheitsstrafe ist vorgesehen?",
+    "expected_norms": [
+      "§ 15"
+    ],
+    "expected_keywords": [
+      "Vorgesetzter",
+      "Untergebener",
+      "Kriegsverbrechen",
+      "Strafbarkeit"
+    ],
+    "category": "Pflichten des Vorgesetzten"
+  },
+  {
+    "id": 4,
+    "skill": "voelkerstrafrecht",
+    "question": "Ein Täter verfolgt systematisch eine identifizierbare Gruppe aus rassischen Gründen und entzieht ihr grundlegende Menschenrechte. Welche Straftat liegt vor und welche Mindestfreiheitsstrafe droht?",
+    "expected_norms": [
+      "§ 6"
+    ],
+    "expected_keywords": [
+      "Völkermord",
+      "systematisch",
+      "Gruppe"
+    ],
+    "category": "Verbrechen gegen die Menschlichkeit"
+  },
+  {
+    "id": 5,
+    "skill": "voelkerstrafrecht",
+    "question": "Ein Befehlshaber ordnet an, dass eine nationale Gruppe durch Maßnahmen zur Verhinderung von Geburten zerstört werden soll. Welche Norm ist einschlägig und wie lautet die Strafandrohung?",
+    "expected_norms": [
+      "§ 6"
+    ],
+    "expected_keywords": [
+      "Völkermord",
+      "Gruppe",
+      "Vernichtung"
+    ],
+    "category": "Völkermord"
+  },
+  {
+    "id": 6,
+    "skill": "voelkerstrafrecht",
+    "question": "Ist der ICTY durch den UN-Sicherheitsrat rechtmäßig errichtet worden, und was ist der 'Overall Control'-Test?",
+    "expected_norms": [
+      "Art. 39 UN-Charta"
+    ],
+    "expected_keywords": [
+      "ICTY",
+      "Sicherheitsrat",
+      "Overall Control",
+      "internationaler Konflikt",
+      "Tadic",
+      "Jurisdiktion"
+    ],
+    "category": "ICTY Jurisdiktion / Overall Control"
+  },
+  {
+    "id": 7,
+    "skill": "voelkerstrafrecht",
+    "question": "Welches war das erste Urteil des Internationalen Strafgerichtshofs, und worum ging es?",
+    "expected_norms": [
+      "Art. 8 IStGH-Statut"
+    ],
+    "expected_keywords": [
+      "ICC",
+      "Lubanga",
+      "Kindersoldaten",
+      "Kriegsverbrechen",
+      "erste Verurteilung"
+    ],
+    "category": "ICC Lubanga / Kindersoldaten"
+  },
+  {
+    "id": 8,
+    "skill": "voelkerstrafrecht",
+    "question": "Kann der ICC einen amtierenden Staatspräsidenten verhaften lassen, und genießt dieser Immunität?",
+    "expected_norms": [
+      "Art. 27 IStGH-Statut"
+    ],
+    "expected_keywords": [
+      "Immunität",
+      "Al-Bashir",
+      "Staatschef",
+      "Haftbefehl",
+      "Art. 27"
+    ],
+    "category": "Immunität Staatschef / Al-Bashir"
+  },
+  {
+    "id": 9,
+    "skill": "voelkerstrafrecht",
+    "question": "Ein Militärkommandeur kontrolliert eine Miliz nicht direkt, aber die Miliz begeht Kriegsverbrechen. Haftet er strafrechtlich?",
+    "expected_norms": [
+      "Art. 28 IStGH-Statut",
+      "§ 4 VStGB"
+    ],
+    "expected_keywords": [
+      "Vorgesetztenverantwortlichkeit",
+      "effektive Kontrolle",
+      "Unterlassen",
+      "Katanga",
+      "Beihilfe"
+    ],
+    "category": "Vorgesetztenverantwortlichkeit"
+  },
+  {
+    "id": 10,
+    "skill": "voelkerstrafrecht",
+    "question": "Nach deutschem Recht wurde ein ruandischer Ex-Bürgermeister wegen Unterlassens bei Massakern verurteilt. Welches Gesetz gilt, und was sind die Voraussetzungen?",
+    "expected_norms": [
+      "§ 4 VStGB",
+      "§ 7 StGB"
+    ],
+    "expected_keywords": [
+      "VStGB",
+      "Vorgesetztenverantwortlichkeit",
+      "effektive Kontrolle",
+      "Weltrechtsprinzip",
+      "BGH"
+    ],
+    "category": "VStGB Vorgesetztenverantwortlichkeit"
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "skill": "sportrecht",
+    "n_questions": 5,
+    "avg_score": 0.0,
+    "hallucination_rate": 0.0,
+    "worst_score": 0,
+    "best_score": 0,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Welche Haftpflichtversicherung schützt Vereinsmitglieder, wenn sie bei Vereinsaktivitäten Schäden anrichten? Welche Rolle spielt § 31a BGB?",
+        "category": "Vereinshaftung",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 8.8
+      },
+      {
+        "id": 2,
+        "question": "Ein Fußballverein möchte sich als eingetragener Verein im Vereinsregister eintragen lassen. Welche Voraussetzungen müssen erfüllt sein?",
+        "category": "Vereinsregistrierung",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.4
+      },
+      {
+        "id": 3,
+        "question": "Ein Sportverein möchte seine Mitgliedsbeiträge erhöhen. Welche Voraussetzungen muss eine Satzungsänderung nach dem BGB erfüllen?",
+        "category": "Satzungsänderung",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.4
+      },
+      {
+        "id": 4,
+        "question": "Was muss eine gültige Vereinssatzung nach dem BGB mindestens enthalten, und welche Angaben sind für die Eintragung ins Vereinsregister zwingend?",
+        "category": "Vereinssatzung",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.4
+      },
+      {
+        "id": 5,
+        "question": "Wie wird ein Sportverein aufgelöst, und was passiert mit dem Vereinsvermögen nach der Auflösung?",
+        "category": "Vereinsauflösung",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.4
+      }
+    ],
+    "duration_s": 10.3
+  }
+]

@@ -1,0 +1,118 @@
+[
+  {
+    "skill": "transportrecht",
+    "n_questions": 5,
+    "avg_score": 76.5,
+    "hallucination_rate": 0.0,
+    "worst_score": 72.7,
+    "best_score": 81.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Was sind die Voraussetzungen, damit ein Gewerbebetrieb als Handelsgewerbe im Sinne des Handelsgesetzbuchs gilt?",
+        "category": "Handelsgesetzbuch",
+        "score": 74.7,
+        "answer_excerpt": "# Voraussetzungen für ein Handelsgewerbe im Sinne des HGB\n\nEin Gewerbebetrieb kann auf zwei Wegen als Handelsgewerbe qualifiziert werden:\n\n## 1. Handelsgewerbe kraft Natur (§ 1 Abs. 2 HGB)\n\nNach **§ 1",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 20.0
+      },
+      {
+        "id": 2,
+        "question": "In welchen Fällen kann ein land- oder forstwirtschaftliches Unternehmen als Handelsgewerbe im Sinne des Handelsgesetzbuchs angesehen werden?",
+        "category": "Land- und Forstwirtschaft",
+        "score": 72.7,
+        "answer_excerpt": "# Land- und forstwirtschaftliche Unternehmen als Handelsgewerbe\n\nGrundsätzlich gilt: **Land- und forstwirtschaftliche Betriebe sind vom Handelsgewerbe ausgenommen**. Nach § 3 Abs. 1 HGB finden die Vor",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 15.4
+      },
+      {
+        "id": 3,
+        "question": "Was sind die Auswirkungen einer Eintragung in das Handelsregister auf ein gewerbliches Unternehmen?",
+        "category": "Handelsregister",
+        "score": 79.2,
+        "answer_excerpt": "# Auswirkungen der Handelsregistereintragung auf ein gewerbliches Unternehmen\n\nDie Eintragung in das Handelsregister hat erhebliche rechtliche Konsequenzen für ein gewerbliches Unternehmen:\n\n## Status",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 12.4
+      },
+      {
+        "id": 4,
+        "question": "Wie wird ein Kaufmann im Sinne des Handelsgesetzbuchs definiert?",
+        "category": "Kaufmann",
+        "score": 81.2,
+        "answer_excerpt": "# Definition des Kaufmanns im Handelsgesetzbuch\n\nNach dem Handelsgesetzbuch (HGB) wird ein Kaufmann in **§ 1** definiert [Quelle 1]:\n\n## Grunddefinition\n\n**§ 1 Abs. 1 HGB** legt fest: „Kaufmann im Sin",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 12.6
+      },
+      {
+        "id": 5,
+        "question": "Was sind die Voraussetzungen, damit ein Unternehmen als Handelsgewerbe im Sinne des Handelsgesetzbuchs gilt, wenn es nach Art oder Umfang keinen in kaufmännischer Weise eingerichteten Geschäftsbetrieb erfordert?",
+        "category": "Handelsgesetzbuch",
+        "score": 74.7,
+        "answer_excerpt": "# Voraussetzungen für Handelsgewerbe bei Kleingewerbetreibenden\n\nWenn ein gewerbliches Unternehmen nach Art oder Umfang **keinen in kaufmännischer Weise eingerichteten Geschäftsbetrieb erfordert**, ka",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 13.5
+      }
+    ],
+    "duration_s": 75.5
+  }
+]

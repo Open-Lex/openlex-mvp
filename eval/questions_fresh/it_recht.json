@@ -1,0 +1,80 @@
+[
+  {
+    "question": "Ein Softwareunternehmen lizenziert seine Buchhaltungssoftware an einen Mittelständler unter einer Einzelplatzlizenz für 2.500 EUR. Der Mittelständler installiert die Software daraufhin auf 5 Computern in seiner Buchhaltungsabteilung, damit mehrere Mitarbeiter parallel darauf zugreifen können. Das Softwareunternehmen entdeckt dies bei einer Lizenzprüfung. Ist das Softwareunternehmen berechtigt, Schadensersatz zu fordern, und welche rechtlichen Grundlagen greifen hier ein?",
+    "expected_norms": [
+      "§ 69c UrhG",
+      "§ 97 UrhG",
+      "§ 280 BGB"
+    ],
+    "expected_keywords": [
+      "Vervielfältigungsrecht",
+      "Nutzungshandlung",
+      "Lizenzverletzung",
+      "Schadensersatz"
+    ]
+  },
+  {
+    "question": "Ein Online-Versandhändler nutzt eine Cloud-basierte E-Commerce-Plattform eines US-amerikanischen Anbieters. Die Plattform speichert automatisch IP-Adressen und Browserdaten aller Website-Besucher auf Servern in den USA. Der Anbieter informiert den Händler, dass eine Datenschutzerklärung nicht erforderlich sei, da der Anbieter selbst die Daten verarbeite. Verstößt dies gegen deutsches und europäisches Datenschutzrecht und wer trägt die Verantwortung?",
+    "expected_norms": [
+      "Art. 13 DSGVO",
+      "Art. 6 DSGVO",
+      "Art. 28 DSGVO",
+      "§ 7 TMG"
+    ],
+    "expected_keywords": [
+      "Auftragsverarbeiter",
+      "Datenverarbeiter",
+      "Transparenzpflicht",
+      "Datenübermittlung",
+      "Verantwortlichkeit"
+    ]
+  },
+  {
+    "question": "Ein Unternehmen betreibt ein Enterprise-Resource-Planning-System (ERP), das von einem IT-Dienstleister gehostet wird. Aufgrund einer fehlerhaften Sicherheitskonfiguration des Dienstleisters werden Kundendaten von Hackern gestohlen. Das Unternehmen muss Schadensersatz an die betroffenen Kunden zahlen und fordert diesen vom IT-Dienstleister zurück. Welche Haftungsregelungen greifen und kann das Unternehmen seinen Schaden vollständig ersetzen bekommen?",
+    "expected_norms": [
+      "§ 7 TMG",
+      "§ 8 TMG",
+      "§ 280 BGB",
+      "§ 823 BGB"
+    ],
+    "expected_keywords": [
+      "Störerhaftung",
+      "Verschuldenshaftung",
+      "Mitverschulden",
+      "IT-Dienstleister",
+      "Schadensersatzpflicht"
+    ]
+  },
+  {
+    "question": "Ein Software-Entwickler programmiert eine Applikation und stellt diese kostenlos unter einer GPL-Lizenz zur Verfügung. Ein Konkurrenzunternehmen nutzt große Teile des Quellcodes, modifiziert ihn und verkauft die resultierende Software als proprietäre Lösung ohne Quelltextoffenlegung. Der Entwickler erfährt davon und möchte rechtlich dagegen vorgehen. Welche Rechte hat er und auf welcher rechtlichen Grundlage kann er Ansprüche geltend machen?",
+    "expected_norms": [
+      "§ 69a UrhG",
+      "§ 69d UrhG",
+      "§ 97 UrhG",
+      "§ 1004 BGB"
+    ],
+    "expected_keywords": [
+      "Copyleft-Lizenz",
+      "GPL-Lizenz",
+      "Lizenzverstoß",
+      "Urheberrecht",
+      "Anspruch auf Unterlassung"
+    ]
+  },
+  {
+    "question": "Ein Unternehmen betreibt ein internes Netzwerk mit automatischer Logging-Funktion, die alle Mitarbeiterzugriffe auf das Internet speichert. Ziel ist es, die Einhaltung von Sicherheitsrichtlinien zu überwachen. Das Unternehmen sammelt dabei auch Metadaten privater E-Mails und besuchter privater Websites. Welche datenschutzrechtlichen Anforderungen muss das Unternehmen erfüllen und inwieweit ist eine solche Überwachung rechtmäßig?",
+    "expected_norms": [
+      "Art. 6 DSGVO",
+      "Art. 9 DSGVO",
+      "§ 26 BDSG",
+      "§ 4 TTDSG"
+    ],
+    "expected_keywords": [
+      "Rechtsgrundlage",
+      "Verhältnismäßigkeit",
+      "Beschäftigtendaten",
+      "Mitarbeiterkontrolle",
+      "Transparenzgebot"
+    ]
+  }
+]

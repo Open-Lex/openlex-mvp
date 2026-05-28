@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Welche Grundprinzipien legt der Weltraumvertrag von 1967 für die Nutzung des Weltraums durch Staaten fest? Nennen Sie die zentralen Rechtsgrundsätze.",
+    "expected_norms": [
+      "Weltraumvertrag"
+    ],
+    "expected_keywords": [
+      "Freiheit",
+      "Staaten",
+      "Erforschung",
+      "friedlich"
+    ]
+  },
+  {
+    "question": "Was regelt Art. VI des Weltraumvertrags über die staatliche Verantwortlichkeit für private Weltraumaktivitäten, und welche Pflichten haben Vertragsstaaten gegenüber privaten Unternehmen?",
+    "expected_norms": [
+      "Weltraumvertrag"
+    ],
+    "expected_keywords": [
+      "verantwort",
+      "Staat",
+      "private",
+      "Aktivitäten"
+    ]
+  },
+  {
+    "question": "Welche fünf völkerrechtlichen Übereinkommen bilden das internationale Weltraumrechtsregime der Vereinten Nationen, und welchen rechtlichen Status haben sie?",
+    "expected_norms": [
+      "Weltraumvertrag"
+    ],
+    "expected_keywords": [
+      "Haftung",
+      "Mondvertrag",
+      "Übereinkommen",
+      "Weltraumrecht"
+    ]
+  },
+  {
+    "question": "Was enthält das Haftungsübereinkommen von 1972 über die internationale Haftung für Schäden durch Weltraumgegenstände, und wer haftet für Schäden?",
+    "expected_norms": [
+      "Haftungsübereinkommen"
+    ],
+    "expected_keywords": [
+      "Haftung",
+      "Staat",
+      "Weltraum",
+      "Schaden"
+    ]
+  },
+  {
+    "question": "Welche Regelungen sieht das Mondvertrag-Übereinkommen von 1979 vor, und warum wurde es nur von wenigen Staaten ratifiziert? Was gilt für Ressourcen auf dem Mond?",
+    "expected_norms": [
+      "Mondvertrag"
+    ],
+    "expected_keywords": [
+      "Mondvertrag",
+      "Ressourcen",
+      "Erbe",
+      "ratifizier"
+    ]
+  }
+]

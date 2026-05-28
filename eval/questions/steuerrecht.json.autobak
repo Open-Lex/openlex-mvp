@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "skill": "steuerrecht",
+    "question": "Ein Finanzamt muss entscheiden, ob es eine Maßnahme durchführt. Welche gesetzliche Grundlage regelt, wie das Finanzamt sein Ermessen ausüben darf?",
+    "expected_norms": [
+      "§ 5"
+    ],
+    "expected_keywords": [
+      "Ermessen",
+      "Finanzbehörden",
+      "Gesetz"
+    ],
+    "category": "Allgemeine Verfahrensvorschriften"
+  },
+  {
+    "id": 2,
+    "skill": "steuerrecht",
+    "question": "Welche Behördenarten werden nach der Abgabenordnung als Finanzbehörden definiert und welche Normen regeln dies?",
+    "expected_norms": [
+      "§ 6"
+    ],
+    "expected_keywords": [
+      "Finanzbehörden",
+      "Behörden",
+      "Körperschaften"
+    ],
+    "category": "Behördliche Zuständigkeit"
+  },
+  {
+    "id": 3,
+    "skill": "steuerrecht",
+    "question": "Eine Körperschaft hat ihren Sitz im Ausland und die Geschäftsleitung im Inland. Welche steuerrechtliche Behandlung sieht die Abgabenordnung vor, und unter welcher Norm ist dies geregelt?",
+    "expected_norms": [
+      "§ 11"
+    ],
+    "expected_keywords": [
+      "Körperschaften",
+      "Sitz",
+      "Geschäftsleitung"
+    ],
+    "category": "Steuerliche Begriffsbestimmungen"
+  },
+  {
+    "id": 4,
+    "skill": "steuerrecht",
+    "question": "Welche Bestandteile zählen nach der Abgabenordnung zu den steuerlichen Nebenleistungen, einschließlich Zinsen und Zuschlägen?",
+    "expected_norms": [
+      "§ 200a",
+      "§ 233",
+      "§ 10"
+    ],
+    "expected_keywords": [
+      "Nebenleistungen",
+      "Zinsen",
+      "Zuschläge"
+    ],
+    "category": "Steuerschuldrecht"
+  },
+  {
+    "id": 5,
+    "skill": "steuerrecht",
+    "question": "Für welche Realsteuern gelten die Vorschriften der Abgabenordnung, wenn deren Verwaltung den Gemeinden übertragen wurde, und auf welche Abschnitte findet eine entsprechende Anwendung statt?",
+    "expected_norms": [
+      "§ 1",
+      "§ 82"
+    ],
+    "expected_keywords": [
+      "Realsteuern",
+      "Vorschriften",
+      "Gemeinden"
+    ],
+    "category": "Anwendungsbereich der Abgabenordnung"
+  }
+]

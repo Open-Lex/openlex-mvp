@@ -1,0 +1,128 @@
+[
+  {
+    "skill": "ki_recht",
+    "n_questions": 5,
+    "avg_score": 68.8,
+    "hallucination_rate": 0.0,
+    "worst_score": 55.8,
+    "best_score": 90.8,
+    "questions": [
+      {
+        "id": null,
+        "question": "Unser Unternehmen entwickelt ein KI-System zur biometrischen Gesichtserkennung im öffentlichen Raum zur Echtzeit-Überwachung. Ist das nach dem EU AI Act erlaubt?",
+        "category": "",
+        "score": 55.8,
+        "answer_excerpt": "# Bewertung: Biometrische Gesichtserkennung im öffentlichen Raum nach EU AI Act\n\n**Klare Antwort: Nein, das ist nicht erlaubt.**\n\n## Verbotene KI-Praxis\n\nIhr KI-System zur Echtzeit-Gesichtserkennung i",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.25,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.3
+      },
+      {
+        "id": null,
+        "question": "Unter welchen Voraussetzungen gilt ein KI-System gemäß Artikel 6 des EU AI Act als Hochrisiko-System, und welche Pflichten entstehen daraus?",
+        "category": "",
+        "score": 60.8,
+        "answer_excerpt": "# Hochrisiko-KI-Systeme nach Artikel 6 EU AI Act\n\n## Voraussetzungen für die Einstufung als Hochrisiko-System\n\nNach **Artikel 6 EU-KI-VO (2024/1689)** [Quelle 6, 7] gilt ein KI-System als Hochrisiko-S",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.7
+      },
+      {
+        "id": null,
+        "question": "Unser Hochrisiko-KI-System lernt nach dem Inverkehrbringen kontinuierlich dazu. Welche spezifischen Pflichten bestehen hinsichtlich Monitoring und Meldepflichten nach dem AI Act?",
+        "category": "",
+        "score": 70.8,
+        "answer_excerpt": "# Monitoring- und Meldepflichten für Hochrisiko-KI-Systeme nach dem AI Act\n\n## Monitoring nach dem Inverkehrbringen (Art. 72)\n\nAnbieter von Hochrisiko-KI-Systemen müssen ein **Beobachtungssystem nach ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.9
+      },
+      {
+        "id": null,
+        "question": "Wir haben festgestellt, dass unser KI-System ein erhebliches Risiko darstellt. Welche Pflichten bestehen nach dem AI Act für Anbieter bei schwerwiegenden Vorfällen?",
+        "category": "",
+        "score": 65.8,
+        "answer_excerpt": "# Pflichten bei schwerwiegenden Vorfällen nach dem AI Act\n\n## Meldepflicht gemäß Artikel 73 AI Act\n\nNach **Artikel 73 EU-KI-VO** besteht für Anbieter von Hochrisiko-KI-Systemen eine unverzügliche Meld",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.3
+      },
+      {
+        "id": null,
+        "question": "Welche Anforderungen bestehen bezüglich der menschlichen Überwachung von Hochrisiko-KI-Systemen nach Art. 14 KI-VO?",
+        "category": "",
+        "score": 90.8,
+        "answer_excerpt": "# Anforderungen der menschlichen Überwachung nach Art. 14 KI-VO\n\n## Design- und Entwicklungsanforderungen\n\nNach **Art. 14 Abs. 1 KI-VO** müssen Hochrisiko-KI-Systeme so konzipiert und entwickelt werde",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.1
+      }
+    ],
+    "duration_s": 53.8
+  }
+]

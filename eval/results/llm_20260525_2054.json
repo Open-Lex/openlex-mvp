@@ -1,0 +1,128 @@
+[
+  {
+    "skill": "strafrecht",
+    "n_questions": 5,
+    "avg_score": 84.0,
+    "hallucination_rate": 0.0,
+    "worst_score": 64.2,
+    "best_score": 97.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Angeklagter wird wegen gefährlicher Körperverletzung in Tateinheit mit versuchtem Totschlag angeklagt. Das Landgericht verurteilt ihn zu einer Jugendstrafe. Unter welchen Voraussetzungen kann die Revision des Angeklagten gegen dieses Urteil erfolgreich sein, und welche Verfahrensbestimmungen sind dabei zu beachten?",
+        "category": "Strafprozessrecht - Revisionsverfahren",
+        "score": 64.2,
+        "answer_excerpt": "# Revisionsmöglichkeiten bei Jugendstrafe wegen gefährlicher Körperverletzung und versuchtem Totschlag\n\n## Revisionsvoraussetzungen\n\nDie Revision des Angeklagten gegen ein Urteil des Landgerichts ist ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 24.6
+      },
+      {
+        "id": 2,
+        "question": "Eine Person wird wegen einer Körperverletzung angeklagt. Während des Verfahrens wird das Strafgesetz geändert und eine mildere Strafe vorgesehen. Welches Gesetz wird auf die Tat angewendet?",
+        "category": "Rückwirkung von Strafgesetzen",
+        "score": 91.2,
+        "answer_excerpt": "# Anwendung des Gesetzes bei Gesetzesänderung während des Verfahrens\n\n## Rechtliche Regelung\n\nNach [Quelle 1] gilt folgende Regelung für Gesetzesänderungen:\n\n**Abs. 3** der Quelle besagt ausdrücklich:",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.0
+      },
+      {
+        "id": 3,
+        "question": "Ein deutscher Segler wird auf einem deutschen Segelschiff verdächtigt, eine Straftat begangen zu haben. Das Schiff befindet sich auf hoher See in internationalen Gewässern. Kann das deutsche Strafrecht angewandt werden?",
+        "category": "Räumliche Geltung des Strafrechts",
+        "score": 97.8,
+        "answer_excerpt": "# Anwendbarkeit des deutschen Strafrechts auf hoher See\n\n**Ja, das deutsche Strafrecht kann angewandt werden.**\n\n## Rechtliche Grundlage\n\nNach **§ 4 StGB** (Geltung für Taten auf deutschen Schiffen un",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.5
+      },
+      {
+        "id": 4,
+        "question": "Ein Pfleger in einem Altenheim unterlässt es, einen pflegebedürftigen Patienten vor Schaden zu bewahren, obwohl dies in seinen Aufgaben liegt. Kann eine Strafbarkeit durch Unterlassen bejaht werden?",
+        "category": "Begehen durch Unterlassen",
+        "score": 95.8,
+        "answer_excerpt": "# Strafbarkeit durch Unterlassen eines Pflegers\n\nJa, eine Strafbarkeit durch Unterlassen kann bejaht werden. Dies ergibt sich aus § 13 Abs. 1 StGB [Quelle 1, 3].\n\n## Voraussetzungen nach § 13 StGB\n\nNa",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.1
+      },
+      {
+        "id": 5,
+        "question": "Ein Angeklagter wird wegen schweren Bandendiebstahls verurteilt. Das Landgericht verhängt eine Freiheitsstrafe. Auf welche Grundlage kann der Angeklagte gemäß StPO Revision einreichen?",
+        "category": "strafrecht",
+        "score": 70.8,
+        "answer_excerpt": "# Grundlage für Revisionseinlegung bei Verurteilung wegen schweren Bandendiebstahls\n\n## Rechtliche Grundlage\n\nNach der Strafprozessordnung (StPO) kann ein Angeklagter grundsätzlich gegen ein Landgeric",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.6
+      }
+    ],
+    "duration_s": 64.3
+  }
+]

@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "skill": "agrarrecht",
+    "question": "Was sind die Pflichten des Verpächters beim Pachtvertrag?",
+    "expected_norms": [
+      "§ 581"
+    ],
+    "expected_keywords": [
+      "Pachtvertrag",
+      "Verpächter",
+      "Gebrauch"
+    ],
+    "min_sources": 1,
+    "category": "Pachtvertrag"
+  },
+  {
+    "id": 2,
+    "skill": "agrarrecht",
+    "question": "Wie wird das Inventar übernommen und welche Risiken trägt der Pächter?",
+    "expected_norms": [
+      "§ 582a"
+    ],
+    "expected_keywords": [
+      "Inventar",
+      "Schätzwert",
+      "Gefahr"
+    ],
+    "min_sources": 1,
+    "category": "Inventarübernahme"
+  },
+  {
+    "id": 3,
+    "skill": "agrarrecht",
+    "question": "Welche Rechte hat der Pächter an dem Inventar?",
+    "expected_norms": [
+      "§ 583"
+    ],
+    "expected_keywords": [
+      "Pfandrecht",
+      "Inventar",
+      "Sicherheit"
+    ],
+    "min_sources": 1,
+    "category": "Pächterpfandrecht"
+  },
+  {
+    "id": 4,
+    "skill": "agrarrecht",
+    "question": "Was passiert, wenn der Pächter das Inventar nicht zurückgibt?",
+    "expected_norms": [
+      "BGB"
+    ],
+    "expected_keywords": [
+      "Inventar",
+      "Rückgabe",
+      "Entschädigung"
+    ],
+    "min_sources": 2,
+    "category": "Inventarübernahme"
+  },
+  {
+    "id": 5,
+    "skill": "agrarrecht",
+    "question": "Wie kann der Verpächter das Pfandrecht des Pächters abwenden?",
+    "expected_norms": [
+      "§ 583"
+    ],
+    "expected_keywords": [
+      "Inventar",
+      "Pfandrecht",
+      "Verpächter"
+    ],
+    "min_sources": 1,
+    "category": "Pächterpfandrecht"
+  },
+  {
+    "id": 6,
+    "skill": "agrarrecht",
+    "question": "Was sind die Rechte und Pflichten des Pächters bei der Übernahme des Inventars?",
+    "expected_norms": [
+      "§ 582a BGB",
+      "§ 583 BGB"
+    ],
+    "expected_keywords": [
+      "Inventar",
+      "Übernahme",
+      "Pflichten"
+    ],
+    "min_sources": 2,
+    "category": "Inventarübernahme"
+  },
+  {
+    "id": 7,
+    "skill": "agrarrecht",
+    "question": "Wie wird der Schätzwert des Inventars bestimmt?",
+    "expected_norms": [
+      "§ 582a BGB"
+    ],
+    "expected_keywords": [
+      "Schätzwert",
+      "Inventar",
+      "Bewertung"
+    ],
+    "min_sources": 1,
+    "category": "Inventarübernahme"
+  },
+  {
+    "id": 8,
+    "skill": "agrarrecht",
+    "question": "Was passiert, wenn der Pächter das Inventar verliert oder beschädigt?",
+    "expected_norms": [
+      "§ 582a BGB",
+      "§ 583 BGB"
+    ],
+    "expected_keywords": [
+      "Inventar",
+      "Verlust",
+      "Beschädigung"
+    ],
+    "min_sources": 2,
+    "category": "Inventarübernahme"
+  },
+  {
+    "id": 9,
+    "skill": "agrarrecht",
+    "question": "Wie kann der Pächter sein Pfandrecht an dem Inventar durchsetzen?",
+    "expected_norms": [
+      "§ 583 BGB"
+    ],
+    "expected_keywords": [
+      "Pfandrecht",
+      "Durchsetzung",
+      "Inventar"
+    ],
+    "min_sources": 1,
+    "category": "Pächterpfandrecht"
+  },
+  {
+    "id": 10,
+    "skill": "agrarrecht",
+    "question": "Was sind die Folgen, wenn der Pächter das Pachtverhältnis beendet und das Inventar nicht zurückgibt?",
+    "expected_norms": [
+      "§ 582a BGB",
+      "§ 583 BGB"
+    ],
+    "expected_keywords": [
+      "Inventar",
+      "Rückgabe",
+      "Pachtverhältnis"
+    ],
+    "min_sources": 2,
+    "category": "Inventarübernahme"
+  }
+]

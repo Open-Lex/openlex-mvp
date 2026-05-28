@@ -1,0 +1,83 @@
+[
+  {
+    "skill": "datenschutz",
+    "timestamp": "2026-05-18T20:40:11.734302",
+    "collection_count": 18261,
+    "type_inventory": {
+      "gesetz_granular": 1167,
+      "urteil_segmentiert": 4304,
+      "methodenwissen": 79,
+      "leitlinie": 12360,
+      "gesetz": 1,
+      "erwaegungsgrund": 173,
+      "gesetz_norm": 117,
+      "urteil": 49,
+      "eu_verordnung": 1,
+      "eu_richtlinie": 2,
+      "eugh_urteil": 8
+    },
+    "n_distinct_types": 11,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Darf ein Unternehmen KI-Tools wie ChatGPT für die Verarbeitung personenbezogener",
+          "returned_types": [
+            "leitlinie",
+            "methodenwissen"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Welche Rechte hat eine betroffene Person bei automatisierten Einzelentscheidunge",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "leitlinie",
+            "methodenwissen",
+            "urteil_segmentiert"
+          ],
+          "n_types": 5,
+          "covered": true
+        },
+        {
+          "question": "Wann ist eine Datenschutz-Folgenabschätzung bei Videoüberwachung erforderlich un",
+          "returned_types": [
+            "erwaegungsgrund",
+            "leitlinie",
+            "methodenwissen"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Dürfen Onlineshops Kunden zur Erstellung eines Kundenkontos verpflichten oder mu",
+          "returned_types": [
+            "gesetz_granular",
+            "leitlinie",
+            "urteil",
+            "urteil_segmentiert"
+          ],
+          "n_types": 4,
+          "covered": true
+        },
+        {
+          "question": "Wie ist die Haftung bei gemeinsamer Verantwortlichkeit nach Art. 26 DSGVO gerege",
+          "returned_types": [
+            "leitlinie",
+            "methodenwissen",
+            "urteil_segmentiert"
+          ],
+          "n_types": 3,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 100.0,
+    "issues": [],
+    "duration_s": 14.4
+  }
+]

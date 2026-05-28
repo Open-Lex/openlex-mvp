@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "skill": "versicherungsrecht",
+    "question": "Ein Versicherungsvertrag wurde im Jahr 2005 abgeschlossen. Welche Rechtsvorschriften sind auf diesen Vertrag anzuwenden, wenn es um die Vertretungsmacht des Versicherungsvertreters geht?",
+    "expected_norms": [
+      "§ 69"
+    ],
+    "expected_keywords": [
+      "Versicherungsvertrag",
+      "Vertretungsmacht",
+      "Altvertrag"
+    ],
+    "min_sources": 1,
+    "category": "Altverträge"
+  },
+  {
+    "id": 2,
+    "skill": "versicherungsrecht",
+    "question": "Ein Versicherungsnehmer hat im Jahr 2006 einen Krankenversicherungsvertrag abgeschlossen. Welche Vorschriften des Versicherungsvertragsgesetzes sind auf diesen Vertrag anzuwenden, wenn es um die Änderung der Allgemeinen Versicherungsbedingungen geht?",
+    "expected_norms": [
+      "§ 192"
+    ],
+    "expected_keywords": [
+      "Krankenversicherung",
+      "Versicherungsbedingungen",
+      "Änderung"
+    ],
+    "min_sources": 1,
+    "category": "Krankenversicherung"
+  },
+  {
+    "id": 3,
+    "skill": "versicherungsrecht",
+    "question": "Ein Versicherungsanspruch ist im Jahr 2005 entstanden. Welche Verjährungsfrist ist auf diesen Anspruch anzuwenden, wenn die Verjährungsfrist nach § 195 des Bürgerlichen Gesetzbuchs länger ist als die Frist nach § 12 Abs. 1 des Gesetzes über den Versicherungsvertrag in der bis zum 31. Dezember 2007 geltenden Fassung?",
+    "expected_norms": [
+      "§ 195",
+      "§ 12"
+    ],
+    "expected_keywords": [
+      "Verjährungsfrist",
+      "BGB",
+      "VVG"
+    ],
+    "min_sources": 2,
+    "category": "Verjährung"
+  },
+  {
+    "id": 4,
+    "skill": "versicherungsrecht",
+    "question": "Ein Versicherungsvertrag wurde im Jahr 2004 abgeschlossen. Welche Rechtsvorschriften sind auf diesen Vertrag anzuwenden, wenn es um die Vertretungsmacht des Versicherungsvertreters geht?",
+    "expected_norms": [
+      "§ 69"
+    ],
+    "expected_keywords": [
+      "Versicherungsvertrag",
+      "Vertretungsmacht",
+      "Altvertrag"
+    ],
+    "min_sources": 1,
+    "category": "Altverträge"
+  },
+  {
+    "id": 5,
+    "skill": "versicherungsrecht",
+    "question": "Ein Versicherungsnehmer hat im Jahr 2008 einen neuen Versicherungsvertrag abgeschlossen. Welche Vorschriften des Versicherungsvertragsgesetzes sind auf diesen Vertrag anzuwenden, wenn es um die Vertretungsmacht des Versicherungsvertreters geht?",
+    "expected_norms": [
+      "§ 69"
+    ],
+    "expected_keywords": [
+      "Versicherungsvertrag",
+      "Vertretungsmacht",
+      "Vertrag"
+    ],
+    "min_sources": 1,
+    "category": "Neuverträge"
+  },
+  {
+    "id": 6,
+    "skill": "versicherungsrecht",
+    "question": "Ein Versicherungsanspruch ist im Jahr 2006 entstanden. Welche Verjährungsfrist ist auf diesen Anspruch anzuwenden, wenn die Verjährungsfrist nach § 195 des Bürgerlichen Gesetzbuchs kürzer ist als die Frist nach § 12 Abs. 1 des Gesetzes über den Versicherungsvertrag in der bis zum 31. Dezember 2007 geltenden Fassung?",
+    "expected_norms": [
+      "§ 195 BGB",
+      "§ 12 Abs. 1 Gesetz über den Versicherungsvertrag"
+    ],
+    "expected_keywords": [
+      "Verjährungsfrist",
+      "BGB",
+      "Gesetz über den Versicherungsvertrag"
+    ],
+    "min_sources": 2,
+    "category": "Verjährung"
+  },
+  {
+    "id": 7,
+    "skill": "versicherungsrecht",
+    "question": "Ein Versicherungsvertrag wurde im Jahr 2004 abgeschlossen. Welche Rechtsvorschriften sind auf diesen Vertrag anzuwenden, wenn es um die Anwendung des Versicherungsvertragsgesetzes geht?",
+    "expected_norms": [
+      "Art. 1 bis 6 Versicherungsvertragsgesetz"
+    ],
+    "expected_keywords": [
+      "Versicherungsvertrag",
+      "Altvertrag",
+      "Anwendung"
+    ],
+    "min_sources": 1,
+    "category": "Altverträge"
+  },
+  {
+    "id": 8,
+    "skill": "versicherungsrecht",
+    "question": "Ein Versicherungsnehmer hat im Jahr 2009 einen neuen Versicherungsvertrag abgeschlossen. Welche Vorschriften des Versicherungsvertragsgesetzes sind auf diesen Vertrag anzuwenden, wenn es um die Änderung der Allgemeinen Versicherungsbedingungen geht?",
+    "expected_norms": [
+      "§§ 192 bis 208 Versicherungsvertragsgesetz"
+    ],
+    "expected_keywords": [
+      "Krankenversicherung",
+      "Allgemeine Versicherungsbedingungen",
+      "Änderung"
+    ],
+    "min_sources": 1,
+    "category": "Neuverträge"
+  },
+  {
+    "id": 9,
+    "skill": "versicherungsrecht",
+    "question": "Ein Versicherungsanspruch ist im Jahr 2007 entstanden. Welche Verjährungsfrist ist auf diesen Anspruch anzuwenden, wenn die Verjährungsfrist nach § 195 des Bürgerlichen Gesetzbuchs länger ist als die Frist nach § 12 Abs. 1 des Gesetzes über den Versicherungsvertrag in der bis zum 31. Dezember 2007 geltenden Fassung?",
+    "expected_norms": [
+      "§ 195 BGB",
+      "§ 12 Abs. 1 Gesetz über den Versicherungsvertrag"
+    ],
+    "expected_keywords": [
+      "Verjährungsfrist",
+      "BGB",
+      "Gesetz über den Versicherungsvertrag"
+    ],
+    "min_sources": 2,
+    "category": "Verjährung"
+  },
+  {
+    "id": 10,
+    "skill": "versicherungsrecht",
+    "question": "Ein Versicherungsvertrag wurde im Jahr 2003 abgeschlossen. Welche Rechtsvorschriften sind auf diesen Vertrag anzuwenden, wenn es um die Vertretungsmacht des Versicherungsvertreters geht?",
+    "expected_norms": [
+      "§§ 69 bis 73 Versicherungsvertragsgesetz"
+    ],
+    "expected_keywords": [
+      "Versicherungsvertrag",
+      "Vertretungsmacht",
+      "Altvertrag"
+    ],
+    "min_sources": 1,
+    "category": "Altverträge"
+  }
+]

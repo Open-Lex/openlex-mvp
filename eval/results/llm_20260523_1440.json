@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "energierecht",
+    "n_questions": 5,
+    "avg_score": 81.3,
+    "hallucination_rate": 0.0,
+    "worst_score": 79.2,
+    "best_score": 82.9,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Energieversorgungsunternehmen möchte den Betrieb eines neuen Elektrizitätsversorgungsnetzes aufnehmen. Welche behördliche Genehmigung ist erforderlich und welche Voraussetzungen muss das Unternehmen erfüllen?",
+        "category": "Netzbetrieb und Genehmigung",
+        "score": 82.9,
+        "answer_excerpt": "# Behördliche Genehmigung für Elektrizitätsversorgungsnetze\n\n## Erforderliche Genehmigung\n\nEin Energieversorgungsunternehmen benötigt für die Aufnahme des Betriebs eines Elektrizitätsversorgungsnetzes",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 31.9
+      },
+      {
+        "id": 2,
+        "question": "Ein Stromlieferant beliefert Haushaltskunden mit Elektrizität und möchte seine Geschäftstätigkeit beenden. Welche Mitteilungspflichten bestehen gegenüber der Bundesnetzagentur und den betroffenen Kunden?",
+        "category": "Energielieferanten und Kundenschutz",
+        "score": 82.9,
+        "answer_excerpt": "# Mitteilungspflichten bei Beendigung der Stromlieferung\n\n## Anzeige gegenüber der Bundesnetzagentur\n\nNach **§ 5 Abs. 1 EnWG** [Quelle 2] muss ein Energielieferant, der Haushaltskunden mit Elektrizitä",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 22.6
+      },
+      {
+        "id": 3,
+        "question": "Ein Transportnetzbetreiber unterliegt den Anforderungen der IT-Sicherheit. Was muss der Betreiber zur Gewährleistung der IT-Sicherheit dokumentieren und welche Meldepflichten bestehen bei Sicherheitsvorfällen?",
+        "category": "IT-Sicherheit und Dokumentation",
+        "score": 79.9,
+        "answer_excerpt": "# IT-Sicherheit für Transportnetzbetreiber: Dokumentation und Meldepflichten\n\n## Dokumentationspflichten\n\nNach **§ 5d Absatz 1 EnWG** [Quelle 3] muss der Transportnetzbetreiber **die Einhaltung der An",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 19.4
+      },
+      {
+        "id": 4,
+        "question": "Ein Unternehmen möchte als Betreiber eines Transportnetzes tätig werden. Auf welcher Rechtsgrundlage erfolgt die Anerkennung und welche Organisationsmodelle sind zulässig?",
+        "category": "Zertifizierung und Organisationsstruktur",
+        "score": 79.2,
+        "answer_excerpt": "# Rechtsgrundlage und Organisationsmodelle für Transportnetzbetreiber\n\n## Rechtsgrundlage der Anerkennung\n\nDie Anerkennung eines Transportnetzbetreibers erfolgt durch **Zertifizierung durch die Reguli",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.67,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 13.6
+      },
+      {
+        "id": 5,
+        "question": "Ein vertikal integriertes Energieversorgungsunternehmen muss seinen Netzbetreiber organisatorisch und buchhalterisch entflechten. Welche Entflechtungsanforderungen stellt das EnWG an Übertragungs- und Verteilernetzbetreiber?",
+        "category": "Entflechtung und Steuern",
+        "score": 81.5,
+        "answer_excerpt": "# Entflechtungsanforderungen nach dem EnWG\n\nDas EnWG stellt an vertikal integrierte Energieversorgungsunternehmen unterschiedliche Entflechtungsanforderungen für Übertragungs- (Transportnetzbetreiber)",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 15.1
+      }
+    ],
+    "duration_s": 104.0
+  }
+]

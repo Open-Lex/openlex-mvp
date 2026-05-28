@@ -1,0 +1,118 @@
+[
+  {
+    "skill": "agrarrecht",
+    "n_questions": 5,
+    "avg_score": 73.7,
+    "hallucination_rate": 0.0,
+    "worst_score": 47.6,
+    "best_score": 81.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Was sind die Pflichten des Verpächters beim Pachtvertrag?",
+        "category": "Pachtvertrag",
+        "score": 81.2,
+        "answer_excerpt": "# Pflichten des Verpächters beim Pachtvertrag\n\nBasierend auf den bereitgestellten Gesetzesquellen hat der Verpächter folgende Hauptpflichten:\n\n## 1. Überlassung und Gebrauchsgewährung\nNach **§ 581 Abs",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 20.5
+      },
+      {
+        "id": 2,
+        "question": "Wie wird das Inventar übernommen und welche Risiken trägt der Pächter?",
+        "category": "Inventarübernahme",
+        "score": 79.2,
+        "answer_excerpt": "# Inventarübernahme und Risikoverteilung beim Pächter\n\n## Übernahme zum Schätzwert\n\nWenn ein Pächter Inventar **zum Schätzwert** übernimmt mit der Verpflichtung, es bei Beendigung des Pachtverhältniss",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 16.5
+      },
+      {
+        "id": 3,
+        "question": "Welche Rechte hat der Pächter an dem Inventar?",
+        "category": "Pächterpfandrecht",
+        "score": 81.2,
+        "answer_excerpt": "# Rechte des Pächters am Inventar\n\nDer Pächter hat folgende wesentliche Rechte am mitgepachteten Inventar:\n\n## 1. Verfügungsrecht bei Inventarübernahme zum Schätzwert\n\nÜbernimmt der Pächter das Invent",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 10.4
+      },
+      {
+        "id": 4,
+        "question": "Was passiert, wenn der Pächter das Inventar nicht zurückgibt?",
+        "category": "Inventarübernahme",
+        "score": 47.6,
+        "answer_excerpt": "# Rechtsfolgen bei Nichtherausgabe des Inventars durch den Pächter\n\nWenn der Pächter das Inventar nicht zurückgibt, greifen folgende rechtliche Konsequenzen:\n\n## 1. Entschädigungspflicht (§ 584b BGB)\n",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 14.9
+      },
+      {
+        "id": 5,
+        "question": "Wie kann der Verpächter das Pfandrecht des Pächters abwenden?",
+        "category": "Pächterpfandrecht",
+        "score": 79.2,
+        "answer_excerpt": "# Abwendung des Pächterpfandrechts durch den Verpächter\n\nGemäß **§ 583 Abs. 2 BGB** [Quelle 1] kann der Verpächter die Geltendmachung des Pfandrechts des Pächters durch **Sicherheitsleistung** abwende",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 15.8
+      }
+    ],
+    "duration_s": 79.7
+  }
+]

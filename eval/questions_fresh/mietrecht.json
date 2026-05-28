@@ -1,0 +1,66 @@
+[
+  {
+    "question": "Der Vermieter V kündigt das Mietverhältnis zum 15.03.2024 mit Schreiben vom 01.02.2024. Die Kündigungsfrist für Vermieterkündigungen beträgt nach § 573 Abs. 1 BGB drei Monate zum Ende eines Kalendermonats. Verstößt die Kündigung gegen die gesetzliche Frist und ist sie unwirksam?",
+    "expected_norms": [
+      "§ 573 Abs. 1 BGB",
+      "§ 188 BGB"
+    ],
+    "expected_keywords": [
+      "Kündigungsfrist",
+      "Kalendermonat",
+      "Fristwahrung",
+      "Zugang"
+    ]
+  },
+  {
+    "question": "Der Mieter M bezweifelt die in der Nebenkostenabrechnung von 2023 aufgeführten Heizkosten. Der Vermieter V hatte die Abrechnung am 15.10.2023 übermittelt. Der Mieter möchte die Kosten überprüfen lassen. Bis wann kann der Mieter gemäß § 556 Abs. 3 BGB Einwände gegen die Abrechnung erheben und was muss er dafür tun?",
+    "expected_norms": [
+      "§ 556 Abs. 3 BGB"
+    ],
+    "expected_keywords": [
+      "Nebenkostenabrechnung",
+      "Widerspruchsfrist",
+      "Einwendungen",
+      "Ablesefehler"
+    ]
+  },
+  {
+    "question": "Der Mietvertrag für eine Dreizimmerwohnung enthält eine Klausel, die den Mieter verpflichtet, Schönheitsreparaturen wie das Streichen aller Wände und die Erneuerung von Tapeten bei Auszug durchzuführen – unabhängig von deren Zustand. Ist diese Klausel nach § 253 BGB und der Rechtsprechung des BGH wirksam?",
+    "expected_norms": [
+      "§ 253 BGB",
+      "§ 308 BGB"
+    ],
+    "expected_keywords": [
+      "Schönheitsreparaturen",
+      "Blankett-Klausel",
+      "Überraschendenheit",
+      "AGB-Kontrolle"
+    ]
+  },
+  {
+    "question": "Der Vermieter V verlangt bei Mietvertragsbeginn eine Kaution von vier Monatsmieten (Monatsmiete: 1.000 Euro). Der Mieter M zahlt 4.000 Euro. Nach § 551 BGB ist dies zulässig. Muss der Vermieter die Kaution in welcher Form anlegen und welche Rechte und Pflichten hat er bei der Verwaltung?",
+    "expected_norms": [
+      "§ 551 Abs. 1 Satz 2, Abs. 3 BGB"
+    ],
+    "expected_keywords": [
+      "Kautionshöhe",
+      "Zinsen",
+      "separate Anlage",
+      "Sicherungszinsen"
+    ]
+  },
+  {
+    "question": "Der Vermieter V kündigt das Mietverhältnis zum Ende eines Kalendermonats mit der gesetzlichen Frist von drei Monaten. Die Kündigung ist auf Grund von schwerwiegenden Pflichtverletzungen des Mieters M erfolgt, der regelmäßig die Miete verspätet zahlt. Welche zusätzlichen Anforderungen nach § 573 Abs. 2 BGB und § 569 BGB müssen erfüllt sein, und welche Unterschiede bestehen zwischen außerordentlicher und ordentlicher Kündigung?",
+    "expected_norms": [
+      "§ 573 Abs. 2 BGB",
+      "§ 569 BGB",
+      "§ 571 BGB"
+    ],
+    "expected_keywords": [
+      "außerordentliche Kündigung",
+      "wichtiger Grund",
+      "Abmahnung",
+      "Mietvertragsbruch"
+    ]
+  }
+]

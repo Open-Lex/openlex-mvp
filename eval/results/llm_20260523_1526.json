@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "medizinrecht",
+    "n_questions": 5,
+    "avg_score": 85.2,
+    "hallucination_rate": 0.0,
+    "worst_score": 80.9,
+    "best_score": 88.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Arzt verschreibt einem Patienten ein Arzneimittel, das später schwerwiegende Nebenwirkungen verursacht. Kann der Patient gegen den pharmazeutischen Hersteller vorgehen? Welche Haftungsgrundlagen nach AMG und BGB kommen in Betracht?",
+        "category": "Haftung und Schadensersatz",
+        "score": 82.5,
+        "answer_excerpt": "# Haftung für Arzneimittelschäden\n\n## AMG-Gefährdungshaftung (§ 84 AMG)\n\nDer Patient kann gegen den pharmazeutischen Hersteller nach **§ 84 AMG** vorgehen [Quelle 3]. Dies ist eine **Gefährdungshaftun",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 30.6
+      },
+      {
+        "id": 2,
+        "question": "Ein pharmazeutisches Unternehmen möchte ein neuartiges Therapiearzneimittel als individuelle Zubereitung in den Verkehr bringen. Welche behördliche Genehmigung benötigt es und bei welcher Behörde wird der Antrag gestellt?",
+        "category": "Zulassung und Genehmigung",
+        "score": 86.5,
+        "answer_excerpt": "# Behördliche Genehmigung für individuelle Zubereitungen neuartiger Therapiearzneimittel\n\n## Genehmigungspflicht und Ausnahmen\n\nNach **§ 4b Arzneimittelgesetz (AMG)** [Quelle 2] gelten für Arzneimitte",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 14.9
+      },
+      {
+        "id": 3,
+        "question": "Eine Entnahmeeinrichtung will erstmals Gewebe zur Verwendung bei Menschen gewinnen. Welche Voraussetzungen und Anforderungen muss sie erfüllen, um die erforderliche Erlaubnis zu erhalten?",
+        "category": "Gewebegewinnung und -verarbeitung",
+        "score": 87.5,
+        "answer_excerpt": "# Voraussetzungen für die Erlaubnis einer Entnahmeeinrichtung\n\n## Grundvoraussetzung\n\nEine Entnahmeeinrichtung, die zur Verwendung bei Menschen bestimmte Gewebe gewinnen will, bedarf einer **Erlaubnis",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 14.7
+      },
+      {
+        "id": 4,
+        "question": "Welche Informationen muss der pharmazeutische Unternehmer nach dem Arzneimittelgesetz den behandelnden Ärzten zur Verfügung stellen und wie ist diese Information auszugestalten?",
+        "category": "Informationspflichten",
+        "score": 80.9,
+        "answer_excerpt": "# Informationspflichten des pharmazeutischen Unternehmers gegenüber Ärzten\n\n## Fachinformation als Kernverpflichtung\n\nNach [Quelle 1] ist der pharmazeutische Unternehmer verpflichtet, **Ärzten auf Anf",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 15.5
+      },
+      {
+        "id": 5,
+        "question": "Der Inhaber einer Herstellungserlaubnis für Arzneimittel plant eine Änderung in den herzustellenden Arzneimitteln und bei den Räumlichkeiten. Wie muss er vorgehen und welche Fristen gelten?",
+        "category": "Änderungen bei Herstellungserlaubnis",
+        "score": 88.5,
+        "answer_excerpt": "# Vorgehen bei Änderungen der Herstellungserlaubnis\n\n## Antragsverfahren\n\nDer Inhaber einer Herstellungserlaubnis muss bei geplanten Änderungen einen formalen Antrag bei der zuständigen Behörde stelle",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.3
+      }
+    ],
+    "duration_s": 85.4
+  }
+]

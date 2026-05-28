@@ -1,0 +1,3291 @@
+[
+  {
+    "skill": "agrarrecht",
+    "timestamp": "2026-05-18T21:19:45.357432",
+    "collection_count": 1891,
+    "type_inventory": {
+      "gesetz_granular": 513,
+      "gesetz_norm": 415,
+      "urteil": 958,
+      "eu_verordnung": 3,
+      "eugh_urteil": 2
+    },
+    "n_distinct_types": 5,
+    "query_coverage": {
+      "coverage_rate": 20.0,
+      "n_queries": 5,
+      "n_covered": 1,
+      "details": [
+        {
+          "question": "Was sind die Pflichten des Verpächters beim Pachtvertrag?",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Wie wird das Inventar übernommen und welche Risiken trägt der Pächter?",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Welche Rechte hat der Pächter an dem Inventar?",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Was passiert, wenn der Pächter das Inventar nicht zurückgibt?",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Wie kann der Verpächter das Pfandrecht des Pächters abwenden?",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        }
+      ]
+    },
+    "l1_score": 76.0,
+    "issues": [],
+    "duration_s": 11.6
+  },
+  {
+    "skill": "arbeitsrecht",
+    "timestamp": "2026-05-18T21:19:56.925014",
+    "collection_count": 14001,
+    "type_inventory": {
+      "gesetz_granular": 627,
+      "gesetz_norm": 556,
+      "urteil": 12815,
+      "eu_richtlinie": 3
+    },
+    "n_distinct_types": 4,
+    "query_coverage": {
+      "coverage_rate": 80.0,
+      "n_queries": 5,
+      "n_covered": 4,
+      "details": [
+        {
+          "question": "Was sind die wesentlichen Pflichten eines Arbeitnehmers und eines Arbeitgebers i",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Inwiefern kann ein Arbeitgeber sein Weisungsrecht gegenüber einem Arbeitnehmer a",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Was verbietet § 612a BGB und welche Rechtsfolgen ergeben sich daraus?",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Wie unterscheidet sich ein Arbeitsvertrag von einem Dienstvertrag?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Was bedeutet persönliche Abhängigkeit im Rahmen eines Arbeitsvertrags?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 94.0,
+    "issues": [],
+    "duration_s": 2.5
+  },
+  {
+    "skill": "bank_kapitalmarktrecht",
+    "timestamp": "2026-05-18T21:19:59.413683",
+    "collection_count": 8956,
+    "type_inventory": {
+      "gesetz_granular": 681,
+      "gesetz_norm": 755,
+      "urteil": 7520
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Ein Unternehmen erbringt Wertpapierdienstleistungen ausschließlich für sein Mutt",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Eine natürliche Person ist nach einem unmittelbar geltenden Rechtsakt der Europä",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Unternehmen erbringt Datenbereitstellungsdienste und ist somit ein Datenbere",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Wertpapierdienstleistungsunternehmen möchte eine neue Wertpapierdienstleistu",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Eine Personengesellschaft ist als unzuverlässig eingestuft worden. Welche Auswir",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 99.6,
+    "issues": [],
+    "duration_s": 2.8
+  },
+  {
+    "skill": "baurecht",
+    "timestamp": "2026-05-18T21:20:02.188803",
+    "collection_count": 11269,
+    "type_inventory": {
+      "gesetz_granular": 90,
+      "gesetz_norm": 67,
+      "urteil": 11112
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Was sind die vertragstypischen Pflichten beim Werkvertrag?",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie wird die Höhe der Vergütung beim Werkvertrag bestimmt, wenn keine Taxe exist",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Kann der Unternehmer eine Abschlagszahlung vom Besteller verlangen, wenn die erb",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Was passiert, wenn der Besteller die Zahlung eines angemessenen Teils des Abschl",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Gilt eine Vergütung als stillschweigend vereinbart, wenn die Herstellung des Wer",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 99.6,
+    "issues": [],
+    "duration_s": 2.8
+  },
+  {
+    "skill": "bildungsrecht",
+    "timestamp": "2026-05-18T21:20:05.019542",
+    "collection_count": 2527,
+    "type_inventory": {
+      "gesetz_granular": 184,
+      "gesetz_norm": 531,
+      "urteil": 1812
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Welche Arten von Hochschulen fallen unter den Anwendungsbereich des Hochschulrah",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie lange nach Errichtung des Bundesaufsichtsamtes für Flugsicherung finden Wahl",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Was ist die Rolle des Bundesaufsichtsamtes für Flugsicherung als nationale Aufsi",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Welche Einrichtungen des Bildungswesens fallen unter den Anwendungsbereich des H",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie werden die Aufgaben der Personalvertretung bei dem Bundesaufsichtsamt für Fl",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 99.6,
+    "issues": [],
+    "duration_s": 1.1
+  },
+  {
+    "skill": "datenschutz",
+    "timestamp": "2026-05-18T21:20:06.122472",
+    "collection_count": 18261,
+    "type_inventory": {
+      "gesetz_granular": 1167,
+      "urteil_segmentiert": 4304,
+      "methodenwissen": 79,
+      "leitlinie": 12360,
+      "gesetz": 1,
+      "erwaegungsgrund": 173,
+      "gesetz_norm": 117,
+      "urteil": 49,
+      "eu_verordnung": 1,
+      "eu_richtlinie": 2,
+      "eugh_urteil": 8
+    },
+    "n_distinct_types": 11,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Darf ein Unternehmen KI-Tools wie ChatGPT für die Verarbeitung personenbezogener",
+          "returned_types": [
+            "leitlinie",
+            "methodenwissen"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Welche Rechte hat eine betroffene Person bei automatisierten Einzelentscheidunge",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "leitlinie",
+            "methodenwissen",
+            "urteil_segmentiert"
+          ],
+          "n_types": 5,
+          "covered": true
+        },
+        {
+          "question": "Wann ist eine Datenschutz-Folgenabschätzung bei Videoüberwachung erforderlich un",
+          "returned_types": [
+            "erwaegungsgrund",
+            "leitlinie",
+            "methodenwissen"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Dürfen Onlineshops Kunden zur Erstellung eines Kundenkontos verpflichten oder mu",
+          "returned_types": [
+            "gesetz_granular",
+            "leitlinie",
+            "urteil",
+            "urteil_segmentiert"
+          ],
+          "n_types": 4,
+          "covered": true
+        },
+        {
+          "question": "Wie ist die Haftung bei gemeinsamer Verantwortlichkeit nach Art. 26 DSGVO gerege",
+          "returned_types": [
+            "leitlinie",
+            "methodenwissen",
+            "urteil_segmentiert"
+          ],
+          "n_types": 3,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 100.0,
+    "issues": [],
+    "duration_s": 4.3
+  },
+  {
+    "skill": "energierecht",
+    "timestamp": "2026-05-18T21:20:10.454423",
+    "collection_count": 2082,
+    "type_inventory": {
+      "gesetz_granular": 347,
+      "gesetz_norm": 1123,
+      "urteil": 608,
+      "eu_richtlinie": 3,
+      "eu_verordnung": 1
+    },
+    "n_distinct_types": 5,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Welche Ziele verfolgt das Energiewirtschaftsgesetz (EnWG) bei der Versorgung der",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie bildet sich der Preis für Elektrizität am Großhandelsmarkt?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Welche Aufgaben haben Energieversorgungsunternehmen im Rahmen des EnWG?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Welche Rolle spielt das Bilanzkreis- und Ausgleichsenergiesystem im Strommarkt?",
+          "returned_types": [
+            "eu_richtlinie",
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Welche Verpflichtungen haben Energieversorgungsunternehmen im Hinblick auf den U",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 100.0,
+    "issues": [],
+    "duration_s": 1.1
+  },
+  {
+    "skill": "erbrecht",
+    "timestamp": "2026-05-18T21:20:11.562482",
+    "collection_count": 4639,
+    "type_inventory": {
+      "gesetz_granular": 443,
+      "urteil": 4172,
+      "methodenwissen": 24
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 20.0,
+      "n_queries": 5,
+      "n_covered": 1,
+      "details": [
+        {
+          "question": "Wer kann Erbe werden und unter welchen Umständen?",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Wie wird das Vermögen eines Verstorbenen auf die Erben übertragen?",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Wer sind die gesetzlichen Erben erster Ordnung und wie wirken sie auf die Erbfol",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Kann ein noch nicht geborenes Kind Erbe werden?",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie wird der Anteil eines Miterben bei der Erbteilung berechnet?",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        }
+      ]
+    },
+    "l1_score": 75.6,
+    "issues": [],
+    "duration_s": 1.3
+  },
+  {
+    "skill": "familienrecht",
+    "timestamp": "2026-05-18T21:20:12.878843",
+    "collection_count": 6974,
+    "type_inventory": {
+      "gesetz_granular": 621,
+      "urteil": 6353
+    },
+    "n_distinct_types": 2,
+    "query_coverage": {
+      "coverage_rate": 80.0,
+      "n_queries": 5,
+      "n_covered": 4,
+      "details": [
+        {
+          "question": "Ein Ehepaar lebt in getrennten Haushalten und hat zwei minderjährige Kinder. Wel",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Gericht hat sich in einem Verfahren über die Scheidung einer Ehe für unzustä",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Elternteil beantragt die Übertragung des alleinigen Sorgerechts für das Kind",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Ehepaar hat sich auf eine Scheidung geeinigt und möchte nun die Scheidung ei",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Kind wird von einem Elternteil misshandelt. Welche rechtlichen Schritte kann",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        }
+      ]
+    },
+    "l1_score": 80.4,
+    "issues": [],
+    "duration_s": 1.8
+  },
+  {
+    "skill": "gesellschaftsrecht",
+    "timestamp": "2026-05-18T21:20:14.709970",
+    "collection_count": 7855,
+    "type_inventory": {
+      "gesetz_granular": 1571,
+      "gesetz_norm": 1144,
+      "urteil": 5138,
+      "eu_verordnung": 1,
+      "eu_richtlinie": 1
+    },
+    "n_distinct_types": 5,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Welche Anforderungen müssen bei der Gründung einer GmbH erfüllt werden, um den G",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie viele Gesellschafter sind erforderlich, um eine GmbH zu gründen?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Was sind die wesentlichen Inhalte, die ein Gesellschaftsvertrag einer GmbH entha",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Kann eine GmbH zu jedem beliebigen Zweck gegründet werden?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Was ist das Mindestkapital, das für die Gründung einer GmbH erforderlich ist?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 100.0,
+    "issues": [],
+    "duration_s": 2.0
+  },
+  {
+    "skill": "gewerblicher_rechtsschutz",
+    "timestamp": "2026-05-18T21:20:16.745468",
+    "collection_count": 53650,
+    "type_inventory": {
+      "gesetz_granular": 602,
+      "gesetz_norm": 607,
+      "urteil": 52441
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Kann ein Patent für eine Erfindung erteilt werden, die gegen die öffentliche Ord",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Welche Anforderungen müssen Erfindungen erfüllen, um patentierbar zu sein?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Kann der menschliche Körper oder ein Teil davon patentiert werden?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Was sind die Folgen, wenn eine Erfindung gegen die öffentliche Ordnung oder die ",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Wie werden Patente für Erfindungen im Bereich der Biotechnologie erteilt?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 99.6,
+    "issues": [],
+    "duration_s": 10.7
+  },
+  {
+    "skill": "grundrechte",
+    "timestamp": "2026-05-18T21:20:27.416039",
+    "collection_count": 13965,
+    "type_inventory": {
+      "methodenwissen": 221,
+      "gesetz_granular": 1171,
+      "urteil": 12573
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 40.0,
+      "n_queries": 5,
+      "n_covered": 2,
+      "details": [
+        {
+          "question": "Ein Polizist nimmt einem Demonstranten das Megafon ab, um eine Störung der öffen",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Ein Arbeitnehmer wird wegen seines Alters nicht zu einem Vorstellungsgespräch ei",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Ein Ehepaar möchte adoptieren, aber die Adoption wird abgelehnt, weil sie nicht ",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Student wird von der Universität wegen seiner politischen Ansichten exmatrik",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Ein Unternehmen verlangt von seinen Mitarbeitern, dass sie ihre sozialen Medien-",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 81.6,
+    "issues": [],
+    "duration_s": 3.3
+  },
+  {
+    "skill": "handelsrecht",
+    "timestamp": "2026-05-18T21:20:30.694834",
+    "collection_count": 4259,
+    "type_inventory": {
+      "gesetz_norm": 753,
+      "urteil": 2743,
+      "gesetz_granular": 763
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Was sind die Voraussetzungen, damit ein Gewerbebetrieb als Handelsgewerbe gilt?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Kann ein Unternehmen, das nicht nach § 1 Abs. 2 HGB als Handelsgewerbe gilt, den",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Welche Ausnahmen gibt es für den Betrieb der Land- und Forstwirtschaft?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Was sind die Folgen, wenn ein land- oder forstwirtschaftliches Unternehmen nach ",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wer gilt als Kaufmann im Sinne des Handelsgesetzbuchs?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 99.6,
+    "issues": [],
+    "duration_s": 1.4
+  },
+  {
+    "skill": "insolvenzrecht",
+    "timestamp": "2026-05-18T21:20:32.143960",
+    "collection_count": 9313,
+    "type_inventory": {
+      "gesetz_norm": 426,
+      "urteil": 8887
+    },
+    "n_distinct_types": 2,
+    "query_coverage": {
+      "coverage_rate": 80.0,
+      "n_queries": 5,
+      "n_covered": 4,
+      "details": [
+        {
+          "question": "Ein Schuldner hat vor 5 Jahren eine unentgeltliche Leistung an einen Freund erbr",
+          "returned_types": [
+            "gesetz_norm"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Ein Gläubiger hat einen vollstreckbaren Schuldtitel gegen einen Schuldner erlang",
+          "returned_types": [
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Schuldner hat vor 3 Jahren ein gebräuchliches Gelegenheitsgeschenk geringen ",
+          "returned_types": [
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Erbe hat aus dem Nachlaß Pflichtteilsansprüche erfüllt. Kann ein Nachlaßgläu",
+          "returned_types": [
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Schuldner hat vor 2 Jahren eine Rechtshandlung mit dem Vorsatz vorgenommen, ",
+          "returned_types": [
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 80.4,
+    "issues": [],
+    "duration_s": 3.8
+  },
+  {
+    "skill": "it_recht",
+    "timestamp": "2026-05-18T21:20:35.925683",
+    "collection_count": 3636,
+    "type_inventory": {
+      "gesetz_granular": 93,
+      "gesetz_norm": 235,
+      "urteil": 3304,
+      "eu_verordnung": 3,
+      "eu_richtlinie": 1
+    },
+    "n_distinct_types": 5,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Welche Ziele verfolgt die Verordnung hinsichtlich des Online-Umfelds?",
+          "returned_types": [
+            "eu_verordnung",
+            "gesetz_granular"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Für welche Arten von Dienstleistungen gilt die Verordnung?",
+          "returned_types": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Was wird unter dem Begriff 'Dienst der Informationsgesellschaft' verstanden?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wer gilt als Nutzer im Sinne der Verordnung?",
+          "returned_types": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Gilt die Verordnung für alle Arten von Dienstleistungen?",
+          "returned_types": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 4,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 100.0,
+    "issues": [],
+    "duration_s": 1.4
+  },
+  {
+    "skill": "jugendrecht",
+    "timestamp": "2026-05-18T21:20:37.350125",
+    "collection_count": 5058,
+    "type_inventory": {
+      "gesetz_granular": 2739,
+      "gesetz_norm": 260,
+      "urteil": 2059
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Ein 16-jähriger Jugendlicher begeht einen Diebstahl. Welche Voraussetzungen müss",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Ein 17-jähriger Jugendlicher wird wegen einer Körperverletzung angeklagt. Welche",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Ein 19-jähriger Heranwachsender begeht eine Straftat. Welche Ziele verfolgt das ",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein 15-jähriger Jugendlicher ist nicht strafrechtlich verantwortlich. Welche Maß",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein 18-jähriger Heranwachsender begeht eine Straftat. Welche Rechtsfolgen können",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 99.6,
+    "issues": [],
+    "duration_s": 1.2
+  },
+  {
+    "skill": "kartellrecht",
+    "timestamp": "2026-05-18T21:20:38.567318",
+    "collection_count": 2164,
+    "type_inventory": {
+      "gesetz_granular": 233,
+      "gesetz_norm": 234,
+      "urteil": 1694,
+      "eu_verordnung": 3
+    },
+    "n_distinct_types": 4,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Ein Unternehmen schließt mit einem Konkurrenten eine Vereinbarung, um den Preis ",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Eine Unternehmensvereinigung beschließt, bestimmte Produkte nur noch in einem be",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Zwei Unternehmen schließen eine Vereinbarung, um die Produktion eines bestimmten",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Ein Unternehmen schließt mit einem Lieferanten eine Vereinbarung, um den Preis f",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Eine Unternehmensvereinigung beschließt, bestimmte Informationen über die Produk",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 100.0,
+    "issues": [],
+    "duration_s": 1.4
+  },
+  {
+    "skill": "kaufrecht",
+    "timestamp": "2026-05-18T21:20:39.967157",
+    "collection_count": 5077,
+    "type_inventory": {
+      "urteil": 5077
+    },
+    "n_distinct_types": 1,
+    "query_coverage": {
+      "coverage_rate": 0.0,
+      "n_queries": 5,
+      "n_covered": 0,
+      "details": [
+        {
+          "question": "Ein Käufer hat ein Auto gekauft, das sich als mangelhaft herausstellt. Welche Re",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Ein Verkäufer hat ein Produkt angeboten, das nicht den vereinbarten Eigenschafte",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Ein Käufer hat ein Produkt gekauft, das sich als nicht vertragsgemäß herausstell",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Ein Verkäufer hat ein Produkt angeboten, das unter einem bestimmten Markennamen ",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Ein Käufer hat ein Produkt gekauft, das sich als mangelhaft herausstellt. Welche",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        }
+      ]
+    },
+    "l1_score": 28.2,
+    "issues": [
+      "Keine Gesetzes-Chunks (gesetz_granular/gesetz) vorhanden!"
+    ],
+    "duration_s": 1.8
+  },
+  {
+    "skill": "ki_recht",
+    "timestamp": "2026-05-18T21:20:41.790143",
+    "collection_count": 116,
+    "type_inventory": {
+      "gesetz_granular": 113,
+      "eu_verordnung": 1,
+      "eugh_urteil": 2
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 40.0,
+      "n_queries": 5,
+      "n_covered": 2,
+      "details": [
+        {
+          "question": "Welche Anforderungen müssen Anbieter von KI-Systemen in der EU erfüllen, um ein ",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Wie definieren sich KI-Systeme im Rahmen der EU-Verordnung und welche Eigenschaf",
+          "returned_types": [
+            "eu_verordnung",
+            "gesetz_granular"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Welche Rechte und Freiheiten müssen bei der Entwicklung und dem Einsatz von KI-S",
+          "returned_types": [
+            "eu_verordnung",
+            "gesetz_granular"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wer gilt als Anbieter von KI-Systemen im Sinne der EU-Verordnung und welche Pfli",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Wie werden KI-Modelle mit allgemeinem Verwendungszweck in der EU-Verordnung beha",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        }
+      ]
+    },
+    "l1_score": 81.6,
+    "issues": [],
+    "duration_s": 1.0
+  },
+  {
+    "skill": "kirchenrecht",
+    "timestamp": "2026-05-18T21:20:42.782951",
+    "collection_count": 117,
+    "type_inventory": {
+      "gesetz_norm": 36,
+      "urteil": 81
+    },
+    "n_distinct_types": 2,
+    "query_coverage": {
+      "coverage_rate": 20.0,
+      "n_queries": 5,
+      "n_covered": 1,
+      "details": [
+        {
+          "question": "Welche Anforderungen müssen bei der Berechnung der Auslastung der Obergrenze für",
+          "returned_types": [
+            "gesetz_norm"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "In welchen Fällen ist ein Geschäftsleiterbeschluss nach § 13 Absatz 2 und 3 des ",
+          "returned_types": [
+            "gesetz_norm"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Welche Risikopositionen sind bei der Berechnung der Auslastung der Obergrenze fü",
+          "returned_types": [
+            "gesetz_norm"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Ist eine gleichzeitige Anwendung von mehr als einer der in Artikel 400 Absatz 1 ",
+          "returned_types": [
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Welche Beteiligungen und sonstigen Anteile eines Instituts sind bei der Berechnu",
+          "returned_types": [
+            "gesetz_norm"
+          ],
+          "n_types": 1,
+          "covered": false
+        }
+      ]
+    },
+    "l1_score": 62.4,
+    "issues": [],
+    "duration_s": 1.2
+  },
+  {
+    "skill": "medizinrecht",
+    "timestamp": "2026-05-18T21:20:43.995636",
+    "collection_count": 5629,
+    "type_inventory": {
+      "gesetz_granular": 1040,
+      "gesetz_norm": 510,
+      "urteil": 4079
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Ein Patient erleidet eine Gesundheitsschädigung durch die Einnahme eines Arzneim",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Was ist der Zweck des Arzneimittelgesetzes?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Arzneimittelhersteller bringt ein Produkt auf den Markt, das nicht den Anfor",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Patient stirbt an den Folgen einer medizinischen Behandlung. Wer kann in die",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Was versteht man unter dem Begriff 'Stoff' im Sinne des Arzneimittelgesetzes?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 99.6,
+    "issues": [],
+    "duration_s": 1.8
+  },
+  {
+    "skill": "mietrecht",
+    "timestamp": "2026-05-18T21:20:45.830986",
+    "collection_count": 4400,
+    "type_inventory": {
+      "gesetz_granular": 50,
+      "urteil": 4350
+    },
+    "n_distinct_types": 2,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Was sind die Hauptpflichten des Vermieters im Rahmen eines Mietvertrags?",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie verhält es sich mit der Mietminderung, wenn die Mietsache einen Mangel aufwe",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Kann der Mieter Schadensersatzansprüche gegen den Vermieter geltend machen, wenn",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Was geschieht, wenn der Vermieter die Beseitigung eines Mangels verzögert?",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie sind die Rechte des Mieters, wenn die Mietsache nicht den vertragsgemäßen Zu",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 86.4,
+    "issues": [],
+    "duration_s": 1.0
+  },
+  {
+    "skill": "migrationsrecht",
+    "timestamp": "2026-05-18T21:20:46.861958",
+    "collection_count": 6021,
+    "type_inventory": {
+      "methodenwissen": 258,
+      "gesetz_granular": 649,
+      "gesetz_norm": 340,
+      "urteil": 4770,
+      "eu_verordnung": 1,
+      "eu_richtlinie": 3
+    },
+    "n_distinct_types": 6,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Ein Ausländer beantragt Asyl in Deutschland, weil er in seinem Heimatland wegen ",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Asylberechtigter hat Anspruch auf eine günstigere Rechtsstellung als die im ",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Ausländer beantragt internationalen Schutz nach der Richtlinie 2011/95/EU. W",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Asylbewerber wird in Deutschland als Flüchtling anerkannt. Welche Rechte und",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Ausländer wird in Deutschland nicht als Flüchtling anerkannt, aber hat Anspr",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen"
+          ],
+          "n_types": 3,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 100.0,
+    "issues": [],
+    "duration_s": 2.2
+  },
+  {
+    "skill": "nachbarrecht",
+    "timestamp": "2026-05-18T21:20:49.052254",
+    "collection_count": 15331,
+    "type_inventory": {
+      "gesetz_granular": 176,
+      "urteil": 15127,
+      "methodenwissen": 28
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 80.0,
+      "n_queries": 5,
+      "n_covered": 4,
+      "details": [
+        {
+          "question": "Ein Nachbar möchte auf seinem Grundstück ein Gewächshaus errichten, das jedoch d",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Tier des Nachbarn hat sich auf das Grundstück des Klägers begeben und verurs",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Nachbar möchte eine Baumaßnahme auf seinem Grundstück durchführen, die jedoc",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Nachbar errichtet ein Gebäude, das die Aussicht auf das Nachbargrundstück be",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Nachbar verursacht durch seine landwirtschaftliche Tätigkeit Lärm und Geruch",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        }
+      ]
+    },
+    "l1_score": 93.6,
+    "issues": [],
+    "duration_s": 3.2
+  },
+  {
+    "skill": "reiserecht",
+    "timestamp": "2026-05-18T21:20:52.208328",
+    "collection_count": 971,
+    "type_inventory": {
+      "gesetz_granular": 26,
+      "urteil": 942,
+      "eu_richtlinie": 1,
+      "eu_verordnung": 2
+    },
+    "n_distinct_types": 4,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Was sind die vertragstypischen Pflichten beim Pauschalreisevertrag?",
+          "returned_types": [
+            "eu_richtlinie",
+            "gesetz_granular"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie unterscheidet sich eine Pauschalreise von der Vermittlung von Reiseleistunge",
+          "returned_types": [
+            "eu_richtlinie",
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Was ist die Pflicht des Reiseveranstalters bei Absage der Reise?",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Kann ein Reisender den Reisevertrag vor Beginn der Reise kündigen?",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Was sind die Rechte des Reisenden bei Mängeln der Reiseleistungen?",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 100.0,
+    "issues": [],
+    "duration_s": 0.7
+  },
+  {
+    "skill": "sachenrecht",
+    "timestamp": "2026-05-18T21:20:52.930833",
+    "collection_count": 4972,
+    "type_inventory": {
+      "gesetz_granular": 440,
+      "urteil_segmentiert": 5,
+      "methodenwissen": 11,
+      "gesetz_norm": 158,
+      "urteil": 4358
+    },
+    "n_distinct_types": 5,
+    "query_coverage": {
+      "coverage_rate": 40.0,
+      "n_queries": 5,
+      "n_covered": 2,
+      "details": [
+        {
+          "question": "Wie wird der Besitz einer Sache erworben?",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Wer ist Besitzer einer Sache, wenn jemand die tatsächliche Gewalt über die Sache",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Wie wird der Besitz einer Sache beendet?",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Was sind die Voraussetzungen für den Eigentumsherausgabeanspruch nach § 985 BGB?",
+          "returned_types": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil_segmentiert"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Kann der Besitz einer Sache durch eine vorübergehende Verhinderung in der Ausübu",
+          "returned_types": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 82.0,
+    "issues": [],
+    "duration_s": 1.7
+  },
+  {
+    "skill": "sanktionsrecht",
+    "timestamp": "2026-05-18T21:20:54.652035",
+    "collection_count": 359,
+    "type_inventory": {
+      "gesetz_granular": 181,
+      "gesetz_norm": 172,
+      "eu_verordnung": 4,
+      "eugh_urteil": 2
+    },
+    "n_distinct_types": 4,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Ein deutsches Unternehmen möchte Waren an ein iranisches Unternehmen liefern. We",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Eine ausländische Firma hat eine Zweigniederlassung in Deutschland. Wie wird die",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein deutsches Unternehmen hat eine Betriebsstätte in einem Land, das unter einem",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Eine Person möchte Gold aus dem Ausland nach Deutschland importieren. Welche Vor",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Unternehmen hat eine Niederlassung in Deutschland und möchte Waren an ein Un",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 100.0,
+    "issues": [],
+    "duration_s": 0.9
+  },
+  {
+    "skill": "sozialrecht",
+    "timestamp": "2026-05-18T21:20:55.573136",
+    "collection_count": 16632,
+    "type_inventory": {
+      "gesetz_granular": 3096,
+      "gesetz_norm": 3643,
+      "urteil": 9893
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Welche Aufgaben hat das Sozialgesetzbuch gemäß § 1 SGB I?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Was sind soziale Rechte im Sinne des § 2 SGB I?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wer hat Anspruch auf individuelle Förderung seiner Ausbildung gemäß § 3 SGB I?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Was ist das Ziel des Sozialgesetzbuchs?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie werden soziale Rechte im Sozialgesetzbuch definiert?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 99.6,
+    "issues": [],
+    "duration_s": 4.3
+  },
+  {
+    "skill": "sportrecht",
+    "timestamp": "2026-05-18T21:20:59.844065",
+    "collection_count": 339,
+    "type_inventory": {
+      "gesetz_granular": 284,
+      "gesetz_norm": 25,
+      "urteil": 30
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 0.0,
+      "n_queries": 5,
+      "n_covered": 0,
+      "details": [
+        {
+          "question": "Ein Fußballverein möchte sich als juristische Person registrieren lassen. Welche",
+          "error": "Error executing plan: Internal error: Error creating hnsw segment reader: Nothing found on disk",
+          "covered": false
+        },
+        {
+          "question": "Ein Sportverband plant die Gründung einer Tochtergesellschaft, die sich auf den ",
+          "error": "Error executing plan: Internal error: Error creating hnsw segment reader: Nothing found on disk",
+          "covered": false
+        },
+        {
+          "question": "Ein Sportverein möchte einen Sponsoring-Vertrag mit einem Unternehmen abschließe",
+          "error": "Error executing plan: Internal error: Error creating hnsw segment reader: Nothing found on disk",
+          "covered": false
+        },
+        {
+          "question": "Ein Sportler wird vom nationalen Verband für eine Dopingvergehen suspendiert. We",
+          "error": "Error executing plan: Internal error: Error creating hnsw segment reader: Nothing found on disk",
+          "covered": false
+        },
+        {
+          "question": "Ein Sportverein plant die Ausrichtung eines internationalen Turniers und muss da",
+          "error": "Error executing plan: Internal error: Error creating hnsw segment reader: Nothing found on disk",
+          "covered": false
+        }
+      ]
+    },
+    "l1_score": 69.6,
+    "issues": [],
+    "duration_s": 1.1
+  },
+  {
+    "skill": "staatsorganisationsrecht",
+    "timestamp": "2026-05-18T21:21:00.981725",
+    "collection_count": 82501,
+    "type_inventory": {
+      "gesetz_granular": 205,
+      "methodenwissen": 342,
+      "urteil": 81953,
+      "literatur_lehrbuch": 1
+    },
+    "n_distinct_types": 4,
+    "query_coverage": {
+      "coverage_rate": 80.0,
+      "n_queries": 5,
+      "n_covered": 4,
+      "details": [
+        {
+          "question": "Was ist die Grundlage für die Verfassunggebende Gewalt in Deutschland?",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Welche Rolle spielt der Parlamentarische Rat in der Geschichte der Bundesrepubli",
+          "returned_types": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie werden die Menschenrechte im Grundgesetz verankert?",
+          "returned_types": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Was ist die Bedeutung der Würde des Menschen im Grundgesetz?",
+          "returned_types": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Wie werden die Grundrechte im Grundgesetz definiert?",
+          "returned_types": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 94.0,
+    "issues": [],
+    "duration_s": 23.2
+  },
+  {
+    "skill": "steuerrecht",
+    "timestamp": "2026-05-18T21:21:24.142947",
+    "collection_count": 20566,
+    "type_inventory": {
+      "gesetz_granular": 1239,
+      "gesetz_norm": 1100,
+      "urteil": 18227
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Welche Steuern fallen unter den Anwendungsbereich der Abgabenordnung?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie verhält sich das Steuerrecht zu völkerrechtlichen Vereinbarungen?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Welche Vorschriften gelten für die Verarbeitung personenbezogener Daten durch Fi",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Was bedeutet der Vorrang völkerrechtlicher Vereinbarungen für die Steuergesetze?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Welche Anforderungen müssen Finanzbehörden bei der Verarbeitung personenbezogene",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 99.6,
+    "issues": [],
+    "duration_s": 6.7
+  },
+  {
+    "skill": "strafrecht",
+    "timestamp": "2026-05-18T21:21:30.813244",
+    "collection_count": 45010,
+    "type_inventory": {
+      "gesetz_granular": 944,
+      "gesetz_norm": 1574,
+      "urteil": 42492
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 60.0,
+      "n_queries": 5,
+      "n_covered": 3,
+      "details": [
+        {
+          "question": "Kann eine Person für eine Tat bestraft werden, wenn die Strafbarkeit erst nach d",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie bestimmt sich die Strafe, wenn das Gesetz während der Begehung der Tat geänd",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Gilt das deutsche Strafrecht für Taten, die im Ausland begangen werden?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Kann eine Person für eine Tat bestraft werden, wenn die Tat vor der Gesetzesände",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie bestimmt sich die Strafe, wenn das Gesetz nach der Begehung der Tat geändert",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        }
+      ]
+    },
+    "l1_score": 87.6,
+    "issues": [],
+    "duration_s": 12.0
+  },
+  {
+    "skill": "strafverfahrensrecht",
+    "timestamp": "2026-05-18T21:21:42.775154",
+    "collection_count": 15478,
+    "type_inventory": {
+      "gesetz_granular": 1067,
+      "urteil": 14411
+    },
+    "n_distinct_types": 2,
+    "query_coverage": {
+      "coverage_rate": 20.0,
+      "n_queries": 5,
+      "n_covered": 1,
+      "details": [
+        {
+          "question": "Ein Angeklagter wird wegen mehrerer Straftaten angeklagt, die vor verschiedenen ",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Was ist der Begriff des Zusammenhanges im Rahmen der Strafprozessordnung?",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Gericht muss entscheiden, ob es für die Verhandlung einer Strafsache zuständ",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Mehrere Personen werden wegen derselben Tat angeklagt. Kann das Verfahren gegen ",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Ein Angeklagter wird wegen einer Straftat angeklagt, die vor einem Gericht anhän",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        }
+      ]
+    },
+    "l1_score": 62.4,
+    "issues": [],
+    "duration_s": 4.1
+  },
+  {
+    "skill": "transportrecht",
+    "timestamp": "2026-05-18T21:21:46.896967",
+    "collection_count": 2588,
+    "type_inventory": {
+      "gesetz_granular": 945,
+      "gesetz_norm": 481,
+      "urteil": 1158,
+      "eu_verordnung": 4
+    },
+    "n_distinct_types": 4,
+    "query_coverage": {
+      "coverage_rate": 0.0,
+      "n_queries": 5,
+      "n_covered": 0,
+      "details": [
+        {
+          "question": "Was sind die Voraussetzungen, damit ein Gewerbebetrieb als Handelsgewerbe im Sin",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "In welchen Fällen kann ein land- oder forstwirtschaftliches Unternehmen als Hand",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Was sind die Auswirkungen einer Eintragung in das Handelsregister auf ein gewerb",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Wie wird ein Kaufmann im Sinne des Handelsgesetzbuchs definiert?",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Was sind die Voraussetzungen, damit ein Unternehmen als Handelsgewerbe im Sinne ",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        }
+      ]
+    },
+    "l1_score": 70.0,
+    "issues": [],
+    "duration_s": 1.3
+  },
+  {
+    "skill": "umweltrecht",
+    "timestamp": "2026-05-18T21:21:48.218269",
+    "collection_count": 6871,
+    "type_inventory": {
+      "gesetz_granular": 438,
+      "gesetz_norm": 423,
+      "urteil": 6006,
+      "eu_verordnung": 3,
+      "eu_richtlinie": 1
+    },
+    "n_distinct_types": 5,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Was ist der Zweck des Bundes-Immissionsschutzgesetzes?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Welche Anlagen fallen unter den Geltungsbereich des Bundes-Immissionsschutzgeset",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Was sind schädliche Umwelteinwirkungen im Sinne des Bundes-Immissionsschutzgeset",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Wie werden Immissionen definiert und welche Auswirkungen können sie haben?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Welche Rechte und Pflichten haben die Betreiber von Anlagen im Hinblick auf den ",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 100.0,
+    "issues": [],
+    "duration_s": 2.4
+  },
+  {
+    "skill": "urheberrecht",
+    "timestamp": "2026-05-18T21:21:50.601988",
+    "collection_count": 8054,
+    "type_inventory": {
+      "gesetz_granular": 288,
+      "gesetz_norm": 275,
+      "urteil": 7491
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Ein Autor veröffentlicht ein Buch, das eine Übersetzung eines anderen Werkes ent",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Unternehmen verwendet ein Computerprogramm, das von einem anderen Unternehme",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Ein Künstler erstellt ein Gemälde, das auf einem Foto basiert. Welche Rechte hat",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Ein Musiker komponiert ein Lied, das auf einem anderen Lied basiert. Welche Rech",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Ein Unternehmen verwendet ein Logo, das von einem anderen Unternehmen entwickelt",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 99.6,
+    "issues": [],
+    "duration_s": 2.8
+  },
+  {
+    "skill": "verbraucherrecht",
+    "timestamp": "2026-05-18T21:21:53.369057",
+    "collection_count": 676,
+    "type_inventory": {
+      "gesetz_granular": 139,
+      "urteil": 537
+    },
+    "n_distinct_types": 2,
+    "query_coverage": {
+      "coverage_rate": 80.0,
+      "n_queries": 5,
+      "n_covered": 4,
+      "details": [
+        {
+          "question": "Ein Verbraucher kauft ein Produkt online, das nicht den beschriebenen Eigenschaf",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Eine Firma verwendet Allgemeine Geschäftsbedingungen, die zum Nachteil des Verbr",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Unternehmer bietet einen Vertrag an, der nicht den Anforderungen des Verbrau",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Ein Verbraucher möchte einen Vertrag widerrufen, den er online abgeschlossen hat",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Eine Firma bietet eine Garantie für ein Produkt an, die nicht den gesetzlichen A",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 80.4,
+    "issues": [],
+    "duration_s": 0.8
+  },
+  {
+    "skill": "verbraucherschutzrecht",
+    "timestamp": "2026-05-18T21:21:54.180224",
+    "collection_count": 3114,
+    "type_inventory": {
+      "urteil": 3110,
+      "eu_richtlinie": 4
+    },
+    "n_distinct_types": 2,
+    "query_coverage": {
+      "coverage_rate": 0.0,
+      "n_queries": 5,
+      "n_covered": 0,
+      "details": [
+        {
+          "question": "Was sind die Anforderungen an die Auftragsvergabe durch zuständige Behörden im S",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Wie wird die Zuständigkeit für die Entscheidung über die Abschiebungshaft im Auf",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Was sind die Voraussetzungen für die Verweisung eines Rechtsstreits an ein ander",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Wie werden sonstige konkrete Vorbereitungshandlungen von vergleichbarem Gewicht ",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Was sind die Anforderungen an die Sicherungshaft im Sinne des Aufenthaltsgesetze",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        }
+      ]
+    },
+    "l1_score": 41.4,
+    "issues": [
+      "Keine Gesetzes-Chunks (gesetz_granular/gesetz) vorhanden!"
+    ],
+    "duration_s": 1.6
+  },
+  {
+    "skill": "verfassungsprozessrecht",
+    "timestamp": "2026-05-18T21:21:55.800050",
+    "collection_count": 5552,
+    "type_inventory": {
+      "gesetz_granular": 133,
+      "urteil": 5419
+    },
+    "n_distinct_types": 2,
+    "query_coverage": {
+      "coverage_rate": 80.0,
+      "n_queries": 5,
+      "n_covered": 4,
+      "details": [
+        {
+          "question": "Welche Anforderungen müssen Richter des Bundesverfassungsgerichts erfüllen, um g",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie viele Richter hat das Bundesverfassungsgericht insgesamt und wie sind sie au",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wo hat das Bundesverfassungsgericht seinen Sitz und wie gibt es sich eine Geschä",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Welche Voraussetzungen müssen Richter des Bundesverfassungsgerichts hinsichtlich",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie viele Richter werden aus der Zahl der Richter an den obersten Gerichtshöfen ",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 80.4,
+    "issues": [],
+    "duration_s": 1.8
+  },
+  {
+    "skill": "vergaberecht",
+    "timestamp": "2026-05-18T21:21:57.612999",
+    "collection_count": 919,
+    "type_inventory": {
+      "gesetz_granular": 466,
+      "gesetz_norm": 82,
+      "urteil": 371
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 80.0,
+      "n_queries": 5,
+      "n_covered": 4,
+      "details": [
+        {
+          "question": "Ein Unternehmen schließt eine Vereinbarung mit einem anderen Unternehmen, um den",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Eine Unternehmensvereinigung beschließt, die Preise für bestimmte Produkte zu er",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Ein Unternehmen und ein Lieferant schließen eine Vereinbarung, um die Produktion",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Eine Unternehmensvereinigung beschließt, die Rationalisierung wirtschaftlicher V",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Unternehmen schließt eine Vereinbarung mit einem anderen Unternehmen, um die",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 93.6,
+    "issues": [],
+    "duration_s": 0.9
+  },
+  {
+    "skill": "verkehrsrecht",
+    "timestamp": "2026-05-18T21:21:58.467822",
+    "collection_count": 6479,
+    "type_inventory": {
+      "gesetz_granular": 414,
+      "gesetz_norm": 371,
+      "urteil": 5694
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Was sind die Voraussetzungen für die Zulassung eines Kraftfahrzeugs zum Verkehr?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ist der Betrieb eines Kraftfahrzeugs mit hoch- oder vollautomatisierter Fahrfunk",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Was sind die Pflichten des Fahrzeugführers bei der Nutzung hoch- oder vollautoma",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Muss ein Kraftfahrzeug eine Betriebserlaubnis haben, um zum Verkehr zugelassen z",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Kann ein Fahrzeugführer während der Nutzung hoch- oder vollautomatisierter Fahrf",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 99.6,
+    "issues": [],
+    "duration_s": 2.4
+  },
+  {
+    "skill": "versicherungsrecht",
+    "timestamp": "2026-05-18T21:22:00.884386",
+    "collection_count": 4184,
+    "type_inventory": {
+      "gesetz_granular": 1554,
+      "urteil": 2630
+    },
+    "n_distinct_types": 2,
+    "query_coverage": {
+      "coverage_rate": 20.0,
+      "n_queries": 5,
+      "n_covered": 1,
+      "details": [
+        {
+          "question": "Ein Versicherungsvertrag wurde im Jahr 2005 abgeschlossen. Welche Rechtsvorschri",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Ein Versicherungsnehmer hat im Jahr 2006 einen Krankenversicherungsvertrag abges",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Ein Versicherungsanspruch ist im Jahr 2005 entstanden. Welche Verjährungsfrist i",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Versicherungsvertrag wurde im Jahr 2002 abgeschlossen. Welche Rechtsvorschri",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Ein Versicherungsnehmer hat im Jahr 2008 einen neuen Versicherungsvertrag abgesc",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        }
+      ]
+    },
+    "l1_score": 62.4,
+    "issues": [],
+    "duration_s": 1.7
+  },
+  {
+    "skill": "verwaltungsprozessrecht",
+    "timestamp": "2026-05-18T21:22:02.561139",
+    "collection_count": 21556,
+    "type_inventory": {
+      "gesetz_granular": 278,
+      "urteil": 21278
+    },
+    "n_distinct_types": 2,
+    "query_coverage": {
+      "coverage_rate": 20.0,
+      "n_queries": 5,
+      "n_covered": 1,
+      "details": [
+        {
+          "question": "Welche Gerichte sind in den Ländern für die Verwaltungsgerichtsbarkeit zuständig",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie wird die Unabhängigkeit der Verwaltungsgerichte von den Verwaltungsbehörden ",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Welche Änderungen in der Abgrenzung der Gerichtsbezirke dürfen durch Gesetz ange",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Wo hat das Bundesverwaltungsgericht seinen Sitz?",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Welche Rolle spielen die Oberverwaltungsgerichte in der Verwaltungsgerichtsbarke",
+          "returned_types": [
+            "urteil"
+          ],
+          "n_types": 1,
+          "covered": false
+        }
+      ]
+    },
+    "l1_score": 62.4,
+    "issues": [],
+    "duration_s": 5.7
+  },
+  {
+    "skill": "verwaltungsrecht",
+    "timestamp": "2026-05-18T21:22:08.276851",
+    "collection_count": 22166,
+    "type_inventory": {
+      "gesetz_granular": 535,
+      "methodenwissen": 353,
+      "gesetz_norm": 483,
+      "urteil": 20795
+    },
+    "n_distinct_types": 4,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Welche Behörden unterliegen dem Anwendungsbereich des Verwaltungsverfahrensgeset",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Gibt es Ausnahmen vom Anwendungsbereich des VwVfG und wenn ja, welche sind diese",
+          "returned_types": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie ist die örtliche Zuständigkeit von Behörden im Rahmen des VwVfG geregelt?",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Was regelt § 3a VwVfG bezüglich der elektronischen Kommunikation?",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "In welchen Fällen besteht eine Amtshilfepflicht zwischen Behörden gemäß § 4 VwVf",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 100.0,
+    "issues": [],
+    "duration_s": 6.9
+  },
+  {
+    "skill": "voelkerrecht",
+    "timestamp": "2026-05-18T21:22:15.198433",
+    "collection_count": 96,
+    "type_inventory": {
+      "literatur_lehrbuch": 1,
+      "voelkerrecht_vertrag": 95
+    },
+    "n_distinct_types": 2,
+    "query_coverage": {
+      "coverage_rate": 0.0,
+      "n_queries": 5,
+      "n_covered": 0,
+      "details": [
+        {
+          "question": "Welche Rechte haben Verwundete im Felde gemäß dem Genfer Abkommen I?",
+          "returned_types": [
+            "voelkerrecht_vertrag"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Was sind die Ziele und Grundsätze der Charta der Vereinten Nationen?",
+          "returned_types": [
+            "voelkerrecht_vertrag"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Wie werden die Rechte der Europäischen Union und ihre Mitgliedstaaten im Vertrag",
+          "returned_types": [
+            "voelkerrecht_vertrag"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Welche Pflichten haben Staaten gemäß dem Völkerrecht bei der Behandlung von Krie",
+          "returned_types": [
+            "voelkerrecht_vertrag"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Wie werden Menschenrechte im Rahmen der Europäischen Union geschützt?",
+          "returned_types": [
+            "voelkerrecht_vertrag"
+          ],
+          "n_types": 1,
+          "covered": false
+        }
+      ]
+    },
+    "l1_score": 41.4,
+    "issues": [
+      "Keine Gesetzes-Chunks (gesetz_granular/gesetz) vorhanden!"
+    ],
+    "duration_s": 0.7
+  },
+  {
+    "skill": "voelkerstrafrecht",
+    "timestamp": "2026-05-18T21:22:15.901180",
+    "collection_count": 219,
+    "type_inventory": {
+      "gesetz_granular": 15,
+      "gesetz_norm": 202,
+      "literatur_lehrbuch": 1,
+      "voelkerstrafrecht_grundsaetze": 1
+    },
+    "n_distinct_types": 4,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Ein deutscher Staatsbürger begeht im Ausland eine Kriegsverbrechen. Ist das Völk",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Soldat begeht eine Tat nach § 8 VStGB auf Befehl seines Vorgesetzten. Handel",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Ausländer begeht im Inland eine Tat nach § 13 VStGB. Ist das allgemeine Stra",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein deutscher Staatsbürger begeht im Ausland eine Tat nach § 6 VStGB. Ist das Vö",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Militärführer gibt einen Befehl, der zu einer Tat nach § 9 VStGB führt. Ist ",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 85.0,
+    "issues": [
+      "Keine Urteils-Chunks vorhanden (urteil_segmentiert/urteil)"
+    ],
+    "duration_s": 1.2
+  },
+  {
+    "skill": "waffenrecht",
+    "timestamp": "2026-05-18T21:22:17.126408",
+    "collection_count": 657,
+    "type_inventory": {
+      "gesetz_granular": 301,
+      "gesetz_norm": 356
+    },
+    "n_distinct_types": 2,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Darf ein 17-jähriger Schüler im Rahmen eines Praktikums mit Waffen umgehen, wenn",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Was sind die Voraussetzungen für den Erwerb einer Waffe, die in der Anlage 2 (Wa",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ist es erlaubt, mit Waffen umzugehen, die ihrem Wesen nach dazu bestimmt sind, M",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Darf ein Jugendlicher, der das 16. Lebensjahr vollendet hat, an einem Schießkurs",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Was sind die Folgen, wenn jemand ohne Erlaubnis mit Waffen oder Munition umgeht,",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 71.4,
+    "issues": [
+      "Keine Urteils-Chunks vorhanden (urteil_segmentiert/urteil)"
+    ],
+    "duration_s": 1.0
+  },
+  {
+    "skill": "weltraumrecht",
+    "timestamp": "2026-05-18T21:22:18.159033",
+    "collection_count": 153,
+    "type_inventory": {
+      "gesetz_granular": 61,
+      "gesetz_norm": 89,
+      "voelkerrecht_vertrag": 3
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 60.0,
+      "n_queries": 5,
+      "n_covered": 3,
+      "details": [
+        {
+          "question": "Welche Voraussetzungen müssen erfüllt sein, damit eine Rechtsdienstleistung im B",
+          "returned_types": [
+            "gesetz_granular",
+            "voelkerrecht_vertrag"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie ist die Befugnis zur Erbringung außergerichtlicher Rechtsdienstleistungen im",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Was sind die Anforderungen an die rechtliche Prüfung des Einzelfalls im Rahmen d",
+          "returned_types": [
+            "gesetz_granular",
+            "voelkerrecht_vertrag"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Wie werden Rechtsdienstleistungen im Weltraumrecht definiert und was sind die Au",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Welche Rolle spielen internationale Abkommen und Verträge im Weltraumrecht und w",
+          "returned_types": [
+            "gesetz_granular",
+            "voelkerrecht_vertrag"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 87.6,
+    "issues": [],
+    "duration_s": 0.7
+  },
+  {
+    "skill": "wirtschaftsstrafrecht",
+    "timestamp": "2026-05-18T21:22:18.869710",
+    "collection_count": 5112,
+    "type_inventory": {
+      "gesetz_granular": 243,
+      "gesetz_norm": 241,
+      "urteil": 4628
+    },
+    "n_distinct_types": 3,
+    "query_coverage": {
+      "coverage_rate": 100.0,
+      "n_queries": 5,
+      "n_covered": 5,
+      "details": [
+        {
+          "question": "Ein Unternehmen hat falsche Angaben über seine Finanzlage gemacht, um eine Subve",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Ein Anlageberater hat Kunden falsche Informationen über eine Kapitalanlage gegeb",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Hacker hat in ein Computersystem eingedrungen und Daten verändert, um sich s",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Ein Unternehmen hat Subventionen erhalten, obwohl es die Voraussetzungen nicht e",
+          "returned_types": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "n_types": 3,
+          "covered": true
+        },
+        {
+          "question": "Ein Anlageberater hat Kunden nicht über die Risiken einer Kapitalanlage informie",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 99.6,
+    "issues": [],
+    "duration_s": 2.4
+  },
+  {
+    "skill": "zivilverfahrensrecht",
+    "timestamp": "2026-05-18T21:22:21.295822",
+    "collection_count": 25217,
+    "type_inventory": {
+      "gesetz_granular": 1904,
+      "urteil": 23313
+    },
+    "n_distinct_types": 2,
+    "query_coverage": {
+      "coverage_rate": 80.0,
+      "n_queries": 5,
+      "n_covered": 4,
+      "details": [
+        {
+          "question": "Welches Gesetz bestimmt die sachliche Zuständigkeit der Gerichte?",
+          "returned_types": [
+            "gesetz_granular"
+          ],
+          "n_types": 1,
+          "covered": false
+        },
+        {
+          "question": "Wie wird der Wert des Streitgegenstandes nach dem Zivilprozessrecht festgesetzt?",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Welche Rolle spielt der Wert des Beschwerdegegenstandes im Zivilprozessrecht?",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Kann das Gericht eine Beweisaufnahme anordnen, um den Wert des Streitgegenstande",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        },
+        {
+          "question": "Welche Bedeutung hat der Wert der Verurteilung im Zivilprozessrecht?",
+          "returned_types": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "n_types": 2,
+          "covered": true
+        }
+      ]
+    },
+    "l1_score": 80.4,
+    "issues": [],
+    "duration_s": 6.7
+  }
+]

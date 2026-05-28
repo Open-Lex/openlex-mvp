@@ -1,0 +1,367 @@
+[
+  {
+    "skill": "vergaberecht",
+    "n_questions": 5,
+    "avg_score": 64.8,
+    "hallucination_rate": 20.0,
+    "worst_score": 52.2,
+    "best_score": 70.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein öffentlicher Auftraggeber möchte eine IT-Dienstleistung im Wert von 500.000 Euro vergeben. Welches Vergabeverfahren muss er einhalten und welche Schwellenwerte sind maßgeblich?",
+        "category": "Vergabeverfahren",
+        "score": 52.2,
+        "answer_excerpt": "# Vergabeverfahren und Schwellenwerte für IT-Dienstleistung (500.000 Euro)\n\n## Maßgebliche Schwellenwerte\n\nGemäß **§ 106 Abs. 1 GWB** [Quelle 6] gilt das Vergaberecht für öffentliche Aufträge, deren g",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": true,
+          "hallucination_examples": [
+            "Die Antwort nennt einen konkreten EU-Schwellenwert von '215.000 Euro' für IT-Dienstleistungen. In Quelle 6 § 106 Abs. 2 wird jedoch nur auf 'Artikel 4 der Richtlinie 2014/24/EU in der jeweils geltenden Fassung' verwiesen, ohne dass in den bereitgestellten Quellen ein konkreter Betrag genannt wird."
+          ],
+          "completeness": 4,
+          "norm_presence": 0.67,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 22.4
+      },
+      {
+        "id": 2,
+        "question": "Ein Bieter wird vom Vergabeverfahren ausgeschlossen, weil er keine Nachweise zur Eignung eingereicht hat. Welche Rechtsschutzmöglichkeiten hat der Bieter?",
+        "category": "Bieterrechtsschutz",
+        "score": 68.8,
+        "answer_excerpt": "# Rechtsschutzmöglichkeiten bei Ausschluss wegen fehlender Eignungsnachweise\n\nEin Bieter, der wegen fehlender Eignungsnachweise vom Vergabeverfahren ausgeschlossen wird, hat folgende **Rechtsschutzmög",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 0.33,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.8
+      },
+      {
+        "id": 3,
+        "question": "Eine Gemeinde vergibt einen Bauauftrag ohne Ausschreibung direkt an ein befreundetes Unternehmen. Welche vergaberechtlichen Vorschriften werden verletzt?",
+        "category": "Direktvergabe",
+        "score": 70.8,
+        "answer_excerpt": "# Vergaberechtliche Verstöße bei Direktvergabe\n\nBei der beschriebenen Direktvergabe eines Bauauftrags durch die Gemeinde ohne Ausschreibung werden folgende wesentliche vergaberechtliche Vorschriften v",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.33,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.4
+      },
+      {
+        "id": 4,
+        "question": "Welche Anforderungen gelten an die Eignung von Bietern bei der Vergabe öffentlicher Aufträge nach dem GWB?",
+        "category": "Eignungsprüfung",
+        "score": 65.0,
+        "answer_excerpt": "# Anforderungen an die Eignung von Bietern bei öffentlichen Aufträgen\n\nNach dem GWB müssen Bieter bei der Vergabe öffentlicher Aufträge folgende Eignungsanforderungen erfüllen:\n\n## Grundprinzip (§ 122",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 15.6
+      },
+      {
+        "id": 5,
+        "question": "Ein öffentlicher Auftraggeber möchte besonders umweltfreundliche Produkte beschaffen. Darf er dies bei der Vergabe berücksichtigen?",
+        "category": "Nachhaltige Vergabe",
+        "score": 67.0,
+        "answer_excerpt": "# Berücksichtigung umweltfreundlicher Produkte bei der Vergabe\n\nJa, ein öffentlicher Auftraggeber **darf und kann** umweltfreundliche Aspekte bei der Vergabe ausdrücklich berücksichtigen.\n\n## Rechtlic",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.5
+      }
+    ],
+    "duration_s": 85.0
+  },
+  {
+    "skill": "steuerrecht",
+    "n_questions": 5,
+    "avg_score": 78.6,
+    "hallucination_rate": 0.0,
+    "worst_score": 70.8,
+    "best_score": 89.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Welche Steuern fallen unter den Anwendungsbereich der Abgabenordnung?",
+        "category": "Anwendungsbereich",
+        "score": 89.5,
+        "answer_excerpt": "# Anwendungsbereich der Abgabenordnung\n\nUnter den Anwendungsbereich der Abgabenordnung (AO) fallen gemäß **§ 1 AO** folgende Steuern:\n\n## Grundsätzlicher Anwendungsbereich\n\nNach **§ 1 Abs. 1 AO** gilt",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.0
+      },
+      {
+        "id": 2,
+        "question": "Wie verhält sich das Steuerrecht zu völkerrechtlichen Vereinbarungen?",
+        "category": "Völkerrechtliche Vereinbarungen",
+        "score": 73.8,
+        "answer_excerpt": "# Verhältnis des Steuerrechts zu völkerrechtlichen Vereinbarungen\n\nDas deutsche Steuerrecht räumt völkerrechtlichen Vereinbarungen einen **Vorrang vor innerstaatlichen Steuergesetzen** ein.\n\n## Rechtl",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.1
+      },
+      {
+        "id": 3,
+        "question": "Welche Vorschriften gelten für die Verarbeitung personenbezogener Daten durch Finanzbehörden?",
+        "category": "Datenschutz",
+        "score": 76.7,
+        "answer_excerpt": "# Vorschriften für die Verarbeitung personenbezogener Daten durch Finanzbehörden\n\n## Rechtsgrundlagen\n\nDie Verarbeitung personenbezogener Daten durch Finanzbehörden unterliegt der **DSGVO** und spezie",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.6
+      },
+      {
+        "id": 4,
+        "question": "Was bedeutet der Vorrang völkerrechtlicher Vereinbarungen für die Steuergesetze?",
+        "category": "Völkerrechtliche Vereinbarungen",
+        "score": 70.8,
+        "answer_excerpt": "# Vorrang völkerrechtlicher Vereinbarungen für Steuergesetze\n\n## Grundprinzip\n\nNach **§ 2 Abs. 1 AO** [Quelle 1, Quelle 5] haben völkerrechtliche Verträge über die Besteuerung Vorrang vor nationalen S",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.5
+      },
+      {
+        "id": 5,
+        "question": "Welche Anforderungen müssen Finanzbehörden bei der Verarbeitung personenbezogener Daten erfüllen?",
+        "category": "Datenschutz",
+        "score": 82.2,
+        "answer_excerpt": "# Anforderungen an Finanzbehörden bei der Verarbeitung personenbezogener Daten\n\nFinanzbehörden müssen bei der Verarbeitung personenbezogener Daten folgende Anforderungen erfüllen:\n\n## Grundsätzliche Z",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.1
+      }
+    ],
+    "duration_s": 70.9
+  },
+  {
+    "skill": "sportrecht",
+    "n_questions": 5,
+    "avg_score": 61.4,
+    "hallucination_rate": 0.0,
+    "worst_score": 48.8,
+    "best_score": 79.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Hobbysportler verletzt sich beim organisierten Vereinssport. Hat er Anspruch auf Leistungen der gesetzlichen Unfallversicherung nach dem SGB VII?",
+        "category": "Sportunfallversicherung",
+        "score": 78.2,
+        "answer_excerpt": "# Anspruch auf Leistungen der gesetzlichen Unfallversicherung beim Vereinssport\n\nBasierend auf den bereitgestellten Quellen lässt sich diese Frage **nicht abschließend beantworten**, da die relevanten",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 14.5
+      },
+      {
+        "id": 2,
+        "question": "Ein Fußballverein möchte sich als eingetragener Verein im Vereinsregister eintragen lassen. Welche Voraussetzungen müssen erfüllt sein?",
+        "category": "Vereinsregistrierung",
+        "score": 79.2,
+        "answer_excerpt": "# Voraussetzungen für die Eintragung eines Fußballvereins ins Vereinsregister\n\nFür die Eintragung eines Fußballvereins als eingetragener Verein müssen folgende Voraussetzungen erfüllt sein:\n\n## Grundv",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 14.1
+      },
+      {
+        "id": 3,
+        "question": "Ein Sportler wird bei einem Dopingtest positiv auf eine verbotene Substanz getestet. Welche strafrechtlichen Konsequenzen drohen nach dem Anti-Doping-Gesetz?",
+        "category": "Dopingrecht",
+        "score": 51.5,
+        "answer_excerpt": "# Strafrechtliche Konsequenzen nach dem Anti-Doping-Gesetz\n\nGrundsätzlich ist zu differenzieren: Das Anti-Doping-Gesetz (AntiDopG) stellt **nicht primär den Eigengebrauch durch Sportler**, sondern vor",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 18.1
+      },
+      {
+        "id": 4,
+        "question": "Welche Rechte haben Vereinsmitglieder bei der Beschlussfassung in einer Mitgliederversammlung des Sportvereins?",
+        "category": "Vereinsmitglieder",
+        "score": 49.2,
+        "answer_excerpt": "# Rechte von Vereinsmitgliedern bei der Beschlussfassung\n\n## Grundlegende Rechte\n\nVereinsmitglieder haben nach **§ 32 Abs. 1 BGB** das Recht, über Vereinsangelegenheiten durch Beschlussfassung in der ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 11.8
+      },
+      {
+        "id": 5,
+        "question": "Ein Mitglied eines Sportvereins wird aus dem Verein ausgeschlossen. Welche Rechte stehen dem Mitglied zu, und welche Anforderungen gelten für den Ausschluss?",
+        "category": "Vereinsausschluss",
+        "score": 48.8,
+        "answer_excerpt": "# Rechte und Anforderungen beim Vereinsausschluss\n\n## Rechtliche Grundlage\n\nDie direkt bereitgestellten Quellen enthalten **keine expliziten Regelungen zum Vereinsausschluss**. Die genannten Paragrafe",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.25,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 13.2
+      }
+    ],
+    "duration_s": 73.2
+  }
+]

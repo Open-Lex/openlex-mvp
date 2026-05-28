@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "skill": "verfassungsprozessrecht",
+    "question": "Ein Richter des Bundesverfassungsgerichts möchte sein Amt vorzeitig beenden. Welche Voraussetzungen und Verfahrensschritte gelten gemäß den gesetzlichen Bestimmungen?",
+    "expected_norms": [
+      "§ 12"
+    ],
+    "expected_keywords": [
+      "Richter",
+      "Bundesverfassungsgericht",
+      "Entlassung"
+    ],
+    "category": "Richterrecht"
+  },
+  {
+    "id": 2,
+    "skill": "verfassungsprozessrecht",
+    "question": "Der Bundestag muss einen Richter für das Bundesverfassungsgericht wählen. Welche Anforderungen müssen der Kandidat erfüllen und welche Wahlvoraussetzungen gelten?",
+    "expected_norms": [
+      "§ 3",
+      "§ 6"
+    ],
+    "expected_keywords": [
+      "Richter",
+      "Bundestag",
+      "Mitglieder"
+    ],
+    "category": "Richterwahlverfahren"
+  },
+  {
+    "id": 3,
+    "skill": "verfassungsprozessrecht",
+    "question": "Das Bundesverfassungsgericht entscheidet in verschiedenen Arten von Verfahren. Welche Zuständigkeitsverteilung besteht zwischen den beiden Senaten des Gerichts?",
+    "expected_norms": [
+      "§ 13",
+      "§ 14"
+    ],
+    "expected_keywords": [
+      "Normenkontrolle",
+      "Senat",
+      "Bundesverfassungsgericht"
+    ],
+    "category": "Gerichtsorganisation"
+  },
+  {
+    "id": 4,
+    "skill": "verfassungsprozessrecht",
+    "question": "Ein Richter des Bundesverfassungsgerichts hat das 68. Lebensjahr vollendet. Wie lange darf er noch im Amt tätig sein und welche Regelung gilt für seinen Nachfolger?",
+    "expected_norms": [
+      "§ 4"
+    ],
+    "expected_keywords": [
+      "Richter",
+      "Altersgrenze",
+      "Amtszeit"
+    ],
+    "category": "Richterrecht"
+  },
+  {
+    "id": 5,
+    "skill": "verfassungsprozessrecht",
+    "question": "Der Wahlausschuss des Bundestages soll Richter für das Bundesverfassungsgericht vorschlagen. Wie wird dieser Ausschuss zusammengesetzt und welche Verpflichtungen haben seine Mitglieder?",
+    "expected_norms": [
+      "§ 6"
+    ],
+    "expected_keywords": [
+      "Wahlausschuss",
+      "Mitglieder",
+      "Bundestag"
+    ],
+    "category": "Richterwahlverfahren"
+  }
+]

@@ -1,0 +1,121 @@
+[
+  {
+    "skill": "verbraucherrecht",
+    "n_questions": 5,
+    "avg_score": 82.8,
+    "hallucination_rate": 0.0,
+    "worst_score": 79.2,
+    "best_score": 87.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Online-Shop verkauft Möbel. Der Betreiber möchte seine Allgemeinen Geschäftsbedingungen in den Kaufvertrag einbeziehen. Welche Voraussetzungen muss der Shop-Betreiber als Verwender erfüllen, damit die Geschäftsbedingungen nach § 305 Absatz 2 Vertragsbestandteil werden?",
+        "category": "Allgemeine Geschäftsbedingungen",
+        "score": 86.5,
+        "answer_excerpt": "# Voraussetzungen für die Einbeziehung von AGB nach § 305 Abs. 2 BGB\n\nNach [Quelle 1] sind Allgemeine Geschäftsbedingungen \"alle für eine Vielzahl von Verträgen vorformulierten Vertragsbedingungen, di",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.9
+      },
+      {
+        "id": 2,
+        "question": "Ein Versandhandelsunternehmen schließt mit einem Kunden einen Vertrag über die Lieferung einer Ware per Internet ab. Welche Informationspflichten hat der Unternehmer gegenüber dem Verbraucher nach § 312d Absatz 1, und was wird mit den gemachten Angaben erreicht?",
+        "category": "Informationspflichten bei Fernabsatzverträgen",
+        "score": 79.2,
+        "answer_excerpt": "# Informationspflichten nach § 312d Abs. 1 BGB\n\n## Informationspflichten des Unternehmers\n\nNach § 312d Abs. 1 BGB ist der Unternehmer bei Fernabsatzverträgen (wie dem Versandhandelsvertrag) verpflicht",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 8.2
+      },
+      {
+        "id": 3,
+        "question": "Ein Handwerksbetrieb möchte in seinen AGB eine Klausel einführen, wonach der Kunde für alle Schäden haftet. Wann verstößt eine solche Klausel gegen § 307 BGB, und welche Rechtsfolge tritt bei unangemessener Benachteiligung ein?",
+        "category": "Klauselverbote ohne Wertungsmöglichkeit",
+        "score": 79.5,
+        "answer_excerpt": "# Unwirksamkeit einer Haftungsausschlussklausel nach § 307 BGB\n\n## Verstöße gegen § 307 BGB\n\nEine Klausel, wonach der Kunde für **alle Schäden** haftet, verstößt gegen § 307 Abs. 1 BGB, wenn sie den K",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.1
+      },
+      {
+        "id": 4,
+        "question": "Ein Verbraucher ist eine Person, die ein Rechtsgeschäft zu welchen Zwecken abschließt? Grenzen Sie die Definition nach § 13 ab und unterscheiden Sie vom Unternehmer nach § 14.",
+        "category": "Definitionen und Grundbegriffe",
+        "score": 81.2,
+        "answer_excerpt": "# Definition des Verbrauchers nach § 13 BGB\n\nEin Verbraucher ist nach [Quelle 1] **jede natürliche Person, die ein Rechtsgeschäft zu Zwecken abschließt, die überwiegend weder ihrer gewerblichen noch i",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 8.3
+      },
+      {
+        "id": 5,
+        "question": "Ein Verbraucher kauft ein Buch online. Steht ihm ein Widerrufsrecht zu und wenn ja, nach welchen Vorschriften und innerhalb welcher Frist kann er es ausüben? Gibt es Ausnahmen vom Widerrufsrecht bei digitalen Gütern?",
+        "category": "Widerrufsrecht bei Verbraucherverträgen",
+        "score": 87.5,
+        "answer_excerpt": "# Widerrufsrecht beim Online-Buchkauf\n\n## Grundsätzliches Widerrufsrecht\n\nJa, beim Online-Kauf eines Buches steht dem Verbraucher ein Widerrufsrecht zu. Dies ist ein **Fernabsatzvertrag** gemäß [Quell",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.6
+      }
+    ],
+    "duration_s": 53.6
+  }
+]

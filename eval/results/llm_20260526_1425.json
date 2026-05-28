@@ -1,0 +1,129 @@
+[
+  {
+    "skill": "ipr",
+    "n_questions": 5,
+    "avg_score": 81.1,
+    "hallucination_rate": 20.0,
+    "worst_score": 63.2,
+    "best_score": 91.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein deutsches Unternehmen schließt mit einem britischen Partner in London einen Kaufvertrag über Industriemaschinen. Eine Rechtswahlklausel fehlt. Welches Recht ist auf diesen Kaufvertrag anzuwenden, und welcher konkrete Artikel der Rom I-Verordnung bestimmt das objektiv anwendbare Recht bei Kaufverträgen?",
+        "category": "Vertragsstatut",
+        "score": 91.2,
+        "answer_excerpt": "# Anwendbares Recht bei fehlendem Rechtswahl — Kaufvertrag über Industriemaschinen\n\n## Maßgebliche Regelung\n\nBei fehlendem Rechtswahl bestimmt sich das anwendbare Recht nach **Artikel 4 Rom I-Verordnu",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 18.5
+      },
+      {
+        "id": 2,
+        "question": "Ein in Frankreich lebender Deutscher erleidet bei einem Verkehrsunfall in Spanien einen Schaden durch einen spanischen Fahrer. Welches Recht ist auf seinen Schadensersatzanspruch anzuwenden, und welcher konkrete Artikel der Rom II-Verordnung bestimmt das Deliktsstatut?",
+        "category": "Deliktsstatut",
+        "score": 91.2,
+        "answer_excerpt": "# Anwendbares Recht bei Verkehrsunfall in Spanien\n\n## Anwendbare Rechtsquelle und Artikel\n\nAuf den Schadensersatzanspruch des in Frankreich lebenden Deutschen ist die **Rom II-Verordnung (VO Nr. 864/2",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.7
+      },
+      {
+        "id": 3,
+        "question": "Ein iranisches Gericht spricht einem geschiedenen Mann das alleinige Sorgerecht für das gemeinsame Kind zu, obwohl die Mutter in Deutschland lebt. Das deutsche Familiengericht soll die ausländische Entscheidung anerkennen. Kann es die Anerkennung wegen Unvereinbarkeit mit deutschen Grundwerten verweigern, und welche Norm des EGBGB ist einschlägig?",
+        "category": "Ordre Public",
+        "score": 81.9,
+        "answer_excerpt": "# Anerkennung ausländischer Sorgerechtsentsscheidung und Ordre-Public-Vorbehalt\n\n## Einschlägige Norm\n\nDie relevante Bestimmung ist **Artikel 6 EGBGB** (Ordre-Public-Klausel/Vorbehaltsklausel) [Quelle",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.5
+      },
+      {
+        "id": 4,
+        "question": "Zwei Parteien aus verschiedenen EU-Ländern streiten über die Wirksamkeit einer Rechtswahlklausel in ihrem Dienstleistungsvertrag. Was erlaubt Art. 3 Rom I-VO, und welche Grenzen bestehen?",
+        "category": "Rechtswahl",
+        "score": 77.9,
+        "answer_excerpt": "# Antwort zu Art. 3 Rom I-VO und Rechtswahlklauseln\n\nLeider enthalten die bereitgestellten Quellen keinen direkten Text zu **Artikel 3 Rom I-Verordnung (VO Nr. 593/2008)**, der die Rechtswahlfreiheit ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.8
+      },
+      {
+        "id": 5,
+        "question": "Ein deutscher Staatsangehöriger lebt seit 20 Jahren in Spanien und stirbt ohne Testament. Seine Erben sind unsicher, ob spanisches oder deutsches Erbrecht gilt. Welcher Artikel der EuErbVO bestimmt das anwendbare Erbstatut, und hätte der Erblasser eine Rechtswahl treffen können?",
+        "category": "Erbstatut EuErbVO",
+        "score": 63.2,
+        "answer_excerpt": "# Anwendbares Erbstatut bei Tod eines in Spanien lebenden Deutschen\n\n## Maßgeblicher Artikel der EuErbVO\n\n**Artikel 21 EuErbVO** bestimmt das anwendbare Erbstatut durch objektive Anknüpfung: Danach un",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": true,
+          "hallucination_examples": [
+            "Die Antwort behauptet, der Erblasser 'hätte deutsches Erbrecht wählen können, ohne dass dies im Testament dokumentiert hätte sein müssen.' Dies widerspricht den Quellen: Art. 22 EuErbVO ermöglicht zwar eine Rechtswahl des Heimatrechts, aber die Quellen enthalten keine Aussage darüber, dass keine Dokumentation erforderlich wäre. Tatsächlich erfordern Rechtswahlen typischerweise formale Dokumentation.",
+            "Die Antwort ist unvollständig: Art. 22 EuErbVO wird in der Antwort zitiert, aber nicht vollständig erläutert. Die genauen Bedingungen und Formanforderungen der Rechtswahl werden nicht aus den Quellen abgeleitet."
+          ],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.6
+      }
+    ],
+    "duration_s": 58.7
+  }
+]

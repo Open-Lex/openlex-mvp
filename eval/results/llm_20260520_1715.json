@@ -1,0 +1,119 @@
+[
+  {
+    "skill": "verbraucherschutzrecht",
+    "n_questions": 5,
+    "avg_score": 63.5,
+    "hallucination_rate": 0.0,
+    "worst_score": 52.9,
+    "best_score": 79.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Was sind die Anforderungen an die Auftragsvergabe durch zuständige Behörden im Sinne der Verordnung (EG) 1370/2007?",
+        "category": "Auftragsvergabe",
+        "score": 52.9,
+        "answer_excerpt": "# Anforderungen an die Auftragsvergabe nach VO (EG) 1370/2007\n\nBasierend auf den bereitgestellten Quellen lassen sich folgende Anforderungen ableiten:\n\n## Zuständige Behörde\n\nNach **Art. 2 Buchst. b V",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 22.4
+      },
+      {
+        "id": 2,
+        "question": "Wie wird die Zuständigkeit für die Entscheidung über die Abschiebungshaft im Aufenthaltsgesetz (AufenthG) geregelt?",
+        "category": "Abschiebungshaft",
+        "score": 54.2,
+        "answer_excerpt": "# Zuständigkeit für Abschiebungshaft nach AufenthG\n\n## Gerichtliche Zuständigkeit\n\nDie **ordentlichen Gerichte** sind nach **§ 428 FamFG** für die Entscheidung über Abschiebungshaft zuständig. Dies gi",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "urteil"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 13.7
+      },
+      {
+        "id": 3,
+        "question": "Was sind die Voraussetzungen für die Verweisung eines Rechtsstreits an ein anderes Gericht nach § 17a GVG?",
+        "category": "Gerichtsverfahren",
+        "score": 77.2,
+        "answer_excerpt": "# Voraussetzungen für die Verweisung nach § 17a GVG\n\nAus den bereitgestellten Quellen ergeben sich folgende Voraussetzungen für die Verweisung eines Rechtsstreits an ein anderes Gericht nach § 17a GVG",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "urteil"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 14.2
+      },
+      {
+        "id": 4,
+        "question": "Wie werden sonstige konkrete Vorbereitungshandlungen von vergleichbarem Gewicht im Rahmen der Dublin-III-Verordnung behandelt?",
+        "category": "Asylrecht",
+        "score": 54.2,
+        "answer_excerpt": "# Behandlung sonstiger konkreter Vorbereitungshandlungen nach Dublin-III-VO\n\n## Rechtliche Anforderungen\n\nGemäß der Rechtsprechung des Bundesgerichtshofs erfordern **sonstige konkrete Vorbereitungshan",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "urteil"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 13.9
+      },
+      {
+        "id": 5,
+        "question": "Was sind die Anforderungen an die Sicherungshaft im Sinne des Aufenthaltsgesetzes (AufenthG)?",
+        "category": "Sicherungshaft",
+        "score": 79.2,
+        "answer_excerpt": "# Anforderungen an die Sicherungshaft nach AufenthG\n\n## Grundvoraussetzungen\n\nFür die Anordnung von Sicherungshaft nach dem Aufenthaltsgesetz müssen folgende Anforderungen erfüllt sein:\n\n### 1. Formel",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "urteil"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 10.8
+      }
+    ],
+    "duration_s": 76.4
+  }
+]

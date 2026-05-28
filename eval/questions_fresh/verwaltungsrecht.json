@@ -1,0 +1,66 @@
+[
+  {
+    "question": "Die Gemeinde Müsterstadt lehnt einen Bauantrag des Investors K ab. In der Begründung heißt es nur: 'Der Antrag ist abzulehnen.' Die Ablehnung enthält weder Gründe noch Rechtsbehelfsbelehrung. K möchte gegen diesen Bescheid vorgehen. Ist der Verwaltungsakt ordnungsgemäß ergangen und welche Anforderungen nach dem VwVfG muss die Gemeinde erfüllt haben?",
+    "expected_norms": [
+      "§ 37 VwVfG",
+      "§ 39 VwVfG"
+    ],
+    "expected_keywords": [
+      "Begründung",
+      "Ermessensspielraum",
+      "Rechtsbehelfsbelehrung",
+      "Formerfordernisse"
+    ]
+  },
+  {
+    "question": "Die Straßenverkehrsbehörde erteilt einer Einzelhandelskette die Genehmigung, eine Außenwerbung (Werbeplakat 4x6 m) an einer stark frequentierten Kreuzung aufzustellen. Ein Anwohner beschwert sich, dass dies sein Eigentum beeinträchtigt und der Gehweg gefährlich verengt wird. Kann der Anwohner gegen die Genehmigung vorgehen und welche Anforderungen gelten für die behördliche Ermessenausübung nach § 40 VwVfG?",
+    "expected_norms": [
+      "§ 40 VwVfG",
+      "§ 113 VwGO"
+    ],
+    "expected_keywords": [
+      "Ermessensspielraum",
+      "Ermessensfehler",
+      "Abwägung",
+      "Klageantrag"
+    ]
+  },
+  {
+    "question": "Eine Behörde untersagt einem Gaststättenbetreiber jede Außenbestuhlung, weil einzelne Gäste in der Vergangenheit Lärmbelästigungen verursacht haben. Der Betreiber hatte bereits Maßnahmen ergriffen, um künftige Störungen auszuschließen. Ist diese Untersagung verhältnismäßig im Sinne des Verwaltungsrechts und welche Prüfungsebenen sind relevant?",
+    "expected_norms": [
+      "§ 5 VwVfG",
+      "§ 40 VwVfG"
+    ],
+    "expected_keywords": [
+      "Verhältnismäßigkeit",
+      "Geeignetheit",
+      "Erforderlichkeit",
+      "Angemessenheit"
+    ]
+  },
+  {
+    "question": "Ein Student reicht einen BAföG-Antrag bei der Behörde ein. Diese teilt mit, der Antrag sei 'unvollständig' und könne nicht bearbeitet werden, ohne jedoch konkret zu benennen, welche Unterlagen fehlen. Der Student fragt sich, ob die Behörde verpflichtet war, ihn auf die fehlenden Angaben hinzuweisen. Welche Bestimmung des VwVfG regelt dies und welche Rechtsfolgen ergeben sich?",
+    "expected_norms": [
+      "§ 17 VwVfG"
+    ],
+    "expected_keywords": [
+      "Anhörung",
+      "Unvollständigkeit",
+      "Hinweispflicht",
+      "Nachfrist"
+    ]
+  },
+  {
+    "question": "Eine Gemeinde verweigert einer Privatschule die Betriebserlaubnis nach dem Schulgesetz mit der Begründung, dass 'genügend öffentliche Schulen vorhanden sind'. Die Privatschule argumentiert, die Behörde habe bei ihrer Ermessensentscheidung wesentliche Belange (Pädagogisches Konzept, Elternwunsch) nicht berücksichtigt. Wie prüft man auf Ermessensmängel gem. § 40 VwVfG und unter welchen Voraussetzungen kann hier ein Ermessensfehler vorliegen?",
+    "expected_norms": [
+      "§ 40 VwVfG",
+      "§ 114 VwGO"
+    ],
+    "expected_keywords": [
+      "Ermessensfehlgebrauch",
+      "Relevante Belange",
+      "Gewichtungsfehler",
+      "Gerichtliche Kontrolldichte"
+    ]
+  }
+]

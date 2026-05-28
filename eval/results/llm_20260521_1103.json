@@ -1,0 +1,120 @@
+[
+  {
+    "skill": "insolvenzrecht",
+    "n_questions": 5,
+    "avg_score": 58.5,
+    "hallucination_rate": 0.0,
+    "worst_score": 54.2,
+    "best_score": 64.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Schuldner hat vor 5 Jahren eine unentgeltliche Leistung an einen Freund erbracht. Kann ein Gläubiger diese Leistung anfechten, wenn der Schuldner nun insolvent ist?",
+        "category": "Anfechtung",
+        "score": 54.2,
+        "answer_excerpt": "# Anfechtbarkeit der unentgeltlichen Leistung\n\n## Rechtliche Beurteilung\n\nEine vor **5 Jahren** erbrachte unentgeltliche Leistung kann durch einen Gläubiger im Insolvenzverfahren **grundsätzlich nicht",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_norm"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 25.1
+      },
+      {
+        "id": 2,
+        "question": "Ein Gläubiger hat einen vollstreckbaren Schuldtitel gegen einen Schuldner erlangt, aber die Zwangsvollstreckung in das Vermögen des Schuldners war nicht erfolgreich. Kann der Gläubiger nun die Anfechtung einer Rechtshandlung des Schuldners beantragen?",
+        "category": "Anfechtung",
+        "score": 62.5,
+        "answer_excerpt": "# Anfechtungsrecht des Gläubigers\n\nJa, der Gläubiger kann grundsätzlich die Anfechtung einer Rechtshandlung des Schuldners beantragen.\n\n## Voraussetzungen der Gläubigeranfechtung\n\nNach [Quelle 1] ist ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 14.1
+      },
+      {
+        "id": 3,
+        "question": "Ein Schuldner hat vor 3 Jahren ein gebräuchliches Gelegenheitsgeschenk geringen Werts an einen Bekannten übergeben. Kann ein Gläubiger diese Leistung anfechten, wenn der Schuldner nun insolvent ist?",
+        "category": "Anfechtung",
+        "score": 57.2,
+        "answer_excerpt": "# Antwort\n\n**Nein, der Gläubiger kann diese Leistung nicht anfechten.**\n\n## Rechtliche Begründung\n\nGemäß [Quelle 1] und [Quelle 2] gilt für unentgeltliche Leistungen des Schuldners grundsätzlich eine ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_norm"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 16.0
+      },
+      {
+        "id": 4,
+        "question": "Ein Erbe hat aus dem Nachlaß Pflichtteilsansprüche erfüllt. Kann ein Nachlaßgläubiger die Leistung anfechten, wenn er im Insolvenzverfahren über den Nachlaß dem Empfänger der Leistung im Rang vorgeht?",
+        "category": "Nachlaßinsolvenz",
+        "score": 64.5,
+        "answer_excerpt": "# Anfechtung der Pflichtteilserfüllung durch Nachlaßgläubiger\n\nJa, ein Nachlaßgläubiger kann unter bestimmten Voraussetzungen die Erfüllung von Pflichtteilsansprüchen durch den Erben anfechten.\n\n## Re",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 13.9
+      },
+      {
+        "id": 5,
+        "question": "Ein Schuldner hat vor 2 Jahren eine Rechtshandlung mit dem Vorsatz vorgenommen, seine Gläubiger zu benachteiligen. Kann ein Gläubiger diese Rechtshandlung anfechten, wenn der andere Teil zur Zeit der Handlung den Vorsatz des Schuldners kannte?",
+        "category": "Anfechtung",
+        "score": 54.2,
+        "answer_excerpt": "# Anfechtbarkeit der Rechtshandlung\n\nJa, ein Gläubiger kann diese Rechtshandlung grundsätzlich anfechten.\n\n## Rechtliche Grundlage\n\nNach **[Quelle 1]** ist eine Rechtshandlung anfechtbar, wenn:\n- der ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_norm"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 16.4
+      }
+    ],
+    "duration_s": 87.0
+  }
+]

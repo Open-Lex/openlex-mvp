@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "skill": "jugendrecht",
+    "question": "Ein 16-jähriger Schüler wird wegen Diebstahls angezeigt. Sein Anwalt fragt, nach welchen grundsätzlichen Prinzipien das Verfahren gegen ihn ablaufen soll. Welches Ziel verfolgt die Anwendung des Jugendstrafrechts primär?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Erziehung",
+      "Jugendlichen",
+      "erneuten Straftaten"
+    ],
+    "category": "Grundprinzipien des Jugendstrafrechts"
+  },
+  {
+    "id": 2,
+    "skill": "jugendrecht",
+    "question": "Der Richter möchte einen 17-jährigen Jugendlichen, der wiederholt zu spät zur Schule kommt und sich nicht an Regeln hält, zur Erziehung anleiten. Welche konkreten Maßnahmen kann der Richter gemäß § 10 dem Jugendlichen auferlegen?",
+    "expected_norms": [
+      "§ 10"
+    ],
+    "expected_keywords": [
+      "Weisungen",
+      "Lebensführung",
+      "Jugendlichen"
+    ],
+    "category": "Erziehungsmaßnahmen und Weisungen"
+  },
+  {
+    "id": 3,
+    "skill": "jugendrecht",
+    "question": "Nach einer Straftat wird gegen den 15-jährigen Täter verhandelt. Der Staatsanwalt argumentiert für eine Strafe, die Verteidigung für Erziehungsmaßnahmen. Nach welchem Stufensystem erfolgt die Sanktionierung gemäß § 5 des Jugendgerichtsgesetzes?",
+    "expected_norms": [
+      "§ 5"
+    ],
+    "expected_keywords": [
+      "Erziehungsmaßregeln",
+      "Jugendstrafe",
+      "Zuchtmitteln"
+    ],
+    "category": "Sanktionssystem im Jugendstrafrecht"
+  },
+  {
+    "id": 4,
+    "skill": "jugendrecht",
+    "question": "Ein 17-jähriger wird wegen fahrlässiger Körperverletzung verurteilt. Der Richter überlegt, welche zusätzlichen Konsequenzen neben der Verurteilung möglich sind. Was bestimmt § 6 des Jugendgerichtsgesetzes bezüglich der Nebenfolgen?",
+    "expected_norms": [
+      "§ 6"
+    ],
+    "expected_keywords": [
+      "Richter",
+      "Verurteilung",
+      "öffentlichen"
+    ],
+    "category": "Nebenfolgen und Rechtswirkungen"
+  },
+  {
+    "id": 5,
+    "skill": "jugendrecht",
+    "question": "Ein 18-jähriger Heranwachsender wird bei einer Körperverletzung erwischt. Der Richter stellt fest, dass der Heranwachsende strafrechtlich verantwortlich sein könnte. Nach welchen Kriterien bewertet § 3 JGG die strafrechtliche Verantwortlichkeit Jugendlicher?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Jugendlicher",
+      "strafrechtlich verantwortlich",
+      "Entwicklung"
+    ],
+    "category": "Schuldfähigkeit und Verantwortlichkeit"
+  }
+]

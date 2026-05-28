@@ -1,0 +1,120 @@
+[
+  {
+    "skill": "grundrechte",
+    "n_questions": 5,
+    "avg_score": 74.1,
+    "hallucination_rate": 0.0,
+    "worst_score": 54.2,
+    "best_score": 80.9,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Polizist nimmt einem Demonstranten das Megafon ab, um eine Störung der öffentlichen Ordnung zu verhindern. Verletzt dies das Grundrecht auf Meinungsfreiheit?",
+        "category": "Meinungsfreiheit",
+        "score": 54.2,
+        "answer_excerpt": "# Meinungsfreiheit und Megafon-Beschlagnahme\n\n## Grundrecht auf Meinungsfreiheit\n\nDas Grundrecht auf Meinungsfreiheit ist in **Artikel 5 Abs. 1 GG** verankert und schützt das Recht, \"seine Meinung in ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 22.2
+      },
+      {
+        "id": 2,
+        "question": "Ein Arbeitnehmer wird wegen seines Alters nicht zu einem Vorstellungsgespräch eingeladen. Ist dies ein Verstoß gegen das Grundgesetz oder einfaches Recht?",
+        "category": "Gleichbehandlung",
+        "score": 76.2,
+        "answer_excerpt": "# Altersbedingte Diskriminierung bei Vorstellungsgesprächen\n\nDie bereitgestellten Quellen behandeln ausschließlich Verfahrensbestimmungen des Bundesverfassungsgerichts (BVerfGG) und enthalten keine Re",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 11.5
+      },
+      {
+        "id": 3,
+        "question": "Ein Ehepaar möchte ein Kind adoptieren, aber die Behörde lehnt dies ab wegen abweichender Lebensführung. Welche Grundrechte könnten verletzt sein?",
+        "category": "Gleichbehandlung",
+        "score": 80.9,
+        "answer_excerpt": "# Potentiell verletzte Grundrechte bei Adoptionsablehnung\n\nBei einer Ablehnung einer Adoption durch die Behörde wegen \"abweichender Lebensführung\" könnten folgende Grundrechte verletzt sein:\n\n## Artik",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 15.1
+      },
+      {
+        "id": 4,
+        "question": "Ein Student wird von der Universität wegen seiner politischen Ansichten exmatrikuliert. Ist dies ein Verstoß gegen die Meinungsfreiheit?",
+        "category": "Meinungsfreiheit",
+        "score": 79.2,
+        "answer_excerpt": "# Exmatrikulation wegen politischer Ansichten und Meinungsfreiheit\n\n## Grundrechtlicher Schutz\n\nNach **Art. 5 Abs. 1 GG** [Quelle 2] hat jeder das Recht, seine Meinung frei zu äußern und zu verbreiten",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 12.5
+      },
+      {
+        "id": 5,
+        "question": "Ein Unternehmen verlangt von Mitarbeitern, ihre privaten Social-Media-Profile offenzulegen. Verletzt dies das Recht auf informationelle Selbstbestimmung?",
+        "category": "Datenschutz",
+        "score": 79.9,
+        "answer_excerpt": "# Verletzung des Rechts auf informationelle Selbstbestimmung\n\nDie bereitgestellten Quellen ermöglichen keine direkte Beantwortung der Frage, da sie sich primär auf Personalvertretungsrechte im öffentl",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.4
+      }
+    ],
+    "duration_s": 71.3
+  }
+]

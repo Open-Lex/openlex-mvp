@@ -1,0 +1,370 @@
+[
+  {
+    "skill": "it_recht",
+    "n_questions": 16,
+    "avg_score": 72.7,
+    "hallucination_rate": 0.0,
+    "worst_score": 57.5,
+    "best_score": 90.0,
+    "questions": [
+      {
+        "id": null,
+        "question": "Ein Online-Marktplatz vermittelt Waren von Drittanbietern. Welche Pflichten entstehen nach dem Digital Services Act (DSA) als 'Vermittlungsdienst' und als 'Online-Plattform'?",
+        "category": "",
+        "score": 70.0,
+        "answer_excerpt": "# Pflichten nach dem Digital Services Act (DSA)\n\n## Als \"Vermittlungsdienst\"\n\nDer DSA gilt für alle **Anbieter von Vermittlungsdiensten** [Quelle 1]. Folgende grundlegende Pflichten entstehen:\n\n**Tran",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.5
+      },
+      {
+        "id": null,
+        "question": "Eine sehr große Online-Plattform (VLOP) gemäß DSA hat systemische Risiken. Welche besonderen Pflichten entstehen nach Art. 33 ff. DSA?",
+        "category": "",
+        "score": 87.5,
+        "answer_excerpt": "# Besondere Pflichten von VLOPs bei systemischen Risiken nach DSA\n\nGemäß **Art. 33 ff. DSA** entstehen für sehr große Online-Plattformen (VLOPs) mit systemischen Risiken folgende besonderen Pflichten:",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.6
+      },
+      {
+        "id": null,
+        "question": "Ein Nutzer meldet illegale Inhalte auf einer Online-Plattform. Welche Pflichten hat die Plattform nach DSA Art. 16?",
+        "category": "",
+        "score": 77.5,
+        "answer_excerpt": "# Pflichten der Plattform nach DSA Art. 16\n\nNach **Artikel 16 DSA** (Melde- und Abhilfeverfahren) hat die Online-Plattform folgende Pflichten bei Meldung illegaler Inhalte [Quelle 11]:\n\n## Kernpflicht",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.4
+      },
+      {
+        "id": null,
+        "question": "Unter welchen Voraussetzungen haftet ein Hosting-Provider nach dem DSA nicht für von Nutzern hochgeladene illegale Inhalte?",
+        "category": "",
+        "score": 74.2,
+        "answer_excerpt": "# Haftungsbefreiung von Hosting-Providern nach dem DSA\n\nNach **Artikel 6 DSA (EU 2022/2065)** haftet ein Hosting-Provider nicht für von Nutzern hochgeladene illegale Inhalte, sofern zwei kumulativ vor",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.5,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.4
+      },
+      {
+        "id": null,
+        "question": "Was sind die Pflichten von Online-Plattformen bezüglich Werbung und personalisierter Empfehlungssysteme nach DSA Art. 26-27?",
+        "category": "",
+        "score": 86.5,
+        "answer_excerpt": "# Pflichten von Online-Plattformen nach DSA Art. 26-27\n\n## Werbung (Art. 26)\n\nNach **DSA Art. 26** [Quelle 2, 6] müssen Anbieter von Online-Plattformen, die Werbung darstellen, sicherstellen, dass Nut",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.0
+      },
+      {
+        "id": null,
+        "question": "Ein großes Tech-Unternehmen ist als 'Gatekeeper' nach dem Digital Markets Act (DMA) eingestuft. Welche Kernpflichten entstehen nach Art. 5 und 6 DMA?",
+        "category": "",
+        "score": 69.5,
+        "answer_excerpt": "# Kernpflichten von Gatekeepern nach Art. 5 und 6 DMA\n\nLeider enthalten die bereitgestellten Quellen die vollständigen Texte der **Artikel 5 und 6 DMA nicht**. Die Quellen behandeln andere Bestimmunge",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.25,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.0
+      },
+      {
+        "id": null,
+        "question": "Unter welchen Kriterien (Schwellenwerte) wird ein Unternehmen als Gatekeeper nach DMA Art. 3 qualifiziert?",
+        "category": "",
+        "score": 90.0,
+        "answer_excerpt": "# Gatekeeper-Qualifizierung nach DMA Art. 3\n\nNach [Quelle 2] (DMA Art. 3) wird ein Unternehmen als Torwächter (Gatekeeper) benannt, wenn es **drei kumulativ** zu erfüllende Kriterien erfüllt:\n\n## Erfo",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.7
+      },
+      {
+        "id": null,
+        "question": "Was sind die Sicherheitsanforderungen für 'wesentliche Einrichtungen' nach der NIS2-Richtlinie? Welche Maßnahmen müssen implementiert werden?",
+        "category": "",
+        "score": 65.0,
+        "answer_excerpt": "# Sicherheitsanforderungen für wesentliche Einrichtungen nach NIS2\n\n## Risikomanagementmaßnahmen\n\nNach **Artikel 21 NIS2-Richtlinie** [Quelle 3] müssen wesentliche Einrichtungen „geeignete und verhält",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.1
+      },
+      {
+        "id": null,
+        "question": "Ein Betreiber kritischer Infrastruktur erleidet einen schweren Cyberangriff. Welche Meldepflichten bestehen nach NIS2 und in welchen Fristen?",
+        "category": "",
+        "score": 75.0,
+        "answer_excerpt": "# Meldepflichten nach NIS2 bei Cyberangriffen auf kritische Infrastrukturen\n\n## Allgemeine Meldepflicht\n\nBetreiber kritischer Infrastrukturen (wesentliche und wichtige Einrichtungen) müssen ihrem **CS",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.7
+      },
+      {
+        "id": null,
+        "question": "Ein Hersteller bringt ein vernetztes Gerät (IoT) auf den EU-Markt. Welche Cybersicherheitspflichten entstehen nach dem Cyber Resilience Act?",
+        "category": "",
+        "score": 70.0,
+        "answer_excerpt": "# Cybersicherheitspflichten nach dem Cyber Resilience Act für IoT-Hersteller\n\n## Grundlegende Anforderungen\n\nNach dem **Cyber Resilience Act (EU) 2024/2847** entstehen für einen IoT-Hersteller folgend",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.1
+      },
+      {
+        "id": null,
+        "question": "Wie lange müssen Sicherheitsupdates nach dem Cyber Resilience Act für ein Produkt mit digitalen Elementen bereitgestellt werden?",
+        "category": "",
+        "score": 71.0,
+        "answer_excerpt": "# Dauer der Sicherheitsupdates nach Cyber Resilience Act\n\nDie bereitgestellten Quellen enthalten **keine explizite Regelung zur Dauer der Sicherheitsupdatebereitstellung**.\n\n## Was die Quellen regeln:",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.8
+      },
+      {
+        "id": null,
+        "question": "Ein IoT-Gerätehersteller erhebt Nutzungsdaten. Wer hat nach dem Data Act Zugang zu diesen Daten und unter welchen Bedingungen?",
+        "category": "",
+        "score": 70.0,
+        "answer_excerpt": "# Zugang zu IoT-Nutzungsdaten nach dem Data Act\n\nNach dem Data Act (EU) 2023/2854 haben folgende Akteure Zugang zu IoT-Nutzungsdaten:\n\n## 1. Der Nutzer selbst\nGemäß **Artikel 3** müssen vernetzte Prod",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.3
+      },
+      {
+        "id": null,
+        "question": "Unter welchen Voraussetzungen können Behörden Zugang zu privatwirtschaftlichen Daten nach dem Data Act verlangen?",
+        "category": "",
+        "score": 65.0,
+        "answer_excerpt": "# Zugang zu privatwirtschaftlichen Daten nach dem Data Act\n\nNach dem **Data Act (EU) 2023/2854** können Behörden unter strikten Voraussetzungen Zugang zu privatwirtschaftlichen Daten verlangen:\n\n## Ha",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.2
+      },
+      {
+        "id": null,
+        "question": "Was sind 'Datenvermittlungsdienste' nach dem Data Governance Act (DGA) und welche Anforderungen müssen sie erfüllen?",
+        "category": "",
+        "score": 73.2,
+        "answer_excerpt": "# Datenvermittlungsdienste nach dem Data Governance Act (DGA)\n\n## Definition\n\nNach **Artikel 10 DGA (EU) 2022/868** sind Datenvermittlungsdienste Dienste, die folgende Funktionen erfüllen [Quelle 1]:\n",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.5,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.1
+      },
+      {
+        "id": null,
+        "question": "Was ist 'Datenaltruismus' nach dem Data Governance Act und wie können Organisationen als Datenaltruismusorganisation anerkannt werden?",
+        "category": "",
+        "score": 57.5,
+        "answer_excerpt": "# Datenaltruismus nach dem Data Governance Act\n\n## Definition und Konzept\n\nDer Data Governance Act (EU) 2022/868 definiert Datenaltruismus als eine Tätigkeit, bei der natürliche oder juristische Perso",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.1
+      },
+      {
+        "id": null,
+        "question": "Ein Softwareentwickler vermutet, dass ein Konkurrent seinen proprietären Quellcode kopiert hat und ihn in einem kommerziellen Produkt verwendet. Welche Rechte hat er?",
+        "category": "",
+        "score": 60.8,
+        "answer_excerpt": "# Rechte bei Quellcode-Kopie durch Konkurrenten\n\nDer Softwareentwickler hat mehrere Anspruchsmöglichkeiten:\n\n## Urheberrechtlicher Schutz\n\nComputerprogramme einschließlich ihres Quellcodes genießen ur",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.1
+      }
+    ],
+    "duration_s": 153.2
+  }
+]

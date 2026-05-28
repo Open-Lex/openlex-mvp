@@ -1,0 +1,118 @@
+[
+  {
+    "skill": "sportrecht",
+    "n_questions": 5,
+    "avg_score": 71.3,
+    "hallucination_rate": 0.0,
+    "worst_score": 60.1,
+    "best_score": 79.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Hobbysportler verletzt sich beim organisierten Vereinssport schwer. Hat er Anspruch auf Leistungen der gesetzlichen Unfallversicherung nach dem SGB VII?",
+        "category": "Sportunfallversicherung",
+        "score": 68.2,
+        "answer_excerpt": "# Anspruch auf Leistungen der gesetzlichen Unfallversicherung beim Hobbysport\n\n**Nein**, ein Hobbysportler hat beim organisierten Vereinssport grundsätzlich **keinen Anspruch** auf Leistungen der gese",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 26.2
+      },
+      {
+        "id": 2,
+        "question": "Ein Fußballverein möchte sich als eingetragener Verein im Vereinsregister eintragen lassen. Welche Voraussetzungen müssen erfüllt sein?",
+        "category": "Vereinsregistrierung",
+        "score": 79.2,
+        "answer_excerpt": "# Voraussetzungen für die Eintragung eines Fußballvereins als eingetragener Verein\n\nFür die Eintragung eines Fußballvereins im Vereinsregister müssen folgende Voraussetzungen erfüllt sein:\n\n## Grundvo",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 13.8
+      },
+      {
+        "id": 3,
+        "question": "Ein ehrenamtlicher Übungsleiter verletzt sich bei der Vorbereitung eines Vereinstrainings. Welche Leistungen der Berufsgenossenschaft stehen ihm zu?",
+        "category": "Ehrenamtliche Unfallversicherung",
+        "score": 69.7,
+        "answer_excerpt": "# Leistungen der Berufsgenossenschaft für ehrenamtliche Übungsleiter\n\nBasierend auf den bereitgestellten Quellen kann ich Ihre Frage leider **nicht vollständig beantworten**, da die relevanten Rechtsg",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 13.4
+      },
+      {
+        "id": 4,
+        "question": "Was muss eine gültige Vereinssatzung nach dem BGB mindestens enthalten, und welche Angaben sind für die Eintragung ins Vereinsregister zwingend?",
+        "category": "Vereinssatzung",
+        "score": 60.1,
+        "answer_excerpt": "# Anforderungen an Vereinssatzung und Vereinsregistereintragung\n\n## Mindestinhalt der Satzung (§ 57 BGB)\n\nNach **§ 57 Abs. 1 BGB** muss eine gültige Vereinssatzung **zwingend** folgende Angaben enthal",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 15.5
+      },
+      {
+        "id": 5,
+        "question": "Wie wird ein Sportverein aufgelöst, und was passiert mit dem Vereinsvermögen nach der Auflösung?",
+        "category": "Vereinsauflösung",
+        "score": 79.2,
+        "answer_excerpt": "# Auflösung eines Sportvereins und Vermögensverwendung\n\n## Auflösungsgründe\n\nEin Sportverein kann auf verschiedene Weisen aufgelöst werden:\n\n**1. Freiwillige Auflösung:** Nach **§ 41 BGB** kann der Ve",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 14.2
+      }
+    ],
+    "duration_s": 84.6
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "skill": "jugendrecht",
+    "n_questions": 5,
+    "avg_score": 0.0,
+    "hallucination_rate": 0.0,
+    "worst_score": 0,
+    "best_score": 0,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein 16-jähriger Jugendlicher begeht einen Diebstahl. Welche Voraussetzungen müssen erfüllt sein, damit er strafrechtlich verantwortlich ist?",
+        "category": "Strafrechtliche Verantwortlichkeit",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 8.8
+      },
+      {
+        "id": 2,
+        "question": "Ein 17-jähriger Jugendlicher wird wegen einer Körperverletzung angeklagt. Welches Gesetz findet Anwendung?",
+        "category": "Anwendungsbereich des JGG",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.4
+      },
+      {
+        "id": 3,
+        "question": "Ein 19-jähriger Heranwachsender begeht eine Straftat. Welche Ziele verfolgt das Jugendstrafrecht in diesem Fall?",
+        "category": "Ziele des Jugendstrafrechts",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.6
+      },
+      {
+        "id": 4,
+        "question": "Ein 15-jähriger Jugendlicher ist nicht strafrechtlich verantwortlich. Welche Maßnahmen können ergriffen werden, um ihn zu erziehen?",
+        "category": "Erziehung von Jugendlichen",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.4
+      },
+      {
+        "id": 5,
+        "question": "Ein 18-jähriger Heranwachsender begeht eine Straftat. Welche Rechtsfolgen können angewendet werden?",
+        "category": "Rechtsfolgen im Jugendstrafrecht",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.4
+      }
+    ],
+    "duration_s": 10.5
+  },
+  {
+    "skill": "familienrecht",
+    "n_questions": 5,
+    "avg_score": 0.0,
+    "hallucination_rate": 0.0,
+    "worst_score": 0,
+    "best_score": 0,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Ehepaar lebt in getrennten Haushalten und hat zwei minderjährige Kinder. Welches Gericht ist zuständig für die Entscheidung über das Umgangsrecht?",
+        "category": "Sorge- und Umgangsrecht",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.5
+      },
+      {
+        "id": 2,
+        "question": "Ein Gericht hat sich in einem Verfahren über die Scheidung einer Ehe für unzuständig erklärt und die Sache an ein anderes Gericht verwiesen. Was sind die Rechtsgrundlagen für diese Entscheidung?",
+        "category": "Gerichtsverfahren",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.5
+      },
+      {
+        "id": 3,
+        "question": "Ein Elternteil beantragt die Übertragung des alleinigen Sorgerechts für das Kind. Welche Voraussetzungen müssen erfüllt sein, damit das Gericht diesem Antrag stattgibt?",
+        "category": "Sorge- und Umgangsrecht",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.6
+      },
+      {
+        "id": 4,
+        "question": "Ein Ehepaar hat sich auf eine Scheidung geeinigt und möchte nun die Scheidung einreichen. Welches Gericht ist für die Entscheidung über die Scheidung zuständig?",
+        "category": "Scheidungsrecht",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.5
+      },
+      {
+        "id": 5,
+        "question": "Ein Kind wird von einem Elternteil misshandelt. Welche rechtlichen Schritte kann der andere Elternteil unternehmen, um das Kind zu schützen?",
+        "category": "Kinderschutz",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.4
+      }
+    ],
+    "duration_s": 2.4
+  }
+]

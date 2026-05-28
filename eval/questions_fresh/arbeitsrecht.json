@@ -1,0 +1,67 @@
+[
+  {
+    "question": "Der Betriebsrat eines Unternehmens mit 80 Mitarbeitern wird von der Geschäftsleitung nicht zu einer geplanten Betriebsänderung (Verlagerung einer Abteilung) konsultiert. Der Betriebsrat erfährt von den Plänen erst durch Zufall. Welche Rechtsfolgen ergeben sich aus dieser Missachtung der Beteiligungspflicht gemäß § 111 BetrVG, und kann der Betriebsrat die Maßnahme verhindern?",
+    "expected_norms": [
+      "§ 111 BetrVG",
+      "§ 112 BetrVG"
+    ],
+    "expected_keywords": [
+      "Betriebsänderung",
+      "Konsultationspflicht",
+      "Interessenausgleich",
+      "Sozialplan"
+    ]
+  },
+  {
+    "question": "Ein Arbeitgeber kündigt einem Arbeitnehmer am 30. Januar schriftlich zum nächsten Monatsfünfzehnten. Nach der Kündigung erfährt der Arbeitgeber, dass der Arbeitnehmer seit fünf Jahren in dem Betrieb tätig ist. Überprüfen Sie die Wirksamkeit der Kündigung anhand der Fristen des § 622 Abs. 2 BGB und der Schutzbestimmungen des KSchG.",
+    "expected_norms": [
+      "§ 622 Abs. 2 BGB",
+      "§ 1 Abs. 1 KSchG"
+    ],
+    "expected_keywords": [
+      "Kündigungsfrist",
+      "Zwei-Wochen-Frist",
+      "Schutzbestimmungen",
+      "Betriebszugehörigkeit"
+    ]
+  },
+  {
+    "question": "Ein Arbeitnehmer arbeitet unter Anwendung eines Tarifvertrags und hat im laufenden Kalenderjahr 20 Urlaubstage genommen. Nach einem Arbeitsunfall ist er ab September arbeitsunfähig. Der Arbeitgeber weigert sich, die Restferien in das nächste Jahr zu übertragen. Welche Rechtsnorm regelt die Übertragbarkeit von Urlaub (§ 7 BUrlG), und kann der Arbeitnehmer die Übertragung durchsetzen?",
+    "expected_norms": [
+      "§ 7 BUrlG",
+      "§ 7 Abs. 3 BUrlG"
+    ],
+    "expected_keywords": [
+      "Urlaubsabgeltung",
+      "Betriebsfähigkeit",
+      "Übertragung",
+      "Beurlaubung"
+    ]
+  },
+  {
+    "question": "Ein Betriebsrat wird von drei Arbeitern wegen ihrer gewerkschaftlichen Tätigkeit bedrängt und erhält ein Kündigungsangebot des Arbeitgebers. Kann der Arbeitgeber die Kündigung rechtswirksam aussprechen, und welche Schutzbestimmung des BetrVG ist hier einschlägig?",
+    "expected_norms": [
+      "§ 37 Abs. 1 BetrVG",
+      "§ 78 BetrVG"
+    ],
+    "expected_keywords": [
+      "Kündigungsschutz",
+      "Betriebsratsmitglied",
+      "Zustimmung",
+      "Zulässige Gründe"
+    ]
+  },
+  {
+    "question": "In einem Unternehmen mit Betriebsrat wird ein geltender Tarifvertrag auf Druck des Arbeitgebers hin durch schriftliche Vereinbarungen von einzelnen Arbeitnehmern unterschritten, wonach diese 10 % weniger Lohn erhalten. Der Betriebsrat wird nicht beteiligt. Ist diese Abweichung vom Tarifvertrag zulässig und welche Norm regelt die Salvatorische Klausel des Tarifvertrags?",
+    "expected_norms": [
+      "§ 77 Abs. 3 BetrVG",
+      "§ 4 Abs. 1 TVG"
+    ],
+    "expected_keywords": [
+      "Tarifvertrag",
+      "Abweichung",
+      "Betriebsvereinbarung",
+      "Allgemeinverbindlichkeit"
+    ]
+  }
+]

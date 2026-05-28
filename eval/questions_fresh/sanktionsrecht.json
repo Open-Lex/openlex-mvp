@@ -1,0 +1,72 @@
+[
+  {
+    "question": "Ein deutsches Maschinenbauunternehmen erhält eine Anfrage zur Lieferung von Präzisionsdrehmaschinen an einen Betrieb im Iran. Die Maschinen haben keine unmittelbare militärische Verwendung, könnten aber in der Rüstungsindustrie eingesetzt werden. Welche Genehmigungspflichten bestehen nach dem Außenwirtschaftsgesetz (AWV) und wie wird die Dual-Use-Problematik rechtlich gelöst?",
+    "expected_norms": [
+      "§ 4 Abs. 1 AWV",
+      "Art. 3 VO (EG) 428/2009",
+      "§ 5 AWV"
+    ],
+    "expected_keywords": [
+      "Dual-Use-Güter",
+      "Endverbleibserklärung",
+      "Genehmigungspflicht",
+      "Rüstungskontrolle"
+    ]
+  },
+  {
+    "question": "Ein europäischer Finanzdienstleister wird darauf hingewiesen, dass einer seiner Kunden auf der EU-Sanktionsliste gegen Russland (aufgrund der Ukraine-Invasion) eingetragen ist. Der Kundenkontostand beträgt 2,5 Millionen Euro. Welche unmittelbaren Handlungspflichten entstehen für das Kreditinstitut gemäß der anwendbaren EU-Verordnung und was droht bei Nichtbeachtung?",
+    "expected_norms": [
+      "Art. 3 VO (EU) 833/2014",
+      "Art. 17 VO (EU) 2018/1673",
+      "§ 3 GwG"
+    ],
+    "expected_keywords": [
+      "Gefrierung von Vermögenswerten",
+      "Meldepflicht",
+      "Sanktionsdurchsetzung",
+      "Compliance-Pflicht"
+    ]
+  },
+  {
+    "question": "Ein französischer Chemikalienlieferant möchte Präkursoren für die Sprengstoffherstellung an einen Importeur in der Türkei liefern. Die Substanzen sind in der Chemiewaffenkonvention (CWÜ) aufgelistet. Welche Kontrollmechanismen greifen auf EU-Ebene ein und welche Rolle spielt die nationale Behörde (in Deutschland: BAFA)?",
+    "expected_norms": [
+      "Art. 3 VO (EG) 1334/2000",
+      "§ 6 AWV",
+      "Checkliste Chemiewaffenkonvention"
+    ],
+    "expected_keywords": [
+      "Präkursor-Kontrolle",
+      "Verdachtsfall",
+      "BAFA-Anmeldung",
+      "Endverwender-Bestätigung"
+    ]
+  },
+  {
+    "question": "Ein internationales Konsortium plant die Lieferung von Halbleitern an einen israelischen Rüstungsbetrieb. Die Bauteile unterliegen der EU-Liste kontrollierbarer Güter. Das Unternehmen erhält widersprüchliche Signale: Ein EU-Mitgliedstaat signalisiert Zustimmung, ein anderer lehnt ab. Nach welchem Verfahren wird die endgültige Genehmigung erteilt und welche Rechtsgrundlagen sind maßgeblich?",
+    "expected_norms": [
+      "Art. 12 VO (EG) 428/2009",
+      "§ 7 AWV",
+      "Gemeinsame Außenpolitik (GASP)"
+    ],
+    "expected_keywords": [
+      "Konsultationsverfahren",
+      "Rüstungskontrolle-Liste",
+      "Nationale Genehmigung",
+      "Harmonisierung"
+    ]
+  },
+  {
+    "question": "Ein deutsches Unternehmen beliefert über Jahrzehnte einen Händler in Hongkong mit Spezialmaschinen, ohne dass es zu Schwierigkeiten kam. Plötzlich wird Hongkong mit gezielten Sanktionen nach dem HStAG belegt. Das Unternehmen hat noch offene Lieferverpflichtungen im Wert von 500.000 Euro. Welche Sanktionsfolgen entstehen und welche Rechtsfolgen hat der Bruch von Handelsusancen durch neue Sanktionszwecke?",
+    "expected_norms": [
+      "§ 5 HStAG",
+      "Art. 2 VO (EU) 2020/1998",
+      "§ 7 AWV"
+    ],
+    "expected_keywords": [
+      "Hong Kong Sanctions",
+      "Genehmigungspflicht nachträglich",
+      "Geschäftsverunmöglichung",
+      "Bußgeldrisiko"
+    ]
+  }
+]

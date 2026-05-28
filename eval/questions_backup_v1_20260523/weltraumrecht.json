@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "skill": "weltraumrecht",
+    "question": "Ein Satellit eines Staates explodiert im Weltraum und verursacht Schäden an einem anderen Satelliten. Welche internationale Vereinbarung regelt die Haftung für solche Schäden?",
+    "expected_norms": [
+      "Haftungsübereinkommen"
+    ],
+    "expected_keywords": [
+      "Haftung",
+      "Weltraumgegenstand",
+      "Übereinkommen"
+    ],
+    "min_sources": 2,
+    "category": "Haftungsrecht"
+  },
+  {
+    "id": 2,
+    "skill": "weltraumrecht",
+    "question": "Ein Staat plant, einen neuen Satelliten ins All zu bringen. Welche internationalen Regeln müssen beachtet werden, um die Erforschung und Nutzung des Weltraums zu gewährleisten?",
+    "expected_norms": [
+      "Weltraumvertrag"
+    ],
+    "expected_keywords": [
+      "Weltraumfreiheit",
+      "Erforschung",
+      "Nutzung"
+    ],
+    "min_sources": 2,
+    "category": "Weltraumfreiheit"
+  },
+  {
+    "id": 3,
+    "skill": "weltraumrecht",
+    "question": "Ein Unternehmen plant, auf dem Mond Rohstoffe abzubauen. Welche internationalen Regeln regeln die Nutzung von Himmelskörpern und wie werden die Rechte der beteiligten Staaten geschützt?",
+    "expected_norms": [
+      "Weltraumvertrag"
+    ],
+    "expected_keywords": [
+      "Nutzung",
+      "Himmelskörper",
+      "Recht"
+    ],
+    "min_sources": 2,
+    "category": "Nutzung von Himmelskörpern"
+  },
+  {
+    "id": 4,
+    "skill": "weltraumrecht",
+    "question": "Ein Staat hat einen Satelliten ins All gebracht, aber dieser ist nicht ordnungsgemäß registriert. Welche internationalen Regeln regeln die Registrierung von Weltraumgegenständen und welche Konsequenzen ergeben sich aus einer fehlenden Registrierung?",
+    "expected_norms": [
+      "Weltraumvertrag"
+    ],
+    "expected_keywords": [
+      "Registrierung",
+      "Weltraumgegenstände",
+      "Konsequenzen"
+    ],
+    "min_sources": 2,
+    "category": "Registrierung von Weltraumgegenständen"
+  },
+  {
+    "id": 5,
+    "skill": "weltraumrecht",
+    "question": "Ein Satellit eines Staates ist im Weltraum verloren gegangen und wird von einem anderen Staat gefunden. Welche internationalen Regeln regeln die Rettung und Rückgabe von Weltraumgegenständen?",
+    "expected_norms": [
+      "Weltraumvertrag"
+    ],
+    "expected_keywords": [
+      "Rettung",
+      "Rückgabe",
+      "Weltraumgegenstände"
+    ],
+    "min_sources": 2,
+    "category": "Rettung und Rückgabe"
+  }
+]

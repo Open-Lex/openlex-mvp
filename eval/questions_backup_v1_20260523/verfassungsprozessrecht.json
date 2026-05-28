@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "skill": "verfassungsprozessrecht",
+    "question": "Welche Anforderungen müssen Richter des Bundesverfassungsgerichts erfüllen, um gewählt zu werden?",
+    "expected_norms": [
+      "BVerfGG"
+    ],
+    "expected_keywords": [
+      "Richter",
+      "Wählbarkeit",
+      "Bundestag"
+    ],
+    "min_sources": 1,
+    "category": "Richteranforderungen"
+  },
+  {
+    "id": 2,
+    "skill": "verfassungsprozessrecht",
+    "question": "Wie viele Richter hat das Bundesverfassungsgericht insgesamt und wie sind sie auf die Senate verteilt?",
+    "expected_norms": [
+      "BVerfGG"
+    ],
+    "expected_keywords": [
+      "Bundesverfassungsgericht",
+      "Senate",
+      "Richter"
+    ],
+    "min_sources": 1,
+    "category": "Gerichtsstruktur"
+  },
+  {
+    "id": 3,
+    "skill": "verfassungsprozessrecht",
+    "question": "Wo hat das Bundesverfassungsgericht seinen Sitz und wie gibt es sich eine Geschäftsordnung?",
+    "expected_norms": [
+      "BVerfGG"
+    ],
+    "expected_keywords": [
+      "Bundesverfassungsgericht",
+      "Sitz",
+      "Geschäftsordnung"
+    ],
+    "min_sources": 1,
+    "category": "Gerichtsorganisation"
+  },
+  {
+    "id": 4,
+    "skill": "verfassungsprozessrecht",
+    "question": "Welche Voraussetzungen müssen Richter des Bundesverfassungsgerichts hinsichtlich ihrer Befähigung zum Richteramt erfüllen?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Richter",
+      "Befähigung",
+      "Richtergesetz"
+    ],
+    "min_sources": 1,
+    "category": "Richterbefähigung"
+  },
+  {
+    "id": 5,
+    "skill": "verfassungsprozessrecht",
+    "question": "Wie viele Richter werden aus der Zahl der Richter an den obersten Gerichtshöfen des Bundes in jeden Senat gewählt?",
+    "expected_norms": [
+      "BVerfGG"
+    ],
+    "expected_keywords": [
+      "Bundesverfassungsgericht",
+      "Richter",
+      "Gericht"
+    ],
+    "min_sources": 1,
+    "category": "Richterwahl"
+  },
+  {
+    "id": 6,
+    "skill": "verfassungsprozessrecht",
+    "question": "Welche Bedeutung hat die Unabhängigkeit des Bundesverfassungsgerichts gegenüber anderen Verfassungsorganen?",
+    "expected_norms": [
+      "§ 1 BVerfGG"
+    ],
+    "expected_keywords": [
+      "Bundesverfassungsgericht",
+      "Unabhängigkeit",
+      "Verfassungsorgane"
+    ],
+    "min_sources": 1,
+    "category": "Gerichtsunabhängigkeit"
+  },
+  {
+    "id": 7,
+    "skill": "verfassungsprozessrecht",
+    "question": "Welche Rolle spielt das Bundesverfassungsgericht im Verfassungsprozessrecht und wie ist es organisiert?",
+    "expected_norms": [
+      "§ 1 BVerfGG",
+      "§ 2 BVerfGG"
+    ],
+    "expected_keywords": [
+      "Bundesverfassungsgericht",
+      "Verfassungsprozessrecht",
+      "Organisation"
+    ],
+    "min_sources": 2,
+    "category": "Verfassungsprozessrecht"
+  },
+  {
+    "id": 8,
+    "skill": "verfassungsprozessrecht",
+    "question": "Wie werden die Richter des Bundesverfassungsgerichts gewählt und welche Anforderungen müssen sie erfüllen?",
+    "expected_norms": [
+      "§ 2 BVerfGG",
+      "§ 3 BVerfGG"
+    ],
+    "expected_keywords": [
+      "Bundesverfassungsgericht",
+      "Richterwahl",
+      "Anforderungen"
+    ],
+    "min_sources": 2,
+    "category": "Richterwahl und Anforderungen"
+  },
+  {
+    "id": 9,
+    "skill": "verfassungsprozessrecht",
+    "question": "Welche Bedeutung hat die Selbständigkeit des Bundesverfassungsgerichts gegenüber anderen Verfassungsorganen?",
+    "expected_norms": [
+      "§ 1 BVerfGG"
+    ],
+    "expected_keywords": [
+      "Bundesverfassungsgericht",
+      "Selbständigkeit",
+      "Verfassungsorgane"
+    ],
+    "min_sources": 1,
+    "category": "Gerichtsselbständigkeit"
+  },
+  {
+    "id": 10,
+    "skill": "verfassungsprozessrecht",
+    "question": "Wie ist das Bundesverfassungsgericht in Bezug auf seine Unabhängigkeit und Selbständigkeit gegenüber anderen Verfassungsorganen ausgestaltet?",
+    "expected_norms": [
+      "§ 1 BVerfGG"
+    ],
+    "expected_keywords": [
+      "Bundesverfassungsgericht",
+      "Unabhängigkeit",
+      "Selbständigkeit"
+    ],
+    "min_sources": 1,
+    "category": "Gerichtsorganisation und Unabhängigkeit"
+  }
+]

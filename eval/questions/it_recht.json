@@ -1,0 +1,210 @@
+[
+  {
+    "question": "Ein Online-Marktplatz vermittelt Waren von Drittanbietern. Welche Pflichten entstehen nach dem Digital Services Act (DSA) als 'Vermittlungsdienst' und als 'Online-Plattform'?",
+    "expected_norms": [
+      "Artikel 17",
+      "DSA"
+    ],
+    "expected_keywords": [
+      "Vermittlungsdienst",
+      "Online-Plattform",
+      "Haftung",
+      "Meldeverfahren"
+    ]
+  },
+  {
+    "question": "Eine sehr große Online-Plattform (VLOP) gemäß DSA hat systemische Risiken. Welche besonderen Pflichten entstehen nach Art. 33 ff. DSA?",
+    "expected_norms": [
+      "Art. 34",
+      "DSA"
+    ],
+    "expected_keywords": [
+      "VLOP",
+      "Risikobewertung",
+      "systemisch",
+      "Transparenzbericht"
+    ]
+  },
+  {
+    "question": "Ein Nutzer meldet illegale Inhalte auf einer Online-Plattform. Welche Pflichten hat die Plattform nach DSA Art. 16?",
+    "expected_norms": [
+      "Art. 16",
+      "DSA"
+    ],
+    "expected_keywords": [
+      "Meldeverfahren",
+      "rechtswidrig",
+      "Entscheidung",
+      "Begründung"
+    ]
+  },
+  {
+    "question": "Unter welchen Voraussetzungen haftet ein Hosting-Provider nach dem DSA nicht für von Nutzern hochgeladene illegale Inhalte?",
+    "expected_norms": [
+      "Artikel 6",
+      "DSA"
+    ],
+    "expected_keywords": [
+      "Haftungsfreistellung",
+      "Hosting",
+      "Kenntnis",
+      "Entfernung"
+    ]
+  },
+  {
+    "question": "Was sind die Pflichten von Online-Plattformen bezüglich Werbung und personalisierter Empfehlungssysteme nach DSA Art. 26-27?",
+    "expected_norms": [
+      "Art. 26",
+      "DSA"
+    ],
+    "expected_keywords": [
+      "Transparenz",
+      "Werbung",
+      "Empfehlungssystem",
+      "Parameter"
+    ]
+  },
+  {
+    "question": "Ein großes Tech-Unternehmen ist als 'Gatekeeper' nach dem Digital Markets Act (DMA) eingestuft. Welche Kernpflichten entstehen nach Art. 5 und 6 DMA?",
+    "expected_norms": [
+      "Art. 5",
+      "DMA"
+    ],
+    "expected_keywords": [
+      "Gatekeeper",
+      "Kernplattformdienst",
+      "Interoperabilität",
+      "Self-Preferencing"
+    ]
+  },
+  {
+    "question": "Unter welchen Kriterien (Schwellenwerte) wird ein Unternehmen als Gatekeeper nach DMA Art. 3 qualifiziert?",
+    "expected_norms": [
+      "Art. 3",
+      "DMA"
+    ],
+    "expected_keywords": [
+      "Gatekeeper",
+      "Umsatz",
+      "Nutzer",
+      "Schwellenwerte"
+    ]
+  },
+  {
+    "question": "Was sind die Sicherheitsanforderungen für 'wesentliche Einrichtungen' nach der NIS2-Richtlinie? Welche Maßnahmen müssen implementiert werden?",
+    "expected_norms": [
+      "Artikel 21",
+      "NIS2"
+    ],
+    "expected_keywords": [
+      "Cybersicherheit",
+      "wesentlich",
+      "Risikomanagement",
+      "Sicherheitsmaßnahmen"
+    ]
+  },
+  {
+    "question": "Ein Betreiber kritischer Infrastruktur erleidet einen schweren Cyberangriff. Welche Meldepflichten bestehen nach NIS2 und in welchen Fristen?",
+    "expected_norms": [
+      "Artikel 23",
+      "NIS2"
+    ],
+    "expected_keywords": [
+      "Meldepflicht",
+      "Vorfall",
+      "CSIRT",
+      "24 Stunden"
+    ]
+  },
+  {
+    "question": "Ein Hersteller bringt ein vernetztes Gerät (IoT) auf den EU-Markt. Welche Cybersicherheitspflichten entstehen nach dem Cyber Resilience Act?",
+    "expected_norms": [
+      "Artikel 13",
+      "Cyber Resilience Act"
+    ],
+    "expected_keywords": [
+      "Cybersicherheit",
+      "Produkt",
+      "Konformitätsbewertung",
+      "CE-Kennzeichnung"
+    ]
+  },
+  {
+    "question": "Wie lange müssen Sicherheitsupdates nach dem Cyber Resilience Act für ein Produkt mit digitalen Elementen bereitgestellt werden?",
+    "expected_norms": [
+      "Artikel 13",
+      "Cyber Resilience Act"
+    ],
+    "expected_keywords": [
+      "Sicherheitsupdates",
+      "Support",
+      "Schwachstellen",
+      "Hersteller"
+    ]
+  },
+  {
+    "question": "Ein IoT-Gerätehersteller erhebt Nutzungsdaten. Wer hat nach dem Data Act Zugang zu diesen Daten und unter welchen Bedingungen?",
+    "expected_norms": [
+      "Artikel 4",
+      "Data Act"
+    ],
+    "expected_keywords": [
+      "Datenzugang",
+      "Nutzer",
+      "Dateninhaber",
+      "Bedingungen"
+    ]
+  },
+  {
+    "question": "Unter welchen Voraussetzungen können Behörden Zugang zu privatwirtschaftlichen Daten nach dem Data Act verlangen?",
+    "expected_norms": [
+      "Artikel 15",
+      "Data Act"
+    ],
+    "expected_keywords": [
+      "Behörden",
+      "außergewöhnlich",
+      "Datenzugang",
+      "Verhältnismäßigkeit"
+    ]
+  },
+  {
+    "question": "Was sind 'Datenvermittlungsdienste' nach dem Data Governance Act (DGA) und welche Anforderungen müssen sie erfüllen?",
+    "expected_norms": [
+      "Artikel 10",
+      "DGA"
+    ],
+    "expected_keywords": [
+      "Datenvermittlungsdienst",
+      "Anmeldung",
+      "Neutralität",
+      "Bedingungen"
+    ]
+  },
+  {
+    "question": "Was ist 'Datenaltruismus' nach dem Data Governance Act und wie können Organisationen als Datenaltruismusorganisation anerkannt werden?",
+    "expected_norms": [
+      "Data Governance",
+      "Datenaltruismus"
+    ],
+    "expected_keywords": [
+      "Datenaltruismus",
+      "Anerkennung",
+      "Gemeinwohl",
+      "freiwillig"
+    ]
+  },
+  {
+    "question": "Ein Softwareentwickler vermutet, dass ein Konkurrent seinen proprietären Quellcode kopiert hat und ihn in einem kommerziellen Produkt verwendet. Welche Rechte hat er?",
+    "expected_norms": [
+      "Urheberrecht",
+      "Computerprogramm"
+    ],
+    "expected_keywords": [
+      "Softwareschutz",
+      "Quellcode",
+      "Urheberrecht",
+      "Unterlassungsanspruch"
+    ]
+  }
+]

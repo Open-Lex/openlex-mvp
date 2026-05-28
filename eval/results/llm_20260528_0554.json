@@ -1,0 +1,202 @@
+[
+  {
+    "skill": "kartellrecht",
+    "n_questions": 8,
+    "avg_score": 85.5,
+    "hallucination_rate": 0.0,
+    "worst_score": 59.0,
+    "best_score": 95.8,
+    "questions": [
+      {
+        "id": null,
+        "question": "Ein Unternehmen schließt mit einem Konkurrenten eine Vereinbarung, um den Preis festzulegen. Liegt ein Verstoß gegen Art. 101 AEUV vor und welche Rechtsfolgen drohen?",
+        "category": "",
+        "score": 85.0,
+        "answer_excerpt": "# Verstoß gegen Art. 101 AEUV bei Preisabsprache\n\n## Vorliegen eines Verstoßes\n\n**Ja, es liegt ein Verstoß gegen Art. 101 AEUV vor.**\n\nEine Preisabsprache zwischen Konkurrenten erfüllt die Verbotstatb",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.3
+      },
+      {
+        "id": null,
+        "question": "Wann liegt nach Art. 102 AEUV ein Missbrauch einer marktbeherrschenden Stellung vor? Nennen Sie konkrete Beispiele für missbräuchliches Verhalten.",
+        "category": "",
+        "score": 91.0,
+        "answer_excerpt": "# Missbrauch einer marktbeherrschenden Stellung nach Art. 102 AEUV\n\n## Rechtliche Definition\n\nNach [Quelle 1] liegt ein Missbrauch einer marktbeherrschenden Stellung vor, wenn ein marktbeherrschendes ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.8
+      },
+      {
+        "id": null,
+        "question": "Apple ist als Gatekeeper nach dem DMA eingestuft. Apple bevorzugt seinen eigenen App Store gegenüber Konkurrenten. Verstößt das gegen DMA Art. 5?",
+        "category": "",
+        "score": 59.0,
+        "answer_excerpt": "# Beurteilung: Apple's Bevorzugung des eigenen App Store unter DMA Art. 5\n\n## Anwendbarkeit von DMA Art. 5\n\nDie bereitgestellten Quellen enthalten leider keinen expliziten Text von DMA Art. 5. Basiere",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.9
+      },
+      {
+        "id": null,
+        "question": "Ein Gatekeeper nach DMA verweigert Drittanbietern die Interoperabilität mit seinem Messenger-Dienst. Welche Pflichten bestehen nach DMA Art. 7?",
+        "category": "",
+        "score": 95.8,
+        "answer_excerpt": "# Pflichten nach DMA Art. 7 – Interoperabilität von Messenger-Diensten\n\nNach **Art. 7 DMA** [Quelle 1] bestehen für Gatekeeper, die nummernunabhängige interpersonelle Kommunikationsdienste (wie Messen",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.4
+      },
+      {
+        "id": null,
+        "question": "Zwei Unternehmen planen eine Fusion. Ab welchen Umsatzschwellen ist eine Anmeldung bei der Europäischen Kommission nach der EU-Fusionskontrollverordnung erforderlich?",
+        "category": "",
+        "score": 95.0,
+        "answer_excerpt": "# Anmeldungspflicht bei EU-Fusionskontrolle\n\nIhre Frage bezieht sich auf die nationale deutsche Regelung. Die **EU-Fusionskontrollverordnung (VO (EG) Nr. 139/2004)** wird in den Quellen erwähnt [Quell",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 5,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.8
+      },
+      {
+        "id": null,
+        "question": "Welche Wettbewerbsregeln gelten für Vereinbarungen zwischen Unternehmen gleicher Marktstufe (horizontale Vereinbarungen) und wie unterscheiden sie sich von vertikalen Vereinbarungen?",
+        "category": "",
+        "score": 86.0,
+        "answer_excerpt": "# Wettbewerbsregeln für horizontale und vertikale Vereinbarungen\n\n## Horizontale Vereinbarungen (Vereinbarungen zwischen Konkurrenten)\n\nHorizontale Vereinbarungen zwischen Unternehmen der gleichen Mar",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.9
+      },
+      {
+        "id": null,
+        "question": "Was ist das Verhältnis zwischen DMA und nationalem Kartellrecht (GWB)? Gilt das Vorrangprinzip des EU-Rechts auch hier?",
+        "category": "",
+        "score": 83.5,
+        "answer_excerpt": "# Verhältnis zwischen DMA und nationalem Kartellrecht (GWB)\n\n## Normative Regelung\n\nDas Verhältnis zwischen dem Digital Markets Act (DMA) und dem GWB ist im deutschen Kartellrecht explizit geregelt. [",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.8,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.0
+      },
+      {
+        "id": null,
+        "question": "Ein Unternehmen hat einen Marktanteil von 40 % auf einem Produktmarkt. Ab wann besteht eine Vermutung für eine marktbeherrschende Stellung nach dem GWB?",
+        "category": "",
+        "score": 88.8,
+        "answer_excerpt": "# Marktanteil und Vermutung für marktbeherrschende Stellung nach GWB\n\nIhre Frage kann auf Basis der bereitgestellten Quellen nicht vollständig beantwortet werden, da diese keinen expliziten Schwellenw",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.1
+      }
+    ],
+    "duration_s": 81.6
+  }
+]

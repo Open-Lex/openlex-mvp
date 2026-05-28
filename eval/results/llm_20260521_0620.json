@@ -1,0 +1,130 @@
+[
+  {
+    "skill": "datenschutz",
+    "n_questions": 5,
+    "avg_score": 80.9,
+    "hallucination_rate": 0.0,
+    "worst_score": 69.8,
+    "best_score": 89.4,
+    "questions": [
+      {
+        "id": 21,
+        "question": "Darf ein Unternehmen KI-Tools wie ChatGPT für die Verarbeitung personenbezogener Daten nutzen?",
+        "category": "ki",
+        "score": 83.2,
+        "answer_excerpt": "# Nutzung von KI-Tools wie ChatGPT für personenbezogene Daten\n\n## Grundsätzliche Zulässigkeit\n\nJa, Unternehmen **dürfen** KI-Tools wie ChatGPT für die Verarbeitung personenbezogener Daten nutzen, müss",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "leitlinie"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 21.1
+      },
+      {
+        "id": 22,
+        "question": "Welche Rechte hat eine betroffene Person bei automatisierten Einzelentscheidungen einschließlich Profiling?",
+        "category": "betroffenenrechte",
+        "score": 89.4,
+        "answer_excerpt": "# Rechte bei automatisierten Einzelentscheidungen und Profiling\n\n## Grundsätzliches Verbot und Schutzrecht\n\nBetroffene Personen haben gemäß **Art. 22 Abs. 1 DSGVO** das **Recht, nicht einer ausschließ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 5,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "leitlinie",
+            "methodenwissen",
+            "urteil_segmentiert"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 14.5
+      },
+      {
+        "id": 23,
+        "question": "Wann ist eine Datenschutz-Folgenabschätzung bei Videoüberwachung erforderlich und was muss sie enthalten?",
+        "category": "dsfa",
+        "score": 85.2,
+        "answer_excerpt": "# Datenschutz-Folgenabschätzung bei Videoüberwachung\n\n## Wann ist eine DSFA erforderlich?\n\nEine Datenschutz-Folgenabschätzung (DSFA) ist bei Videoüberwachung gemäß **Art. 35 Abs. 1 DSGVO** erforderlic",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "leitlinie"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.6
+      },
+      {
+        "id": 24,
+        "question": "Dürfen Onlineshops Kunden zur Erstellung eines Kundenkontos verpflichten oder muss eine Gastbestellung möglich sein?",
+        "category": "datenminimierung",
+        "score": 69.8,
+        "answer_excerpt": "# Kundenkonto-Pflicht in Onlineshops\n\nBasierend auf den vorliegenden Quellen lässt sich diese Frage nicht abschließend beantworten, da keine direkte gesetzliche Regelung dazu enthalten ist. Jedoch erg",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "leitlinie",
+            "urteil_segmentiert"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 19.0
+      },
+      {
+        "id": 25,
+        "question": "Wie ist die Haftung bei gemeinsamer Verantwortlichkeit nach Art. 26 DSGVO geregelt, z.B. bei Fanpages auf Facebook?",
+        "category": "verantwortlichkeit",
+        "score": 76.7,
+        "answer_excerpt": "# Haftung bei gemeinsamer Verantwortlichkeit nach Art. 26 DSGVO\n\n## Rechtliche Grundlagen\n\nNach **Art. 26 Abs. 1 DSGVO** liegt eine gemeinsame Verantwortlichkeit vor, wenn zwei oder mehr Verantwortlic",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "leitlinie",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.7
+      }
+    ],
+    "duration_s": 81.5
+  }
+]

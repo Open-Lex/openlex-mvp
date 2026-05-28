@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "skill": "insolvenzrecht",
+    "question": "Ein Schuldner hat vor 5 Jahren eine unentgeltliche Leistung an einen Freund erbracht. Kann ein Gläubiger diese Leistung anfechten, wenn der Schuldner nun insolvent ist?",
+    "expected_norms": [
+      "InsO"
+    ],
+    "expected_keywords": [
+      "unentgeltliche Leistung",
+      "Anfechtung",
+      "Insolvenz"
+    ],
+    "min_sources": 2,
+    "category": "Anfechtung"
+  },
+  {
+    "id": 2,
+    "skill": "insolvenzrecht",
+    "question": "Ein Gläubiger hat einen vollstreckbaren Schuldtitel gegen einen Schuldner erlangt, aber die Zwangsvollstreckung in das Vermögen des Schuldners war nicht erfolgreich. Kann der Gläubiger nun die Anfechtung einer Rechtshandlung des Schuldners beantragen?",
+    "expected_norms": [
+      "InsO"
+    ],
+    "expected_keywords": [
+      "Anfechtung",
+      "Zwangsvollstreckung",
+      "vollstreckbarer Schuldtitel"
+    ],
+    "min_sources": 2,
+    "category": "Anfechtung"
+  },
+  {
+    "id": 3,
+    "skill": "insolvenzrecht",
+    "question": "Ein Schuldner hat vor 3 Jahren ein gebräuchliches Gelegenheitsgeschenk geringen Werts an einen Bekannten übergeben. Kann ein Gläubiger diese Leistung anfechten, wenn der Schuldner nun insolvent ist?",
+    "expected_norms": [
+      "InsO"
+    ],
+    "expected_keywords": [
+      "unentgeltliche Leistung",
+      "Gelegenheitsgeschenk",
+      "Anfechtung"
+    ],
+    "min_sources": 2,
+    "category": "Anfechtung"
+  },
+  {
+    "id": 4,
+    "skill": "insolvenzrecht",
+    "question": "Ein Erbe hat aus dem Nachlaß Pflichtteilsansprüche erfüllt. Kann ein Nachlaßgläubiger die Leistung anfechten, wenn er im Insolvenzverfahren über den Nachlaß dem Empfänger der Leistung im Rang vorgeht?",
+    "expected_norms": [
+      "InsO"
+    ],
+    "expected_keywords": [
+      "Pflichtteilsansprüche",
+      "Nachlaßgläubiger",
+      "Anfechtung"
+    ],
+    "min_sources": 2,
+    "category": "Nachlaßinsolvenz"
+  },
+  {
+    "id": 5,
+    "skill": "insolvenzrecht",
+    "question": "Ein Schuldner hat vor 2 Jahren eine Rechtshandlung mit dem Vorsatz vorgenommen, seine Gläubiger zu benachteiligen. Kann ein Gläubiger diese Rechtshandlung anfechten, wenn der andere Teil zur Zeit der Handlung den Vorsatz des Schuldners kannte?",
+    "expected_norms": [
+      "Anfechtung"
+    ],
+    "expected_keywords": [
+      "Anfechtung",
+      "Vorsatz",
+      "Schuldner"
+    ],
+    "min_sources": 2,
+    "category": "Anfechtung"
+  },
+  {
+    "id": 6,
+    "skill": "insolvenzrecht",
+    "question": "Ein Gläubiger hat einen vollstreckbaren Schuldtitel gegen einen Schuldner erlangt, aber die Zwangsvollstreckung in das Vermögen des Schuldners war nicht erfolgreich. Kann der Gläubiger nun die Anfechtung einer Unterlassung des Schuldners beantragen?",
+    "expected_norms": [
+      "§ 143 InsO"
+    ],
+    "expected_keywords": [
+      "Anfechtung",
+      "Zwangsvollstreckung",
+      "Unterlassung"
+    ],
+    "min_sources": 2,
+    "category": "Anfechtung"
+  },
+  {
+    "id": 7,
+    "skill": "insolvenzrecht",
+    "question": "Ein Schuldner hat vor 6 Jahren eine unentgeltliche Leistung an einen Familienangehörigen erbracht. Kann ein Gläubiger diese Leistung anfechten, wenn der Schuldner nun insolvent ist?",
+    "expected_norms": [
+      "§ 134 InsO"
+    ],
+    "expected_keywords": [
+      "unentgeltliche Leistung",
+      "Anfechtung",
+      "Familienangehöriger"
+    ],
+    "min_sources": 2,
+    "category": "Anfechtung"
+  },
+  {
+    "id": 8,
+    "skill": "insolvenzrecht",
+    "question": "Ein Erbe hat aus dem Nachlaß Vermächtnisse erfüllt. Kann ein Nachlaßgläubiger die Leistung anfechten, wenn er im Insolvenzverfahren über den Nachlaß dem Empfänger der Leistung im Rang vorgeht?",
+    "expected_norms": [
+      "§ 144 InsO"
+    ],
+    "expected_keywords": [
+      "Vermächtnisse",
+      "Nachlaßgläubiger",
+      "Anfechtung"
+    ],
+    "min_sources": 2,
+    "category": "Nachlaßinsolvenz"
+  },
+  {
+    "id": 9,
+    "skill": "insolvenzrecht",
+    "question": "Ein Schuldner hat vor 4 Jahren eine Rechtshandlung mit dem Vorsatz vorgenommen, seine Gläubiger zu benachteiligen. Kann ein Gläubiger diese Rechtshandlung anfechten, wenn der andere Teil zur Zeit der Handlung den Vorsatz des Schuldners nicht kannte?",
+    "expected_norms": [
+      "§ 133 InsO"
+    ],
+    "expected_keywords": [
+      "Anfechtung",
+      "Vorsatz",
+      "Benachteiligung"
+    ],
+    "min_sources": 2,
+    "category": "Anfechtung"
+  },
+  {
+    "id": 10,
+    "skill": "insolvenzrecht",
+    "question": "Ein Gläubiger hat einen vollstreckbaren Schuldtitel gegen einen Schuldner erlangt, aber die Zwangsvollstreckung in das Vermögen des Schuldners war nicht erfolgreich. Kann der Gläubiger nun die Anfechtung einer Rechtshandlung des Schuldners beantragen, wenn die Rechtshandlung vor 5 Jahren vorgenommen wurde?",
+    "expected_norms": [
+      "§ 143 InsO"
+    ],
+    "expected_keywords": [
+      "Anfechtung",
+      "Zwangsvollstreckung",
+      "vollstreckbarer Schuldtitel"
+    ],
+    "min_sources": 2,
+    "category": "Anfechtung"
+  }
+]

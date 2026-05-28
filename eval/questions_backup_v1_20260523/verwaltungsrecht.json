@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "question": "Eine Baugenehmigung wird einem Bürger erteilt, der Nachbar klagt dagegen. Was ist ein Verwaltungsakt und wann hat die Klage des Nachbarn aufschiebende Wirkung?",
+    "category": "Verwaltungsakt",
+    "expected_norms": [
+      "§ 35 Abs. 1",
+      "§ 35",
+      "§ 80"
+    ],
+    "expected_keywords": [
+      "Verwaltungsakt",
+      "aufschiebende Wirkung",
+      "Drittanfechtungsklage",
+      "Baugenehmigung"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Ein Bürger hat eine Gaststättenerlaubnis beantragt, die Behörde entscheidet seit 6 Monaten nicht. Welche rechtlichen Schritte kann der Antragsteller unternehmen?",
+    "category": "Untätigkeitsklage",
+    "expected_norms": [
+      "§ 75",
+      "§ 10"
+    ],
+    "expected_keywords": [
+      "Untätigkeitsklage",
+      "Frist",
+      "Behörde",
+      "Genehmigung"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Eine Behörde erteilt eine Baugenehmigung ohne vorherige Anhörung des Antragstellers. Welche Fehlerfolgen drohen, und ist der Verwaltungsakt nichtig oder anfechtbar?",
+    "category": "Anhörung",
+    "expected_norms": [
+      "§ 28",
+      "§ 44",
+      "§ 46"
+    ],
+    "expected_keywords": [
+      "Anhörung",
+      "Verfahrensfehler",
+      "Heilung",
+      "Anfechtbarkeit"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Ein Subventionsbescheid wird wegen angeblicher Falschangaben aufgehoben. Unter welchen Voraussetzungen darf die Behörde einen begünstigenden Verwaltungsakt zurücknehmen?",
+    "category": "Rücknahme VA",
+    "expected_norms": [
+      "§ 48",
+      "§ 49"
+    ],
+    "expected_keywords": [
+      "Rücknahme",
+      "Widerruf",
+      "Vertrauensschutz",
+      "Subvention"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Eine Behörde lehnt einen Antrag auf Baugenehmigung ab, ohne ausreichend zu begründen, warum sie ihr Ermessen so ausgeübt hat. Welche Fehlerarten gibt es bei Ermessensentscheidungen?",
+    "category": "Ermessen",
+    "expected_norms": [
+      "§ 40",
+      "§ 114"
+    ],
+    "expected_keywords": [
+      "Ermessen",
+      "Ermessensfehlgebrauch",
+      "Ermessensüberschreitung",
+      "Begründung"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Eine Behörde erlässt einen Gebührenbescheid. Der Bürger legt Widerspruch ein, der abgelehnt wird. Welche Klage kann er vor dem Verwaltungsgericht erheben?",
+    "category": "Anfechtungsklage",
+    "expected_norms": [
+      "§ 42 VwGO",
+      "§ 68 VwGO"
+    ],
+    "expected_keywords": [
+      "Anfechtungsklage",
+      "Widerspruch",
+      "Klagefrist",
+      "Verwaltungsgericht"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Eine Gemeinde schließt mit einem Bauunternehmer einen Vertrag über die Erschließung eines Neubaugebiets. Handelt es sich um einen öffentlich-rechtlichen oder privatrechtlichen Vertrag?",
+    "category": "Verwaltungsvertrag",
+    "expected_norms": [
+      "§ 54 VwVfG",
+      "§ 56 VwVfG"
+    ],
+    "expected_keywords": [
+      "öffentlich-rechtlicher Vertrag",
+      "Subordinationsvertrag",
+      "Erschließungsvertrag",
+      "Verwaltungsrecht"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Eine Baugenehmigung ist unanfechtbar geworden. Drei Jahre später will die Behörde die Genehmigung aufgrund neuer Erkenntnisse widerrufen. Ist das noch möglich?",
+    "category": "Bestandskraft",
+    "expected_norms": [
+      "§ 49 VwVfG",
+      "§ 48 VwVfG"
+    ],
+    "expected_keywords": [
+      "Bestandskraft",
+      "Widerruf",
+      "Vertrauensschutz",
+      "Jahresfrist"
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Eine Ausländerbehörde lehnt einen Asylantrag ab. Der Antragsteller befürchtet unmittelbare Abschiebung. Welchen vorläufigen Rechtsschutz kann er beantragen?",
+    "category": "Vorläufiger Rechtsschutz",
+    "expected_norms": [
+      "§ 80a VwGO",
+      "§ 123 VwGO"
+    ],
+    "expected_keywords": [
+      "einstweilige Verfügung",
+      "vorläufiger Rechtsschutz",
+      "Abschiebung",
+      "Vollzugsaussetzung"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Eine Behörde übt beim Erlass eines Verwaltungsakts Ermessen aus. Wann ist eine Ermessensentscheidung rechtswidrig, und was kann ein Bürger dagegen unternehmen?",
+    "category": "Ermessen",
+    "expected_norms": [
+      "§ 40 VwVfG",
+      "§ 114 VwGO"
+    ],
+    "expected_keywords": [
+      "Ermessen",
+      "Ermessensfehler",
+      "Ermessensüberschreitung",
+      "Ermessensreduzierung"
+    ]
+  }
+]

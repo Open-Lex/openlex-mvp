@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "skill": "verbraucherschutzrecht",
+    "question": "Ein Unternehmer ruft die 16-jährige Maria an, um mit ihr einen Vertrag über den Kauf eines Smartphones für 800 Euro zu schließen. Der Unternehmer offenbart zu Beginn des Gesprächs weder seine Identität noch den geschäftlichen Zweck des Anrufs. Verstößt dieser Unternehmer gegen die Pflichten bei Verbraucherverträgen nach deutschem Recht? Begründen Sie anhand des geltenden BGB und erläutern Sie, welche Informationen der Anrufer zu Beginn des Gesprächs offenlegen muss.",
+    "expected_norms": [
+      "§ 312a"
+    ],
+    "expected_keywords": [
+      "Unternehmer",
+      "Verbraucher",
+      "Anrufer"
+    ],
+    "category": "Verbraucherschutzrecht - Allgemeine Pflichten bei Verbraucherverträgen"
+  },
+  {
+    "id": 2,
+    "skill": "verbraucherschutzrecht",
+    "question": "Ein Verbraucher kauft über einen Online-Shop ein Smartphone. Nach der Lieferung möchte er den Vertrag widerrufen. Welche Widerrufsfrist gilt nach § 312d BGB für Fernabsatzverträge, und welche Informationspflichten muss der Unternehmer erfüllen?",
+    "expected_norms": [
+      "§ 312d"
+    ],
+    "expected_keywords": [
+      "Widerrufsfrist",
+      "Fernabsatz",
+      "Informationspflichten",
+      "Verbraucher"
+    ],
+    "category": "Verbraucherschutzrecht / Produkthaftung"
+  },
+  {
+    "id": 3,
+    "skill": "verbraucherschutzrecht",
+    "question": "Ein Möbelhersteller ruft einen Privathaushalt an, um ihm Möbel für die private Wohneinrichtung zu verkaufen. Bei diesem Anruf offenbart der Anrufer weder seine Identität noch den geschäftlichen Zweck des Anrufs. Anschließend wird ein Kaufvertrag geschlossen und der Verbraucher erklärt später seinen Widerruf. Bestimmen Sie, ob die Pflichten des Unternehmers aus § 312a BGB erfüllt wurden und welche Konsequenzen sich aus dem Widerruf gemäß §§ 358, 360 BGB ergeben.",
+    "expected_norms": [
+      "§ 312a",
+      "§ 358"
+    ],
+    "expected_keywords": [
+      "Unternehmer",
+      "Verbraucher",
+      "Widerruf"
+    ],
+    "category": "verbraucherschutzrecht"
+  },
+  {
+    "id": 4,
+    "skill": "verbraucherschutzrecht",
+    "question": "Ein Anbieter eines Online-Mediendienstes speichert dynamische IP-Adressen seiner Nutzer. Stellen dynamische IP-Adressen personenbezogene Daten im Sinne der DSGVO dar, und auf welche Rechtsgrundlage kann die Speicherung gestützt werden?",
+    "expected_norms": [
+      "Art. 6",
+      "Art. 4"
+    ],
+    "expected_keywords": [
+      "personenbezogen",
+      "Rechtsgrundlage",
+      "DSGVO",
+      "Speicherung"
+    ],
+    "category": "verbraucherschutzrecht"
+  },
+  {
+    "id": 5,
+    "skill": "verbraucherschutzrecht",
+    "question": "Ein Verbraucher schließt telefonisch einen Dienstleistungsvertrag mit einem Unternehmen ab. Welche besonderen Pflichten treffen den Unternehmer bei außerhalb von Geschäftsräumen geschlossenen Verträgen und welche Verbraucherrechte bestehen?",
+    "expected_norms": [
+      "§ 312a",
+      "§ 312d"
+    ],
+    "expected_keywords": [
+      "Widerrufsrecht",
+      "Informationspflicht",
+      "Unternehmer",
+      "Verbraucher"
+    ],
+    "category": "Verbraucherschutzrecht - Krankenversicherung und Datenschutz"
+  }
+]

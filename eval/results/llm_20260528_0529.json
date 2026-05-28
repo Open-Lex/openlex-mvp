@@ -1,0 +1,125 @@
+[
+  {
+    "skill": "bildungsrecht",
+    "n_questions": 5,
+    "avg_score": 90.1,
+    "hallucination_rate": 0.0,
+    "worst_score": 87.5,
+    "best_score": 95.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "An einer Universität soll ein neuer Studiengang mit einer Regelstudienzeit von 5 Jahren eingeführt werden. Welche rechtliche Grundlage regelt die maximale Regelstudienzeit und welche Ausnahmen sind vorgesehen?",
+        "category": "Studienstruktur",
+        "score": 91.2,
+        "answer_excerpt": "# Regelstudienzeit für Studiengänge – Rechtliche Grundlagen und Ausnahmen\n\n## Rechtliche Grundlage\n\nDie maximale Regelstudienzeit wird durch **§ 11 Hochschulrahmengesetz (HRG)** geregelt [Quelle 1, Qu",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 20.4
+      },
+      {
+        "id": 2,
+        "question": "Eine Hochschule möchte ihre Prüfungsordnung ändern und dabei die Regelstudienzeit erhöhen. Wie regelt das Recht die Genehmigung solcher Änderungen?",
+        "category": "Prüfungsrecht",
+        "score": 95.8,
+        "answer_excerpt": "# Genehmigung von Prüfungsordnungsänderungen bei Erhöhung der Regelstudienzeit\n\n## Genehmigungspflicht\n\nNach **§ 16 HRG** [Quelle 2] bedürfen Prüfungsordnungen der Genehmigung durch die nach Landesrec",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.3
+      },
+      {
+        "id": 3,
+        "question": "Welche Aufgaben haben Hochschulen nach dem Hochschulrahmengesetz im Bereich Lehre und Forschung zu erfüllen?",
+        "category": "Hochschulaufgaben",
+        "score": 87.5,
+        "answer_excerpt": "# Aufgaben von Hochschulen nach dem Hochschulrahmengesetz\n\nNach dem Hochschulrahmengesetz (HRG) haben Hochschulen folgende Aufgaben im Bereich Lehre und Forschung:\n\n## Allgemeine Aufgaben (§ 2 HRG)\n\nH",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.1
+      },
+      {
+        "id": 4,
+        "question": "Welche Hochschulen fallen unter den Anwendungsbereich des Hochschulrahmengesetzes und wie werden staatlich anerkannte Hochschulen behandelt?",
+        "category": "Geltungsbereich",
+        "score": 88.5,
+        "answer_excerpt": "# Anwendungsbereich des Hochschulrahmengesetzes\n\n## Betroffene Hochschulen\n\nNach **§ 1 HRG** [Quelle 1, 2] fallen folgende Hochschulen unter den Anwendungsbereich des Hochschulrahmengesetzes:\n\n- Unive",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.7
+      },
+      {
+        "id": 5,
+        "question": "Ein Student möchte sein Studium absolvieren und fragt, wofür die Regelstudienzeit maßgebend ist und welche Elemente sie einschließt. Wie ist die rechtliche Situation?",
+        "category": "Studienorganisation",
+        "score": 87.5,
+        "answer_excerpt": "# Regelstudienzeit im Hochschulrahmengesetz\n\n## Maßgeblichkeit der Regelstudienzeit\n\nDie Regelstudienzeit ist maßgebend für die **Berechnung der Ausbildungskapazitäten** der Hochschulen [Quelle 10]. S",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.3
+      }
+    ],
+    "duration_s": 63.4
+  }
+]

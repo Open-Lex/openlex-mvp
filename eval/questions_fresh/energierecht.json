@@ -1,0 +1,72 @@
+[
+  {
+    "question": "Ein Windkraftanlagenbetreiber speist Strom in das Verteilnetz eines Netzbetreibers ein. Der Netzbetreiber lehnt den Netzanschluss mit der Begründung ab, dass die erforderlichen Verstärkungsmaßnahmen zu kostspielig wären. Welche Ansprüche hat der Betreiber gegen den Netzbetreiber gemäß EEG und welche Voraussetzungen müssen erfüllt sein?",
+    "expected_norms": [
+      "§ 8 EEG 2023",
+      "§ 11 EEG 2023",
+      "§ 13 Abs. 2 EEG 2023"
+    ],
+    "expected_keywords": [
+      "Netzanschlussanspruch",
+      "Kosten der Netzertüchtigung",
+      "unverhältnismäßige Belastung",
+      "vorgelagerte Netzebene"
+    ]
+  },
+  {
+    "question": "Ein Energieversorgungsunternehmen schließt mit einem Haushaltskunden einen Stromliefervertrag ab. Nach 6 Monaten erhöht das EVU einseitig den Arbeitspreis um 35 %. Der Kunde behauptet, die Preiserhöhung sei rechtswidrig. Prüfen Sie die Zulässigkeit der Preisanpassung nach BGB und eventuellen Sonderkündigungsrechten des Kunden.",
+    "expected_norms": [
+      "§ 315 BGB",
+      "§ 536a BGB",
+      "§ 41 Abs. 3 EnWG"
+    ],
+    "expected_keywords": [
+      "Änderungsvorbehalt",
+      "Billigkeitskontrolle",
+      "Sonderkündigungsrecht",
+      "Strompreisklausel"
+    ]
+  },
+  {
+    "question": "Ein Anlagenbetreiber mit einer PV-Anlage (50 kW) will diese ab 2024 betreiben und erhält eine Förderung nach EEG. Er möchte jedoch die Einspeisungsvergütung erhöhen, indem er eine Batterie anschafft und nur den Überschussstrom einspeist. Wie wirkt sich die Speicheranlage auf seinen Förderanspruch nach EEG aus?",
+    "expected_norms": [
+      "§ 3 Abs. 1 EEG 2023",
+      "§ 3 Nr. 1 EEG 2023",
+      "§ 48 EEG 2023"
+    ],
+    "expected_keywords": [
+      "Speicheranlage",
+      "Eigenverbrauch",
+      "Förderausschluss",
+      "Speicherschwelle"
+    ]
+  },
+  {
+    "question": "Ein Industriekunde mit einem Jahresverbrauch von 2.500 MWh wechselt seinen Stromlieferanten. Der alte Versorger verlangt nachträglich eine Entgeltforderung für angebliche Netznutzungsgebühren, die erst nach dem Lieferwechsel berechnet wurden. Zu welchem Zeitpunkt entstehen die Ansprüche und welche Vorschriften regeln die Abrechnung?",
+    "expected_norms": [
+      "§ 20 Abs. 1 StromGVV",
+      "§ 14 Abs. 4 EnWG",
+      "§ 19 StromNEV"
+    ],
+    "expected_keywords": [
+      "Netznutzungsentgelt",
+      "Abgrenzung Lieferant und Netzbetreiber",
+      "Fakturierung",
+      "Lieferwechsel"
+    ]
+  },
+  {
+    "question": "Ein Betreiber einer Biomasse-Anlage (500 kW) hat 2018 eine Förderung nach EEG erhalten. Die Anlage wird 2024 saniert und modernisiert (neuer BHKW-Motor). Nach der Sanierung steigt die Leistung auf 520 kW. Kann die Anlage weiterhin nach EEG gefördert werden oder wird dies durch die Leistungserhöhung ausgeschlossen?",
+    "expected_norms": [
+      "§ 4 Abs. 13 EEG 2023",
+      "§ 48 Abs. 2 EEG 2023",
+      "§ 40 Abs. 2 EEG 2023"
+    ],
+    "expected_keywords": [
+      "Bestandsanlage",
+      "wesentliche Modernisierung",
+      "Leistungserhöhung",
+      "Förderfortbestand"
+    ]
+  }
+]

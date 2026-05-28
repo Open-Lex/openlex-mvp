@@ -1,0 +1,157 @@
+[
+  {
+    "id": 1,
+    "question": "Eine evangelische Kirchengemeinde kündigt einer Erzieherin in ihrer Kita, weil diese aus der Kirche ausgetreten ist. Ist diese Kündigung rechtlich zulässig?",
+    "category": "Kirchliches Arbeitsrecht",
+    "expected_norms": [
+      "Art. 137",
+      "Art. 140",
+      "Art. 4"
+    ],
+    "expected_keywords": [
+      "Selbstbestimmungsrecht",
+      "Loyalitätspflicht",
+      "Kündigung",
+      "kirchliche Arbeitgeber"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Eine neu gegründete Religionsgemeinschaft beantragt den Status einer Körperschaft des öffentlichen Rechts, um Kirchensteuer erheben zu dürfen. Welche Voraussetzungen muss sie erfüllen?",
+    "category": "Körperschaftsstatus",
+    "expected_norms": [
+      "Art. 137",
+      "Art. 140"
+    ],
+    "expected_keywords": [
+      "Körperschaft des öffentlichen Rechts",
+      "Kirchensteuer",
+      "Gewähr der Dauer",
+      "Religionsgemeinschaft"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Ein Bundesland möchte in allen Schulen Kreuze aufhängen. Ein Elternteil ohne Religionszugehörigkeit klagt dagegen. Wie ist die Rechtslage nach dem Grundgesetz und der WRV?",
+    "category": "Staatliche Neutralität",
+    "expected_norms": [
+      "Art. 4",
+      "Art. 137",
+      "Art. 140"
+    ],
+    "expected_keywords": [
+      "staatliche Neutralität",
+      "Religionsfreiheit",
+      "negative Religionsfreiheit",
+      "Staatskirche"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Welche Rechte hat eine Religionsgemeinschaft bei der Organisation ihrer eigenen Angelegenheiten, und wo liegen die Grenzen des kirchlichen Selbstbestimmungsrechts?",
+    "category": "Selbstbestimmungsrecht",
+    "expected_norms": [
+      "Art. 137",
+      "Art. 140"
+    ],
+    "expected_keywords": [
+      "Selbstbestimmungsrecht",
+      "eigene Angelegenheiten",
+      "Schranken",
+      "für alle geltenden Gesetzes"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Eine islamische Lehrerin möchte im Unterricht ein Kopftuch tragen. Das Bundesland hat ein Neutralitätsgesetz erlassen. Was sagen Grundgesetz und Rechtsprechung dazu?",
+    "category": "Religionsfreiheit Lehrerin",
+    "expected_norms": [
+      "Art. 4",
+      "Art. 33"
+    ],
+    "expected_keywords": [
+      "Religionsfreiheit",
+      "Neutralität",
+      "Kopftuch",
+      "staatliche Neutralität"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Welche Bedeutung haben die Kirchenartikel der Weimarer Reichsverfassung (Art. 136-141 WRV) heute im deutschen Recht, und wie sind sie in das Grundgesetz einbezogen?",
+    "category": "WRV Kirchenartikel",
+    "expected_norms": [
+      "Art. 140 GG",
+      "Art. 136 WRV",
+      "Art. 137 WRV",
+      "Art. 138 WRV"
+    ],
+    "expected_keywords": [
+      "Weimarer Reichsverfassung",
+      "Grundgesetz",
+      "Kirchenartikel",
+      "Bestandteil"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Darf der Staat die Kirchensteuer für die Kirchen einziehen, und auf welcher Rechtsgrundlage basiert das Kirchensteuersystem in Deutschland?",
+    "category": "Kirchensteuer",
+    "expected_norms": [
+      "Art. 137 WRV",
+      "Art. 140 GG"
+    ],
+    "expected_keywords": [
+      "Kirchensteuer",
+      "Körperschaft des öffentlichen Rechts",
+      "Steuerlisten",
+      "Einkommensteuer"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Eine Gemeinde verbietet aus kommerziellen Gründen alle Veranstaltungen an Sonntagen. Welchen verfassungsrechtlichen Schutz genießt der Sonntag?",
+    "category": "Sonntagsschutz",
+    "expected_norms": [
+      "Art. 139 WRV",
+      "Art. 140 GG"
+    ],
+    "expected_keywords": [
+      "Sonntag",
+      "Arbeitsruhe",
+      "seelische Erhebung",
+      "Feiertagsschutz"
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Welche Besonderheiten gelten für das Arbeitsverhältnis von Pflegekräften in einem katholischen Krankenhaus im Vergleich zu einem staatlichen Krankenhaus?",
+    "category": "Kirchliches Arbeitsrecht Caritas",
+    "expected_norms": [
+      "Art. 137 WRV",
+      "Art. 140 GG"
+    ],
+    "expected_keywords": [
+      "Dritter Weg",
+      "Loyalitätspflicht",
+      "kirchlicher Arbeitgeber",
+      "Selbstbestimmungsrecht"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Darf eine staatliche Universität einem katholischen Theologieprofessor die Lehrbefugnis entziehen, wenn die Kirche ihm die Missio canonica entzogen hat?",
+    "category": "Theologische Fakultäten",
+    "expected_norms": [
+      "Art. 137 WRV",
+      "Art. 140 GG",
+      "Art. 4 GG"
+    ],
+    "expected_keywords": [
+      "Missio canonica",
+      "kirchliches Selbstbestimmungsrecht",
+      "theologische Fakultät",
+      "Lehrerlaubnis"
+    ]
+  }
+]

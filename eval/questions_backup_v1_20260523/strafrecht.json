@@ -1,0 +1,144 @@
+[
+  {
+    "id": 1,
+    "question": "Ein Mann schlägt einen anderen vorsätzlich mit der Faust, sodass dieser einen gebrochenen Kiefer erleidet. Welche Straftat liegt vor und welche Strafe droht nach dem StGB?",
+    "category": "Körperverletzung",
+    "expected_norms": [
+      "§ 223"
+    ],
+    "expected_keywords": [
+      "Körperverletzung",
+      "vorsätzlich",
+      "gefährlich"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Eine Person täuscht einen Käufer über die Echtheit eines Gemäldes und erhält dadurch 50.000 Euro. Welcher Straftatbestand ist erfüllt und welche Voraussetzungen müssen vorliegen?",
+    "category": "Betrug",
+    "expected_norms": [
+      "§ 263"
+    ],
+    "expected_keywords": [
+      "Betrug",
+      "Täuschung",
+      "Irrtum"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Jemand bricht in ein Haus ein und stiehlt Schmuck im Wert von 10.000 Euro. Welche Straftatbestände kommen in Betracht und wie unterscheiden sie sich?",
+    "category": "Diebstahl",
+    "expected_norms": [
+      "§ 244"
+    ],
+    "expected_keywords": [
+      "Diebstahl",
+      "Einbruch",
+      "besonders schwerer Fall",
+      "Wohnungseinbruch"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Täter A überredet Täter B, ein Fahrzeug zu stehlen, während Täter C Schmiere steht. Wie ist die strafrechtliche Verantwortung von A, B und C zu beurteilen?",
+    "category": "Täterschaft und Teilnahme",
+    "expected_norms": [
+      "§ 26"
+    ],
+    "expected_keywords": [
+      "Täter",
+      "Anstifter",
+      "Gehilfe"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Ein Angeklagter wird wegen mehrerer Straftaten verurteilt. Wie wird die Gesamtstrafe nach dem StGB gebildet und welche Grenzen gelten dabei?",
+    "category": "Strafzumessung",
+    "expected_norms": [
+      "§ 53",
+      "§ 54"
+    ],
+    "expected_keywords": [
+      "Gesamtstrafe",
+      "Einsatzstrafe",
+      "Strafe"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Jemand tötet einen anderen Menschen vorsätzlich und heimtückisch. Wie unterscheiden sich Mord und Totschlag nach dem StGB?",
+    "category": "Tötungsdelikte",
+    "expected_norms": [
+      "§ 211",
+      "§ 212"
+    ],
+    "expected_keywords": [
+      "Mord",
+      "Totschlag",
+      "Mordmerkmale",
+      "heimtückisch",
+      "lebenslang"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Eine Person wird angegriffen und wehrt sich mit einem Messer, verletzt dabei den Angreifer erheblich. Liegt strafbare Körperverletzung vor?",
+    "category": "Notwehr",
+    "expected_norms": [
+      "§ 32"
+    ],
+    "expected_keywords": [
+      "Notwehr",
+      "Angriff",
+      "Verteidigung",
+      "Erforderlichkeit",
+      "Rechtfertigung"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Ein Apotheker verschreibt sich versehentlich bei der Medikamentendosis und ein Patient stirbt. Kommt fahrlässige Tötung in Betracht?",
+    "category": "Fahrlässigkeit",
+    "expected_norms": [
+      "§ 222",
+      "§ 15"
+    ],
+    "expected_keywords": [
+      "fahrlässig",
+      "Sorgfaltspflicht",
+      "Vorhersehbarkeit",
+      "Kausalität"
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Jemand unterschreibt einen Vertrag mit dem Namen eines anderen ohne dessen Erlaubnis. Welche Straftatbestände des Urkundenstrafrechts sind betroffen?",
+    "category": "Urkundenfälschung",
+    "expected_norms": [
+      "§ 267",
+      "§ 268"
+    ],
+    "expected_keywords": [
+      "Urkundenfälschung",
+      "echte Urkunde",
+      "herstellen",
+      "verfälschen"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Ein Mitarbeiter überweist heimlich Firmengelder auf sein eigenes Konto. Welcher Straftatbestand greift und welche Voraussetzungen sind zu prüfen?",
+    "category": "Untreue",
+    "expected_norms": [
+      "§ 266"
+    ],
+    "expected_keywords": [
+      "Untreue",
+      "Vermögensbetreuungspflicht",
+      "Pflichtverletzung",
+      "Nachteil"
+    ]
+  }
+]

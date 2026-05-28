@@ -1,0 +1,244 @@
+[
+  {
+    "skill": "voelkerrecht",
+    "n_questions": 10,
+    "avg_score": 76.6,
+    "hallucination_rate": 0.0,
+    "worst_score": 51.1,
+    "best_score": 96.0,
+    "questions": [
+      {
+        "id": null,
+        "question": "Nach Artikel 24 der Charta der Vereinten Nationen übertragen die Mitgliedstaaten dem Sicherheitsrat die Hauptverantwortung für die Wahrung des Weltfriedens und der internationalen Sicherheit. Welche Befugnisse und Handlungsmöglichkeiten hat der Sicherheitsrat bei der Friedenssicherung?",
+        "category": "",
+        "score": 87.5,
+        "answer_excerpt": "# Befugnisse und Handlungsmöglichkeiten des Sicherheitsrats\n\nNach **Artikel 24 UN-Charta** trägt der Sicherheitsrat die Hauptverantwortung für die Wahrung des Weltfriedens und der internationalen Sich",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.4
+      },
+      {
+        "id": null,
+        "question": "Im Rahmen der Schengener Vereinbarungen haben sich mehrere europäische Staaten zum schrittweisen Abbau von Grenzkontrollen verpflichtet. Welche Rechte und Pflichten ergeben sich aus dem Schengener Übereinkommen für die Vertragsstaaten?",
+        "category": "",
+        "score": 87.5,
+        "answer_excerpt": "# Rechte und Pflichten aus dem Schengener Übereinkommen\n\n## Hauptrechte der Vertragsstaaten\n\n**Abbau von Binnengrenzkontrollen**: Nach [Quelle 5, Artikel 2 Abs. 1] dürfen Binnengrenzen „an jeder Stell",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.6
+      },
+      {
+        "id": null,
+        "question": "Nach Art. 51 der Charta der Vereinten Nationen bleibt das naturgegebene Recht zur individuellen oder kollektiven Selbstverteidigung unberührt, wenn ein bewaffneter Angriff erfolgt. Welche Voraussetzungen müssen nach Art. 51 UN-Charta für die rechtmäßige Ausübung des Selbstverteidigungsrechts erfüllt sein, und welche Grenzen setzt das Völkerrecht?",
+        "category": "",
+        "score": 94.8,
+        "answer_excerpt": "# Voraussetzungen und Grenzen des Selbstverteidigungsrechts nach Art. 51 UN-Charta\n\n## Voraussetzungen für rechtmäßige Selbstverteidigung\n\nNach [Quelle 2] und [Quelle 3] müssen folgende Voraussetzunge",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "urteil",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.7
+      },
+      {
+        "id": null,
+        "question": "Nach Artikel 34 EMRK können natürliche Personen, nichtstaatliche Organisationen oder Personengruppen Individualbeschwerde beim Europäischen Gerichtshof für Menschenrechte erheben. Welche Voraussetzungen müssen für eine zulässige Individualbeschwerde erfüllt sein?",
+        "category": "",
+        "score": 73.0,
+        "answer_excerpt": "# Zulässigkeitsvoraussetzungen für Individualbeschwerden nach Art. 34 EMRK\n\nNach Art. 34 EMRK können natürliche Personen, nichtstaatliche Organisationen oder Personengruppen Beschwerden beim Europäisc",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.2
+      },
+      {
+        "id": null,
+        "question": "Das Gewaltverbot nach Art. 2 Ziff. 4 der Charta der Vereinten Nationen verbietet Staaten die Anwendung von Gewalt gegen die territoriale Unversehrtheit oder politische Unabhängigkeit anderer Staaten. Welche Ausnahmen lässt die UN-Charta zu, und welche Rolle spielt dabei Art. 51?",
+        "category": "",
+        "score": 96.0,
+        "answer_excerpt": "# Ausnahmen vom Gewaltverbot der UN-Charta\n\nDie UN-Charta kennt zwei wesentliche Ausnahmen vom Gewaltverbot nach [Artikel 2 Abs. 4][Quelle 9]:\n\n## 1. Selbstverteidigungsrecht (Art. 51)\n\n**Art. 51 UN-C",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "literatur_lehrbuch",
+            "methodenwissen",
+            "urteil",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.0
+      },
+      {
+        "id": 6,
+        "question": "Britische Kriegsschiffe liefen im Korfukanal auf Minen. Ist Albanien verantwortlich, obwohl es die Minen nicht legte? Und haben Kriegsschiffe ein Durchfahrtsrecht?",
+        "category": "Corfu Channel / Durchfahrtsrecht",
+        "score": 54.5,
+        "answer_excerpt": "# Verantwortlichkeit Albaniens und Durchfahrtsrecht von Kriegsschiffen\n\n## Verantwortlichkeit Albaniens trotz fehlender Minenlegung\n\nNach dem **Corfu Channel Case (IGH 1949)** [Quelle 1] ist Albanien ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.6,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "urteil",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.5
+      },
+      {
+        "id": 7,
+        "question": "Aktionäre einer kanadischen Gesellschaft in Spanien erleiden Schäden. Kann Belgien für seine Staatsangehörigen als Aktionäre diplomatischen Schutz ausüben?",
+        "category": "Barcelona Traction / Diplomatischer Schutz",
+        "score": 62.8,
+        "answer_excerpt": "# Diplomatischer Schutz für belgische Aktionäre einer kanadischen Gesellschaft\n\n## Kernfrage und Antwort\n\nNach der maßgeblichen Entscheidung des Internationalen Gerichtshofs kann Belgien **nicht** für",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.6,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "literatur_lehrbuch",
+            "urteil",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.2
+      },
+      {
+        "id": 8,
+        "question": "Die USA unterstützen Rebellen in Nicaragua mit Waffen und Geld. Verletzt das das Gewaltverbot? Was ist der 'Effective Control'-Test?",
+        "category": "Nicaragua / Gewaltverbot",
+        "score": 95.0,
+        "answer_excerpt": "# Gewaltverbot und die US-Unterstützung der Contras in Nicaragua\n\n## Verletzung des Gewaltverbots\n\nJa, die USA verletzten das Gewaltverbot nach **Art. 2 Nr. 4 UN-Charta**. Im Urteil *Military and Para",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "literatur_lehrbuch",
+            "methodenwissen",
+            "urteil",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.5
+      },
+      {
+        "id": 9,
+        "question": "Ist der Einsatz von Atomwaffen nach Völkerrecht verboten? Was sagt der IGH?",
+        "category": "Legalität Atomwaffen",
+        "score": 51.1,
+        "answer_excerpt": "# Völkerrechtliches Verbot von Atomwaffen\n\nNach Quelle 1 hat sich der Internationale Gerichtshof (IGH) mit dieser Frage in seinem **Gutachten vom 08.07.1996** zum Thema \"Legality of the Threat or Use ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.17,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "literatur_lehrbuch",
+            "urteil",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.7
+      },
+      {
+        "id": 10,
+        "question": "Kosovo erklärt einseitig die Unabhängigkeit von Serbien. Verstößt das gegen das Völkerrecht?",
+        "category": "Kosovo / Selbstbestimmungsrecht",
+        "score": 63.4,
+        "answer_excerpt": "# Völkerrechtliche Zulässigkeit der einseitigen Unabhängigkeitserklärung Kosovos\n\n## IGH-Gutachten\n\nDer Internationale Gerichtshof (IGH) hat sich 2010 direkt mit dieser Frage auseinandergesetzt [Quell",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "literatur_lehrbuch",
+            "methodenwissen",
+            "urteil",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 14.4
+      }
+    ],
+    "duration_s": 108.2
+  }
+]

@@ -1,0 +1,153 @@
+[
+  {
+    "id": 1,
+    "skill": "strafverfahrensrecht",
+    "question": "Ein Angeklagter wird wegen mehrerer Straftaten angeklagt, die vor verschiedenen Gerichten anhängig sind. Wie können diese Verfahren verbunden werden?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Verbindung",
+      "Strafsachen",
+      "Zuständigkeit"
+    ],
+    "min_sources": 1,
+    "category": "Verfahrensverbund"
+  },
+  {
+    "id": 2,
+    "skill": "strafverfahrensrecht",
+    "question": "Was ist der Begriff des Zusammenhanges im Rahmen der Strafprozessordnung?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Zusammenhang",
+      "Straftaten",
+      "Täter"
+    ],
+    "min_sources": 1,
+    "category": "Zusammenhang"
+  },
+  {
+    "id": 3,
+    "skill": "strafverfahrensrecht",
+    "question": "Ein Gericht muss entscheiden, ob es für die Verhandlung einer Strafsache zuständig ist. Welches Gesetz regelt die sachliche Zuständigkeit der Gerichte?",
+    "expected_norms": [
+      "§ 1",
+      "GVG"
+    ],
+    "expected_keywords": [
+      "Zuständigkeit",
+      "Gerichtsverfassung",
+      "Sachliche Zuständigkeit"
+    ],
+    "min_sources": 2,
+    "category": "Zuständigkeit"
+  },
+  {
+    "id": 4,
+    "skill": "strafverfahrensrecht",
+    "question": "Mehrere Personen werden wegen derselben Tat angeklagt. Kann das Verfahren gegen sie getrennt oder muss es verbunden werden?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Verbindung",
+      "Trennung",
+      "Strafsachen"
+    ],
+    "min_sources": 1,
+    "category": "Verfahrensverbund"
+  },
+  {
+    "id": 5,
+    "skill": "strafverfahrensrecht",
+    "question": "Ein Angeklagter wird wegen einer Straftat angeklagt, die vor einem Gericht anhängig ist, das nicht für die Verhandlung zuständig ist. Wie kann das Verfahren an ein anderes Gericht übergeben werden?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Zuständigkeit",
+      "Gericht"
+    ],
+    "min_sources": 2,
+    "category": "Zuständigkeit"
+  },
+  {
+    "id": 6,
+    "skill": "strafverfahrensrecht",
+    "question": "Was sind die Voraussetzungen für die Verbindung von Strafsachen?",
+    "expected_norms": [
+      "§ 2 StPO"
+    ],
+    "expected_keywords": [
+      "Verbindung",
+      "Strafsachen",
+      "Zusammenhang"
+    ],
+    "min_sources": 1,
+    "category": "Verfahrensverbund"
+  },
+  {
+    "id": 7,
+    "skill": "strafverfahrensrecht",
+    "question": "Ein Gericht muss entscheiden, ob es für die Verhandlung einer Strafsache gegen mehrere Angeklagte zuständig ist. Welche Regelungen gelten in diesem Fall?",
+    "expected_norms": [
+      "§ 2 StPO",
+      "§ 3 StPO"
+    ],
+    "expected_keywords": [
+      "Zuständigkeit",
+      "Mehrzahl",
+      "Angeklagte"
+    ],
+    "min_sources": 2,
+    "category": "Zuständigkeit"
+  },
+  {
+    "id": 8,
+    "skill": "strafverfahrensrecht",
+    "question": "Was sind die Folgen einer unzulässigen Verbindung von Strafsachen?",
+    "expected_norms": [
+      "§ 2 StPO"
+    ],
+    "expected_keywords": [
+      "Verbindung",
+      "Unzulässigkeit",
+      "Folgen"
+    ],
+    "min_sources": 1,
+    "category": "Verfahrensverbund"
+  },
+  {
+    "id": 9,
+    "skill": "strafverfahrensrecht",
+    "question": "Ein Angeklagter wird wegen mehrerer Straftaten angeklagt, die vor verschiedenen Gerichten anhängig sind. Wie kann das Verfahren gegen ihn einheitlich geführt werden?",
+    "expected_norms": [
+      "§ 2 StPO"
+    ],
+    "expected_keywords": [
+      "Verbindung",
+      "Einheitliche Verfahrensführung",
+      "Angeklagter"
+    ],
+    "min_sources": 1,
+    "category": "Verfahrensverbund"
+  },
+  {
+    "id": 10,
+    "skill": "strafverfahrensrecht",
+    "question": "Was sind die Gründe für die Trennung von Strafsachen?",
+    "expected_norms": [
+      "§ 2 StPO"
+    ],
+    "expected_keywords": [
+      "Trennung",
+      "Strafsachen",
+      "Gründe"
+    ],
+    "min_sources": 1,
+    "category": "Verfahrenstrennung"
+  }
+]

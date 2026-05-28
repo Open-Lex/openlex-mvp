@@ -1,0 +1,158 @@
+[
+  {
+    "question": "Unser Unternehmen entwickelt ein KI-System zur biometrischen Gesichtserkennung im öffentlichen Raum zur Echtzeit-Überwachung. Ist das nach dem EU AI Act erlaubt?",
+    "expected_norms": [
+      "Art. 5",
+      "KI-VO"
+    ],
+    "expected_keywords": [
+      "verboten",
+      "Echtzeit",
+      "Gesichtserkennung",
+      "öffentlichen Raum"
+    ]
+  },
+  {
+    "question": "Unter welchen Voraussetzungen gilt ein KI-System gemäß Artikel 6 des EU AI Act als Hochrisiko-System, und welche Pflichten entstehen daraus?",
+    "expected_norms": [
+      "Artikel 6",
+      "KI-VO"
+    ],
+    "expected_keywords": [
+      "Hochrisiko",
+      "Anhang III",
+      "Konformitätsbewertung",
+      "Pflichten"
+    ]
+  },
+  {
+    "question": "Unser Hochrisiko-KI-System lernt nach dem Inverkehrbringen kontinuierlich dazu. Welche spezifischen Pflichten bestehen hinsichtlich Monitoring und Meldepflichten nach dem AI Act?",
+    "expected_norms": [
+      "Artikel 72",
+      "AI Act"
+    ],
+    "expected_keywords": [
+      "Marktüberwachung",
+      "Vorfall",
+      "Meldepflicht",
+      "Betreiber"
+    ]
+  },
+  {
+    "question": "Wir haben festgestellt, dass unser KI-System ein erhebliches Risiko darstellt. Welche Pflichten bestehen nach dem AI Act für Anbieter bei schwerwiegenden Vorfällen?",
+    "expected_norms": [
+      "Artikel 73",
+      "KI-VO"
+    ],
+    "expected_keywords": [
+      "schwerwiegender Vorfall",
+      "Meldung",
+      "Behörde",
+      "Korrektivmaßnahmen"
+    ]
+  },
+  {
+    "question": "Welche Anforderungen bestehen bezüglich der menschlichen Überwachung von Hochrisiko-KI-Systemen nach Art. 14 KI-VO?",
+    "expected_norms": [
+      "Art. 14",
+      "KI-VO"
+    ],
+    "expected_keywords": [
+      "menschliche Aufsicht",
+      "Überwachung",
+      "Eingriff",
+      "Betreiber"
+    ]
+  },
+  {
+    "question": "Ein KI-System wird in einem Bewerbungsverfahren eingesetzt, um Kandidaten zu ranken. Welche Anforderungen stellt der AI Act an Transparenz und Dokumentation?",
+    "expected_norms": [
+      "Artikel 6",
+      "AI Act"
+    ],
+    "expected_keywords": [
+      "Transparenz",
+      "Dokumentation",
+      "technische Dokumentation",
+      "Gebrauchsanweisung"
+    ]
+  },
+  {
+    "question": "Was sind nach dem EU AI Act die Unterschiede zwischen verbotenen KI-Systemen (Art. 5), Hochrisiko-Systemen (Art. 6) und KI-Systemen mit begrenztem Risiko?",
+    "expected_norms": [
+      "Art. 5",
+      "Art. 6"
+    ],
+    "expected_keywords": [
+      "verboten",
+      "Hochrisiko",
+      "begrenzt",
+      "Transparenzpflichten"
+    ]
+  },
+  {
+    "question": "Welche Pflichten hat ein Anbieter eines KI-Systems beim Inverkehrbringen in der EU nach Art. 16 ff. KI-VO?",
+    "expected_norms": [
+      "Art. 16",
+      "KI-VO"
+    ],
+    "expected_keywords": [
+      "Konformitätsbewertung",
+      "CE-Kennzeichnung",
+      "Dokumentation",
+      "Registrierung"
+    ]
+  },
+  {
+    "question": "Was sind General-Purpose AI (GPAI) Modelle nach dem EU AI Act und welche besonderen Regeln gelten für systemische Risiken?",
+    "expected_norms": [
+      "GPAI",
+      "systemisch"
+    ],
+    "expected_keywords": [
+      "GPAI",
+      "Allzweck-KI",
+      "systemisches Risiko",
+      "Rechenpflicht"
+    ]
+  },
+  {
+    "question": "Ein Chatbot wird im Kundendienst eingesetzt und erweckt den Eindruck, ein Mensch zu sein. Was sagt der AI Act dazu?",
+    "expected_norms": [
+      "Artikel 50",
+      "KI-Verordnung"
+    ],
+    "expected_keywords": [
+      "Transparenzpflichten",
+      "KI-System",
+      "Person",
+      "Offenlegung"
+    ]
+  },
+  {
+    "question": "Welche Sanktionen drohen bei Verstößen gegen den EU AI Act und welche Behörde ist in Deutschland zuständig?",
+    "expected_norms": [
+      "Artikel 99",
+      "KI-VO"
+    ],
+    "expected_keywords": [
+      "Sanktionen",
+      "Bußgeld",
+      "Behörde",
+      "Verstoß"
+    ]
+  },
+  {
+    "question": "Was versteht der EU AI Act unter einem 'KI-System'? Wann liegt kein KI-System vor, sondern klassische Software?",
+    "expected_norms": [
+      "Artikel 3",
+      "KI-VO"
+    ],
+    "expected_keywords": [
+      "Definition",
+      "maschinelles Lernen",
+      "autonom",
+      "Software"
+    ]
+  }
+]

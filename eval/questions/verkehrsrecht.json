@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "skill": "verkehrsrecht",
+    "question": "Mein Kraftfahrzeug wurde von der Behörde zur Teilnahme am öffentlichen Straßenverkehr gemäß § 1 Absatz 1 zugelassen. Muss ich trotzdem noch weitere Genehmigungen einholen, wenn ich eine autonome Fahrfunktion betreiben möchte?",
+    "expected_norms": [
+      "§ 1",
+      "§ 1e"
+    ],
+    "expected_keywords": [
+      "Kraftfahrzeug",
+      "Zulassung",
+      "Behörde"
+    ],
+    "category": "autonomes Fahren"
+  },
+  {
+    "id": 2,
+    "skill": "verkehrsrecht",
+    "question": "Ich bin Halter eines Kraftfahrzeugs mit autonomer Fahrfunktion. Welche Daten muss ich speichern und dem Kraftfahrt-Bundesamt zur Verfügung stellen nach § 1g Absatz 1 und 2?",
+    "expected_norms": [
+      "§ 1g"
+    ],
+    "expected_keywords": [
+      "Daten",
+      "Kraftfahrzeugs",
+      "Bundesamt"
+    ],
+    "category": "Datenverwaltung autonome Fahrzeuge"
+  },
+  {
+    "id": 3,
+    "skill": "verkehrsrecht",
+    "question": "Was sind meine Aufgaben als Technische Aufsicht eines Kraftfahrzeugs mit autonomer Fahrfunktion gemäß § 1f Absatz 2?",
+    "expected_norms": [
+      "§ 1f"
+    ],
+    "expected_keywords": [
+      "Fahrfunktion",
+      "Aufsicht",
+      "Kraftfahrzeug"
+    ],
+    "category": "Betrieb autonomer Fahrzeuge"
+  },
+  {
+    "id": 4,
+    "skill": "verkehrsrecht",
+    "question": "Ich möchte eine hoch- oder vollautomatisierte Fahrfunktion gemäß § 1a Absatz 1 in meinem Fahrzeug aktivieren. Unter welchen Voraussetzungen ist dies zulässig?",
+    "expected_norms": [
+      "§ 1a"
+    ],
+    "expected_keywords": [
+      "Fahrfunktion",
+      "Führen",
+      "Kraftfahrzeug"
+    ],
+    "category": "automatisiertes Fahren"
+  },
+  {
+    "id": 5,
+    "skill": "verkehrsrecht",
+    "question": "Wer darf eine Fahrerlaubnis zum Führen von Kraftfahrzeugen nach § 2 Absatz 1 erhalten und was muss ich nachweisen?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Fahrerlaubnis",
+      "Führen",
+      "Nummer"
+    ],
+    "category": "Fahrerlaubnisse"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "skill": "urheberrecht",
+    "question": "Ich habe zusammen mit einem Kollegen ein Computerprogramm entwickelt, und wir können unsere Anteile nicht einzeln verwerten. Welche Rechtsposition haben wir beiden?",
+    "expected_norms": [
+      "§ 8"
+    ],
+    "expected_keywords": [
+      "Miturheber",
+      "Werke",
+      "Recht"
+    ],
+    "category": "Urheberverhältnisse"
+  },
+  {
+    "id": 2,
+    "skill": "urheberrecht",
+    "question": "Ich habe einen Roman übersetzt und dabei kreativ Kulturbesonderheiten berücksichtigt. Kann meine Übersetzung als eigenständiges Werk geschützt werden?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Bearbeitungen",
+      "Werkes",
+      "Urheberrecht"
+    ],
+    "category": "Bearbeitungen und Sammelwerke"
+  },
+  {
+    "id": 3,
+    "skill": "urheberrecht",
+    "question": "Welche Werktypen werden nach dem Urheberrechtsgesetz geschützt – kann ich beispielsweise auch ein Computerprogramm oder einen Tanzfilm schützen lassen?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Werke",
+      "Künste",
+      "Werkes"
+    ],
+    "category": "Schutzgegenstände"
+  },
+  {
+    "id": 4,
+    "skill": "urheberrecht",
+    "question": "Mein Verlag möchte mein Buch ins Internet stellen, damit es jederzeit abrufbar ist. Welches Recht des Urhebers ist hier relevant?",
+    "expected_norms": [
+      "§ 19a"
+    ],
+    "expected_keywords": [
+      "Öffentlichkeit",
+      "Wiedergabe",
+      "Recht"
+    ],
+    "category": "Verwertungsrechte"
+  },
+  {
+    "id": 5,
+    "skill": "urheberrecht",
+    "question": "Ich habe eine Datenbank mit systematisch geordneten Musikstücken aufgebaut. Kann ich die Anordnung und Auswahl dieser Sammlung urheberrechtlich schützen lassen?",
+    "expected_norms": [
+      "§ 4"
+    ],
+    "expected_keywords": [
+      "Sammelwerke",
+      "Werkes",
+      "Urheber"
+    ],
+    "category": "Bearbeitungen und Sammelwerke"
+  }
+]

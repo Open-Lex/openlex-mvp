@@ -1,0 +1,68 @@
+[
+  {
+    "question": "Ein Reiseveranstalter bietet eine 10-tägige Pauschalreise nach Mallorca an. Drei Tage vor Abreise teilt der Veranstalter dem Reisenden mit, dass das gebuchte 4-Sterne-Hotel nicht mehr verfügbar ist und stattdessen ein 3-Sterne-Hotel angeboten wird. Der Reisende lehnt ab und möchte die Reise stornieren. Welche Rechte hat der Reisende gemäß § 651c BGB und kann er kostenlos zurücktreten?",
+    "expected_norms": [
+      "§ 651c BGB",
+      "§ 651e BGB"
+    ],
+    "expected_keywords": [
+      "wesentliche Änderung",
+      "erhebliche Beeinträchtigung",
+      "kostenloses Rücktrittsrecht",
+      "Gewährleistungsanspruch"
+    ]
+  },
+  {
+    "question": "Ein Pauschalreisender bucht einen Strandurlaub mit Meerblick. Nach Ankunft stellt sich heraus, dass das Zimmer zur Straßenseite geht und die Strandpromenade durch eine Baustelle unpassierbar ist. Der Reisende möchte Schadensersatz wegen Reisemangel fordern. Welche Voraussetzungen müssen nach § 651i BGB erfüllt sein und wie wird der Schadensersatz bemessen?",
+    "expected_norms": [
+      "§ 651i BGB",
+      "§ 651h BGB"
+    ],
+    "expected_keywords": [
+      "Reisemangel",
+      "Abweichung vom Vertrag",
+      "Minderung",
+      "angemessener Schadensersatz"
+    ]
+  },
+  {
+    "question": "Ein Reiseveranstalter muss seine Insolvenz anmelden. 500 Reisende haben für zukünftige Reisen bereits gezahlt. Welche gesetzliche Regelung schützt diese Reisenden und welche Institution ist für die Entschädigung zuständig nach § 651r BGB?",
+    "expected_norms": [
+      "§ 651r BGB"
+    ],
+    "expected_keywords": [
+      "Insolvenzschutz",
+      "Sicherung",
+      "Reisesicherungsschein",
+      "Reisepreissicherung"
+    ]
+  },
+  {
+    "question": "Ein Reisender bucht eine Pauschalreise für 2.000 Euro und zahlt anzahlungsgemäß 500 Euro an. Zwei Wochen vor Abreise möchte er ohne besonderen Grund stornieren. Der Veranstalter verlangt eine Stornierungsgebühr von 1.500 Euro. Prüfen Sie, ob diese Gebühr nach den AGB-Kontrollen des BGB zulässig ist und welche Rolle § 651c Abs. 3 BGB spielt.",
+    "expected_norms": [
+      "§ 651c BGB",
+      "§ 307 BGB",
+      "§ 308 BGB"
+    ],
+    "expected_keywords": [
+      "Stornierungsgebühr",
+      "überraschende Klausel",
+      "unangemessene Benachteiligung",
+      "Kulanzgebühren"
+    ]
+  },
+  {
+    "question": "Ein Reiseveranstalter wirbt für eine Gruppenreise mit Flug und 5-Sterne-Unterkunft. Im Kleingedruckten behält er sich vor, den Flugtermin um bis zu 3 Tage zu verschieben und das Hotel durch ein gleichwertiges zu ersetzen. Der Reisende moniert dies als Verstoß gegen das Transparenzprinzip. Verstößt diese Klausel gegen § 651a Abs. 2 BGB oder § 307 BGB und welche Anforderungen gelten an Pauschalreiseverträge?",
+    "expected_norms": [
+      "§ 651a BGB",
+      "§ 307 BGB",
+      "§ 651e BGB"
+    ],
+    "expected_keywords": [
+      "Informationspflicht",
+      "Transparenzgebot",
+      "wirksame Änderungsvorbehalt",
+      "wesentliche Vertragsbestandteile"
+    ]
+  }
+]

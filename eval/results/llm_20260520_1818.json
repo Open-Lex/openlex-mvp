@@ -1,0 +1,487 @@
+[
+  {
+    "skill": "strafrecht",
+    "n_questions": 5,
+    "avg_score": 53.3,
+    "hallucination_rate": 0.0,
+    "worst_score": 42.5,
+    "best_score": 57.9,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Kann eine Person für eine Tat bestraft werden, wenn die Strafbarkeit erst nach der Tat gesetzlich bestimmt wurde?",
+        "category": "Strafbarkeit",
+        "score": 52.1,
+        "answer_excerpt": "# Antwort\n\n**Nein**, eine Person kann **nicht** für eine Tat bestraft werden, wenn die Strafbarkeit erst nach der Tat gesetzlich bestimmt wurde.\n\n## Rechtliche Grundlage\n\nDieses fundamentale Prinzip i",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 20.2
+      },
+      {
+        "id": 2,
+        "question": "Wie bestimmt sich die Strafe, wenn das Gesetz während der Begehung der Tat geändert wird?",
+        "category": "Zeitliche Geltung",
+        "score": 57.9,
+        "answer_excerpt": "# Bestimmung der Strafe bei Gesetzesänderung während der Tatbegehung\n\n## Grundprinzip\n\nNach dem **Grundsatz der zeitlichen Anwendbarkeit des Strafrechts** bestimmt sich die Strafe nach dem zur Zeit de",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 13.7
+      },
+      {
+        "id": 3,
+        "question": "Gilt das deutsche Strafrecht für Taten, die im Ausland begangen werden?",
+        "category": "Geltungsbereich",
+        "score": 42.5,
+        "answer_excerpt": "# Geltung des deutschen Strafrechts für Auslandstaten\n\nJa, das deutsche Strafrecht kann unter bestimmten Voraussetzungen auch für Taten im Ausland gelten. Es gibt verschiedene Anknüpfungspunkte:\n\n## G",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.4
+      },
+      {
+        "id": 4,
+        "question": "Kann eine Person für eine Tat bestraft werden, wenn die Tat vor der Gesetzesänderung begangen wurde, aber die Strafdrohung erst nach der Gesetzesänderung geändert wurde?",
+        "category": "Zeitliche Geltung",
+        "score": 55.9,
+        "answer_excerpt": "# Bestrafung bei Gesetzesänderung nach der Tat\n\nJa, eine Person kann für eine Tat bestraft werden, wenn die Strafdrohung erst nach der Tat geändert wurde - **allerdings nur unter bestimmten Voraussetz",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.7
+      },
+      {
+        "id": 5,
+        "question": "Wie bestimmt sich die Strafe, wenn das Gesetz nach der Begehung der Tat geändert wird, aber vor der Entscheidung?",
+        "category": "Zeitliche Geltung",
+        "score": 57.9,
+        "answer_excerpt": "# Bestimmung der Strafe bei Gesetzesänderung nach der Tat\n\n## Grundprinzip: Das mildeste Gesetz ist anzuwenden\n\nWenn das Gesetz nach Begehung der Tat, aber vor der gerichtlichen Entscheidung geändert ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.7
+      }
+    ],
+    "duration_s": 81.2
+  },
+  {
+    "skill": "grundrechte",
+    "n_questions": 5,
+    "avg_score": 52.0,
+    "hallucination_rate": 0.0,
+    "worst_score": 34.2,
+    "best_score": 75.0,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Polizist nimmt einem Demonstranten das Megafon ab, um eine Störung der öffentlichen Ordnung zu verhindern. Verletzt dies das Recht auf freie Meinungsäußerung?",
+        "category": "Meinungsfreiheit",
+        "score": 34.2,
+        "answer_excerpt": "# Rechtliche Bewertung der Megafon-Wegnahme\n\n## Eingriff in die Meinungsfreiheit\n\nDie Wegnahme des Megafons stellt grundsätzlich einen **Eingriff in die Meinungsfreiheit** nach Art. 5 Abs. 1 GG dar [Q",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 12.9
+      },
+      {
+        "id": 2,
+        "question": "Ein Arbeitnehmer wird wegen seines Alters nicht zu einem Vorstellungsgespräch eingeladen. Ist dies ein Verstoß gegen das Diskriminierungsverbot?",
+        "category": "Gleichbehandlung",
+        "score": 75.0,
+        "answer_excerpt": "# Antwort\n\nJa, die Nichteinladung eines Arbeitnehmers zu einem Vorstellungsgespräch ausschließlich wegen seines Alters stellt grundsätzlich einen **Verstoß gegen das Diskriminierungsverbot** dar.\n\n## ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.9
+      },
+      {
+        "id": 3,
+        "question": "Ein Ehepaar möchte adoptieren, aber die Adoption wird abgelehnt, weil sie nicht der traditionellen Rollenverteilung entsprechen. Verletzt dies das Recht auf Gleichbehandlung?",
+        "category": "Gleichbehandlung",
+        "score": 55.9,
+        "answer_excerpt": "# Rechtliche Beurteilung\n\n## Verstoß gegen das Gleichbehandlungsgebot\n\nJa, eine Ablehnung der Adoption allein aufgrund einer nicht-traditionellen Rollenverteilung würde das **Recht auf Gleichbehandlun",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 13.8
+      },
+      {
+        "id": 4,
+        "question": "Ein Student wird von der Universität wegen seiner politischen Ansichten exmatrikuliert. Ist dies ein Verstoß gegen die Meinungsfreiheit?",
+        "category": "Meinungsfreiheit",
+        "score": 47.6,
+        "answer_excerpt": "# Rechtliche Bewertung der Exmatrikulation wegen politischer Ansichten\n\n## Grundsätzlicher Verstoß gegen die Meinungsfreiheit\n\nEine Exmatrikulation allein wegen politischer Ansichten stellt **grundsät",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 17.0
+      },
+      {
+        "id": 5,
+        "question": "Ein Unternehmen verlangt von seinen Mitarbeitern, dass sie ihre sozialen Medien-Profile offenlegen. Verletzt dies das Recht auf informationelle Selbstbestimmung?",
+        "category": "Datenschutz",
+        "score": 47.1,
+        "answer_excerpt": "# Rechtliche Bewertung: Offenlegung von Social-Media-Profilen durch Arbeitgeber\n\n## Grundsätzlicher Schutzbereich\n\nDas **Recht auf informationelle Selbstbestimmung** ist als Ausprägung des allgemeinen",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.3
+      }
+    ],
+    "duration_s": 79.4
+  },
+  {
+    "skill": "handelsrecht",
+    "n_questions": 5,
+    "avg_score": 65.5,
+    "hallucination_rate": 0.0,
+    "worst_score": 49.1,
+    "best_score": 89.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Was sind die Voraussetzungen, damit ein Gewerbebetrieb als Handelsgewerbe gilt?",
+        "category": "Handelsgewerbe",
+        "score": 57.9,
+        "answer_excerpt": "# Voraussetzungen für ein Handelsgewerbe\n\nEin Gewerbebetrieb kann auf **zwei Wegen** als Handelsgewerbe qualifiziert werden:\n\n## 1. Kraft Natur (§ 1 Abs. 2 HGB - Ist-Kaufmann)\n\nNach **§ 1 Abs. 2 HGB**",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.8
+      },
+      {
+        "id": 2,
+        "question": "Kann ein Unternehmen, das nicht nach § 1 Abs. 2 HGB als Handelsgewerbe gilt, dennoch als Handelsgewerbe eingetragen werden?",
+        "category": "Handelsregister",
+        "score": 89.5,
+        "answer_excerpt": "# Antwort\n\nJa, ein Unternehmen kann auch dann als Handelsgewerbe eingetragen werden, wenn es nicht die Voraussetzungen des § 1 Abs. 2 HGB erfüllt.\n\n## Rechtliche Grundlage\n\nNach **§ 2 HGB** gilt ein g",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.0
+      },
+      {
+        "id": 3,
+        "question": "Welche Ausnahmen gibt es für den Betrieb der Land- und Forstwirtschaft?",
+        "category": "Land- und Forstwirtschaft",
+        "score": 49.1,
+        "answer_excerpt": "# Ausnahmen für den Betrieb der Land- und Forstwirtschaft\n\nFür den Betrieb der Land- und Forstwirtschaft gelten folgende wesentliche Ausnahmen:\n\n## Grundsätzliche Ausnahme von der Kaufmannseigenschaft",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.5
+      },
+      {
+        "id": 4,
+        "question": "Was sind die Folgen, wenn ein land- oder forstwirtschaftliches Unternehmen nach Art und Umfang einen in kaufmännischer Weise eingerichteten Geschäftsbetrieb erfordert?",
+        "category": "Land- und Forstwirtschaft",
+        "score": 67.4,
+        "answer_excerpt": "# Folgen für land- oder forstwirtschaftliche Unternehmen mit kaufmännischem Geschäftsbetrieb\n\nWenn ein land- oder forstwirtschaftliches Unternehmen nach Art und Umfang einen in kaufmännischer Weise ei",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.9
+      },
+      {
+        "id": 5,
+        "question": "Wer gilt als Kaufmann im Sinne des Handelsgesetzbuchs?",
+        "category": "Kaufmann",
+        "score": 63.5,
+        "answer_excerpt": "# Wer gilt als Kaufmann im Sinne des Handelsgesetzbuchs?\n\n## Grunddefinition\n\nNach **§ 1 Abs. 1 HGB** ist Kaufmann im Sinne des Handelsgesetzbuchs, **wer ein Handelsgewerbe betreibt** [Quelle 1, Quell",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.4
+      }
+    ],
+    "duration_s": 71.1
+  },
+  {
+    "skill": "gesellschaftsrecht",
+    "n_questions": 5,
+    "avg_score": 78.8,
+    "hallucination_rate": 0.0,
+    "worst_score": 65.5,
+    "best_score": 98.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Welche Anforderungen müssen bei der Gründung einer GmbH erfüllt werden, um den Gesellschaftsvertrag wirksam zu machen?",
+        "category": "GmbH-Gründung",
+        "score": 77.0,
+        "answer_excerpt": "# Anforderungen an den Gesellschaftsvertrag bei GmbH-Gründung\n\nBasierend auf den bereitgestellten Quellen müssen folgende Anforderungen erfüllt werden:\n\n## Formelle Anforderungen\n\n**Notarielle Form un",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.6
+      },
+      {
+        "id": 2,
+        "question": "Wie viele Gesellschafter sind erforderlich, um eine GmbH zu gründen?",
+        "category": "GmbH-Gründung",
+        "score": 98.8,
+        "answer_excerpt": "# Anzahl der erforderlichen Gesellschafter für eine GmbH-Gründung\n\n## Antwort\n\nFür die Gründung einer GmbH ist **mindestens eine Person** erforderlich. Dies ergibt sich eindeutig aus **§ 1 GmbHG** [Qu",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.7
+      },
+      {
+        "id": 3,
+        "question": "Was sind die wesentlichen Inhalte, die ein Gesellschaftsvertrag einer GmbH enthalten muss?",
+        "category": "GmbH-Vertrag",
+        "score": 65.5,
+        "answer_excerpt": "# Wesentliche Inhalte eines GmbH-Gesellschaftsvertrags\n\nGemäß **§ 3 Abs. 1 GmbHG** [Quelle 1, Quelle 2] muss der Gesellschaftsvertrag einer GmbH **zwingend folgende Mindestangaben** enthalten:\n\n## Pfl",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.6
+      },
+      {
+        "id": 4,
+        "question": "Kann eine GmbH zu jedem beliebigen Zweck gegründet werden?",
+        "category": "GmbH-Gründung",
+        "score": 85.3,
+        "answer_excerpt": "# Antwort\n\nNein, eine GmbH kann **nicht** zu jedem beliebigen Zweck gegründet werden, sondern nur zu **jedem gesetzlich zulässigen Zweck**.\n\n## Rechtliche Grundlage\n\nNach **§ 1 GmbHG** können \"Gesells",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.7
+      },
+      {
+        "id": 5,
+        "question": "Was ist das Mindestkapital, das für die Gründung einer GmbH erforderlich ist?",
+        "category": "GmbH-Gründung",
+        "score": 67.2,
+        "answer_excerpt": "# Mindestkapital für die Gründung einer GmbH\n\nDas **Mindeststammkapital** für die Gründung einer GmbH beträgt gemäß **§ 5 Abs. 1 GmbHG** **25.000 Euro** [Quelle 2, Quelle 5].\n\n## Regelungen zum Stammk",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.0
+      }
+    ],
+    "duration_s": 58.1
+  }
+]

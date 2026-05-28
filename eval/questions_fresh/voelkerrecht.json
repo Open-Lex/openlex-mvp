@@ -1,0 +1,69 @@
+[
+  {
+    "question": "Die Republik Montenegriner erklärt sich 2006 für unabhängig von Serbien und Montenegro. Serbien behauptet, dies verstoße gegen sein Souveränitätsrecht. Montenegro argumentiert mit seinem Selbstbestimmungsrecht. Welche völkerrechtlichen Grundsätze der UN-Charta regeln diesen Konflikt und wie ist die Rechtslage unter Berücksichtigung von Art. 1 Abs. 2, Art. 2 Abs. 4 UN-Charta zu beurteilen?",
+    "expected_norms": [
+      "Art. 1 Abs. 2 UN-Charta",
+      "Art. 2 Abs. 4 UN-Charta",
+      "Art. 73 UN-Charta"
+    ],
+    "expected_keywords": [
+      "Selbstbestimmungsrecht",
+      "Souveränität",
+      "Staatensukzession",
+      "Effektivitätsprinzip"
+    ]
+  },
+  {
+    "question": "Der Staat X wendet gegen Terroristen, die auf seinem Territorium Unterschlupf finden, bewaffnete Gewalt an. Der Nachbarstaat Y interveniert militärisch, um die Terroristen zu bekämpfen. Staat X protestiert gegen diese Intervention. Unter welchen Voraussetzungen ist die militärische Intervention des Staates Y nach Art. 2 Abs. 4 UN-Charta gerechtfertigt oder rechtswidrig? Gibt es eine Ausnahme durch das Selbstverteidigungsrecht?",
+    "expected_norms": [
+      "Art. 2 Abs. 4 UN-Charta",
+      "Art. 51 UN-Charta"
+    ],
+    "expected_keywords": [
+      "Interventionsverbot",
+      "Selbstverteidigungsrecht",
+      "bewaffneter Angriff",
+      "Notwendigkeit und Verhältnismäßigkeit"
+    ]
+  },
+  {
+    "question": "Ein Richter des Internationalen Gerichtshofs wird während eines anhängigen Verfahrens zum Justizminister seines Heimatlandes ernannt. Der beklagte Staat fordert dessen Ausscheiden aus dem Verfahren. Nach Art. 17 IGH-Statut: Kann der Richter im Verfahren verbleiben und wie wird der Interessenskonflikt gelöst? Welche Rechte hat der beklagte Staat?",
+    "expected_norms": [
+      "Art. 17 IGH-Statut",
+      "Art. 24 IGH-Statut"
+    ],
+    "expected_keywords": [
+      "Unabhängigkeit",
+      "Unparteilichkeit",
+      "Disqualifikation",
+      "Vertrauensperson"
+    ]
+  },
+  {
+    "question": "Staat A ratifiziert die EMRK und erkennt die Jurisdiktion des EGMR an. Drei Jahre später verhängt Staat A ein Gesetz, das bestimmte Grundrechte aus der EMRK einschränkt und erklärt danach seinen Austritt aus der EMRK. Ein Bürger von Staat A reicht beim EGMR Beschwerde ein. Kann der EGMR nach Art. 32 EMRK noch tätig werden und welche zeitlichen Grenzen bestehen für die Gerichtsbarkeit?",
+    "expected_norms": [
+      "Art. 32 EMRK",
+      "Art. 56 EMRK"
+    ],
+    "expected_keywords": [
+      "ratione temporis",
+      "Ratifizierung",
+      "Austritt",
+      "Gerichtskompetenz"
+    ]
+  },
+  {
+    "question": "Bei der Auflösung der Sowjetunion entstehen 15 neue unabhängige Staaten. Die Russische Föderation beansprucht, automatisch alle Rechte und Pflichten der Sowjetunion zu übernehmen, insbesondere ihren ständigen Sitz im UN-Sicherheitsrat. Welche völkerrechtlichen Prinzipien der Staatensukzession sind relevant und wie wird die Nachfolge in Verträge und in internationale Organisationsmitgliedschaften nach Art. 34, 35 der Wiener Konvention über die Nachfolge von Staaten geregelt?",
+    "expected_norms": [
+      "Art. 34 WKNS",
+      "Art. 35 WKNS",
+      "Art. 15 UN-Charta"
+    ],
+    "expected_keywords": [
+      "Staatennachfolge",
+      "Tabula rasa",
+      "Kontinuitätsprinzip",
+      "Sukzession in Verträge"
+    ]
+  }
+]

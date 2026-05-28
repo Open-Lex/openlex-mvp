@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "verbraucherschutzrecht",
+    "n_questions": 5,
+    "avg_score": 73.7,
+    "hallucination_rate": 20.0,
+    "worst_score": 56.2,
+    "best_score": 81.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Unternehmer ruft die 16-jährige Maria an, um mit ihr einen Vertrag über den Kauf eines Smartphones für 800 Euro zu schließen. Der Unternehmer offenbart zu Beginn des Gesprächs weder seine Identität noch den geschäftlichen Zweck des Anrufs. Verstößt dieser Unternehmer gegen die Pflichten bei Verbraucherverträgen nach deutschem Recht? Begründen Sie anhand des geltenden BGB und erläutern Sie, welche Informationen der Anrufer zu Beginn des Gesprächs offenlegen muss.",
+        "category": "Verbraucherschutzrecht - Allgemeine Pflichten bei Verbraucherverträgen",
+        "score": 81.2,
+        "answer_excerpt": "# Verstoß gegen Informationspflichten bei Verbraucherverträgen\n\nJa, der Unternehmer verstößt gegen geltendes deutsches Recht.\n\n## Verletzung von § 312a BGB\n\nNach **§ 312a Absatz 1 BGB** [Quelle 1] ist",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 17.8
+      },
+      {
+        "id": 2,
+        "question": "Ein Verbraucher kauft über einen Online-Shop ein Smartphone. Nach der Lieferung möchte er den Vertrag widerrufen. Welche Widerrufsfrist gilt nach § 312d BGB für Fernabsatzverträge, und welche Informationspflichten muss der Unternehmer erfüllen?",
+        "category": "Verbraucherschutzrecht / Produkthaftung",
+        "score": 79.2,
+        "answer_excerpt": "# Widerrufsfrist und Informationspflichten bei Fernabsatzverträgen\n\n## Widerrufsfrist\n\nFür den Kauf eines Smartphones über einen Online-Shop (Fernabsatzvertrag) gilt eine **Widerrufsfrist von 14 Tagen",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 8.4
+      },
+      {
+        "id": 3,
+        "question": "Ein Möbelhersteller ruft einen Privathaushalt an, um ihm Möbel für die private Wohneinrichtung zu verkaufen. Bei diesem Anruf offenbart der Anrufer weder seine Identität noch den geschäftlichen Zweck des Anrufs. Anschließend wird ein Kaufvertrag geschlossen und der Verbraucher erklärt später seinen Widerruf. Bestimmen Sie, ob die Pflichten des Unternehmers aus § 312a BGB erfüllt wurden und welche Konsequenzen sich aus dem Widerruf gemäß §§ 358, 360 BGB ergeben.",
+        "category": "verbraucherschutzrecht",
+        "score": 56.2,
+        "answer_excerpt": "# Analyse: Verletzung von § 312a BGB und Widerrufsfolgen\n\n## Erfüllung der Pflichten aus § 312a BGB\n\nDer Möbelhersteller hat die Pflichten aus § 312a Abs. 1 BGB **nicht erfüllt** [Quelle 1]. Diese Nor",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": true,
+          "hallucination_examples": [
+            "Die Antwort behauptet, die Verletzung von § 312a BGB führe zu einer Verlängerung der Widerrufsfrist. Dies wird durch die Quellen nicht gestützt. § 312a BGB regelt Informationspflichten bei Anrufen, aber keine Auswirkungen auf die Widerrufsfrist.",
+            "Die Antwort ist unvollständig und bricht ab. Sie behandelt nicht die §§ 358, 360 BGB, die in der Frage explizit verlangt werden.",
+            "Die Antwort erwähnt nicht die Rückgewährpflichten und Wertersatzregelungen aus § 358, 360 BGB, die zentral für die Frage sind."
+          ],
+          "completeness": 3,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 9.2
+      },
+      {
+        "id": 4,
+        "question": "Ein Anbieter eines Online-Mediendienstes speichert dynamische IP-Adressen seiner Nutzer. Stellen dynamische IP-Adressen personenbezogene Daten im Sinne der DSGVO dar, und auf welche Rechtsgrundlage kann die Speicherung gestützt werden?",
+        "category": "verbraucherschutzrecht",
+        "score": 77.5,
+        "answer_excerpt": "# Dynamische IP-Adressen als personenbezogene Daten und Rechtsgrundlagen\n\n## Status als personenbezogene Daten\n\nNach [Quelle 1] (VI ZR 135/13) stellt die dynamische IP-Adresse, die von einem Anbieter ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.7
+      },
+      {
+        "id": 5,
+        "question": "Ein Verbraucher schließt telefonisch einen Dienstleistungsvertrag mit einem Unternehmen ab. Welche besonderen Pflichten treffen den Unternehmer bei außerhalb von Geschäftsräumen geschlossenen Verträgen und welche Verbraucherrechte bestehen?",
+        "category": "Verbraucherschutzrecht - Krankenversicherung und Datenschutz",
+        "score": 74.2,
+        "answer_excerpt": "# Besondere Pflichten und Verbraucherrechte bei telefonisch geschlossenem Dienstleistungsvertrag\n\n## Einstufung des Vertrags\n\nBei einem telefonischen Vertragsschluss handelt es sich um einen **Fernabs",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 8.3
+      }
+    ],
+    "duration_s": 54.9
+  }
+]

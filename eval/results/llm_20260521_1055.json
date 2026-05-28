@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "nachbarrecht",
+    "n_questions": 5,
+    "avg_score": 74.5,
+    "hallucination_rate": 0.0,
+    "worst_score": 49.1,
+    "best_score": 89.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Nachbar möchte auf seinem Grundstück ein Gewächshaus errichten, das jedoch die Sonneneinstrahlung auf das Nachbargrundstück reduziert. Welche Rechte hat der Eigentümer des Nachbargrundstücks?",
+        "category": "Eigentumsrechte",
+        "score": 87.5,
+        "answer_excerpt": "# Rechte des Nachbarn bei Errichtung eines Gewächshauses\n\n## Grundsätzliche Rechtslage\n\nDer Eigentümer des benachbarten Grundstücks hat **grundsätzlich keine Abwehrrechte** gegen das geplante Gewächsh",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 21.2
+      },
+      {
+        "id": 2,
+        "question": "Ein Tier des Nachbarn hat sich auf das Grundstück des Klägers begeben und verursacht dort Schäden. Welche Rechte hat der Kläger?",
+        "category": "Tierhalterhaftung",
+        "score": 89.5,
+        "answer_excerpt": "# Rechte des Klägers bei Tierschäden durch Nachbartiere\n\nBasierend auf den bereitgestellten Quellen stehen dem Kläger folgende Rechte zu:\n\n## 1. Schadensersatzanspruch nach § 833 BGB\n\nDer Kläger kann ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.0
+      },
+      {
+        "id": 3,
+        "question": "Ein Nachbar möchte eine Baumaßnahme auf seinem Grundstück durchführen, die jedoch eine Gefahr für das Nachbargrundstück darstellt. Welche Rechte hat der Eigentümer des Nachbargrundstücks?",
+        "category": "Notstand",
+        "score": 49.1,
+        "answer_excerpt": "# Rechte des Eigentümers bei gefährlichen Baumaßnahmen des Nachbarn\n\n## Abwehranspruch nach § 907 BGB\n\nDer Eigentümer des betroffenen Nachbargrundstücks hat nach **§ 907 Abs. 1 BGB** einen präventiven",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.0
+      },
+      {
+        "id": 4,
+        "question": "Ein Nachbar errichtet ein Gebäude, das die Aussicht auf das Nachbargrundstück beeinträchtigt. Welche Rechte hat der Eigentümer des Nachbargrundstücks?",
+        "category": "Eigentumsrechte",
+        "score": 74.1,
+        "answer_excerpt": "# Rechte bei Beeinträchtigung der Aussicht durch Nachbarbebauung\n\nGrundsätzlich hat der Eigentümer eines Nachbargrundstücks **kein allgemeines Recht auf Erhaltung seiner Aussicht**. Die Rechte und Pfl",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.0
+      },
+      {
+        "id": 5,
+        "question": "Ein Nachbar verursacht durch seine landwirtschaftliche Tätigkeit Lärm und Geruch, die das Nachbargrundstück beeinträchtigen. Welche Rechte hat der Eigentümer des Nachbargrundstücks?",
+        "category": "Immissionen",
+        "score": 72.1,
+        "answer_excerpt": "# Rechte des beeinträchtigten Grundstückseigentümers\n\nBei Lärm- und Geruchsbeeinträchtigungen durch landwirtschaftliche Nutzung des Nachbargrundstücks sind die Rechte des betroffenen Eigentümers in **",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.1
+      }
+    ],
+    "duration_s": 83.9
+  }
+]

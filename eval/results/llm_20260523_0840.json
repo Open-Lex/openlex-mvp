@@ -1,0 +1,124 @@
+[
+  {
+    "skill": "verwaltungsrecht",
+    "n_questions": 5,
+    "avg_score": 74.8,
+    "hallucination_rate": 0.0,
+    "worst_score": 61.6,
+    "best_score": 90.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Unternehmer möchte wissen, welche Behörde für die Bearbeitung seines Antrags zuständig ist. Sein Betrieb hat die Hauptverwaltung in Berlin und eine Betriebsstätte in München. Welche Behörde ist örtlich zuständig und nach welcher Norm richtet sich dies?",
+        "category": "Zuständigkeit",
+        "score": 90.2,
+        "answer_excerpt": "# Örtliche Zuständigkeit bei mehreren Betriebsstätten\n\nFür die Bestimmung der örtlich zuständigen Behörde ist **§ 3 Abs. 1 Nr. 2 VwVfG** [Quelle 6] maßgeblich.\n\n## Anwendbare Norm\n\nNach § 3 Abs. 1 Nr.",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 24.8
+      },
+      {
+        "id": 2,
+        "question": "Die Finanzamtsbehörde A benötigt von der Ordnungsamtsbehörde B Informationen, um ihre Aufgaben durchzuführen. Auf Grund welcher Norm kann Behörde A diese Hilfe ersuchen und welche Voraussetzungen müssen erfüllt sein?",
+        "category": "Amtshilfe",
+        "score": 77.0,
+        "answer_excerpt": "# Amtshilfe zwischen Behörden\n\n## Rechtliche Grundlage\n\nDie Finanzamtsbehörde A kann sich auf **§ 5 VwVfG (Verwaltungsverfahrensgesetz)** stützen, um von der Ordnungsamtsbehörde B Amtshilfe zu ersuche",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 6.6
+      },
+      {
+        "id": 3,
+        "question": "Wann darf eine ersuchte Behörde die Leistung von Amtshilfe verweigern oder braucht sie diese nicht zu leisten? Nennen Sie drei Gründe nach der einschlägigen Norm.",
+        "category": "Amtshilfe",
+        "score": 62.5,
+        "answer_excerpt": "# Verweigerung von Amtshilfe nach dem VwVfG\n\nNach § 4 Absatz 2 VwVfG liegt **keine Amtshilfepflicht** vor in folgenden Fällen [Quelle 3]:\n\n## Drei Gründe für Verweigerung:\n\n**1. Weisungsverhältnis (§ ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.8
+      },
+      {
+        "id": 4,
+        "question": "Ein Bürger möchte einen Antrag elektronisch bei einer Behörde einreichen. Welche Form der elektronischen Kommunikation ist nach dem Gesetz zulässig und welche Anforderungen müssen erfüllt sein?",
+        "category": "Elektronische Kommunikation",
+        "score": 61.6,
+        "answer_excerpt": "# Elektronische Kommunikation mit Behörden\n\n## Zulässigkeit elektronischer Antragseinreichung\n\nNach § 3a Abs. 1 VwVfG ist die Übermittlung elektronischer Dokumente zulässig, **soweit der Empfänger hie",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.33,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 14.2
+      },
+      {
+        "id": 5,
+        "question": "Eine deutsche Behörde erhält ein Amtshilfeersuchen von einer Behörde aus Frankreich bezüglich eines EU-Verwaltungsverfahrens. Nach welcher Norm muss die deutsche Behörde prüfen, ob und unter welchen Bedingungen sie Hilfe leisten muss?",
+        "category": "Europäische Verwaltungszusammenarbeit",
+        "score": 82.9,
+        "answer_excerpt": "# Prüfung der Amtshilfeleistung für EU-Verwaltungsverfahren\n\nDie deutsche Behörde muss ihre Verpflichtung zur Amtshilfeleistung nach **§ 8a Abs. 1 VwVfG** prüfen [Quelle 2].\n\n## Maßstab der Prüfung\n\nN",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.9
+      }
+    ],
+    "duration_s": 70.8
+  }
+]

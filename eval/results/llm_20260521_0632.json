@@ -1,0 +1,129 @@
+[
+  {
+    "skill": "steuerrecht",
+    "n_questions": 5,
+    "avg_score": 71.9,
+    "hallucination_rate": 20.0,
+    "worst_score": 54.5,
+    "best_score": 89.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Finanzbeamter gibt steuerliche Informationen eines Bürgers an dessen Arbeitgeber weiter. Welche steuerrechtlichen Konsequenzen drohen ihm?",
+        "category": "Steuergeheimnis",
+        "score": 54.5,
+        "answer_excerpt": "# Steuerrechtliche Konsequenzen bei unbefugter Weitergabe von Steuerinformationen\n\n## Verletzung des Steuergeheimnisses\n\nDer Finanzbeamte macht sich durch die unbefugte Weitergabe steuerlicher Informa",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": true,
+          "hallucination_examples": [
+            "Die Antwort nennt '§ 355 StGB (Verletzung des Steuergeheimnisses)' und 'Freiheitsstrafe bis zu zwei Jahren oder Geldstrafe' - diese konkrete strafrechtliche Vorschrift und Strafandrohung sind nicht in den bereitgestellten Quellen enthalten",
+            "Die Antwort erwähnt 'disziplinarrechtliche Maßnahmen' und 'Schadensersatzansprüche' - diese Konsequenzen werden in den bereitgestellten Quellen nicht behandelt"
+          ],
+          "completeness": 3,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 27.0
+      },
+      {
+        "id": 2,
+        "question": "Wann ist ein Steueranspruch verjährt, und was passiert, wenn das Finanzamt einen Steuerbescheid nach Ablauf der Festsetzungsfrist erlässt?",
+        "category": "Festsetzungsverjährung",
+        "score": 89.2,
+        "answer_excerpt": "# Verjährung von Steueransprüchen und Festsetzungsfrist\n\n## Festsetzungsfrist\n\nGrundsätzlich gilt: **Eine Steuerfestsetzung ist nicht mehr zulässig, wenn die Festsetzungsfrist abgelaufen ist** [Quelle",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 15.6
+      },
+      {
+        "id": 3,
+        "question": "Ein Steuerpflichtiger hat in seiner Einkommensteuererklärung Einnahmen verschwiegen. Welche steuerstrafrechtlichen Folgen drohen ihm nach der Abgabenordnung?",
+        "category": "Steuerhinterziehung",
+        "score": 80.3,
+        "answer_excerpt": "# Steuerstrafrechtliche Folgen bei Verschweigen von Einnahmen\n\nBasierend auf den bereitgestellten Quellen lassen sich folgende Aussagen treffen:\n\n## Grundsatz der Steuerhinterziehung\n\nDas Verschweigen",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.8
+      },
+      {
+        "id": 4,
+        "question": "Das Finanzamt prüft ein Unternehmen im Rahmen einer Betriebsprüfung. Welche Mitwirkungspflichten hat der Steuerpflichtige bei einer Außenprüfung?",
+        "category": "Außenprüfung",
+        "score": 64.5,
+        "answer_excerpt": "# Mitwirkungspflichten bei einer Außenprüfung\n\nBei einer Betriebsprüfung (Außenprüfung) hat der Steuerpflichtige umfassende Mitwirkungspflichten, die in **§ 200 AO** gesetzlich geregelt sind.\n\n## Zent",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.3
+      },
+      {
+        "id": 5,
+        "question": "Ein Steuerpflichtiger erhält einen Steuerbescheid und ist der Meinung, dass das Finanzamt zu viel Steuer festgesetzt hat. Welche Rechtsmittel stehen ihm zur Verfügung?",
+        "category": "Einspruchsverfahren",
+        "score": 70.8,
+        "answer_excerpt": "# Rechtsmittel gegen einen Steuerbescheid\n\nWenn ein Steuerpflichtiger der Meinung ist, dass das Finanzamt zu viel Steuer festgesetzt hat, stehen ihm folgende Rechtsmittel zur Verfügung:\n\n## 1. Einspru",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.7
+      }
+    ],
+    "duration_s": 89.0
+  }
+]

@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "waffenrecht",
+    "n_questions": 5,
+    "avg_score": 78.5,
+    "hallucination_rate": 0.0,
+    "worst_score": 55.9,
+    "best_score": 87.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Darf ein 17-jähriger Schüler im Rahmen eines Praktikums mit Waffen umgehen, wenn er unter Aufsicht eines weisungsbefugten Waffenberechtigten steht?",
+        "category": "Umgang mit Waffen durch Minderjährige",
+        "score": 76.1,
+        "answer_excerpt": "# Antwort\n\n**Ja, ein 17-jähriger Schüler darf im Rahmen eines Praktikums unter bestimmten Voraussetzungen mit Waffen umgehen.**\n\n## Rechtliche Grundlage\n\nNach **§ 3 Abs. 1 Waffengesetz (WaffG)** dürfe",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 19.4
+      },
+      {
+        "id": 2,
+        "question": "Was sind die Voraussetzungen für den Erwerb einer Waffe, die in der Anlage 2 (Waffenliste) Abschnitt 2 zum Waffengesetz genannt ist?",
+        "category": "Waffenbesitz",
+        "score": 55.9,
+        "answer_excerpt": "# Voraussetzungen für den Erwerb von Waffen nach Anlage 2 Abschnitt 2 WaffG\n\nFür Waffen und Munition, die in der **Anlage 2 Abschnitt 2 zum Waffengesetz** genannt sind, gelten folgende grundlegende Vo",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 14.4
+      },
+      {
+        "id": 3,
+        "question": "Ist es erlaubt, mit Waffen umzugehen, die ihrem Wesen nach dazu bestimmt sind, Menschen zu verletzen oder zu töten?",
+        "category": "Waffentypen",
+        "score": 87.5,
+        "answer_excerpt": "# Rechtliche Beurteilung des Umgangs mit Waffen\n\n## Grundsätzliche Regelung\n\nDer Umgang mit Waffen, die ihrem Wesen nach dazu bestimmt sind, Menschen zu verletzen oder zu töten, ist **nicht generell v",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.3
+      },
+      {
+        "id": 4,
+        "question": "Darf ein Jugendlicher, der das 16. Lebensjahr vollendet hat, an einem Schießkurs teilnehmen, wenn er unter Aufsicht eines weisungsbefugten Waffenberechtigten steht?",
+        "category": "Umgang mit Waffen durch Jugendliche",
+        "score": 86.5,
+        "answer_excerpt": "# Antwort\n\nJa, ein Jugendlicher, der das 16. Lebensjahr vollendet hat, **darf grundsätzlich an einem Schießkurs teilnehmen**, wenn er unter Aufsicht eines weisungsbefugten Waffenberechtigten steht.\n\n#",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.3
+      },
+      {
+        "id": 5,
+        "question": "Was sind die Folgen, wenn jemand ohne Erlaubnis mit Waffen oder Munition umgeht, die in der Anlage 2 (Waffenliste) Abschnitt 2 zum Waffengesetz genannt sind?",
+        "category": "Strafen und Sanktionen",
+        "score": 86.5,
+        "answer_excerpt": "# Folgen des unerlaubten Umgangs mit Waffen nach Anlage 2 Abschnitt 2 WaffG\n\n## Rechtliche Grundlage\n\nNach **§ 2 Abs. 2 WaffG** bedarf der Umgang mit Waffen oder Munition, die in der Anlage 2 (Waffenl",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 14.8
+      }
+    ],
+    "duration_s": 78.8
+  }
+]

@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "skill": "zivilverfahrensrecht",
+    "question": "Welches Gesetz bestimmt die sachliche Zuständigkeit der Gerichte?",
+    "expected_norms": [
+      "§ 1 ZPO",
+      "Gesetz über die Gerichtsverfassung"
+    ],
+    "expected_keywords": [
+      "sachliche Zuständigkeit",
+      "Gerichtsverfassung",
+      "ZPO"
+    ],
+    "min_sources": 2,
+    "category": "Gerichtsverfassung"
+  },
+  {
+    "id": 2,
+    "skill": "zivilverfahrensrecht",
+    "question": "Wie wird der Wert des Streitgegenstandes nach dem Zivilprozessrecht festgesetzt?",
+    "expected_norms": [
+      "§ 2 ZPO",
+      "§ 3 ZPO"
+    ],
+    "expected_keywords": [
+      "Wertfestsetzung",
+      "freies Ermessen",
+      "Gericht"
+    ],
+    "min_sources": 2,
+    "category": "Wertfestsetzung"
+  },
+  {
+    "id": 3,
+    "skill": "zivilverfahrensrecht",
+    "question": "Welche Rolle spielt der Wert des Beschwerdegegenstandes im Zivilprozessrecht?",
+    "expected_norms": [
+      "§ 2 ZPO"
+    ],
+    "expected_keywords": [
+      "Beschwerdegegenstand",
+      "Wert",
+      "ZPO"
+    ],
+    "min_sources": 1,
+    "category": "Beschwerdeverfahren"
+  },
+  {
+    "id": 4,
+    "skill": "zivilverfahrensrecht",
+    "question": "Kann das Gericht eine Beweisaufnahme anordnen, um den Wert des Streitgegenstandes festzustellen?",
+    "expected_norms": [
+      "§ 3 ZPO"
+    ],
+    "expected_keywords": [
+      "Beweisaufnahme",
+      "Wertfestsetzung",
+      "Gericht"
+    ],
+    "min_sources": 1,
+    "category": "Beweisverfahren"
+  },
+  {
+    "id": 5,
+    "skill": "zivilverfahrensrecht",
+    "question": "Welche Bedeutung hat der Wert der Verurteilung im Zivilprozessrecht?",
+    "expected_norms": [
+      "§ 2 ZPO"
+    ],
+    "expected_keywords": [
+      "Verurteilung",
+      "Wert",
+      "ZPO"
+    ],
+    "min_sources": 1,
+    "category": "Verurteilung"
+  },
+  {
+    "id": 6,
+    "skill": "zivilverfahrensrecht",
+    "question": "Wie wird die sachliche Zuständigkeit der Gerichte im Falle einer Beschwerde bestimmt?",
+    "expected_norms": [
+      "§ 1 ZPO",
+      "Gesetz über die Gerichtsverfassung"
+    ],
+    "expected_keywords": [
+      "sachliche Zuständigkeit",
+      "Beschwerde",
+      "Gerichtsverfassung"
+    ],
+    "min_sources": 2,
+    "category": "Beschwerdeverfahren"
+  },
+  {
+    "id": 7,
+    "skill": "zivilverfahrensrecht",
+    "question": "Kann das Gericht den Wert des Streitgegenstandes nach freiem Ermessen festsetzen?",
+    "expected_norms": [
+      "§ 3 ZPO"
+    ],
+    "expected_keywords": [
+      "Wertfestsetzung",
+      "freies Ermessen",
+      "Gericht"
+    ],
+    "min_sources": 1,
+    "category": "Wertfestsetzung"
+  },
+  {
+    "id": 8,
+    "skill": "zivilverfahrensrecht",
+    "question": "Welche Rolle spielt die Einnahme des Augenscheins bei der Feststellung des Wertes des Streitgegenstandes?",
+    "expected_norms": [
+      "§ 3 ZPO"
+    ],
+    "expected_keywords": [
+      "Augenschein",
+      "Wertfestsetzung",
+      "Gericht"
+    ],
+    "min_sources": 1,
+    "category": "Beweisverfahren"
+  },
+  {
+    "id": 9,
+    "skill": "zivilverfahrensrecht",
+    "question": "Kann das Gericht eine Begutachtung durch Sachverständige anordnen, um den Wert des Streitgegenstandes festzustellen?",
+    "expected_norms": [
+      "§ 3 ZPO"
+    ],
+    "expected_keywords": [
+      "Begutachtung",
+      "Sachverständige",
+      "Gericht"
+    ],
+    "min_sources": 1,
+    "category": "Beweisverfahren"
+  },
+  {
+    "id": 10,
+    "skill": "zivilverfahrensrecht",
+    "question": "Welche Vorschriften gelten für die Feststellung des Wertes des Beschwerdegegenstandes?",
+    "expected_norms": [
+      "§ 2 ZPO"
+    ],
+    "expected_keywords": [
+      "Beschwerdegegenstand",
+      "Wert",
+      "ZPO"
+    ],
+    "min_sources": 1,
+    "category": "Beschwerdeverfahren"
+  }
+]

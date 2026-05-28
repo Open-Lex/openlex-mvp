@@ -1,0 +1,126 @@
+[
+  {
+    "skill": "sachenrecht",
+    "n_questions": 5,
+    "avg_score": 93.2,
+    "hallucination_rate": 0.0,
+    "worst_score": 82.9,
+    "best_score": 97.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Max kauft von seinem Nachbarn ein Fahrrad. Sie einigen sich mündlich auf den Kauf und Max übernimmt das Fahrrad. Was ist zur wirksamen Übereignung des Fahrrads nach BGB erforderlich, und welche Bedeutung hat § 929 BGB für die Eigentumsübertragung?",
+        "category": "Erwerb des Besitzes",
+        "score": 97.8,
+        "answer_excerpt": "# Wirksame Übereignung des Fahrrads nach BGB\n\n## Anforderungen gemäß § 929 BGB\n\nFür die wirksame Übereignung des Fahrrads sind nach [Quelle 1] folgende Voraussetzungen erforderlich:\n\n1. **Einigung**: ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.5
+      },
+      {
+        "id": 2,
+        "question": "Ein Lagerarbeiter lagert in seiner Fabrik Waren für seinen Arbeitgeber ein und verwaltet diese nach dessen Anweisungen. Wer ist der Besitzer der Waren gemäß dem Verhältnis zwischen Arbeitgeber und Arbeiter?",
+        "category": "Besitzdiener",
+        "score": 97.8,
+        "answer_excerpt": "# Besitzverhältnisse zwischen Arbeitgeber und Lagerarbeiter\n\n## Rechtliche Lösung\n\nDer **Arbeitgeber (Arbeitgeber) ist der Besitzer** der eingelagerten Waren. Der Lagerarbeiter ist hingegen **Besitzdi",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.1
+      },
+      {
+        "id": 3,
+        "question": "Anna besitzt ein Gemälde. Ihr Bruder entwendet es ohne ihre Zustimmung aus ihrer Wohnung. Welche Rechtsfolge tritt gemäß § 858 BGB ein, und welcher Anspruch steht Anna zu?",
+        "category": "Schutz des Besitzes",
+        "score": 82.9,
+        "answer_excerpt": "# Rechtliche Analyse: Entwendung des Gemäldes durch den Bruder\n\n## Rechtsfolge des § 858 BGB\n\n§ 858 Abs. 1 BGB definiert die **verbotene Eigenmacht**: Wer dem Besitzer ohne dessen Willen den Besitz en",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.5
+      },
+      {
+        "id": 4,
+        "question": "Bert wird beim Joggen im Park von einem Dieb überfallen, der ihm seine Uhr mit Gewalt wegnehmen will. Darf Bert die Uhr mit Gewalt zurücknehmen, wenn ihm der Dieb gerade die Uhr abnimmt?",
+        "category": "Selbsthilferecht des Besitzers",
+        "score": 89.5,
+        "answer_excerpt": "# Selbsthilferecht des Besitzers nach § 859 BGB\n\nJa, Bert darf die Uhr mit Gewalt zurücknehmen. Dies ergibt sich aus **§ 859 Abs. 2 BGB** [Quelle 1].\n\n## Rechtliche Grundlage\n\nNach § 859 Abs. 2 BGB da",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 6.9
+      },
+      {
+        "id": 5,
+        "question": "Petra vermietet ihre Wohnung an Torsten. Torsten wird durch verbotene Eigenmacht aus der Wohnung gewaltsam vertrieben. Kann Petra als Vermieterin einen Anspruch auf Wiederherstellung des Besitzes geltend machen?",
+        "category": "Mittelbarer Besitz und Besitzschutz",
+        "score": 97.8,
+        "answer_excerpt": "# Anspruch auf Wiederherstellung des Besitzes bei verbotener Eigenmacht\n\n## Kernfrage: Hat Petra als Vermieterin einen Besitzschutzanspruch?\n\n**Nein, Petra kann keinen direkten Anspruch nach § 861 BGB",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.1
+      }
+    ],
+    "duration_s": 53.7
+  }
+]

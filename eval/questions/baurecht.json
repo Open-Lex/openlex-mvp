@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "skill": "baurecht",
+    "question": "Ein Unternehmer stellt für einen Besteller ein Werk her. Nach Fertigstellung stellt sich heraus, dass das Werk Mängel aufweist. Welche Rechte hat der Besteller gemäß § 634 bei Mängeln?",
+    "expected_norms": [
+      "§ 634"
+    ],
+    "expected_keywords": [
+      "Besteller",
+      "Unternehmer",
+      "Nacherfüllung"
+    ],
+    "category": "Mängelrechte"
+  },
+  {
+    "id": 2,
+    "skill": "baurecht",
+    "question": "Der Unternehmer hat dem Besteller ein mangelhaftes Werk hergestellt. Der Besteller verlangt Nacherfüllung. Welche Aufwendungen muss der Unternehmer nach § 635 tragen?",
+    "expected_norms": [
+      "§ 635"
+    ],
+    "expected_keywords": [
+      "Unternehmer",
+      "Nacherfüllung",
+      "Herstellung"
+    ],
+    "category": "Nacherfüllung"
+  },
+  {
+    "id": 3,
+    "skill": "baurecht",
+    "question": "Ein Besteller beauftragt einen Unternehmer mit der Herstellung eines Bauwerks. Innerhalb welcher Frist verjähren die Mängelansprüche des Bestellers nach § 634a, wenn das Werk mangelhaft ist?",
+    "expected_norms": [
+      "§ 634a"
+    ],
+    "expected_keywords": [
+      "Besteller",
+      "Abnahme",
+      "Werkes"
+    ],
+    "category": "Verjährung"
+  },
+  {
+    "id": 4,
+    "skill": "baurecht",
+    "question": "Ein Unternehmer und ein Besteller vereinbaren einen Werkvertrag. Ist eine Vergütung nicht ausdrücklich festgelegt, wie wird diese nach § 632 bestimmt?",
+    "expected_norms": [
+      "§ 632"
+    ],
+    "expected_keywords": [
+      "Vergütung",
+      "Besteller",
+      "Unternehmer"
+    ],
+    "category": "Vergütung"
+  },
+  {
+    "id": 5,
+    "skill": "baurecht",
+    "question": "Nach § 631 schließen ein Unternehmer und ein Besteller einen Werkvertrag ab. Zu welchen Leistungen sind beide Parteien verpflichtet?",
+    "expected_norms": [
+      "§ 631"
+    ],
+    "expected_keywords": [
+      "Unternehmer",
+      "Besteller",
+      "Herstellung"
+    ],
+    "category": "Vertragspflichten"
+  }
+]

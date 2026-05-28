@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "skill": "mietrecht",
+    "question": "Was sind die Hauptpflichten des Vermieters im Rahmen eines Mietvertrags?",
+    "expected_norms": [
+      "§ 535"
+    ],
+    "expected_keywords": [
+      "Mietvertrag",
+      "Gebrauch",
+      "Mietsache"
+    ],
+    "min_sources": 1,
+    "category": "Mietvertrag"
+  },
+  {
+    "id": 2,
+    "skill": "mietrecht",
+    "question": "Wie verhält es sich mit der Mietminderung, wenn die Mietsache einen Mangel aufweist?",
+    "expected_norms": [
+      "§ 536"
+    ],
+    "expected_keywords": [
+      "Mietminderung",
+      "Sachmangel",
+      "Rechtsmangel"
+    ],
+    "min_sources": 1,
+    "category": "Mietminderung"
+  },
+  {
+    "id": 3,
+    "skill": "mietrecht",
+    "question": "Kann der Mieter Schadensersatzansprüche gegen den Vermieter geltend machen, wenn die Mietsache mangelhaft ist?",
+    "expected_norms": [
+      "§ 536a"
+    ],
+    "expected_keywords": [
+      "Schadensersatz",
+      "Mangel",
+      "Aufwendungsersatz"
+    ],
+    "min_sources": 1,
+    "category": "Schadensersatz"
+  },
+  {
+    "id": 4,
+    "skill": "mietrecht",
+    "question": "Was geschieht, wenn der Vermieter die Beseitigung eines Mangels verzögert?",
+    "expected_norms": [
+      "§ 536a"
+    ],
+    "expected_keywords": [
+      "Mangelbeseitigung",
+      "Verzug",
+      "Schadensersatz"
+    ],
+    "min_sources": 1,
+    "category": "Mangelbeseitigung"
+  },
+  {
+    "id": 5,
+    "skill": "mietrecht",
+    "question": "Wie sind die Rechte des Mieters, wenn die Mietsache nicht den vertragsgemäßen Zustand aufweist?",
+    "expected_norms": [
+      "§ 535",
+      "§ 536"
+    ],
+    "expected_keywords": [
+      "Mietvertrag",
+      "Mietsache",
+      "Mangel"
+    ],
+    "min_sources": 2,
+    "category": "Mietrecht"
+  },
+  {
+    "id": 6,
+    "skill": "mietrecht",
+    "question": "Kann der Mieter die Miete mindern, wenn die Mietsache nur teilweise nutzbar ist?",
+    "expected_norms": [
+      "§ 536 BGB"
+    ],
+    "expected_keywords": [
+      "Mietminderung",
+      "Teilnutzung",
+      "Mangel"
+    ],
+    "min_sources": 1,
+    "category": "Mietminderung"
+  },
+  {
+    "id": 7,
+    "skill": "mietrecht",
+    "question": "Was sind die Pflichten des Vermieters bei der Überlassung der Mietsache?",
+    "expected_norms": [
+      "§ 535 BGB"
+    ],
+    "expected_keywords": [
+      "Mietvertrag",
+      "Überlassung",
+      "Mietsache"
+    ],
+    "min_sources": 1,
+    "category": "Mietvertrag"
+  },
+  {
+    "id": 8,
+    "skill": "mietrecht",
+    "question": "Kann der Mieter den Mietvertrag kündigen, wenn die Mietsache mangelhaft ist?",
+    "expected_norms": [
+      "§ 536 BGB",
+      "§ 536a BGB"
+    ],
+    "expected_keywords": [
+      "Mietvertrag",
+      "Kündigung",
+      "Mangel"
+    ],
+    "min_sources": 2,
+    "category": "Mietvertrag"
+  },
+  {
+    "id": 9,
+    "skill": "mietrecht",
+    "question": "Wie verhält es sich mit der Haftung des Vermieters für Mängel, die während der Mietzeit entstehen?",
+    "expected_norms": [
+      "§ 536 BGB",
+      "§ 536a BGB"
+    ],
+    "expected_keywords": [
+      "Mangel",
+      "Haftung",
+      "Vermieter"
+    ],
+    "min_sources": 2,
+    "category": "Mietrecht"
+  },
+  {
+    "id": 10,
+    "skill": "mietrecht",
+    "question": "Kann der Mieter vom Vermieter die Beseitigung von Mängeln verlangen?",
+    "expected_norms": [
+      "§ 536a BGB"
+    ],
+    "expected_keywords": [
+      "Mangelbeseitigung",
+      "Vermieter",
+      "Mieter"
+    ],
+    "min_sources": 1,
+    "category": "Mangelbeseitigung"
+  }
+]

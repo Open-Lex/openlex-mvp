@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "skill": "mietrecht",
+    "question": "Mein Vermieter hat mir die Wohnung überlassen, obwohl die Heizung defekt ist. Kann ich die Miete mindern und welche Voraussetzungen muss ich erfüllen?",
+    "expected_norms": [
+      "§ 536",
+      "§ 536a"
+    ],
+    "expected_keywords": [
+      "Miete",
+      "Mangel",
+      "Vermieter"
+    ],
+    "category": "Mietminderung"
+  },
+  {
+    "id": 2,
+    "skill": "mietrecht",
+    "question": "Ich habe während meines Mietverhältnisses ein Leck in der Decke entdeckt. Was muss ich tun und welche Rechtsfolgen hat mein Verhalten?",
+    "expected_norms": [
+      "§ 536c"
+    ],
+    "expected_keywords": [
+      "Mieter",
+      "Mietsache",
+      "Vermieter"
+    ],
+    "category": "Pflichten des Mieters"
+  },
+  {
+    "id": 3,
+    "skill": "mietrecht",
+    "question": "Der Vermieter weigert sich, einen bestehenden Mangel zu beseitigen. Darf ich den Mangel selbst reparieren und die Kosten vom Vermieter verlangen?",
+    "expected_norms": [
+      "§ 536a"
+    ],
+    "expected_keywords": [
+      "Mieter",
+      "Mangel",
+      "Mietsache"
+    ],
+    "category": "Schadensersatz und Aufwendungsersatz"
+  },
+  {
+    "id": 4,
+    "skill": "mietrecht",
+    "question": "Mein Vermieter möchte mir die Wohnung kündigen, weil ich zwei Monate Miete schuldig bin. Unter welchen Bedingungen ist diese Kündigung zulässig?",
+    "expected_norms": [
+      "§ 543"
+    ],
+    "expected_keywords": [
+      "Vermieter",
+      "Mieter",
+      "Gebrauch"
+    ],
+    "category": "Außerordentliche Kündigung"
+  },
+  {
+    "id": 5,
+    "skill": "mietrecht",
+    "question": "Nach Beendigung meines Mietvertrags möchte der Vermieter die Mietsache nicht von mir zurück. Welche Rechte habe ich und welche Folgen hat die verspätete Rückgabe?",
+    "expected_norms": [
+      "§ 546",
+      "§ 546a"
+    ],
+    "expected_keywords": [
+      "Mietsache",
+      "Vermieter",
+      "Mieter"
+    ],
+    "category": "Rückgabe der Mietsache"
+  }
+]

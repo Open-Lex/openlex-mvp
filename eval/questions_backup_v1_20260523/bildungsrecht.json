@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "skill": "bildungsrecht",
+    "question": "Welche Arten von Hochschulen fallen unter den Anwendungsbereich des Hochschulrahmengesetzes?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Hochschulen",
+      "Universitäten",
+      "Fachhochschulen"
+    ],
+    "min_sources": 1,
+    "category": "Hochschulrecht"
+  },
+  {
+    "id": 2,
+    "skill": "bildungsrecht",
+    "question": "Wie lange nach Errichtung des Bundesaufsichtsamtes für Flugsicherung finden Wahlen zur Personalvertretung statt?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Bundesaufsichtsamt",
+      "Flugsicherung",
+      "Personalvertretung"
+    ],
+    "min_sources": 1,
+    "category": "Luftverkehrsrecht"
+  },
+  {
+    "id": 3,
+    "skill": "bildungsrecht",
+    "question": "Was ist die Rolle des Bundesaufsichtsamtes für Flugsicherung als nationale Aufsichtsbehörde?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Bundesaufsichtsamt",
+      "Flugsicherung",
+      "Aufsichtsbehörde"
+    ],
+    "min_sources": 1,
+    "category": "Luftverkehrsrecht"
+  },
+  {
+    "id": 4,
+    "skill": "bildungsrecht",
+    "question": "Welche Einrichtungen des Bildungswesens fallen unter den Anwendungsbereich des Hochschulrahmengesetzes?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Hochschulen",
+      "Bildungswesen",
+      "Einrichtungen"
+    ],
+    "min_sources": 1,
+    "category": "Hochschulrecht"
+  },
+  {
+    "id": 5,
+    "skill": "bildungsrecht",
+    "question": "Wie werden die Aufgaben der Personalvertretung bei dem Bundesaufsichtsamt für Flugsicherung bis zur Konstituierung des Personalrates wahrgenommen?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Bundesaufsichtsamt",
+      "Personalvertretung",
+      "Konstituierung"
+    ],
+    "min_sources": 1,
+    "category": "Luftverkehrsrecht"
+  },
+  {
+    "id": 6,
+    "skill": "bildungsrecht",
+    "question": "Was sind die Auswirkungen des Hochschulrahmengesetzes auf die staatlichen Hochschulen?",
+    "expected_norms": [
+      "§ 1 HRG"
+    ],
+    "expected_keywords": [
+      "Hochschulrahmengesetz",
+      "staatliche Hochschulen",
+      "Auswirkungen"
+    ],
+    "min_sources": 1,
+    "category": "Hochschulrecht"
+  },
+  {
+    "id": 7,
+    "skill": "bildungsrecht",
+    "question": "Wie werden die Wahlen zur Personalvertretung bei dem Bundesaufsichtsamt für Flugsicherung durchgeführt?",
+    "expected_norms": [
+      "§ 2 BAFG"
+    ],
+    "expected_keywords": [
+      "Bundesaufsichtsamt",
+      "Personalvertretung",
+      "Wahlen"
+    ],
+    "min_sources": 1,
+    "category": "Luftverkehrsrecht"
+  },
+  {
+    "id": 8,
+    "skill": "bildungsrecht",
+    "question": "Welche Rolle spielen die Universitäten, Pädagogischen Hochschulen und Kunsthochschulen im Rahmen des Hochschulrahmengesetzes?",
+    "expected_norms": [
+      "§ 1 HRG"
+    ],
+    "expected_keywords": [
+      "Universitäten",
+      "Pädagogische Hochschulen",
+      "Kunsthochschulen"
+    ],
+    "min_sources": 1,
+    "category": "Hochschulrecht"
+  },
+  {
+    "id": 9,
+    "skill": "bildungsrecht",
+    "question": "Wie wird das Bundesaufsichtsamt für Flugsicherung als Bundesbehörde organisiert?",
+    "expected_norms": [
+      "§ 1 BAFG"
+    ],
+    "expected_keywords": [
+      "Bundesaufsichtsamt",
+      "Bundesbehörde",
+      "Organisation"
+    ],
+    "min_sources": 1,
+    "category": "Luftverkehrsrecht"
+  },
+  {
+    "id": 10,
+    "skill": "bildungsrecht",
+    "question": "Welche Bedeutung hat das Hochschulrahmengesetz für die Regelung der Hochschulbildung in Deutschland?",
+    "expected_norms": [
+      "§ 1 HRG"
+    ],
+    "expected_keywords": [
+      "Hochschulrahmengesetz",
+      "Hochschulbildung",
+      "Regelung"
+    ],
+    "min_sources": 1,
+    "category": "Hochschulrecht"
+  }
+]

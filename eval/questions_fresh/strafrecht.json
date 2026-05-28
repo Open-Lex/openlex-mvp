@@ -1,0 +1,67 @@
+[
+  {
+    "question": "Der 45-jährige Klaus fährt nachts mit seinem Auto auf der Landstraße. Er ist müde, blinzelt wiederholt und bemerkt zu spät einen Fußgänger auf der Fahrbahn. Er kann nicht mehr bremsen und erfasst den Fußgänger tödlich. Klaus hatte keine Schuld an der Müdigkeit und konnte seinen Zustand nicht kontrollieren. Handelt Klaus fahrlässig im Sinne des § 222 StGB oder liegt ein Fall entschuldigter Fahrlässigkeit vor?",
+    "expected_norms": [
+      "§ 222 StGB",
+      "§ 17 StGB"
+    ],
+    "expected_keywords": [
+      "Fahrlässigkeit",
+      "objektive Sorgfaltspflicht",
+      "Vorwerfbarkeit",
+      "Entschuldigung"
+    ]
+  },
+  {
+    "question": "Anna und Bernd planen gemeinsam einen Überfall auf einen Juwelier. Anna wartet draußen, während Bernd die Bank überfällt. Bernd wird erwischt und gesteht die Tat. Anna behauptet später, sie habe sich in letzter Sekunde umentschlossen und Bernd nicht mehr unterstützen wollen. Sie habe nicht aktiv in den Überfall eingegriffen. Ist Anna nach § 25 Abs. 2 StGB als Mittäterin strafbar oder war ihr Rücktritt erfolgreich?",
+    "expected_norms": [
+      "§ 25 Abs. 2 StGB",
+      "§ 24 StGB"
+    ],
+    "expected_keywords": [
+      "Mittäterschaft",
+      "gemeinsamer Tatentschluss",
+      "Rücktritt",
+      "Garantenstellung"
+    ]
+  },
+  {
+    "question": "Der Arzt Carsten verschreibt seinem Patienten bewusst eine Überdosis eines Schmerzmittels, obwohl er weiß, dass diese tödlich wirken wird. Der Patient stirbt. Carsten behauptet, er habe nur den Schmerz lindern wollen und der Tod sei eine unvermeidliche Nebenwirkung gewesen. Kann sich Carsten auf die Rechtfertigung nach § 34 StGB (Notstand) berufen oder liegt Totschlag vor?",
+    "expected_norms": [
+      "§ 212 StGB",
+      "§ 34 StGB"
+    ],
+    "expected_keywords": [
+      "Vorsatz",
+      "Rechtswidrigkeit",
+      "Notstand",
+      "Übergesetzlicher Notstand"
+    ]
+  },
+  {
+    "question": "Diana arbeitet an der Kasse eines Supermarkts. Sie scannt die Artikel einer bekannten Kundin nur teilweise, um ihr zu helfen. Die Kundin weiß nichts davon und verlässt den Laden ohne die nicht gescannten Artikel zu bezahlen. Der Ladendiebstahl beläuft sich auf 50 Euro. Ist Diana nach § 263 StGB (Betrug) oder nach einer anderen Vorschrift strafbar, und welche Täterschaftsform liegt vor?",
+    "expected_norms": [
+      "§ 263 StGB",
+      "§ 25 Abs. 1 StGB"
+    ],
+    "expected_keywords": [
+      "Betrug",
+      "Täuschung",
+      "Vermögensschaden",
+      "Mittäterschaft"
+    ]
+  },
+  {
+    "question": "Der Polizist Ernst wird von einem bewaffneten Mann angegriffen, der auf ihn schießt. Ernst schießt zurück in Notwehr (§ 32 StGB) und trifft daneben. Die Kugel durchschlägt eine Wand und tötet zufällig eine unbeteiligte Person dahinter. Kann Ernst sich auf Notwehr berufen und bleibt er straflos, oder haftet er für den Schaden?",
+    "expected_norms": [
+      "§ 32 StGB",
+      "§ 212 StGB"
+    ],
+    "expected_keywords": [
+      "Notwehr",
+      "erforderliche Verteidigungsmittel",
+      "Putativnotwehr",
+      "Kausalität"
+    ]
+  }
+]

@@ -1,0 +1,140 @@
+[
+  {
+    "question": "Ein Versicherungsnehmer schließt eine Kfz-Haftpflichtversicherung ab. Beim Antrag verschweigt er einen früheren Unfall, den der Versicherer abfragte. Welche Rechte hat der Versicherer bei einer vorvertraglichen Anzeigepflichtverletzung?",
+    "expected_norms": [
+      "§ 19"
+    ],
+    "expected_keywords": [
+      "Anzeigepflicht",
+      "VVG",
+      "Versicherer",
+      "Versicherungsnehmer"
+    ]
+  },
+  {
+    "question": "Ein Hausbesitzer hat eine Feuerversicherung. Er verursacht grob fahrlässig einen Brand. Welche Leistungskürzung sieht § 81 VVG für den Fall der groben Fahrlässigkeit vor, und in welcher Höhe kürzt die Rechtsprechung die Versicherungsleistung?",
+    "expected_norms": [
+      "§ 81"
+    ],
+    "expected_keywords": [
+      "grob fahrlässig",
+      "Kürzung",
+      "Versicherer",
+      "Leistung"
+    ]
+  },
+  {
+    "question": "Ein Versicherungsnehmer zahlt seine Versicherungsprämie trotz Mahnung nicht. Welche Leistungsfreiheit tritt gemäß § 38 VVG ein, wenn der Versicherungsfall nach Ablauf der gesetzten Frist eintritt?",
+    "expected_norms": [
+      "§ 38"
+    ],
+    "expected_keywords": [
+      "Mahnung",
+      "Versicherer",
+      "Leistungsfreiheit",
+      "Frist"
+    ]
+  },
+  {
+    "question": "Ein Versicherter hat bei einem Autounfall Ansprüche gegen einen Unfallverursacher. Der Kaskoversicherer erstattet den Schaden. Geht der Schadensersatzanspruch gegen den Unfallverursacher auf den Versicherer über?",
+    "expected_norms": [
+      "§ 86"
+    ],
+    "expected_keywords": [
+      "Anspruch",
+      "Versicherer",
+      "Dritte",
+      "Schaden"
+    ]
+  },
+  {
+    "question": "Ein Versicherungsnehmer kündigt seine Lebensversicherung vor Ablauf. Welchen Anspruch auf Rückkaufswert gewährt § 169 VVG dem Versicherungsnehmer bei vorzeitiger Kündigung der Lebensversicherung?",
+    "expected_norms": [
+      "§ 169"
+    ],
+    "expected_keywords": [
+      "Rückkaufswert",
+      "Lebensversicherung",
+      "Kündigung",
+      "Überschuss"
+    ]
+  },
+  {
+    "id": 6,
+    "skill": "versicherungsrecht",
+    "question": "Ein Versicherer berechnet für eine junge Frau eine höhere Kfz-Prämie als für einen gleichaltrigen Mann. Ist das nach EU-Recht zulässig?",
+    "expected_norms": [
+      "Art. 21 GRCh",
+      "Richtlinie 2004/113/EG"
+    ],
+    "expected_keywords": [
+      "Unisex-Tarife",
+      "Geschlecht",
+      "Diskriminierung",
+      "Test-Achats"
+    ],
+    "category": "Gleichbehandlung / Unisex"
+  },
+  {
+    "id": 7,
+    "skill": "versicherungsrecht",
+    "question": "Ein Versicherungsnehmer kündigt seine Lebensversicherung nach 3 Jahren und erhält kaum etwas zurück, weil Abschlusskosten verrechnet wurden. Ist das wirksam?",
+    "expected_norms": [
+      "§ 169 VVG",
+      "§ 307 BGB"
+    ],
+    "expected_keywords": [
+      "Rückkaufswert",
+      "Zillmerung",
+      "AGB-Kontrolle",
+      "unangemessene Benachteiligung"
+    ],
+    "category": "Lebensversicherung Rückkauf"
+  },
+  {
+    "id": 8,
+    "skill": "versicherungsrecht",
+    "question": "Ein BU-Versicherter kann seinen alten Beruf nicht mehr ausüben. Der Versicherer verweist ihn auf einen anderen Beruf. Unter welchen Voraussetzungen ist das zulässig?",
+    "expected_norms": [
+      "§ 172 VVG"
+    ],
+    "expected_keywords": [
+      "abstrakte Verweisung",
+      "Berufsunfähigkeit",
+      "Lebensstellung",
+      "Verweisberuf"
+    ],
+    "category": "Berufsunfähigkeitsversicherung"
+  },
+  {
+    "id": 9,
+    "skill": "versicherungsrecht",
+    "question": "Bei Vertragsschluss verschweigt ein Versicherungsnehmer arglistig eine Vorerkrankung. Was sind die Folgen?",
+    "expected_norms": [
+      "§ 22 VVG",
+      "§ 123 BGB"
+    ],
+    "expected_keywords": [
+      "arglistige Täuschung",
+      "Anzeigepflichtverletzung",
+      "Rücktritt",
+      "Leistungsfreiheit"
+    ],
+    "category": "Anzeigepflichtverletzung"
+  },
+  {
+    "id": 10,
+    "skill": "versicherungsrecht",
+    "question": "Nach einem Einbruch macht ein Versicherungsnehmer falsche Angaben zum Schadensumfang. Verliert er dadurch den gesamten Anspruch?",
+    "expected_norms": [
+      "§ 28 VVG"
+    ],
+    "expected_keywords": [
+      "Obliegenheitsverletzung",
+      "Quotelung",
+      "grobe Fahrlässigkeit",
+      "Aufklärungspflicht"
+    ],
+    "category": "Obliegenheitsverletzung"
+  }
+]

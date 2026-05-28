@@ -1,0 +1,53 @@
+[
+  {
+    "skill": "voelkerrecht",
+    "n_questions": 5,
+    "avg_score": 0.0,
+    "hallucination_rate": 0.0,
+    "worst_score": 0,
+    "best_score": 0,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Welche Rechte haben Verwundete im Felde gemäß dem Genfer Abkommen I?",
+        "category": "Kriegsrecht",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 8.6
+      },
+      {
+        "id": 2,
+        "question": "Was sind die Ziele und Grundsätze der Charta der Vereinten Nationen?",
+        "category": "Völkerrecht",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.1
+      },
+      {
+        "id": 3,
+        "question": "Wie werden die Rechte der Europäischen Union und ihre Mitgliedstaaten im Vertrag über die Europäische Union geregelt?",
+        "category": "Europarecht",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.2
+      },
+      {
+        "id": 4,
+        "question": "Welche Pflichten haben Staaten gemäß dem Völkerrecht bei der Behandlung von Kriegsgefangenen?",
+        "category": "Kriegsrecht",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.1
+      },
+      {
+        "id": 5,
+        "question": "Wie werden Menschenrechte im Rahmen der Europäischen Union geschützt?",
+        "category": "Menschenrechte",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.1
+      }
+    ],
+    "duration_s": 9.2
+  }
+]

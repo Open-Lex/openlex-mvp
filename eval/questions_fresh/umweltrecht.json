@@ -1,0 +1,74 @@
+[
+  {
+    "question": "Ein Industriebetrieb möchte eine neue Produktionshalle errichten, in der Kunstharze hergestellt werden. Die Emissionen von flüchtigen organischen Verbindungen (VOC) werden nach Berechnungen die Schwellwerte des BImSchG überschreiten. Der Betreiber fragt, ob eine immissionsschutzrechtliche Genehmigung erforderlich ist und welche Anforderungen zu erfüllen sind. Welche Genehmigungsanforderungen ergeben sich aus dem BImSchG, insbesondere hinsichtlich der Anlagen-Kategorisierung und des Genehmigungsverfahrens?",
+    "expected_norms": [
+      "§ 4 BImSchG",
+      "§ 10 BImSchG",
+      "4. BImSchV (Anlage 1)"
+    ],
+    "expected_keywords": [
+      "Genehmigungsbedürftigkeit",
+      "Anlage der IV. Klasse",
+      "förmliches Genehmigungsverfahren",
+      "Umweltverträglichkeitsprüfung"
+    ]
+  },
+  {
+    "question": "Ein Grundstückseigentümer plant den Bau eines Mehrfamilienhauses mit Wärmepumpen-Heizanlage. Ein Nachbar beschwert sich vorsorglich über mögliche Lärmemissionen durch die Wärmepumpe. Der Grundstückseigentümer argumentiert, dass dies ein privates Bauvorhaben ohne immissionsschutzrechtliche Relevanz sei. Ist eine immissionsschutzrechtliche Genehmigung erforderlich und welche Anforderungen ergeben sich aus dem BImSchG für Wärmepumpen?",
+    "expected_norms": [
+      "§ 1a BImSchG",
+      "§ 4 BImSchG",
+      "4. BImSchV (Anlage 1 Nr. 8.9)"
+    ],
+    "expected_keywords": [
+      "Wärmepumpenanlage",
+      "Nicht-Genehmigungsbedürftigkeit",
+      "TA Lärm",
+      "Nachbarschutz"
+    ]
+  },
+  {
+    "question": "Ein Landwirt möchte auf seinem Grundstück eine Biogasanlage mit einer Feuerungswärmeleistung von 500 kW zur Erzeugung von Strom und Wärme errichten. Die nächste Wohnbebauung liegt 200 Meter entfernt. Muss der Landwirt ein Genehmigungsverfahren nach dem BImSchG durchlaufen und welche Schwellwerte und Anforderungen sind maßgeblich?",
+    "expected_norms": [
+      "§ 4 BImSchG",
+      "4. BImSchV (Anlage 1 Nr. 8.1)",
+      "§ 6 BImSchG"
+    ],
+    "expected_keywords": [
+      "Feuerungswärmeleistung",
+      "vereinfachtes Genehmigungsverfahren",
+      "Schwellenwert",
+      "Biogasanlage"
+    ]
+  },
+  {
+    "question": "Ein Chemieunternehmen entwässert prozessbezogene Abwässer mit erhöhten Phosphat- und Stickstoffkonzentrationen in einen lokalen Bach, der in ein Natura-2000-Gebiet entwässert. Das Unternehmen verfügt über eine alte Abwassererlaubnis aus dem Jahr 2005. Welche gewässerschutzrechtlichen Anforderungen des WHG sind zu beachten, und muss eine neue Erlaubnis erworben werden?",
+    "expected_norms": [
+      "§ 8 WHG",
+      "§ 12 WHG",
+      "§ 36 WHG"
+    ],
+    "expected_keywords": [
+      "Abwassereinleitung",
+      "Oberflächenwasserkörper",
+      "FFH-Gebiet",
+      "Ermessensfehlbarkeit der Behörde"
+    ]
+  },
+  {
+    "question": "Eine Gemeinde plant die Erweiterung eines bestehenden Regenrückhaltebeckens zur Hochwasserprävention in einem Auenwald mit geschützter Flora. Das Becken soll um 50% vergrößert werden. Welche wasserrechtlichen Genehmigungen und naturschutzrechtlichen Zulassungen sind erforderlich, und wie sind potenzielle Konflikte zwischen WHG und BNatSchG zu lösen?",
+    "expected_norms": [
+      "§ 8 WHG",
+      "§ 30 BNatSchG",
+      "§ 67 BNatSchG",
+      "§ 34 BNatSchG"
+    ],
+    "expected_keywords": [
+      "Gewässerausbau",
+      "Auengebiet",
+      "Ausnahmegenehmigung",
+      "Ausgleichsmaßnahmen",
+      "FFH-Verträglichkeitsprüfung"
+    ]
+  }
+]

@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "skill": "nachbarrecht",
+    "question": "Mein Nachbar hat sein Grundstück so vertieft, dass mein Boden die erforderliche Stütze verliert. Kann ich dagegen vorgehen, und was muss mein Nachbar tun?",
+    "expected_norms": [
+      "§ 909"
+    ],
+    "expected_keywords": [
+      "Grundstück",
+      "Nachbarn",
+      "Befestigung"
+    ],
+    "category": "Bodeneigenschaften und Stützung"
+  },
+  {
+    "id": 2,
+    "skill": "nachbarrecht",
+    "question": "Vom Nachbargrundstück dringen ständig Rauchentwicklung und Gerüche zu mir herüber. Ab wann kann ich diese Einwirkungen verbieten?",
+    "expected_norms": [
+      "§ 906"
+    ],
+    "expected_keywords": [
+      "Einwirkung",
+      "Benutzung",
+      "Grundstück"
+    ],
+    "category": "Immissionen und unwägbare Stoffe"
+  },
+  {
+    "id": 3,
+    "skill": "nachbarrecht",
+    "question": "Der Nachbar hat beim Hausbau über die Grundstücksgrenze hinweg gebaut. Ich hatte keinen Widerspruch erhoben. Was kann ich jetzt verlangen?",
+    "expected_norms": [
+      "§ 912"
+    ],
+    "expected_keywords": [
+      "Rente",
+      "Eigentümer",
+      "Grundstück"
+    ],
+    "category": "Überbau und Entschädigung"
+  },
+  {
+    "id": 4,
+    "skill": "nachbarrecht",
+    "question": "Mein Grundstück hat keine Verbindung zu einem öffentlichen Weg. Welche Rechte habe ich gegenüber meinen Nachbarn?",
+    "expected_norms": [
+      "§ 917"
+    ],
+    "expected_keywords": [
+      "Verbindung",
+      "Nachbarn",
+      "Grundstück"
+    ],
+    "category": "Notweg und Zugang"
+  },
+  {
+    "id": 5,
+    "skill": "nachbarrecht",
+    "question": "Zwischen meinem Grundstück und dem des Nachbarn steht eine Hecke, die beiden zum Vorteil dient. Wer darf sie benutzen und wer zahlt die Instandhaltung?",
+    "expected_norms": [
+      "§ 921",
+      "§ 922"
+    ],
+    "expected_keywords": [
+      "Grundstück",
+      "gemeinschaftlich",
+      "Eigentümer"
+    ],
+    "category": "Grenzanlagen und gemeinschaftliche Nutzung"
+  }
+]

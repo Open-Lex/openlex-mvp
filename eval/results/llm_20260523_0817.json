@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "voelkerstrafrecht",
+    "n_questions": 5,
+    "avg_score": 83.9,
+    "hallucination_rate": 0.0,
+    "worst_score": 78.9,
+    "best_score": 89.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Soldat tötet während eines internationalen bewaffneten Konflikts eine Zivilperson gezielt mit militärischen Mitteln. Welche Norm des Völkerstrafgesetzbuchs ist anwendbar und welche Freiheitsstrafe droht?",
+        "category": "Kriegsverbrechen",
+        "score": 78.9,
+        "answer_excerpt": "# Anwendbare Norm und Strafdrohung\n\n## Relevante Strafnorm\n\n**§ 11 VStGB (Kriegsverbrechen des Einsatzes verbotener Methoden der Kriegsführung)** ist die anwendbare Norm [Quelle 4].\n\nKonkret greift **",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.5
+      },
+      {
+        "id": 2,
+        "question": "Ein Militärbefehlshaber begeht eine Tat nach den §§ 6 bis 12 des Völkerstrafgesetzbuchs im Ausland, ohne dass ein Bezug zum Inland besteht. Nach welcher Vorschrift ist diese Tat dennoch strafbar?",
+        "category": "Anwendungsbereich",
+        "score": 89.5,
+        "answer_excerpt": "# Antwort\n\nDie Strafbarkeit des Militärbefehlshabers ergibt sich aus **§ 1 Völkerstrafgesetzbuch (VStGB)** [Quelle 4, 5].\n\n## Anwendungsbereich des VStGB\n\n§ 1 VStGB normiert ausdrücklich: „Dieses Gese",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.2
+      },
+      {
+        "id": 3,
+        "question": "Ein Untergebener begeht während eines bewaffneten Konflikts ein Kriegsverbrechen. Sein Vorgesetzter unterlässt es, unverzüglich die zuständige Behörde zu benachrichtigen. Welche Bestimmung wird verletzt und welche Freiheitsstrafe ist vorgesehen?",
+        "category": "Pflichten des Vorgesetzten",
+        "score": 89.5,
+        "answer_excerpt": "# Verletzung von § 15 VStGB - Unterlassen der Meldung\n\n## Relevante Bestimmung\n\nDie Unterlassung des Vorgesetzten verletzt **§ 15 Völkerstrafgesetzbuch (VStGB)** - \"Unterlassen der Meldung einer Straf",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.6
+      },
+      {
+        "id": 4,
+        "question": "Ein Täter verfolgt systematisch eine identifizierbare Gruppe aus rassischen Gründen und entzieht ihr grundlegende Menschenrechte. Welche Straftat liegt vor und welche Mindestfreiheitsstrafe droht?",
+        "category": "Verbrechen gegen die Menschlichkeit",
+        "score": 78.9,
+        "answer_excerpt": "# Rechtliche Einordnung\n\nBasierend auf der Sachverhaltsbeschreibung liegt das Verbrechen des **Völkermords** gemäß **§ 6 VStGB** vor [Quelle 3].\n\n## Straftat: Völkermord\n\nDer systematische Entzug von ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.8
+      },
+      {
+        "id": 5,
+        "question": "Ein Befehlshaber ordnet an, dass eine nationale Gruppe durch Maßnahmen zur Verhinderung von Geburten zerstört werden soll. Welche Norm ist einschlägig und wie lautet die Strafandrohung?",
+        "category": "Völkermord",
+        "score": 82.9,
+        "answer_excerpt": "# Einschlägige Norm und Strafandrohung\n\n## Völkermord gemäß § 6 VStGB\n\nDie beschriebene Situation fällt unter **§ 6 des Völkerstrafgesetzbuches (VStGB) – Völkermord** [Quelle 4].\n\n### Tatbestand\n\nNach",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.7
+      }
+    ],
+    "duration_s": 51.2
+  }
+]

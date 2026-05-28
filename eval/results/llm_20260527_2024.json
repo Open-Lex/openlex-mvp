@@ -1,0 +1,125 @@
+[
+  {
+    "skill": "erbrecht",
+    "n_questions": 5,
+    "avg_score": 88.5,
+    "hallucination_rate": 0.0,
+    "worst_score": 81.2,
+    "best_score": 97.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Mein Großvater ist verstorben. Er hatte keine Kinder. Wer erbt nach der gesetzlichen Erbfolge und in welcher Reihenfolge?",
+        "category": "Gesetzliche Erbfolge",
+        "score": 81.2,
+        "answer_excerpt": "# Gesetzliche Erbfolge bei kinderlosem Großvater\n\nDa Ihr Großvater keine Kinder hatte, gilt die gesetzliche Erbfolge nach den Ordnungen des BGB [Quelle 1]:\n\n## Erbfolgereihenfolge:\n\n**1. Zweite Ordnun",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.75,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.6
+      },
+      {
+        "id": 2,
+        "question": "Ein Kind wurde bereits gezeugt, ist aber noch nicht geboren, als der Erblasser stirbt. Kann dieses ungeborene Kind erben?",
+        "category": "Erbfähigkeit",
+        "score": 82.9,
+        "answer_excerpt": "# Erbfähigkeit eines ungeborenen Kindes\n\nJa, ein bereits gezeugtes, aber noch ungeborenes Kind kann erben.\n\n## Rechtliche Grundlage\n\nDie Regelung findet sich in **§ 1923 Abs. 2 BGB** [Quelle 3]:\n\n> „W",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.7
+      },
+      {
+        "id": 3,
+        "question": "Nach dem Tod eines Erblassers werden die Vermögenswerte auf mehrere Personen übertragen. Was ist das rechtliche Konzept hinter dieser Übertragung?",
+        "category": "Vermögensübergang",
+        "score": 89.5,
+        "answer_excerpt": "# Das rechtliche Konzept der Vermögensübertragung nach dem Tod\n\nDas rechtliche Konzept hinter der Vermögensübertragung nach dem Tod eines Erblassers ist die **Gesamtrechtsnachfolge (Universalsukzessio",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.2
+      },
+      {
+        "id": 4,
+        "question": "Ein Erblasser hinterlässt drei Kinder. Wie wird sein Vermögen nach gesetzlicher Erbfolge unter den Kindern aufgeteilt?",
+        "category": "Gesetzliche Erbfolge",
+        "score": 97.8,
+        "answer_excerpt": "# Vermögensaufteilung unter drei Kindern nach gesetzlicher Erbfolge\n\n## Gesetzliche Erbfolge\n\nNach **§ 1924 BGB** sind Kinder des Erblassers Erben erster Ordnung. Gemäß **§ 1924 Abs. 4 BGB** erben meh",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.9
+      },
+      {
+        "id": 5,
+        "question": "Der Erblasser hinterlässt einen überlebenden Ehegatte und zwei Kinder (erste Ordnung). Welcher Erbteil entfällt auf den Ehegatten?",
+        "category": "Ehegattenerbrecht",
+        "score": 91.2,
+        "answer_excerpt": "# Erbteil des Ehegatten neben zwei Kindern\n\n## Antwort\n\nDer überlebende Ehegatte erhält einen Erbteil von **¼ (ein Viertel)** der Erbschaft.\n\n## Begründung\n\nNach § 1931 Abs. 1 BGB erbt der überlebende",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.6
+      }
+    ],
+    "duration_s": 52.4
+  }
+]

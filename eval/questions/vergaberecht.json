@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Ein öffentlicher Auftraggeber plant, einen IT-Dienstleistungsauftrag zu vergeben. Ab welchem Auftragswert muss er ein europaweites Vergabeverfahren durchführen und welche Grundsätze gelten für die öffentliche Vergabe?",
+    "expected_norms": [
+      "§ 97"
+    ],
+    "expected_keywords": [
+      "Schwellenwert",
+      "EU",
+      "Wettbewerb",
+      "Transparenz"
+    ]
+  },
+  {
+    "question": "Ein Auftraggeber möchte einen bestehenden öffentlichen Auftrag während der Laufzeit wesentlich ändern. Unter welchen Voraussetzungen ist eine wesentliche Auftragsänderung zulässig ohne neue Ausschreibung?",
+    "expected_norms": [
+      "§ 132"
+    ],
+    "expected_keywords": [
+      "Auftragsänderung",
+      "wesentlich",
+      "Ausschreibung",
+      "Vergabeverfahren"
+    ]
+  },
+  {
+    "question": "Eine Kommune will Reinigungsleistungen direkt an eine kommunale GmbH vergeben, ohne Ausschreibung. Unter welchen Voraussetzungen ist eine Inhouse-Vergabe nach § 108 GWB zulässig, ohne dass eine europaweite Ausschreibungspflicht besteht?",
+    "expected_norms": [
+      "§ 108"
+    ],
+    "expected_keywords": [
+      "Inhouse-Vergabe",
+      "Kontrolle",
+      "Ausschreibung",
+      "Tätigkeiten"
+    ]
+  },
+  {
+    "question": "Ein öffentlicher Auftraggeber schreibt einen Bauauftrag aus und vergibt ihn an das wirtschaftlichste statt günstigste Angebot. Nach welchen Kriterien darf er das wirtschaftlichste Angebot bestimmen?",
+    "expected_norms": [
+      "§ 127"
+    ],
+    "expected_keywords": [
+      "Zuschlagskriterien",
+      "wirtschaftlich",
+      "Qualität",
+      "Preis"
+    ]
+  },
+  {
+    "question": "Ein Bieter hat in einem Vergabeverfahren falsche Angaben ueber seine Eignung gemacht. Kann der oeffentliche Auftraggeber ihn gemaess § 124 GWB vom Vergabeverfahren ausschliessen, und welche Voraussetzungen muessen dafuer vorliegen?",
+    "expected_norms": [
+      "§ 124"
+    ],
+    "expected_keywords": [
+      "Ausschluss",
+      "Eignung",
+      "Bieter",
+      "falsche Angaben"
+    ]
+  }
+]

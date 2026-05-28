@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "skill": "staatsorganisationsrecht",
+    "question": "Ein Bürger möchte eine Verfassungsbeschwerde beim Bundesverfassungsgericht einlegen. Nach welchen Kriterien entscheidet das Gericht über die Annahme der Beschwerde?",
+    "expected_norms": [
+      "§ 93a"
+    ],
+    "expected_keywords": [
+      "Verfassungsbeschwerde",
+      "Annahme",
+      "Bundesverfassungsgericht"
+    ],
+    "min_sources": 1,
+    "category": "Verfassungsbeschwerde"
+  },
+  {
+    "id": 2,
+    "skill": "staatsorganisationsrecht",
+    "question": "Welche Rolle spielt der Parlamentarische Rat in der Geschichte der Bundesrepublik Deutschland?",
+    "expected_norms": [
+      "Eingangsformel"
+    ],
+    "expected_keywords": [
+      "Parlamentarischer Rat",
+      "Grundgesetz",
+      "Bundesrepublik"
+    ],
+    "min_sources": 1,
+    "category": "Geschichte des Grundgesetzes"
+  },
+  {
+    "id": 3,
+    "skill": "staatsorganisationsrecht",
+    "question": "Wie werden die Menschenrechte im Grundgesetz verankert?",
+    "expected_norms": [
+      "Art. 1"
+    ],
+    "expected_keywords": [
+      "Menschenrechte",
+      "Unantastbarkeit",
+      "Menschenwürde"
+    ],
+    "min_sources": 1,
+    "category": "Menschenrechte"
+  },
+  {
+    "id": 4,
+    "skill": "staatsorganisationsrecht",
+    "question": "Was ist die Bedeutung der Würde des Menschen im Grundgesetz?",
+    "expected_norms": [
+      "Art. 1"
+    ],
+    "expected_keywords": [
+      "Würde des Menschen",
+      "Unantastbarkeit",
+      "Grundgesetz"
+    ],
+    "min_sources": 1,
+    "category": "Menschenwürde"
+  },
+  {
+    "id": 5,
+    "skill": "staatsorganisationsrecht",
+    "question": "Wie werden die Grundrechte im Grundgesetz definiert?",
+    "expected_norms": [
+      "Art. 1"
+    ],
+    "expected_keywords": [
+      "Grundrechte",
+      "unveräußerlich",
+      "Menschenwürde"
+    ],
+    "min_sources": 1,
+    "category": "Grundrechte"
+  },
+  {
+    "id": 6,
+    "skill": "staatsorganisationsrecht",
+    "question": "Welche Rolle spielt die Gesetzgebung im Grundgesetz?",
+    "expected_norms": [
+      "GG Art. 1"
+    ],
+    "expected_keywords": [
+      "Gesetzgebung",
+      "Bindung",
+      "Grundrechte"
+    ],
+    "min_sources": 1,
+    "category": "Gesetzgebung"
+  },
+  {
+    "id": 7,
+    "skill": "staatsorganisationsrecht",
+    "question": "Was ist die Bedeutung der Volksvertretungen in der Bundesrepublik Deutschland?",
+    "expected_norms": [
+      "GG Eingangsformel"
+    ],
+    "expected_keywords": [
+      "Volksvertretungen",
+      "Beteiligung",
+      "Grundgesetz"
+    ],
+    "min_sources": 1,
+    "category": "Volksvertretungen"
+  },
+  {
+    "id": 8,
+    "skill": "staatsorganisationsrecht",
+    "question": "Wie werden die Länder in der Bundesrepublik Deutschland repräsentiert?",
+    "expected_norms": [
+      "GG Präambel"
+    ],
+    "expected_keywords": [
+      "Länder",
+      "Repräsentation",
+      "Bundesrepublik"
+    ],
+    "min_sources": 1,
+    "category": "Länder"
+  },
+  {
+    "id": 9,
+    "skill": "staatsorganisationsrecht",
+    "question": "Was ist die Bedeutung des Friedens in der Welt im Grundgesetz?",
+    "expected_norms": [
+      "GG Präambel"
+    ],
+    "expected_keywords": [
+      "Frieden",
+      "Welt",
+      "Verantwortung"
+    ],
+    "min_sources": 1,
+    "category": "Frieden"
+  },
+  {
+    "id": 10,
+    "skill": "staatsorganisationsrecht",
+    "question": "Wie werden die Menschenrechte im Grundgesetz geschützt?",
+    "expected_norms": [
+      "GG Art. 1"
+    ],
+    "expected_keywords": [
+      "Menschenrechte",
+      "Schutz",
+      "Verpflichtung"
+    ],
+    "min_sources": 1,
+    "category": "Menschenrechte"
+  }
+]

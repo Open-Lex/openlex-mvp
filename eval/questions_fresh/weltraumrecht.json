@@ -1,0 +1,67 @@
+[
+  {
+    "question": "Die deutsche Raumfahrtagentur DLR startet einen Kommunikationssatelliten von deutschem Boden. Der Satellit verursacht später durch Kollision mit Weltraumschrott Schäden an einem französischen Satelliten im Wert von 50 Millionen Euro. Frankreich fordert Schadensersatz von Deutschland. Welche Haftungsregelungen des Weltraumvertrags sind einschlägig, und unter welchen Voraussetzungen haftet ein Startland nach Art. VII des Weltraumvertrags?",
+    "expected_norms": [
+      "Art. VII Weltraumvertrag",
+      "Art. VI Weltraumvertrag"
+    ],
+    "expected_keywords": [
+      "absolute Haftung",
+      "Startland",
+      "nationale Aufsicht",
+      "internationale Haftung"
+    ]
+  },
+  {
+    "question": "Ein privates Raumfahrtunternehmen plant die Bereitstellung von Internetsatelliten in niedriger Erdumlaufbahn ohne vorherige Zustimmung durch die zuständige nationale Behörde. Das Unternehmen argumentiert, dass private Aktivitäten nicht unter den Weltraumvertrag fallen. Ist diese Position haltbar, und welche Pflichten ergeben sich aus Art. VI des Weltraumvertrags für die nationale Genehmigung privater Weltraumaktivitäten?",
+    "expected_norms": [
+      "Art. VI Weltraumvertrag",
+      "Art. VIII Weltraumvertrag"
+    ],
+    "expected_keywords": [
+      "private Raumfahrtunternehmen",
+      "staatliche Genehmigung",
+      "nationale Kontrolle",
+      "Registrierungspflicht"
+    ]
+  },
+  {
+    "question": "Ein Satellit der Europäischen Raumfahrtagentur (ESA) wurde auf Veranlassung mehrerer Mitgliedstaaten (Deutschland, Frankreich, Italien) gestartet. Der Satellit verursacht Schäden an einem privaten Satelliten. Können die Geschädigten gegen alle beteiligten Staaten Ansprüche geltend machen, oder nur gegen einen? Wie regelt der Weltraumvertrag die Haftung bei mehreren Startländern?",
+    "expected_norms": [
+      "Art. VII Weltraumvertrag",
+      "Art. V Weltraumvertrag"
+    ],
+    "expected_keywords": [
+      "mehrere Startländer",
+      "solidarische Haftung",
+      "Schadensersatzklage",
+      "internationale Agenturen"
+    ]
+  },
+  {
+    "question": "Ein Satellit verliert seine Kontrolle und droht, unkontrolliert in die Erdatmosphäre abzustürzen. Trümmer könnten Schäden am Boden verursachen. Hat der Startland eine Pflicht zur Bergung oder Beseitigung des Satelliten, und welche Rechtsgrundlagen sieht das Weltraumrecht hierfür vor?",
+    "expected_norms": [
+      "Art. VIII Weltraumvertrag",
+      "Art. IX Weltraumvertrag"
+    ],
+    "expected_keywords": [
+      "Weltraummüll",
+      "Bergungspflicht",
+      "unkontrollierter Absturz",
+      "Schutzpflicht"
+    ]
+  },
+  {
+    "question": "Die Bundesrepublik Deutschland erteilt einem privaten Unternehmen die Genehmigung zur Satellitenstarts. Der Satellit wird jedoch auf südafrikanischem Boden gestartet, um Kosten zu sparen. Südafrika führt keine Kontrolle durch. Ist die deutsche Genehmigung ausreichend, oder muss auch Südafrika eine Genehmigung erteilen? Welche Anforderungen ergeben sich aus Art. VI des Weltraumvertrags?",
+    "expected_norms": [
+      "Art. VI Weltraumvertrag",
+      "Art. VII Weltraumvertrag"
+    ],
+    "expected_keywords": [
+      "Startland",
+      "Genehmigungsland",
+      "Startort",
+      "nationale Zuständigkeit"
+    ]
+  }
+]

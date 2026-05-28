@@ -1,0 +1,72 @@
+[
+  {
+    "question": "Der 23-jährige Student Max möchte sich einen Revolver kaufen und im heimischen Schlafzimmer aufbewahren. Er hat keine Vorstrafen und nennt als Grund das Sammeln von Schusswaffen. Nach Prüfung durch die Waffenbehörde wird ihm die Erwerbserlaubnis gemäß § 10 Abs. 2 WaffG verweigert. Max behauptet, es müsse mindestens ein 'besonderes' Interesse bestehen – ein allgemeines Sammelinteresse könne nicht ausreichen. Hat Max Recht, und welche Anforderungen ergeben sich aus § 4 WaffG an die Zuverlässigkeit und das Erfordernis eines Bedürfnisses?",
+    "expected_norms": [
+      "§ 4 WaffG",
+      "§ 10 Abs. 2 WaffG",
+      "§ 9 WaffG"
+    ],
+    "expected_keywords": [
+      "Bedürfnis",
+      "Zuverlässigkeit",
+      "Erforderlichkeit",
+      "Schusswaffe"
+    ]
+  },
+  {
+    "question": "Die Unternehmerin Petra ist Inhaberin einer Sicherheitsfirma und besitzt eine gültige Erlaubnis zur Aufbewahrung von 50 Schusswaffen in ihrem Tresor. Sie lagert diese jedoch nicht in einem behördlich genehmigten Waffenschrank nach Anlage 2 zu § 13 WaffG, sondern in einem von ihr selbst konstruierten, ebenfalls massiven Stahlschrank. Die Behörde leitet ein Ordnungswidrigkeitsverfahren ein. Ist Petras Aufbewahrung rechtmäßig, und welche Anforderungen stellt § 13 WaffG an die Lagerstätte?",
+    "expected_norms": [
+      "§ 13 WaffG",
+      "Anlage 2 WaffG",
+      "§ 40 WaffG"
+    ],
+    "expected_keywords": [
+      "Aufbewahrung",
+      "Waffenschrank",
+      "Sicherheitsanforderungen",
+      "Ordnungswidrigkeit"
+    ]
+  },
+  {
+    "question": "Der 28-jährige Rechtsanwalt Tom beantragt einen kleinen Waffenschein (Erlaubnis zum Führen von Schusswaffen nach § 7 Abs. 1 WaffG). Er argumentiert, dass sein Beruf mit häufigen Mandantenbesuchen in gefährlichen Stadtteilen verbunden ist und er deshalb ein berechtigtes Interesse an Selbstschutz habe. Die Behörde lehnt ab und berücksichtigt nur Bedrohungen durch benannte Personen. Welche Anforderungen müssen nach ständiger Rechtsprechung an das Bedürfnis erfüllt sein, und reicht die bloße Angst vor allgemeinen Kriminalitätsrisiken aus?",
+    "expected_norms": [
+      "§ 7 Abs. 1 WaffG",
+      "§ 8 WaffG",
+      "§ 4 WaffG"
+    ],
+    "expected_keywords": [
+      "Bedürfnis",
+      "Bedrohungslage",
+      "kleiner Waffenschein",
+      "Selbstschutz"
+    ]
+  },
+  {
+    "question": "Der Hobby-Schütze Klaus besitzt eine gültige Erwerbserlaubnis für eine halbautomatische Büchse. Ein Jahr nach dem Erwerb wird gegen ihn ein Strafverfahren wegen Körperverletzung rechtskräftig abgeschlossen, er erhält eine Geldstrafe. Klaus fragt sich, ob seine Erlaubnis gem. § 35 WaffG widerrufen werden kann, obwohl die Tat mit der Waffe nichts zu tun hat. Unter welchen Voraussetzungen kann die Behörde eine gültige Waffenerlaubnis widerrufen?",
+    "expected_norms": [
+      "§ 35 WaffG",
+      "§ 4 WaffG",
+      "§ 36 WaffG"
+    ],
+    "expected_keywords": [
+      "Widerruf",
+      "Zuverlässigkeit",
+      "Vertrauensprognose",
+      "Straftat"
+    ]
+  },
+  {
+    "question": "Die 19-jährige Schülerin Sophie kauft sich – ohne Lizenz oder Genehmigung – zwei Elektroimpulsgeräte (Elektroschocker) und einen Schlagring, um diese in ihrer Handtasche mitzuführen. Sie handelt aus Angst vor Übergriffen auf dem Schulweg. Bestimme, welche waffenrechtlichen Regelungen einschlägig sind und ob Sophie eine Erlaubnis benötigt. Sind diese Gegenstände nach § 42a Abs. 1 WaffG verboten oder bloß genehmigungspflichtig?",
+    "expected_norms": [
+      "§ 42a Abs. 1 WaffG",
+      "§ 2 WaffG",
+      "§ 4 WaffG"
+    ],
+    "expected_keywords": [
+      "Verbotene Gegenstände",
+      "Elektroimpulsgerät",
+      "Schlagring",
+      "Führen von Waffen"
+    ]
+  }
+]

@@ -1,0 +1,119 @@
+[
+  {
+    "skill": "ki_recht",
+    "n_questions": 5,
+    "avg_score": 77.3,
+    "hallucination_rate": 0.0,
+    "worst_score": 74.2,
+    "best_score": 79.5,
+    "questions": [
+      {
+        "id": null,
+        "question": "Unser Unternehmen entwickelt ein KI-System zur biometrischen Gesichtserkennung im öffentlichen Raum. Welche Anforderungen und Verbote gelten nach der KI-Verordnung (AI Act) für solche biometrischen Echtzeit-Erkennungssysteme?",
+        "category": "",
+        "score": 79.5,
+        "answer_excerpt": "# Biometrische Echtzeit-Gesichtserkennung nach dem AI Act\n\nLeider enthalten die bereitgestellten Quellen keine spezifischen Informationen zu biometrischen Echtzeit-Erkennungssystemen im öffentlichen R",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 26.6
+      },
+      {
+        "id": null,
+        "question": "Unter welchen Voraussetzungen gilt ein KI-System gemäß Artikel 6 des EU AI Act als Hochrisiko-System, und welche Anforderungen stellt Artikel 11 an die technische Dokumentation?",
+        "category": "",
+        "score": 79.2,
+        "answer_excerpt": "# Hochrisiko-KI-Systeme gemäß EU AI Act\n\n## Voraussetzungen nach Artikel 6\n\nNach [Quelle 2], Artikel 6 Abs. 1 gilt ein KI-System als Hochrisiko-System, wenn **zwei Bedingungen** kumulativ erfüllt sind",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 13.2
+      },
+      {
+        "id": null,
+        "question": "Unser Hochrisiko-KI-System lernt nach dem Inverkehrbringen kontinuierlich dazu. Welche spezifischen Anforderungen gelten für Genauigkeit, Robustheit und Cybersicherheit von Hochrisiko-KI-Systemen?",
+        "category": "",
+        "score": 79.2,
+        "answer_excerpt": "# Anforderungen an Hochrisiko-KI-Systeme mit kontinuierlichem Lernen\n\n## Spezifische Anforderungen gemäß Artikel 15\n\nFür Ihr Hochrisiko-KI-System, das nach dem Inverkehrbringen kontinuierlich lernt, g",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 13.8
+      },
+      {
+        "id": null,
+        "question": "Wir haben festgestellt, dass unser KI-System ein erhebliches Risiko darstellt. Welche Pflichten zur Marktüberwachung und zum Melden schwerwiegender Vorfälle hat der Anbieter nach dem AI Act?",
+        "category": "",
+        "score": 74.2,
+        "answer_excerpt": "# Pflichten zur Marktüberwachung und Meldung schwerwiegender Vorfälle nach dem AI Act\n\n## Meldungspflicht für schwerwiegende Vorfälle\n\nNach **Artikel 73 AI Act** [Quelle 1] haben Anbieter von Hochrisi",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 10.0
+      },
+      {
+        "id": null,
+        "question": "Welche Anforderungen bestehen bezüglich der menschlichen Überwachung von Hochrisiko-KI-Systemen, und wie muss diese technisch umgesetzt werden?",
+        "category": "",
+        "score": 74.2,
+        "answer_excerpt": "# Anforderungen an die menschliche Überwachung von Hochrisiko-KI-Systemen\n\n## Konzeption und Funktionalität\n\nGemäß **Artikel 14 Abs. 1** [Quelle 1] müssen Hochrisiko-KI-Systeme so konzipiert und entwi",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 10.2
+      }
+    ],
+    "duration_s": 75.4
+  }
+]

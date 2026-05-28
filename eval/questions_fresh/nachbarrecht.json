@@ -1,0 +1,77 @@
+[
+  {
+    "question": "Der Eigentümer eines Wohngrundstücks in Baden-Württemberg errichtet ein Wohngebäude mit einem Dachüberstand von 60 cm, der über die Grundstücksgrenze auf das Nachbargrundstück hinausragt. Der Nachbar fordert den Abriss des überragenden Teils. Nach welchen gesetzlichen Bestimmungen ist zu prüfen, ob der Dachüberstand zulässig ist, und welche Konsequenzen ergeben sich aus einer Zulässigkeit des Überhangs gemäß § 922 BGB?",
+    "expected_norms": [
+      "§ 922 BGB",
+      "Landesbauordnung Baden-Württemberg (LBO)"
+    ],
+    "expected_keywords": [
+      "Duldungspflicht",
+      "Überhang",
+      "Grundstücksgrenze",
+      "Anspruch auf Beseitigung",
+      "Ersitzung"
+    ]
+  },
+  {
+    "question": "Ein Gewerbebetrieb in unmittelbarer Nachbarschaft zu einem Wohngebäude betreibt eine Produktionsstätte und verursacht werktags zwischen 7 und 19 Uhr regelmäßig Lärmpegel von 75 dB(A). Der Nachbar beschwert sich über Lärmbelästigung. Nach welchen Normen ist die Zulässigkeit dieser Lärmemission zu beurteilen und welche Ansprüche hat der Nachbar möglicherweise nach § 1004 Abs. 1 BGB i.V.m. den maßgeblichen Regelungen?",
+    "expected_norms": [
+      "§ 1004 Abs. 1 BGB",
+      "Technische Anleitung Lärm (TA Lärm)",
+      "§ 906 BGB"
+    ],
+    "expected_keywords": [
+      "Lärmimmission",
+      "Ortsüblichkeit",
+      "Toleranzschwelle",
+      "Störerhaftung",
+      "Unterlassungsanspruch"
+    ]
+  },
+  {
+    "question": "Ein Landwirt benötigt zur Bewirtschaftung seines abgelegenen Waldgrundstücks notwendigerweise einen Weg über das Nachbargrundstück, da die öffentliche Erschließung 3 km entfernt liegt. Der Nachbar verweigert die Wegenutzung. Welche Anspruchsgrundlage kommt nach deutschem Recht in Betracht, und unter welchen Voraussetzungen gemäß § 917 BGB oder § 911 BGB kann der Landwirt zur Duldung eines Weges berechtigt sein?",
+    "expected_norms": [
+      "§ 917 BGB",
+      "§ 911 BGB",
+      "§ 912 BGB"
+    ],
+    "expected_keywords": [
+      "Notwegerecht",
+      "Grundstückszerschneidung",
+      "Billigkeitsersatz",
+      "Zumutbarkeit",
+      "Landlockigkeit"
+    ]
+  },
+  {
+    "question": "Ein Hauseigentümer in Nordrhein-Westfalen errichtet ein Wohngebäude in einem reinen Wohngebiet an der Grundstücksgrenze (0 cm Abstand). Die Nachbarin geltend macht, dass dies gegen die Mindestabstandsflächen der Bauordnung verstoße und fordert den Abriss. Nach welchen Normen (Bauordnung und BGB) ist die Zulässigkeit zu prüfen und welche Rechtsfolgen hat die Verletzung von Grenzabstandsvorschriften?",
+    "expected_norms": [
+      "Bauordnung Nordrhein-Westfalen (BauO NRW)",
+      "§ 912 BGB",
+      "§ 1004 BGB"
+    ],
+    "expected_keywords": [
+      "Grenzabstand",
+      "Bauliche Anlage",
+      "Abstandsflächen",
+      "Beseitigungsanspruch",
+      "Bestandsschutz"
+    ]
+  },
+  {
+    "question": "Die Äste eines Obstbaums auf dem Grundstück A wachsen regelmäßig über die Grundstücksgrenze auf das Grundstück B hinüber und behindern den Nachbarn bei der Nutzung. Der Nachbar möchte die Äste selbst abschneiden. Welche Anspruchsgrundlagen und Befugnisse ergeben sich aus §§ 910, 923 und 1004 BGB, und inwieweit darf der Nachbar eigenmächtig tätig werden?",
+    "expected_norms": [
+      "§ 910 BGB",
+      "§ 923 BGB",
+      "§ 1004 BGB",
+      "§ 994 BGB"
+    ],
+    "expected_keywords": [
+      "Grenzüberschreitung",
+      "Selbstschussrecht",
+      "Duldungspflicht",
+      "Ersitzung",
+      "Unterlassungsanspruch"
+    ]
+  }
+]

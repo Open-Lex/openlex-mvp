@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "skill": "medizinrecht",
+    "question": "Ein Arzt verschreibt einem Patienten ein Arzneimittel, das später schwerwiegende Nebenwirkungen verursacht. Kann der Patient gegen den pharmazeutischen Hersteller vorgehen? Welche Haftungsgrundlagen nach AMG und BGB kommen in Betracht?",
+    "expected_norms": [
+      "§ 84",
+      "§ 823"
+    ],
+    "expected_keywords": [
+      "Haftung",
+      "Nebenwirkungen",
+      "Schadensersatz",
+      "pharmazeutischer Unternehmer"
+    ],
+    "category": "Haftung und Schadensersatz"
+  },
+  {
+    "id": 2,
+    "skill": "medizinrecht",
+    "question": "Ein pharmazeutisches Unternehmen möchte ein neuartiges Therapiearzneimittel als individuelle Zubereitung in den Verkehr bringen. Welche behördliche Genehmigung benötigt es und bei welcher Behörde wird der Antrag gestellt?",
+    "expected_norms": [
+      "§ 21a"
+    ],
+    "expected_keywords": [
+      "Genehmigung",
+      "Bundesoberbehörde",
+      "Arzneimittel"
+    ],
+    "category": "Zulassung und Genehmigung"
+  },
+  {
+    "id": 3,
+    "skill": "medizinrecht",
+    "question": "Eine Entnahmeeinrichtung will erstmals Gewebe zur Verwendung bei Menschen gewinnen. Welche Voraussetzungen und Anforderungen muss sie erfüllen, um die erforderliche Erlaubnis zu erhalten?",
+    "expected_norms": [
+      "§ 20b"
+    ],
+    "expected_keywords": [
+      "Erlaubnis",
+      "Behörde",
+      "Gewebe"
+    ],
+    "category": "Gewebegewinnung und -verarbeitung"
+  },
+  {
+    "id": 4,
+    "skill": "medizinrecht",
+    "question": "Welche Informationen muss der pharmazeutische Unternehmer nach dem Arzneimittelgesetz den behandelnden Ärzten zur Verfügung stellen und wie ist diese Information auszugestalten?",
+    "expected_norms": [
+      "§ 11a"
+    ],
+    "expected_keywords": [
+      "Fachinformation",
+      "Arzneimittel",
+      "Angaben"
+    ],
+    "category": "Informationspflichten"
+  },
+  {
+    "id": 5,
+    "skill": "medizinrecht",
+    "question": "Der Inhaber einer Herstellungserlaubnis für Arzneimittel plant eine Änderung in den herzustellenden Arzneimitteln und bei den Räumlichkeiten. Wie muss er vorgehen und welche Fristen gelten?",
+    "expected_norms": [
+      "§ 17"
+    ],
+    "expected_keywords": [
+      "Erlaubnis",
+      "Änderung",
+      "Behörde"
+    ],
+    "category": "Änderungen bei Herstellungserlaubnis"
+  }
+]

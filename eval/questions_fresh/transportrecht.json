@@ -1,0 +1,67 @@
+[
+  {
+    "question": "Ein deutscher Spediteur transportiert Möbel von Berlin nach Paris. Bei der Anlieferung stellt sich heraus, dass ein Schrank beschädigt ist. Der Empfänger reklamiert sofort, reicht aber die schriftliche Rüge erst 14 Tage später ein. Der Spediteur beruft sich auf Verjährung. Ist die Rüge noch rechtzeitig erfolgt und welche Konsequenzen hat die verspätete Rüge gemäß CMR?",
+    "expected_norms": [
+      "Art. 30 CMR",
+      "Art. 31 Abs. 2 CMR"
+    ],
+    "expected_keywords": [
+      "Rügefrist",
+      "Geltendmachung",
+      "Verjährung",
+      "Fristverlängerung"
+    ]
+  },
+  {
+    "question": "Ein Frachtführer nach deutschem Recht (HGB) verschließt einen Container mit Waren im Wert von 50.000 Euro und stellt ein Frachtbrief aus. Bei Kontrolle an der Grenze werden 30% der Waren als gestohlen festgestellt. Der Absender fordert Schadensersatz für den Totalverlust. Welche Haftungsgrundsätze gelten nach HGB und welche Beweislastverteilung ist relevant?",
+    "expected_norms": [
+      "§ 407 HGB",
+      "§ 409 HGB"
+    ],
+    "expected_keywords": [
+      "Beweislastumkehr",
+      "Verschwinden",
+      "Haftung des Frachtführers",
+      "Verschlossenes Fahrzeug"
+    ]
+  },
+  {
+    "question": "Ein Frachtführer transportiert verderbliche Lebensmittel bei vereinbarter Temperatur von 4°C. Während der Fahrt fällt die Kühlanlage aus; der Fahrer bemerkt dies aber erst nach 8 Stunden. Die Ware ist nicht mehr verwertbar. Der Versender verlangt Schadensersatz gemäß CMR. Kann sich der Frachtführer auf die Ausnahmeregelung für höhere Gewalt berufen?",
+    "expected_norms": [
+      "Art. 17 Abs. 1 CMR",
+      "Art. 17 Abs. 2 CMR"
+    ],
+    "expected_keywords": [
+      "Technisches Versagen",
+      "Höhere Gewalt",
+      "Technische Sorgfalt",
+      "Schuldprinzip"
+    ]
+  },
+  {
+    "question": "Ein französischer Frachtführer befördert Elektronik von München nach Mailand mit Frachtbrief nach CMR. Der Versender verzichtet schriftlich auf eine Wertangabe. Bei Diebstahl des gesamten Gutes fordert der Versender dennoch Schadensersatz im Höhe der tatsächlichen Warenwerte (100.000 Euro). Wie wirkt sich die fehlende Wertdeklaration auf die Haftung des Frachtführers aus?",
+    "expected_norms": [
+      "Art. 23 Abs. 1 CMR",
+      "Art. 23 Abs. 5 CMR"
+    ],
+    "expected_keywords": [
+      "Wertdeklaration",
+      "Deklarationspflicht",
+      "Haftungshöchstsumme",
+      "Ersatzsummen"
+    ]
+  },
+  {
+    "question": "Ein Frachtführer nach HGB erhält einen Auftrag zur Beförderung von Kunstgegenständen. Er lädt die Waren fahrlässig in einen nicht geeigneten Container, woraufhin diese während der Fahrt beschädigt werden. Der Kunsthändler verlangt Schadensersatz. Kann sich der Frachtführer auf die gesetzliche Haftungsbeschränkung des HGB berufen oder liegt hier eine Ausnahme vor?",
+    "expected_norms": [
+      "§ 410 HGB",
+      "§ 411 HGB"
+    ],
+    "expected_keywords": [
+      "Fahrlässigkeit",
+      "Haftungsbeschränkung",
+      "Ausnahmen",
+      "Vorsatz oder grobe Fahrlässigkeit"
+    ]
+  }
+]

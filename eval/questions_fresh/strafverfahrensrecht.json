@@ -1,0 +1,76 @@
+[
+  {
+    "question": "Die Polizei erhält einen anonymen Hinweis, dass in einer bestimmten Wohnung Drogen gelagert werden. Ohne weitere Ermittlungen und ohne richterliche Anordnung durchsucht die Polizei die Wohnung und findet 500g Kokain. Der Beschuldigte rügt die Rechtswidrigkeit der Hausdurchsuchung. Prüfen Sie gemäß § 102 StPO, unter welchen Voraussetzungen eine Hausdurchsuchung ohne richterliche Anordnung zulässig ist und ob die Durchsuchung im vorliegenden Fall rechtmäßig war.",
+    "expected_norms": [
+      "§ 102 StPO",
+      "§ 103 StPO",
+      "§ 105 StPO"
+    ],
+    "expected_keywords": [
+      "Richterliche Anordnung",
+      "Gefahr im Verzug",
+      "Eilfall",
+      "Anordnung durch Staatsanwaltschaft"
+    ]
+  },
+  {
+    "question": "Ein 19-jähriger Tatverdächtiger wird wegen des Verdachts eines Überfalls festgenommen. Die Staatsanwaltschaft beantragt beim Amtsgericht Untersuchungshaft. Der Richter erlässt einen Haftbefehl gemäß § 112 StPO wegen Fluchtgefahr, da der Beschuldigte keinen festen Wohnsitz hat. Der Verteidiger argumentiert, dass dies eine Verletzung des Verhältnismäßigkeitsprinzips darstellt. Erläutern Sie die Haftgründe nach § 112 StPO und prüfen Sie, ob die Haft auf der Grundlage von fehlender fester Unterkunft allein zulässig ist.",
+    "expected_norms": [
+      "§ 112 StPO",
+      "§ 112a StPO",
+      "§ 114 StPO"
+    ],
+    "expected_keywords": [
+      "Fluchtgefahr",
+      "Verdunkelungsgefahr",
+      "Wiederholungstätergefahr",
+      "Verhältnismäßigkeit",
+      "mildere Mittel"
+    ]
+  },
+  {
+    "question": "Während der Ermittlungen in einem Betrugskomplex wird ein Verdächtiger angetroffen. Die Polizei fragt ihn vor Ort flüchtig nach seinen Personalien und seinem Aufenthaltsort. Der Verdächtige antwortet wahrheitswidrig. Später wird die Polizei vorgeworfen, dass sie vor der Vernehmung gemäß § 136 Abs. 1 StPO nicht auf das Recht zur Nichtbeantwortung hingewiesen hat. Prüfen Sie die Anforderungen an die Belehrung nach § 136 StPO und beurteilen Sie, ob die Polizei hier einen Verstoß begangen hat.",
+    "expected_norms": [
+      "§ 136 StPO",
+      "§ 163a StPO",
+      "§ 136a StPO"
+    ],
+    "expected_keywords": [
+      "Belehrungspflicht",
+      "Vernehmung",
+      "Aussagefreiheit",
+      "Nichtbeantwortungsrecht",
+      "sachliche Voraussetzungen"
+    ]
+  },
+  {
+    "question": "In einer Bandenkriminalität-Ermittlung werden von der Staatsanwaltschaft flächendeckend die Telefongespräche von vier Tatverdächtigen überwacht. Die Anordnung stützt sich auf § 100a StPO. Ein Verdächtiger erfährt von der Maßnahme und rügt deren Rechtswidrigkeit, da es für bloße Geständigkeitsverdachtsfälle keine Überwachung geben darf. Erläutern Sie die Voraussetzungen für eine Telekommunikationsüberwachung nach § 100a StPO und prüfen Sie, ob die Überwachung zulässig war.",
+    "expected_norms": [
+      "§ 100a StPO",
+      "§ 100b StPO",
+      "Art. 10 GG"
+    ],
+    "expected_keywords": [
+      "Schwere Straftat",
+      "bestimmte Tatsachen",
+      "richterliche Anordnung",
+      "Verhältnismäßigkeit",
+      "Telekommunikation"
+    ]
+  },
+  {
+    "question": "Die Staatsanwaltschaft hat ihre Ermittlungen in einem Diebstahlsverfahren abgeschlossen und erhebt Anklage. Das Amtsgericht eröffnet das Verfahren nach § 203 StPO. Der Verteidiger stellt sodann einen Antrag gemäß § 204 StPO auf Aussetzung des Verfahrens, da ein Sachverständigenberichtigung noch ausstehe. Die Staatsanwaltschaft lehnt dies ab. Erläutern Sie die Voraussetzungen und die rechtliche Bedeutung eines Aussetzungsantrages nach § 204 StPO und prüfen Sie, ob das Gericht diesen berücksichtigen muss.",
+    "expected_norms": [
+      "§ 204 StPO",
+      "§ 203 StPO",
+      "§ 205 StPO"
+    ],
+    "expected_keywords": [
+      "Aussetzung des Verfahrens",
+      "Aufklärung der Wahrheit",
+      "Prozessleitung",
+      "richterliches Ermessen",
+      "Antragsrecht"
+    ]
+  }
+]

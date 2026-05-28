@@ -1,0 +1,129 @@
+[
+  {
+    "skill": "europarecht",
+    "n_questions": 5,
+    "avg_score": 78.4,
+    "hallucination_rate": 0.0,
+    "worst_score": 55.8,
+    "best_score": 91.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein niederländischer Käsehersteller möchte seinen Gouda-Käse in Deutschland verkaufen. Die deutschen Behörden verweigern die Zulassung, weil der Käse nicht den deutschen Mindestfettgehalt-Anforderungen entspricht, obwohl er in den Niederlanden rechtmäßig hergestellt wurde. Ist diese Maßnahme mit dem AEUV vereinbar, und welche Norm ist einschlägig?",
+        "category": "Warenverkehrsfreiheit",
+        "score": 90.8,
+        "answer_excerpt": "# Vereinbarkeit mit dem AEUV\n\nDie Maßnahme der deutschen Behörden ist **nicht mit dem AEUV vereinbar**.\n\n## Einschlägige Norm: Art. 34 AEUV\n\nDie Warenverkehrsfreiheit ist in **Art. 34–36 AEUV** gerege",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 26.0
+      },
+      {
+        "id": 2,
+        "question": "Eine französische Unternehmensberaterin möchte in Deutschland dauerhaft eine Niederlassung eröffnen, wird aber von der zuständigen Kammer mit der Begründung abgelehnt, sie habe kein deutsches Examen. Welche Grundfreiheit schützt sie, welche AEUV-Norm ist einschlägig, und unter welchen Voraussetzungen darf Deutschland die Zulassung beschränken?",
+        "category": "Niederlassungsfreiheit",
+        "score": 55.8,
+        "answer_excerpt": "# Antwort zur Niederlassungsfreiheit einer französischen Unternehmensberaterin\n\n## Einschlägige Grundfreiheit und AEUV-Norm\n\nDie französische Beraterin wird durch die **Niederlassungsfreiheit** geschü",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.25,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 14.5
+      },
+      {
+        "id": 3,
+        "question": "Ein polnischer Bauunternehmer entsendet seine in Polen angestellten Mitarbeiter für drei Monate zu einem Bauprojekt nach Deutschland. Das Bundesministerium möchte wissen, ob und in welchem Umfang deutsches Arbeitnehmer-Schutzrecht angewendet werden darf, ohne die unionsrechtliche Dienstleistungsfreiheit zu verletzen.",
+        "category": "Dienstleistungsfreiheit",
+        "score": 62.8,
+        "answer_excerpt": "# Anwendbarkeit deutschen Arbeitnehmer-Schutzrechts auf entsendete polnische Arbeitnehmer\n\nLeider enthalten die bereitgestellten Quellen keine direkte Regelung zur Entsendung von Arbeitnehmern oder zu",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eugh_urteil",
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.5
+      },
+      {
+        "id": 4,
+        "question": "Deutschland gewährt staatliche Beihilfen in Höhe von 50 Millionen Euro an einen insolventen Automobilhersteller. Die EU-Kommission leitet ein Verfahren ein. Welche AEUV-Normen regeln das Beihilfenrecht, und unter welchen Voraussetzungen können staatliche Beihilfen ausnahmsweise zulässig sein?",
+        "category": "Beihilfenrecht",
+        "score": 91.8,
+        "answer_excerpt": "# Beihilfenrecht in der EU - Antwort zur Frage\n\nLeider können die bereitgestellten Quellen die Frage nicht angemessen beantworten. Die Quellen enthalten primär deutsches Verfassungsrecht (Grundgesetz-",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 2,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.0
+      },
+      {
+        "id": 5,
+        "question": "Ein deutsches Gericht muss entscheiden, ob die Auslegung von Art. 6 der DSGVO mit dem Unionsrecht vereinbar ist. Es hat Zweifel, ist aber letztinstanzliches Gericht. Welche Pflichten ergeben sich aus Art. 267 AEUV, und wann ist eine Vorlage zum EuGH ausnahmsweise entbehrlich (acte-clair-Doktrin)?",
+        "category": "Vorabentscheidungsverfahren",
+        "score": 91.0,
+        "answer_excerpt": "# Pflichten aus Art. 267 AEUV und acte-clair-Doktrin\n\n## Allgemeine Vorlagepflicht\n\nAls letztinstanzliches Gericht ist das deutsche Gericht grundsätzlich zur Vorlage beim EuGH verpflichtet, wenn es Zw",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "eugh_urteil",
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 13.2
+      }
+    ],
+    "duration_s": 78.7
+  }
+]

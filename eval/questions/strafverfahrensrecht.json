@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "skill": "strafverfahrensrecht",
+    "question": "Ein Angeklagter wird wegen einer Straftat verurteilt. Nach Eröffnung des Hauptverfahrens möchte er erstmals geltend machen, dass das Gericht örtlich unzuständig ist. Bis wann kann er diesen Einwand der Unzuständigkeit erheben?",
+    "expected_norms": [
+      "§ 16"
+    ],
+    "expected_keywords": [
+      "Einwand",
+      "Gericht",
+      "Vernehmung zur Sache"
+    ],
+    "category": "Gerichtsstand und Zuständigkeit"
+  },
+  {
+    "id": 2,
+    "skill": "strafverfahrensrecht",
+    "question": "Zwei zusammenhängende Strafsachen gehören einzeln zu verschiedenen Gerichten. Eine der Straftat betrifft eine besondere Strafkammer nach § 74 Abs. 2 des Gerichtsverfassungsgesetzes. Nach welcher Regelung können diese Strafsachen verbunden werden und bei welchem Gericht?",
+    "expected_norms": [
+      "§ 2",
+      "§ 74"
+    ],
+    "expected_keywords": [
+      "Verbindung",
+      "Strafsachen",
+      "Strafkammer"
+    ],
+    "category": "Verbindung von Strafsachen"
+  },
+  {
+    "id": 3,
+    "skill": "strafverfahrensrecht",
+    "question": "Der Gerichtsstand wird durch den Ort begründet, an dem die Straftat begangen wurde. Ein Beschuldigter wird in einem anderen Bezirk ergriffen. Welche zusätzlichen Gerichtsstände sind nach StPO möglich?",
+    "expected_norms": [
+      "§ 7",
+      "§ 8",
+      "§ 9"
+    ],
+    "expected_keywords": [
+      "Gerichtsstand",
+      "Bezirk",
+      "Wohnsitz"
+    ],
+    "category": "Örtliche Zuständigkeit"
+  },
+  {
+    "id": 4,
+    "skill": "strafverfahrensrecht",
+    "question": "Ein Angeklagter ist wegen mehrerer Straftaten angeklagt. Wann liegt ein Zusammenhang zwischen diesen Straftaten vor, der eine Verbindung ermöglicht?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Zusammenhang",
+      "Straftaten",
+      "Teilnehmer"
+    ],
+    "category": "Begriff des Zusammenhangs"
+  },
+  {
+    "id": 5,
+    "skill": "strafverfahrensrecht",
+    "question": "Nach Eröffnung des Hauptverfahrens beantragt die Staatsanwaltschaft die Verbindung zweier bisher getrennter Strafsachen. Wer entscheidet über diesen Antrag und welche Voraussetzungen müssen erfüllt sein?",
+    "expected_norms": [
+      "§ 4"
+    ],
+    "expected_keywords": [
+      "Staatsanwaltschaft",
+      "Gericht höherer Ordnung",
+      "Beschluß"
+    ],
+    "category": "Verbindung nach Hauptverfahren"
+  }
+]

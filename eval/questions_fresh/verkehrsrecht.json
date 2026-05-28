@@ -1,0 +1,83 @@
+[
+  {
+    "question": "Der 45-jährige A ist Inhaber einer gültigen Fahrerlaubnis der Klasse B. Bei einer Verkehrskontrolle wird ein Atemalkoholtest durchgeführt, der 0,52 mg/l Alkohol in der Atemluft ergibt. A behauptet, er sei fahrtüchtig und das Gerät fehlerhaft. Ist A berechtigt, die Fahrerlaubnis zu behalten, und welche Rechtsfolgen drohen nach dem StVG?",
+    "expected_norms": [
+      "§ 24a StVG",
+      "§ 24 StVG",
+      "§ 25 StVG"
+    ],
+    "expected_keywords": [
+      "Atemalkoholtest",
+      "Blutprobe",
+      "Ordnungswidrigkeit",
+      "Straftat",
+      "Fahrverbot",
+      "Punktesystem"
+    ]
+  },
+  {
+    "question": "Der Fahrzeughalter H haftet für den PKW des Unternehmers U. Während einer Geschäftsfahrt verursacht U mit diesem PKW einen Verkehrsunfall mit Sachschäden in Höhe von 25.000 EUR beim Geschädigten G. H versichert das Fahrzeug bei der Versicherung V. Welche Haftungsgrundlagen und Versicherungsleistungen sind relevant nach dem StVG und BGB?",
+    "expected_norms": [
+      "§ 7 StVG",
+      "§ 8 StVG",
+      "§ 116 StVG"
+    ],
+    "expected_keywords": [
+      "Halter- und Fahrerhaftung",
+      "Verschuldenshaftung",
+      "Gefährdungshaftung",
+      "Kaskoversicherung",
+      "Haftpflichtversicherung",
+      "Regress"
+    ]
+  },
+  {
+    "question": "Der 67-jährige B besitzt seit 50 Jahren eine Fahrerlaubnis der Klasse B und wurde noch nie auffällig. Die Fahrerlaubnisbehörde fordert ihn auf, sich einer ärztlichen Untersuchung nach der Fahrerlaubnis-Verordnung zu unterziehen, nachdem sein Hausarzt eine Schlafapnoe diagnostiziert hat. Kann B gegen diese Anordnung vorgehen und welche Rechtsgrundlagen sind einschlägig?",
+    "expected_norms": [
+      "§ 11 FeV",
+      "§ 2 FeV",
+      "§ 46 StVG"
+    ],
+    "expected_keywords": [
+      "Fahrerlaubnis-Verordnung",
+      "Fahreignung",
+      "Eignungsmangel",
+      "medizinische Untersuchung",
+      "Verwaltungsverfahren"
+    ]
+  },
+  {
+    "question": "Der Pkw-Fahrer F kollidiert mit einem Fahrradfahrer R. R erleidet Frakturen und Beulen im Wert von 8.000 EUR. F behauptet, R sei mit hoher Geschwindigkeit und ohne Licht in die Kreuzung gefahren. R sagt, er habe Vorfahrt gehabt. Wie wird die Schadensersatzpflicht nach dem BGB und StVG unter Berücksichtigung einer möglichen Mitverschuldung beurteilt?",
+    "expected_norms": [
+      "§ 7 StVG",
+      "§ 823 Abs. 1 BGB",
+      "§ 254 BGB"
+    ],
+    "expected_keywords": [
+      "Verkehrshaftung",
+      "Mitverschulden",
+      "Haftungsquote",
+      "Schadensersatz",
+      "Kausalität",
+      "Verschuldensprinzip"
+    ]
+  },
+  {
+    "question": "Der Lkw-Fahrer L wird bei einer Kontrolle mit einem manipulierten Fahrtenschreiber erwischt. Gleichzeitig hatte L vor einer Woche eine Geschwindigkeitsüberschreitung von 15 km/h außerorts. Welche Sanktionen drohen L nach dem StVG und dem Punktesystem, und wie wirken sich wiederholte Verstöße auf die Fahrerlaubnis aus?",
+    "expected_norms": [
+      "§ 6 StVG",
+      "§ 4 StVG",
+      "§ 25 StVG",
+      "Fahrerlaubnis-Verordnung"
+    ],
+    "expected_keywords": [
+      "Ordnungswidrigkeit",
+      "Straftat",
+      "Fahrtenschreiber",
+      "Punkte im FAER",
+      "Fahrverbot",
+      "Fahrerlaubnisentzug",
+      "Wiederholungstat"
+    ]
+  }
+]

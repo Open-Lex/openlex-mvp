@@ -1,0 +1,72 @@
+[
+  {
+    "question": "Der 75-jährige Werner errichtet ein eigenhändiges Testament, in dem er seinen gesamten Nachlass seinem Neffen Paul zuspricht und seinen Sohn Karl enterbt. Werner hat neben Karl noch zwei weitere Kinder (Petra und Klaus). Werner verstirbt kurz darauf. Karl fordert nun seinen Pflichtteil. Ist Karl berechtigt, seinen Pflichtteil zu verlangen, und wie wird dieser berechnet? Welche Rolle spielt dabei § 2303 BGB?",
+    "expected_norms": [
+      "§ 2303 BGB",
+      "§ 2309 BGB",
+      "§ 2310 BGB"
+    ],
+    "expected_keywords": [
+      "Pflichtteilsberechtigte",
+      "Pflichtteilsquote",
+      "Enterben",
+      "Nachlasswert"
+    ]
+  },
+  {
+    "question": "Heinz und seine Frau Gisela schließen einen Erbvertrag, in dem Heinz Gisela zum alleinigen Erben einsetzt und sich verpflichtet, diese Regelung nicht einseitig zu ändern. Drei Jahre später möchte Heinz sein Testament so abändern, dass auch sein Sohn berücksichtigt wird. Kann Heinz diese Änderung vornehmen? Welche Bindungswirkung hat der Erbvertrag gemäß § 2274 ff. BGB?",
+    "expected_norms": [
+      "§ 2274 BGB",
+      "§ 2289 BGB",
+      "§ 2290 BGB"
+    ],
+    "expected_keywords": [
+      "Erbvertrag",
+      "Bindungswirkung",
+      "Einseitige Abänderung",
+      "Vertragsfreiheit"
+    ]
+  },
+  {
+    "question": "Martina verfasst ein Testament, unterzeichnet es jedoch nicht eigenhändig, sondern lässt ihre Freundin unterschreiben, da sie selbst Rheuma hat. Das Testament ist ansonsten formal korrekt ausgestaltet. Nach Martinas Tod wird die Gültigkeit des Testaments angegriffen. Ist das Testament nach § 2247 BGB wirksam oder ist es wegen fehlender Testierfreiheit ungültig?",
+    "expected_norms": [
+      "§ 2247 BGB",
+      "§  2242 BGB",
+      "§ 2253 BGB"
+    ],
+    "expected_keywords": [
+      "Eigenhändigkeit",
+      "Testierfreiheit",
+      "Testierfähigkeit",
+      "Formgültigkeit"
+    ]
+  },
+  {
+    "question": "Der verstorbene Unternehmer Roland hinterlässt erhebliche Schulden: Ein Darlehen von 150.000 EUR bei der Bank, Handwerkerrechnungen von 30.000 EUR und private Darlehen von 20.000 EUR. Der Nachlass hat einen Vermögenswert von 120.000 EUR. Die Gläubiger fordern Befriedigung. Wie werden die Nachlassgläubiger nach § 2054 BGB und § 1967 BGB befriedigt und welche Rechte haben sie gegen die Erben?",
+    "expected_norms": [
+      "§ 2054 BGB",
+      "§ 1967 BGB",
+      "§ 1968 BGB"
+    ],
+    "expected_keywords": [
+      "Nachlassgläubiger",
+      "Nachlasshaftung",
+      "Ordentliche Befriedigung",
+      "Nachlass übersteigt Schulden nicht"
+    ]
+  },
+  {
+    "question": "Die verwitwete Rentnerin Sigrid errichtet ein notarielles Testament, in dem sie ihre Enkelin Susanne zur alleinigen Erbin einsetzt. Sigrid hat aber noch zwei andere Kinder (Ralf und Monika), die jeweils zwei Kinder haben. Ralf und Monika sind unzufrieden und wollen ihre Pflichtteilsrechte geltend machen. Wer hat einen Pflichtteilsanspruch und in welcher Quote gemäß § 2309 BGB?",
+    "expected_norms": [
+      "§ 2309 BGB",
+      "§ 2303 BGB",
+      "§ 1924 BGB"
+    ],
+    "expected_keywords": [
+      "Abkömmlinge",
+      "Pflichtteilsquote",
+      "gesetzliche Erbfolge",
+      "Repräsentation"
+    ]
+  }
+]

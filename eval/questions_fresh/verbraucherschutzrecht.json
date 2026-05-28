@@ -1,0 +1,72 @@
+[
+  {
+    "question": "Ein Verbraucher kauft online einen Laptop für 899 Euro und erhält die Ware nach 2 Tagen. Er öffnet die Verpackung, testet das Gerät für 3 Stunden und stellt fest, dass ihm das Betriebssystem nicht gefällt. Nach 8 Tagen nach Erhalt schickt er den Laptop ungenutzt zurück und verlangt Rückerstattung des Kaufpreises. Der Online-Händler argumentiert, dass der Verbraucher die Ware geöffnet und getestet habe und daher nicht mehr von seinem Widerrufsrecht Gebrauch machen könne. Kann der Verbraucher trotz Öffnung und Test des Produkts erfolgreich sein?",
+    "expected_norms": [
+      "§ 355 BGB",
+      "§ 356 BGB",
+      "§ 357 BGB"
+    ],
+    "expected_keywords": [
+      "Widerrufsrecht",
+      "Prüfhandlungen",
+      "Sachgemäße Verwendung",
+      "Widerspruch zum Widerrufsrecht"
+    ]
+  },
+  {
+    "question": "Ein Telekommunikationsunternehmen formuliert in seinen AGB eine Klausel: 'Der Kunde verzichtet auf jegliche Gewährleistungsrechte. Alle Gewährleistungsansprüche sind ausgeschlossen.' Ein Verbraucher möchte diese Klausel nach § 307 BGB angreifen. Ist die Klausel wirksam oder stellt sie eine überraschende Klausel dar, die den Verbraucher unangemessen benachteiligt?",
+    "expected_norms": [
+      "§ 307 BGB",
+      "§ 308 BGB",
+      "§ 309 BGB"
+    ],
+    "expected_keywords": [
+      "AGB-Kontrolle",
+      "Überraschende Klausel",
+      "Unangemessene Benachteiligung",
+      "Transparenzgebot"
+    ]
+  },
+  {
+    "question": "Ein Online-Shop speichert die Kreditkartendaten eines Kunden nach einem Kauf automatisch und ohne explizite Einwilligung zur zukünftigen Verwendung. Der Shop begründet dies damit, dass dies zur Vertragsdurchführung notwendig sei. Der Kunde erfährt davon zufällig beim nächsten Besuch und verlangt Löschung. Verstößt das Verfahren gegen die DSGVO und kann der Kunde Schadensersatz verlangen?",
+    "expected_norms": [
+      "Art. 7 DSGVO",
+      "Art. 17 DSGVO",
+      "Art. 82 DSGVO"
+    ],
+    "expected_keywords": [
+      "Rechtmäßigkeit der Verarbeitung",
+      "Einwilligung",
+      "Speicherbegrenzung",
+      "Schadensersatzanspruch"
+    ]
+  },
+  {
+    "question": "Ein Versandhändler schreibt auf der Produktseite in klein gedruckter Schrift: 'Das Widerrufsrecht beträgt 7 Tage nach Kauf, nicht 14 Tage wie gesetzlich vorgesehen. Ausgenommen sind alle Artikel der Kategorie Elektronik.' Ein Verbraucher bestellt ein Tablet und möchte nach 10 Tagen widerrufen. Der Händler lehnt ab und beruft sich auf seine AGB-Klausel. Ist diese Klausel wirksam?",
+    "expected_norms": [
+      "§ 357 Abs. 1 BGB",
+      "§ 309 Nr. 7 BGB",
+      "§ 305 Abs. 2 BGB"
+    ],
+    "expected_keywords": [
+      "Widerrufsrecht",
+      "Ausschluss des Widerrufsrechts",
+      "Transparenzgebot",
+      "Kleine Druckschrift"
+    ]
+  },
+  {
+    "question": "Ein Fitnessstudio versendet einen Newsletter an einen Kunden, der sich beim Gym angemeldet hat. Der Newsletter enthält ausschließlich Informationen zu neuen Fitnesskursen und Hygiene-Maßnahmen. Der Kunde hat nie explizit in den Newsletter eingewilligt, erhält aber auch keine Opt-out-Option. Das Studio argumentiert, dass es sich um notwendige Informationen zur Vertragsdurchführung handelt. Verstößt dies gegen die DSGVO und welche Anforderungen müssen erfüllt sein?",
+    "expected_norms": [
+      "Art. 21 DSGVO",
+      "Art. 7 DSGVO",
+      "Art. 4 Nr. 11 DSGVO"
+    ],
+    "expected_keywords": [
+      "Einwilligung",
+      "Opt-in-Prinzip",
+      "Berechtigtes Interesse",
+      "Informationspflichten"
+    ]
+  }
+]

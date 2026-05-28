@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "skill": "steuerrecht",
+    "question": "Ein Finanzamt muss entscheiden, ob es eine Maßnahme durchführt. Welche gesetzliche Grundlage regelt, wie das Finanzamt sein Ermessen ausüben darf?",
+    "expected_norms": [
+      "§ 5"
+    ],
+    "expected_keywords": [
+      "Ermessen",
+      "Finanzbehörden",
+      "Gesetz"
+    ],
+    "category": "Allgemeine Verfahrensvorschriften"
+  },
+  {
+    "id": 2,
+    "skill": "steuerrecht",
+    "question": "Welche Behördenarten werden nach der Abgabenordnung als Finanzbehörden definiert und welche Normen regeln dies?",
+    "expected_norms": [
+      "§ 6"
+    ],
+    "expected_keywords": [
+      "Finanzbehörden",
+      "Behörden",
+      "Zuständigkeit"
+    ],
+    "category": "Behördliche Zuständigkeit"
+  },
+  {
+    "id": 3,
+    "skill": "steuerrecht",
+    "question": "Eine Kapitalgesellschaft hat ihren satzungsmäßigen Sitz in der Schweiz, aber ihre tatsächliche Geschäftsleitung in Deutschland. Unterliegt sie der deutschen Körperschaftsteuer, und welche gesetzliche Norm regelt die unbeschränkte Steuerpflicht von Körperschaften?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "unbeschränkte Steuerpflicht",
+      "Körperschaft",
+      "Sitz",
+      "Geschäftsleitung"
+    ],
+    "category": "Steuerliche Begriffsbestimmungen"
+  },
+  {
+    "id": 4,
+    "skill": "steuerrecht",
+    "question": "Welche Abgaben zählen nach § 3 der Abgabenordnung zu den steuerlichen Nebenleistungen, und wie werden Zinsen und Säumniszuschläge eingeordnet?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Nebenleistungen",
+      "Zinsen",
+      "Zuschläge"
+    ],
+    "category": "Steuerschuldrecht"
+  },
+  {
+    "id": 5,
+    "skill": "steuerrecht",
+    "question": "Ein Bürger fragt, ob die Vorschriften der Abgabenordnung auch für Gewerbesteuer und Grundsteuer gelten, wenn deren Verwaltung den Gemeinden übertragen wurde. Wie regelt die AO ihren Anwendungsbereich?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Realsteuern",
+      "Abgabenordnung",
+      "Gemeinden",
+      "Finanzbehörde"
+    ],
+    "category": "Anwendungsbereich der Abgabenordnung"
+  }
+]

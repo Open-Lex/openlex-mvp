@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "skill": "agrarrecht",
+    "question": "Ein Pächter übernimmt das Inventar eines verpachteten Grundstücks zum Schätzwert und möchte wissen, welche Risiken er trägt und wie er damit umgehen darf. Was regelt das Gesetz zur Inventarübernahme?",
+    "expected_norms": [
+      "§ 582a"
+    ],
+    "expected_keywords": [
+      "Pächter",
+      "Inventar",
+      "Schätzwert"
+    ],
+    "category": "Inventarverwaltung"
+  },
+  {
+    "id": 2,
+    "skill": "agrarrecht",
+    "question": "Der Verpächter einer Pachtsache möchte Verbesserungen durchführen. Welche Maßnahmen muss der Pächter dulden und welche Entschädigungen stehen ihm zu?",
+    "expected_norms": [
+      "§ 588"
+    ],
+    "expected_keywords": [
+      "Verpächter",
+      "Pächter",
+      "Pachtsache"
+    ],
+    "category": "Erhaltung und Verbesserung"
+  },
+  {
+    "id": 3,
+    "skill": "agrarrecht",
+    "question": "Ein Pächter eines Betriebs plant wertverbessernde Verwendungen und benötigt die Zustimmung des Verpächters. Welche rechtlichen Möglichkeiten hat er, wenn der Verpächter zustimmt oder ablehnt?",
+    "expected_norms": [
+      "§ 591"
+    ],
+    "expected_keywords": [
+      "Pächter",
+      "Verwendungen",
+      "Verpächters"
+    ],
+    "category": "Pächterrechte"
+  },
+  {
+    "id": 4,
+    "skill": "agrarrecht",
+    "question": "Wie lange sind Ersatzansprüche zwischen Pächter und Verpächter gültig, und wann beginnt die Verjährung nach Beendigung des Pachtverhältnisses?",
+    "expected_norms": [
+      "§ 591b"
+    ],
+    "expected_keywords": [
+      "Pächter",
+      "Beendigung",
+      "Pachtverhältnisses"
+    ],
+    "category": "Verjährung"
+  },
+  {
+    "id": 5,
+    "skill": "agrarrecht",
+    "question": "Ein Landwirt pachtet einen Betrieb und hat Fragen zur korrekten Dokumentation beim Pachtbeginn und Pachtende. Welche Anforderungen an die Beschreibung der Pachtsache sieht das Gesetz vor?",
+    "expected_norms": [
+      "§ 585b"
+    ],
+    "expected_keywords": [
+      "Pachtsache",
+      "Beendigung",
+      "Landwirtschaftsgericht"
+    ],
+    "category": "Dokumentation"
+  }
+]

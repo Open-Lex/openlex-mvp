@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "skill": "it_recht",
+    "question": "Welche Ziele verfolgt die Verordnung hinsichtlich des Online-Umfelds?",
+    "expected_norms": [
+      "Artikel 1"
+    ],
+    "expected_keywords": [
+      "Innovationen",
+      "Grundrechte",
+      "Verbraucherschutz"
+    ],
+    "min_sources": 1,
+    "category": "Ziele der Verordnung"
+  },
+  {
+    "id": 2,
+    "skill": "it_recht",
+    "question": "Für welche Arten von Dienstleistungen gilt die Verordnung?",
+    "expected_norms": [
+      "Artikel 2"
+    ],
+    "expected_keywords": [
+      "Vermittlungsdienste",
+      "Nutzer",
+      "Binnenmarkt"
+    ],
+    "min_sources": 1,
+    "category": "Geltungsbereich"
+  },
+  {
+    "id": 3,
+    "skill": "it_recht",
+    "question": "Was wird unter dem Begriff 'Dienst der Informationsgesellschaft' verstanden?",
+    "expected_norms": [
+      "Artikel 3",
+      "Richtlinie"
+    ],
+    "expected_keywords": [
+      "Informationsgesellschaft",
+      "Dienst",
+      "Richtlinie"
+    ],
+    "min_sources": 2,
+    "category": "Begriffsbestimmungen"
+  },
+  {
+    "id": 4,
+    "skill": "it_recht",
+    "question": "Wer gilt als Nutzer im Sinne der Verordnung?",
+    "expected_norms": [
+      "Artikel 3"
+    ],
+    "expected_keywords": [
+      "Nutzer",
+      "Vermittlungsdienst",
+      "natürliche Person"
+    ],
+    "min_sources": 1,
+    "category": "Begriffsbestimmungen"
+  },
+  {
+    "id": 5,
+    "skill": "it_recht",
+    "question": "Gilt die Verordnung für alle Arten von Dienstleistungen?",
+    "expected_norms": [
+      "Artikel 2"
+    ],
+    "expected_keywords": [
+      "Dienstleistungen",
+      "Vermittlungsdienste",
+      "Ausnahmen"
+    ],
+    "min_sources": 1,
+    "category": "Geltungsbereich"
+  },
+  {
+    "id": 6,
+    "skill": "it_recht",
+    "question": "Welche Rolle spielt der Grundsatz des Verbraucherschutzes in der Verordnung?",
+    "expected_norms": [
+      "Artikel 1 Absatz 1"
+    ],
+    "expected_keywords": [
+      "Verbraucherschutz",
+      "Grundrechte",
+      "Innovationen"
+    ],
+    "min_sources": 1,
+    "category": "Ziele der Verordnung"
+  },
+  {
+    "id": 7,
+    "skill": "it_recht",
+    "question": "Wie definiert die Verordnung den Begriff 'Vermittlungsdienst'?",
+    "expected_norms": [
+      "Artikel 3"
+    ],
+    "expected_keywords": [
+      "Vermittlungsdienst",
+      "Dienst",
+      "Informationsgesellschaft"
+    ],
+    "min_sources": 1,
+    "category": "Begriffsbestimmungen"
+  },
+  {
+    "id": 8,
+    "skill": "it_recht",
+    "question": "Gilt die Verordnung auch für Dienstleistungen, die außerhalb der Union angeboten werden?",
+    "expected_norms": [
+      "Artikel 2 Absatz 1"
+    ],
+    "expected_keywords": [
+      "Geltungsbereich",
+      "Vermittlungsdienste",
+      "Union"
+    ],
+    "min_sources": 1,
+    "category": "Geltungsbereich"
+  },
+  {
+    "id": 9,
+    "skill": "it_recht",
+    "question": "Welche Bedeutung hat die Richtlinie (EU) 2015/1535 für die Verordnung?",
+    "expected_norms": [
+      "Artikel 3 Buchstabe a",
+      "Richtlinie (EU) 2015/1535"
+    ],
+    "expected_keywords": [
+      "Richtlinie",
+      "Informationsgesellschaft",
+      "Dienst"
+    ],
+    "min_sources": 2,
+    "category": "Begriffsbestimmungen"
+  },
+  {
+    "id": 10,
+    "skill": "it_recht",
+    "question": "Wie werden die Grundrechte in der Verordnung geschützt?",
+    "expected_norms": [
+      "Artikel 1 Absatz 1"
+    ],
+    "expected_keywords": [
+      "Grundrechte",
+      "Verbraucherschutz",
+      "Innovationen"
+    ],
+    "min_sources": 1,
+    "category": "Ziele der Verordnung"
+  }
+]

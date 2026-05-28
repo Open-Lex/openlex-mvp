@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "kaufrecht",
+    "n_questions": 5,
+    "avg_score": 60.3,
+    "hallucination_rate": 0.0,
+    "worst_score": 49.5,
+    "best_score": 64.0,
+    "questions": [
+      {
+        "id": null,
+        "question": "Ein Kaeufer erwirbt einen Gebrauchtwagen. Nach vier Monaten zeigen sich erhebliche Rostschaeden, die beim Kauf nicht erkennbar waren. Der Haendler bestreitet einen Mangel bei Gefahruebergang. Welche Ansprueche hat der Kaeufer und was ist ein Sachmangelim Sinne des BGB?",
+        "category": "",
+        "score": 64.0,
+        "answer_excerpt": "# Ansprüche des Käufers bei Rostschäden am Gebrauchtwagen\n\n## Definition Sachmangel\n\nNach § 434 BGB liegt ein Sachmangel vor, wenn die Sache bei Gefahrübergang nicht den vereinbarten Anforderungen ent",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 28.0
+      },
+      {
+        "id": null,
+        "question": "Ein Verbraucher kauft einen neuen Laptop. Nach zwei Monaten faellt das Display aus. Der Haendler moechte reparieren, der Kaeufer besteht auf einem Ersatzgeraet. Hat der Kaeufer ein Wahlrecht zwischen Reparatur und Neulieferung bei der Nacherfullung?",
+        "category": "",
+        "score": 62.0,
+        "answer_excerpt": "# Wahlrecht bei Nacherfüllung - Reparatur vs. Neulieferung\n\nJa, der Käufer hat ein Wahlrecht zwischen Reparatur und Neulieferung.\n\n## Rechtliche Grundlage\n\nNach **§ 439 Abs. 1 BGB** kann der Käufer al",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.25,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 19.3
+      },
+      {
+        "id": null,
+        "question": "Ein Verbraucher kauft ein neues Elektrofahrrad. Nach fuenf Monaten versagt der Akku. Der Haendler behauptet, der Defekt sei durch unsachgemaesse Nutzung entstanden. Wer muss im Gewaehrleistungsstreit beweisen, ob der Mangel bereits bei Gefahruebergang vorlag?",
+        "category": "",
+        "score": 49.5,
+        "answer_excerpt": "# Beweislast bei Gewährleistungsmängeln beim Elektrofahrrad\n\n## Beweislastumkehr zugunsten des Verbrauchers\n\nIm vorliegenden Fall greift die **Beweislastumkehr des § 477 BGB** zugunsten des Verbrauche",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.25,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 18.8
+      },
+      {
+        "id": null,
+        "question": "Ein Autohersteller gewaehrt beim Neuwagenkauf eine fuenfjaehrige Herstellergarantie auf den Antriebsstrang. Nach vier Jahren tritt ein Getriebedefekt auf. Welche Ansprueche hat der Kaeufer aus der Garantie und wie unterscheidet sich die Garantie von der gesetzlichen Sachmaengelhaftung?",
+        "category": "",
+        "score": 64.0,
+        "answer_excerpt": "# Ansprüche aus der Herstellergarantie und Unterschiede zur Sachmaengelhaftung\n\n## Ansprüche des Käufers aus der Garantie\n\nDer Käufer kann die in der fünfjährigen Herstellergarantie verankerten Leistu",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 19.9
+      },
+      {
+        "id": null,
+        "question": "Ein Kaeufer erwirbt ein Einfamilienhaus und entdeckt zwei Jahre nach dem Kauf erhebliche Feuchtigkeitsschaeden im Keller, die beim Kauf nicht sichtbar waren. Der Verkaeufer beruft sich auf Verjaahrung. Welche Verjaahrungsfrist gilt fuer Sachmaengelansprueche beim Kauf eines Bauwerks?",
+        "category": "",
+        "score": 62.0,
+        "answer_excerpt": "# Verjährungsfrist für Sachmängelansprüche beim Hauskauf\n\n## Anwendbare Verjährungsfrist\n\nFür Sachmängelansprüche beim Kauf eines Einfamilienhauses (Bauwerk) gilt gemäß **§ 438 Abs. 1 Nr. 2 a) BGB ein",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.25,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 13.6
+      }
+    ],
+    "duration_s": 101.1
+  }
+]

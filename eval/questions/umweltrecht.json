@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "skill": "umweltrecht",
+    "question": "Ein Unternehmen möchte eine neue Produktionsstätte errichten, die erhebliche Luftverunreinigungen verursachen kann. Welche Genehmigung ist nach § 4 BImSchG erforderlich und welche Genehmigungsvoraussetzungen müssen nach § 6 BImSchG erfüllt sein?",
+    "expected_norms": [
+      "§ 4 BImSchG",
+      "§ 6 BImSchG"
+    ],
+    "expected_keywords": [
+      "Genehmigungspflicht",
+      "Immissionsschutz",
+      "Luftverunreinigung",
+      "BImSchG"
+    ],
+    "category": "Genehmigungspflicht"
+  },
+  {
+    "id": 2,
+    "skill": "umweltrecht",
+    "question": "Ein Betreiber einer genehmigten Industrieanlage plant, seine Produktion erheblich zu erweitern. Ab wann ist eine Änderung nach § 16 BImSchG als \"wesentlich\" einzustufen und bedarf einer erneuten Genehmigung?",
+    "expected_norms": [
+      "§ 16 BImSchG",
+      "§ 15 BImSchG"
+    ],
+    "expected_keywords": [
+      "wesentliche Änderung",
+      "Genehmigungspflicht",
+      "Änderungsgenehmigung",
+      "BImSchG"
+    ],
+    "category": "Änderungsanzeige"
+  },
+  {
+    "id": 3,
+    "skill": "umweltrecht",
+    "question": "Welche Pflichten hat der Betreiber einer genehmigungsbedürftigen Anlage gemäß BImSchG, um schädliche Umwelteinwirkungen zu vermeiden und die Anlagensicherheit zu gewährleisten?",
+    "expected_norms": [
+      "§ 5"
+    ],
+    "expected_keywords": [
+      "Betreiberpflichten",
+      "Anforderungen",
+      "Genehmigung"
+    ],
+    "category": "Betreiberpflichten"
+  },
+  {
+    "id": 4,
+    "skill": "umweltrecht",
+    "question": "Unter welchen Bedingungen kann eine Genehmigung für eine genehmigungsbedürftige Anlage erteilt werden? Welche Norm enthält die entsprechenden Genehmigungsvoraussetzungen?",
+    "expected_norms": [
+      "§ 6"
+    ],
+    "expected_keywords": [
+      "Genehmigung",
+      "Anforderungen",
+      "Betreiber"
+    ],
+    "category": "Genehmigungsvoraussetzungen"
+  },
+  {
+    "id": 5,
+    "skill": "umweltrecht",
+    "question": "Welche Anforderungen an den Betrieb genehmigungsbedürftiger Anlagen können durch Rechtsverordnungen nach § 7 BImSchG festgelegt werden, und welche Regelungsbereiche umfasst diese Verordnungsermächtigung?",
+    "expected_norms": [
+      "§ 7"
+    ],
+    "expected_keywords": [
+      "Rechtsverordnung",
+      "Anlagen",
+      "Anforderungen"
+    ],
+    "category": "Normgebung"
+  }
+]

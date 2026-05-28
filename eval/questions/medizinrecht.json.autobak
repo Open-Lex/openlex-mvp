@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "skill": "medizinrecht",
+    "question": "Ein Arzt verschreibt einem Patienten ein Arzneimittel, das später schwerwiegende Nebenwirkungen verursacht. Kann der Patient Schadensersatz fordern, wenn der Arzt bei der Verschreibung gegen die Fachinformation verstoßen hat?",
+    "expected_norms": [
+      "§ 823",
+      "§ 11a"
+    ],
+    "expected_keywords": [
+      "Arzneimittel",
+      "Angaben",
+      "Gesundheit"
+    ],
+    "category": "Haftung und Schadensersatz"
+  },
+  {
+    "id": 2,
+    "skill": "medizinrecht",
+    "question": "Ein pharmazeutisches Unternehmen möchte ein neuartiges Therapiearzneimittel als individuelle Zubereitung in den Verkehr bringen. Welche behördliche Genehmigung benötigt es und bei welcher Behörde wird der Antrag gestellt?",
+    "expected_norms": [
+      "§ 21a",
+      "§ 4b"
+    ],
+    "expected_keywords": [
+      "Genehmigung",
+      "Bundesoberbehörde",
+      "Arzneimittel"
+    ],
+    "category": "Zulassung und Genehmigung"
+  },
+  {
+    "id": 3,
+    "skill": "medizinrecht",
+    "question": "Eine Entnahmeeinrichtung will erstmals Gewebe zur Verwendung bei Menschen gewinnen. Welche Voraussetzungen und Anforderungen muss sie erfüllen, um die erforderliche Erlaubnis zu erhalten?",
+    "expected_norms": [
+      "§ 20b"
+    ],
+    "expected_keywords": [
+      "Erlaubnis",
+      "Behörde",
+      "Gewebe"
+    ],
+    "category": "Gewebegewinnung und -verarbeitung"
+  },
+  {
+    "id": 4,
+    "skill": "medizinrecht",
+    "question": "Welche Informationen muss der pharmazeutische Unternehmer nach dem Arzneimittelgesetz den behandelnden Ärzten zur Verfügung stellen und wie ist diese Information auszugestalten?",
+    "expected_norms": [
+      "§ 11a",
+      "§ 10"
+    ],
+    "expected_keywords": [
+      "Angaben",
+      "Arzneimittel",
+      "Verkehr"
+    ],
+    "category": "Informationspflichten"
+  },
+  {
+    "id": 5,
+    "skill": "medizinrecht",
+    "question": "Der Inhaber einer Herstellungserlaubnis für Arzneimittel plant eine Änderung in den herzustellenden Arzneimitteln und bei den Räumlichkeiten. Wie muss er vorgehen und welche Fristen gelten?",
+    "expected_norms": [
+      "§ 17",
+      "§ 14"
+    ],
+    "expected_keywords": [
+      "Erlaubnis",
+      "Änderung",
+      "Behörde"
+    ],
+    "category": "Änderungen bei Herstellungserlaubnis"
+  }
+]

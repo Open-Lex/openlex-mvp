@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "skill": "weltraumrecht",
+    "question": "Ein Staat empfängt Informationen, dass Astronauten eines Raumfahrzeugs in Notlage sind und in seinem Territorium notgelandet sind. Welche unmittelbaren Maßnahmen muss der Staat gemäß den internationalen Weltraumabkommen ergreifen?",
+    "expected_norms": [
+      "Art. 1",
+      "Art. 2"
+    ],
+    "expected_keywords": [
+      "Astronauts",
+      "States",
+      "Secretary-General"
+    ],
+    "category": "Rettung und Hilfeleistung"
+  },
+  {
+    "id": 2,
+    "skill": "weltraumrecht",
+    "question": "Ein Staat entdeckt einen Weltraumgegenstand, der von einem anderen Staat gestartet wurde, in seinem Territorium. Wie muss der Staat damit umgehen, und wer trägt die Kosten für die Bergung und Rückgabe?",
+    "expected_norms": [
+      "Art. 5"
+    ],
+    "expected_keywords": [
+      "Space",
+      "Objects",
+      "launching authority"
+    ],
+    "category": "Bergung von Weltraumgegenständen"
+  },
+  {
+    "id": 3,
+    "skill": "weltraumrecht",
+    "question": "Ein internationales Intergovernmental-Organisationen betreibt Weltraumaktivitäten. Unter welchen Voraussetzungen gemäß Art. 6 des Weltraumrettungsabkommens kann sie als 'launching authority' anerkannt werden?",
+    "expected_norms": [
+      "Art. 6"
+    ],
+    "expected_keywords": [
+      "Contracting Parties",
+      "Convention",
+      "organization"
+    ],
+    "category": "Launching Authority und internationale Organisationen"
+  },
+  {
+    "id": 4,
+    "skill": "weltraumrecht",
+    "question": "Ein Staat ratifiziert das Weltraumregistrierungsübereinkommen. Welche Informationen muss dieser Staat als 'State of registry' für jeden Weltraumgegenstand beim Generalsekretär der Vereinten Nationen anmelden?",
+    "expected_norms": [],
+    "expected_keywords": [
+      "Secretary-General",
+      "United Nations",
+      "Convention"
+    ],
+    "category": "Registrierung von Weltraumgegenständen"
+  },
+  {
+    "id": 5,
+    "skill": "weltraumrecht",
+    "question": "Mehrere Staaten starten gemeinsam einen Weltraumgegenstand in die Erdumlaufbahn. Wie bestimmen diese Staaten gemäß Weltraumregistrierungsübereinkommen, welcher Staat diesen Gegenstand registrieren darf?",
+    "expected_norms": [],
+    "expected_keywords": [
+      "States",
+      "launching State",
+      "Agreement"
+    ],
+    "category": "Registrierung bei mehreren Startstaaten"
+  }
+]

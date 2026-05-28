@@ -1,0 +1,68 @@
+[
+  {
+    "question": "Der 19-jährige Student Philipp betreibt seit 6 Monaten einen Online-Shop für Vintage-Kleidung. Er hat bislang einen Jahresumsatz von 15.000 Euro erreicht und beschäftigt sich hauptberuflich mit seinem Studium. Ist Philipp gemäß § 1 Abs. 1 HGB Kaufmann und welche Konsequenzen folgen daraus?",
+    "expected_norms": [
+      "§ 1 Abs. 1 HGB",
+      "§ 2 HGB"
+    ],
+    "expected_keywords": [
+      "Gewerbebetrieb",
+      "Handelsbetrieb",
+      "Kaufmannseigenschaft",
+      "Handelsregister"
+    ]
+  },
+  {
+    "question": "Die Kommanditistin Sabine einer KG bevollmächtigt ihren Geschäftsführer Peter schriftlich, im Namen der KG Waren zu verkaufen und Verträge abzuschließen. Peter schließt einen Kaufvertrag über 50.000 Euro ab, ohne dass die Vollmacht dies konkret erwähnt. Welche Regelungen des HGB zur Vollmacht gelten hier und ist das Geschäft wirksam?",
+    "expected_norms": [
+      "§ 54 HGB",
+      "§ 48 HGB",
+      "§ 165 BGB"
+    ],
+    "expected_keywords": [
+      "Vollmachtsurkunde",
+      "Auslegung",
+      "Prokura",
+      "Vertreterschaft"
+    ]
+  },
+  {
+    "question": "Der Großhändler Anton beliefert den Einzelhändler Bruno seit 3 Jahren regelmäßig mit Textilien. Eine schriftliche Vereinbarung existiert nicht, jedoch zahlt Bruno die Rechnungen immer mit 30 Tagen Zahlungsziel. Kann sich Bruno auf diese 30-Tage-Frist berufen, wenn Anton plötzlich Vorkasse verlangt? Welche Regelung des HGB ist einschlägig?",
+    "expected_norms": [
+      "§ 346 HGB",
+      "§ 362 HGB"
+    ],
+    "expected_keywords": [
+      "Handelsbräuche",
+      "Verkehrssitte",
+      "Zahlungsbedingungen",
+      "Gewohnheitsrecht"
+    ]
+  },
+  {
+    "question": "Die GmbH Möbel & Co. ernennt ihren Prokurist Klaus. Klaus schließt im Namen der GmbH einen Kaufvertrag über Waren ab und unterzeichnet mit 'Klaus Müller, Prokurist'. Zwei Wochen später behauptet die GmbH, Klaus habe keine Prokura gehabt. Ist das Geschäft wirksam und auf welche Norm des HGB stützt sich die Antwort?",
+    "expected_norms": [
+      "§ 49 HGB",
+      "§ 50 HGB"
+    ],
+    "expected_keywords": [
+      "Prokura",
+      "Vollmachtserteilung",
+      "Eintragung",
+      "Außenhaftung"
+    ]
+  },
+  {
+    "question": "Der Einzelkaufmann Martin verkauft sein Ladengeschäft an die Unternehmerin Petra. Die Parteien vereinbaren mündlich, dass alle bestehenden Lieferantenkredite zu den bisherigen Bedingungen weiterlaufen sollen. Martin trägt sich aus dem Handelsregister aus, trägt aber die Gläubiger nicht in Kenntnis. Kann ein Lieferant noch Martin für ausstehende Rechnungen haftbar machen und welche HGB-Norm ist relevant?",
+    "expected_norms": [
+      "§ 25 HGB",
+      "§ 30 HGB"
+    ],
+    "expected_keywords": [
+      "Handelsregistereintragung",
+      "Firmenhaftung",
+      "Veräußerung",
+      "Gläubiger"
+    ]
+  }
+]

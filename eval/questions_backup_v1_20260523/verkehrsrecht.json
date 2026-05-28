@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "skill": "verkehrsrecht",
+    "question": "Was sind die Voraussetzungen für die Zulassung eines Kraftfahrzeugs zum Verkehr?",
+    "expected_norms": [
+      "StVG"
+    ],
+    "expected_keywords": [
+      "Zulassung",
+      "Kraftfahrzeug",
+      "Betriebserlaubnis"
+    ],
+    "min_sources": 1,
+    "category": "Zulassung"
+  },
+  {
+    "id": 2,
+    "skill": "verkehrsrecht",
+    "question": "Ist der Betrieb eines Kraftfahrzeugs mit hoch- oder vollautomatisierter Fahrfunktion zulässig?",
+    "expected_norms": [
+      "StVG"
+    ],
+    "expected_keywords": [
+      "hochautomatisiert",
+      "vollautomatisiert",
+      "Fahrfunktion"
+    ],
+    "min_sources": 1,
+    "category": "Automatisierte Fahrzeuge"
+  },
+  {
+    "id": 3,
+    "skill": "verkehrsrecht",
+    "question": "Was sind die Pflichten des Fahrzeugführers bei der Nutzung hoch- oder vollautomatisierter Fahrfunktionen?",
+    "expected_norms": [
+      "§ 1b"
+    ],
+    "expected_keywords": [
+      "Fahrzeugführer",
+      "Wahrnehmungsbereitschaft",
+      "Abwendung"
+    ],
+    "min_sources": 1,
+    "category": "Fahrzeugführerpflichten"
+  },
+  {
+    "id": 4,
+    "skill": "verkehrsrecht",
+    "question": "Muss ein Kraftfahrzeug eine Betriebserlaubnis haben, um zum Verkehr zugelassen zu werden?",
+    "expected_norms": [
+      "StVG"
+    ],
+    "expected_keywords": [
+      "Betriebserlaubnis",
+      "Zulassung",
+      "Kraftfahrzeug"
+    ],
+    "min_sources": 1,
+    "category": "Zulassung"
+  },
+  {
+    "id": 5,
+    "skill": "verkehrsrecht",
+    "question": "Kann ein Fahrzeugführer während der Nutzung hoch- oder vollautomatisierter Fahrfunktionen vom Verkehrsgeschehen abwenden?",
+    "expected_norms": [
+      "StVG"
+    ],
+    "expected_keywords": [
+      "Abwendung",
+      "Wahrnehmungsbereitschaft",
+      "Fahrzeugführer"
+    ],
+    "min_sources": 1,
+    "category": "Fahrzeugführerpflichten"
+  },
+  {
+    "id": 6,
+    "skill": "verkehrsrecht",
+    "question": "Was ist die Rolle der Zulassungsbehörde bei der Zulassung eines Kraftfahrzeugs zum Verkehr?",
+    "expected_norms": [
+      "§ 1 StVG"
+    ],
+    "expected_keywords": [
+      "Zulassungsbehörde",
+      "Zulassung",
+      "Kraftfahrzeug"
+    ],
+    "min_sources": 1,
+    "category": "Zulassung"
+  },
+  {
+    "id": 7,
+    "skill": "verkehrsrecht",
+    "question": "Gilt die Zulassungspflicht auch für Anhänger von Kraftfahrzeugen?",
+    "expected_norms": [
+      "§ 1 StVG"
+    ],
+    "expected_keywords": [
+      "Anhänger",
+      "Zulassung",
+      "Kraftfahrzeug"
+    ],
+    "min_sources": 1,
+    "category": "Zulassung"
+  },
+  {
+    "id": 8,
+    "skill": "verkehrsrecht",
+    "question": "Muss ein Kraftfahrzeug mit hoch- oder vollautomatisierter Fahrfunktion eine spezielle Zulassung haben?",
+    "expected_norms": [
+      "§ 1a StVG"
+    ],
+    "expected_keywords": [
+      "hochautomatisiert",
+      "vollautomatisiert",
+      "Zulassung"
+    ],
+    "min_sources": 1,
+    "category": "Automatisierte Fahrzeuge"
+  },
+  {
+    "id": 9,
+    "skill": "verkehrsrecht",
+    "question": "Was sind die Konsequenzen einer unerlaubten Abwendung vom Verkehrsgeschehen während der Nutzung hoch- oder vollautomatisierter Fahrfunktionen?",
+    "expected_norms": [
+      "§ 1b StVG"
+    ],
+    "expected_keywords": [
+      "Abwendung",
+      "Wahrnehmungsbereitschaft",
+      "Fahrzeugführer"
+    ],
+    "min_sources": 1,
+    "category": "Fahrzeugführerpflichten"
+  },
+  {
+    "id": 10,
+    "skill": "verkehrsrecht",
+    "question": "Kann ein Kraftfahrzeug ohne Betriebserlaubnis zum Verkehr zugelassen werden?",
+    "expected_norms": [
+      "§ 1 StVG"
+    ],
+    "expected_keywords": [
+      "Betriebserlaubnis",
+      "Zulassung",
+      "Kraftfahrzeug"
+    ],
+    "min_sources": 1,
+    "category": "Zulassung"
+  }
+]

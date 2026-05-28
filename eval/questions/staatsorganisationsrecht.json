@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "skill": "staatsorganisationsrecht",
+    "question": "Ein Schüler soll gegen den Willen seiner Erziehungsberechtigten am Religionsunterricht teilnehmen. Welche Regelung des Grundgesetzes schützt die Eltern in dieser Situation?",
+    "expected_norms": [
+      "Art. 7"
+    ],
+    "expected_keywords": [
+      "Willen",
+      "Schulen",
+      "Recht"
+    ],
+    "category": "Grundrechte und Schulwesen"
+  },
+  {
+    "id": 2,
+    "skill": "staatsorganisationsrecht",
+    "question": "Die Polizei möchte die Wohnung einer Person abhören, um eine schwere Straftat zu verfolgen. Auf welcher Grundlage darf technische Überwachung nach dem Grundgesetz eingesetzt werden und welche Voraussetzungen müssen erfüllt sein?",
+    "expected_norms": [
+      "Art. 13"
+    ],
+    "expected_keywords": [
+      "Gesetz",
+      "Gefahr",
+      "Maßnahme"
+    ],
+    "category": "Schutz der Wohnung und Überwachung"
+  },
+  {
+    "id": 3,
+    "skill": "staatsorganisationsrecht",
+    "question": "Kann die deutsche Staatsangehörigkeit einer Person gegen ihren Willen entzogen werden? Welche Voraussetzung muss nach Art. 16 GG erfüllt sein?",
+    "expected_norms": [
+      "Art. 16"
+    ],
+    "expected_keywords": [
+      "Willen",
+      "Gesetz",
+      "Grund"
+    ],
+    "category": "Staatsangehörigkeit und Auslieferung"
+  },
+  {
+    "id": 4,
+    "skill": "staatsorganisationsrecht",
+    "question": "Ein Grundstück soll zu Gunsten der Allgemeinheit enteignet werden. Welche Entschädigungsregelung ist nach dem Grundgesetz vorgesehen und wer entscheidet im Streitfall?",
+    "expected_norms": [
+      "Art. 14"
+    ],
+    "expected_keywords": [
+      "Entschädigung",
+      "Grund",
+      "Gesetz"
+    ],
+    "category": "Eigentumsrecht und Enteignung"
+  },
+  {
+    "id": 5,
+    "skill": "staatsorganisationsrecht",
+    "question": "Welche Normen des Grundgesetzes können nach Art. 79 Abs. 3 nicht abgeändert werden und warum ist dies im Staatsorganisationsrecht von besonderer Bedeutung?",
+    "expected_norms": [
+      "Art. 79"
+    ],
+    "expected_keywords": [
+      "Grundgesetz",
+      "Freiheit",
+      "Grund"
+    ],
+    "category": "Verfassungsänderung und Ewigkeitsgarantie"
+  }
+]

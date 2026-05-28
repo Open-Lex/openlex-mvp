@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "skill": "reiserecht",
+    "question": "Ich habe eine Pauschalreise bestehend aus Flug und Hotel gebucht. Der Flug kostet 300 Euro und das Hotel 200 Euro. Sind dies Reiseleistungen im Sinne des Reiserechts?",
+    "expected_norms": [
+      "§ 651a"
+    ],
+    "expected_keywords": [
+      "Reiseleistungen",
+      "Pauschalreise",
+      "Reiseveranstalter"
+    ],
+    "category": "Pauschalreise Definition"
+  },
+  {
+    "id": 2,
+    "skill": "reiserecht",
+    "question": "Mein gebuchter Flug hat 12 Stunden Verspätung, sodass ich mein Hotel nicht am vereinbarten Tag erreiche. Welche Rechte habe ich gegen den Reiseveranstalter?",
+    "expected_norms": [
+      "Art. 267",
+      "Art. 7"
+    ],
+    "expected_keywords": [
+      "Reisemangel",
+      "Verspätung",
+      "Verordnung"
+    ],
+    "category": "Mängelrechte"
+  },
+  {
+    "id": 3,
+    "skill": "reiserecht",
+    "question": "Ich möchte 10 Tage vor meinem geplanten Reisebeginn meine Pauschalreise stornieren. Kann der Reiseveranstalter von mir eine Gebühr verlangen?",
+    "expected_norms": [
+      "§ 651h"
+    ],
+    "expected_keywords": [
+      "Reisepreis",
+      "Reiseveranstalter",
+      "Reisenden"
+    ],
+    "category": "Rücktritt"
+  },
+  {
+    "id": 4,
+    "skill": "reiserecht",
+    "question": "Nach meiner Pauschalreise stelle ich fest, dass das gebuchte Hotel nicht den vereinbarten Standards entsprach. Wie lange habe ich Zeit, um meine Ansprüche geltend zu machen?",
+    "expected_norms": [
+      "§ 651j"
+    ],
+    "expected_keywords": [
+      "Reisenden",
+      "Pauschalreise",
+      "Reiseveranstalter"
+    ],
+    "category": "Verjährung"
+  },
+  {
+    "id": 5,
+    "skill": "reiserecht",
+    "question": "Der Reiseveranstalter möchte den Reisepreis 15 Tage vor Reisebeginn um 150 Euro erhöhen. Sind die Voraussetzungen für eine wirksame Preiserhöhung erfüllt?",
+    "expected_norms": [
+      "§ 651f"
+    ],
+    "expected_keywords": [
+      "Reisepreis",
+      "Reiseveranstalter",
+      "Reiseleistungen"
+    ],
+    "category": "Preisänderung"
+  }
+]

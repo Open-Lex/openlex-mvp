@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "skill": "grundrechte",
+    "question": "Ein Journalist möchte einen kritischen Artikel über die Regierung veröffentlichen. Die Behörden verbieten dies mit der Begründung, es gefährde die öffentliche Ordnung. Welches Grundrecht ist betroffen und welche Schranken gelten dafür?",
+    "expected_norms": [
+      "Art. 5"
+    ],
+    "expected_keywords": [
+      "Meinungsfreiheit",
+      "allgemeine Gesetze",
+      "Schranken"
+    ],
+    "category": "Grundrechte und ihre Schranken"
+  },
+  {
+    "id": 2,
+    "skill": "grundrechte",
+    "question": "Ein Gesetz verbietet einer Person, ihren erlernten Beruf auszuüben, ohne dass ein sachlicher Grund vorliegt. Kann sich die Person auf ein Grundrecht berufen und ist dieses Verbot rechtmäßig?",
+    "expected_norms": [
+      "Art. 12"
+    ],
+    "expected_keywords": [
+      "Berufsfreiheit",
+      "Gesetz",
+      "Eingriff"
+    ],
+    "category": "Berufsfreiheit"
+  },
+  {
+    "id": 3,
+    "skill": "grundrechte",
+    "question": "Ein Staat möchte die Freizügigkeit eines Bürgers beschränken, um Seuchengefahr zu bekämpfen. Auf welcher Rechtsgrundlage ist dies möglich und welche Voraussetzungen müssen erfüllt sein?",
+    "expected_norms": [
+      "Art. 11"
+    ],
+    "expected_keywords": [
+      "Freizügigkeit",
+      "Gesetzesvorbehalt",
+      "Deutschen"
+    ],
+    "category": "Bewegungsfreiheit und ihre Grenzen"
+  },
+  {
+    "id": 4,
+    "skill": "grundrechte",
+    "question": "Eine Regelung soll tief in die körperliche Unversehrtheit einer Person eingreifen. Nach welcher Norm ist dies nur unter bestimmten Bedingungen zulässig und welche Garantie schützt den Kerngehalt dieses Grundrechts?",
+    "expected_norms": [
+      "Art. 2",
+      "Art. 19"
+    ],
+    "expected_keywords": [
+      "körperliche Unversehrtheit",
+      "Wesensgehalt",
+      "Grundrechte"
+    ],
+    "category": "Schutzbereich und Wesensgehaltsgarantie"
+  },
+  {
+    "id": 5,
+    "skill": "grundrechte",
+    "question": "Ein Gesetz beschränkt das Recht auf freie Entfaltung der Persönlichkeit mit dem Ziel, andere Rechte zu schützen. Welche Norm regelt diese Schranke und welche Voraussetzung muss das einschränkende Gesetz erfüllen?",
+    "expected_norms": [
+      "Art. 2",
+      "Art. 19"
+    ],
+    "expected_keywords": [
+      "Recht",
+      "Gesetzes",
+      "Schranken"
+    ],
+    "category": "Zitiergebot und Gesetzesvorbehalt"
+  }
+]

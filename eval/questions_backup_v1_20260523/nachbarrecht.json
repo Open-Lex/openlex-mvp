@@ -1,0 +1,153 @@
+[
+  {
+    "id": 1,
+    "skill": "nachbarrecht",
+    "question": "Ein Nachbar möchte auf seinem Grundstück ein Gewächshaus errichten, das jedoch die Sonneneinstrahlung auf das Nachbargrundstück reduziert. Welche Rechte hat der Eigentümer des Nachbargrundstücks?",
+    "expected_norms": [
+      "BGB"
+    ],
+    "expected_keywords": [
+      "Eigentümer",
+      "Beeinträchtigung",
+      "Anspruch"
+    ],
+    "min_sources": 2,
+    "category": "Eigentumsrechte"
+  },
+  {
+    "id": 2,
+    "skill": "nachbarrecht",
+    "question": "Ein Tier des Nachbarn hat sich auf das Grundstück des Klägers begeben und verursacht dort Schäden. Welche Rechte hat der Kläger?",
+    "expected_norms": [
+      "§ 833"
+    ],
+    "expected_keywords": [
+      "Schadensersatz",
+      "Tier",
+      "Haftung"
+    ],
+    "min_sources": 1,
+    "category": "Tierhalterhaftung"
+  },
+  {
+    "id": 3,
+    "skill": "nachbarrecht",
+    "question": "Ein Nachbar möchte eine Baumaßnahme auf seinem Grundstück durchführen, die jedoch eine Gefahr für das Nachbargrundstück darstellt. Welche Rechte hat der Eigentümer des Nachbargrundstücks?",
+    "expected_norms": [
+      "§ 907"
+    ],
+    "expected_keywords": [
+      "Unterlassung",
+      "Gefahr",
+      "Anlage"
+    ],
+    "min_sources": 1,
+    "category": "Notstand"
+  },
+  {
+    "id": 4,
+    "skill": "nachbarrecht",
+    "question": "Ein Nachbar errichtet ein Gebäude, das die Aussicht auf das Nachbargrundstück beeinträchtigt. Welche Rechte hat der Eigentümer des Nachbargrundstücks?",
+    "expected_norms": [
+      "§ 905"
+    ],
+    "expected_keywords": [
+      "Eigentümer",
+      "Nachbar",
+      "Aussicht"
+    ],
+    "min_sources": 1,
+    "category": "Eigentumsrechte"
+  },
+  {
+    "id": 5,
+    "skill": "nachbarrecht",
+    "question": "Ein Nachbar verursacht durch seine landwirtschaftliche Tätigkeit Lärm und Geruch, die das Nachbargrundstück beeinträchtigen. Welche Rechte hat der Eigentümer des Nachbargrundstücks?",
+    "expected_norms": [
+      "§ 906"
+    ],
+    "expected_keywords": [
+      "Einwirkung",
+      "Duldung",
+      "Eigentum"
+    ],
+    "min_sources": 1,
+    "category": "Immissionen"
+  },
+  {
+    "id": 6,
+    "skill": "nachbarrecht",
+    "question": "Ein Nachbar möchte auf seinem Grundstück eine Photovoltaikanlage errichten, die jedoch die Sonneneinstrahlung auf das Nachbargrundstück reduziert. Welche Rechte hat der Eigentümer des Nachbargrundstücks?",
+    "expected_norms": [
+      "§ 903 BGB",
+      "§ 905 BGB"
+    ],
+    "expected_keywords": [
+      "Eigentumsrecht",
+      "Nachbarrecht",
+      "Photovoltaikanlage"
+    ],
+    "min_sources": 2,
+    "category": "Eigentumsrechte"
+  },
+  {
+    "id": 7,
+    "skill": "nachbarrecht",
+    "question": "Ein Nachbar verursacht durch seine Baumaßnahmen Schäden auf dem Nachbargrundstück. Welche Rechte hat der Eigentümer des Nachbargrundstücks?",
+    "expected_norms": [
+      "§ 904 BGB"
+    ],
+    "expected_keywords": [
+      "Notstand",
+      "Eigentumsrecht",
+      "Nachbarrecht"
+    ],
+    "min_sources": 1,
+    "category": "Notstand"
+  },
+  {
+    "id": 8,
+    "skill": "nachbarrecht",
+    "question": "Ein Nachbar möchte auf seinem Grundstück ein Teich anlegen, der jedoch die Wasserqualität auf dem Nachbargrundstück beeinträchtigt. Welche Rechte hat der Eigentümer des Nachbargrundstücks?",
+    "expected_norms": [
+      "§ 903 BGB"
+    ],
+    "expected_keywords": [
+      "Eigentumsrecht",
+      "Nachbarrecht",
+      "Wasserrecht"
+    ],
+    "min_sources": 1,
+    "category": "Wasserrecht"
+  },
+  {
+    "id": 9,
+    "skill": "nachbarrecht",
+    "question": "Ein Nachbar errichtet ein Gebäude, das die Statik des Nachbargrundstücks beeinträchtigt. Welche Rechte hat der Eigentümer des Nachbargrundstücks?",
+    "expected_norms": [
+      "§ 904 BGB"
+    ],
+    "expected_keywords": [
+      "Notstand",
+      "Eigentumsrecht",
+      "Nachbarrecht"
+    ],
+    "min_sources": 1,
+    "category": "Notstand"
+  },
+  {
+    "id": 10,
+    "skill": "nachbarrecht",
+    "question": "Ein Nachbar verursacht durch seine Tätigkeit Lärm und Geruch, die das Nachbargrundstück beeinträchtigen. Welche Rechte hat der Eigentümer des Nachbargrundstücks?",
+    "expected_norms": [
+      "§ 903 BGB"
+    ],
+    "expected_keywords": [
+      "Eigentumsrecht",
+      "Nachbarrecht",
+      "Immissionen"
+    ],
+    "min_sources": 1,
+    "category": "Immissionen"
+  }
+]

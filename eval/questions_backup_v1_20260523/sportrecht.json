@@ -1,0 +1,143 @@
+[
+  {
+    "id": 1,
+    "question": "Welche Haftpflichtversicherung schützt Vereinsmitglieder, wenn sie bei Vereinsaktivitäten Schäden anrichten? Welche Rolle spielt § 31a BGB?",
+    "category": "Vereinshaftung",
+    "expected_norms": [
+      "§ 31"
+    ],
+    "expected_keywords": [
+      "Haftung",
+      "Verein",
+      "Versicherung"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Ein Fußballverein möchte sich als eingetragener Verein im Vereinsregister eintragen lassen. Welche Voraussetzungen müssen erfüllt sein?",
+    "category": "Vereinsregistrierung",
+    "expected_norms": [
+      "§ 21"
+    ],
+    "expected_keywords": [
+      "eingetragen",
+      "Vereinsregister",
+      "Satzung"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Ein Sportverein möchte seine Mitgliedsbeiträge erhöhen. Welche Voraussetzungen muss eine Satzungsänderung nach dem BGB erfüllen?",
+    "category": "Satzungsänderung",
+    "expected_norms": [
+      "§ 33"
+    ],
+    "expected_keywords": [
+      "Satzung",
+      "Mehrheit",
+      "Beschluss"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Was muss eine gültige Vereinssatzung nach dem BGB mindestens enthalten, und welche Angaben sind für die Eintragung ins Vereinsregister zwingend?",
+    "category": "Vereinssatzung",
+    "expected_norms": [
+      "§ 57"
+    ],
+    "expected_keywords": [
+      "Satzung",
+      "Zweck",
+      "Mitglieder"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Wie wird ein Sportverein aufgelöst, und was passiert mit dem Vereinsvermögen nach der Auflösung?",
+    "category": "Vereinsauflösung",
+    "expected_norms": [
+      "§ 41 BGB",
+      "§ 45 BGB"
+    ],
+    "expected_keywords": [
+      "Auflösung",
+      "Vereinsvermögen",
+      "Verein"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Ein Sportverein schließt einen Athleten per Beschluss aus. Der Athlet bestreitet die Rechtmäßigkeit des Ausschlusses. Welche Anforderungen gelten an den Vereinsausschluss?",
+    "category": "Vereinsausschluss",
+    "expected_norms": [
+      "§ 25 BGB",
+      "§ 32 BGB"
+    ],
+    "expected_keywords": [
+      "Vereinsausschluss",
+      "Satzung",
+      "Vereinsstrafrecht",
+      "rechtliches Gehör"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Ein Sportler wird nach einer positiven Dopingprobe durch das Sportgericht gesperrt und möchte die Sperre anfechten. Welche Rechtsmittel hat er?",
+    "category": "Dopingrecht",
+    "expected_norms": [
+      "§ 2 AntiDopG",
+      "§ 25 BGB"
+    ],
+    "expected_keywords": [
+      "Doping",
+      "Sperre",
+      "AntiDopG",
+      "Sportgericht"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Welche Haftpflichtversicherung schützt Vereinsmitglieder, wenn sie bei Vereinsaktivitäten Dritte verletzen, und wie ist die Haftung des Vereins geregelt?",
+    "category": "Vereinshaftung",
+    "expected_norms": [
+      "§ 31 BGB",
+      "§ 31a BGB"
+    ],
+    "expected_keywords": [
+      "Haftung",
+      "Verein",
+      "Ehrenamtshaftung",
+      "Vereinsvorstand"
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Ein Sportverein möchte Mitgliedsbeiträge erhöhen. Welche Voraussetzungen muss ein Satzungsänderungsbeschluss erfüllen?",
+    "category": "Satzungsänderung",
+    "expected_norms": [
+      "§ 33 BGB",
+      "§ 32 BGB"
+    ],
+    "expected_keywords": [
+      "Satzungsänderung",
+      "Mitgliederversammlung",
+      "qualifizierte Mehrheit",
+      "Beschluss"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Ein Sportverein kauft eine neue Sporthalle und nimmt dafür ein Bankdarlehen auf. Wer haftet für die Verbindlichkeiten des eingetragenen Vereins?",
+    "category": "Vereinsvermögen",
+    "expected_norms": [
+      "§ 21 BGB",
+      "§ 26 BGB"
+    ],
+    "expected_keywords": [
+      "Vereinsvermögen",
+      "Haftung",
+      "Vorstand",
+      "eingetragener Verein"
+    ]
+  }
+]

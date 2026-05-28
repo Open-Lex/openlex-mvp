@@ -1,0 +1,67 @@
+[
+  {
+    "question": "Die AG Müller GmbH ist zahlungsunfähig und hat Verbindlichkeiten in Höhe von 500.000 Euro. Geschäftsführer Schmidt beantragt die Eröffnung des Insolvenzverfahrens, allerdings erst drei Monate nach Eintritt der Zahlungsunfähigkeit. Der größte Gläubiger wirft Schmidt vor, die Antragspflicht verletzt zu haben. Welche Regelungen sind einschlägig und hat Schmidt die Antragspflicht rechtzeitig erfüllt?",
+    "expected_norms": [
+      "§ 15a InsO",
+      "§ 15b InsO"
+    ],
+    "expected_keywords": [
+      "Antragspflicht",
+      "Geschäftsführer",
+      "Zahlungsunfähigkeit",
+      "Verzug"
+    ]
+  },
+  {
+    "question": "Der Schuldner überwies zwei Wochen vor Antragstellung seiner Insolvenz 30.000 Euro an seinen Bruder, um diesem zu helfen, ohne dass eine Gegenleistung erfolgte. Der Insolvenzverwalter erfährt davon und möchte die Zahlung rückgängig machen. Kann der Verwalter diese Zahlung nach den Regeln der Insolvenzanfechtung anfechten, und welche Voraussetzungen müssen erfüllt sein?",
+    "expected_norms": [
+      "§ 138 InsO",
+      "§ 142 InsO"
+    ],
+    "expected_keywords": [
+      "Insolvenzanfechtung",
+      "Gratifizierung",
+      "vier Wochen",
+      "Kenntnis"
+    ]
+  },
+  {
+    "question": "Der Schuldner K hat Schulden in Höhe von 150.000 Euro gegenüber verschiedenen Gläubigern. Nach dreijähriger Wohlverhaltensperiode beantragt K beim Gericht die Restschuldbefreiung. Ein Gläubiger widerspricht und argumentiert, dass K während der Wohlverhaltensperiode böswillig seine Schulden nicht beglichen hat. Unter welchen Bedingungen kann eine Restschuldbefreiung versagt werden, und welche Rolle spielt die Wohlverhaltensperiode?",
+    "expected_norms": [
+      "§ 286 InsO",
+      "§ 290 InsO"
+    ],
+    "expected_keywords": [
+      "Restschuldbefreiung",
+      "Wohlverhaltensperiode",
+      "böswilliges Verhalten",
+      "Versagungsgründe"
+    ]
+  },
+  {
+    "question": "Die Privatperson P schuldet mehrere Bankkredite in Höhe von insgesamt 280.000 Euro und befindet sich in Zahlungsverzug. P verhandelt mit einem Gläubiger über eine Stundungsvereinbarung und verpflichtet sich, monatlich 2.000 Euro zu zahlen. Kann P damit die Eröffnung eines Privatinsolvenzverfahrens noch verhindern, und welche Voraussetzungen müssen erfüllt sein?",
+    "expected_norms": [
+      "§ 305 InsO",
+      "§ 305a InsO"
+    ],
+    "expected_keywords": [
+      "außergerichtlicher Einigungsversuch",
+      "Gläubigerquorum",
+      "Schuldenbereinigungsplan",
+      "Privatinsolvenz"
+    ]
+  },
+  {
+    "question": "Im Insolvenzverfahren über das Vermögen des Schuldners S wird festgestellt, dass S drei Monate vor Eröffnung des Verfahrens einen günstigen Kaufvertrag über Betriebseinrichtungen mit seinem langjährigen Geschäftspartner G zu einem deutlich unter Marktwert liegenden Preis abgeschlossen hat. Der Insolvenzverwalter verdächtigt eine Benachteiligung der Gläubigergesamtheit. Welche Anfechtungsbestimmung kommt hier in Betracht und welche Voraussetzungen müssen vorliegen?",
+    "expected_norms": [
+      "§ 139 InsO",
+      "§ 143 InsO"
+    ],
+    "expected_keywords": [
+      "Rechtshandlung zum Nachteil der Gläubiger",
+      "Kenntnis",
+      "objektive Umstände",
+      "zehn Jahre"
+    ]
+  }
+]

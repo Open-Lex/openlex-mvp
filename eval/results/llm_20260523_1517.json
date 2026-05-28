@@ -1,0 +1,119 @@
+[
+  {
+    "skill": "sportrecht",
+    "n_questions": 5,
+    "avg_score": 79.3,
+    "hallucination_rate": 0.0,
+    "worst_score": 74.2,
+    "best_score": 84.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Sportverein möchte seine Satzung ändern. Welche Stimmenmehrheit ist gemäß § 33 erforderlich, und welche besonderen Regeln gelten, wenn der Verein auf Verleihung beruht?",
+        "category": "Vereinsorganisation",
+        "score": 74.2,
+        "answer_excerpt": "# Satzungsänderung eines Sportvereins gemäß § 33 BGB\n\n## Erforderliche Stimmenmehrheit\n\nNach **§ 33 Abs. 1 BGB** ist für einen Beschluss zur Satzungsänderung eine **Mehrheit von drei Vierteln der abge",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 21.9
+      },
+      {
+        "id": 2,
+        "question": "Der Vorstand eines Sportvereins soll durch die Mitgliederversammlung bestellt werden. Nach welcher Norm erfolgt diese Bestellung, und welche Widerrufsmöglichkeiten gibt es?",
+        "category": "Vorstandsverfassung",
+        "score": 81.2,
+        "answer_excerpt": "# Bestellung und Widerruf des Vereinsvorstands\n\n## Bestellungsnorm\n\nDie Bestellung des Vorstands eines Sportvereins erfolgt nach **§ 27 Abs. 1 BGB** durch Beschluss der Mitgliederversammlung [Quelle 1",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 9.0
+      },
+      {
+        "id": 3,
+        "question": "Ein Sportverein verursacht durch seinen Vorstand Schaden bei einem Dritten. Für welchen Schaden haftet der Verein gemäß § 31, und wer trägt die Beweislast bei grober Fahrlässigkeit nach § 31a?",
+        "category": "Haftungsrecht",
+        "score": 79.2,
+        "answer_excerpt": "# Haftung des Sportvereins nach § 31 BGB\n\n## Umfang der Vereinshaftung\n\nNach **§ 31 BGB** haftet der Sportverein für Schäden, die sein Vorstand oder ein anderes verfassungsmäßig berufenes Organ durch ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 12.5
+      },
+      {
+        "id": 4,
+        "question": "Ein Sportverein ohne wirtschaftlichen Geschäftsbetrieb möchte Rechtsfähigkeit erlangen. Welche Norm regelt dies, und was sind die Voraussetzungen gemäß § 21?",
+        "category": "Vereinsgründung",
+        "score": 84.5,
+        "answer_excerpt": "# Rechtsfähigkeit von Sportvereinen ohne wirtschaftlichen Geschäftsbetrieb\n\n## Anwendbare Norm\n\nDie Rechtsfähigkeit eines Sportvereins ohne wirtschaftlichen Geschäftsbetrieb regelt **§ 21 BGB** [Quell",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.8
+      },
+      {
+        "id": 5,
+        "question": "Der zehnte Teil der Mitglieder eines Sportvereins verlangt schriftlich die Berufung der Mitgliederversammlung. Welche Norm regelt diesen Fall, und welche Rolle spielt das Amtsgericht gemäß § 37?",
+        "category": "Mitgliederrechte",
+        "score": 77.2,
+        "answer_excerpt": "# Regelung der Berufung auf Verlangen einer Minderheit\n\n## Zuständige Norm\n\nDie Frage wird durch **§ 37 BGB** (\"Berufung auf Verlangen einer Minderheit\") geregelt [Quelle 1].\n\n## Sachlicher Inhalt\n\nGe",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 15.0
+      }
+    ],
+    "duration_s": 69.7
+  }
+]

@@ -1,0 +1,125 @@
+[
+  {
+    "skill": "weltraumrecht",
+    "n_questions": 5,
+    "avg_score": 80.2,
+    "hallucination_rate": 20.0,
+    "worst_score": 64.5,
+    "best_score": 85.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Satellit eines Staates explodiert im Weltraum und verursacht Schäden an einem anderen Satelliten. Welche internationale Vereinbarung regelt die Haftung für solche Schäden?",
+        "category": "Haftungsrecht",
+        "score": 80.9,
+        "answer_excerpt": "# Antwort\n\nDie internationale Haftung für Schäden durch Weltraumgegenstände wird durch das **Haftungsübereinkommen (Liability Convention) von 1972** geregelt [Quelle 1]. Dieses Übereinkommen trägt den",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 21.5
+      },
+      {
+        "id": 2,
+        "question": "Ein Staat plant, einen neuen Satelliten ins All zu bringen. Welche internationalen Regeln müssen beachtet werden, um die Erforschung und Nutzung des Weltraums zu gewährleisten?",
+        "category": "Weltraumfreiheit",
+        "score": 85.5,
+        "answer_excerpt": "# Internationale Regeln für Satellitenstart und Weltraumnutzung\n\nBei der Planung eines Satellitenstart müssen folgende internationale Rechtsregeln beachtet werden:\n\n## 1. Weltraumvertrag (1967) - Grun",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 15.4
+      },
+      {
+        "id": 3,
+        "question": "Ein Unternehmen plant, auf dem Mond Rohstoffe abzubauen. Welche internationalen Regeln regeln die Nutzung von Himmelskörpern und wie werden die Rechte der beteiligten Staaten geschützt?",
+        "category": "Nutzung von Himmelskörpern",
+        "score": 64.5,
+        "answer_excerpt": "# Internationale Regeln für Rohstoffabbau auf dem Mond\n\n## Grundlegende Rechtslage\n\nDie Nutzung von Himmelskörpern wird primär durch den **Weltraumvertrag von 1967** geregelt, der als \"Magna Charta de",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": true,
+          "hallucination_examples": [
+            "Die Antwort behauptet unter 'Zentrale Prinzipien' Punkt 2: 'Der Weltraumvertrag enthält ein Aneignungsverbot für Himmelskörper'. Dies ist zu ungenau und irreführend. Laut Quelle 1 gibt es einen Streit darüber, ob Art. II Weltraumvertrag ein ausdrückliches Verbot privater Aneignung enthält. Die Pro-Aneignung Position (US-Lesart) argumentiert, dass Art. II kein ausdrückliches Verbot privater Aneignung enthalte. Die Antwort präsentiert dies als eindeutige Tatsache, obwohl es rechtlich umstritten ist."
+          ],
+          "completeness": 3,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 15.7
+      },
+      {
+        "id": 4,
+        "question": "Ein Staat hat einen Satelliten ins All gebracht, aber dieser ist nicht ordnungsgemäß registriert. Welche internationalen Regeln regeln die Registrierung von Weltraumgegenständen und welche Konsequenzen ergeben sich aus einer fehlenden Registrierung?",
+        "category": "Registrierung von Weltraumgegenständen",
+        "score": 84.5,
+        "answer_excerpt": "# Registrierung von Weltraumgegenständen\n\n## Anwendbare internationale Regeln\n\nDie Registrierung von Weltraumgegenständen wird durch das **Registrierungsübereinkommen (Registration Convention)** gereg",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.1
+      },
+      {
+        "id": 5,
+        "question": "Ein Satellit eines Staates ist im Weltraum verloren gegangen und wird von einem anderen Staat gefunden. Welche internationalen Regeln regeln die Rettung und Rückgabe von Weltraumgegenständen?",
+        "category": "Rettung und Rückgabe",
+        "score": 85.5,
+        "answer_excerpt": "# Rettung und Rückgabe von Weltraumgegenständen\n\nDie internationale Rettung und Rückgabe von Weltraumgegenständen wird durch das **Weltraumrechtsregime** geregelt, das auf fünf völkerrechtlichen Übere",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.7
+      }
+    ],
+    "duration_s": 87.9
+  }
+]

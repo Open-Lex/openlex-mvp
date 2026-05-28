@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "kirchenrecht",
+    "n_questions": 5,
+    "avg_score": 73.2,
+    "hallucination_rate": 0.0,
+    "worst_score": 68.8,
+    "best_score": 77.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Eine evangelische Kirchengemeinde kündigt einer Erzieherin in ihrer Kita, weil diese aus der Kirche ausgetreten ist. Ist diese Kündigung rechtlich zulässig?",
+        "category": "Kirchliches Arbeitsrecht",
+        "score": 68.8,
+        "answer_excerpt": "# Rechtliche Zulässigkeit der Kündigung\n\nDie Kündigung der Erzieherin wegen Kirchenaustritts berührt das **kirchliche Selbstbestimmungsrecht** und ist unter bestimmten Voraussetzungen grundsätzlich zu",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 0.33,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 26.0
+      },
+      {
+        "id": 2,
+        "question": "Eine neu gegründete Religionsgemeinschaft beantragt den Status einer Körperschaft des öffentlichen Rechts, um Kirchensteuer erheben zu dürfen. Welche Voraussetzungen muss sie erfüllen?",
+        "category": "Körperschaftsstatus",
+        "score": 74.0,
+        "answer_excerpt": "# Voraussetzungen für den Körperschaftsstatus\n\nUm den Status einer Körperschaft des öffentlichen Rechts (KdöR) zu erlangen und damit Kirchensteuer erheben zu dürfen, muss die Religionsgemeinschaft fol",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.4
+      },
+      {
+        "id": 3,
+        "question": "Ein Bundesland möchte in allen Schulen Kreuze aufhängen. Ein Elternteil ohne Religionszugehörigkeit klagt dagegen. Wie ist die Rechtslage nach dem Grundgesetz und der WRV?",
+        "category": "Staatliche Neutralität",
+        "score": 77.2,
+        "answer_excerpt": "# Rechtslage zum Aufhängen von Kreuzen in Schulen\n\n## Verfassungsrechtliche Grundlagen\n\nDie Rechtslage ist durch mehrere verfassungsrechtliche Prinzipien geprägt:\n\n### 1. Staatliche Neutralität und Tr",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 0.67,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.0
+      },
+      {
+        "id": 4,
+        "question": "Welche Rechte hat eine Religionsgemeinschaft bei der Organisation ihrer eigenen Angelegenheiten, und wo liegen die Grenzen des kirchlichen Selbstbestimmungsrechts?",
+        "category": "Selbstbestimmungsrecht",
+        "score": 73.0,
+        "answer_excerpt": "# Rechte und Grenzen des kirchlichen Selbstbestimmungsrechts\n\n## Garantierte Rechte\n\nReligionsgemeinschaften genießen nach **Art. 137 Abs. 3 WRV i.V.m. Art. 140 GG** das **kirchliche Selbstbestimmungs",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 15.5
+      },
+      {
+        "id": 5,
+        "question": "Eine islamische Lehrerin möchte im Unterricht ein Kopftuch tragen. Das Bundesland hat ein Neutralitätsgesetz erlassen. Was sagen Grundgesetz und Rechtsprechung dazu?",
+        "category": "Religionsfreiheit Lehrerin",
+        "score": 73.0,
+        "answer_excerpt": "# Kopftuch im Unterricht: Verfassungsrechtliche Bewertung\n\n## Grundrechtliche Ausgangslage\n\nDie Lehrerin kann sich auf **Art. 4 Abs. 1 und 2 GG** berufen, der die Religionsfreiheit und die ungestörte ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.7
+      }
+    ],
+    "duration_s": 94.2
+  }
+]

@@ -1,0 +1,145 @@
+[
+  {
+    "question": "Ein Frachtführer befördert Waren per LKW und die Ware wird während des Transports beschädigt. Welche Haftung trifft den Frachtführer nach HGB, und welche Haftungsausschlüsse gibt es?",
+    "expected_norms": [
+      "§ 425",
+      "§ 426"
+    ],
+    "expected_keywords": [
+      "Frachtführer",
+      "Haftung",
+      "beschädig",
+      "Frachtgut"
+    ]
+  },
+  {
+    "question": "Ein Frachtführer vereinbart mit dem Auftraggeber, dass er für Transportschäden nur bis 500 Euro haftet. Das Gut ist jedoch 10.000 Euro wert und wird vollständig zerstört. Ist die Haftungsbeschränkung wirksam?",
+    "expected_norms": [
+      "§ 435"
+    ],
+    "expected_keywords": [
+      "Haftung",
+      "vorsätzlich",
+      "leichtfertig",
+      "ausgeschlossen"
+    ]
+  },
+  {
+    "question": "Ein Auftraggeber beauftragt einen Spediteur mit der Organisation eines Gütertransports. Die Ware geht verloren. Ist der Spediteur als Frachtführer oder als Spediteur haftbar, und wo liegt der rechtliche Unterschied?",
+    "expected_norms": [
+      "§ 459"
+    ],
+    "expected_keywords": [
+      "Spediteur",
+      "Frachtführer",
+      "Haftung",
+      "Auftrag"
+    ]
+  },
+  {
+    "question": "Ein Paketdienstleister übernimmt ein Paket ohne den Wert des Gutes zu kennen. Das Paket geht verloren. Nach welchen Kriterien berechnet sich der Haftungshöchstbetrag, und was gilt bei einfacher Fahrlässigkeit?",
+    "expected_norms": [
+      "§ 431"
+    ],
+    "expected_keywords": [
+      "Höchstbetrag",
+      "Frachtführer",
+      "Verlust",
+      "Kilogramm"
+    ]
+  },
+  {
+    "question": "Ein Frachtführer liefert Waren mit erheblicher Verzoegerung. Welche Ansprueche hat der Absender bei Ueberschreitung der Lieferfrist gemaess § 425 HGB, und wann gilt die Ware als verloren?",
+    "expected_norms": [
+      "§ 425"
+    ],
+    "expected_keywords": [
+      "Lieferfrist",
+      "Verspätung",
+      "Schadensersatz",
+      "Frachtführer"
+    ]
+  },
+  {
+    "id": 6,
+    "skill": "transportrecht",
+    "question": "Ein Frachtführer verliert im internationalen Straßentransport eine Ladung durch grobe Fahrlässigkeit. Gilt noch die CMR-Haftungsbeschränkung?",
+    "expected_norms": [
+      "Art. 23 CMR",
+      "Art. 29 CMR"
+    ],
+    "expected_keywords": [
+      "CMR",
+      "Haftungsbegrenzung",
+      "grobe Fahrlässigkeit",
+      "leichtfertig",
+      "Durchbruch"
+    ],
+    "category": "CMR-Haftung"
+  },
+  {
+    "id": 7,
+    "skill": "transportrecht",
+    "question": "Bei einem Flug geht das Gepäck verloren. Der Passagier verlangt auch Ersatz für den immateriellen Schaden. Gilt die Haftungsbegrenzung des Montrealer Übereinkommens?",
+    "expected_norms": [
+      "Art. 17 MÜ",
+      "Art. 22 MÜ"
+    ],
+    "expected_keywords": [
+      "Montrealer Übereinkommen",
+      "Gepäckverlust",
+      "Haftungsbegrenzung",
+      "immaterieller Schaden",
+      "Walz"
+    ],
+    "category": "Luftfrachthaftung"
+  },
+  {
+    "id": 8,
+    "skill": "transportrecht",
+    "question": "Ein Spediteur lagert Waren in einem ungeeigneten Lager; sie verbrennen. Die ADSp-Klauseln begrenzen die Haftung. Greift die Beschränkung?",
+    "expected_norms": [
+      "§ 435 HGB"
+    ],
+    "expected_keywords": [
+      "ADSp",
+      "leichtfertig",
+      "Haftungsdurchbruch",
+      "Organisationsverschulden",
+      "Spediteur"
+    ],
+    "category": "Spediteurhaftung ADSp"
+  },
+  {
+    "id": 9,
+    "skill": "transportrecht",
+    "question": "Paletten rutschen vom Lkw, weil der Absender sie schlecht gesichert hat. Der Frachtführer kannte den Mangel. Wer haftet?",
+    "expected_norms": [
+      "§ 254 BGB",
+      "§ 411 HGB"
+    ],
+    "expected_keywords": [
+      "Ladungssicherung",
+      "Mitverschulden",
+      "Frachtführer",
+      "Absender"
+    ],
+    "category": "Ladungssicherung / Mitverschulden"
+  },
+  {
+    "id": 10,
+    "skill": "transportrecht",
+    "question": "Eine Fluggesellschaft ist insolvent; Flüge fallen aus. Kann der Fluggast Ausgleich nach VO 261/2004 vom Reiseveranstalter verlangen?",
+    "expected_norms": [
+      "Art. 2 VO 261/2004",
+      "Art. 3 VO 261/2004"
+    ],
+    "expected_keywords": [
+      "ausführendes Luftfahrtunternehmen",
+      "Insolvenz",
+      "Passivlegitimation",
+      "Reiseveranstalter"
+    ],
+    "category": "Fluggastrechte Insolvenz"
+  }
+]

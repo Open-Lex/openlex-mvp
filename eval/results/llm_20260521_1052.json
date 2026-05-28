@@ -1,0 +1,129 @@
+[
+  {
+    "skill": "urheberrecht",
+    "n_questions": 5,
+    "avg_score": 78.3,
+    "hallucination_rate": 20.0,
+    "worst_score": 57.4,
+    "best_score": 89.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Autor veröffentlicht ein Buch, das eine Übersetzung eines anderen Werkes enthält. Welche Rechte hat der Übersetzer?",
+        "category": "Urheberrecht an Bearbeitungen",
+        "score": 87.5,
+        "answer_excerpt": "# Rechte des Übersetzers\n\nDer Übersetzer genießt umfassenden urheberrechtlichen Schutz für seine Übersetzung:\n\n## Eigenes Urheberrecht\n\nGemäß **§ 3 UrhG** werden **Übersetzungen als Bearbeitungen gesc",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 24.2
+      },
+      {
+        "id": 2,
+        "question": "Ein Unternehmen verwendet ein Computerprogramm, das von einem anderen Unternehmen entwickelt wurde. Welche Rechte hat der Entwickler?",
+        "category": "Urheberrecht an Computerprogrammen",
+        "score": 57.4,
+        "answer_excerpt": "# Rechte des Entwicklers eines Computerprogramms\n\nDie Rechte des Entwicklers hängen wesentlich davon ab, ob das Programm im Rahmen eines Arbeits- oder Dienstverhältnisses erstellt wurde:\n\n## 1. Entwic",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.9
+      },
+      {
+        "id": 3,
+        "question": "Ein Künstler erstellt ein Gemälde, das auf einem Foto basiert. Welche Rechte hat der Fotograf?",
+        "category": "Urheberrecht an Kunstwerken",
+        "score": 89.2,
+        "answer_excerpt": "# Rechte des Fotografen bei Verwendung seines Fotos als Vorlage für ein Gemälde\n\nDer Fotograf hat grundsätzlich **Urheberrechte** an seinem Foto, die bei einer Verwendung als Vorlage für ein Gemälde r",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.4
+      },
+      {
+        "id": 4,
+        "question": "Ein Musiker komponiert ein Lied, das auf einem anderen Lied basiert. Welche Rechte hat der ursprüngliche Komponist?",
+        "category": "Urheberrecht an Musikwerken",
+        "score": 89.2,
+        "answer_excerpt": "# Rechte des ursprünglichen Komponisten\n\nWenn ein Musiker ein Lied komponiert, das auf einem anderen Lied basiert, hat der ursprüngliche Komponist verschiedene Rechte:\n\n## Urheberschaft und Urheberper",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 21.8
+      },
+      {
+        "id": 5,
+        "question": "Ein Unternehmen verwendet ein Logo, das von einem anderen Unternehmen entwickelt wurde. Welche Rechte hat der Entwickler?",
+        "category": "Urheberrecht an Marken",
+        "score": 68.2,
+        "answer_excerpt": "# Rechte des Logo-Entwicklers\n\nDer Entwickler eines Logos hat umfassende urheberrechtliche Ansprüche:\n\n## 1. Urheberpersönlichkeitsrechte\n\nDer Entwickler behält das **Recht auf Anerkennung seiner Urhe",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": true,
+          "hallucination_examples": [
+            "Die Antwort behauptet, dass § 69b UrhG 'analog auf andere Werke angewandt' wird. Dies ist eine unzulässige Verallgemeinerung, die aus den Quellen nicht hervorgeht. § 69b UrhG regelt ausdrücklich nur Computerprogramme, und die Quellen enthalten keine Aussage über eine analoge Anwendung auf Logos."
+          ],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 15.9
+      }
+    ],
+    "duration_s": 98.6
+  }
+]

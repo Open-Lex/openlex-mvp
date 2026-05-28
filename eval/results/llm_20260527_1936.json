@@ -1,0 +1,126 @@
+[
+  {
+    "skill": "baurecht",
+    "n_questions": 5,
+    "avg_score": 92.6,
+    "hallucination_rate": 0.0,
+    "worst_score": 82.9,
+    "best_score": 97.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Unternehmer stellt für einen Besteller ein Werk her. Nach Fertigstellung stellt sich heraus, dass das Werk Mängel aufweist. Welche Rechte hat der Besteller gemäß § 634 bei Mängeln?",
+        "category": "Mängelrechte",
+        "score": 96.8,
+        "answer_excerpt": "# Rechte des Bestellers bei Mängeln gemäß § 634 BGB\n\nNach § 634 BGB hat der Besteller bei Vorliegen von Mängeln folgende Rechte [Quelle 1]:\n\n## Primäre Ansprüche\n\n**1. Nacherfüllung (§ 635)**\nDer Best",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.5
+      },
+      {
+        "id": 2,
+        "question": "Der Unternehmer hat dem Besteller ein mangelhaftes Werk hergestellt. Der Besteller verlangt Nacherfüllung. Welche Aufwendungen muss der Unternehmer nach § 635 tragen?",
+        "category": "Nacherfüllung",
+        "score": 97.8,
+        "answer_excerpt": "# Aufwendungen des Unternehmers bei Nacherfüllung nach § 635 BGB\n\nNach **§ 635 Abs. 2 BGB** trägt der Unternehmer **alle erforderlichen Aufwendungen** für die Nacherfüllung. Diese umfassen ausdrücklic",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 6.3
+      },
+      {
+        "id": 3,
+        "question": "Ein Besteller beauftragt einen Unternehmer mit der Herstellung eines Bauwerks. Innerhalb welcher Frist verjähren die Mängelansprüche des Bestellers nach § 634a, wenn das Werk mangelhaft ist?",
+        "category": "Verjährung",
+        "score": 95.8,
+        "answer_excerpt": "# Verjährung der Mängelansprüche bei Bauwerken\n\nNach **§ 634a BGB** verjähren die Mängelansprüche des Bestellers bei einem **Bauwerk innerhalb von 5 Jahren** [Quelle 1].\n\n## Regelung nach § 634a Abs. ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.8
+      },
+      {
+        "id": 4,
+        "question": "Ein Unternehmer und ein Besteller vereinbaren einen Werkvertrag. Ist eine Vergütung nicht ausdrücklich festgelegt, wie wird diese nach § 632 bestimmt?",
+        "category": "Vergütung",
+        "score": 82.9,
+        "answer_excerpt": "# Bestimmung der Vergütung beim Werkvertrag nach § 632 BGB\n\nWenn die Vergütung nicht ausdrücklich festgelegt ist, bestimmt sich diese nach **§ 632 Abs. 2 BGB** nach folgendem Stufenschema [Quelle 2]:\n",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.6
+      },
+      {
+        "id": 5,
+        "question": "Nach § 631 schließen ein Unternehmer und ein Besteller einen Werkvertrag ab. Zu welchen Leistungen sind beide Parteien verpflichtet?",
+        "category": "Vertragspflichten",
+        "score": 89.5,
+        "answer_excerpt": "# Pflichten beim Werkvertrag nach § 631 BGB\n\nNach § 631 Abs. 1 BGB haben beide Parteien folgende vertragstypische Pflichten [Quelle 1]:\n\n## Pflichten des Unternehmers\n\nDer Unternehmer ist zur **Herste",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.2
+      }
+    ],
+    "duration_s": 50.8
+  }
+]

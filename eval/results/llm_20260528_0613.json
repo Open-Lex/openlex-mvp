@@ -1,0 +1,198 @@
+[
+  {
+    "skill": "datenschutz",
+    "n_questions": 8,
+    "avg_score": 80.9,
+    "hallucination_rate": 0.0,
+    "worst_score": 54.0,
+    "best_score": 95.8,
+    "questions": [
+      {
+        "id": null,
+        "question": "Ein Unternehmen verarbeitet personenbezogene Daten ohne Rechtsgrundlage. Welche Sanktionen sieht die DSGVO vor und welche Behörde ist zuständig?",
+        "category": "",
+        "score": 87.5,
+        "answer_excerpt": "# Sanktionen bei Datenverarbeitung ohne Rechtsgrundlage gemäß DSGVO\n\n## Sanktionsarten\n\nDie DSGVO sieht in **Art. 83 DSGVO** Geldbußgelder vor. Nach den Quellen erfolgt eine **verschuldensunabhängige ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "leitlinie"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.1
+      },
+      {
+        "id": null,
+        "question": "Unter welchen Voraussetzungen ist eine Auftragsverarbeitung nach Art. 28 DSGVO zulässig und was muss der Auftragsverarbeitungsvertrag enthalten?",
+        "category": "",
+        "score": 81.5,
+        "answer_excerpt": "# Voraussetzungen und Inhalt eines Auftragsverarbeitungsvertrags nach Art. 28 DSGVO\n\n## Voraussetzungen für Auftragsverarbeitung\n\nNach Art. 28 DSGVO ist eine Auftragsverarbeitung zulässig, wenn der Ve",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "leitlinie"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 6.0
+      },
+      {
+        "id": null,
+        "question": "Ein Unternehmen möchte IoT-Gerätedaten über den Data Governance Act (DGA) anderen Unternehmen über einen Datenvermittlungsdienst zur Verfügung stellen. Was ist dabei datenschutzrechtlich zu beachten?",
+        "category": "",
+        "score": 83.5,
+        "answer_excerpt": "# Datenschutzrechtliche Anforderungen bei IoT-Datenvermittlung über DGA\n\n## Vorrang der DSGVO\n\nBei der Weitergabe von IoT-Gerätedaten über Datenvermittlungsdienste nach DGA ist grundsätzlich zu beacht",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "leitlinie",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.2
+      },
+      {
+        "id": null,
+        "question": "Wie verhält sich der EU Data Act zu DSGVO-Anforderungen beim Datenzugang? Dürfen Produktdaten, die auch Personendaten enthalten, nach dem Data Act weitergegeben werden?",
+        "category": "",
+        "score": 95.8,
+        "answer_excerpt": "# Verhältnis Data Act zu DSGVO beim Datenzugang mit Personendaten\n\n## Vorrang der DSGVO\n\nDer Data Act ordnet sich der DSGVO klar unter. **Art. 1 Abs. 5 Data Act** etabliert ausdrücklich den Vorrang de",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.9
+      },
+      {
+        "id": null,
+        "question": "Was versteht man unter einer Datenschutz-Folgenabschätzung (DSFA) nach Art. 35 DSGVO und wann ist sie verpflichtend?",
+        "category": "",
+        "score": 95.8,
+        "answer_excerpt": "## Datenschutz-Folgenabschätzung nach Art. 35 DSGVO\n\n### Definition und Zweck\n\nEine Datenschutz-Folgenabschätzung (DSFA) ist ein systematisches Instrument zur Risikoeindämmung [Quelle 7]. Sie dient da",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "leitlinie",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.1
+      },
+      {
+        "id": null,
+        "question": "Ein Nutzer macht von seinem Recht auf Datenlöschung ('Recht auf Vergessenwerden') nach Art. 17 DSGVO Gebrauch. Welche Ausnahmen gibt es?",
+        "category": "",
+        "score": 87.8,
+        "answer_excerpt": "# Ausnahmen vom Recht auf Löschung nach Art. 17 DSGVO\n\nArt. 17 DSGVO räumt Nutzern grundsätzlich ein Recht auf Löschung ein, sieht aber wichtige Ausnahmen vor [Quelle 3]. Diese Ausnahmen sind in Art. ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "leitlinie"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.9
+      },
+      {
+        "id": null,
+        "question": "Dürfen Unternehmen personenbezogene Daten in die USA übertragen? Was hat sich durch das EU-U.S. Data Privacy Framework geändert?",
+        "category": "",
+        "score": 61.0,
+        "answer_excerpt": "# Datentransfer in die USA und das EU-U.S. Data Privacy Framework\n\n## Allgemeine Zulässigkeit\n\nUnternehmen dürfen personenbezogene Daten in die USA übertragen, wenn die erforderlichen rechtlichen Vora",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "leitlinie",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.2
+      },
+      {
+        "id": null,
+        "question": "Was versteht der Data Governance Act unter 'geschützten Daten' und welche Kategorien von Daten fallen darunter?",
+        "category": "",
+        "score": 54.0,
+        "answer_excerpt": "# Geschützte Daten nach dem Data Governance Act\n\nDie bereitgestellten Quellen behandeln primär die DSGVO und das BDSG, nicht spezifisch den Data Governance Act. Basierend auf den verfügbaren Materiali",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.25,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "leitlinie",
+            "urteil_segmentiert"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.0
+      }
+    ],
+    "duration_s": 75.7
+  }
+]

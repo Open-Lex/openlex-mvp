@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "bank_kapitalmarktrecht",
+    "n_questions": 5,
+    "avg_score": 82.3,
+    "hallucination_rate": 0.0,
+    "worst_score": 62.5,
+    "best_score": 90.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Unternehmen erbringt Wertpapierdienstleistungen ausschließlich für sein Mutterunternehmen. Muss es sich als Wertpapierdienstleistungsunternehmen registrieren?",
+        "category": "Registrierungspflicht",
+        "score": 90.5,
+        "answer_excerpt": "# Antwort\n\n**Nein, eine Registrierung ist in diesem Fall nicht erforderlich.**\n\nGemäß dem Wertpapierhandelsgesetz (WpHG) gelten Unternehmen, die Wertpapierdienstleistungen **ausschließlich für ihr Mut",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 20.3
+      },
+      {
+        "id": 2,
+        "question": "Eine natürliche Person ist nach einem unmittelbar geltenden Rechtsakt der Europäischen Union als unzuverlässig eingestuft worden. Welche Folgen hat dies für ihre Tätigkeit im Wertpapierhandel?",
+        "category": "Unzuverlässigkeit",
+        "score": 87.5,
+        "answer_excerpt": "# Folgen der Unzuverlässigkeitseinstufung im Wertpapierhandel\n\nWenn eine natürliche Person nach einem unmittelbar geltenden Rechtsakt der EU als unzuverlässig eingestuft wurde, hat dies erhebliche Kon",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 18.1
+      },
+      {
+        "id": 3,
+        "question": "Ein Unternehmen erbringt Datenbereitstellungsdienste und ist somit ein Datenbereitstellungsdienstleister. Welche Pflichten hat es gegenüber der BaFin?",
+        "category": "Datenbereitstellung",
+        "score": 84.5,
+        "answer_excerpt": "Basierend auf den bereitgestellten Quellen kann ich leider **keine spezifischen Pflichten eines Datenbereitstellungsdienstleisters gegenüber der BaFin** direkt identifizieren.\n\nDie einzige relevante Q",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.7
+      },
+      {
+        "id": 4,
+        "question": "Ein Wertpapierdienstleistungsunternehmen möchte eine neue Wertpapierdienstleistung anbieten. Welche Anforderungen muss es erfüllen, um dies zu tun?",
+        "category": "Neue Dienstleistungen",
+        "score": 62.5,
+        "answer_excerpt": "# Anforderungen für das Anbieten einer neuen Wertpapierdienstleistung\n\nEin Wertpapierdienstleistungsunternehmen muss bei der Einführung einer neuen Wertpapierdienstleistung verschiedene grundlegende A",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 14.8
+      },
+      {
+        "id": 5,
+        "question": "Eine Personengesellschaft ist als unzuverlässig eingestuft worden. Welche Auswirkungen hat dies auf ihre Fähigkeit, Wertpapierdienstleistungen zu erbringen?",
+        "category": "Unzuverlässigkeit",
+        "score": 86.5,
+        "answer_excerpt": "# Auswirkungen der Unzuverlässigkeit einer Personengesellschaft auf Wertpapierdienstleistungen\n\nWenn eine Personengesellschaft nach **§ 2a WpHG** als unzuverlässig eingestuft wird, hat dies erhebliche",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.6
+      }
+    ],
+    "duration_s": 84.1
+  }
+]

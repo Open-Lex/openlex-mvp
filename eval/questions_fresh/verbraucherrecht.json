@@ -1,0 +1,81 @@
+[
+  {
+    "question": "Ein Online-Händler fügt in seinen AGB unter Punkt 15 eine Klausel ein, wonach Mängel an Waren nur gerügt werden können, wenn dies innerhalb von 2 Wochen nach Erhalt schriftlich erfolgt. Ein Käufer bestellt einen Laptop und erhält diesen mit fehlendem Netzteil. Er reklamiert den Mangel nach 3 Wochen per E-Mail. Der Händler beruft sich auf seine AGB-Klausel. Ist diese Klausel wirksam und kann sich der Händler darauf berufen? (§ 305 BGB, § 307 BGB)",
+    "expected_norms": [
+      "§ 305 BGB",
+      "§ 307 BGB",
+      "§ 437 BGB"
+    ],
+    "expected_keywords": [
+      "AGB-Kontrolle",
+      "unangemessene Benachteiligung",
+      "Überraschungsklausel",
+      "Mängelhaftung",
+      "angemessene Rügefrist"
+    ]
+  },
+  {
+    "question": "Ein Verbraucher kauft in einem Onlineshop ein Buch und erhält dieses per Post. Im Bestellprozess war deutlich ein Button mit der Aufschrift 'Bestellung abschließen' zu klicken. Der Verbraucher bereut seinen Kauf eine Woche später und möchte das Buch zurückgeben. Der Shop verweigert die Rücknahme und beruft sich darauf, dass Bücher vom Widerrufsrecht ausgenommen seien. Zu Recht? (§ 312d BGB, § 312g BGB)",
+    "expected_norms": [
+      "§ 312d BGB",
+      "§ 312g BGB",
+      "§ 312 BGB"
+    ],
+    "expected_keywords": [
+      "Fernabsatzvertrag",
+      "Widerrufsrecht",
+      "Ausnahmen",
+      "Bücher",
+      "14 Tage",
+      "Verbraucherschutz"
+    ]
+  },
+  {
+    "question": "Eine Verbraucherin kauft online einen defekten Staubsauger. Nach Erhalt bemerkt sie nach 8 Monaten, dass das Gerät nicht mehr saugt. Sie verlangt vom Verkäufer Reparatur oder Ersatz gemäß Gewährleistung. Der Verkäufer argumentiert, dass die Gewährleistungsfrist bereits abgelaufen sei. Wer trägt die Beweislast dafür, dass der Mangel bereits bei Übergabe vorhanden war? (§ 477 BGB, § 478 BGB)",
+    "expected_norms": [
+      "§ 477 BGB",
+      "§ 478 BGB",
+      "§ 440 BGB"
+    ],
+    "expected_keywords": [
+      "Beweislastumkehr",
+      "Vermutung",
+      "Gewährleistungsfrist",
+      "6 Monate",
+      "Verbrauchsgüterkauf",
+      "Mangelfreiheit"
+    ]
+  },
+  {
+    "question": "Ein Verbraucher bestellt Schuhe online und zahlt per Kreditkarte mit Kreditkartennummer und Prüfziffer. Der Online-Shop speichert diese Daten in seinen Systemen ab und nutzt sie für Folgebestellungen ohne erneute Eingabe. Eine AGB-Klausel sieht vor, dass der Verbraucher sich damit einverstanden erklärt. Ist diese AGB-Klausel zur Speicherung von Zahlungsdaten wirksam? (§ 305c BGB, § 307 BGB)",
+    "expected_norms": [
+      "§ 305c BGB",
+      "§ 307 BGB",
+      "§ 309 BGB"
+    ],
+    "expected_keywords": [
+      "Transparenzgebot",
+      "Überraschungsklausel",
+      "unangemessene Benachteiligung",
+      "Sicherheit",
+      "Datenspeicherung",
+      "AGB-Kontrolle"
+    ]
+  },
+  {
+    "question": "Ein Verbraucher erwirbt ein Kleidungsstück in einem Internetshop. Nach 10 Tagen möchte er von seinem Widerrufsrecht Gebrauch machen, ohne den Artikel zu benutzen. Der Shop verlangt jetzt 5 Euro Rücksendekosten von dem Verbraucher. Der Verbraucher behauptet, der Shop müsse die Kosten tragen. Was ist rechtlich korrekt? (§ 312g BGB, § 357 BGB)",
+    "expected_norms": [
+      "§ 312g BGB",
+      "§ 357 BGB",
+      "§ 356 BGB"
+    ],
+    "expected_keywords": [
+      "Widerrufsrecht",
+      "Rücksendekosten",
+      "Verbraucherschutz",
+      "Fernabsatz",
+      "außerordentlicher Umstand",
+      "Kostenersatz"
+    ]
+  }
+]

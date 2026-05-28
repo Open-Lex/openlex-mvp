@@ -1,0 +1,76 @@
+[
+  {
+    "question": "Der Fotograf P fertigt während einer öffentlichen Straßenbahnfahrt ein Foto eines Fahrgastes an und veröffentlicht dieses auf seiner Website ohne Einwilligung. Der Fahrgast F möchte gegen die Veröffentlichung vorgehen. Ist das Foto ein geschütztes Werk nach dem UrhG und inwieweit können die Persönlichkeitsrechte des F greifen, obwohl der P ein urheberrechtliches Werk geschaffen hat?",
+    "expected_norms": [
+      "§ 2 Abs. 1 Nr. 5 UrhG",
+      "§ 72 UrhG",
+      "§ 1004 BGB",
+      "§ 823 Abs. 1 BGB"
+    ],
+    "expected_keywords": [
+      "Werk der Fotografie",
+      "persönliche geistige Schöpfung",
+      "Kollision von Urheberrecht und Persönlichkeitsrecht",
+      "Interessenabwägung"
+    ]
+  },
+  {
+    "question": "Ein Geschichtsstudent zitiert in seiner wissenschaftlichen Hausarbeit wörtlich drei Absätze (zusammen etwa 250 Wörter) aus einem urheberrechtlich geschützten Sachbuch zur Napoleonischen Zeit. Er kennzeichnet das Zitat mit Anführungszeichen und gibt die Quelle an. Kann sich der Student auf das Zitationsrecht nach § 51 UrhG berufen und sind alle Voraussetzungen erfüllt?",
+    "expected_norms": [
+      "§ 51 UrhG"
+    ],
+    "expected_keywords": [
+      "Zitatzweck",
+      "Umfang des Zitats",
+      "Quellenangabe",
+      "eigenständige Arbeit",
+      "innerer Zusammenhang"
+    ]
+  },
+  {
+    "question": "Ein Künstler lizenziert sein Musikwerk unter einer Creative-Commons-Lizenz (CC BY-SA 3.0). Ein Musikproduzent nutzt das Werk als Basis für einen Remix und möchte diesen unter einer restriktiveren Lizenz (CC BY 3.0) veröffentlichen. Verstößt dies gegen die Bedingungen der CC-Lizenz und welche Rechte des Ursprungskünstlers werden damit berührt?",
+    "expected_norms": [
+      "§ 69c UrhG",
+      "§ 23 UrhG",
+      "§ 39 UrhG"
+    ],
+    "expected_keywords": [
+      "Creative-Commons-Lizenz",
+      "Copyleft-Prinzip",
+      "Bearbeitungsrecht",
+      "Lizenzkompatibilität",
+      "Urheberpersönlichkeitsrechte"
+    ]
+  },
+  {
+    "question": "Ein Verlag erwirbt von einem Autor die exklusiven Verwertungsrechte für die Buchausgabe eines Romans für Deutschland. Der Autor verkauft danach einem Filmstudio die Filmadaptationsrechte, ohne den Verlag einzubeziehen. Hat der Verlag einen Anspruch gegen den Autor und auf welcher Rechtsgrundlage?",
+    "expected_norms": [
+      "§ 31 UrhG",
+      "§ 39 UrhG",
+      "§ 37 UrhG"
+    ],
+    "expected_keywords": [
+      "ausschließliches Nutzungsrecht",
+      "Verletzung vertraglicher Pflichten",
+      "Schadensersatz",
+      "Unterlassungsanspruch",
+      "Rechtsinhaber"
+    ]
+  },
+  {
+    "question": "Ein Grafiker erstellt für eine Werbeagentur ein Designkonzept als Auftragswerk. Der Grafiker und die Agentur schließen einen Vertrag ab, in dem nicht explizit geregelt wird, wer Urheber des Werkes ist und wer die Verwertungsrechte erhält. Wem stehen die Urheberschaft und die Verwertungsrechte nach deutschem Urheberrecht zu und welche Norm regelt dies?",
+    "expected_norms": [
+      "§ 7 UrhG",
+      "§ 31 UrhG",
+      "§ 43 UrhG"
+    ],
+    "expected_keywords": [
+      "Werkschöpfung",
+      "Urheberschaft",
+      "Auftragswerk",
+      "Vertrag über Nutzungsrechte",
+      "gesetzliche Vermutung",
+      "Schöpferprinzip"
+    ]
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "question": "Die Firma A entwickelt ein neues Verfahren zur Herstellung von Hochleistungsbatterien und reicht eine Patentanmeldung beim Deutschen Patent- und Markenamt ein. Nach 18 Monaten wird die Anmeldung veröffentlicht. B sieht die Anmeldung und beginnt sofort, das Verfahren in seinem Unternehmen einzusetzen. Zwei Jahre später wird A das Patent erteilt. Kann A gegen B vorgehen und welche Ansprüche hat A gemäß § 139 PatG?",
+    "expected_norms": [
+      "§ 139 PatG",
+      "§ 97 PatG"
+    ],
+    "expected_keywords": [
+      "vorläufiger Rechtsschutz",
+      "Schadensersatzanspruch",
+      "Anspruch auf Vernichtung",
+      "Entschädigung"
+    ]
+  },
+  {
+    "question": "Die GmbH X registriert die Bildmarke mit ihrem charakteristischen roten Kreis als Marke beim DPMA. Nach drei Jahren wird festgestellt, dass X die Marke weder selbst noch durch eine lizensierte Drittpartei benutzt hat. Y beantragt die Eintragungslöschung. Muss das DPMA die Marke löschen und welche Voraussetzungen sind gemäß § 97 Abs. 1 MarkenG erforderlich?",
+    "expected_norms": [
+      "§ 97 Abs. 1 MarkenG",
+      "§ 95 MarkenG"
+    ],
+    "expected_keywords": [
+      "Verfallensgrund",
+      "Benutzung im geschäftlichen Verkehr",
+      "Fünfjahresfrist",
+      "ernsthafter Grund"
+    ]
+  },
+  {
+    "question": "Das Unternehmen C verbreitet auf seiner Website gezielt irreführende Aussagen über die Produktqualität seines Konkurrenten D und behauptet, D verwende umweltschädliche Materialien (obwohl dies falsch ist). Dies schadet D erheblich. D möchte gegen C vorgehen. Welche Ansprüche hat D gemäß §§ 8 und 9 UWG und welche Voraussetzungen müssen erfüllt sein?",
+    "expected_norms": [
+      "§ 8 UWG",
+      "§ 9 UWG"
+    ],
+    "expected_keywords": [
+      "unlauteren Wettbewerb",
+      "Unterlassung",
+      "Schadensersatz",
+      "Beseitigung und Widerrufsanspruch"
+    ]
+  },
+  {
+    "question": "Die Marke M wird von Unternehmen P für Sportschuhe eingetragen (Klasse 25). Später versucht P, dieselbe oder eine sehr ähnliche Marke auch für Sportgetränke (Klasse 32) anzumelden. Der Inhaber der bestehenden Marke M erhebt Einspruch gegen diese neue Anmeldung. Kann der Einspruch erfolgreich sein und auf welche Norm stützt sich dieser Anspruch?",
+    "expected_norms": [
+      "§ 42 Abs. 2 MarkenG",
+      "§ 9 Abs. 1 lit. b MarkenG"
+    ],
+    "expected_keywords": [
+      "Verwechslungsgefahr",
+      "Ähnlichkeit der Waren/Dienstleistungen",
+      "Ähnlichkeit der Zeichen",
+      "Bekanntheitsgrad"
+    ]
+  },
+  {
+    "question": "Der Arbeitgeber E stellt einen neuen Mitarbeiter F ein, welcher vorher für den Konkurrenten tätig war. F möchte sein Wissen über Kundenbeziehungen und technische Prozesse in seine neue Tätigkeit einbringen. E fürchtet, dass dies gegen das Geschäftsgeheimnis des Konkurrenten verstößt. Welche Haftungsrisiken entstehen für E und F gemäß § 4 UWG und welche Voraussetzungen müssen gegeben sein?",
+    "expected_norms": [
+      "§ 4 UWG",
+      "§ 17 GeschGehG"
+    ],
+    "expected_keywords": [
+      "unlautere Geschäftspraktiken",
+      "Geschäftsgeheimnis",
+      "Verletzung",
+      "Verschaffung"
+    ]
+  }
+]

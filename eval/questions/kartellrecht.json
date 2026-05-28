@@ -1,0 +1,100 @@
+[
+  {
+    "question": "Ein Unternehmen schließt mit einem Konkurrenten eine Vereinbarung, um den Preis festzulegen. Liegt ein Verstoß gegen Art. 101 AEUV vor und welche Rechtsfolgen drohen?",
+    "expected_norms": [
+      "Art. 101"
+    ],
+    "expected_keywords": [
+      "Kartellverbot",
+      "Preisabsprache",
+      "Nichtigkeit",
+      "Bußgeld"
+    ]
+  },
+  {
+    "question": "Wann liegt nach Art. 102 AEUV ein Missbrauch einer marktbeherrschenden Stellung vor? Nennen Sie konkrete Beispiele für missbräuchliches Verhalten.",
+    "expected_norms": [
+      "Art. 102"
+    ],
+    "expected_keywords": [
+      "Marktbeherrschung",
+      "Missbrauch",
+      "Rabatte",
+      "Kopplung"
+    ]
+  },
+  {
+    "question": "Apple ist als Gatekeeper nach dem DMA eingestuft. Apple bevorzugt seinen eigenen App Store gegenüber Konkurrenten. Verstößt das gegen DMA Art. 5?",
+    "expected_norms": [
+      "Art. 5",
+      "DMA"
+    ],
+    "expected_keywords": [
+      "Gatekeeper",
+      "Self-Preferencing",
+      "App Store",
+      "Diskriminierung"
+    ]
+  },
+  {
+    "question": "Ein Gatekeeper nach DMA verweigert Drittanbietern die Interoperabilität mit seinem Messenger-Dienst. Welche Pflichten bestehen nach DMA Art. 7?",
+    "expected_norms": [
+      "Art. 7",
+      "DMA"
+    ],
+    "expected_keywords": [
+      "Interoperabilität",
+      "Messenger",
+      "Gatekeeper",
+      "Drittanbieter"
+    ]
+  },
+  {
+    "question": "Zwei Unternehmen planen eine Fusion. Ab welchen Umsatzschwellen ist eine Anmeldung bei der Europäischen Kommission nach der EU-Fusionskontrollverordnung erforderlich?",
+    "expected_norms": [
+      "§ 35"
+    ],
+    "expected_keywords": [
+      "Fusionskontrolle",
+      "Anmeldepflicht",
+      "Umsatzschwellen",
+      "Kommission"
+    ]
+  },
+  {
+    "question": "Welche Wettbewerbsregeln gelten für Vereinbarungen zwischen Unternehmen gleicher Marktstufe (horizontale Vereinbarungen) und wie unterscheiden sie sich von vertikalen Vereinbarungen?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "horizontal",
+      "vertikal",
+      "Wettbewerbsbeschränkung",
+      "Freistellung"
+    ]
+  },
+  {
+    "question": "Was ist das Verhältnis zwischen DMA und nationalem Kartellrecht (GWB)? Gilt das Vorrangprinzip des EU-Rechts auch hier?",
+    "expected_norms": [
+      "§ 32g"
+    ],
+    "expected_keywords": [
+      "DMA",
+      "GWB",
+      "Verhältnis",
+      "Bundeskartellamt"
+    ]
+  },
+  {
+    "question": "Ein Unternehmen hat einen Marktanteil von 40 % auf einem Produktmarkt. Ab wann besteht eine Vermutung für eine marktbeherrschende Stellung nach dem GWB?",
+    "expected_norms": [
+      "§ 18"
+    ],
+    "expected_keywords": [
+      "Marktbeherrschung",
+      "Marktanteil",
+      "Vermutung",
+      "Marktabgrenzung"
+    ]
+  }
+]

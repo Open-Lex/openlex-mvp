@@ -1,0 +1,133 @@
+[
+  {
+    "skill": "kirchenrecht",
+    "n_questions": 5,
+    "avg_score": 94.2,
+    "hallucination_rate": 0.0,
+    "worst_score": 89.4,
+    "best_score": 98.0,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Eine evangelische Landeskirche möchte einen Pfarrer, der sich wiederverheiratet hat, aus dem Dienst entlassen. Auf welcher verfassungsrechtlichen Grundlage kann die Kirche solche Loyalitätspflichten von ihren Amtsträgern verlangen?",
+        "category": "Kirchliches Selbstbestimmungsrecht und Arbeitsrecht",
+        "score": 89.4,
+        "answer_excerpt": "# Verfassungsrechtliche Grundlage für kirchliche Loyalitätspflichten\n\nEine evangelische Landeskirche kann Loyalitätspflichten von Pfarrern auf Basis des **kirchlichen Selbstbestimmungsrechts** verlang",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "literatur_blog",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 21.2
+      },
+      {
+        "id": 2,
+        "question": "Die Zeugen Jehovas beantragen in einem Bundesland den Status einer Körperschaft des öffentlichen Rechts, um Kirchensteuern erheben zu dürfen. Welche verfassungsrechtliche Vorschrift regelt diesen Status und welche Rechte sind damit verbunden?",
+        "category": "Körperschaftsstatus und Kirchensteuerrecht",
+        "score": 96.0,
+        "answer_excerpt": "# Verfassungsrechtliche Regelung des Körperschaftsstatus und Kirchensteuerrecht\n\n## Verfassungsrechtliche Grundlage\n\nDer Status einer Körperschaft des öffentlichen Rechts (KdöR) für Religionsgemeinsch",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "literatur_blog",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.4
+      },
+      {
+        "id": 3,
+        "question": "An einer staatlichen Schule soll ein Kruzifix in jedem Klassenzimmer aufgehängt werden. Welche Verfassungsnormen und welches Prinzip sprechen gegen diese Maßnahme?",
+        "category": "Staatliche Neutralität in Religionssachen",
+        "score": 98.0,
+        "answer_excerpt": "# Verfassungsrechtliche Bedenken gegen Kruzifixe in Klassenzimmern\n\n## Relevante Verfassungsnormen\n\n**Art. 4 Abs. 1 GG** (Negative Religionsfreiheit) und **Art. 140 GG i.V.m. Art. 137 WRV** (Staatlich",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "literatur_blog",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.5
+      },
+      {
+        "id": 4,
+        "question": "Ein katholischer Arzt in einem kirchlichen Krankenhaus wird gekündigt, weil er sich wiederverheirat hat. Welche Verfassungsnorm gewährleistet der Kirche das Recht, solche Anforderungen an ihre Arbeitnehmer zu stellen?",
+        "category": "Kirchliches Arbeitsrecht und Loyalitätspflichten",
+        "score": 96.0,
+        "answer_excerpt": "# Verfassungsrechtliche Grundlage für kirchliche Anforderungen an Arbeitnehmer\n\nDie Verfassungsnorm, die der Kirche das Recht gewährleistet, solche Anforderungen zu stellen, ist **Art. 137 Abs. 3 WRV ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "literatur_blog",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.6
+      },
+      {
+        "id": 5,
+        "question": "In einer Bundeswehr-Kaserne soll religiöse Seelsorge angeboten werden. Auf welcher Verfassungsnorm basiert die Garantie für diese Militärseelsorge, und unter welcher Bedingung darf sie angeboten werden?",
+        "category": "Militär- und Anstaltsseelsorge",
+        "score": 91.4,
+        "answer_excerpt": "# Verfassungsgrundlage der Militärseelsorge in der Bundeswehr\n\n## Verfassungsnorm\n\nDie Garantie für religiöse Militärseelsorge in der Bundeswehr basiert auf **Art. 141 WRV (Weimarer Reichsverfassung) ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "literatur_blog",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.4
+      }
+    ],
+    "duration_s": 70.6
+  }
+]

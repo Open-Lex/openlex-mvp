@@ -1,0 +1,121 @@
+[
+  {
+    "skill": "versicherungsrecht",
+    "n_questions": 5,
+    "avg_score": 76.7,
+    "hallucination_rate": 20.0,
+    "worst_score": 67.5,
+    "best_score": 79.2,
+    "questions": [
+      {
+        "id": null,
+        "question": "Ein Versicherungsnehmer schließt eine Kfz-Haftpflichtversicherung ab. Beim Antrag verschweigt er einen früheren Unfall, den der Versicherer abfragte. Welche Rechte hat der Versicherer bei einer vorvertraglichen Anzeigepflichtverletzung?",
+        "category": "",
+        "score": 79.2,
+        "answer_excerpt": "# Rechte des Versicherers bei vorvertraglicher Anzeigepflichtverletzung\n\n## Rechtliche Grundlage\n\nDer Versicherungsnehmer ist gemäß **§ 19 Abs. 1 VVG** [Quelle 3] verpflichtet, dem Versicherer bis zur",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 16.9
+      },
+      {
+        "id": null,
+        "question": "Ein Hausbesitzer hat eine Feuerversicherung. Er verursacht grob fahrlässig einen Brand. Welche Leistungskürzung sieht § 81 VVG für den Fall der groben Fahrlässigkeit vor, und in welcher Höhe kürzt die Rechtsprechung die Versicherungsleistung?",
+        "category": "",
+        "score": 79.2,
+        "answer_excerpt": "# Leistungskürzung bei grober Fahrlässigkeit gemäß § 81 VVG\n\n## Gesetzliche Regelung\n\nNach **§ 81 Abs. 2 VVG** [Quelle 1] ist der Versicherer berechtigt, seine Leistung zu kürzen, wenn der Versicherun",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 9.3
+      },
+      {
+        "id": null,
+        "question": "Ein Versicherungsnehmer zahlt seine Versicherungsprämie trotz Mahnung nicht. Welche Leistungsfreiheit tritt gemäß § 38 VVG ein, wenn der Versicherungsfall nach Ablauf der gesetzten Frist eintritt?",
+        "category": "",
+        "score": 78.2,
+        "answer_excerpt": "# Leistungsfreiheit bei Zahlungsverzug nach § 38 VVG\n\nBei einer nicht rechtzeitig gezahlten **Folgeprämie** tritt gemäß § 38 VVG folgende Regelung ein:\n\n## Verfahren und Rechtsfolgen\n\nDer Versicherer ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 8.6
+      },
+      {
+        "id": null,
+        "question": "Ein Versicherter hat bei einem Autounfall Ansprüche gegen einen Unfallverursacher. Der Kaskoversicherer erstattet den Schaden. Geht der Schadensersatzanspruch gegen den Unfallverursacher auf den Versicherer über?",
+        "category": "",
+        "score": 79.2,
+        "answer_excerpt": "# Übergang von Schadensersatzansprüchen bei Kaskoversicherung\n\nJa, der Schadensersatzanspruch gegen den Unfallverursacher geht auf den Kaskoversicherer über.\n\n## Rechtliche Grundlage\n\n**§ 86 Abs. 1 VV",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 13.3
+      },
+      {
+        "id": null,
+        "question": "Ein Versicherungsnehmer kündigt seine Lebensversicherung vor Ablauf. Welchen Anspruch auf Rückkaufswert gewährt § 169 VVG dem Versicherungsnehmer bei vorzeitiger Kündigung der Lebensversicherung?",
+        "category": "",
+        "score": 67.5,
+        "answer_excerpt": "# Anspruch auf Rückkaufswert nach § 169 VVG\n\n## Grundsätzlicher Anspruch\n\nNach **§ 169 Abs. 1 VVG** hat der Versicherer den Rückkaufswert zu zahlen, wenn eine Lebensversicherung (Versicherung mit gewi",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": true,
+          "hallucination_examples": [
+            "Die Aussage 'Der Rückkaufswert wird jedoch nur insoweit gezahlt, als dieser die Leistungen des Versicherers übersteigt' ist FALSCH. § 169 Abs. 2 VVG besagt genau das Gegenteil: Der Rückkaufswert ist 'nur insoweit zu zahlen, als dieser die Leistung bei einem Versicherungsfall zum Zeitpunkt der Kündigung NICHT übersteigt'. Die Antwort hat die Negation übersehen und damit den Sinn der Norm umgekehrt."
+          ],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.2
+      }
+    ],
+    "duration_s": 59.8
+  }
+]

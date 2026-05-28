@@ -1,0 +1,78 @@
+[
+  {
+    "question": "Was ist das ordentliche Gesetzgebungsverfahren der EU (Art. 294 AEUV) und welche Rolle spielen Parlament und Rat?",
+    "expected_norms": [
+      "Art. 294"
+    ],
+    "expected_keywords": [
+      "Mitentscheidungsverfahren",
+      "Parlament",
+      "Rat",
+      "Kommission"
+    ]
+  },
+  {
+    "question": "Was versteht man unter dem Grundsatz des Vorrangs des EU-Rechts? Welche Folgen hat er für nationales Recht?",
+    "expected_norms": [
+      "Vorrang",
+      "national"
+    ],
+    "expected_keywords": [
+      "Vorrang",
+      "Anwendungsvorrang",
+      "Kollision",
+      "nationales Recht"
+    ]
+  },
+  {
+    "question": "Was ist der Unterschied zwischen einer EU-Verordnung und einer EU-Richtlinie in Bezug auf Geltung und Umsetzungspflicht?",
+    "expected_norms": [
+      "Verordnung",
+      "Richtlinie"
+    ],
+    "expected_keywords": [
+      "unmittelbar",
+      "Umsetzung",
+      "allgemeine Geltung",
+      "Spielraum"
+    ]
+  },
+  {
+    "question": "Ein Mitgliedstaat möchte den Import eines EU-weit zugelassenen Produkts einschränken. Ist das mit Art. 34 AEUV (Warenverkehrsfreiheit) vereinbar?",
+    "expected_norms": [
+      "Art. 34"
+    ],
+    "expected_keywords": [
+      "Warenverkehrsfreiheit",
+      "Beschränkung",
+      "Cassis de Dijon",
+      "Rechtfertigung"
+    ]
+  },
+  {
+    "question": "Was ist der Digital Single Market und welche Rechtsbereiche umfassen DSA, DMA und AI Act für einen einheitlichen europäischen Digitalmarkt?",
+    "expected_norms": [
+      "Art. 26",
+      "AEUV"
+    ],
+    "expected_keywords": [
+      "Binnenmarkt",
+      "DSA",
+      "DMA",
+      "Harmonisierung"
+    ]
+  },
+  {
+    "question": "Eine EU-Verordnung wie die DSGVO ist direkt anwendbar. Dennoch erlassen Mitgliedstaaten ergänzende nationale Datenschutzgesetze. Ist das zulässig?",
+    "expected_norms": [
+      "DSGVO",
+      "Verordnung"
+    ],
+    "expected_keywords": [
+      "Öffnungsklausel",
+      "direkt anwendbar",
+      "Mitgliedstaat",
+      "BDSG"
+    ]
+  }
+]

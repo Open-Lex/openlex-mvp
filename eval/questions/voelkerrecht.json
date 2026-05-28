@@ -1,0 +1,144 @@
+[
+  {
+    "question": "Nach Artikel 24 der Charta der Vereinten Nationen übertragen die Mitgliedstaaten dem Sicherheitsrat die Hauptverantwortung für die Wahrung des Weltfriedens und der internationalen Sicherheit. Welche Befugnisse und Handlungsmöglichkeiten hat der Sicherheitsrat bei der Friedenssicherung?",
+    "expected_norms": [
+      "Artikel 24"
+    ],
+    "expected_keywords": [
+      "Sicherheitsrat",
+      "Hauptverantwortung",
+      "Weltfrieden",
+      "Vereinten Nationen"
+    ]
+  },
+  {
+    "question": "Im Rahmen der Schengener Vereinbarungen haben sich mehrere europäische Staaten zum schrittweisen Abbau von Grenzkontrollen verpflichtet. Welche Rechte und Pflichten ergeben sich aus dem Schengener Übereinkommen für die Vertragsstaaten?",
+    "expected_norms": [
+      "Artikel 2"
+    ],
+    "expected_keywords": [
+      "Binnengrenzen",
+      "Schengen",
+      "Übereinkommen",
+      "Vertragsstaaten"
+    ]
+  },
+  {
+    "question": "Nach Art. 51 der Charta der Vereinten Nationen bleibt das naturgegebene Recht zur individuellen oder kollektiven Selbstverteidigung unberührt, wenn ein bewaffneter Angriff erfolgt. Welche Voraussetzungen müssen nach Art. 51 UN-Charta für die rechtmäßige Ausübung des Selbstverteidigungsrechts erfüllt sein, und welche Grenzen setzt das Völkerrecht?",
+    "expected_norms": [
+      "Art. 51"
+    ],
+    "expected_keywords": [
+      "Selbstverteidigung",
+      "bewaffneter Angriff",
+      "Sicherheitsrat",
+      "Verhältnismäßigkeit"
+    ]
+  },
+  {
+    "question": "Nach Artikel 34 EMRK können natürliche Personen, nichtstaatliche Organisationen oder Personengruppen Individualbeschwerde beim Europäischen Gerichtshof für Menschenrechte erheben. Welche Voraussetzungen müssen für eine zulässige Individualbeschwerde erfüllt sein?",
+    "expected_norms": [
+      "Art. 34"
+    ],
+    "expected_keywords": [
+      "Individualbeschwerde",
+      "Gerichtshof",
+      "natürliche",
+      "Beschwerde"
+    ]
+  },
+  {
+    "question": "Das Gewaltverbot nach Art. 2 Ziff. 4 der Charta der Vereinten Nationen verbietet Staaten die Anwendung von Gewalt gegen die territoriale Unversehrtheit oder politische Unabhängigkeit anderer Staaten. Welche Ausnahmen lässt die UN-Charta zu, und welche Rolle spielt dabei Art. 51?",
+    "expected_norms": [
+      "Art. 51"
+    ],
+    "expected_keywords": [
+      "Gewaltverbot",
+      "Selbstverteidigung",
+      "UN-Charta",
+      "Ausnahme"
+    ]
+  },
+  {
+    "id": 6,
+    "skill": "voelkerrecht",
+    "question": "Britische Kriegsschiffe liefen im Korfukanal auf Minen. Ist Albanien verantwortlich, obwohl es die Minen nicht legte? Und haben Kriegsschiffe ein Durchfahrtsrecht?",
+    "expected_norms": [
+      "IGH"
+    ],
+    "expected_keywords": [
+      "Corfu Channel",
+      "Albanien",
+      "Warnpflicht",
+      "Meerenge",
+      "Durchfahrt"
+    ],
+    "category": "Corfu Channel / Durchfahrtsrecht"
+  },
+  {
+    "id": 7,
+    "skill": "voelkerrecht",
+    "question": "Aktionäre einer kanadischen Gesellschaft in Spanien erleiden Schäden. Kann Belgien für seine Staatsangehörigen als Aktionäre diplomatischen Schutz ausüben?",
+    "expected_norms": [
+      "IGH"
+    ],
+    "expected_keywords": [
+      "diplomatischer Schutz",
+      "Aktionäre",
+      "Barcelona Traction",
+      "erga omnes",
+      "Belgien"
+    ],
+    "category": "Barcelona Traction / Diplomatischer Schutz"
+  },
+  {
+    "id": 8,
+    "skill": "voelkerrecht",
+    "question": "Die USA unterstützen Rebellen in Nicaragua mit Waffen und Geld. Verletzt das das Gewaltverbot? Was ist der 'Effective Control'-Test?",
+    "expected_norms": [
+      "Art. 2 Nr. 4"
+    ],
+    "expected_keywords": [
+      "Gewaltverbot",
+      "Nicaragua",
+      "Effective Control",
+      "Nichteinmischung",
+      "Selbstverteidigung"
+    ],
+    "category": "Nicaragua / Gewaltverbot"
+  },
+  {
+    "id": 9,
+    "skill": "voelkerrecht",
+    "question": "Ist der Einsatz von Atomwaffen nach Völkerrecht verboten? Was sagt der IGH?",
+    "expected_norms": [
+      "humanitären Völkerrecht"
+    ],
+    "expected_keywords": [
+      "Atomwaffen",
+      "humanitäres Völkerrecht",
+      "Unterscheidungsgebot",
+      "Verhältnismäßigkeit",
+      "1996",
+      "Nichtverbreitung"
+    ],
+    "category": "Legalität Atomwaffen"
+  },
+  {
+    "id": 10,
+    "skill": "voelkerrecht",
+    "question": "Kosovo erklärt einseitig die Unabhängigkeit von Serbien. Verstößt das gegen das Völkerrecht?",
+    "expected_norms": [
+      "Selbstbestimmung"
+    ],
+    "expected_keywords": [
+      "Kosovo",
+      "Unabhängigkeitserklärung",
+      "Selbstbestimmungsrecht",
+      "territoriale Integrität",
+      "einseitig",
+      "2010"
+    ],
+    "category": "Kosovo / Selbstbestimmungsrecht"
+  }
+]

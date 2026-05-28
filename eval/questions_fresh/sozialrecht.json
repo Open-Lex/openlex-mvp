@@ -1,0 +1,71 @@
+[
+  {
+    "question": "Der 58-jährige Arbeiter Klaus M. ist seit 25 Jahren in die gesetzliche Rentenversicherung eingezahlt. Nach einem Arbeitsunfall kann er seine bisherige Tätigkeit nicht mehr ausüben. Sein Arbeitgeber kann ihm keine geeignete Leichttätigkeit anbieten. Kann Klaus M. eine Erwerbsminderungsrente beantragen, und welche Voraussetzungen müssen erfüllt sein? (§ 43 SGB VI)",
+    "expected_norms": [
+      "§ 43 SGB VI",
+      "§ 44 SGB VI"
+    ],
+    "expected_keywords": [
+      "Erwerbsfähigkeit",
+      "weniger als 6 Stunden",
+      "Versicherungsfall",
+      "Wartezeit"
+    ]
+  },
+  {
+    "question": "Die Krankenkasse lehnt einen von Hausarzt Dr. Schmidt verschriebenen Physiotherapie-Kurs für die Patientin Sandra L. ab, da sie nach interner Überprüfung den Nutzen anzweifelt. Sandra L. möchte dagegen vorgehen. Welche Rechtsgrundlage gibt es für den Anspruch auf Leistungen und welches Verfahren kann Sandra L. einleiten? (§ 27 SGB V)",
+    "expected_norms": [
+      "§ 27 SGB V",
+      "§ 275 SGB V",
+      "§ 13 SGB IX"
+    ],
+    "expected_keywords": [
+      "Wirtschaftlichkeit",
+      "Notwendigkeit",
+      "Widerspruch",
+      "Kostenbeteiligung"
+    ]
+  },
+  {
+    "question": "Der langjährig versicherte Arbeitnehmer Thomas B. wird mit 63 Jahren arbeitslos. Nach einer Weiterbildungsmaßnahme findet er keine neue Arbeit. Mit 64 Jahren beantragt er Arbeitslosengeld und verweist auf eine Regelung für ältere Arbeitnehmer. Hat Thomas B. einen Anspruch auf ALG ohne Sperrzeit, und unter welchen Bedingungen? (§ 159 SGB III)",
+    "expected_norms": [
+      "§ 159 SGB III",
+      "§ 138 SGB III"
+    ],
+    "expected_keywords": [
+      "Sperrzeit",
+      "älter als 58 Jahre",
+      "Zumutbarkeit",
+      "Beschäftigtenversicherung"
+    ]
+  },
+  {
+    "question": "Die gesetzliche Krankenkasse der Familie Müller plant, ihre Beitragssätze um 0,8 Prozentpunkte zu erhöhen. Familie Müller möchte wissen, ob diese Erhöhung zulässig ist und welche Schritte sie unternehmen kann. Welche Regelungen regeln die Kassenbeitragssätze und Mitspracherechte? (§ 240 SGB V)",
+    "expected_norms": [
+      "§ 240 SGB V",
+      "§ 242 SGB V",
+      "§ 263 SGB V"
+    ],
+    "expected_keywords": [
+      "Zusatzbeitrag",
+      "Vertreterversammlung",
+      "Selbstverwaltung",
+      "paritätische Finanzierung"
+    ]
+  },
+  {
+    "question": "Der Versicherte Martin K. hat 35 Versicherungsjahre in der gesetzlichen Rentenversicherung. Er möchte mit 63 Jahren in Rente gehen und fragt seinen Rentenberater, ob dies möglich ist und welche finanziellen Zu- oder Abschläge entstehen. Welche Norm regelt die Altersrente und deren Zu- und Abschläge? (§ 35, § 76 SGB VI)",
+    "expected_norms": [
+      "§ 35 SGB VI",
+      "§ 76 SGB VI",
+      "§ 77 SGB VI"
+    ],
+    "expected_keywords": [
+      "Regelaltersgrenze",
+      "Abschlag",
+      "Zuschlag",
+      "Versichertenrente",
+      "0,3 Prozent pro Monat"
+    ]
+  }
+]

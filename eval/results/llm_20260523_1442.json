@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "weltraumrecht",
+    "n_questions": 5,
+    "avg_score": 43.1,
+    "hallucination_rate": 0.0,
+    "worst_score": 39.5,
+    "best_score": 46.1,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Staat empfängt Informationen, dass Astronauten eines Raumfahrzeugs in Notlage sind und in seinem Territorium notgelandet sind. Welche unmittelbaren Maßnahmen muss der Staat gemäß den internationalen Weltraumabkommen ergreifen?",
+        "category": "Rettung und Hilfeleistung",
+        "score": 42.5,
+        "answer_excerpt": "# Maßnahmen bei Notlandung von Astronauten\n\nGemäß den internationalen Weltraumabkommen sind folgende unmittelbare Maßnahmen erforderlich:\n\n## Rettungs- und Bergungspflicht\n\nDer betroffene Staat ist ve",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 23.4
+      },
+      {
+        "id": 2,
+        "question": "Ein Staat entdeckt einen Weltraumgegenstand, der von einem anderen Staat gestartet wurde, in seinem Territorium. Wie muss der Staat damit umgehen, und wer trägt die Kosten für die Bergung und Rückgabe?",
+        "category": "Bergung von Weltraumgegenständen",
+        "score": 41.5,
+        "answer_excerpt": "# Umgang mit entdeckten Weltraumgegenständen\n\n## Rechtliche Grundlagen\n\nDer **Weltraumvertrag von 1967** [Quelle 1] bildet das Fundament des völkerrechtlichen Weltraumrechts und regelt auch die Situat",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.6
+      },
+      {
+        "id": 3,
+        "question": "Ein internationales Intergovernmental-Organisationen betreibt Weltraumaktivitäten. Unter welchen Voraussetzungen gemäß Art. 6 des Weltraumrettungsabkommens kann sie als 'launching authority' anerkannt werden?",
+        "category": "Launching Authority und internationale Organisationen",
+        "score": 46.1,
+        "answer_excerpt": "# Anerkennung als \"Launching Authority\" für Intergovernmental-Organisationen\n\nIhre Frage bezieht sich auf das **Weltraumrettungsabkommen (Rescue Agreement)** – ein Kernvertrag des völkerrechtlichen We",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 20.1
+      },
+      {
+        "id": 4,
+        "question": "Ein Staat ratifiziert das Weltraumregistrierungsübereinkommen. Welche Informationen muss dieser Staat als 'State of registry' für jeden Weltraumgegenstand beim Generalsekretär der Vereinten Nationen anmelden?",
+        "category": "Registrierung von Weltraumgegenständen",
+        "score": 46.1,
+        "answer_excerpt": "# Registrierungspflichten gemäß Weltraumregistrierungsübereinkommen\n\nLeider enthalten die bereitgestellten Quellen **keine detaillierten Informationen zu den spezifischen Registrierungspflichten** des",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.5
+      },
+      {
+        "id": 5,
+        "question": "Mehrere Staaten starten gemeinsam einen Weltraumgegenstand in die Erdumlaufbahn. Wie bestimmen diese Staaten gemäß Weltraumregistrierungsübereinkommen, welcher Staat diesen Gegenstand registrieren darf?",
+        "category": "Registrierung bei mehreren Startstaaten",
+        "score": 39.5,
+        "answer_excerpt": "# Registrierung von Weltraumgegenständen bei mehreren beteiligten Staaten\n\nDas **Weltraumregistrierungsübereinkommen** (Registration Convention) regelt die Registrierungspflicht für Weltraumgegenständ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "methodenwissen",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 18.0
+      }
+    ],
+    "duration_s": 93.0
+  }
+]

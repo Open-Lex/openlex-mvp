@@ -1,0 +1,132 @@
+[
+  {
+    "skill": "europarecht",
+    "n_questions": 5,
+    "avg_score": 87.4,
+    "hallucination_rate": 20.0,
+    "worst_score": 73.8,
+    "best_score": 95.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein niederländischer Käsehersteller möchte seinen Gouda-Käse in Deutschland verkaufen. Die deutschen Behörden verweigern die Zulassung, weil der Käse nicht den deutschen Mindestfettgehalt-Anforderungen entspricht, obwohl er in den Niederlanden rechtmäßig hergestellt wurde. Ist diese Maßnahme mit dem AEUV vereinbar, und welche Norm ist einschlägig?",
+        "category": "Warenverkehrsfreiheit",
+        "score": 95.8,
+        "answer_excerpt": "# Vereinbarkeit der deutschen Zulassungsverweigerung mit dem AEUV\n\n## Einschlägige Norm: Artikel 34 AEUV (Warenverkehrsfreiheit)\n\nDie deutsche Maßnahme fällt unter **Artikel 34 AEUV** [Quelle 2], da s",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 19.1
+      },
+      {
+        "id": 2,
+        "question": "Eine französische Unternehmensberaterin möchte in Deutschland dauerhaft eine Niederlassung eröffnen, wird aber von der zuständigen Kammer mit der Begründung abgelehnt, sie habe kein deutsches Examen. Welche Grundfreiheit schützt sie, welche AEUV-Norm ist einschlägig, und unter welchen Voraussetzungen darf Deutschland die Zulassung beschränken?",
+        "category": "Niederlassungsfreiheit",
+        "score": 89.2,
+        "answer_excerpt": "# Rechtliche Analyse zur Niederlassungsfreiheit\n\n## Einschlägige Grundfreiheit und AEUV-Norm\n\nDie französische Unternehmensberaterin wird durch die **Niederlassungsfreiheit** gemäß **Artikel 49 AEUV**",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.2
+      },
+      {
+        "id": 3,
+        "question": "Ein polnischer Bauunternehmer entsendet seine in Polen angestellten Mitarbeiter für drei Monate zu einem Bauprojekt nach Deutschland. Das Bundesministerium möchte wissen, ob und in welchem Umfang deutsches Arbeitnehmer-Schutzrecht angewendet werden darf, ohne die unionsrechtliche Dienstleistungsfreiheit zu verletzen.",
+        "category": "Dienstleistungsfreiheit",
+        "score": 73.8,
+        "answer_excerpt": "# Anwendbarkeit deutschen Arbeitnehmerschutzrechts auf entsandte polnische Arbeitnehmer\n\n## Rechtliche Grundlage\n\nNach den Quellen ist die **Dienstleistungsfreiheit** (Artikel 56 AEUV) der zentrale Ma",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": true,
+          "hallucination_examples": [
+            "Die Antwort bezieht sich auf die 'Entsenderichtlinie' und deren Umsetzung in Deutschland, wird aber in den bereitgestellten Quellen nicht erwähnt. Quelle 2 verweist zwar auf die Entsenderichtlinie, gibt aber keinen Inhalt wieder.",
+            "Die aufgelisteten zwingende Schutzbestimmungen (Mindeststlöhne, Arbeitszeiten, Arbeitssicherheit, Kündigungsschutz) werden in den Quellen nicht konkretisiert und sind nicht aus ihnen ableitbar."
+          ],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eugh_urteil",
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.7
+      },
+      {
+        "id": 4,
+        "question": "Deutschland gewährt staatliche Beihilfen in Höhe von 50 Millionen Euro an einen insolventen Automobilhersteller. Die EU-Kommission leitet ein Verfahren ein. Welche AEUV-Normen regeln das Beihilfenrecht, und unter welchen Voraussetzungen können staatliche Beihilfen ausnahmsweise zulässig sein?",
+        "category": "Beihilfenrecht",
+        "score": 95.8,
+        "answer_excerpt": "# Beihilfenrecht im EU-Recht\n\n## Einschlägige AEUV-Normen\n\nDie Regelung staatlicher Beihilfen findet sich primär in **Artikel 107 AEUV** [Quelle 1]. Diese Norm etabliert das grundsätzliche **Beihilfev",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.3
+      },
+      {
+        "id": 5,
+        "question": "Ein deutsches Gericht muss entscheiden, ob die Auslegung von Art. 6 der DSGVO mit dem Unionsrecht vereinbar ist. Es hat Zweifel, ist aber letztinstanzliches Gericht. Welche Pflichten ergeben sich aus Art. 267 AEUV, und wann ist eine Vorlage zum EuGH ausnahmsweise entbehrlich (acte-clair-Doktrin)?",
+        "category": "Vorabentscheidungsverfahren",
+        "score": 82.6,
+        "answer_excerpt": "# Vorlage zum EuGH nach Art. 267 AEUV und acte-clair-Doktrin\n\n## Pflichten des letztinstanzlichen Gerichts\n\nNach Art. 267 AEUV sind **letztinstanzliche Gerichte zur Vorlage verpflichtet**, wenn sie ei",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "eugh_urteil",
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.0
+      }
+    ],
+    "duration_s": 59.8
+  }
+]

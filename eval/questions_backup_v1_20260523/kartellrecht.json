@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "skill": "kartellrecht",
+    "question": "Ein Unternehmen schließt mit einem Konkurrenten eine Vereinbarung, um den Preis für ein bestimmtes Produkt zu festzulegen. Ist diese Vereinbarung nach dem GWB zulässig?",
+    "expected_norms": [
+      "§ 1 GWB"
+    ],
+    "expected_keywords": [
+      "Wettbewerbsbeschränkung",
+      "Preisfestsetzung",
+      "Verbot"
+    ],
+    "min_sources": 1,
+    "category": "Wettbewerbsbeschränkungen"
+  },
+  {
+    "id": 2,
+    "skill": "kartellrecht",
+    "question": "Eine Unternehmensvereinigung beschließt, bestimmte Produkte nur noch in einem bestimmten Gebiet anzubieten. Ist dieser Beschluss nach dem GWB zulässig?",
+    "expected_norms": [
+      "§ 1",
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Wettbewerbsbeschränkung",
+      "Vereinbarung",
+      "Freistellung"
+    ],
+    "min_sources": 2,
+    "category": "Wettbewerbsbeschränkungen"
+  },
+  {
+    "id": 3,
+    "skill": "kartellrecht",
+    "question": "Zwei Unternehmen schließen eine Vereinbarung, um die Produktion eines bestimmten Produkts zu rationalisieren. Ist diese Vereinbarung nach dem GWB zulässig?",
+    "expected_norms": [
+      "§ 2 GWB",
+      "§ 3 GWB"
+    ],
+    "expected_keywords": [
+      "Rationalisierung",
+      "Mittelstandskartell",
+      "Freistellung"
+    ],
+    "min_sources": 2,
+    "category": "Mittelstandskartelle"
+  },
+  {
+    "id": 4,
+    "skill": "kartellrecht",
+    "question": "Ein Unternehmen schließt mit einem Lieferanten eine Vereinbarung, um den Preis für ein bestimmtes Rohstoff zu festzulegen. Ist diese Vereinbarung nach dem GWB zulässig?",
+    "expected_norms": [
+      "§ 1 GWB"
+    ],
+    "expected_keywords": [
+      "Wettbewerbsbeschränkung",
+      "Preisfestsetzung",
+      "Verbot"
+    ],
+    "min_sources": 1,
+    "category": "Wettbewerbsbeschränkungen"
+  },
+  {
+    "id": 5,
+    "skill": "kartellrecht",
+    "question": "Eine Unternehmensvereinigung beschließt, bestimmte Informationen über die Produktion und den Verkauf von Produkten unter den Mitgliedern auszutauschen. Ist dieser Beschluss nach dem GWB zulässig?",
+    "expected_norms": [
+      "§ 1",
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Wettbewerbsbeschränkung",
+      "Unternehmen",
+      "Freistellung"
+    ],
+    "min_sources": 2,
+    "category": "Wettbewerbsbeschränkungen"
+  },
+  {
+    "id": 6,
+    "skill": "kartellrecht",
+    "question": "Zwei Unternehmen schließen eine Vereinbarung, um die Forschung und Entwicklung eines bestimmten Produkts zu koordinieren. Ist diese Vereinbarung nach dem GWB zulässig?",
+    "expected_norms": [
+      "§ 2 GWB",
+      "§ 3 GWB"
+    ],
+    "expected_keywords": [
+      "Forschung",
+      "Entwicklung",
+      "Kooperation"
+    ],
+    "min_sources": 2,
+    "category": "Mittelstandskartelle"
+  },
+  {
+    "id": 7,
+    "skill": "kartellrecht",
+    "question": "Ein Unternehmen schließt mit einem Konkurrenten eine Vereinbarung, um den Markt für ein bestimmtes Produkt aufzuteilen. Ist diese Vereinbarung nach dem GWB zulässig?",
+    "expected_norms": [
+      "§ 1 GWB"
+    ],
+    "expected_keywords": [
+      "Wettbewerbsbeschränkung",
+      "Marktaufteilung",
+      "Verbot"
+    ],
+    "min_sources": 1,
+    "category": "Wettbewerbsbeschränkungen"
+  },
+  {
+    "id": 8,
+    "skill": "kartellrecht",
+    "question": "Eine Unternehmensvereinigung beschließt, bestimmte Produkte nur noch an bestimmte Kunden zu liefern. Ist dieser Beschluss nach dem GWB zulässig?",
+    "expected_norms": [
+      "§ 1 GWB",
+      "§ 2 GWB"
+    ],
+    "expected_keywords": [
+      "Wettbewerbsbeschränkung",
+      "Kundenbeschränkung",
+      "Freistellung"
+    ],
+    "min_sources": 2,
+    "category": "Wettbewerbsbeschränkungen"
+  },
+  {
+    "id": 9,
+    "skill": "kartellrecht",
+    "question": "Zwei Unternehmen schließen eine Vereinbarung, um die Produktion eines bestimmten Produkts zu reduzieren. Ist diese Vereinbarung nach dem GWB zulässig?",
+    "expected_norms": [
+      "§ 1 GWB",
+      "§ 2 GWB"
+    ],
+    "expected_keywords": [
+      "Wettbewerbsbeschränkung",
+      "Produktionsreduzierung",
+      "Freistellung"
+    ],
+    "min_sources": 2,
+    "category": "Wettbewerbsbeschränkungen"
+  },
+  {
+    "id": 10,
+    "skill": "kartellrecht",
+    "question": "Ein Unternehmen schließt mit einem Lieferanten eine Vereinbarung, um den Lieferanten zu verpflichten, nur noch an das Unternehmen zu liefern. Ist diese Vereinbarung nach dem GWB zulässig?",
+    "expected_norms": [
+      "§ 1 GWB"
+    ],
+    "expected_keywords": [
+      "Wettbewerbsbeschränkung",
+      "Lieferbeschränkung",
+      "Verbot"
+    ],
+    "min_sources": 1,
+    "category": "Wettbewerbsbeschränkungen"
+  }
+]

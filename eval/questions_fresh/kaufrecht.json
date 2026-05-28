@@ -1,0 +1,70 @@
+[
+  {
+    "question": "Ein Käufer erwirbt einen gebrauchten PKW von einem Händler. Zwei Monate nach Kaufabschluss stellt sich heraus, dass das Getriebe defekt ist. Der Käufer fordert Rückgängigmachung des Kaufs (Wandlung). Der Händler bietet stattdessen eine kostengünstige Reparatur an. Hat der Käufer einen Anspruch auf Wandlung nach § 437 Nr. 2, § 438 BGB, oder muss er die Nacherfüllung durch Reparatur akzeptieren?",
+    "expected_norms": [
+      "§ 437 BGB",
+      "§ 438 BGB",
+      "§ 439 BGB"
+    ],
+    "expected_keywords": [
+      "Nacherfüllung",
+      "Wandlung",
+      "Vorrang der Nacherfüllung",
+      "angemessene Frist"
+    ]
+  },
+  {
+    "question": "Ein Käufer kauft im Januar eine Maschine vom Unternehmer. Im März bemerkt er einen Sachmangel und setzt dem Verkäufer eine Frist zur Nacherfüllung. Der Verkäufer lehnt ab. Der Käufer klagt erst im Juni. Der Verkäufer wirft ihm vor, dass die Gewährleistungsfristen nach § 438 BGB abgelaufen sind. Ist die Klage zulässig, oder hat die Verjährung bereits begonnen?",
+    "expected_norms": [
+      "§ 438 BGB",
+      "§ 437 BGB"
+    ],
+    "expected_keywords": [
+      "Verjährungsfrist",
+      "Gewährleistungsfrist",
+      "Kaufpreisminderung",
+      "Rücktritt"
+    ]
+  },
+  {
+    "question": "Ein Verbraucher kauft eine neue Kaffeemaschine. Nach drei Wochen funktioniert die Heizspirale nicht mehr. Der Verkäufer verweigert die Reparatur und argumentiert, der Käufer habe die Maschine zu unsachgemäß behandelt. Der Käufer behauptet, es handle sich um einen Sachmangel. Wer trägt nach § 477 BGB die Beweislast, und auf welchen Zeitraum kommt es an?",
+    "expected_norms": [
+      "§ 477 BGB",
+      "§ 442 BGB"
+    ],
+    "expected_keywords": [
+      "Beweislastumkehr",
+      "Vermutung des Mangels",
+      "sechs Monate",
+      "Verbraucher"
+    ]
+  },
+  {
+    "question": "Ein Unternehmer verkauft B2B eine Stahllieferung. Nach vier Monaten entdeckt der Käufer Rostflecken und verlangt Schadensersatz statt Nacherfüllung gemäß § 437 Nr. 3, § 281 BGB. Der Verkäufer bietet Nachbesserung an. Kann der Käufer trotz angebotener Nacherfüllung sofort auf Schadensersatz ausweichen, oder muss er § 439 Abs. 3 BGB beachten?",
+    "expected_norms": [
+      "§ 437 BGB",
+      "§ 439 Abs. 3 BGB",
+      "§ 281 BGB"
+    ],
+    "expected_keywords": [
+      "Schadensersatz statt Leistung",
+      "angemessene Frist",
+      "fehlgeschlagener Versuch",
+      "Unternehmerkauf"
+    ]
+  },
+  {
+    "question": "Ein Käufer kauft eine Ware mit vereinbarter Gewährleistungsausschlussfrist von sechs Monaten (abweichend von § 438 BGB). Innerhalb von drei Monaten tritt ein Sachmangel auf, den der Käufer jedoch erst nach acht Monaten bemerkt und rügt. Der Verkäufer beruft sich auf Ablauf der Frist. Ist die Gewährleistungsausschlussfrist wirksam und hat der Verkäufer einen Einwand, oder verstößt sie gegen gesetzliche Regeln?",
+    "expected_norms": [
+      "§ 438 BGB",
+      "§ 442 BGB",
+      "§ 309 Nr. 8 BGB"
+    ],
+    "expected_keywords": [
+      "Ausschlussfrist",
+      "AGB-Kontrolle",
+      "Unangemessene Benachteiligung",
+      "Verbraucherschutz"
+    ]
+  }
+]

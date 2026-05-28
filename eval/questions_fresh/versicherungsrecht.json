@@ -1,0 +1,69 @@
+[
+  {
+    "question": "Der Versicherte M schließt eine Hausratversicherung ab und macht dabei in der Anzeige falschangaben zu bereits erlittenen Einbrüchen. Ein Jahr später wird tatsächlich eingebrochen und M fordert Schadensersatz von 50.000 €. Der Versicherer lehnt die Leistung ab und beruft sich auf die fehlerhaften Angaben. Kann sich der Versicherer auf § 28 VVG berufen und von seiner Leistungspflicht befreien, obwohl die falsche Angabe zeitlich vor dem Schadeneintritt lag?",
+    "expected_norms": [
+      "§ 28 VVG",
+      "§ 19 VVG"
+    ],
+    "expected_keywords": [
+      "Arglist",
+      "Kausalität",
+      "Leistungsbefreiung",
+      "wesentliche Umstände"
+    ]
+  },
+  {
+    "question": "Die Versicherte K schließt eine Krankenversicherung ab. Bei der Antragsstellung verschweigt sie bewusst ihre chronische Herzerkrankung. Nach zwei Jahren erleidet K einen Myokardinfarkt und der Versicherer verweigert die Kostenübernahme von 80.000 € unter Berufung auf die Nichtanzeige. Welche Rechtsfolgen ergeben sich nach § 47 VVG und hat K ein Rückkaufrecht nach Treu und Glauben?",
+    "expected_norms": [
+      "§ 47 VVG",
+      "§ 48 VVG"
+    ],
+    "expected_keywords": [
+      "grobe Fahrlässigkeit",
+      "Obliegenheitsverletzung",
+      "Rücktrittsrecht",
+      "zeitliche Begrenzung"
+    ]
+  },
+  {
+    "question": "Der Versicherte R nimmt eine Kfz-Versicherung auf und gibt an, dass das Fahrzeug ausschließlich in einer verschlossenen Garage geparkt wird. Tatsächlich parkt R den Wagen regelmäßig auf der Straße. Das Fahrzeug wird gestohlen. Der Versicherer lehnt die Leistung ab. Ist die Angabe zur Abstellweise eine wesentliche Umstand nach § 19 Abs. 1 VVG und kann der Versicherer leistungsfrei werden?",
+    "expected_norms": [
+      "§ 19 VVG",
+      "§ 20 VVG",
+      "§ 22 VVG"
+    ],
+    "expected_keywords": [
+      "wesentlicher Umstand",
+      "Pflicht zur Aufklärung",
+      "fahrlässige Nichtanzeige",
+      "Kausalzusammenhang"
+    ]
+  },
+  {
+    "question": "Der Versicherungsnehmer V hat eine Lebensversicherung mit Rückkaufswert abgeschlossen und bezahlt regelmäßig Prämien. Nach fünf Jahren benötigt V dringend Liquidität und möchte die Police kündigen. Nach § 89 Abs. 2 VVG und § 81 VVG: Welcher Wert steht V zu und wie wird dieser berechnet? Besteht ein Unterschied zwischen Rückkaufswert und Kündigungswert?",
+    "expected_norms": [
+      "§ 89 VVG",
+      "§ 81 VVG",
+      "§ 87 VVG"
+    ],
+    "expected_keywords": [
+      "Rückkaufswert",
+      "Kündigungsvergütung",
+      "Abzüge",
+      "Berechnung"
+    ]
+  },
+  {
+    "question": "Ein Versicherer verweigert die Leistung bei einer Brandversicherung, weil der Versicherte bei Abschluss angegeben hatte, dass im Haus keine brennbaren Materialien lagern, obwohl tatsächlich Farbreste im Keller gestapelt waren. Der Schaden beträgt 200.000 €. Der Versicherungsnehmer behauptet, die Farbreste seien unwesentlich und hätten zum Brandausbruch nicht beigetragen. Wie beurteilt sich die Leistungsbefreiung des Versicherers nach § 26 Abs. 1 und § 27 VVG?",
+    "expected_norms": [
+      "§ 26 VVG",
+      "§ 27 VVG"
+    ],
+    "expected_keywords": [
+      "kausale Verbindung",
+      "Obliegenheitsverletzung",
+      "Entlastungsbeweis",
+      "Verstoß gegen Vertragspflicht"
+    ]
+  }
+]

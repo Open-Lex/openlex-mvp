@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "skill": "migrationsrecht",
+    "question": "Mein Mandant befindet sich außerhalb seines Herkunftslandes und behauptet, wegen seiner politischen Überzeugung verfolgt zu werden. Welche Norm regelt, unter welchen Voraussetzungen ihm die Flüchtlingseigenschaft zuerkannt wird?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Flüchtlinge",
+      "Verfolgung",
+      "Ausländer"
+    ],
+    "category": "Flüchtlingsstatus"
+  },
+  {
+    "id": 2,
+    "skill": "migrationsrecht",
+    "question": "Ein Ausländer wird wegen Verletzung von Menschenrechten in seinem Herkunftsland gefährdet. Unter welcher Norm kann ihm subsidiärer Schutz gewährt werden, und welche schwerwiegenden Gründe führen zu einem Ausschluss?",
+    "expected_norms": [
+      "§ 4"
+    ],
+    "expected_keywords": [
+      "subsidiärer Schutz",
+      "Schutzstatus",
+      "Gefährdung",
+      "ernsthafter"
+    ],
+    "category": "Subsidiärer Schutz"
+  },
+  {
+    "id": 3,
+    "skill": "migrationsrecht",
+    "question": "Welche Behörde ist in Deutschland für die Entscheidung über Asylanträge zuständig, und welche gesetzliche Grundlage regelt die Aufgaben des Bundesamts für Migration und Flüchtlinge nach dem AsylG?",
+    "expected_norms": [
+      "§ 5",
+      "§ 31"
+    ],
+    "expected_keywords": [
+      "BAMF",
+      "Bundesamt",
+      "Asylantrag",
+      "Entscheidung"
+    ],
+    "category": "Verfahrenszuständigkeit"
+  },
+  {
+    "id": 4,
+    "skill": "migrationsrecht",
+    "question": "Ein Ausländer wird wegen Sexualdelikt gemäß Strafgesetzbuch verurteilt. Muss das Gericht das Bundesamt darüber unterrichten und wenn ja, unter welcher Norm?",
+    "expected_norms": [
+      "§ 8"
+    ],
+    "expected_keywords": [
+      "Bundesamt",
+      "Daten",
+      "Ausländerbehörde",
+      "Mitteilung"
+    ],
+    "category": "Datenaustausch und Strafverfahren"
+  },
+  {
+    "id": 5,
+    "skill": "migrationsrecht",
+    "question": "Ein anerkannter Flüchtling reist freiwillig in sein Herkunftsland zurück. Unter welchen Voraussetzungen kann nach § 73 AsylG die Flüchtlingsanerkennung widerrufen werden, und welche Rechtsfolgen hat der Widerruf?",
+    "expected_norms": [
+      "§ 73"
+    ],
+    "expected_keywords": [
+      "Widerruf",
+      "Flüchtlingsanerkennung",
+      "Herkunftsland",
+      "Bundesamt"
+    ],
+    "category": "Widerruf und Rücknahme"
+  }
+]

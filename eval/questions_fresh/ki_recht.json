@@ -1,0 +1,72 @@
+[
+  {
+    "question": "Ein deutsches Fintech-Unternehmen entwickelt ein KI-System zur automatisierten Kreditvergabe. Das System trifft Entscheidungen über die Gewährung von Krediten auf Basis von Algorithmen, die unter anderem Bonitätsdaten, Transaktionshistorien und soziodemografische Daten verarbeiten. Nach Art. 6 Abs. 2 EU AI Act müsste das System einer Konformitätsbewertung unterzogen werden. Ist ein KI-System zur automatisierten Kreditentscheidung als Hochrisiko-KI nach Annex III des EU AI Act einzuordnen, und welche Compliance-Anforderungen folgen daraus?",
+    "expected_norms": [
+      "Art. 6 Abs. 2 EU AI Act",
+      "Annex III EU AI Act",
+      "Art. 8-15 EU AI Act"
+    ],
+    "expected_keywords": [
+      "Hochrisiko-KI",
+      "kritische Infrastruktur",
+      "Konformitätsbewertung",
+      "Dokumentationspflicht"
+    ]
+  },
+  {
+    "question": "Ein E-Commerce-Plattform-Betreiber setzt ein KI-Empfehlungssystem ein, das Nutzern Produkte vorschlägt. Das System ist nicht vom EU AI Act als Hochrisiko-KI klassifiziert. Der Betreiber möchte wissen: Welche Transparenzpflichten bestehen nach Art. 13 EU AI Act für ein solches KI-System, und wann ist eine explizite Benachrichtigung der betroffenen Nutzer erforderlich?",
+    "expected_norms": [
+      "Art. 13 EU AI Act",
+      "Art. 52 EU AI Act"
+    ],
+    "expected_keywords": [
+      "Transparenzpflicht",
+      "Benachrichtigungspflicht",
+      "KI-generierte Inhalte",
+      "natürliche Person"
+    ]
+  },
+  {
+    "question": "Eine französische Behörde nutzt ein KI-System zur Gesichtserkennung im öffentlichen Raum zur Fahndung nach gesuchten Personen. Dieses System wird als Hochrisiko-KI nach Art. 6 Abs. 2 EU AI Act eingestuft. Welche spezifischen Anforderungen nach Art. 9, 10 und 11 EU AI Act gelten für die Dokumentation, das Qualitätsmanagementsystem und die Konformitätsbewertung dieses Systems?",
+    "expected_norms": [
+      "Art. 6 Abs. 2 EU AI Act",
+      "Art. 9 EU AI Act",
+      "Art. 10 EU AI Act",
+      "Art. 11 EU AI Act"
+    ],
+    "expected_keywords": [
+      "Qualitätsmanagementsystem",
+      "Dokumentation",
+      "Konformitätsbewertung",
+      "Rückverfolgbarkeit"
+    ]
+  },
+  {
+    "question": "Ein Hersteller von KI-Systemen zur Personalauswahl (Bewerbungsanalyse) muss vor Markteinführung seines Systems klären, ob und wie die Anforderungen des EU AI Act Anwendung finden. Das System analysiert Lebensläufe, Video-Interviews und Social-Media-Profile von Bewerbern. Unter welche Kategorie gemäß Annex III des EU AI Act fällt dieses System, und welche Konsequenzen hat die Klassifizierung für die erforderliche Konformitätsbewertung nach Art. 43 EU AI Act?",
+    "expected_norms": [
+      "Annex III EU AI Act",
+      "Art. 43 EU AI Act",
+      "Art. 41 EU AI Act"
+    ],
+    "expected_keywords": [
+      "Hochrisiko-KI",
+      "Personalauswahl",
+      "notifizierte Stelle",
+      "technische Dokumentation"
+    ]
+  },
+  {
+    "question": "Ein Online-Medienunternehmen nutzt ein KI-System zur automatisierten Moderation von Nutzerkommentaren. Das System löscht etwa 15 % aller eingereichten Kommentare als potentiell rechtswidrig. Das Unternehmen fragt: Sind nach Art. 26 und Art. 52 EU AI Act Transparenzpflichten und eine Informationspflicht gegenüber den Nutzern erforderlich, deren Inhalte gelöscht wurden, und welcher rechtliche Standard ist dabei maßgeblich?",
+    "expected_norms": [
+      "Art. 26 EU AI Act",
+      "Art. 52 EU AI Act",
+      "Art. 12 EU AI Act"
+    ],
+    "expected_keywords": [
+      "Transparenzpflicht",
+      "Betroffene Person",
+      "Informationspflicht",
+      "automatisierte Entscheidung"
+    ]
+  }
+]

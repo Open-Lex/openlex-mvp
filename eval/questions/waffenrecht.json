@@ -1,0 +1,157 @@
+[
+  {
+    "id": 1,
+    "skill": "waffenrecht",
+    "question": "Herr Meyer möchte eine Schusswaffe erwerben und besitzen. Welche grundlegenden Voraussetzungen muss er nach § 4 Abs. 1 erfüllen, um eine Erlaubnis zu erhalten?",
+    "expected_norms": [
+      "§ 4"
+    ],
+    "expected_keywords": [
+      "Erlaubnis",
+      "Schusswaffen",
+      "Bedürfnis"
+    ],
+    "category": "Erlaubnisvoraussetzungen"
+  },
+  {
+    "id": 2,
+    "skill": "waffenrecht",
+    "question": "Frau Schmidt hat eine rechtskräftige Verurteilung zu einer Freiheitsstrafe von 18 Monaten wegen einer vorsätzlichen Straftat erhalten. Kann ihr nach § 5 Abs. 2 eine waffenrechtliche Erlaubnis zum Erwerb von Waffen erteilt werden, und wenn ja, ab wann?",
+    "expected_norms": [
+      "§ 5"
+    ],
+    "expected_keywords": [
+      "Zuverlässigkeit",
+      "Waffen",
+      "Person"
+    ],
+    "category": "Zuverlässigkeitsprüfung"
+  },
+  {
+    "id": 3,
+    "skill": "waffenrecht",
+    "question": "Ein 19-jähriger Sportschütze möchte eine Schusswaffe mit einem Kaliber von 5,6 mm lfB erwerben und besitzen. Benötigt er nach § 14 Abs. 1 eine Erlaubnis, oder gibt es eine Ausnahme?",
+    "expected_norms": [
+      "§ 14"
+    ],
+    "expected_keywords": [
+      "Erwerb",
+      "Munition",
+      "Schießen"
+    ],
+    "category": "Sportschützen"
+  },
+  {
+    "id": 4,
+    "skill": "waffenrecht",
+    "question": "Welche Informationen muss die zuständige Behörde nach § 5 Absatz 5 bei einer Zuverlässigkeitsprüfung einholen, und von welchen Stellen?",
+    "expected_norms": [
+      "§ 5"
+    ],
+    "expected_keywords": [
+      "Zuverlässigkeit",
+      "Behörde",
+      "Waffengesetz",
+      "Anfragen"
+    ],
+    "category": "Behördliche Prüfverfahren"
+  },
+  {
+    "id": 5,
+    "skill": "waffenrecht",
+    "question": "Unter welchen Voraussetzungen kann nach § 2 Abs. 1 der Umgang mit Waffen oder Munition durch eine Person ausgeübt werden?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Munition",
+      "Personen",
+      "Umgang"
+    ],
+    "category": "Grundprinzipien"
+  },
+  {
+    "id": 6,
+    "skill": "waffenrecht",
+    "question": "Ein Waffenbesitzer wird wegen einer Straftat zu einer Geldstrafe verurteilt. Hat die Behörde Ermessen beim Widerruf der Erlaubnis?",
+    "expected_norms": [
+      "§ 5 WaffG",
+      "§ 45 WaffG"
+    ],
+    "expected_keywords": [
+      "Zuverlässigkeit",
+      "Regelunzuverlässigkeit",
+      "gebundene Entscheidung",
+      "kein Ermessen",
+      "Widerruf"
+    ],
+    "category": "Waffenzuverlässigkeit Straftat"
+  },
+  {
+    "id": 7,
+    "skill": "waffenrecht",
+    "question": "Nach einem psychischen Vorfall fordert die Behörde ein Gutachten. Der Inhaber verweigert es. Was passiert?",
+    "expected_norms": [
+      "§ 6 WaffG",
+      "§ 45 WaffG"
+    ],
+    "expected_keywords": [
+      "persönliche Eignung",
+      "amtsärztliches Gutachten",
+      "Verweigerung",
+      "Schlussfolgerung",
+      "Ungeeignetheit"
+    ],
+    "category": "Waffeneignung psychische Erkrankung"
+  },
+  {
+    "id": 8,
+    "skill": "waffenrecht",
+    "question": "Ein Sportschütze beantragt Waffenbesitzkarten für viele Waffen. Wie wird das Bedürfnis geprüft?",
+    "expected_norms": [
+      "§ 14 WaffG",
+      "§ 4 WaffG"
+    ],
+    "expected_keywords": [
+      "Bedürfnis",
+      "Sportschütze",
+      "aktive Vereinsmitgliedschaft",
+      "Disziplin",
+      "Nachweis"
+    ],
+    "category": "Sportschütze Bedürfnis"
+  },
+  {
+    "id": 9,
+    "skill": "waffenrecht",
+    "question": "Ein Waffenbesitzer gehört der Reichsbürger-Bewegung an. Ist er waffenrechtlich zuverlässig?",
+    "expected_norms": [
+      "§ 5 Abs. 1 WaffG"
+    ],
+    "expected_keywords": [
+      "Reichsbürger",
+      "absolute Unzuverlässigkeit",
+      "verfassungsfeindlich",
+      "staatliche Autorität",
+      "Zuverlässigkeit"
+    ],
+    "category": "Zuverlässigkeit Reichsbürger"
+  },
+  {
+    "id": 10,
+    "skill": "waffenrecht",
+    "question": "Ein Sammler besitzt ein historisches automatisches Gewehr ohne KWKG-Genehmigung. Braucht er eine?",
+    "expected_norms": [
+      "§ 2 KWKG",
+      "§ 3 KWKG"
+    ],
+    "expected_keywords": [
+      "Kriegswaffe",
+      "KWKG",
+      "Kriegswaffenliste",
+      "Sammlerprivileg",
+      "Genehmigungspflicht"
+    ],
+    "category": "KWKG historische Kriegswaffe"
+  }
+]

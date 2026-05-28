@@ -1,0 +1,131 @@
+[
+  {
+    "skill": "voelkerstrafrecht",
+    "n_questions": 5,
+    "avg_score": 83.6,
+    "hallucination_rate": 40.0,
+    "worst_score": 74.8,
+    "best_score": 90.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Soldat tötet während eines internationalen bewaffneten Konflikts absichtlich eine Zivilperson, die nicht an den Kampfhandlungen beteiligt ist. Welche Norm des Völkerstrafgesetzbuches ist einschlägig, und welche Tatbestandsmerkmale müssen erfüllt sein?",
+        "category": "Kriegsverbrechen",
+        "score": 90.2,
+        "answer_excerpt": "# Einschlägige Norm und Tatbestandsmerkmale\n\n## Einschlägige Norm\n\n**§ 8 Abs. 1 Nr. 1 VStGB** (Kriegsverbrechen gegen Personen) ist die primär einschlägige Norm [Quelle 3].\n\n## Tatbestandsmerkmale\n\nNa",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.4
+      },
+      {
+        "id": 2,
+        "question": "Ein Militärbefehlshaber begeht eine Tat nach den §§ 6 bis 12 des Völkerstrafgesetzbuchs im Ausland, ohne dass ein Bezug zum Inland besteht. Nach welcher Vorschrift ist diese Tat dennoch strafbar?",
+        "category": "Anwendungsbereich",
+        "score": 87.8,
+        "answer_excerpt": "# Antwort zur Strafbarkeit des Militärbefehlshabers\n\nDie Tat ist nach **§ 1 Abs. 2 VStGB** strafbar [Quelle 4, Quelle 5].\n\n## Begründung\n\nNach § 1 Abs. 2 VStGB gilt: \"für Taten nach den §§ 6 bis 12 au",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.5
+      },
+      {
+        "id": 3,
+        "question": "Ein Untergebener begeht während eines bewaffneten Konflikts ein Kriegsverbrechen. Sein Vorgesetzter unterlässt es, unverzüglich die zuständige Behörde zu benachrichtigen. Welche Bestimmung wird verletzt und welche Freiheitsstrafe ist vorgesehen?",
+        "category": "Pflichten des Vorgesetzten",
+        "score": 89.5,
+        "answer_excerpt": "# Antwort\n\nBei dem beschriebenen Sachverhalt wird **§ 15 des Völkerstrafgesetzbuches (VStGB)** verletzt [Quelle 2].\n\n## Verletzter Paragraph\n\n**§ 15 VStGB – Unterlassen der Meldung einer Straftat** be",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.6
+      },
+      {
+        "id": 4,
+        "question": "Ein Täter verfolgt systematisch eine identifizierbare Gruppe aus rassischen Gründen und entzieht ihr grundlegende Menschenrechte. Welche Straftat liegt vor und welche Mindestfreiheitsstrafe droht?",
+        "category": "Verbrechen gegen die Menschlichkeit",
+        "score": 74.8,
+        "answer_excerpt": "# Rechtsbeurteilung der systematischen Verfolgung einer Gruppe\n\n## Anwendbare Straftaten\n\nBasierend auf der Sachverhaltsbeschreibung liegt primär **Völkermord gemäß § 6 VStGB** vor [Quelle 3].\n\n### Vö",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": true,
+          "hallucination_examples": [
+            "Die Antwort behauptet, § 6 VStGB sehe 'Freiheitsstrafe nicht unter 10 Jahren' vor. Dies ist FALSCH. Gemäß Quelle 3 und 6 sieht § 6 Abs. 1 VStGB 'lebenslange Freiheitsstrafe' vor, und § 6 Abs. 2 VStGB sieht für minder schwere Fälle 'Freiheitsstrafe nicht unter fünf Jahren' vor. 10 Jahre wird in den Quellen zu § 6 VStGB nie genannt."
+          ],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.2
+      },
+      {
+        "id": 5,
+        "question": "Ein Befehlshaber ordnet an, dass eine nationale Gruppe durch Maßnahmen zur Verhinderung von Geburten zerstört werden soll. Welche Norm ist einschlägig und wie lautet die Strafandrohung?",
+        "category": "Völkermord",
+        "score": 75.8,
+        "answer_excerpt": "# Rechtliche Einordnung\n\nDie beschriebene Anordnung fällt unter die Norm des **Völkerstrafgesetzbuches (VStGB) § 6 Völkermord** [Quelle 4].\n\n## Einschlägige Norm\n\n§ 6 Abs. 1 VStGB erfasst, wer in der ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": true,
+          "hallucination_examples": [
+            "Die Antwort behauptet, § 6 VStGB sehe 'Freiheitsstrafe nicht unter zehn Jahren' vor. Dies ist FALSCH. Quelle 4 und Quelle 6 zeigen deutlich, dass § 6 Abs. 1 VStGB mit 'lebenslanger Freiheitsstrafe' bestraft wird, nicht mit 'nicht unter zehn Jahren'. Die Strafandrohung 'nicht unter zehn Jahren' bezieht sich auf § 5 VStGB (Kriegsverbrechen gegen Personen), nicht auf Völkermord."
+          ],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.7
+      }
+    ],
+    "duration_s": 54.9
+  }
+]

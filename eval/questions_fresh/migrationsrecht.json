@@ -1,0 +1,74 @@
+[
+  {
+    "question": "Der syrische Staatsangehörige A beantragt in Deutschland Asyl. Er trägt vor, in Syrien als Regimekritiker verfolgt worden zu sein. Das BAMF lehnt seinen Asylantrag ab und erkennt ihm aber die Flüchtlingseigenschaft nach der Genfer Flüchtlingskonvention an. A ist mit dieser Entscheidung unzufrieden und fragt, welche Unterschiede zwischen Asyl und Flüchtlingsstatus bestehen und welche aufenthaltsrechtlichen Konsequenzen sich daraus ergeben. Welche Unterscheidung ist vorzunehmen und welche Aufenthaltstitel kommen jeweils in Betracht?",
+    "expected_norms": [
+      "§ 3 Abs. 1 AsylG",
+      "§ 25 Abs. 1 AufenthV",
+      "Art. 1 Abs. A II GFK"
+    ],
+    "expected_keywords": [
+      "Asylberechtigung",
+      "Flüchtlingseigenschaft",
+      "Aufenthaltstitel",
+      "Genfer Flüchtlingskonvention"
+    ]
+  },
+  {
+    "question": "Der nigerianische Staatsangehörige B erhält nach erfolgreicher Asylantragstellung einen Aufenthaltstitel nach § 25 Abs. 1 AufenthV. Nach zwei Jahren wird bekannt, dass B bei seinem Asylantrag falsche Angaben zu seiner Herkunft gemacht hat. Das BAMF möchte die positive Asylentscheidung aufheben. B argumentiert, die Entscheidung sei inzwischen bestandskräftig. Ist die Aufhebung einer positiven Asylentscheidung auch nach Bestandskraft möglich, und wenn ja, unter welchen Voraussetzungen?",
+    "expected_norms": [
+      "§ 73 VwVfG",
+      "§ 36 Abs. 3 AsylG",
+      "§ 35 AsylG"
+    ],
+    "expected_keywords": [
+      "Aufhebung",
+      "Bestandskraft",
+      "Sachverhaltsverschlechterung",
+      "neue Erkenntnisse"
+    ]
+  },
+  {
+    "question": "Der afghanische Staatsangehörige C, dem Asyl gewährt wurde, wird in ein anderes EU-Mitgliedstaat (Österreich) abgeschoben, wo er bereits registriert wurde. C argumentiert, dass eine Abschiebung nach Österreich rechtswidrig sei, weil sein Asylstatus in Deutschland anerkannt sei. Welche europarechtlichen Regelungen sind relevant und unter welchen Bedingungen darf ein Mitgliedstaat einen anerkannten Flüchtling in einen anderen EU-Staat abschieben?",
+    "expected_norms": [
+      "Art. 32 GFK",
+      "Art. 21 Abs. 1 AEUV",
+      "Dublin-Verordnung (VO (EU) 2019/818)",
+      "§ 26 AufenthG"
+    ],
+    "expected_keywords": [
+      "Non-Refoulement",
+      "Asylstatus",
+      "innere Sicherheit",
+      "Drittstaatenprinzip"
+    ]
+  },
+  {
+    "question": "Die pakistanische Staatsangehörige D wurde als Wirtschaftsflüchtling eingestuft und erhielt keinen Schutzstatus. Das BAMF hat gegen sie eine Abschiebungsanordnung nach Pakistan erlassen. D reicht beim VG eine Klage ein und trägt vor, dass in Pakistan eine ernsthafte Bedrohung ihres Lebens drohe, auch wenn sie nicht die Kriterien des Asylgesetzes erfülle. Kann D trotz Ablehnung ihres Asylentschlusses durch eine abgeleitete Schutznorm vor Abschiebung geschützt sein? Welche Norm kommt in Betracht?",
+    "expected_norms": [
+      "§ 60 Abs. 1 AufenthG",
+      "Art. 3 EMRK",
+      "§ 4 Abs. 1 AsylG"
+    ],
+    "expected_keywords": [
+      "Abschiebungsschutz",
+      "Gefahr für Leib und Leben",
+      "Art. 3 EMRK",
+      "Ergänzender Schutz"
+    ]
+  },
+  {
+    "question": "Der eritreische Staatsangehörige E erhielt 2020 Asyl in Deutschland. 2024 besucht er seinen Vater im Libanon für drei Wochen. Bei seiner Rückkehr nach Deutschland wird ihm bei der Passkontrolle erklärt, dass sein Aufenthaltstitel erloschen sei, weil er sein Heimatland betreten habe. E argumentiert, dass er sich nur kurzzeitig im Ausland aufgehalten habe und sein Asylstatus nicht einfach erlöschen dürfe. Unter welchen Bedingungen und nach welcher Vorschrift erlischt die Asylberechtigung durch die Einreise in den Heimatstaat, und gibt es Ausnahmen?",
+    "expected_norms": [
+      "§ 73 Abs. 1 AufenthG",
+      "§ 73 Abs. 3 AufenthG",
+      "Art. 1 C GFK"
+    ],
+    "expected_keywords": [
+      "Erlöschen des Aufenthaltstitels",
+      "Einreise Heimatstaat",
+      "Verzicht",
+      "Ausnahmeregelung",
+      "Kurzaufenthalt"
+    ]
+  }
+]

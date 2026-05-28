@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "skill": "verwaltungsrecht",
+    "question": "Ein Unternehmer möchte wissen, welche Behörde für die Bearbeitung seines Antrags zuständig ist. Sein Betrieb hat die Hauptverwaltung in Berlin und eine Betriebsstätte in München. Welche Behörde ist örtlich zuständig und nach welcher Norm richtet sich dies?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Behörde",
+      "Betriebsstätten",
+      "Tätigkeit"
+    ],
+    "category": "Zuständigkeit"
+  },
+  {
+    "id": 2,
+    "skill": "verwaltungsrecht",
+    "question": "Die Finanzamtsbehörde A benötigt von der Ordnungsamtsbehörde B Informationen, um ihre Aufgaben durchzuführen. Auf Grund welcher Norm kann Behörde A diese Hilfe ersuchen und welche Voraussetzungen müssen erfüllt sein?",
+    "expected_norms": [
+      "§ 4",
+      "§ 5"
+    ],
+    "expected_keywords": [
+      "Behörde",
+      "Amtshilfe",
+      "Ersuchen"
+    ],
+    "category": "Amtshilfe"
+  },
+  {
+    "id": 3,
+    "skill": "verwaltungsrecht",
+    "question": "Wann darf eine ersuchte Behörde die Leistung von Amtshilfe verweigern oder braucht sie diese nicht zu leisten? Nennen Sie drei Gründe nach der einschlägigen Norm.",
+    "expected_norms": [
+      "§ 5"
+    ],
+    "expected_keywords": [
+      "Behörde",
+      "Hilfe",
+      "Aufgaben"
+    ],
+    "category": "Amtshilfe"
+  },
+  {
+    "id": 4,
+    "skill": "verwaltungsrecht",
+    "question": "Ein Bürger möchte einen Antrag elektronisch bei einer Behörde einreichen. Welche Form der elektronischen Kommunikation ist nach dem Gesetz zulässig und welche Anforderungen müssen erfüllt sein?",
+    "expected_norms": [
+      "§ 3a",
+      "§ 130a"
+    ],
+    "expected_keywords": [
+      "Behörde",
+      "Verfahrens",
+      "Vorschriften"
+    ],
+    "category": "Elektronische Kommunikation"
+  },
+  {
+    "id": 5,
+    "skill": "verwaltungsrecht",
+    "question": "Eine deutsche Behörde erhält ein Amtshilfeersuchen von einer Behörde aus Frankreich bezüglich eines EU-Verwaltungsverfahrens. Nach welcher Norm muss die deutsche Behörde prüfen, ob und unter welchen Bedingungen sie Hilfe leisten muss?",
+    "expected_norms": [
+      "§ 8a"
+    ],
+    "expected_keywords": [
+      "Behörde",
+      "Europäischen",
+      "Durchführung"
+    ],
+    "category": "Europäische Verwaltungszusammenarbeit"
+  }
+]

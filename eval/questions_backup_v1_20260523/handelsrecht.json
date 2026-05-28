@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "skill": "handelsrecht",
+    "question": "Was sind die Voraussetzungen, damit ein Gewerbebetrieb als Handelsgewerbe gilt?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Handelsgewerbe",
+      "Gewerbebetrieb",
+      "kaufmännischer Geschäftsbetrieb"
+    ],
+    "min_sources": 1,
+    "category": "Handelsgewerbe"
+  },
+  {
+    "id": 2,
+    "skill": "handelsrecht",
+    "question": "Kann ein Unternehmen, das nicht nach § 1 Abs. 2 HGB als Handelsgewerbe gilt, dennoch als Handelsgewerbe eingetragen werden?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Handelsregister",
+      "Eintragung",
+      "Gewerbebetrieb"
+    ],
+    "min_sources": 1,
+    "category": "Handelsregister"
+  },
+  {
+    "id": 3,
+    "skill": "handelsrecht",
+    "question": "Welche Ausnahmen gibt es für den Betrieb der Land- und Forstwirtschaft?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Landwirtschaft",
+      "Forstwirtschaft",
+      "Kaufmännischer Geschäftsbetrieb"
+    ],
+    "min_sources": 1,
+    "category": "Land- und Forstwirtschaft"
+  },
+  {
+    "id": 4,
+    "skill": "handelsrecht",
+    "question": "Was sind die Folgen, wenn ein land- oder forstwirtschaftliches Unternehmen nach Art und Umfang einen in kaufmännischer Weise eingerichteten Geschäftsbetrieb erfordert?",
+    "expected_norms": [
+      "§ 3",
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Landwirtschaft",
+      "Forstwirtschaft",
+      "Handelsregister"
+    ],
+    "min_sources": 2,
+    "category": "Land- und Forstwirtschaft"
+  },
+  {
+    "id": 5,
+    "skill": "handelsrecht",
+    "question": "Wer gilt als Kaufmann im Sinne des Handelsgesetzbuchs?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Kaufmann",
+      "Handelsgewerbe",
+      "Gewerbebetrieb"
+    ],
+    "min_sources": 1,
+    "category": "Kaufmann"
+  },
+  {
+    "id": 6,
+    "skill": "handelsrecht",
+    "question": "Was sind die Voraussetzungen für die Eintragung eines Unternehmens in das Handelsregister?",
+    "expected_norms": [
+      "§ 2 HGB"
+    ],
+    "expected_keywords": [
+      "Handelsregister",
+      "Eintragung",
+      "Gewerbebetrieb"
+    ],
+    "min_sources": 1,
+    "category": "Handelsregister"
+  },
+  {
+    "id": 7,
+    "skill": "handelsrecht",
+    "question": "Kann ein Unternehmen, das nicht als Handelsgewerbe gilt, dennoch eine Firma in das Handelsregister eintragen lassen?",
+    "expected_norms": [
+      "§ 2 HGB"
+    ],
+    "expected_keywords": [
+      "Handelsregister",
+      "Eintragung",
+      "Gewerbebetrieb"
+    ],
+    "min_sources": 1,
+    "category": "Handelsregister"
+  },
+  {
+    "id": 8,
+    "skill": "handelsrecht",
+    "question": "Welche Rechtsfolgen ergeben sich aus der Eintragung eines Unternehmens in das Handelsregister?",
+    "expected_norms": [
+      "§ 2 HGB"
+    ],
+    "expected_keywords": [
+      "Handelsregister",
+      "Eintragung",
+      "Rechtsfolgen"
+    ],
+    "min_sources": 1,
+    "category": "Handelsregister"
+  },
+  {
+    "id": 9,
+    "skill": "handelsrecht",
+    "question": "Was sind die Ausnahmen von der Anwendung der Vorschriften des § 1 HGB?",
+    "expected_norms": [
+      "§ 3 HGB"
+    ],
+    "expected_keywords": [
+      "Landwirtschaft",
+      "Forstwirtschaft",
+      "Kaufmännischer Geschäftsbetrieb"
+    ],
+    "min_sources": 1,
+    "category": "Land- und Forstwirtschaft"
+  },
+  {
+    "id": 10,
+    "skill": "handelsrecht",
+    "question": "Wie wird ein land- oder forstwirtschaftliches Unternehmen behandelt, das nach Art und Umfang einen in kaufmännischer Weise eingerichteten Geschäftsbetrieb erfordert?",
+    "expected_norms": [
+      "§ 3 HGB",
+      "§ 2 HGB"
+    ],
+    "expected_keywords": [
+      "Landwirtschaft",
+      "Forstwirtschaft",
+      "Handelsregister"
+    ],
+    "min_sources": 2,
+    "category": "Land- und Forstwirtschaft"
+  }
+]

@@ -1,0 +1,125 @@
+[
+  {
+    "skill": "verbraucherschutzrecht",
+    "n_questions": 5,
+    "avg_score": 71.1,
+    "hallucination_rate": 0.0,
+    "worst_score": 55.9,
+    "best_score": 91.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Unternehmer ruft die 16-jährige Maria an, um mit ihr einen Vertrag über den Kauf eines Smartphones für 800 Euro zu schließen. Der Unternehmer offenbart zu Beginn des Gesprächs weder seine Identität noch den geschäftlichen Zweck des Anrufs. Verstößt dieser Unternehmer gegen die Pflichten bei Verbraucherverträgen nach deutschem Recht? Begründen Sie anhand der einschlägigen Norm.",
+        "category": "verbraucherschutzrecht",
+        "score": 91.2,
+        "answer_excerpt": "# Verletzung von Informationspflichten bei Verbraucherverträgen\n\nJa, der Unternehmer verstößt gegen zwingende Informationspflichten des deutschen Verbraucherrechts.\n\n## Einschlägige Norm\n\n**§ 312a Abs",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_richtlinie",
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.1
+      },
+      {
+        "id": 2,
+        "question": "Ein Fahrzeughersteller bringt ein in einem anderen EU-Mitgliedstaat typgenehmigtes Basisfahrzeug, das als Wohnmobil vervollständigt wurde, in der Bundesrepublik Deutschland in Verkehr. Der Käufer erleidet einen Differenzschaden durch fehlerhafte Komponenten. Welches nationale Sachrecht findet Anwendung? Ist es relevant, für welche Zwecke die Nutzung des Kraftfahrzeugs als Fortbewegungsmittel im Straßenverkehr beabsichtigt ist?",
+        "category": "verbraucherschutzrecht",
+        "score": 62.5,
+        "answer_excerpt": "# Anwendbares Sachrecht und Relevanz des Nutzungszwecks\n\n## Anwendbares Sachrecht\n\nGemäß [Quelle 1] (BGH VIa ZR 1425/22) findet auf die **deliktische Haftung des Herstellers deutsches Sachrecht Anwend",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.5
+      },
+      {
+        "id": 3,
+        "question": "Ein Möbelhersteller ruft einen Privathaushalt an, um ihm Möbel für die private Wohneinrichtung zu verkaufen. Bei diesem Anruf offenbart der Anrufer seine Identität und den geschäftlichen Zweck des Anrufs. Anschließend wird ein Kaufvertrag geschlossen. Bestimmen Sie, ob es sich um einen Verbrauchervertrag handelt und welche Pflichten sich für den Unternehmer aus § 312a BGB ergeben.",
+        "category": "verbraucherschutzrecht",
+        "score": 83.2,
+        "answer_excerpt": "# Verbrauchervertrag und Pflichten des Unternehmers nach § 312a BGB\n\n## Verbrauchervertrag\n\nJa, es handelt sich um einen **Verbrauchervertrag**. Ein Verbrauchervertrag liegt vor, wenn ein Unternehmer ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_richtlinie",
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.1
+      },
+      {
+        "id": 4,
+        "question": "Ein Internetdiensteanbieter speichert die IP-Adresse eines Nutzers, der von seinem Wohnsitz in Deutschland aus eine Website aufruft, auf der er durch eine Veröffentlichung in seiner Persönlichkeit beeinträchtigt wird. Welche internationale Zuständigkeit haben deutsche Gerichte zur Entscheidung über eine Klage wegen dieser Persönlichkeitsbeeinträchtigung, und welche Rolle spielt der Wohnsitz des Betroffenen im Inland?",
+        "category": "Verbraucherschutzrecht / Internationales Privatrecht",
+        "score": 62.5,
+        "answer_excerpt": "# Internationale Zuständigkeit deutscher Gerichte bei Persönlichkeitsbeeinträchtigungen im Internet\n\n## Grundsätzliche Zuständigkeit\n\nDeutsche Gerichte sind zur Entscheidung über Klagen wegen Persönli",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.1
+      },
+      {
+        "id": 5,
+        "question": "Ein Heimbewohner ist geschäftsunfähig und wird von seinem gesetzlichen Betreuer vertreten. Der Betreuer möchte in die Pflegedokumentation des Heimbewohners Einsicht nehmen und Kopien anfordern. Kann der Betreuer als gesetzlicher Vertreter allein über die Einsicht in die Pflegedokumentation entscheiden, oder ist eine zusätzliche Einwilligung des Heimbewohners erforderlich?",
+        "category": "verbraucherschutzrecht",
+        "score": 55.9,
+        "answer_excerpt": "# Entscheidungsbefugnis des gesetzlichen Betreuers über Einsicht in Pflegedokumentation\n\n## Antwort\n\nJa, der gesetzliche Betreuer kann als Vertreter des geschäftsunfähigen Heimbewohners allein über di",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.2
+      }
+    ],
+    "duration_s": 52.5
+  }
+]

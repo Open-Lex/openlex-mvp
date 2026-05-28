@@ -1,0 +1,129 @@
+[
+  {
+    "skill": "arbeitsrecht",
+    "n_questions": 5,
+    "avg_score": 85.7,
+    "hallucination_rate": 0.0,
+    "worst_score": 63.2,
+    "best_score": 97.0,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Arbeitnehmer möchte sein Arbeitsverhältnis beenden. Welche Kündigungsfrist muss er mindestens einhalten, und zu welchen Zeitpunkten ist eine Kündigung möglich?",
+        "category": "Kündigung",
+        "score": 97.0,
+        "answer_excerpt": "# Kündigungsfristen für Arbeitnehmer\n\n## Allgemeine Kündigungsfrist\n\nDie grundsätzliche Kündigungsfrist für Arbeitnehmer beträgt **vier Wochen zum Fünfzehnten oder zum Ende eines Kalendermonats** [Que",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.4
+      },
+      {
+        "id": 2,
+        "question": "Unter welchen Voraussetzungen kann ein Arbeitgeber einen Arbeitnehmer fristlos kündigen, und innerhalb welcher Frist muss dies erfolgen?",
+        "category": "Fristlose Kündigung",
+        "score": 89.2,
+        "answer_excerpt": "# Fristlose Kündigung durch den Arbeitgeber\n\n## Voraussetzungen\n\nNach § 626 Abs. 1 BGB kann ein Arbeitgeber ein Arbeitsverhältnis **aus wichtigem Grund ohne Einhaltung einer Kündigungsfrist** kündigen",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.1
+      },
+      {
+        "id": 3,
+        "question": "Welche wesentlichen Merkmale definieren einen Arbeitsvertrag gegenüber anderen Dienstverträgen?",
+        "category": "Arbeitsvertrag",
+        "score": 89.4,
+        "answer_excerpt": "# Wesentliche Merkmale eines Arbeitsvertrags\n\nEin Arbeitsvertrag unterscheidet sich von anderen Dienstverträgen durch spezifische rechtliche Charakteristika:\n\n## Persönliche Abhängigkeit und Weisungsg",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.8
+      },
+      {
+        "id": 4,
+        "question": "Darf ein Arbeitgeber einen Arbeitnehmer benachteiligen, weil dieser seine Rechte ausübt? Welche Norm schützt den Arbeitnehmer dagegen?",
+        "category": "Schutzbestimmungen",
+        "score": 89.5,
+        "answer_excerpt": "# Maßregelungsverbot im Arbeitsrecht\n\n**Nein, ein Arbeitgeber darf einen Arbeitnehmer nicht benachteiligen, weil dieser seine Rechte ausübt.**\n\n## Gesetzlicher Schutz\n\nDie Hauptnorm ist **§ 612a BGB (",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 5.9
+      },
+      {
+        "id": 5,
+        "question": "Ein Arbeitgeber weist seinen Mitarbeiter an, für die tägliche Arbeit eine Software (z.B. Adobe Acrobat) zu nutzen und dazu die AGB des Herstellers per Klick zu akzeptieren. Muss der Arbeitnehmer dieser Anweisung Folge leisten, und welche haftungsrechtlichen Konsequenzen hat das Akzeptieren der Drittanbieter-AGB für ihn persönlich?",
+        "category": "Direktionsrecht",
+        "score": 63.2,
+        "answer_excerpt": "# Anweisung zur Nutzung von Software und AGB-Akzeptanz\n\n## Pflicht zur Befolgung der Anweisung\n\nDer Arbeitnehmer muss der Anweisung des Arbeitgebers grundsätzlich Folge leisten. Gemäß § 611a BGB ist d",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.3
+      }
+    ],
+    "duration_s": 49.9
+  }
+]

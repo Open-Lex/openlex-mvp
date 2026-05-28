@@ -1,0 +1,105 @@
+[
+  {
+    "skill": "sportrecht",
+    "n_questions": 5,
+    "avg_score": 75.8,
+    "hallucination_rate": 0.0,
+    "worst_score": 71.7,
+    "best_score": 79.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Welche Haftpflichtversicherung schützt Vereinsmitglieder, wenn sie bei Vereinsaktivitäten Schäden anrichten? Welche Rolle spielt § 31a BGB?",
+        "category": "Vereinshaftung",
+        "score": 71.7,
+        "answer_excerpt": "# Haftpflichtversicherung für Vereinsmitglieder bei Vereinsaktivitäten\n\n## Grundsätzliche Haftungsregelung\n\nWenn Vereinsmitglieder bei Vereinsaktivitäten Schäden an Dritten verursachen, haftet zunächs",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 25.6
+      },
+      {
+        "id": 2,
+        "question": "Ein Fußballverein möchte sich als eingetragener Verein im Vereinsregister eintragen lassen. Welche Voraussetzungen müssen erfüllt sein?",
+        "category": "Vereinsregistrierung",
+        "score": 74.2,
+        "answer_excerpt": "# Voraussetzungen für die Eintragung eines Fußballvereins als e.V.\n\nFür die Eintragung eines Fußballvereins ins Vereinsregister müssen folgende Voraussetzungen erfüllt sein:\n\n## Materielle Voraussetzu",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 15.3
+      },
+      {
+        "id": 3,
+        "question": "Ein Sportverein möchte seine Mitgliedsbeiträge erhöhen. Welche Voraussetzungen muss eine Satzungsänderung nach dem BGB erfüllen?",
+        "category": "Satzungsänderung",
+        "score": 79.2,
+        "answer_excerpt": "# Voraussetzungen für eine Satzungsänderung zur Erhöhung der Mitgliedsbeiträge\n\nFür eine Satzungsänderung zur Erhöhung der Mitgliedsbeiträge eines Sportvereins gelten nach dem BGB folgende Voraussetzu",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 13.2
+      },
+      {
+        "id": 4,
+        "question": "Was muss eine gültige Vereinssatzung nach dem BGB mindestens enthalten, und welche Angaben sind für die Eintragung ins Vereinsregister zwingend?",
+        "category": "Vereinssatzung",
+        "score": 78.2,
+        "answer_excerpt": "# Mindesterfordernisse einer Vereinssatzung und Eintragung ins Vereinsregister\n\n## Zwingende Satzungsinhalte\n\nNach **§ 57 Abs. 1 BGB** muss eine gültige Vereinssatzung folgende **Mindestangaben** zwin",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 10.0
+      },
+      {
+        "id": 5,
+        "question": "Wie wird ein Sportverein aufgelöst, und was passiert mit dem Vereinsvermögen nach der Auflösung?",
+        "category": "Vereinsauflösung",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.4
+      }
+    ],
+    "duration_s": 65.6
+  }
+]

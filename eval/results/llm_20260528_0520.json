@@ -1,0 +1,132 @@
+[
+  {
+    "skill": "weltraumrecht",
+    "n_questions": 5,
+    "avg_score": 94.8,
+    "hallucination_rate": 0.0,
+    "worst_score": 90.8,
+    "best_score": 96.0,
+    "questions": [
+      {
+        "id": null,
+        "question": "Welche Grundprinzipien legt der Weltraumvertrag von 1967 für die Nutzung des Weltraums durch Staaten fest? Nennen Sie die zentralen Rechtsgrundsätze.",
+        "category": "",
+        "score": 90.8,
+        "answer_excerpt": "# Grundprinzipien des Weltraumvertrags von 1967\n\nDer Weltraumvertrag von 1967 gilt als \"Magna Charta des Weltraumrechts\" [Quelle 4] und legt folgende zentrale Rechtsgrundsätze fest:\n\n## 1. Weltraumfre",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 20.3
+      },
+      {
+        "id": null,
+        "question": "Was regelt Art. VI des Weltraumvertrags über die staatliche Verantwortlichkeit für private Weltraumaktivitäten, und welche Pflichten haben Vertragsstaaten gegenüber privaten Unternehmen?",
+        "category": "",
+        "score": 96.0,
+        "answer_excerpt": "# Staatliche Verantwortlichkeit nach Art. VI Weltraumvertrag\n\n## Regelungsinhalt\n\nArt. VI Weltraumvertrag regelt die **Staatenhaftung für private Weltraumaktivitäten**. Gemäß [Quelle 1] sind \"die Vert",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.5
+      },
+      {
+        "id": null,
+        "question": "Welche fünf völkerrechtlichen Übereinkommen bilden das internationale Weltraumrechtsregime der Vereinten Nationen, und welchen rechtlichen Status haben sie?",
+        "category": "",
+        "score": 95.0,
+        "answer_excerpt": "# Die fünf völkerrechtlichen Weltraumübereinkommen der Vereinten Nationen\n\nDas völkerrechtliche Weltraumrechtsregime der UN besteht aus fünf Übereinkommen aus den 1960er und 1970er Jahren [Quelle 1]:\n",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.9
+      },
+      {
+        "id": null,
+        "question": "Was enthält das Haftungsübereinkommen von 1972 über die internationale Haftung für Schäden durch Weltraumgegenstände, und wer haftet für Schäden?",
+        "category": "",
+        "score": 96.0,
+        "answer_excerpt": "# Haftungsübereinkommen 1972 – Inhalte und Haftungsregime\n\nDas Haftungsübereinkommen von 1972 (Liability Convention, LIAB) trat am 09.10.1973 in Kraft und regelt die völkerrechtliche Haftung für Schäd",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.0
+      },
+      {
+        "id": null,
+        "question": "Welche Regelungen sieht das Mondvertrag-Übereinkommen von 1979 vor, und warum wurde es nur von wenigen Staaten ratifiziert? Was gilt für Ressourcen auf dem Mond?",
+        "category": "",
+        "score": 96.0,
+        "answer_excerpt": "## Regelungen des Mondvertrag-Übereinkommens 1979\n\nDer Mondvertrag konkretisiert die allgemeinen Prinzipien des Weltraumvertrags von 1967 [Quelle 2]. Die Kernregelungen sind:\n\n**Inhaltliche Bestimmung",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil",
+            "voelkerrecht_vertrag"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.6
+      }
+    ],
+    "duration_s": 71.8
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "skill": "verwaltungsrecht",
+    "n_questions": 5,
+    "avg_score": 79.4,
+    "hallucination_rate": 0.0,
+    "worst_score": 64.8,
+    "best_score": 87.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Eine Baugenehmigung wird einem Bürger erteilt, der Nachbar klagt dagegen. Was ist ein Verwaltungsakt und wann hat die Klage des Nachbarn aufschiebende Wirkung?",
+        "category": "Verwaltungsakt",
+        "score": 64.8,
+        "answer_excerpt": "# Rechtliche Einordnung: Verwaltungsakt und aufschiebende Wirkung der Nachbarklage\n\n## Was ist ein Verwaltungsakt?\n\nEin **Verwaltungsakt** ist eine hoheitliche Maßnahme einer Behörde zur Regelung eine",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 25.8
+      },
+      {
+        "id": 2,
+        "question": "Ein Bürger hat eine Gaststättenerlaubnis beantragt, die Behörde entscheidet seit 6 Monaten nicht. Welche rechtlichen Schritte kann der Antragsteller unternehmen?",
+        "category": "Untätigkeitsklage",
+        "score": 83.2,
+        "answer_excerpt": "# Rechtliche Schritte bei Untätigkeit der Behörde\n\nDer Antragsteller hat mehrere rechtliche Handlungsmöglichkeiten:\n\n## 1. Genehmigungsfiktion (§ 6a GewO)\n\nNach **§ 6a Abs. 2 GewO** gilt die Gaststätt",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 15.8
+      },
+      {
+        "id": 3,
+        "question": "Eine Behörde erteilt eine Baugenehmigung ohne vorherige Anhörung des Antragstellers. Welche Fehlerfolgen drohen, und ist der Verwaltungsakt nichtig oder anfechtbar?",
+        "category": "Anhörung",
+        "score": 87.5,
+        "answer_excerpt": "# Fehlerfolgen bei fehlender Anhörung vor Erteilung einer Baugenehmigung\n\n## Grundsätzliche Einordnung\n\nDie Erteilung einer Baugenehmigung ohne vorherige Anhörung stellt einen **Verfahrensfehler** dar",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.67,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.9
+      },
+      {
+        "id": 4,
+        "question": "Ein Subventionsbescheid wird wegen angeblicher Falschangaben aufgehoben. Unter welchen Voraussetzungen darf die Behörde einen begünstigenden Verwaltungsakt zurücknehmen?",
+        "category": "Rücknahme VA",
+        "score": 76.2,
+        "answer_excerpt": "# Voraussetzungen für die Rücknahme eines begünstigenden Verwaltungsakts\n\n## Grundsätzliche Regelung\n\nDie Rücknahme eines begünstigenden Verwaltungsakts (wie einem Subventionsbescheid) richtet sich na",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.75,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.1
+      },
+      {
+        "id": 5,
+        "question": "Eine Behörde lehnt einen Antrag auf Baugenehmigung ab, ohne ausreichend zu begründen, warum sie ihr Ermessen so ausgeübt hat. Welche Fehlerarten gibt es bei Ermessensentscheidungen?",
+        "category": "Ermessen",
+        "score": 85.2,
+        "answer_excerpt": "# Fehlerarten bei Ermessensentscheidungen\n\nBei Ermessensentscheidungen können folgende **Ermessensfehler** auftreten, die nach **§ 114 VwGO** gerichtlich überprüfbar sind:\n\n## 1. Ermessensausfall (Erm",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.5
+      }
+    ],
+    "duration_s": 93.6
+  }
+]

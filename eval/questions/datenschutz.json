@@ -1,0 +1,101 @@
+[
+  {
+    "question": "Ein Unternehmen verarbeitet personenbezogene Daten ohne Rechtsgrundlage. Welche Sanktionen sieht die DSGVO vor und welche Behörde ist zuständig?",
+    "expected_norms": [
+      "Art. 83"
+    ],
+    "expected_keywords": [
+      "Bußgeld",
+      "Aufsichtsbehörde",
+      "Rechtsgrundlage",
+      "Sanktion"
+    ]
+  },
+  {
+    "question": "Unter welchen Voraussetzungen ist eine Auftragsverarbeitung nach Art. 28 DSGVO zulässig und was muss der Auftragsverarbeitungsvertrag enthalten?",
+    "expected_norms": [
+      "Art. 28"
+    ],
+    "expected_keywords": [
+      "Auftragsverarbeitung",
+      "Vertrag",
+      "Weisungsgebunden",
+      "Maßnahmen"
+    ]
+  },
+  {
+    "question": "Ein Unternehmen möchte IoT-Gerätedaten über den Data Governance Act (DGA) anderen Unternehmen über einen Datenvermittlungsdienst zur Verfügung stellen. Was ist dabei datenschutzrechtlich zu beachten?",
+    "expected_norms": [
+      "Art. 10",
+      "DGA"
+    ],
+    "expected_keywords": [
+      "Datenvermittlungsdienst",
+      "DSGVO",
+      "personenbezogen",
+      "Einwilligung"
+    ]
+  },
+  {
+    "question": "Wie verhält sich der EU Data Act zu DSGVO-Anforderungen beim Datenzugang? Dürfen Produktdaten, die auch Personendaten enthalten, nach dem Data Act weitergegeben werden?",
+    "expected_norms": [
+      "Art. 4",
+      "Data Act"
+    ],
+    "expected_keywords": [
+      "Data Act",
+      "DSGVO",
+      "personenbezogen",
+      "Datenschutz"
+    ]
+  },
+  {
+    "question": "Was versteht man unter einer Datenschutz-Folgenabschätzung (DSFA) nach Art. 35 DSGVO und wann ist sie verpflichtend?",
+    "expected_norms": [
+      "Art. 35"
+    ],
+    "expected_keywords": [
+      "Datenschutz-Folgenabschätzung",
+      "Risiko",
+      "Verarbeitung",
+      "Pflicht"
+    ]
+  },
+  {
+    "question": "Ein Nutzer macht von seinem Recht auf Datenlöschung ('Recht auf Vergessenwerden') nach Art. 17 DSGVO Gebrauch. Welche Ausnahmen gibt es?",
+    "expected_norms": [
+      "Art. 17"
+    ],
+    "expected_keywords": [
+      "Löschung",
+      "Vergessenwerden",
+      "Ausnahmen",
+      "öffentlich"
+    ]
+  },
+  {
+    "question": "Dürfen Unternehmen personenbezogene Daten in die USA übertragen? Was hat sich durch das EU-U.S. Data Privacy Framework geändert?",
+    "expected_norms": [
+      "Art. 46"
+    ],
+    "expected_keywords": [
+      "Drittlandtransfer",
+      "USA",
+      "Angemessenheitsbeschluss",
+      "Standardvertragsklauseln"
+    ]
+  },
+  {
+    "question": "Was versteht der Data Governance Act unter 'geschützten Daten' und welche Kategorien von Daten fallen darunter?",
+    "expected_norms": [
+      "Art. 3",
+      "DGA"
+    ],
+    "expected_keywords": [
+      "geschützte Daten",
+      "Betriebs",
+      "vertraulich",
+      "DGA"
+    ]
+  }
+]

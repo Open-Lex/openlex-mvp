@@ -1,0 +1,70 @@
+[
+  {
+    "question": "Ein Online-Shop erhebt bei der Registrierung die E-Mail-Adresse des Kunden mit dem Hinweis: 'Mit der Registrierung stimmen Sie unseren Datenschutzbedingungen zu.' Die Datenschutzerklärung ist über einen Link abrufbar, aber nicht auf der Registrierungsseite selbst verlinkt. Der Kunde klickt auf 'Registrieren' und erhält anschließend wöchentliche Werbemails. Erfüllt dieser Einwilligungsprozess die Anforderungen des Art. 7 DSGVO, insbesondere hinsichtlich der Anforderungen an eine wirksame Einwilligung?",
+    "expected_norms": [
+      "Art. 7 DSGVO",
+      "Art. 4 Abs. 11 DSGVO"
+    ],
+    "expected_keywords": [
+      "Freiwilligkeit",
+      "informierte Einwilligung",
+      "Kopplungsverbot",
+      "Transparenz"
+    ]
+  },
+  {
+    "question": "Ein Arbeitgeber speichert die Krankmeldungen seiner Mitarbeiter über mehrere Jahre und verbindet diese Daten mit Leistungsbeurteilungen. Ein Arbeitnehmer verlangt Auskunft darüber, welche personenbezogenen Daten zu ihm gespeichert sind und zu welchen Zwecken diese verwendet werden. Der Arbeitgeber möchte die Auskunft verweigern, da dies seinen betrieblichen Ablauf störe. Hat der Arbeitnehmer einen Anspruch auf Auskunft nach Art. 15 DSGVO, und welche Grenzen gibt es?",
+    "expected_norms": [
+      "Art. 15 DSGVO",
+      "Art. 17 DSGVO"
+    ],
+    "expected_keywords": [
+      "Auskunftspflicht",
+      "Umfang der Auskunft",
+      "Berechtigte Interessen",
+      "Verarbeitungszwecke"
+    ]
+  },
+  {
+    "question": "Ein Fitnessstudio hat eine Regelung in seinen Allgemeinen Geschäftsbedingungen verankert, wonach Mitglieder automatisch in einen Newsletter einwilligen, wenn sie nicht aktiv widersprechen ('Opt-out'). Das Fitnessstudio argumentiert, dass eine konkludente Zustimmung durch Vertragsschluss erfolge. Ist diese vorformulierte Einwilligung nach Art. 7 DSGVO und § 7 Abs. 2 BDSG wirksam?",
+    "expected_norms": [
+      "Art. 7 DSGVO",
+      "§ 7 Abs. 2 BDSG"
+    ],
+    "expected_keywords": [
+      "Opt-out versus Opt-in",
+      "konkludente Willenserklärung",
+      "Ausdrückliche Erklärung",
+      "AGB-Kontrolle"
+    ]
+  },
+  {
+    "question": "Eine Kreditauskunftei speichert Daten von Privatpersonen über deren Zahlungsausfälle und Kreditwürdigkeit. Ein Betroffener beantragt die Löschung seiner Daten gemäß Art. 17 DSGVO, da diese bereits fünf Jahre alt sind. Die Auskunftei verweigert die Löschung, da die Speicherung zur Erfüllung von Verträgen notwendig sei. Kann sich die Auskunftei auf Art. 17 Abs. 3 lit. a DSGVO berufen und kann der Betroffene sich auf Art. 21 DSGVO berufen?",
+    "expected_norms": [
+      "Art. 17 DSGVO",
+      "Art. 21 DSGVO"
+    ],
+    "expected_keywords": [
+      "Löschungsrecht",
+      "Aufbewahrungspflicht",
+      "Rechtmäßigkeit der Verarbeitung",
+      "Widerspruchsrecht"
+    ]
+  },
+  {
+    "question": "Ein Onlineversandhändler nutzt zur Optimierung seiner Marketingkampagnen ein Tool eines US-amerikanischen Anbieters, das die Klickverläufe und Kaufhistorien seiner Kunden an Server in den USA übermittelt. Der Händler hat mit dem US-Anbieter einen Standarddatenschutzvertrag (SCC) geschlossen. Nach dem Schrems-II-Urteil des EuGH werden Daten aber nicht ausreichend geschützt. Auf welche Rechtsgrundlagen könnte sich der Verantwortliche stützen, und welche Prüfungsschritte sind nach Art. 6 DSGVO sowie Kapitel V DSGVO notwendig?",
+    "expected_norms": [
+      "Art. 6 DSGVO",
+      "Art. 44 DSGVO",
+      "Art. 49 DSGVO",
+      "Kapitel V DSGVO"
+    ],
+    "expected_keywords": [
+      "Internationale Datenübermittlung",
+      "Standarddatenschutzklauseln",
+      "Angemessenheitsbeschluss",
+      "Supplementäre Garantien",
+      "Rechtmäßigkeitsprinzip"
+    ]
+  }
+]

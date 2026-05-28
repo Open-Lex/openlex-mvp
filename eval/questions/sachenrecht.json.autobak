@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "skill": "sachenrecht",
+    "question": "Max kauft von seinem Nachbarn ein Fahrrad. Sie einigen sich mündlich auf den Kauf und Max ist sofort in der Lage, das Fahrrad zu nutzen und mitzunehmen. Wann erwirbt Max den Besitz an dem Fahrrad?",
+    "expected_norms": [
+      "§ 854"
+    ],
+    "expected_keywords": [
+      "Besitz",
+      "Gewalt",
+      "Erwerb"
+    ],
+    "category": "Erwerb des Besitzes"
+  },
+  {
+    "id": 2,
+    "skill": "sachenrecht",
+    "question": "Ein Lagerarbeiter lagert in seiner Fabrik Waren für seinen Arbeitgeber ein und verwaltet diese nach dessen Anweisungen. Wer ist der Besitzer der Waren gemäß dem Verhältnis zwischen Arbeitgeber und Arbeiter?",
+    "expected_norms": [
+      "§ 872"
+    ],
+    "expected_keywords": [
+      "Besitzer",
+      "Verhältnis",
+      "Besitz"
+    ],
+    "category": "Besitzdiener"
+  },
+  {
+    "id": 3,
+    "skill": "sachenrecht",
+    "question": "Anna besitzt ein Gemälde. Ihr Bruder entwendet es ohne ihre Zustimmung aus ihrer Wohnung. Welche Rechtsfolge tritt gemäß § 858 BGB ein, und welcher Anspruch steht Anna zu?",
+    "expected_norms": [
+      "§ 858",
+      "§ 861"
+    ],
+    "expected_keywords": [
+      "Eigenmacht",
+      "Besitzentziehung",
+      "Anspruch"
+    ],
+    "category": "Schutz des Besitzes"
+  },
+  {
+    "id": 4,
+    "skill": "sachenrecht",
+    "question": "Bert wird beim Joggen im Park von einem Dieb überfallen, der ihm seine Uhr mit Gewalt wegnehmen will. Darf Bert die Uhr mit Gewalt zurücknehmen, wenn ihm der Dieb gerade die Uhr abnimmt?",
+    "expected_norms": [
+      "§ 859"
+    ],
+    "expected_keywords": [
+      "Besitzer",
+      "Gewalt",
+      "Selbsthilfe"
+    ],
+    "category": "Selbsthilferecht des Besitzers"
+  },
+  {
+    "id": 5,
+    "skill": "sachenrecht",
+    "question": "Petra vermietet ihre Wohnung an Torsten. Torsten wird durch verbotene Eigenmacht aus der Wohnung gewaltsam vertrieben. Kann Petra als Vermieterin einen Anspruch auf Wiederherstellung des Besitzes geltend machen?",
+    "expected_norms": [
+      "§ 868",
+      "§ 869"
+    ],
+    "expected_keywords": [
+      "Besitz",
+      "mittelbarer Besitz",
+      "Anspruch"
+    ],
+    "category": "Mittelbarer Besitz und Besitzschutz"
+  }
+]

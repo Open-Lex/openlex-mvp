@@ -1,0 +1,76 @@
+[
+  {
+    "question": "Der Landwirt L bewirtschaftet 120 Hektar Ackerland in Schleswig-Holstein. Er möchte für das kommende Kalenderjahr Direktzahlungen nach der Gemeinsamen Agrarpolitik (GAP) beantragen. Bei der Antragstellung stellt sich heraus, dass auf 8 Hektar seiner Fläche ein geschützter Biotop liegt, den er bislang nicht als solchen erfasst hatte. Darf L diese Flächen bei der Berechnung seiner Förderansprüche berücksichtigen und welche Rechtsfolgen ergeben sich nach dem deutschen und EU-Agrarförderrecht?",
+    "expected_norms": [
+      "Art. 4 Abs. 1 lit. c GAP-Direktzahlungen-Verordnung (VO 2021/2115)",
+      "§ 2 InVeKoS-Verordnung",
+      "§ 37 GAP-Konditionalitäten-Verordnung"
+    ],
+    "expected_keywords": [
+      "Beihilfefähigkeit von Flächen",
+      "ökologische Vorrangflächen",
+      "Cross-Compliance",
+      "Sanktionen bei Fehlangaben"
+    ]
+  },
+  {
+    "question": "Der Schweinezüchter S hält in seinem Betrieb 850 Mastschweine in einer Stallanlage. Nach einem Kontrollbesuch der zuständigen Behörde wird festgestellt, dass die Stallbucht-Größe nicht den Anforderungen für Gruppenhaltung entspricht und die Schweine keinen Zugang zu Außenflächen haben. Nach welchen gesetzlichen Vorgaben ist zu prüfen, ob eine Ordnungswidrigkeit vorliegt, und welche Sanktionen drohen dem Betreiber?",
+    "expected_norms": [
+      "§§ 2, 3 Tierschutz-Nutztierhaltungsverordnung (TierSchNutztV)",
+      "§ 32 Tierschutzgesetz (TierSchG)",
+      "§ 18 TierSchG"
+    ],
+    "expected_keywords": [
+      "artgerechte Haltung",
+      "Mindestanforderungen",
+      "Stallgrundfläche",
+      "Ordnungswidrigkeit",
+      "Bußgeldrahmen"
+    ]
+  },
+  {
+    "question": "Ein Agrargenossenschaft erhält Mitteilung, dass eine EU-Agrarsubvention in Höhe von 45.000 Euro wegen verspäteter Antragstellung gekürzt wird. Die Antragfrist endete am 15. Mai, der Antrag wurde am 22. Mai eingereicht. Kann die Genossenschaft gegen die Kürzung vorgehen und welche verfahrensrechtlichen Ansprüche hat sie nach deutschem Verwaltungsverfahrensrecht und EU-Agrarrecht?",
+    "expected_norms": [
+      "Art. 12 Abs. 2 VO (EU) 2021/2116 (Fusionsverordnung)",
+      "§ 39 Verwaltungsverfahrensgesetz (VwVfG)",
+      "Art. 5 Abs. 5a VO (EU) 2021/2116"
+    ],
+    "expected_keywords": [
+      "Antragsfrist",
+      "Fristverlängerung",
+      "Säumniszuschlag",
+      "Begünstigung bei Antragstellung",
+      "Verwaltungsbeschwerde"
+    ]
+  },
+  {
+    "question": "Der Bioland-zertifizierte Milchbauer M möchte seine Kühe während der Weidesaison unter der neuen EU-Öko-Verordnung (VO 2018/848) halten. Er plant, die Tiere an 120 Tagen pro Jahr weiden zu lassen und die restliche Zeit im Stall zu füttern. Erfüllt diese Haltungsweise die Anforderungen der europäischen Öko-Verordnung für die Rinderhaltung, und welche Dokumentationspflichten entstehen für M?",
+    "expected_norms": [
+      "Art. 14 VO (EU) 2018/848 (Öko-Verordnung)",
+      "Anhang II Abschnitt 1.8.1 VO (EU) 2018/848",
+      "§ 11 Öko-Landbauverordnung (ÖLV)"
+    ],
+    "expected_keywords": [
+      "ökologische Rinderhaltung",
+      "Weidegang-Anforderungen",
+      "Stallhaltung",
+      "Zertifizierung",
+      "Nachweispflichten"
+    ]
+  },
+  {
+    "question": "Nach einem Stallbrand verliert die Landwirtin L ihre Stallanlage mit 60 Milchkühen vollständig. Sie plant, die Tiere vorübergehend bei einem befreundeten Betrieb 25 km entfernt unterzubringen und diese dort zu melken. Welche Anforderungen nach dem Fütterungsrecht und Tierschutzrecht muss sie erfüllen, und wie wirkt sich die Evakuierung auf ihre Direktzahlungsansprüche aus?",
+    "expected_norms": [
+      "§ 4a Tierschutz-Nutztierhaltungsverordnung (TierSchNutztV)",
+      "§ 11 Abs. 1 Fütterungsverordnung (FüttV)",
+      "Art. 9 VO (EU) 2021/2115 (GAP-Direktzahlungen)"
+    ],
+    "expected_keywords": [
+      "Umstallungsbestimmungen",
+      "Dokumentation von Tierbewegungen",
+      "Erhaltungsfähigkeit des Bestandes",
+      "Beihilfefähigkeit nach Notfall",
+      "Tierschutzminimalstandards"
+    ]
+  }
+]

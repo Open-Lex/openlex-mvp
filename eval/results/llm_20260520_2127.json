@@ -1,0 +1,121 @@
+[
+  {
+    "skill": "sachenrecht",
+    "n_questions": 5,
+    "avg_score": 83.9,
+    "hallucination_rate": 0.0,
+    "worst_score": 77.0,
+    "best_score": 97.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Wie wird der Besitz einer Sache erworben?",
+        "category": "Besitzerwerb",
+        "score": 82.2,
+        "answer_excerpt": "# Erwerb des Besitzes\n\nDer Besitzerwerb ist in **§ 854 BGB** geregelt und erfolgt auf zwei Arten:\n\n## 1. Originärer Besitzerwerb (§ 854 Abs. 1 BGB)\n\nDer Besitz wird durch **Erlangung der tatsächlichen",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 20.0
+      },
+      {
+        "id": 2,
+        "question": "Wer ist Besitzer einer Sache, wenn jemand die tatsächliche Gewalt über die Sache für einen anderen ausübt?",
+        "category": "Besitzdiener",
+        "score": 81.2,
+        "answer_excerpt": "# Besitzer bei Ausübung der tatsächlichen Gewalt für einen anderen\n\nWenn jemand die tatsächliche Gewalt über eine Sache für einen anderen ausübt, ist nach den bereitgestellten Quellen zu unterscheiden",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 11.3
+      },
+      {
+        "id": 3,
+        "question": "Wie wird der Besitz einer Sache beendet?",
+        "category": "Besitzbeendigung",
+        "score": 81.2,
+        "answer_excerpt": "# Beendigung des Besitzes einer Sache\n\nNach dem BGB wird der Besitz einer Sache gemäß **§ 856 BGB** beendet [Quelle 1]:\n\n## Zwei Arten der Beendigung:\n\n1. **Freiwillige Aufgabe**: Der Besitzer gibt di",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 13.3
+      },
+      {
+        "id": 4,
+        "question": "Was sind die Voraussetzungen für den Eigentumsherausgabeanspruch nach § 985 BGB?",
+        "category": "Eigentumsherausgabe",
+        "score": 97.8,
+        "answer_excerpt": "# Voraussetzungen des Eigentumsherausgabeanspruchs nach § 985 BGB\n\nDer Eigentumsherausgabeanspruch nach § 985 BGB (\"Der Eigentümer kann von dem Besitzer die Herausgabe der Sache verlangen.\" [Quelle 2]",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil_segmentiert"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.6
+      },
+      {
+        "id": 5,
+        "question": "Kann der Besitz einer Sache durch eine vorübergehende Verhinderung in der Ausübung der Gewalt beendet werden?",
+        "category": "Besitzbeendigung",
+        "score": 77.0,
+        "answer_excerpt": "# Nein, vorübergehende Verhinderung beendet Besitz nicht\n\nNach **§ 856 Abs. 2 BGB** wird der Besitz durch eine **ihrer Natur nach vorübergehende Verhinderung in der Ausübung der Gewalt nicht beendigt*",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.6
+      }
+    ],
+    "duration_s": 71.3
+  }
+]

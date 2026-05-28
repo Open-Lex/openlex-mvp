@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "skill": "handelsrecht",
+    "question": "Ein Unternehmen hat im Jahresabschluß für das am 31. Dezember 1986 endende Geschäftsjahr Vermögensgegenstände des Anlagevermögens mit einem niedrigeren Wert angesetzt, als nach den neuen handelsrechtlichen Vorschriften zulässig ist. Darf das Unternehmen diesen niedrigeren Wertansatz beibehalten, und wenn ja, unter welchen Bedingungen?",
+    "expected_norms": [
+      "§ 252",
+      "§ 253",
+      "§ 254"
+    ],
+    "expected_keywords": [
+      "Jahresabschluß",
+      "Geschäftsjahr",
+      "Wertansatz"
+    ],
+    "category": "Bilanzierung und Bewertung"
+  },
+  {
+    "id": 2,
+    "skill": "handelsrecht",
+    "question": "Welche gesetzlichen Vorschriften des Handelsgesetzbuchs regeln die Haftung im Falle eines Schiffszusammenstoßes und die Bergung, und auf welche Norms wird dabei Bezug genommen?",
+    "expected_norms": [
+      "§ 574"
+    ],
+    "expected_keywords": [
+      "HGB",
+      "Bergung",
+      "Haftung"
+    ],
+    "category": "Seerecht"
+  },
+  {
+    "id": 3,
+    "skill": "handelsrecht",
+    "question": "Eine mittelgroße GmbH muss ihren Jahresabschluss prüfen lassen. Welche HGB-Vorschriften regeln die Pflicht zur Abschlussprüfung, die Anforderungen an den Abschlussprüfer und die Offenlegungspflichten?",
+    "expected_norms": [
+      "§ 316"
+    ],
+    "expected_keywords": [
+      "Abschlussprüfung",
+      "Jahresabschluss",
+      "Prüfer",
+      "Offenlegung"
+    ],
+    "category": "Rechnungslegung und Prüfung"
+  },
+  {
+    "id": 4,
+    "skill": "handelsrecht",
+    "question": "Ein Handelsvertreter hat ein Vertragsverhältnis vor dem 1. Januar 1990 begründet. Nach welchen Normen des Handelsgesetzbuchs wird dieses Verhältnis bis 1993 beurteilt?",
+    "expected_norms": [
+      "§ 89b",
+      "§ 90a"
+    ],
+    "expected_keywords": [
+      "Vorschriften",
+      "Fassung",
+      "Handelsvertreter"
+    ],
+    "category": "Handelsvertreterrecht"
+  },
+  {
+    "id": 5,
+    "skill": "handelsrecht",
+    "question": "Wie werden nach den Haager Regeln ausgestellte Konnossemente hinsichtlich der Verjährung von Schadensersatzansprüchen gemäß Handelsgesetzbuch behandelt, und auf welche Norm wird Bezug genommen?",
+    "expected_norms": [
+      "§ 607",
+      "§ 609",
+      "§ 195"
+    ],
+    "expected_keywords": [
+      "Konnossement",
+      "Verjährung",
+      "Anwendung"
+    ],
+    "category": "Internationales Seerecht"
+  }
+]

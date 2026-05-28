@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "skill": "jugendrecht",
+    "question": "Ein 16-jähriger Jugendlicher begeht einen Diebstahl. Welche Voraussetzungen müssen erfüllt sein, damit er strafrechtlich verantwortlich ist?",
+    "expected_norms": [
+      "§ 3 JGG"
+    ],
+    "expected_keywords": [
+      "strafrechtliche Verantwortlichkeit",
+      "sittliche Entwicklung",
+      "geistige Reife"
+    ],
+    "min_sources": 1,
+    "category": "Strafrechtliche Verantwortlichkeit"
+  },
+  {
+    "id": 2,
+    "skill": "jugendrecht",
+    "question": "Ein 17-jähriger Jugendlicher wird wegen einer Körperverletzung angeklagt. Welches Gesetz findet Anwendung?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Jugendgerichtsgesetz",
+      "persönlicher Anwendungsbereich",
+      "Verfehlung"
+    ],
+    "min_sources": 1,
+    "category": "Anwendungsbereich des JGG"
+  },
+  {
+    "id": 3,
+    "skill": "jugendrecht",
+    "question": "Ein 19-jähriger Heranwachsender begeht eine Straftat. Welche Ziele verfolgt das Jugendstrafrecht in diesem Fall?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Jugendstrafrecht",
+      "Erneute Straftaten",
+      "Erziehung"
+    ],
+    "min_sources": 1,
+    "category": "Ziele des Jugendstrafrechts"
+  },
+  {
+    "id": 4,
+    "skill": "jugendrecht",
+    "question": "Ein 15-jähriger Jugendlicher ist nicht strafrechtlich verantwortlich. Welche Maßnahmen können ergriffen werden, um ihn zu erziehen?",
+    "expected_norms": [
+      "§ 3 JGG"
+    ],
+    "expected_keywords": [
+      "Erziehung",
+      "elterliches Erziehungsrecht",
+      "Jugendlicher"
+    ],
+    "min_sources": 1,
+    "category": "Erziehung von Jugendlichen"
+  },
+  {
+    "id": 5,
+    "skill": "jugendrecht",
+    "question": "Ein 18-jähriger Heranwachsender begeht eine Straftat. Welche Rechtsfolgen können angewendet werden?",
+    "expected_norms": [
+      "§ 105",
+      "§ 106"
+    ],
+    "expected_keywords": [
+      "Rechtsfolgen",
+      "Jugendstrafrecht",
+      "Heranwachsender"
+    ],
+    "min_sources": 1,
+    "category": "Rechtsfolgen im Jugendstrafrecht"
+  },
+  {
+    "id": 6,
+    "skill": "jugendrecht",
+    "question": "Ein 14-jähriger Jugendlicher begeht einen Diebstahl. Welche Voraussetzungen müssen erfüllt sein, damit er nach dem JGG verurteilt werden kann?",
+    "expected_norms": [
+      "§ 1 JGG",
+      "§ 3 JGG"
+    ],
+    "expected_keywords": [
+      "Jugendgerichtsgesetz",
+      "strafrechtliche Verantwortlichkeit",
+      "Verfehlung"
+    ],
+    "min_sources": 2,
+    "category": "Anwendung des JGG"
+  },
+  {
+    "id": 7,
+    "skill": "jugendrecht",
+    "question": "Ein 17-jähriger Jugendlicher wird wegen einer Straftat angeklagt. Welche Rolle spielt das elterliche Erziehungsrecht im Verfahren?",
+    "expected_norms": [
+      "§ 2 JGG"
+    ],
+    "expected_keywords": [
+      "elterliches Erziehungsrecht",
+      "Jugendstrafrecht",
+      "Verfahren"
+    ],
+    "min_sources": 1,
+    "category": "Elterliches Erziehungsrecht"
+  },
+  {
+    "id": 8,
+    "skill": "jugendrecht",
+    "question": "Ein 19-jähriger Heranwachsender begeht eine Straftat. Welche Ziele verfolgt das Jugendstrafrecht in Bezug auf die Erziehung?",
+    "expected_norms": [
+      "§ 2 JGG"
+    ],
+    "expected_keywords": [
+      "Jugendstrafrecht",
+      "Erziehung",
+      "Heranwachsender"
+    ],
+    "min_sources": 1,
+    "category": "Ziele der Erziehung"
+  },
+  {
+    "id": 9,
+    "skill": "jugendrecht",
+    "question": "Ein 15-jähriger Jugendlicher ist strafrechtlich verantwortlich. Welche Rechtsfolgen können angewendet werden?",
+    "expected_norms": [
+      "§ 2 JGG"
+    ],
+    "expected_keywords": [
+      "Rechtsfolgen",
+      "Jugendstrafrecht",
+      "Jugendlicher"
+    ],
+    "min_sources": 1,
+    "category": "Rechtsfolgen im Jugendstrafrecht"
+  },
+  {
+    "id": 10,
+    "skill": "jugendrecht",
+    "question": "Ein 18-jähriger Heranwachsender begeht eine Straftat. Welche Voraussetzungen müssen erfüllt sein, damit er nach dem JGG verurteilt werden kann?",
+    "expected_norms": [
+      "§ 1 JGG",
+      "§ 2 JGG"
+    ],
+    "expected_keywords": [
+      "Jugendgerichtsgesetz",
+      "Heranwachsender",
+      "Verfehlung"
+    ],
+    "min_sources": 2,
+    "category": "Anwendung des JGG"
+  }
+]

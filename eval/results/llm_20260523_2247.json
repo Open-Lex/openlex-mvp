@@ -1,0 +1,122 @@
+[
+  {
+    "skill": "zivilverfahrensrecht",
+    "n_questions": 5,
+    "avg_score": 83.6,
+    "hallucination_rate": 0.0,
+    "worst_score": 70.4,
+    "best_score": 89.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Mein Mandant möchte gegen einen Beklagten klagen, der seinen Wohnsitz in München hat. Nach welcher Norm bestimmt sich der allgemeine Gerichtsstand und welche Bedeutung hat der Wohnsitz dabei?",
+        "category": "Gerichtsbarkeit und Gerichtsstand",
+        "score": 89.5,
+        "answer_excerpt": "## Allgemeiner Gerichtsstand und Bedeutung des Wohnsitzes\n\n**Maßgebliche Norm:**\n\nDer allgemeine Gerichtsstand bestimmt sich nach **§ 13 ZPO** (Zivilprozessordnung). Diese Norm regelt: \"Der allgemeine",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 21.1
+      },
+      {
+        "id": 2,
+        "question": "Bei der Wertberechnung für eine Klage mit mehreren Ansprüchen: Wie werden diese nach den Vorschriften zusammengerechnet und gibt es Ausnahmen?",
+        "category": "Wertberechnung",
+        "score": 81.2,
+        "answer_excerpt": "# Wertberechnung bei mehreren Ansprüchen\n\n## Grundregel: Zusammenrechnung\n\nNach **§ 5 ZPO** werden mehrere in einer Klage geltend gemachte Ansprüche grundsätzlich **zusammengerechnet** [Quelle 1]. Die",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 8.8
+      },
+      {
+        "id": 3,
+        "question": "Ein Gericht hat die Unzuständigkeit eines anderen Gerichts rechtskräftig ausgesprochen. Welche Bindungswirkung hat diese Entscheidung für später anhängig gemachte Verfahren?",
+        "category": "Gerichtsstandsrechtliche Wirkungen",
+        "score": 87.5,
+        "answer_excerpt": "# Bindungswirkung einer rechtskräftigen Unzuständigkeitsentscheidung\n\n## Rechtliche Regelung\n\nNach **§ 11 ZPO** hat eine rechtskräftig ausgesprochene Unzuständigkeit eines Gerichts **wegen sachlicher ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.9
+      },
+      {
+        "id": 4,
+        "question": "Wie wird nach den Vorschriften der Zivilprozessordnung der Wert einer Klage zum Zeitpunkt der Einreichung bestimmt, und welche Faktoren bleiben unberücksichtigt?",
+        "category": "Wertfestsetzung",
+        "score": 70.4,
+        "answer_excerpt": "# Wertberechnung einer Klage nach der Zivilprozessordnung\n\n## Zeitpunkt der Wertberechnung\n\nNach § 4 Abs. 1 ZPO [Quelle 1] ist **der Zeitpunkt der Einreichung der Klage** entscheidend für die Wertbere",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 6.8
+      },
+      {
+        "id": 5,
+        "question": "Welche Zuständigkeitsregel gilt für eine Person, die keinen Wohnsitz im Inland hat, sich aber an einem bekannten Ort aufhält?",
+        "category": "Besondere Gerichtsstände",
+        "score": 89.5,
+        "answer_excerpt": "# Zuständigkeitsregel für Personen ohne Wohnsitz, aber bekanntem Aufenthaltsort\n\nFür eine Person, die keinen Wohnsitz im Inland hat, sich aber an einem bekannten Ort aufhält, gelten folgende Zuständig",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 6.8
+      }
+    ],
+    "duration_s": 53.9
+  }
+]

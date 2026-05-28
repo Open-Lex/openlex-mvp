@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "skill": "insolvenzrecht",
+    "question": "Die Möbelfabrik Meyer GmbH mit Sitz in München ist zahlungsunfähig. Ein Gläubiger reicht einen Insolvenzantrag beim Amtsgericht München ein. Welche Ziele verfolgt das Insolvenzverfahren nach § 1 InsO und welche beiden Optionen stehen zur Verfügung?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Gläubiger",
+      "Insolvenzplan",
+      "Insolvenzverfahren"
+    ],
+    "category": "Ziele und Zweck"
+  },
+  {
+    "id": 2,
+    "skill": "insolvenzrecht",
+    "question": "Die Textilgesellschaft GmbH hat ihren allgemeinen Gerichtsstand in Dresden, betreibt aber ihre Hauptgeschäftstätigkeit in Leipzig. Welches Insolvenzgericht ist örtlich zuständig nach § 3 Abs. 1 InsO und nach welchem Kriterium richtet sich die Zuständigkeit?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "örtliche Zuständigkeit",
+      "Insolvenzgericht",
+      "Zuständigkeit"
+    ],
+    "category": "Gerichtliche Zuständigkeit"
+  },
+  {
+    "id": 3,
+    "skill": "insolvenzrecht",
+    "question": "Die Holding AG mit Hauptverwaltung in Berlin verfügt über drei Tochterunternehmen in Deutschland. Die Holding beantragt Insolvenz beim Amtsgericht Berlin. Anschließend möchte eine Tochtergesellschaft ihr Verfahren auch dort durchführen. Welche Voraussetzungen müssen nach § 3a und § 3e InsO erfüllt sein?",
+    "expected_norms": [
+      "§ 3a",
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Unternehmensgruppe",
+      "Gruppen-Gerichtsstand",
+      "Gruppen-Folgeverfahren"
+    ],
+    "category": "Konzerninsolvenzen"
+  },
+  {
+    "id": 4,
+    "skill": "insolvenzrecht",
+    "question": "Das Amtsgericht Hamburg hatte über die Insolvenz der Muttergesellschaft entschieden und damit einen Gruppen-Gerichtsstand begründet. Zwei Monate später wird das Verfahren der Muttergesellschaft eingestellt. Eine Tochtergesellschaft hat dort noch ein Insolvenzverfahren laufen. Bleibt der Gruppen-Gerichtsstand bestehen nach § 3b InsO?",
+    "expected_norms": [
+      "§ 3a"
+    ],
+    "expected_keywords": [
+      "Gruppen-Gerichtsstand",
+      "Einstellung",
+      "Gruppen"
+    ],
+    "category": "Konzerninsolvenzen"
+  },
+  {
+    "id": 5,
+    "skill": "insolvenzrecht",
+    "question": "Ein Insolvenzantrag über die Tochtergesellschaft einer Unternehmensgruppe wird beim Amtsgericht Köln eingereicht, obwohl der Gruppen-Gerichtsstand bereits beim Amtsgericht Frankfurt begründet wurde. Welche Befugnisse hat das Amtsgericht Köln nach § 3d InsO?",
+    "expected_norms": [
+      "§ 3a"
+    ],
+    "expected_keywords": [
+      "Verweisung",
+      "Gruppen-Gerichtsstand",
+      "gruppenangehöriger Schuldner"
+    ],
+    "category": "Konzerninsolvenzen"
+  }
+]

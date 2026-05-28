@@ -1,0 +1,126 @@
+[
+  {
+    "skill": "arbeitsrecht",
+    "n_questions": 5,
+    "avg_score": 88.3,
+    "hallucination_rate": 0.0,
+    "worst_score": 79.9,
+    "best_score": 96.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Was sind die wesentlichen Pflichten eines Arbeitnehmers und eines Arbeitgebers im Rahmen eines Arbeitsvertrags?",
+        "category": "arbeitsvertrag",
+        "score": 79.9,
+        "answer_excerpt": "# Wesentliche Pflichten im Arbeitsvertrag\n\n## Pflichten des Arbeiters\n\nGemäß **§ 611a BGB** [Quelle 2] wird der Arbeitnehmer \"zur Leistung weisungsgebundener, fremdbestimmter Arbeit in persönlicher Ab",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 20.9
+      },
+      {
+        "id": 2,
+        "question": "Inwiefern kann ein Arbeitgeber sein Weisungsrecht gegenüber einem Arbeitnehmer ausüben?",
+        "category": "weisungsrecht",
+        "score": 89.2,
+        "answer_excerpt": "# Ausübung des Weisungsrechts durch den Arbeitgeber\n\n## Umfang des Weisungsrechts\n\nGemäß **§ 611a Abs. 1 BGB** kann das Weisungsrecht des Arbeitgebers \"Inhalt, Durchführung, Zeit und Ort der Tätigkeit",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.4
+      },
+      {
+        "id": 3,
+        "question": "Was verbietet § 612a BGB und welche Rechtsfolgen ergeben sich daraus?",
+        "category": "maßregelungsverbot",
+        "score": 86.5,
+        "answer_excerpt": "# § 612a BGB – Maßregelungsverbot\n\n## Inhalt des Verbots\n\nNach [Quelle 1] verbietet **§ 612a BGB (Maßregelungsverbot)**, dass der Arbeitgeber einen Arbeitnehmer bei einer Vereinbarung oder einer Maßna",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.4
+      },
+      {
+        "id": 4,
+        "question": "Wie unterscheidet sich ein Arbeitsvertrag von einem Dienstvertrag?",
+        "category": "vertragstypen",
+        "score": 96.8,
+        "answer_excerpt": "# Unterschied zwischen Arbeitsvertrag und Dienstvertrag\n\n## Kernunterschied: Weisungsgebundenheit\n\nDer wesentliche Unterschied liegt in der **persönlichen Abhängigkeit und Weisungsgebundenheit**:\n\n**A",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 10.1
+      },
+      {
+        "id": 5,
+        "question": "Was bedeutet persönliche Abhängigkeit im Rahmen eines Arbeitsvertrags?",
+        "category": "abhängigkeit",
+        "score": 89.2,
+        "answer_excerpt": "# Persönliche Abhängigkeit im Arbeitsvertrag\n\n## Definition und rechtliche Bedeutung\n\nGemäß **§ 611a Abs. 1 BGB** ist persönliche Abhängigkeit ein Kernelement des Arbeitsvertrags. Danach wird der Arbe",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.7
+      }
+    ],
+    "duration_s": 66.0
+  }
+]

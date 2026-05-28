@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "skill": "datenschutz",
+    "question": "Ein Unternehmen plant die Inbetriebnahme eines neuen Dateisystems und führt eine Datenschutz-Folgenabschätzung durch. Diese zeigt, dass die geplante Verarbeitung eine erhebliche Gefahr für die Rechtsgüter der betroffenen Personen darstellen könnte. Welche Pflicht hat der Verantwortliche vor der Inbetriebnahme?",
+    "expected_norms": [
+      "§ 67"
+    ],
+    "expected_keywords": [
+      "Verarbeitung",
+      "Bundesbeauftragte",
+      "Rechtsgüter"
+    ],
+    "category": "Anhörungspflichten"
+  },
+  {
+    "id": 2,
+    "skill": "datenschutz",
+    "question": "Der Verantwortliche hat personenbezogene Daten an mehrere externe Empfänger übermittelt. Später stellt sich heraus, dass diese Daten unrichtig waren. Welche Dokumentations- und Informationspflichten hat der Verantwortliche?",
+    "expected_norms": [
+      "§ 40 Abs"
+    ],
+    "expected_keywords": [
+      "Daten",
+      "Verantwortliche",
+      "Maßnahmen"
+    ],
+    "category": "Datenberichtigung und Benachrichtigung"
+  },
+  {
+    "id": 3,
+    "skill": "datenschutz",
+    "question": "Die Bundesbeauftragte erhält eine Beschwerde über eine Datenverarbeitung, die eigentlich in die Zuständigkeit einer Aufsichtsbehörde eines anderen EU-Mitgliedstaates fällt. Wie muss die Bundesbeauftragte verfahren?",
+    "expected_norms": [
+      "§ 16 Abs"
+    ],
+    "expected_keywords": [
+      "Bundesbeauftragte",
+      "Verarbeitung",
+      "Aufgaben"
+    ],
+    "category": "Zuständigkeit und Weitergabe"
+  },
+  {
+    "id": 4,
+    "skill": "datenschutz",
+    "question": "Ein Verantwortlicher plant eine besonders komplexe Datenverarbeitung mit neuen Technologien. Der Bundesbeauftragte leitet eine Anhörung ein und benötigt weitere Informationen zur Bewertung der Risiken. Welche Angaben muss der Verantwortliche zusätzlich zur Datenschutz-Folgenabschätzung vorlegen?",
+    "expected_norms": [
+      "§ 67"
+    ],
+    "expected_keywords": [
+      "Auftragsverarbeiter",
+      "Angaben",
+      "Schutz"
+    ],
+    "category": "Informationspflichten bei Anhörung"
+  },
+  {
+    "id": 5,
+    "skill": "datenschutz",
+    "question": "Der Verantwortliche beabsichtigt, eine hochriskante Datenverarbeitung durchzuführen, die für seine Aufgabenerfüllung besonders dringlich ist. Kann er vor Ablauf der Anhörungsfrist der Bundesbeauftragten mit der Verarbeitung beginnen, und welche Bedingung muss erfüllt sein?",
+    "expected_norms": [
+      "§ 67"
+    ],
+    "expected_keywords": [
+      "Verarbeitung",
+      "Anhörung",
+      "Maßnahmen"
+    ],
+    "category": "Dringende Verarbeitung trotz Anhörung"
+  }
+]

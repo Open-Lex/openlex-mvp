@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "skill": "verwaltungsprozessrecht",
+    "question": "Welche Gerichte sind in den Ländern für die Verwaltungsgerichtsbarkeit zuständig?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Verwaltungsgerichte",
+      "Oberverwaltungsgerichte",
+      "Verwaltungsgerichtsbarkeit"
+    ],
+    "min_sources": 1,
+    "category": "Gerichtsbarkeit"
+  },
+  {
+    "id": 2,
+    "skill": "verwaltungsprozessrecht",
+    "question": "Wie wird die Unabhängigkeit der Verwaltungsgerichte von den Verwaltungsbehörden gewährleistet?",
+    "expected_norms": [
+      "§ 1"
+    ],
+    "expected_keywords": [
+      "Unabhängigkeit",
+      "Verwaltungsgerichte",
+      "Verwaltungsbehörden"
+    ],
+    "min_sources": 1,
+    "category": "Gerichtsbarkeit"
+  },
+  {
+    "id": 3,
+    "skill": "verwaltungsprozessrecht",
+    "question": "Welche Änderungen in der Abgrenzung der Gerichtsbezirke dürfen durch Gesetz angeordnet werden?",
+    "expected_norms": [
+      "§ 3 Abs. 1 Nr. 3 VwGO"
+    ],
+    "expected_keywords": [
+      "Abgrenzung",
+      "Gerichtsbezirke",
+      "Gesetz"
+    ],
+    "min_sources": 1,
+    "category": "Gerichtsorganisation"
+  },
+  {
+    "id": 4,
+    "skill": "verwaltungsprozessrecht",
+    "question": "Wo hat das Bundesverwaltungsgericht seinen Sitz?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Bundesverwaltungsgericht",
+      "Leipzig",
+      "Sitz"
+    ],
+    "min_sources": 1,
+    "category": "Gerichtsbarkeit"
+  },
+  {
+    "id": 5,
+    "skill": "verwaltungsprozessrecht",
+    "question": "Welche Rolle spielen die Oberverwaltungsgerichte in der Verwaltungsgerichtsbarkeit?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Oberverwaltungsgerichte",
+      "Verwaltungsgerichtsbarkeit",
+      "Instanz"
+    ],
+    "min_sources": 1,
+    "category": "Gerichtsbarkeit"
+  },
+  {
+    "id": 6,
+    "skill": "verwaltungsprozessrecht",
+    "question": "Wie kann die Errichtung oder Aufhebung eines Verwaltungsgerichts erfolgen?",
+    "expected_norms": [
+      "§ 3 Abs. 1 Nr. 1 VwGO"
+    ],
+    "expected_keywords": [
+      "Errichtung",
+      "Aufhebung",
+      "Verwaltungsgericht"
+    ],
+    "min_sources": 1,
+    "category": "Gerichtsorganisation"
+  },
+  {
+    "id": 7,
+    "skill": "verwaltungsprozessrecht",
+    "question": "Welche Bedeutung hat die Unabhängigkeit der Verwaltungsgerichte für die Rechtsprechung?",
+    "expected_norms": [
+      "§ 1 VwGO"
+    ],
+    "expected_keywords": [
+      "Unabhängigkeit",
+      "Verwaltungsgerichte",
+      "Rechtsprechung"
+    ],
+    "min_sources": 1,
+    "category": "Gerichtsbarkeit"
+  },
+  {
+    "id": 8,
+    "skill": "verwaltungsprozessrecht",
+    "question": "Wie werden die Gerichtsbezirke der Verwaltungsgerichte abgegrenzt?",
+    "expected_norms": [
+      "§ 3 Abs. 1 Nr. 3 VwGO"
+    ],
+    "expected_keywords": [
+      "Abgrenzung",
+      "Gerichtsbezirke",
+      "Verwaltungsgerichte"
+    ],
+    "min_sources": 1,
+    "category": "Gerichtsorganisation"
+  },
+  {
+    "id": 9,
+    "skill": "verwaltungsprozessrecht",
+    "question": "Welche Funktion hat das Bundesverwaltungsgericht in der Verwaltungsgerichtsbarkeit?",
+    "expected_norms": [
+      "§ 2 VwGO"
+    ],
+    "expected_keywords": [
+      "Bundesverwaltungsgericht",
+      "Verwaltungsgerichtsbarkeit",
+      "Rechtsprechung"
+    ],
+    "min_sources": 1,
+    "category": "Gerichtsbarkeit"
+  },
+  {
+    "id": 10,
+    "skill": "verwaltungsprozessrecht",
+    "question": "Wie kann die Zuweisung einzelner Sachgebiete an ein Verwaltungsgericht für die Bezirke mehrerer Verwaltungsgerichte erfolgen?",
+    "expected_norms": [
+      "§ 3 Abs. 1 Nr. 4 VwGO"
+    ],
+    "expected_keywords": [
+      "Zuweisung",
+      "Sachgebiete",
+      "Verwaltungsgerichte"
+    ],
+    "min_sources": 1,
+    "category": "Gerichtsorganisation"
+  }
+]

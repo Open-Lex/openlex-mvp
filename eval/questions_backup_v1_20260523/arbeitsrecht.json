@@ -1,0 +1,153 @@
+[
+  {
+    "id": 1,
+    "skill": "arbeitsrecht",
+    "question": "Was sind die wesentlichen Pflichten eines Arbeitnehmers und eines Arbeitgebers im Rahmen eines Arbeitsvertrags?",
+    "expected_norms": [
+      "§ 611a"
+    ],
+    "expected_keywords": [
+      "Arbeitsvertrag",
+      "Vergütung",
+      "Arbeitnehmer"
+    ],
+    "min_sources": 2,
+    "category": "arbeitsvertrag"
+  },
+  {
+    "id": 2,
+    "skill": "arbeitsrecht",
+    "question": "Inwiefern kann ein Arbeitgeber sein Weisungsrecht gegenüber einem Arbeitnehmer ausüben?",
+    "expected_norms": [
+      "§ 611a"
+    ],
+    "expected_keywords": [
+      "Weisungsrecht",
+      "Arbeitnehmer",
+      "Weisungsgebundenheit"
+    ],
+    "min_sources": 1,
+    "category": "weisungsrecht"
+  },
+  {
+    "id": 3,
+    "skill": "arbeitsrecht",
+    "question": "Was verbietet § 612a BGB und welche Rechtsfolgen ergeben sich daraus?",
+    "expected_norms": [
+      "§ 612a"
+    ],
+    "expected_keywords": [
+      "Maßregelungsverbot",
+      "Rechte",
+      "Arbeitnehmer"
+    ],
+    "min_sources": 1,
+    "category": "maßregelungsverbot"
+  },
+  {
+    "id": 4,
+    "skill": "arbeitsrecht",
+    "question": "Wie unterscheidet sich ein Arbeitsvertrag von einem Dienstvertrag?",
+    "expected_norms": [
+      "§ 611a"
+    ],
+    "expected_keywords": [
+      "Arbeitsvertrag",
+      "Weisungsgebundenheit",
+      "Arbeitnehmer"
+    ],
+    "min_sources": 2,
+    "category": "vertragstypen"
+  },
+  {
+    "id": 5,
+    "skill": "arbeitsrecht",
+    "question": "Was bedeutet persönliche Abhängigkeit im Rahmen eines Arbeitsvertrags?",
+    "expected_norms": [
+      "§ 611a"
+    ],
+    "expected_keywords": [
+      "Arbeitnehmer",
+      "Weisungsgebundenheit",
+      "Arbeitsverhältnis"
+    ],
+    "min_sources": 1,
+    "category": "abhängigkeit"
+  },
+  {
+    "id": 6,
+    "skill": "arbeitsrecht",
+    "question": "Inwiefern kann ein Arbeitnehmer seine Rechte gegenüber seinem Arbeitgeber geltend machen?",
+    "expected_norms": [
+      "§ 612a BGB"
+    ],
+    "expected_keywords": [
+      "Rechte",
+      "Arbeitnehmer",
+      "Maßregelungsverbot"
+    ],
+    "min_sources": 1,
+    "category": "rechtewahrnehmung"
+  },
+  {
+    "id": 7,
+    "skill": "arbeitsrecht",
+    "question": "Was sind die Auswirkungen einer Benachteiligung eines Arbeitnehmers durch den Arbeitgeber?",
+    "expected_norms": [
+      "§ 612a BGB"
+    ],
+    "expected_keywords": [
+      "Benachteiligung",
+      "Maßregelungsverbot",
+      "Rechte"
+    ],
+    "min_sources": 1,
+    "category": "benachteiligung"
+  },
+  {
+    "id": 8,
+    "skill": "arbeitsrecht",
+    "question": "Wie kann ein Arbeitnehmer feststellen, ob er weisungsgebunden ist oder nicht?",
+    "expected_norms": [
+      "§ 611a BGB"
+    ],
+    "expected_keywords": [
+      "Weisungsgebundenheit",
+      "Arbeitnehmer",
+      "Fremdbestimmung"
+    ],
+    "min_sources": 1,
+    "category": "weisungsgebundenheit"
+  },
+  {
+    "id": 9,
+    "skill": "arbeitsrecht",
+    "question": "Was sind die Pflichten eines Arbeitgebers im Hinblick auf die Gewährung der vereinbarten Vergütung?",
+    "expected_norms": [
+      "§ 611 BGB"
+    ],
+    "expected_keywords": [
+      "Vergütung",
+      "Arbeitgeber",
+      "Dienstvertrag"
+    ],
+    "min_sources": 1,
+    "category": "vergütung"
+  },
+  {
+    "id": 10,
+    "skill": "arbeitsrecht",
+    "question": "Inwiefern kann ein Arbeitsvertrag die Rechte und Pflichten der Vertragsparteien regeln?",
+    "expected_norms": [
+      "§ 611 BGB",
+      "§ 611a BGB"
+    ],
+    "expected_keywords": [
+      "Arbeitsvertrag",
+      "Rechte",
+      "Pflichten"
+    ],
+    "min_sources": 2,
+    "category": "arbeitsvertrag"
+  }
+]

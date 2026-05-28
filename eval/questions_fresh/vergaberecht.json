@@ -1,0 +1,68 @@
+[
+  {
+    "question": "Eine Gemeinde vergibt den Auftrag zur Straßenreinigung an ihre hundertprozentige Tochtergesellschaft, ohne eine Ausschreibung durchzuführen. Die Tochtergesellschaft erbringt die Leistung vollständig für die Gemeinde und wird zu 100 % von dieser kontrolliert. Ist diese Vergabe zulässig gemäß § 108 GWB oder liegt ein Verstoß gegen Ausschreibungsvorschriften vor?",
+    "expected_norms": [
+      "§ 108 GWB",
+      "§ 107 GWB"
+    ],
+    "expected_keywords": [
+      "Inhouse-Vergabe",
+      "Kontrolliertes Unternehmen",
+      "Wettbewerbsaufruf entfällt",
+      "Wesentliche Aktivitäten"
+    ]
+  },
+  {
+    "question": "Eine Landesbehörde schreibt einen Lieferauftrag (Auftragswert 180.000 Euro netto) im Rahmen eines offenen Verfahrens aus. Ein Bieter reicht sein Angebot erst drei Tage nach Ablauf der Bewerbungsfrist ein. Die Behörde lehnt dieses Angebot ab. Ist diese Ablehnung nach § 56 VgV zwingend erforderlich oder hat die Behörde Ermessen?",
+    "expected_norms": [
+      "§ 56 VgV",
+      "§ 24 VgV"
+    ],
+    "expected_keywords": [
+      "Ausschlussgrund",
+      "Zu späte Abgabe",
+      "Formale Anforderungen",
+      "Ermessensspielraum"
+    ]
+  },
+  {
+    "question": "Eine Universität vergibt einen IT-Leistungsauftrag mit dem Zuschlagskriterium ‚wirtschaftlichstes Angebot'. Sie gewichtet dabei zu 60 % den Preis und zu 40 % die technische Qualität. Anbieter A hat das günstigste Angebot, aber schlechtere Qualität; Anbieter B hat höheren Preis, aber überlegene Qualität. Die Universität erteilt B den Zuschlag. Muss die Gewichtung der Zuschlagskriterien nach § 127 GWB zuvor bekannt gemacht werden?",
+    "expected_norms": [
+      "§ 127 GWB",
+      "§ 41 VgV"
+    ],
+    "expected_keywords": [
+      "Zuschlagskriterien",
+      "Transparenzpflicht",
+      "Gewichtung",
+      "Bekanntmachung in der Ausschreibung"
+    ]
+  },
+  {
+    "question": "Eine Stadt schreibt einen Dienstleistungsauftrag im Beschränkten Verfahren aus und erhält 15 Bewerbungen. Nach Prüfung der Eignungskriterien erfüllen 8 Unternehmen die Anforderungen. Die Ausschreibungsunterlagen sehen vor, dass 5 Unternehmen zur Angebotsabgabe aufgefordert werden. Darf die Stadt die Zahl nach § 28 VgV reduzieren und wenn ja, unter welchen Voraussetzungen?",
+    "expected_norms": [
+      "§ 28 VgV",
+      "§ 19 VgV"
+    ],
+    "expected_keywords": [
+      "Beschränktes Verfahren",
+      "Mindestanzahl",
+      "Verhältnismäßigkeit",
+      "Vorhersehbarkeit"
+    ]
+  },
+  {
+    "question": "Ein Auftraggeber startet eine Ausschreibung für Bauleistungen und setzt eine Frist von 10 Tagen für die Abgabe von Angeboten. Mehrere Bieter rügen, dass die Frist zu kurz ist und verlangen deren Verlängerung auf 21 Tage (§ 30 VgV). Der Auftraggeber lehnt dies ab. Welche Vorgaben zur Angebotsfrist gelten nach § 30 Abs. 3 VgV und kann eine Verkürzung zulässig sein?",
+    "expected_norms": [
+      "§ 30 VgV",
+      "§ 7 VgV"
+    ],
+    "expected_keywords": [
+      "Angebotsfrist",
+      "Standardfrist",
+      "Verkürzung",
+      "Gründe für Ausnahmen",
+      "Elektronische Übermittlung"
+    ]
+  }
+]

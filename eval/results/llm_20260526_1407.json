@@ -1,0 +1,131 @@
+[
+  {
+    "skill": "kommunalrecht",
+    "n_questions": 5,
+    "avg_score": 77.2,
+    "hallucination_rate": 20.0,
+    "worst_score": 56.9,
+    "best_score": 92.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Der Stadtrat einer NRW-Gemeinde möchte eine Satzung über die Erhebung von Elternbeiträgen für Kindertagesstätten erlassen. Welche Voraussetzungen muss die Gemeinde bei der Satzungsgebung beachten, und welche Grenzen setzt die Gemeindeordnung?",
+        "category": "Satzungsrecht",
+        "score": 81.2,
+        "answer_excerpt": "# Satzungsgebung für Elternbeiträge in Kindertagesstätten (NRW)\n\n## Rechtliche Grundlagen und Voraussetzungen\n\nDie Gemeinde kann Satzungen nur auf Basis einer gesetzlichen Ermächtigung erlassen. Für E",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 18.6
+      },
+      {
+        "id": 2,
+        "question": "Eine Gemeinde will eine benachbarte kleinere Gemeinde eingemeindern. Die betroffene Gemeinde ist dagegen. Welche Rechte hat die einzugemeindende Gemeinde, und wie schützt Art. 28 GG die kommunale Selbstverwaltung?",
+        "category": "Selbstverwaltungsgarantie",
+        "score": 88.2,
+        "answer_excerpt": "# Rechte bei Eingemeindung und Schutz durch Art. 28 GG\n\n## Schutz durch Art. 28 Abs. 2 GG\n\nArt. 28 Abs. 2 GG garantiert der Gemeinde das Recht, „alle Angelegenheiten der örtlichen Gemeinschaft im Rahm",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.8
+      },
+      {
+        "id": 3,
+        "question": "Der Bürgermeister einer NRW-Gemeinde will einen Vertrag über 500.000 Euro abschließen, ohne den Rat zu befragen. Welche Kompetenzen hat der Bürgermeister gegenüber dem Rat bei der Vertretung der Gemeinde, und wann ist eine Ratsentscheidung erforderlich?",
+        "category": "Organkompetenz",
+        "score": 66.8,
+        "answer_excerpt": "# Kompetenzen des Bürgermeisters und Ratsentscheidungspflicht in NRW\n\nBasierend auf den bereitgestellten Quellen können spezifische Regelungen zur Vertragskompetenz des Bürgermeisters einer NRW-Gemein",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.33,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.2
+      },
+      {
+        "id": 4,
+        "question": "Eine Gemeinde erhebt Grundsteuer B. Der Eigentümer eines Grundstücks hält den Hebesatz für rechtswidrig hoch. Welche Befugnis hat die Gemeinde zur Festsetzung von Hebesätzen, und welche rechtlichen Grenzen bestehen?",
+        "category": "Kommunalfinanzen",
+        "score": 56.9,
+        "answer_excerpt": "# Befugnisse und Grenzen der Hebesatzfestsetzung durch Gemeinden\n\n## Befugnisse der Gemeinde\n\nDie bereitgestellten Quellen enthalten keine spezifischen Regelungen zur Hebesatzfestsetzung bei der Grund",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": true,
+          "hallucination_examples": [
+            "Die Behauptung einer 'Obergrenze des Hebesatzes' im Grundsteuergesetz wird in den Quellen nicht belegt",
+            "Die Aussage zu 'gesetzlichen Obergrenzen' ist nicht in den bereitgestellten Quellen enthalten",
+            "Die Antwort behandelt inhaltlich ein Thema (Grundsteuer-Hebesätze), das in den Quellen überhaupt nicht vorkommt"
+          ],
+          "completeness": 2,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.3
+      },
+      {
+        "id": 5,
+        "question": "Die Bezirksregierung beanstandet einen Beschluss des Gemeinderats einer NRW-Gemeinde als rechtswidrig. Welche Aufsichtsmittel stehen der Kommunalaufsicht zur Verfügung, und was unterscheidet Rechtsaufsicht von Fachaufsicht?",
+        "category": "Kommunalaufsicht",
+        "score": 92.8,
+        "answer_excerpt": "# Aufsichtsmittel der Kommunalaufsicht in NRW\n\nLeider enthalten die bereitgestellten Quellen keine direkten Informationen zu den Aufsichtsmitteln der Kommunalaufsicht oder zur Unterscheidung zwischen ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.2
+      }
+    ],
+    "duration_s": 53.7
+  }
+]

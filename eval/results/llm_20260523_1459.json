@@ -1,0 +1,125 @@
+[
+  {
+    "skill": "migrationsrecht",
+    "n_questions": 5,
+    "avg_score": 80.8,
+    "hallucination_rate": 0.0,
+    "worst_score": 73.1,
+    "best_score": 87.4,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Mein Mandant befindet sich außerhalb seines Herkunftslandes und behauptet, wegen seiner politischen Überzeugung verfolgt zu werden. Welche Norm regelt, unter welchen Voraussetzungen ihm die Flüchtlingseigenschaft zuerkannt wird?",
+        "category": "Flüchtlingsstatus",
+        "score": 81.9,
+        "answer_excerpt": "# Regelung der Flüchtlingseigenschaft bei politischer Verfolgung\n\nDie Flüchtlingseigenschaft bei politischer Verfolgung wird primär durch das **Asylgesetz (AsylG)** geregelt [Quelle 2, 4].\n\n## Grundvo",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 20.1
+      },
+      {
+        "id": 2,
+        "question": "Ein Ausländer wird wegen Verletzung von Menschenrechten in seinem Herkunftsland gefährdet. Unter welcher Norm kann ihm subsidiärer Schutz gewährt werden, und welche schwerwiegenden Gründe führen zu einem Ausschluss?",
+        "category": "Subsidiärer Schutz",
+        "score": 87.4,
+        "answer_excerpt": "# Subsidiärer Schutz und Ausschlussbestimmungen\n\n## Norm für subsidiären Schutz\n\nSubsidiärer Schutz wird gemäß **§ 4 Abs. 1 AsylG** gewährt [Quellen 2, 3]. Ein Ausländer ist subsidiär Schutzberechtigt",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.3
+      },
+      {
+        "id": 3,
+        "question": "Welche Behörde ist in Deutschland für die Entscheidung über Asylanträge zuständig, und welche gesetzliche Grundlage regelt die Aufgaben des Bundesamts für Migration und Flüchtlinge nach dem AsylG?",
+        "category": "Verfahrenszuständigkeit",
+        "score": 78.5,
+        "answer_excerpt": "# Zuständigkeit für Asylanträge in Deutschland\n\n## Zuständige Behörde\n\nDas **Bundesamt für Migration und Flüchtlinge (Bundesamt)** ist in Deutschland für die Entscheidung über Asylanträge zuständig. [",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.9
+      },
+      {
+        "id": 4,
+        "question": "Ein Ausländer wird wegen Sexualdelikt gemäß Strafgesetzbuch verurteilt. Muss das Gericht das Bundesamt darüber unterrichten und wenn ja, unter welcher Norm?",
+        "category": "Datenaustausch und Strafverfahren",
+        "score": 73.1,
+        "answer_excerpt": "# Unterrichtungspflicht bei Sexualdelikten\n\nBasierend auf den bereitgestellten Quellen lässt sich folgende Antwort geben:\n\n## Unterrichtung des Bundesamtes\n\nJa, das Gericht muss das Bundesamt unterric",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.3
+      },
+      {
+        "id": 5,
+        "question": "Ein anerkannter Flüchtling reist in sein Herkunftsland ein. Welche Norm ermöglicht es öffentlichen Stellen, dies dem Bundesamt mitzuteilen, damit eine Überprüfung des Schutzstatus erfolgen kann?",
+        "category": "Widerruf und Rücknahme",
+        "score": 82.9,
+        "answer_excerpt": "# Rechtliche Grundlage für Mitteilung von Herkunftslandreisen\n\nDie relevante Norm ist **§ 47b AufenthG (Aufenthaltsgesetz)** [Quelle 8], der in Verbindung mit **§ 8 Absatz 1c des Asylgesetzes** [Quell",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 14.4
+      }
+    ],
+    "duration_s": 77.4
+  }
+]

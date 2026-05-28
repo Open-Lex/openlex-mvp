@@ -1,0 +1,121 @@
+[
+  {
+    "skill": "grundrechte",
+    "n_questions": 5,
+    "avg_score": 51.6,
+    "hallucination_rate": 0.0,
+    "worst_score": 34.2,
+    "best_score": 73.0,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Polizist nimmt einem Demonstranten das Megafon ab, um eine Störung der öffentlichen Ordnung zu verhindern. Verletzt dies das Recht auf freie Meinungsäußerung?",
+        "category": "Meinungsfreiheit",
+        "score": 34.2,
+        "answer_excerpt": "# Rechtliche Bewertung der Megafon-Wegnahme\n\n## Grundrechtlicher Schutz\n\nDie Wegnahme des Megafons berührt grundsätzlich das **Recht auf freie Meinungsäußerung** gemäß Art. 5 Abs. 1 GG [Quelle 3]. Die",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 21.2
+      },
+      {
+        "id": 2,
+        "question": "Ein Arbeitnehmer wird wegen seines Alters nicht zu einem Vorstellungsgespräch eingeladen. Ist dies ein Verstoß gegen das Diskriminierungsverbot?",
+        "category": "Gleichbehandlung",
+        "score": 73.0,
+        "answer_excerpt": "# Beantwortung der Frage\n\nJa, die Nichteinladung eines Arbeitnehmers zu einem Vorstellungsgespräch aufgrund seines Alters stellt einen **Verstoß gegen das Diskriminierungsverbot** dar.\n\n## Rechtliche ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 18.2
+      },
+      {
+        "id": 3,
+        "question": "Ein Ehepaar möchte adoptieren, aber die Adoption wird abgelehnt, weil sie nicht der traditionellen Rollenverteilung entsprechen. Verletzt dies das Recht auf Gleichbehandlung?",
+        "category": "Gleichbehandlung",
+        "score": 55.9,
+        "answer_excerpt": "# Rechtliche Bewertung: Ablehnung einer Adoption wegen nicht-traditioneller Rollenverteilung\n\n## Verletzung des Gleichbehandlungsgrundsatzes\n\nEine Ablehnung einer Adoption **allein wegen einer nicht-t",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 14.3
+      },
+      {
+        "id": 4,
+        "question": "Ein Student wird von der Universität wegen seiner politischen Ansichten exmatrikuliert. Ist dies ein Verstoß gegen die Meinungsfreiheit?",
+        "category": "Meinungsfreiheit",
+        "score": 47.6,
+        "answer_excerpt": "# Rechtliche Bewertung der Exmatrikulation wegen politischer Ansichten\n\n## Grundsätzlicher Verstoß gegen die Meinungsfreiheit\n\nEine Exmatrikulation allein wegen politischer Ansichten stellt **grundsät",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 15.5
+      },
+      {
+        "id": 5,
+        "question": "Ein Unternehmen verlangt von seinen Mitarbeitern, dass sie ihre sozialen Medien-Profile offenlegen. Verletzt dies das Recht auf informationelle Selbstbestimmung?",
+        "category": "Datenschutz",
+        "score": 47.1,
+        "answer_excerpt": "# Rechtliche Bewertung zur Offenlegung von Social-Media-Profilen\n\n## Grundsätzliche Rechtslage\n\nDas **Recht auf informationelle Selbstbestimmung** ist verfassungsrechtlich durch **Art. 2 Abs. 1 GG in ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.4
+      }
+    ],
+    "duration_s": 88.1
+  }
+]

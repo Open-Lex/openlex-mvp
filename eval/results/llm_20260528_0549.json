@@ -1,0 +1,292 @@
+[
+  {
+    "skill": "ki_recht",
+    "n_questions": 12,
+    "avg_score": 65.6,
+    "hallucination_rate": 8.3,
+    "worst_score": 39.8,
+    "best_score": 90.8,
+    "questions": [
+      {
+        "id": null,
+        "question": "Unser Unternehmen entwickelt ein KI-System zur biometrischen Gesichtserkennung im öffentlichen Raum zur Echtzeit-Überwachung. Ist das nach dem EU AI Act erlaubt?",
+        "category": "",
+        "score": 56.8,
+        "answer_excerpt": "# Beurteilung: Biometrische Echtzeit-Gesichtserkennung im öffentlichen Raum\n\n**Nein, Ihr System ist nach dem EU AI Act nicht erlaubt.**\n\n## Verbotenes System gemäß Art. 5 EU-KI-VO\n\nIhr geplantes KI-Sy",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.25,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.9
+      },
+      {
+        "id": null,
+        "question": "Unter welchen Voraussetzungen gilt ein KI-System gemäß Artikel 6 des EU AI Act als Hochrisiko-System, und welche Pflichten entstehen daraus?",
+        "category": "",
+        "score": 60.8,
+        "answer_excerpt": "# Hochrisiko-KI-Systeme nach Artikel 6 EU AI Act\n\n## Voraussetzungen für die Einstufung als Hochrisiko-System\n\nNach [Quelle 7, Artikel 6] gilt ein KI-System als Hochrisiko-System, wenn zwei Bedingunge",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.1
+      },
+      {
+        "id": null,
+        "question": "Unser Hochrisiko-KI-System lernt nach dem Inverkehrbringen kontinuierlich dazu. Welche spezifischen Pflichten bestehen hinsichtlich Monitoring und Meldepflichten nach dem AI Act?",
+        "category": "",
+        "score": 70.8,
+        "answer_excerpt": "# Monitoring- und Meldepflichten für Hochrisiko-KI-Systeme nach dem AI Act\n\n## Post-Market Monitoring (Artikel 72)\n\nAnbieter von Hochrisiko-KI-Systemen müssen ein **System zur Beobachtung nach dem Inv",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.7
+      },
+      {
+        "id": null,
+        "question": "Wir haben festgestellt, dass unser KI-System ein erhebliches Risiko darstellt. Welche Pflichten bestehen nach dem AI Act für Anbieter bei schwerwiegenden Vorfällen?",
+        "category": "",
+        "score": 65.8,
+        "answer_excerpt": "# Pflichten bei schwerwiegenden Vorfällen nach dem AI Act\n\n## Meldepflicht gemäß Artikel 73 EU-KI-VO\n\nAnbieter von Hochrisiko-KI-Systemen sind verpflichtet, schwerwiegende Vorfälle **unverzüglich** de",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.5
+      },
+      {
+        "id": null,
+        "question": "Welche Anforderungen bestehen bezüglich der menschlichen Überwachung von Hochrisiko-KI-Systemen nach Art. 14 KI-VO?",
+        "category": "",
+        "score": 90.8,
+        "answer_excerpt": "# Anforderungen zur menschlichen Überwachung nach Art. 14 KI-VO\n\n## Grundlegende Anforderungen\n\nNach **Artikel 14 EU-KI-VO** müssen Hochrisiko-KI-Systeme so konzipiert und entwickelt werden, dass sie ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.1
+      },
+      {
+        "id": null,
+        "question": "Ein KI-System wird in einem Bewerbungsverfahren eingesetzt, um Kandidaten zu ranken. Welche Anforderungen stellt der AI Act an Transparenz und Dokumentation?",
+        "category": "",
+        "score": 65.8,
+        "answer_excerpt": "# Anforderungen des AI Act an Transparenz und Dokumentation für KI-Bewerbungssysteme\n\n## Risikoklassifizierung\n\nEin KI-System für Bewerbungsverfahren fällt unter die **Hochrisiko-Kategorie** gemäß [Qu",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.2
+      },
+      {
+        "id": null,
+        "question": "Was sind nach dem EU AI Act die Unterschiede zwischen verbotenen KI-Systemen (Art. 5), Hochrisiko-Systemen (Art. 6) und KI-Systemen mit begrenztem Risiko?",
+        "category": "",
+        "score": 61.8,
+        "answer_excerpt": "# Unterschiede zwischen verbotenen, Hochrisiko- und KI-Systemen mit begrenztem Risiko nach EU AI Act\n\n## Verbotene KI-Systeme (Art. 5)\n\nNach **Artikel 5 AI Act** sind bestimmte KI-Praktiken grundsätzl",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.6,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.5
+      },
+      {
+        "id": null,
+        "question": "Welche Pflichten hat ein Anbieter eines KI-Systems beim Inverkehrbringen in der EU nach Art. 16 ff. KI-VO?",
+        "category": "",
+        "score": 90.8,
+        "answer_excerpt": "# Pflichten von Anbietern von KI-Systemen beim Inverkehrbringen nach Art. 16 ff. KI-VO\n\n## Art. 16 – Kernpflichten der Anbieter\n\nNach **Art. 16 KI-VO** haben Anbieter von Hochrisiko-KI-Systemen folgen",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.3
+      },
+      {
+        "id": null,
+        "question": "Was sind General-Purpose AI (GPAI) Modelle nach dem EU AI Act und welche besonderen Regeln gelten für systemische Risiken?",
+        "category": "",
+        "score": 60.8,
+        "answer_excerpt": "# General-Purpose AI (GPAI) Modelle und systemische Risiken nach dem EU AI Act\n\n## Definition von GPAI-Modellen\n\nNach der KI-Verordnung (EU) 2024/1689 sind General-Purpose AI (GPAI) Modelle KI-Modelle",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.2
+      },
+      {
+        "id": null,
+        "question": "Ein Chatbot wird im Kundendienst eingesetzt und erweckt den Eindruck, ein Mensch zu sein. Was sagt der AI Act dazu?",
+        "category": "",
+        "score": 67.8,
+        "answer_excerpt": "# Chatbot-Einsatz ohne Offenlegung der KI-Natur nach dem AI Act\n\nDer EU AI Act regelt diese Situation durch **Artikel 50** (Transparenzpflichten) und **Artikel 5** (Verbotene Praktiken).\n\n## Artikel 5",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.5
+      },
+      {
+        "id": null,
+        "question": "Welche Sanktionen drohen bei Verstößen gegen den EU AI Act und welche Behörde ist in Deutschland zuständig?",
+        "category": "",
+        "score": 39.8,
+        "answer_excerpt": "# Sanktionen und zuständige Behörden beim EU AI Act\n\n## Sanktionsarten\n\nNach **Artikel 99 EU-KI-VO (2024/1689)** erlassen die Mitgliedstaaten Vorschriften für Sanktionen bei Verstößen gegen die Verord",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": true,
+          "hallucination_examples": [
+            "Die Behauptung, dass die Bundesnetzagentur (BNetzA) und Landesgewerbeämter in Deutschland als Marktüberwachungsbehörden zuständig sind, wird durch die Quellen NICHT gestützt. Quelle 3 erwähnt nur abstrakt 'nationale Behörden', nennt aber keine konkreten deutschen Behörden.",
+            "Die Antwort endet abrupt und unvollständig mitten im Satz bei 'Artikel 100', was den Eindruck erweckt, dass wichtige Informationen fehlen oder die Antwort fehlerhaft abgeschlossen wurde."
+          ],
+          "completeness": 5,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.5,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.8
+      },
+      {
+        "id": null,
+        "question": "Was versteht der EU AI Act unter einem 'KI-System'? Wann liegt kein KI-System vor, sondern klassische Software?",
+        "category": "",
+        "score": 55.8,
+        "answer_excerpt": "# Definition von KI-Systemen im EU AI Act\n\n## Definition eines KI-Systems\n\nNach **Artikel 3 EU-KI-VO (EU 2024/1689)** ist ein „KI-System\" ein **maschinengestütztes System, das für einen in unterschied",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.25,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "eu_verordnung",
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.2
+      }
+    ],
+    "duration_s": 115.7
+  }
+]

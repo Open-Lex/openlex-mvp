@@ -1,0 +1,590 @@
+[
+  {
+    "skill": "gewerblicher_rechtsschutz",
+    "n_questions": 5,
+    "avg_score": 64.7,
+    "hallucination_rate": 0.0,
+    "worst_score": 51.1,
+    "best_score": 97.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Kann ein Patent für eine Erfindung erteilt werden, die gegen die öffentliche Ordnung oder die guten Sitten verstößt?",
+        "category": "Patentverfahren",
+        "score": 51.1,
+        "answer_excerpt": "# Antwort\n\n**Nein**, ein Patent kann **nicht** für eine Erfindung erteilt werden, die gegen die öffentliche Ordnung oder die guten Sitten verstößt.\n\n## Rechtliche Grundlage\n\nNach **§ 2 Abs. 1 Patentge",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 20.5
+      },
+      {
+        "id": 2,
+        "question": "Welche Anforderungen müssen Erfindungen erfüllen, um patentierbar zu sein?",
+        "category": "Patentanforderungen",
+        "score": 97.8,
+        "answer_excerpt": "# Anforderungen an die Patentierbarkeit von Erfindungen\n\nGemäß **§ 1 Patentgesetz** müssen Erfindungen **drei kumulative Voraussetzungen** erfüllen, um patentierbar zu sein [Quelle 2, 3, 4]:\n\n## 1. Ne",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.4
+      },
+      {
+        "id": 3,
+        "question": "Kann der menschliche Körper oder ein Teil davon patentiert werden?",
+        "category": "Biopatentrecht",
+        "score": 59.4,
+        "answer_excerpt": "# Patentierbarkeit des menschlichen Körpers\n\n**Grundsätzliches Verbot:**\n\nNein, der menschliche Körper oder seine Teile können **grundsätzlich nicht patentiert** werden. Nach **§ 1a Abs. 1 Patentgeset",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 13.2
+      },
+      {
+        "id": 4,
+        "question": "Was sind die Folgen, wenn eine Erfindung gegen die öffentliche Ordnung oder die guten Sitten verstößt?",
+        "category": "Patentverfahren",
+        "score": 59.4,
+        "answer_excerpt": "# Folgen eines Verstoßes gegen die öffentliche Ordnung oder gute Sitten\n\n## Hauptfolge: Ausschluss vom Schutz\n\nWenn eine Erfindung gegen die öffentliche Ordnung oder die guten Sitten verstößt, hat die",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.33,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 13.2
+      },
+      {
+        "id": 5,
+        "question": "Wie werden Patente für Erfindungen im Bereich der Biotechnologie erteilt?",
+        "category": "Biopatentrecht",
+        "score": 55.9,
+        "answer_excerpt": "# Patenterteilung für biotechnologische Erfindungen\n\n## Grundsätzliche Voraussetzungen\n\nFür biotechnologische Erfindungen gelten gemäß **§ 1 Patentgesetz (PatG)** dieselben Grundvoraussetzungen wie fü",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.8
+      }
+    ],
+    "duration_s": 76.6
+  },
+  {
+    "skill": "strafverfahrensrecht",
+    "n_questions": 5,
+    "avg_score": 64.1,
+    "hallucination_rate": 0.0,
+    "worst_score": 47.6,
+    "best_score": 82.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Angeklagter wird wegen mehrerer Straftaten angeklagt, die vor verschiedenen Gerichten anhängig sind. Wie können diese Verfahren verbunden werden?",
+        "category": "Verfahrensverbund",
+        "score": 54.2,
+        "answer_excerpt": "# Verbindung von Verfahren bei verschiedenen Gerichten\n\nWenn ein Angeklagter wegen mehrerer Straftaten vor verschiedenen Gerichten angeklagt ist, gibt es folgende Möglichkeiten der Verfahrensverbindun",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 14.9
+      },
+      {
+        "id": 2,
+        "question": "Was ist der Begriff des Zusammenhanges im Rahmen der Strafprozessordnung?",
+        "category": "Zusammenhang",
+        "score": 81.2,
+        "answer_excerpt": "# Begriff des Zusammenhanges in der Strafprozessordnung\n\nDer Begriff des Zusammenhanges ist in **§ 3 StPO** legal definiert. Nach dieser Vorschrift liegt ein Zusammenhang in zwei Fallkonstellationen v",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 11.8
+      },
+      {
+        "id": 3,
+        "question": "Ein Gericht muss entscheiden, ob es für die Verhandlung einer Strafsache zuständig ist. Welches Gesetz regelt die sachliche Zuständigkeit der Gerichte?",
+        "category": "Zuständigkeit",
+        "score": 82.2,
+        "answer_excerpt": "# Antwort\n\nDie **sachliche Zuständigkeit der Gerichte in Strafsachen** wird durch das **Gerichtsverfassungsgesetz (GVG)** geregelt.\n\n## Gesetzliche Grundlage\n\nDies ergibt sich eindeutig aus **§ 1 StPO",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 13.9
+      },
+      {
+        "id": 4,
+        "question": "Mehrere Personen werden wegen derselben Tat angeklagt. Kann das Verfahren gegen sie getrennt oder muss es verbunden werden?",
+        "category": "Verfahrensverbund",
+        "score": 55.2,
+        "answer_excerpt": "# Antwort zur Verfahrensverbindung bei mehreren Angeklagten\n\nWenn mehrere Personen wegen derselben Tat angeklagt werden, besteht **keine zwingende Verpflichtung zur Verfahrensverbindung**, jedoch die ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 11.8
+      },
+      {
+        "id": 5,
+        "question": "Ein Angeklagter wird wegen einer Straftat angeklagt, die vor einem Gericht anhängig ist, das nicht für die Verhandlung zuständig ist. Wie kann das Verfahren an ein anderes Gericht übergeben werden?",
+        "category": "Zuständigkeit",
+        "score": 47.6,
+        "answer_excerpt": "# Verfahrensübergabe an ein anderes Gericht\n\nWenn eine Sache bei einem nicht zuständigen Gericht anhängig ist, sieht die Strafprozessordnung verschiedene Mechanismen zur Übertragung vor:\n\n## Vor Begin",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 16.1
+      }
+    ],
+    "duration_s": 70.1
+  },
+  {
+    "skill": "migrationsrecht",
+    "n_questions": 5,
+    "avg_score": 67.7,
+    "hallucination_rate": 0.0,
+    "worst_score": 57.9,
+    "best_score": 81.2,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Ausländer beantragt Asyl in Deutschland, weil er in seinem Heimatland wegen seiner politischen Überzeugung verfolgt wird. Welche Rechtsstellung genießt er, wenn sein Antrag anerkannt wird?",
+        "category": "Asylrecht",
+        "score": 57.9,
+        "answer_excerpt": "# Rechtsstellung eines anerkannten Asylberechtigten\n\nWenn der Asylantrag eines Ausländers aufgrund politischer Verfolgung in seinem Heimatland anerkannt wird, genießt er eine klar definierte Rechtsste",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 15.8
+      },
+      {
+        "id": 2,
+        "question": "Ein Asylberechtigter hat Anspruch auf eine günstigere Rechtsstellung als die im Abkommen über die Rechtsstellung der Flüchtlinge vorgesehen. Welche Vorschriften bleiben unberührt?",
+        "category": "Rechtsstellung",
+        "score": 71.4,
+        "answer_excerpt": "# Antwort\n\nGemäß **§ 2 Absatz 2 des Asylgesetzes (AsylG)** bleiben **Vorschriften unberührt, die den Asylberechtigten eine günstigere Rechtsstellung einräumen** [Quelle 1, Quelle 2, Quelle 3].\n\n## Rec",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 13.1
+      },
+      {
+        "id": 3,
+        "question": "Ein Ausländer beantragt internationalen Schutz nach der Richtlinie 2011/95/EU. Welche Voraussetzungen muss er erfüllen, um als Flüchtling anerkannt zu werden?",
+        "category": "Flüchtlingsrecht",
+        "score": 68.4,
+        "answer_excerpt": "# Voraussetzungen für die Anerkennung als Flüchtling\n\nUm nach der Richtlinie 2011/95/EU als Flüchtling anerkannt zu werden, muss ein Ausländer gemäß den deutschen Umsetzungsvorschriften folgende **Hau",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.2
+      },
+      {
+        "id": 4,
+        "question": "Ein Asylbewerber wird in Deutschland als Flüchtling anerkannt. Welche Rechte und Pflichten hat er in Deutschland?",
+        "category": "Rechte und Pflichten",
+        "score": 59.5,
+        "answer_excerpt": "# Rechte und Pflichten eines anerkannten Flüchtlings in Deutschland\n\nDie bereitgestellten Quellen enthalten **keine direkten Informationen** zu den spezifischen Rechten und Pflichten eines in Deutschl",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 3,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.0
+      },
+      {
+        "id": 5,
+        "question": "Ein Ausländer wird in Deutschland nicht als Flüchtling anerkannt, aber hat Anspruch auf subsidiären Schutz. Welche Rechtsstellung hat er in Deutschland?",
+        "category": "Subsidiärer Schutz",
+        "score": 81.2,
+        "answer_excerpt": "# Rechtsstellung bei subsidiärem Schutz in Deutschland\n\nEin Ausländer mit **subsidiärem Schutz** gemäß **§ 4 AsylG** [Quelle 3, 4, 5] erhält eine besondere Rechtsstellung, die sich vom Flüchtlingsschu",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 4,
+          "norm_presence": 0.5,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.7
+      }
+    ],
+    "duration_s": 71.1
+  },
+  {
+    "skill": "umweltrecht",
+    "n_questions": 5,
+    "avg_score": 66.2,
+    "hallucination_rate": 0.0,
+    "worst_score": 62.5,
+    "best_score": 73.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Was ist der Zweck des Bundes-Immissionsschutzgesetzes?",
+        "category": "Zweck des Gesetzes",
+        "score": 66.2,
+        "answer_excerpt": "# Zweck des Bundes-Immissionsschutzgesetzes\n\nDer Zweck des Bundes-Immissionsschutzgesetzes (BImSchG) ist in **§ 1** umfassend geregelt:\n\n## Hauptzweck (§ 1 Abs. 1)\n\nDas Gesetz verfolgt einen **zweifac",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.5
+      },
+      {
+        "id": 2,
+        "question": "Welche Anlagen fallen unter den Geltungsbereich des Bundes-Immissionsschutzgesetzes?",
+        "category": "Geltungsbereich",
+        "score": 62.5,
+        "answer_excerpt": "# Geltungsbereich des Bundes-Immissionsschutzgesetzes\n\nNach **§ 2 Abs. 1 BImSchG** [Quelle 6] gelten die Vorschriften des Bundes-Immissionsschutzgesetzes für:\n\n## 1. Anlagen\n\nDas Gesetz erfasst grunds",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.0
+      },
+      {
+        "id": 3,
+        "question": "Was sind schädliche Umwelteinwirkungen im Sinne des Bundes-Immissionsschutzgesetzes?",
+        "category": "Begriffsbestimmungen",
+        "score": 73.8,
+        "answer_excerpt": "# Schädliche Umwelteinwirkungen im Bundes-Immissionsschutzgesetz\n\n## Legaldefinition\n\nSchädliche Umwelteinwirkungen sind nach **§ 3 Abs. 1 BImSchG** definiert als **Immissionen, die nach Art, Ausmaß o",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.7
+      },
+      {
+        "id": 4,
+        "question": "Wie werden Immissionen definiert und welche Auswirkungen können sie haben?",
+        "category": "Immissionen",
+        "score": 66.2,
+        "answer_excerpt": "# Definition und Auswirkungen von Immissionen\n\n## Definition\n\nNach dem **Bundes-Immissionsschutzgesetz (BImSchG)** werden Immissionen in **§ 3 Abs. 2** wie folgt definiert:\n\n**Immissionen** sind auf M",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 0.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 11.2
+      },
+      {
+        "id": 5,
+        "question": "Welche Rechte und Pflichten haben die Betreiber von Anlagen im Hinblick auf den Umweltschutz?",
+        "category": "Anlagenbetrieb",
+        "score": 62.5,
+        "answer_excerpt": "# Rechte und Pflichten der Anlagenbetreiber im Umweltschutz\n\n## Grundlegende Pflichten\n\nBetreiber von Anlagen unterliegen umfassenden umweltrechtlichen Pflichten:\n\n### Genehmigungsbedürftige Anlagen\n\n",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 15.0
+      }
+    ],
+    "duration_s": 66.9
+  },
+  {
+    "skill": "jugendrecht",
+    "n_questions": 5,
+    "avg_score": 0.0,
+    "hallucination_rate": 0.0,
+    "worst_score": 0,
+    "best_score": 0,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein 16-jähriger Jugendlicher begeht einen Diebstahl. Welche Voraussetzungen müssen erfüllt sein, damit er strafrechtlich verantwortlich ist?",
+        "category": "Strafrechtliche Verantwortlichkeit",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.5
+      },
+      {
+        "id": 2,
+        "question": "Ein 17-jähriger Jugendlicher wird wegen einer Körperverletzung angeklagt. Welches Gesetz findet Anwendung?",
+        "category": "Anwendungsbereich des JGG",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.4
+      },
+      {
+        "id": 3,
+        "question": "Ein 19-jähriger Heranwachsender begeht eine Straftat. Welche Ziele verfolgt das Jugendstrafrecht in diesem Fall?",
+        "category": "Ziele des Jugendstrafrechts",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.4
+      },
+      {
+        "id": 4,
+        "question": "Ein 15-jähriger Jugendlicher ist nicht strafrechtlich verantwortlich. Welche Maßnahmen können ergriffen werden, um ihn zu erziehen?",
+        "category": "Erziehung von Jugendlichen",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.4
+      },
+      {
+        "id": 5,
+        "question": "Ein 18-jähriger Heranwachsender begeht eine Straftat. Welche Rechtsfolgen können angewendet werden?",
+        "category": "Rechtsfolgen im Jugendstrafrecht",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.4
+      }
+    ],
+    "duration_s": 2.0
+  },
+  {
+    "skill": "familienrecht",
+    "n_questions": 5,
+    "avg_score": 0.0,
+    "hallucination_rate": 0.0,
+    "worst_score": 0,
+    "best_score": 0,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Ehepaar lebt in getrennten Haushalten und hat zwei minderjährige Kinder. Welches Gericht ist zuständig für die Entscheidung über das Umgangsrecht?",
+        "category": "Sorge- und Umgangsrecht",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.4
+      },
+      {
+        "id": 2,
+        "question": "Ein Gericht hat sich in einem Verfahren über die Scheidung einer Ehe für unzuständig erklärt und die Sache an ein anderes Gericht verwiesen. Was sind die Rechtsgrundlagen für diese Entscheidung?",
+        "category": "Gerichtsverfahren",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.5
+      },
+      {
+        "id": 3,
+        "question": "Ein Elternteil beantragt die Übertragung des alleinigen Sorgerechts für das Kind. Welche Voraussetzungen müssen erfüllt sein, damit das Gericht diesem Antrag stattgibt?",
+        "category": "Sorge- und Umgangsrecht",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.6
+      },
+      {
+        "id": 4,
+        "question": "Ein Ehepaar hat sich auf eine Scheidung geeinigt und möchte nun die Scheidung einreichen. Welches Gericht ist für die Entscheidung über die Scheidung zuständig?",
+        "category": "Scheidungsrecht",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.5
+      },
+      {
+        "id": 5,
+        "question": "Ein Kind wird von einem Elternteil misshandelt. Welche rechtlichen Schritte kann der andere Elternteil unternehmen, um das Kind zu schützen?",
+        "category": "Kinderschutz",
+        "score": 0.0,
+        "error": "Keine Antwort",
+        "duration_s": 0.5
+      }
+    ],
+    "duration_s": 2.5
+  }
+]

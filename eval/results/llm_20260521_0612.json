@@ -1,0 +1,126 @@
+[
+  {
+    "skill": "gewerblicher_rechtsschutz",
+    "n_questions": 5,
+    "avg_score": 87.4,
+    "hallucination_rate": 0.0,
+    "worst_score": 68.4,
+    "best_score": 97.8,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Kann ein Patent für eine Erfindung erteilt werden, die gegen die öffentliche Ordnung oder die guten Sitten verstößt?",
+        "category": "Patentverfahren",
+        "score": 89.5,
+        "answer_excerpt": "# Antwort\n\n**Nein**, ein Patent kann **nicht** für eine Erfindung erteilt werden, die gegen die öffentliche Ordnung oder die guten Sitten verstößt.\n\n## Rechtliche Grundlage\n\nNach **§ 2 Abs. 1 Patentge",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 22.5
+      },
+      {
+        "id": 2,
+        "question": "Welche Anforderungen müssen Erfindungen erfüllen, um patentierbar zu sein?",
+        "category": "Patentanforderungen",
+        "score": 97.8,
+        "answer_excerpt": "# Anforderungen an die Patentierbarkeit von Erfindungen\n\nGemäß **§ 1 Absatz 1 Patentgesetz** müssen Erfindungen drei kumulative Voraussetzungen erfüllen, um patentierbar zu sein [Quelle 2, 3, 4]:\n\n## ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.6
+      },
+      {
+        "id": 3,
+        "question": "Kann der menschliche Körper oder ein Teil davon patentiert werden?",
+        "category": "Biopatentrecht",
+        "score": 90.2,
+        "answer_excerpt": "# Patentierbarkeit des menschlichen Körpers\n\n## Grundsätzliches Verbot\n\n**Nein**, der menschliche Körper oder seine Teile können **grundsätzlich nicht patentiert werden**. Nach **§ 1a Abs. 1 Patentges",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.3
+      },
+      {
+        "id": 4,
+        "question": "Was sind die Folgen, wenn eine Erfindung gegen die öffentliche Ordnung oder die guten Sitten verstößt?",
+        "category": "Patentverfahren",
+        "score": 91.2,
+        "answer_excerpt": "# Folgen bei Verstoß gegen öffentliche Ordnung oder gute Sitten\n\nWenn eine Erfindung gegen die öffentliche Ordnung oder die guten Sitten verstößt, hat dies gravierende Rechtsfolgen:\n\n## Patentrechtlic",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 14.6
+      },
+      {
+        "id": 5,
+        "question": "Wie werden Patente für Erfindungen im Bereich der Biotechnologie erteilt?",
+        "category": "Biopatentrecht",
+        "score": 68.4,
+        "answer_excerpt": "# Patentierung biotechnologischer Erfindungen\n\n## Grundsätzliche Voraussetzungen\n\nPatente für biotechnologische Erfindungen werden nach den allgemeinen Patentierungsvoraussetzungen des **§ 1 Abs. 1 Pa",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 0.5,
+          "keyword_coverage": 0.67,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 16.9
+      }
+    ],
+    "duration_s": 84.3
+  }
+]

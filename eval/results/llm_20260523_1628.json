@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "verbraucherschutzrecht",
+    "n_questions": 5,
+    "avg_score": 75.5,
+    "hallucination_rate": 20.0,
+    "worst_score": 57.2,
+    "best_score": 82.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Unternehmer ruft die 16-jährige Maria an, um mit ihr einen Vertrag über den Kauf eines Smartphones für 800 Euro zu schließen. Der Unternehmer offenbart zu Beginn des Gesprächs weder seine Identität noch den geschäftlichen Zweck des Anrufs. Verstößt dieser Unternehmer gegen die Pflichten bei Verbraucherverträgen nach deutschem Recht? Begründen Sie anhand des geltenden BGB und erläutern Sie, welche Informationen der Anrufer zu Beginn des Gesprächs offenlegen muss.",
+        "category": "Verbraucherschutzrecht - Allgemeine Pflichten bei Verbraucherverträgen",
+        "score": 79.2,
+        "answer_excerpt": "# Rechtliche Bewertung des Verstoßes\n\nJa, der Unternehmer verstößt gegen die Pflichten bei Verbraucherverträgen nach deutschem Recht.\n\n## Verstoß gegen § 312a Abs. 1 BGB\n\nGemäß **§ 312a Abs. 1 BGB** [",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 17.8
+      },
+      {
+        "id": 2,
+        "question": "Ein Verbraucher kauft über einen Online-Shop ein Smartphone. Nach der Lieferung möchte er den Vertrag widerrufen. Welche Widerrufsfrist gilt nach § 312d BGB für Fernabsatzverträge, und welche Informationspflichten muss der Unternehmer erfüllen?",
+        "category": "Verbraucherschutzrecht / Produkthaftung",
+        "score": 78.2,
+        "answer_excerpt": "# Widerrufsfrist und Informationspflichten bei Fernabsatzverträgen\n\n## Widerrufsfrist\n\nDie bereitgestellten Quellen enthalten keine explizite Angabe der Widerrufsfrist in § 312d BGB. Jedoch wird in **",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 8.8
+      },
+      {
+        "id": 3,
+        "question": "Ein Möbelhersteller ruft einen Privathaushalt an, um ihm Möbel für die private Wohneinrichtung zu verkaufen. Bei diesem Anruf offenbart der Anrufer weder seine Identität noch den geschäftlichen Zweck des Anrufs. Anschließend wird ein Kaufvertrag geschlossen und der Verbraucher erklärt später seinen Widerruf. Bestimmen Sie, ob die Pflichten des Unternehmers aus § 312a BGB erfüllt wurden und welche Konsequenzen sich aus dem Widerruf gemäß §§ 358, 360 BGB ergeben.",
+        "category": "verbraucherschutzrecht",
+        "score": 57.2,
+        "answer_excerpt": "# Analyse der Pflichtenverletzung und Widerrufskonsequenzen\n\n## Verletzung der Pflichten aus § 312a BGB\n\nDer Möbelhersteller hat die Pflichten aus **§ 312a Abs. 1 BGB klar verletzt** [Quelle 1]. Diese",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": true,
+          "hallucination_examples": [
+            "Die Antwort verweist auf §§ 358, 360 BGB, die in den Quellen nicht vorhanden sind und nicht zitiert werden. Die Frage stellt diese Paragraphen in den Fokus, aber die gegebenen Quellen enthalten diese Normen nicht.",
+            "Die Antwort bricht abrupt ab und ist unvollständig. Sie behandelt nicht die spezifischen Konsequenzen aus §§ 358, 360 BGB, die die Frage explizit verlangt.",
+            "Die Aussage zu 'Rückgabepflichten' und 'Wertersatz' wird nur für Verbraucherbauverträge (§ 357e) erwähnt, nicht aber für den hier vorliegenden Fall des Möbelverkaufs als Fernabsatzvertrag."
+          ],
+          "completeness": 4,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 10.0
+      },
+      {
+        "id": 4,
+        "question": "Ein Anbieter eines Online-Mediendienstes speichert dynamische IP-Adressen seiner Nutzer. Stellen dynamische IP-Adressen personenbezogene Daten im Sinne der DSGVO dar, und auf welche Rechtsgrundlage kann die Speicherung gestützt werden?",
+        "category": "verbraucherschutzrecht",
+        "score": 82.5,
+        "answer_excerpt": "# Dynamische IP-Adressen als personenbezogene Daten und Rechtsgrundlagen\n\n## Status als personenbezogene Daten\n\nNach [Quelle 1] stellt die dynamische IP-Adresse, die von einem Anbieter von Online-Medi",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.75,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.3
+      },
+      {
+        "id": 5,
+        "question": "Ein Verbraucher schließt telefonisch einen Dienstleistungsvertrag mit einem Unternehmen ab. Welche besonderen Pflichten treffen den Unternehmer bei außerhalb von Geschäftsräumen geschlossenen Verträgen und welche Verbraucherrechte bestehen?",
+        "category": "Verbraucherschutzrecht - Krankenversicherung und Datenschutz",
+        "score": 80.2,
+        "answer_excerpt": "# Besondere Pflichten und Verbraucherrechte bei telefonisch geschlossenen Dienstleistungsverträgen\n\n## Pflichten des Unternehmers\n\nBei einem telefonisch geschlossenen Vertrag handelt es sich um einen ",
+        "n_chunks": 8,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 1,
+          "types_in_retrieval": [
+            "gesetz_granular"
+          ],
+          "uses_all_types": false
+        },
+        "duration_s": 8.1
+      }
+    ],
+    "duration_s": 55.4
+  }
+]

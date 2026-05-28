@@ -1,0 +1,123 @@
+[
+  {
+    "skill": "strafverfahrensrecht",
+    "n_questions": 5,
+    "avg_score": 88.7,
+    "hallucination_rate": 0.0,
+    "worst_score": 87.5,
+    "best_score": 89.5,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Angeklagter wird wegen einer Straftat verurteilt. Nach Eröffnung des Hauptverfahrens möchte er erstmals geltend machen, dass das Gericht örtlich unzuständig ist. Bis wann kann er diesen Einwand der Unzuständigkeit erheben?",
+        "category": "Gerichtsstand und Zuständigkeit",
+        "score": 89.5,
+        "answer_excerpt": "# Fristengeltung für den Unzuständigkeitseinwand nach Hauptverfahrenseröffnung\n\n## Rechtliche Regelung\n\nNach **§ 16 Abs. 1 StPO** [Quelle 1] gilt folgende Regelung:\n\nDas Gericht prüft seine örtliche Z",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 26.8
+      },
+      {
+        "id": 2,
+        "question": "Zwei zusammenhängende Strafsachen gehören einzeln zu verschiedenen Gerichten. Eine der Straftat betrifft eine besondere Strafkammer nach § 74 Abs. 2 des Gerichtsverfassungsgesetzes. Nach welcher Regelung können diese Strafsachen verbunden werden und bei welchem Gericht?",
+        "category": "Verbindung von Strafsachen",
+        "score": 87.5,
+        "answer_excerpt": "# Verbindung von Strafsachen mit besonderer Strafkammer\n\n## Rechtliche Regelung\n\nDie Verbindung zusammenhängender Strafsachen, von denen eine zur Zuständigkeit einer besonderen Strafkammer nach § 74 A",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 6,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.2
+      },
+      {
+        "id": 3,
+        "question": "Der Gerichtsstand wird durch den Ort begründet, an dem die Straftat begangen wurde. Ein Beschuldigter wird in einem anderen Bezirk ergriffen. Welche zusätzlichen Gerichtsstände sind nach StPO möglich?",
+        "category": "Örtliche Zuständigkeit",
+        "score": 89.5,
+        "answer_excerpt": "# Zusätzliche Gerichtsstände neben dem Tatort\n\nNach der StPO sind folgende weitere Gerichtsstände möglich:\n\n## 1. Gerichtsstand des Ergreifungsortes (§ 9 StPO)\nDer Gerichtsstand ist begründet bei dem ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 12.8
+      },
+      {
+        "id": 4,
+        "question": "Ein Angeklagter ist wegen mehrerer Straftaten angeklagt. Wann liegt ein Zusammenhang zwischen diesen Straftaten vor, der eine Verbindung ermöglicht?",
+        "category": "Begriff des Zusammenhangs",
+        "score": 88.5,
+        "answer_excerpt": "# Zusammenhang zwischen mehreren Straftaten\n\nNach deutschem Strafprozessrecht liegt ein Zusammenhang zwischen mehreren Straftaten vor, wenn folgende Voraussetzungen erfüllt sind:\n\n## Legale Definition",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.4
+      },
+      {
+        "id": 5,
+        "question": "Nach Eröffnung des Hauptverfahrens beantragt die Staatsanwaltschaft die Verbindung zweier bisher getrennter Strafsachen. Wer entscheidet über diesen Antrag und welche Voraussetzungen müssen erfüllt sein?",
+        "category": "Verbindung nach Hauptverfahren",
+        "score": 88.5,
+        "answer_excerpt": "# Entscheidung über Verbindung von Strafsachen nach Hauptverfahrenseröffnung\n\n## Entscheidungsbefugte\n\nNach **§ 4 Abs. 1 StPO** kann eine Verbindung zusammenhängender Strafsachen auch nach Eröffnung d",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 7,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 9.0
+      }
+    ],
+    "duration_s": 65.8
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "question": "Der Bundestag verabschiedet ein Gesetz zur Änderung des Infektionsschutzgesetzes, das Versammlungen von mehr als 5 Personen untersagt. Die Oppositionsfraktion der Grünen macht geltend, dass das Gesetz gegen Art. 8 GG (Versammlungsfreiheit) verstößt und reicht eine Klage beim BVerfG ein. Welches Verfahren ist einschlägig und welche Zulässigkeitsvoraussetzungen müssen erfüllt sein?",
+    "expected_norms": [
+      "§ 13 Nr. 6 BVerfGG",
+      "§ 76 BVerfGG",
+      "Art. 93 Abs. 1 Nr. 2 GG"
+    ],
+    "expected_keywords": [
+      "abstrakte Normenkontrolle",
+      "Organstreit",
+      "Minderheit des Bundestags",
+      "Antragsberechtigung"
+    ]
+  },
+  {
+    "question": "Eine Bürgerin wird durch ein Urteil des Bundesverwaltungsgerichts verurteilt, eine Brückenblockade zu unterlassen. Sie ist der Ansicht, dass die Gerichtsentscheidung ihre Grundrechte aus Art. 2 Abs. 1 GG verletzt und reicht beim BVerfG ein. Welches Verfahren ist zulässig und welche materiellen Anforderungen muss die Beschwerde erfüllen?",
+    "expected_norms": [
+      "§ 90 Abs. 1 BVerfGG",
+      "§ 90 Abs. 2 BVerfGG",
+      "Art. 19 Abs. 3 GG"
+    ],
+    "expected_keywords": [
+      "Verfassungsbeschwerde",
+      "Subsidiarität",
+      "Zumutbarkeit",
+      "Grundrechtsbeeinträchtigung"
+    ]
+  },
+  {
+    "question": "Der Bundesminister für Inneres und Heimat und der Bundesminister der Finanzen haben einen Streit über die Zuständigkeit für die Durchführung einer Volkszählung. Der Innenminister behauptet, dass der Finanzminister ohne seine Zustimmung keine Erhebungen durchführen darf. Welches Verfahren können die beteiligten Minister vor dem BVerfG einleiten?",
+    "expected_norms": [
+      "§ 13 Nr. 5 BVerfGG",
+      "§ 63 BVerfGG",
+      "Art. 93 Abs. 1 Nr. 1 GG"
+    ],
+    "expected_keywords": [
+      "Organstreit",
+      "Kompetenzenstreit",
+      "Träger von Staatsorganen",
+      "Kompetenzberechtigung"
+    ]
+  },
+  {
+    "question": "Ein Bundesland reicht beim BVerfG eine Klage gegen ein Bundesgesetz ein, das die Steuerverteilung zwischen Bund und Ländern neu regelt. Das Land argumentiert, dass die Regelung seine Finanzhoheit verletzt. Nach welcher Norm ist dies zulässig und welche Parteien sind beteiligt?",
+    "expected_norms": [
+      "§ 13 Nr. 7 BVerfGG",
+      "§ 68 BVerfGG",
+      "Art. 93 Abs. 1 Nr. 3a GG"
+    ],
+    "expected_keywords": [
+      "abstrakte Normenkontrolle durch Bundesländer",
+      "Bundesregierung und Bundesrat",
+      "Kompetenzkonflikt",
+      "Landesregierung"
+    ]
+  },
+  {
+    "question": "Ein Arbeitnehmer erhält eine negative Schreiben von der Arbeitsagentur und möchte dagegen vorgehen. Sein Anwalt rät ihm, sofort beim BVerfG Beschwerde einzureichen. Welche zentralen Zulässigkeitsanforderungen müssen erfüllt sein und welche Fehler sind in dieser Vorgehensweise enthalten?",
+    "expected_norms": [
+      "§ 90 Abs. 2 Satz 1 BVerfGG",
+      "§ 90 Abs. 2 Satz 2 BVerfGG",
+      "§ 92 BVerfGG"
+    ],
+    "expected_keywords": [
+      "Verfassungsbeschwerde",
+      "Subsidiarität",
+      "Ausschöpfung innerstaatlicher Rechtsbehelfe",
+      "Zulässigkeitsvoraussetzungen"
+    ]
+  }
+]

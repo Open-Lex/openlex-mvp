@@ -1,0 +1,67 @@
+[
+  {
+    "question": "Die Behörde erlässt am 15.01.2024 einen Verwaltungsakt, der dem Antragsteller am 20.01.2024 zugestellt wird. Der Antragsteller reicht am 25.02.2024 Widerspruch ein. Die Behörde lehnt den Widerspruch am 10.03.2024 ab. Kann der Antragsteller hiergegen Klage erheben, oder ist die Frist nach § 70 VwGO überschritten? Erörtern Sie die Berechnung und Auswirkungen.",
+    "expected_norms": [
+      "§ 70 VwGO",
+      "§ 58 VwGO"
+    ],
+    "expected_keywords": [
+      "Monatsfrist",
+      "Fristberechnung",
+      "Zustellung",
+      "Widerspruchsfrist"
+    ]
+  },
+  {
+    "question": "Eine Gemeinde verweigert einem Bürger die Einsicht in Verwaltungsakten mit der Begründung, dass diese vertraulich seien. Der Bürger möchte gegen diese Ablehnung vorgehen und fragt Sie, ob ein Vorverfahren erforderlich ist. Welche Anforderungen an das Widerspruchsverfahren ergeben sich aus § 68 VwGO, und muss die Gemeinde einen Abhilfebescheid erteilen?",
+    "expected_norms": [
+      "§ 68 VwGO",
+      "§ 73 VwGO"
+    ],
+    "expected_keywords": [
+      "Vorverfahren",
+      "Abhilfeantrag",
+      "Abhilfebescheid",
+      "Fristwahrung"
+    ]
+  },
+  {
+    "question": "Ein Student beantragt einstweiligen Rechtsschutz nach § 123 VwGO gegen die Exmatrikulation durch seine Universität, die zum nächsten Semester wirksam werden soll. Der Hauptsacheprozess wird voraussichtlich noch 2-3 Jahre dauern. Stellen Sie dar, welche Voraussetzungen nach § 123 Abs. 1 VwGO erfüllt sein müssen und ob die Universität einen Gegenantrag stellen kann.",
+    "expected_norms": [
+      "§ 123 Abs. 1 VwGO",
+      "§ 114 VwGO"
+    ],
+    "expected_keywords": [
+      "einstweiliger Rechtsschutz",
+      "Besorgnis der Verfassungswidrigkeit",
+      "Eilbedürftigkeit",
+      "Gegenantrag"
+    ]
+  },
+  {
+    "question": "Das Finanzamt erlässt einen Steuerbescheid. Der Steuerpflichtige reicht Widerspruch ein, worauf das Finanzamt die Beschwerdestelle mit der Sachbearbeitung beauftragt. Diese lehnt den Widerspruch ab. Ist die Klage zulässig nach § 40 Abs. 2 VwGO? Welche Voraussetzungen müssen erfüllt sein, und welche Auswirkung hat die Zuweisung an die Beschwerdestelle?",
+    "expected_norms": [
+      "§ 40 Abs. 2 VwGO",
+      "§ 41 VwGO"
+    ],
+    "expected_keywords": [
+      "Abhilfebescheid",
+      "Beschwerdestelle",
+      "Zulässigkeit der Klage",
+      "Organschaftsprinzip"
+    ]
+  },
+  {
+    "question": "Eine Ordnungsbehörde erlässt einen Verwaltungsakt, in dem sie einem Gaststättenbetreiber die sofortige Betriebseinstellung anordnet. Der Betreiber hat große wirtschaftliche Einbußen und möchte gegen den Verwaltungsakt vorgehen. Kann er gemäß § 80 Abs. 1 VwGO Klage erheben, ohne vorher ein Widerspruchsverfahren durchzuführen? Gilt dies auch nach § 80 Abs. 2 VwGO?",
+    "expected_norms": [
+      "§ 80 Abs. 1 VwGO",
+      "§ 80 Abs. 2 VwGO"
+    ],
+    "expected_keywords": [
+      "Vorverfahrenszwang",
+      "Suspensivwirkung",
+      "Ausnahmen vom Vorverfahren",
+      "Betriebseinstellung"
+    ]
+  }
+]

@@ -1,0 +1,75 @@
+[
+  {
+    "question": "Die 14-jährige Lisa besucht regelmäßig Diskotheken in ihrer Heimatstadt. Der Discotheken-Betreiber Martin lässt sie trotz geltenden Jugendschutzgesetzes bis 23 Uhr in die Disco ein und serviert ihr alkoholfreie Getränke. Welche Verstöße gegen das Jugendschutzgesetz (JMStV bzw. JSchG) liegen vor, und wer trägt die Verantwortung?",
+    "expected_norms": [
+      "§ 4 JMStV",
+      "§ 9 JSchG",
+      "§ 6 JSchG"
+    ],
+    "expected_keywords": [
+      "Aufenthaltserlaubnis",
+      "Altersgrenzen Diskotheken",
+      "Betreiberhaftung",
+      "Ordnungswidrigkeit"
+    ]
+  },
+  {
+    "question": "Das Jugendamt erhält einen anonymen Hinweis, dass der 9-jährige Tim bei seinen Eltern vernachlässigt wird. Nach einer Inaugenscheinnahme der Wohnung sieht der Mitarbeiter zwar erhebliche Mängel, die Eltern verweigern aber eine tiefergehende Untersuchung. Welche Befugnisse hat das Jugendamt gemäß SGB VIII, um die Kindeswohlgefährdung abzuklären, und unter welchen Voraussetzungen?",
+    "expected_norms": [
+      "§ 8a SGB VIII",
+      "§ 27 SGB VIII",
+      "§ 1666 BGB"
+    ],
+    "expected_keywords": [
+      "Gefährdungsmitteilung",
+      "Gewichtige Anhaltspunkte",
+      "Beratungsleistungen",
+      "Verfahrensbeteiligung"
+    ]
+  },
+  {
+    "question": "Die 17-jährige Julia möchte einen Ausbildungsvertrag unterzeichnen. Sie ist nicht geschäftsfähig, hat aber sachlich kompetente Eltern, die dem Vertrag zustimmen möchten. Wie beurteilen Sie die Geschäftsfähigkeit nach dem BGB und welche Besonderheiten gelten für Arbeitsverträge von Jugendlichen gemäß JArbSchG?",
+    "expected_norms": [
+      "§ 106 BGB",
+      "§ 1 JArbSchG",
+      "§ 8 JArbSchG"
+    ],
+    "expected_keywords": [
+      "Beschränkte Geschäftsfähigkeit",
+      "Arbeitszeit-Beschränkungen",
+      "Zustimmungsfiktion",
+      "Schutzzweck des JArbSchG"
+    ]
+  },
+  {
+    "question": "Das Jugendamt plant für den 12-jährigen Kevin, dessen Eltern sich trennen und beide ihre Erziehungsfähigkeit in Frage stellen, eine Maßnahme nach SGB VIII. Die Eltern sind nicht leistungsfähig und/oder leistungswillig. Welche Hilfen zur Erziehung können in Betracht kommen, und wie erfolgt die Leistungsgewährung gemäß § 27 ff. SGB VIII?",
+    "expected_norms": [
+      "§ 27 SGB VIII",
+      "§ 28 SGB VIII",
+      "§ 34 SGB VIII",
+      "§ 35 SGB VIII"
+    ],
+    "expected_keywords": [
+      "Hilfe zur Erziehung",
+      "Bedarfsfeststellung",
+      "Elternbeteiligung",
+      "Hilfeplan"
+    ]
+  },
+  {
+    "question": "Der 16-jährige Lukas wird von der Polizei wegen Diebstahls aufgegriffen. Die Staatsanwaltschaft erwägt Anklage. Welche besonderen Vorschriften des JGG sind zu beachten, und wie unterscheiden sich die Verfahrensprinzipien gegenüber dem Erwachsenenstrafverfahren unter Berücksichtigung des Erziehungsgedankens?",
+    "expected_norms": [
+      "§ 1 JGG",
+      "§ 45 JGG",
+      "§ 53 JGG",
+      "§ 10 JGG"
+    ],
+    "expected_keywords": [
+      "Schuldunfähigkeit",
+      "Strafunmündigkeit",
+      "Diversion",
+      "Erziehungsauftrag",
+      "Jugendrichter"
+    ]
+  }
+]

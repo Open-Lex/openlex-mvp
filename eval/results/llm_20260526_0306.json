@@ -1,0 +1,129 @@
+[
+  {
+    "skill": "wirtschaftsstrafrecht",
+    "n_questions": 5,
+    "avg_score": 91.9,
+    "hallucination_rate": 0.0,
+    "worst_score": 86.5,
+    "best_score": 98.0,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ein Softwareentwickler manipuliert absichtlich ein Bankensystem, indem er fehlerhafte Programmcodes einbaut. Dadurch werden unberechtigt Geldtransfers auf sein Konto durchgeführt. Welche Norm ist einschlägig und welche Freiheitsstrafe droht maximal?",
+        "category": "Betrugsdelikte im digitalen Raum",
+        "score": 92.2,
+        "answer_excerpt": "# Rechtliche Bewertung: Computerbetrug im Bankensystem\n\n## Einschlägige Norm\n\nDie einschlägige Bestimmung ist **§ 263a StGB (Computerbetrug)** [Quelle 1].\n\nNach § 263a Abs. 1 StGB wird mit Freiheitsst",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 9,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 17.9
+      },
+      {
+        "id": 2,
+        "question": "Ein Geschäftsführer einer GmbH stellt bei der Kreditvergabe falsche Bilanzen vor, um bessere Kreditbedingungen zu erhalten. Der Kreditgeber gründet seine Entscheidung wesentlich auf diese Unterlagen. Welche Strafvorschrift ist relevant und bis zu welcher Strafe droht?",
+        "category": "Kreditdelikte",
+        "score": 86.5,
+        "answer_excerpt": "# Strafvorschrift beim Kreditbetrug durch falsche Bilanzen\n\nDie relevante Strafvorschrift ist **§ 265b StGB (Kreditbetrug)** [Quelle 1].\n\n## Tatbestand\n\nNach § 265b Abs. 1 StGB macht sich strafbar, we",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 5,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 2,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.3
+      },
+      {
+        "id": 3,
+        "question": "Ein Unternehmer, der überschuldet ist, versteckt systematisch Vermögensbestände und führt seine Handelsbücher derart, dass seine finanzielle Lage völlig unklar wird. Kurz darauf wird über sein Vermögen das Insolvenzverfahren eröffnet. Nach welcher Vorschrift ist dieses Verhalten strafbar?",
+        "category": "Insolvenzdelikte",
+        "score": 91.2,
+        "answer_excerpt": "# Strafbarkeit des beschriebenen Verhaltens\n\nDas geschilderte Verhalten des überschuldeten Unternehmers ist nach mehreren Vorschriften strafbar:\n\n## 1. § 283 StGB - Bankrott\n\nDie **Hauptvorschrift** i",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 3,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 8.7
+      },
+      {
+        "id": 4,
+        "question": "Bei einer Subventionsantragstellung macht ein Unternehmer gegenüber der Bewilligungsbehörde unrichtige Angaben zu seinen wirtschaftlichen Verhältnissen, um eine höhere Subvention zu erhalten. Welche Strafnorm wird verletzt und wie hoch ist die maximale Freiheitsstrafe im Regelfall?",
+        "category": "Subventionsdelikte",
+        "score": 91.4,
+        "answer_excerpt": "# Antwort: Subventionsbetrug\n\n## Verletzete Strafnorm\n\nDer Unternehmer verletzt **§ 264 StGB (Subventionsbetrug)** [Quelle 1].\n\nNach § 264 Abs. 1 Nr. 1 StGB wird mit Freiheitsstrafe bis zu fünf Jahren",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 0.67,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 7.3
+      },
+      {
+        "id": 5,
+        "question": "Ein Sportler wird von einem Wettmaklunternehmen bestochen, das Ergebnis eines Bundesligaspiels zugunsten des Gegners zu beeinflussen, damit Wetten auf dieses Spiel hohe Gewinne bringen. Welche Strafvorschrift ist einschlägig und welche maximale Strafe kann verhängt werden?",
+        "category": "Sportwettdelikte",
+        "score": 98.0,
+        "answer_excerpt": "# Strafrechtliche Würdigung der Bestechung eines Sportlers\n\n## Einschlägige Strafvorschriften\n\nBei dem geschilderten Sachverhalt sind **§ 265c und § 265d StGB** einschlägig [Quelle 1, Quelle 3].\n\n**§ ",
+        "n_chunks": 12,
+        "judge": {
+          "hallucination": false,
+          "hallucination_examples": [],
+          "completeness": 8,
+          "norm_presence": 1.0,
+          "keyword_coverage": 1.0,
+          "type_diversity": 4,
+          "types_in_retrieval": [
+            "gesetz_granular",
+            "gesetz_norm",
+            "methodenwissen",
+            "urteil"
+          ],
+          "uses_all_types": true
+        },
+        "duration_s": 6.8
+      }
+    ],
+    "duration_s": 50.5
+  }
+]

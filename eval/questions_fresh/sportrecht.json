@@ -1,0 +1,72 @@
+[
+  {
+    "question": "Der Fußballverein FC Beispiel e.V. möchte seinen Trainer entlassen, da dieser wiederholt gegen die Trainingsordnung verstoßen hat. Der Trainer beruft sich darauf, dass ihm kein ordentliches Schiedsverfahren gewährt wurde. Der Verein argumentiert, dass interne Vereinsangelegenheiten nicht den Regeln der StPO unterliegen. Welche rechtlichen Anforderungen an ein Schiedsverfahren ergeben sich aus dem Vereinsrecht, und inwiefern gelten zivilprozessuale Grundsätze im Vereinsrecht?",
+    "expected_norms": [
+      "§ 34 BGB",
+      "§ 40 BGB",
+      "Satzung des Vereins"
+    ],
+    "expected_keywords": [
+      "Selbstbindungswirkung",
+      "interne Ordnungsmacht",
+      "Rechtschutzerfordernisse",
+      "natürliche Gerechtigkeit"
+    ]
+  },
+  {
+    "question": "Ein Spieler erhält einen Spielervertrag über zwei Jahre mit einer Ablöseklausel von 500.000 Euro. Nach 6 Monaten signalisiert der Spieler dem Klub, dass er lieber zu einem anderen Verein wechseln möchte und verweigert das Training. Der Klub verlangt Schadensersatz. Welche Anforderungen stellt das Sportrecht an die Gültigkeit von Transferklauseln und Vertragsstrafen bei Spielerverträgen nach § 611a BGB?",
+    "expected_norms": [
+      "§ 611a BGB",
+      "§ 134 BGB",
+      "DFB-Spielerstatut"
+    ],
+    "expected_keywords": [
+      "Arbeitsvertrag",
+      "Klauselkontrolle",
+      "Wettbewerbsbeschränkung",
+      "Ablöseclausel"
+    ]
+  },
+  {
+    "question": "Ein Athlet wird von der Nationalen Anti-Doping-Agentur (NADA) positiv auf ein verbotenes Dopingmittel getestet. Die Probe wird vom Labor bestätigt. Der Athlet argumentiert, dass die Probe fehlerhaft gesammelt wurde, weshalb das Verfahren nach dem Dopinggesetz (Gesetz gegen Doping im Sport) eingestellt werden sollte. Welche Beweisstandards und Anforderungen an die Beweissicherung gelten im Dopingverfahren?",
+    "expected_norms": [
+      "§ 4 Abs. 1 AntiDopG",
+      "§ 5 Abs. 2 AntiDopG",
+      "WADA-Code"
+    ],
+    "expected_keywords": [
+      "Dopingverstöße",
+      "B-Probe",
+      "Beweislast",
+      "Gehör"
+    ]
+  },
+  {
+    "question": "Der Deutsche Fußball-Bund (DFB) ändert einseitig seine Verbandsordnung und führt neue Lizenzierungsanforderungen ein, die mehrere Clubs nicht erfüllen können. Diese Clubs behaupten, dass die Änderung rechtswidrig ist, da sie nicht ordnungsgemäß abgestimmt wurde. Welche Kontrolldichte unterliegt die Verbandsautonomie gegenüber kartellrechtlichen Beschränkungen und Schranken der Vereinigungsfreiheit?",
+    "expected_norms": [
+      "Art. 9 GG",
+      "§ 1 GWB",
+      "§ 19 GWB"
+    ],
+    "expected_keywords": [
+      "Verbandsautonomie",
+      "Kartellrecht",
+      "Missbrauchskontrolle",
+      "wirtschaftliche Abhängigkeit"
+    ]
+  },
+  {
+    "question": "Ein Tennis-Profi schließt mit seinem Sponsor einen Vertrag, in dem der Sponsor das exklusive Recht erhält, die Markenrechte und das Bildnis des Spielers für Werbezwecke zu nutzen. Der Spieler möchte den Vertrag später beenden, da er bessere Angebote hat. Der Sponsor verlangt Schadensersatz wegen Vertragsverletzung. Welche Besonderheiten gelten für die Zulässigkeit und Wirksamkeit von Persönlichkeitsrechtsverträgen nach deutschem Recht?",
+    "expected_norms": [
+      "§ 22 KUG",
+      "§ 823 Abs. 1 BGB",
+      "§ 138 BGB"
+    ],
+    "expected_keywords": [
+      "Recht am eigenen Bild",
+      "Persönlichkeitsschutz",
+      "Sittenwidrigkeit",
+      "Abtretbarkeit"
+    ]
+  }
+]

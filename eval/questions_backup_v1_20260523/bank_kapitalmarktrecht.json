@@ -1,0 +1,157 @@
+[
+  {
+    "id": 1,
+    "skill": "bank_kapitalmarktrecht",
+    "question": "Ein Unternehmen erbringt Wertpapierdienstleistungen ausschließlich für sein Mutterunternehmen. Muss es sich als Wertpapierdienstleistungsunternehmen registrieren?",
+    "expected_norms": [
+      "Wertpapier"
+    ],
+    "expected_keywords": [
+      "Wertpapierdienstleistungsunternehmen",
+      "Mutterunternehmen",
+      "Registrierung"
+    ],
+    "min_sources": 2,
+    "category": "Registrierungspflicht"
+  },
+  {
+    "id": 2,
+    "skill": "bank_kapitalmarktrecht",
+    "question": "Eine natürliche Person ist nach einem unmittelbar geltenden Rechtsakt der Europäischen Union als unzuverlässig eingestuft worden. Welche Folgen hat dies für ihre Tätigkeit im Wertpapierhandel?",
+    "expected_norms": [
+      "§ 2a"
+    ],
+    "expected_keywords": [
+      "Zuverlässigkeit",
+      "Wertpapierhandel",
+      "Beschäftigung"
+    ],
+    "min_sources": 2,
+    "category": "Unzuverlässigkeit"
+  },
+  {
+    "id": 3,
+    "skill": "bank_kapitalmarktrecht",
+    "question": "Ein Unternehmen erbringt Datenbereitstellungsdienste und ist somit ein Datenbereitstellungsdienstleister. Welche Pflichten hat es gegenüber der BaFin?",
+    "expected_norms": [
+      "BaFin"
+    ],
+    "expected_keywords": [
+      "Datenbereitstellungsdienstleister",
+      "BaFin",
+      "Pflichten"
+    ],
+    "min_sources": 2,
+    "category": "Datenbereitstellung"
+  },
+  {
+    "id": 4,
+    "skill": "bank_kapitalmarktrecht",
+    "question": "Ein Wertpapierdienstleistungsunternehmen möchte eine neue Wertpapierdienstleistung anbieten. Welche Anforderungen muss es erfüllen, um dies zu tun?",
+    "expected_norms": [
+      "WpHG"
+    ],
+    "expected_keywords": [
+      "Wertpapierdienstleistungsunternehmen",
+      "Dienstleistung",
+      "Anforderungen"
+    ],
+    "min_sources": 2,
+    "category": "Neue Dienstleistungen"
+  },
+  {
+    "id": 5,
+    "skill": "bank_kapitalmarktrecht",
+    "question": "Eine Personengesellschaft ist als unzuverlässig eingestuft worden. Welche Auswirkungen hat dies auf ihre Fähigkeit, Wertpapierdienstleistungen zu erbringen?",
+    "expected_norms": [
+      "§ 2a"
+    ],
+    "expected_keywords": [
+      "Unzuverlässigkeit",
+      "Personengesellschaft",
+      "Wertpapierdienstleistungen"
+    ],
+    "min_sources": 2,
+    "category": "Unzuverlässigkeit"
+  },
+  {
+    "id": 6,
+    "skill": "bank_kapitalmarktrecht",
+    "question": "Ein Unternehmen möchte ein Wertpapierdienstleistungsunternehmen gründen. Welche Schritte muss es unternehmen, um dies zu tun?",
+    "expected_norms": [
+      "§ 1 WpHG",
+      "§ 3 WpHG"
+    ],
+    "expected_keywords": [
+      "Wertpapierdienstleistungsunternehmen",
+      "Gründung",
+      "Schritte"
+    ],
+    "min_sources": 2,
+    "category": "Gründung"
+  },
+  {
+    "id": 7,
+    "skill": "bank_kapitalmarktrecht",
+    "question": "Ein Wertpapierdienstleistungsunternehmen hat eine neue Wertpapierdienstleistung entwickelt. Muss es diese der BaFin melden?",
+    "expected_norms": [
+      "§ 1 WpHG",
+      "§ 2 WpHG"
+    ],
+    "expected_keywords": [
+      "Wertpapierdienstleistungsunternehmen",
+      "Neue Dienstleistung",
+      "Meldung"
+    ],
+    "min_sources": 2,
+    "category": "Neue Dienstleistungen"
+  },
+  {
+    "id": 8,
+    "skill": "bank_kapitalmarktrecht",
+    "question": "Eine natürliche Person ist als unzuverlässig eingestuft worden und möchte nun ein Wertpapierdienstleistungsunternehmen gründen. Ist dies möglich?",
+    "expected_norms": [
+      "§ 2a WpHG",
+      "Art. 4 EU-VO"
+    ],
+    "expected_keywords": [
+      "Unzuverlässigkeit",
+      "Wertpapierdienstleistungsunternehmen",
+      "Gründung"
+    ],
+    "min_sources": 2,
+    "category": "Unzuverlässigkeit"
+  },
+  {
+    "id": 9,
+    "skill": "bank_kapitalmarktrecht",
+    "question": "Ein Unternehmen erbringt Wertpapierdienstleistungen und hat nun eine neue Tochtergesellschaft gegründet. Muss die Tochtergesellschaft sich als Wertpapierdienstleistungsunternehmen registrieren?",
+    "expected_norms": [
+      "§ 3 WpHG",
+      "Art. 4 EU-VO"
+    ],
+    "expected_keywords": [
+      "Wertpapierdienstleistungsunternehmen",
+      "Tochtergesellschaft",
+      "Registrierung"
+    ],
+    "min_sources": 2,
+    "category": "Registrierungspflicht"
+  },
+  {
+    "id": 10,
+    "skill": "bank_kapitalmarktrecht",
+    "question": "Ein Wertpapierdienstleistungsunternehmen hat eine neue Wertpapierdienstleistung entwickelt und möchte diese in einem anderen EU-Mitgliedstaat anbieten. Welche Anforderungen muss es erfüllen, um dies zu tun?",
+    "expected_norms": [
+      "§ 1 WpHG",
+      "§ 2 WpHG"
+    ],
+    "expected_keywords": [
+      "Wertpapierdienstleistungsunternehmen",
+      "Neue Dienstleistung",
+      "EU-Mitgliedstaat"
+    ],
+    "min_sources": 2,
+    "category": "Neue Dienstleistungen"
+  }
+]

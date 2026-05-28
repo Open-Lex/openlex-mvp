@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "skill": "gesellschaftsrecht",
+    "question": "Welche notarielle Formvorschrift gilt für den Gesellschaftsvertrag einer GmbH und wer muss diesen unterzeichnen?",
+    "expected_norms": [
+      "§ 2"
+    ],
+    "expected_keywords": [
+      "Gesellschaftsvertrag",
+      "notarieller Form",
+      "Gesellschafter"
+    ],
+    "category": "Gründung"
+  },
+  {
+    "id": 2,
+    "skill": "gesellschaftsrecht",
+    "question": "Ein Gesellschafter möchte seinen Geschäftsanteil an einen Dritten abtreten. Welche formalen Anforderungen muss der Abtretungsvertrag erfüllen?",
+    "expected_norms": [
+      "§ 15"
+    ],
+    "expected_keywords": [
+      "Geschäftsanteil",
+      "notarieller Form",
+      "Abtretung"
+    ],
+    "category": "Übertragung"
+  },
+  {
+    "id": 3,
+    "skill": "gesellschaftsrecht",
+    "question": "Welche Mindestanforderungen muss der Gesellschaftsvertrag nach dem GmbHG zwingend enthalten?",
+    "expected_norms": [
+      "§ 3"
+    ],
+    "expected_keywords": [
+      "Gesellschaftsvertrag",
+      "Stammkapital",
+      "Geschäftsanteile"
+    ],
+    "category": "Gründung"
+  },
+  {
+    "id": 4,
+    "skill": "gesellschaftsrecht",
+    "question": "Ein Sacheinlage wird bei der Anmeldung im Handelsregister deutlich niedriger bewertet als vereinbart. Welche Verpflichtungen entstehen für den Gesellschafter?",
+    "expected_norms": [
+      "§ 9"
+    ],
+    "expected_keywords": [
+      "Sacheinlage",
+      "Geschäftsanteil",
+      "Nennbetrag"
+    ],
+    "category": "Gründung"
+  },
+  {
+    "id": 5,
+    "skill": "gesellschaftsrecht",
+    "question": "Werden bei der Gründung einer GmbH falsche Angaben gemacht, wer haftet gegenüber der Gesellschaft und in welcher Form?",
+    "expected_norms": [
+      "§ 9a"
+    ],
+    "expected_keywords": [
+      "Geschäftsführer",
+      "Gesellschafter",
+      "Haftung"
+    ],
+    "category": "Haftung"
+  }
+]

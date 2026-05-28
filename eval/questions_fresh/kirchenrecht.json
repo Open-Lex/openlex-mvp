@@ -1,0 +1,72 @@
+[
+  {
+    "question": "Die evangelische Landeskirche Baden möchte ihre Satzung ändern und plant, zukünftig auch Personen ohne Kirchenmitgliedschaft in ihren Synoden mitstimmen zu lassen. Der Finanzminister des Landes Baden-Württemberg lehnt dies ab und beruft sich auf die Garantie der Körperschaftsfähigkeit. Ist die geplante Satzungsänderung mit Art. 137 Abs. 3 WRV i.V.m. Art. 140 GG vereinbar?",
+    "expected_norms": [
+      "Art. 137 Abs. 3 WRV",
+      "Art. 140 GG",
+      "Art. 137 Abs. 1 WRV"
+    ],
+    "expected_keywords": [
+      "Körperschaft des öffentlichen Rechts",
+      "Selbstbestimmungsrecht",
+      "demokratische Strukturen",
+      "Religionsgemeinschaft"
+    ]
+  },
+  {
+    "question": "Ein katholischer Arbeitgeber in Köln stellt für eine Stelle in der Außenstelle einer Sozialberatungsstelle einen Bewerber ein, der aus der Kirche ausgetreten ist. Der Erzbischof fordert die sofortige Kündigung und beruft sich auf sein Recht als Arbeitgeber. Kann sich der Arbeitgeber erfolgreich auf Art. 137 Abs. 3 Satz 2 WRV i.V.m. Art. 140 GG berufen, und welche Grenzen gelten?",
+    "expected_norms": [
+      "Art. 137 Abs. 3 Satz 2 WRV",
+      "Art. 140 GG",
+      "Art. 9 Abs. 3 GG"
+    ],
+    "expected_keywords": [
+      "Selbstverwaltungsrecht der Religionsgemeinschaften",
+      "Loyalitätsobliegenheiten",
+      "Tätigkeitsmerkmal",
+      "weltliche Arbeit"
+    ]
+  },
+  {
+    "question": "Die Stadt Nürnberg erhebt von allen Bürgern eine allgemeine Steuer, von der Mitglieder der evangelischen und katholischen Kirche 8% bzw. 9% an ihre Religionsgemeinschaft abführen müssen. Ein evangelischer Bürger klagt gegen diese Regelung. Auf welcher verfassungsrechtlichen Grundlage (nennen Sie die konkrete Norm) erfolgt die Erhebung der Kirchensteuer, und ist die Regelung verfassungskonform?",
+    "expected_norms": [
+      "Art. 137 Abs. 6 WRV",
+      "Art. 140 GG",
+      "Art. 4 GG"
+    ],
+    "expected_keywords": [
+      "Kirchensteuer",
+      "Erhebungskompetenz",
+      "Religionsfreiheit",
+      "Mitgliedersteuer"
+    ]
+  },
+  {
+    "question": "Die evangelische Kirche in Hessen beschließt, ihre Kirchensteuer künftig selbst einzuziehen, statt dies wie bisher der Finanzbehörde zu überlassen. Die Finanzbehörde wendet ein, dass dies gegen Bundes- und Landesrecht verstoße. Auf Grundlage welcher Norm regelt sich die Erhebung von Kirchensteuern durch den Staat, und kann sich die Kirche auf ein selbstständiges Erhebungsrecht berufen?",
+    "expected_norms": [
+      "Art. 137 Abs. 6 WRV",
+      "Art. 140 GG",
+      "§ 41 KirchensteuerG (verschiedener Bundesländer)"
+    ],
+    "expected_keywords": [
+      "Erhebungskompetenz des Staates",
+      "Fiskalverwaltung",
+      "Verwalterschaft",
+      "Delegationsprinzip"
+    ]
+  },
+  {
+    "question": "Ein reformierter Gemeindeverband in der Schweiz siedelt sich in Hessen an und möchte den Status einer Körperschaft des öffentlichen Rechts erlangen, um wie die etablierten Kirchen Kirchensteuer erheben zu dürfen. Die hessische Landesregierung lehnt den Antrag ab, da die Gemeinschaft zu klein und zu jung sei. Kann sich der Verband auf Art. 137 Abs. 5 WRV i.V.m. Art. 140 GG berufen und welche Voraussetzungen müssen erfüllt sein?",
+    "expected_norms": [
+      "Art. 137 Abs. 5 WRV",
+      "Art. 140 GG",
+      "Art. 137 Abs. 3 WRV"
+    ],
+    "expected_keywords": [
+      "Körperschaftserklärung",
+      "Gleichberechtigung",
+      "Dauer und Bestand",
+      "Verfassungstreue"
+    ]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "skill": "familienrecht",
+    "question": "Mein Ex-Partner und ich streiten um das Sorgerecht für unser gemeinsames Kind. Er hat beim Amtsgericht einen Antrag auf alleinige elterliche Sorge gestellt. Unter welchen Voraussetzungen kann einem Elternteil nach § 1671 BGB das alleinige Sorgerecht übertragen werden?",
+    "expected_norms": [
+      "§ 1671"
+    ],
+    "expected_keywords": [
+      "elterliche Sorge",
+      "Kindeswohl",
+      "Sorgerecht",
+      "Scheidung"
+    ],
+    "category": "Gerichtsbarkeit und Zuständigkeit"
+  },
+  {
+    "id": 2,
+    "skill": "familienrecht",
+    "question": "Wer gilt nach § 9 FamFG als verfahrensfähig in Familiensachen, und unter welchen Voraussetzungen können Minderjährige selbst Verfahrenshandlungen vornehmen?",
+    "expected_norms": [
+      "§ 9"
+    ],
+    "expected_keywords": [
+      "Verfahrensfähigkeit",
+      "Minderjährige",
+      "Gericht",
+      "FamFG"
+    ],
+    "category": "Prozessfähigkeit"
+  },
+  {
+    "id": 3,
+    "skill": "familienrecht",
+    "question": "Das Gericht verhandelt über die Unterhaltsregelung für meine Kinder. Meine neue Partnerin möchte als Beistand im Termin neben mir sitzen. Wer darf als Beistand auftreten?",
+    "expected_norms": [
+      "§ 12"
+    ],
+    "expected_keywords": [
+      "Beteiligten",
+      "Verfahren",
+      "Gericht"
+    ],
+    "category": "Vertretung und Beistand"
+  },
+  {
+    "id": 4,
+    "skill": "familienrecht",
+    "question": "Ich bin als Großmutter sehr besorgt um mein Enkelkind und möchte in dem laufenden Familienverfahren meinen Sorgerechtsstatus berücksichtigt haben. Kann das Gericht mich von Amts wegen zum Verfahren hinzuziehen?",
+    "expected_norms": [
+      "§ 7"
+    ],
+    "expected_keywords": [
+      "Gericht",
+      "Beteiligte",
+      "Verfahren"
+    ],
+    "category": "Beteiligung im Verfahren"
+  },
+  {
+    "id": 5,
+    "skill": "familienrecht",
+    "question": "Das Gericht hat mich aufgefordert, ein Gutachten einzureichen, verbietet mir aber die Einsicht in die Akten. Habe ich einen Anspruch auf Akteneinsicht als Beteiligter?",
+    "expected_norms": [
+      "§ 13"
+    ],
+    "expected_keywords": [
+      "Beteiligten",
+      "Gericht",
+      "Verfahren"
+    ],
+    "category": "Verfahrensrechte"
+  }
+]

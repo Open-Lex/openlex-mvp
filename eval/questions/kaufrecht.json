@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Welche Gewährleistungsrechte stehen einem Käufer nach § 437 BGB zu, wenn ein gebrauchtes Auto nach der Übergabe einen Motordefekt aufweist, der bereits bei Übergabe vorhanden war?",
+    "expected_norms": [
+      "§ 437"
+    ],
+    "expected_keywords": [
+      "Sachmangel",
+      "Gewährleistung",
+      "Nacherfüllung",
+      "Käufer"
+    ]
+  },
+  {
+    "question": "Ein Käufer verlangt Nacherfüllung wegen eines Mangels. Wann darf ein Verkäufer die Nacherfüllung nach § 439 Abs. 4 BGB wegen Unverhältnismäßigkeit verweigern, und welche Alternativen bestehen für den Käufer?",
+    "expected_norms": [
+      "§ 439"
+    ],
+    "expected_keywords": [
+      "Nacherfüllung",
+      "Käufer",
+      "Verkäufer",
+      "Kosten"
+    ]
+  },
+  {
+    "question": "Ein Verbraucher kauft ein Smartphone. Kurz nach Kauf zeigt sich ein Defekt. Welche Beweislastumkehr gilt gemäß § 477 BGB beim Verbrauchsgüterkauf, und welche Voraussetzungen müssen erfüllt sein?",
+    "expected_norms": [
+      "§ 477"
+    ],
+    "expected_keywords": [
+      "Beweislastumkehr",
+      "Verbrauchsgüterkauf",
+      "Mangel",
+      "Übergabe"
+    ]
+  },
+  {
+    "question": "Ein Autohersteller gewährt beim Neuwagenkauf eine fünfjährige Garantie auf alle Mängel. Der Käufer beansprucht die Garantie. Welche Unterschiede bestehen zwischen der gesetzlichen Gewährleistung und einer Garantie?",
+    "expected_norms": [
+      "§ 443"
+    ],
+    "expected_keywords": [
+      "Garantie",
+      "Gewährleistung",
+      "Haltbarkeit",
+      "Verkäufer"
+    ]
+  },
+  {
+    "question": "Ein Käufer erwirbt ein Einfamilienhaus und entdeckt zwei Jahre nach dem Kauf einen versteckten Mangel. Welche Verjährungsfrist gilt nach § 438 BGB für Mängelansprüche bei Bauwerken, und ab wann beginnt diese Frist zu laufen?",
+    "expected_norms": [
+      "§ 438"
+    ],
+    "expected_keywords": [
+      "Verjährung",
+      "Bauwerk",
+      "fünf",
+      "Gewährleistungsanspruch"
+    ]
+  }
+]
