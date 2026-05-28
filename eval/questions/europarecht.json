@@ -43,10 +43,10 @@
       "Art. 34"
     ],
     "expected_keywords": [
-      "Warenverkehrsfreiheit",
+      "Importbeschränkung",
       "Beschränkung",
-      "Cassis de Dijon",
-      "Rechtfertigung"
+      "Art. 36",
+      "verhältnismäßig"
     ]
   },
   {
@@ -66,11 +66,11 @@
     "question": "Eine EU-Verordnung wie die DSGVO ist direkt anwendbar. Dennoch erlassen Mitgliedstaaten ergänzende nationale Datenschutzgesetze. Ist das zulässig?",
     "expected_norms": [
       "DSGVO",
-      "Verordnung"
+      "direkt anwendbar"
     ],
     "expected_keywords": [
       "Öffnungsklausel",
-      "direkt anwendbar",
+      "ergänzend",
       "Mitgliedstaat",
       "BDSG"
     ]
